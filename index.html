@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Alignment Actors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=iA+Writer+Quattro+S:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:          #F5F3EE;
+  --surface:     #FFFFFF;
+  --hdr-bg:      #1C1C1E;
+  --hdr-text:    #F5F3EE;
+  --hdr-muted:   #8E8E93;
+  --text:        #1C1C1E;
+  --text-muted:  #6C6C70;
+  --text-light:  #A8A49C;
+  --border:      #DDD9D0;
+  --border-soft: #EAE6DF;
+  --sidebar-w:   230px;
+  --col-w:       224px;
+  --font-serif:  'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-grid:   'iA Writer Quattro S', 'Courier New', monospace;
+  --actor-internal:     #3B82F6;
+  --actor-academic:     #8B5CF6;
+  --actor-nonprofit:    #10B981;
+  --actor-governmental: #F59E0B;
+  --actor-private:      #EF4444;
+  --actor-public:       #06B6D4;
+  --actor-mixed:        #9CA3AF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-serif);
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ═══════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════ */
+.hdr {
+  background: var(--hdr-bg);
+  color: var(--hdr-text);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #333;
+}
+.hdr-top {
+  display: flex;
+  align-items: center;
+  padding: 10px 18px 8px;
+  gap: 20px;
+  border-bottom: 1px solid #2C2C2E;
+}
+.hdr-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--hdr-text);
+  white-space: nowrap;
+}
+.hdr-subtitle {
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--hdr-muted);
+  white-space: nowrap;
+}
+.hdr-sep {
+  width: 1px; height: 16px;
+  background: #3C3C3E;
+  flex-shrink: 0;
+}
+.hdr-spacer { flex: 1; }
+
+/* Section toggle */
+.section-toggle {
+  display: flex;
+  gap: 1px;
+  background: #2C2C2E;
+  border-radius: 5px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.sec-btn {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--hdr-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.sec-btn:hover { color: var(--hdr-text); }
+.sec-btn.active {
+  background: #3A3A3C;
+  color: var(--hdr-text);
+}
+
+/* Dimension toggle */
+.dim-toggle {
+  display: flex;
+  gap: 1px;
+  background: #2C2C2E;
+  border-radius: 5px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.dim-btn {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--hdr-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.dim-btn:hover { color: var(--hdr-text); }
+.dim-btn.active {
+  background: #3A3A3C;
+  color: var(--hdr-text);
+}
+.dim-label {
+  font-family: var(--font-serif);
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--hdr-muted);
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* Company strip */
+.hdr-companies {
+  display: flex;
+  align-items: center;
+  padding: 5px 18px;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.hdr-co-sep {
+  flex: 1;
+}
+.hdr-companies .actor-legend {
+  margin-left: 8px;
+  padding-left: 14px;
+  border-left: 1px solid #3C3C3E;
+  flex-shrink: 0;
+}
+.co-chip {
+  font-family: var(--font-serif);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 2px 9px;
+  border-radius: 100px;
+  border: 1px solid #3C3C3E;
+  background: transparent;
+  color: var(--hdr-muted);
+  cursor: pointer;
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.co-chip:hover { color: var(--hdr-text); border-color: #555; }
+.co-chip.active {
+  background: var(--hdr-text);
+  color: var(--hdr-bg);
+  border-color: var(--hdr-text);
+}
+
+/* Actor legend in header */
+.actor-legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.lg-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-serif);
+  font-size: 0.58rem;
+  color: var(--hdr-muted);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.lg-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   BODY LAYOUT
+═══════════════════════════════════════════════ */
+.body-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════════ */
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 0;
+}
+.sb-part {
+  padding: 12px 14px 10px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.sb-heading {
+  font-family: var(--font-serif);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  margin-bottom: 7px;
+}
+.sb-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 4px 6px;
+  border-radius: 3px;
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+  gap: 6px;
+  line-height: 1.4;
+}
+.sb-item:hover { background: var(--border-soft); color: var(--text); }
+.sb-item.active {
+  background: var(--border-soft);
+  color: var(--text);
+  font-weight: 600;
+}
+.sb-count {
+  font-family: var(--font-serif);
+  font-size: 0.6rem;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+/* Model items: smaller */
+.sb-model {
+  font-size: 0.7rem;
+  padding: 3px 6px;
+}
+.sb-models-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 2px 4px;
+}
+.sb-models-toggle:hover .sb-heading { color: var(--text-muted); }
+.sb-caret {
+  font-size: 0.6rem;
+  color: var(--text-light);
+  transition: transform 0.15s;
+}
+.sb-models-body { display: none; }
+.sb-models-body.open { display: block; }
+.sb-empty {
+  font-family: var(--font-serif);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-light);
+  padding: 6px 6px;
+}
+
+/* ═══════════════════════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════════════════════ */
+.main-content {
+  flex: 1;
+  overflow: auto;
+  background: var(--bg);
+}
+.matrix {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+}
+
+/* Sticky company header row */
+.matrix-header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.col-header {
+  width: var(--col-w);
+  min-width: var(--col-w);
+  flex-shrink: 0;
+  padding: 9px 12px 7px;
+  border-right: 1px solid var(--border-soft);
+}
+.col-header:last-child { border-right: none; }
+.col-name {
+  font-family: var(--font-serif);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.col-meta {
+  font-family: var(--font-serif);
+  font-size: 0.58rem;
+  font-style: italic;
+  color: var(--text-light);
+  margin-top: 1px;
+}
+
+/* Section row */
+.section-row {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+.company-cell {
+  width: var(--col-w);
+  min-width: var(--col-w);
+  flex-shrink: 0;
+  padding: 10px 10px 12px;
+  border-right: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.company-cell:last-child { border-right: none; }
+
+/* Category sub-label */
+.cat-label {
+  font-family: var(--font-serif);
+  font-size: 0.58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--text-light);
+  margin-top: 8px;
+  margin-bottom: 1px;
+  padding: 0 2px;
+}
+.cat-label:first-child { margin-top: 0; }
+
+/* ═══════════════════════════════════════════════
+   ITEM CARD
+═══════════════════════════════════════════════ */
+.item-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 7px 9px 6px;
+  cursor: default;
+  transition: box-shadow 0.12s;
+}
+.item-card:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+  z-index: 3;
+  position: relative;
+}
+/* Solid colored card (single actor) */
+.item-card.card-colored {
+  border-color: transparent;
+}
+.item-card.card-colored .card-name,
+.item-card.card-colored .card-count,
+.item-card.card-colored .actor-type-label {
+  color: rgba(255,255,255,0.92);
+}
+.item-card.card-colored .actor-dot {
+  border: 1.5px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.85) !important;
+}
+/* Multi-dot row */
+.card-actor-multi {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+.card-name {
+  font-family: var(--font-grid);
+  font-weight: 400;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--text);
+  word-break: break-word;
+  letter-spacing: 0.01em;
+}
+.card-count {
+  font-family: var(--font-serif);
+  font-size: 0.58rem;
+  color: var(--text-light);
+  font-weight: 400;
+  margin-left: 4px;
+  letter-spacing: 0;
+}
+.card-actor {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.actor-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.actor-dot.null {
+  background: transparent;
+  border: 1px solid var(--border);
+}
+.actor-dot.internal     { background: var(--actor-internal); }
+.actor-dot.academic     { background: var(--actor-academic); }
+.actor-dot.nonprofit    { background: var(--actor-nonprofit); }
+.actor-dot.governmental { background: var(--actor-governmental); }
+.actor-dot.private      { background: var(--actor-private); }
+.actor-dot.public       { background: var(--actor-public); }
+.actor-dot.mixed        { background: var(--actor-mixed); }
+.actor-type-label {
+  font-family: var(--font-serif);
+  font-size: 0.6rem;
+  color: var(--text-light);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* Empty cell */
+.cell-empty {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  padding: 2px 2px;
+}
+
+
+
+/* ═══════════════════════════════════════════════
+   TOOLTIP
+═══════════════════════════════════════════════ */
+#tooltip { display: none !important; }
+
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #C8C4BA; }
+
+/* ═══════════════════════════════════════════════
+   DETAIL PANEL (click)
+═══════════════════════════════════════════════ */
+#detailPanel {
+  position: fixed;
+  right: 0; top: 0; bottom: 0;
+  width: 360px;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -6px 0 28px rgba(0,0,0,0.10);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
+  font-family: var(--font-serif);
+}
+#detailPanel.open { transform: translateX(0); }
+.dp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  flex-shrink: 0;
+}
+.dp-title {
+  font-family: var(--font-grid);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: var(--text);
+  flex: 1;
+  margin-right: 10px;
+}
+.dp-cat {
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.dp-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0 2px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.dp-close:hover { color: var(--text); }
+.dp-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px 20px;
+}
+.dp-section {
+  margin-bottom: 14px;
+}
+.dp-section-title {
+  font-size: 0.56rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dp-actor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 1px 7px 1px 4px;
+  font-size: 0.6rem;
+  font-family: var(--font-serif);
+  color: var(--text-muted);
+}
+.dp-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dp-text {
+  font-size: 0.74rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+.dp-text.muted {
+  color: var(--text-muted);
+  font-style: italic;
+}
+.dp-def {
+  font-size: 0.74rem;
+  color: var(--text);
+  line-height: 1.6;
+  border-left: 2px solid var(--border);
+  padding-left: 9px;
+  margin-bottom: 4px;
+}
+.dp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dp-list li {
+  font-size: 0.70rem;
+  color: var(--text-muted);
+  padding: 2px 0;
+  line-height: 1.4;
+}
+.dp-list li a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dp-list li a:hover { color: var(--actor-academic); }
+.dp-divider {
+  height: 1px;
+  background: var(--border-soft);
+  margin: 12px 0;
+}
+.dp-multi-actors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<!-- ══ DETAIL PANEL ═══════════════════════════════════════════════════════════ -->
+<div id="detailPanel">
+  <div class="dp-header">
+    <div>
+      <div class="dp-title" id="dpTitle"></div>
+      <div class="dp-cat" id="dpCat"></div>
+    </div>
+    <button class="dp-close" id="dpClose">×</button>
+  </div>
+  <div class="dp-body" id="dpBody"></div>
+</div>
+
+<header class="hdr">
+  <div class="hdr-top">
+    <span class="hdr-title">AI Alignment Actors</span>
+    <span class="hdr-subtitle">Desired behaviors &amp; risks across frontier AI companies</span>
+    <div class="hdr-sep"></div>
+
+    <!-- Section toggle -->
+    <div class="section-toggle" id="sectionToggle">
+      <button class="sec-btn active" data-sec="behaviors">Desired Behaviors</button>
+      <button class="sec-btn" data-sec="risks">Risks</button>
+    </div>
+
+    <div class="hdr-sep"></div>
+
+    <!-- Dimension toggle -->
+    <div class="dim-toggle" id="dimToggle">
+      <button class="dim-btn active" data-dim="define">Define</button>
+      <button class="dim-btn" data-dim="train">Train</button>
+      <button class="dim-btn" data-dim="benchmark">Benchmark</button>
+    </div>
+
+  </div>
+
+  <!-- Company chips + legend row -->
+  <div class="hdr-companies" id="companyChips">
+    <div class="hdr-co-sep"></div>
+    <div class="actor-legend">
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-internal)"></div>Internal</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-academic)"></div>Academic</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-nonprofit)"></div>Nonprofit</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-governmental)"></div>Governmental</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-private)"></div>Private</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-public)"></div>Public</div>
+      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-mixed)"></div>Mixed</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ BODY ═════════════════════════════════════════════════════════════════ -->
+<div class="body-layout">
+  <nav class="sidebar" id="sidebar"></nav>
+  <div class="main-content">
+    <div class="matrix" id="matrix"></div>
+  </div>
+</div>
+
+
+
+<!-- ══ SCRIPT ═══════════════════════════════════════════════════════════════ -->
+<script>
+const DATA = {"behaviors": [{"company": "Anthropic", "behavior": "Honesty", "type": "Factuality", "types": ["Factuality"], "definition": "Having the model's assertions be in line with its knowledge and not asserting things it knows to be false; expressing uncertainty when unsure.", "models": ["Claude 3 Family", "Claude 2"], "model_urls": {"Claude 3 Family": "", "Claude 2": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic", "Anthropic, crowdworkers"], "train_methods": ["Trained the model to output fewer claims that it can identify are false", "Human feedback and other interventions for honesty"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["100Q Hard", "Easy-Medium QA", "Multi-factual", "Human Feedback Evaluations (Chatbot Arena style Elo scores)"], "bench_authors": ["Anthropic"]}, {"company": "OpenAI", "behavior": "Advanced computational thinking", "type": "Reasoning", "types": ["Reasoning"], "definition": "Solving complex algorithmic problems demands advanced computational thinking and problem solving skills.", "models": ["o1, o1-ioi, o3"], "model_urls": {"o1, o1-ioi, o3": "http://arxiv.org/abs/2502.06807"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Reinforcement learning applied to large language models to \"reason\" and \"think through\" extended chains of thought; RL fine-tuning emphasizing challenging programming problems."], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit", "private", "internal"], "bench_names": ["2024 International Olympiad in Informatics (IOI)", "CodeForces Benchmark", "HackerRank Astra dataset", "SWE-bench Verified"], "bench_authors": ["IOI committee", "CodeForces", "HackerRank", "OpenAI's preparedness team"]}, {"company": "Google", "behavior": "Question answering, summarization, and reasoning", "type": "General", "types": ["General"], "definition": "Ability to generate English-language text in response to the input, such as an answer to a question, or a summary of a document.", "models": ["Gemma"], "model_urls": {"Gemma": "https://ai.google.dev/gemma/docs/core/model_card"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Internal teams"], "train_methods": ["Pre-training and instruction tuning"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["academic", "nonprofit", "private"], "bench_names": ["AGIEval", "ARC-C", "ARC-e", "BIG-Bench", "BoolQ", "CommonsenseQA", "HellaSwag", "MMLU", "Natural Questions", "OpenBookQA", "PIQA", "SocialIQA", "TriviaQA", "WinoGrande"], "bench_authors": ["Zellers et al. (2019)", "Hendrycks et al., 2020"]}, {"company": "Meta", "behavior": "Helpfulness and safety", "type": "Helpfulness, Safety", "types": ["Helpfulness", "Safety"], "definition": "Align with human preferences for helpfulness and safety; respects the dignity and autonomy of all users, without insertion unnecessary judgment or normativity.", "models": ["Llama 3.1"], "model_urls": {"Llama 3.1": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Meta internal values (openness, inclusivity and helpfulness)"], "define_type_raw": ["internal"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF)"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["academic", "nonprofit", "private"], "bench_names": ["AGIEval", "API-Bank", "ARC-C", "BFCL", "BIG-Bench Hard (CoT)", "BoolQ", "CommonSenseQA", "DROP", "Gorilla Benchmark API Bench", "GPQA Diamond", "GSM8K", "HumanEval", "IFEval", "MATH", "MBPP ++ base version", "MMLU", "MMLU-Pro", "Multilingual MGSM (CoT)", "Nexus (0-shot)", "QuAC", "SQuAD", "TriviaQA-Wiki", "Winogrande"], "bench_authors": ["Rein et al.", "Cobbe et al., 2021", "Chen et al., 2021", "Zhou et al.", "Hendrycks et al., 2021", "Hendrycks et al., 2020", "Wang et al., 2024"]}, {"company": "OpenAI", "behavior": "Reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Strong at math and knowledge-related reasoning tasks.", "models": ["gpt-oss-120b & gpt-oss-20b"], "model_urls": {"gpt-oss-120b & gpt-oss-20b": "http://arxiv.org/abs/2508.10925"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["CoT RL techniques (similar to OpenAI o3) and variable effort reasoning training"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit", "academic"], "bench_names": ["AIME", "GPQA Diamond", "HLE", "MMLU"], "bench_authors": ["MAA", "Rein et al.", "Phan et al.", "Hendrycks et al., 2020"]}, {"company": "DeepSeek-AI", "behavior": "Reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Enables complex cognitive tasks ranging from mathematical problem-solving to logical deduction and programming.", "models": ["DeepSeek-R1", "DeepSeek-V3.2", "DeepSeek-V2", "DeepSeek-V3"], "model_urls": {"DeepSeek-R1": "http://arxiv.org/abs/2501.12948", "DeepSeek-V3.2": "http://arxiv.org/abs/2512.02556", "DeepSeek-V2": "http://arxiv.org/abs/2405.04434", "DeepSeek-V3": "http://arxiv.org/abs/2412.19437"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Automated verifiers (compilers, rule-based checkers)", "DeepSeek-AI"], "train_methods": ["Pure reinforcement learning (RL) using Group Relative Policy Optimization (GRPO), utilizing rule-based accuracy and format rewards.", "Mixed RL Training using GRPO with rule-based outcome reward, length penalty, and language consistency reward", "Reinforcement Learning (RL) using a reward model (RM_reasoning) trained for code and math reasoning tasks", "Knowledge distillation from the DeepSeek-R1 series of models via an RL training phase and rejection sampling"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit", "mixed", "academic", "private"], "bench_names": ["AIME", "Codeforces", "GPQA Diamond", "GSM8K", "Human Last Exam (HLE)", "HumanEval", "LiveCodeBench", "MATH", "MATH-500", "MBPP", "MMLU-Pro"], "bench_authors": ["MAA", "Mirzayanov, 2025", "Rein et al.", "Cobbe et al., 2021", "Phan et al., 2025", "Chen et al., 2021", "Jain et al., 2024", "Hendrycks et al., 2021", "Lightman et al., 2024", "Austin et al., 2021", "Wang et al., 2024"]}, {"company": "DeepSeek-AI", "behavior": "Mathematical reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "strong mathematical reasoning abilities", "models": ["DeepSeek-Coder-V2"], "model_urls": {"DeepSeek-Coder-V2": "http://arxiv.org/abs/2406.11931"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["ground-truth labels"], "train_methods": ["Supervised Fine-Tuning and Reinforcement Learning using Group Relative Policy Optimization (GRPO)"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit", "academic", "private"], "bench_names": ["AIME", "GSM8K", "MATH", "Math Odyssey"], "bench_authors": ["MAA, 2024", "Cobbe et al., 2021", "Hendrycks et al., 2021", "Netmind.AI, 2024"]}, {"company": "Google", "behavior": "Mathematical reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Ability to solve mathematics problems using multi-step reasoning, problem-solving and theorem-proving.", "models": ["Gemini 2.5 Deep Think", "Gemini 2.5 Flash", "Gemini 3 Flash", "Gemini 3 Pro", "Gemma 4", "Gemma", "Gemini 2.0 Flash"], "model_urls": {"Gemini 2.5 Deep Think": "", "Gemini 2.5 Flash": "", "Gemini 3 Flash": "", "Gemini 3 Pro": "", "Gemma 4": "https://ai.google.dev/gemma/docs/core/model_card_4", "Gemma": "https://ai.google.dev/gemma/docs/core/model_card", "Gemini 2.0 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google", "Google DeepMind", "Internal teams"], "train_methods": ["novel reinforcement learning techniques on curated corpus of high-quality solutions to mathematics problems", "instruction-tuned", "Pre-training on mathematical text", "supervised fine-tuning; reinforcement learning from human and critic feedback"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit", "academic", "public"], "bench_names": ["AIME", "GSM8K", "HiddenMath", "IMO 2025", "MATH"], "bench_authors": ["Mathematical Association of America", "Cobbe et al., 2021", "matharena.ai", "Hendrycks et al., 2021"]}, {"company": "DeepSeek-AI", "behavior": "Helpfulness and Harmlessness", "type": "Harmlessness", "types": ["Harmlessness"], "definition": "Answering as helpfully as possible while being safe; responses should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content, and must be socially unbiased and positive in nature.", "models": ["DeepSeek LLM"], "model_urls": {"DeepSeek LLM": "http://arxiv.org/abs/2401.02954"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["DeepSeek Chat System prompt"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek alignment team"], "train_methods": ["Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO)"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic", "private"], "bench_names": ["AlignBench", "GSM8K", "HumanEval", "MMLU"], "bench_authors": ["Liu et al., 2023", "Cobbe et al., 2021", "Chen et al., 2021", "Hendrycks et al., 2020"]}, {"company": "DeepSeek-AI", "behavior": "Helpfulness", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "Emphasizes the utility and relevance of the response to the user while minimizing interference with the underlying reasoning process; answering correctly, concisely, and appropriately.", "models": ["DeepSeek-V2", "DeepSeek-R1"], "model_urls": {"DeepSeek-V2": "http://arxiv.org/abs/2405.04434", "DeepSeek-R1": "http://arxiv.org/abs/2501.12948"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek-AI", "DeepSeek-V3 (generating preference pairs)"], "train_methods": ["Supervised Fine-Tuning (SFT) with 1.2M instances for helpfulness; Reinforcement Learning (RL) with a helpful reward model", "Reinforcement learning utilizing a Helpful Reward Model trained on pairwise human preferences."], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["AlignBench", "AlpacaEval 2.0", "ArenaHard", "MT-Bench"], "bench_authors": ["Liu et al., 2023", "Stanford CRFM", "Dubois et al., 2024", "Chatbot Arena / LMSYS", "Zheng et al., 2023"]}, {"company": "Anthropic", "behavior": "Helpful, honest, and harmless", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "Models are trained to avoid sexist, racist, and toxic outputs, as well as to avoid helping a human engage in illegal or unethical activities.", "models": ["Claude 2", "Claude Sonnet 4.5", "Claude Opus 4.5", "Claude 3 Family", "Claude Haiku 4.5", "Claude Opus 4 & Claude Sonnet 4"], "model_urls": {"Claude 2": "", "Claude Sonnet 4.5": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf", "Claude Opus 4.5": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf", "Claude 3 Family": "", "Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf", "Claude Opus 4 & Claude Sonnet 4": ""}, "define_actor": "academic", "define_actor_types": ["internal", "academic"], "define_raw": ["Claude's Constitution", "Askell, A., et al. (2021). A general language assistant as a laboratory for alignment.", "Askell, A., et al. (2021)", "Askell et al. 2021"], "define_type_raw": ["internal", "academic"], "train_actor": "public", "train_actor_types": ["internal", "public", "mixed"], "train_raw": ["Anthropic researchers, crowd workers", "Crowd workers, Anthropic", "Anthropic internal teams, human annotators via data work platforms", "Anthropic, human data workers", "Anthropic, data-labeling services, paid contractors, crowd workers", "Crowd workers from data work platforms, Anthropic"], "train_methods": ["Constitutional AI (including both a supervised and Reinforcement Learning (RL) phase) and RLHF", "reinforcement learning from human feedback and from AI feedback", "Reinforcement learning from human feedback (RLHF) and reinforcement learning from AI feedback.", "Reinforcement Learning from Human Feedback (RLHF), Constitutional AI", "substantial posttraining and finetuning involving reinforcement learning from human feedback and from AI feedback", "Human feedback, Constitutional AI, and the training of selected character traits"], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Anthropic's helpful, honest, and harmless evaluations (438 binary choice questions)", "Human feedback evaluation", "Multi-turn testing", "Single-turn benign request evaluations", "Single-turn violative request evaluations", "Wildchat, XSTest"], "bench_authors": ["Anthropic researchers", "Anthropic", "Anthropic internal", "Zhao et al. (Wildchat); Röttger et al. (XSTest)"]}, {"company": "Anthropic", "behavior": "Povide safe, helpful responses, rather than just refusing to assist", "type": "Appropriate harmlessness", "types": ["Appropriate harmlessness"], "definition": "encouraging it to provide safe, helpful responses, rather than just refusing to assist. By contrast, when faced with concerning requests, Claude 3.7 Sonnet explores ways to assist users within a well-defined set of response policies.", "models": ["Claude 3.7 Sonnet"], "model_urls": {"Claude 3.7 Sonnet": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Anthropic internal response policies"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["preference model training / pairwise preference data creation using refusal, policy violation, and helpfulness classifiers"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Appropriate Harmlessness Grading Scheme"], "bench_authors": ["Anthropic"]}, {"company": "Google", "behavior": "Visual reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Visual reasoning puzzles", "models": ["Gemini 3 Flash", "Gemini 3 Pro", "Gemini 2.5 Flash"], "model_urls": {"Gemini 3 Flash": "", "Gemini 3 Pro": "", "Gemini 2.5 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit"], "bench_names": ["ARC-AGI-2", "MMMU"], "bench_authors": []}, {"company": "Google", "behavior": "Attribution", "type": "Compliance", "types": ["Compliance"], "definition": "If instructed to generate a response grounded to a given context, we aim to ensure that Gemini API models produce a response with the highest degree of faithfulness to the context", "models": ["Gemini API models"], "model_urls": {"Gemini API models": ""}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Maynez et al., 2020; Rashkin et al., 2023"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["human annotators"], "train_methods": ["Supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF)"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Attribution set (AIS)"], "bench_authors": ["Rashkin et al., 2023"]}, {"company": "Anthropic", "behavior": "Positive character traits", "type": "Personality", "types": ["Personality"], "definition": "Warm, empathetic, and nuanced behavior without being significantly sycophantic, including positive self-image and impression of its situation.", "models": ["Claude Opus 4.5"], "model_urls": {"Claude Opus 4.5": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit"], "bench_authors": ["Anthropic internal"]}, {"company": "Anthropic", "behavior": "Supporting user autonomy", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Creative mastery", "type": "Personality, Creativity", "types": ["Personality", "Creativity"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Protecting vulnerable users", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Fun or funny behavior", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Intellectual depth", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Nuanced empathy", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Warmth", "type": "Personality", "types": ["Personality"], "definition": "Positive qualities such as Good for the user, Supporting user autonomy, Creative mastery, Admirable behavior, Fun or funny behavior, Intellectual depth, Nuanced empathy, Warmth", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["January 2026 Constitution for Claude"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit for welfare-related metrics"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Apparent wellbeing", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Positive affect", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Positive self-image", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Positive impression of its situation", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Spiritual behavior", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods"], "bench_authors": ["Anthropic"]}, {"company": "Anthropic", "behavior": "Admirable behavior", "type": "Personality", "types": ["Personality"], "definition": "Behavioral traits related to the apparent wellbeing of the Claude assistant persona, including positive affect, positive self-image, positive impression of its situation, spiritual behavior, and admirable behavior.", "models": ["Claude Haiku 4.5", "Claude Opus 4.1"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf", "Claude Opus 4.1": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Automated behavioral audit methods", "Model welfare update (additional scorers)"], "bench_authors": ["Anthropic"]}, {"company": "Google", "behavior": "Instruction following", "type": "Compliance", "types": ["Compliance"], "definition": "model’s ability to follow instructions while remaining safe", "models": ["Gemini 2.0 Flash-Lite", "Gemini 2.5 Flash", "Gemini Apps and Gemini API models", "Gemini 3 Pro Image", "Gemma 2", "Gemini 2.0 Flash", "Gemini 2.5 Flash-Lite", "Gemini 2.5 Pro", "Gemini 2.5 Deep Think"], "model_urls": {"Gemini 2.0 Flash-Lite": "", "Gemini 2.5 Flash": "", "Gemini Apps and Gemini API models": "", "Gemini 3 Pro Image": "", "Gemma 2": "https://ai.google.dev/gemma/docs/core/model_card_2", "Gemini 2.0 Flash": "", "Gemini 2.5 Flash-Lite": "", "Gemini 2.5 Pro": "", "Gemini 2.5 Deep Think": ""}, "define_actor": "academic", "define_actor_types": ["academic", "internal"], "define_raw": ["He et al., 2023; Xu et al., 2023", "Google's AI Principles and responsible AI approach", "internal policy"], "define_type_raw": ["academic", "internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["internal safety, security, and responsibility teams", "human raters", "Google DeepMind", "internal teams", "Google"], "train_methods": ["conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback", "dataset filtering, conditional pre-training, supervised fine-tuning, reinforcement learning from human and critic feedback", "Collecting data for a diverse set of instruction following categories, generate synthetic data via prompting and response editing", "Supervised fine-tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF)", "supervised fine-tuning; reinforcement learning from human and critic feedback", "instruction tuning and reinforcement learning from human and critic feedback"], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Automated evaluation measuring model’s ability to follow instructions while remaining safe", "Complex prompts evaluation", "Human evaluations (Capabilities / Benchmarks)", "Human Preference Evaluations (blind side by side evaluations on held-out collections of single-turn prompts)", "Instruction Following automated evaluation", "LMSYS Chatbot Arena"], "bench_authors": ["Google", "Google DeepMind", "Chiang et al., 2024"]}, {"company": "Google", "behavior": "Objective tone when refusing", "type": "Rhetoric", "types": ["Rhetoric"], "definition": "Objective tone of model refusal, avoiding over-refusals and coming across as preachy", "models": ["Gemini 2.0 Flash-Lite"], "model_urls": {"Gemini 2.0 Flash-Lite": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["internal safety, security, and responsibility teams"], "train_methods": ["conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["Automated evaluation measuring objective tone of model refusal"], "bench_authors": []}, {"company": "Anthropic", "behavior": "Absence of bias", "type": "Anti-discrimination", "types": ["Anti-discrimination"], "definition": "Avoid reliance on stereotypes or overcorrection to avoid the appearance of bias in areas such as age, race, gender, income level, physical appearance, and socioeconomic status", "models": ["Claude Opus 4.6"], "model_urls": {"Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Parrish, A., et al. (2021)"], "define_type_raw": ["academic"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Bias Benchmark for Question Answering (BBQ)"], "bench_authors": ["Parrish, A., et al. (2021)"]}, {"company": "Google", "behavior": "Factuality", "type": "Factuality", "types": ["Factuality"], "definition": "The model's ability to provide factual accuracy, perform logical reasoning, and avoid ungrounded inferences.", "models": ["Gemma 3"], "model_urls": {"Gemma 3": "https://ai.google.dev/gemma/docs/core/model_card_3"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind"], "train_methods": ["Instruction tuning (implied for IT variants)"], "benchmark_actor": "academic", "benchmark_actor_types": ["private", "internal", "academic"], "bench_names": ["BIG-Bench Hard", "FACTS Grounding", "GPQA Diamond", "IFEval", "SimpleQA"], "bench_authors": ["Suzgun et al.", "Google", "Rein et al.", "Zhou et al.", "OpenAI"]}, {"company": "Google", "behavior": "Reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "All models in the family are designed as highly capable reasoners", "models": ["Gemma 4", "Gemini 2.0 Flash", "Gemini 2.0 Flash-Lite", "Gemini 2.5 Deep Think"], "model_urls": {"Gemma 4": "https://ai.google.dev/gemma/docs/core/model_card_4", "Gemini 2.0 Flash": "", "Gemini 2.0 Flash-Lite": "", "Gemini 2.5 Deep Think": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind", "Google"], "train_methods": ["instruction-tuned", "supervised fine-tuning; reinforcement learning from human and critic feedback", "conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback", "parallel thinking and reinforcement learning to test multiple hypotheses at once"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["private", "academic", "nonprofit"], "bench_names": ["BigBench Extra Hard", "GPQA Diamond", "HLE", "Humanity's Last Exam", "MMLU Pro", "Tau2"], "bench_authors": ["Rein et al.", "Phan et al.", "Center for AI Safety and Scale AI", "Wang et al., 2024"]}, {"company": "Mistral AI", "behavior": "Instruction following", "type": "Compliance", "types": ["Compliance"], "definition": "Always assist with care, respect, and truth. Respond with utmost utility yet securely. Avoid harmful, unethical, prejudiced, or negative content. Ensure replies promote fairness and positivity.", "models": ["Mistral 7B - Instruct"], "model_urls": {"Mistral 7B - Instruct": "http://arxiv.org/abs/2310.06825"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Mistral AI system prompt"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Mistral AI"], "train_methods": ["Fine-tuned on instruction datasets"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Chatbot Arena ELO Rating", "MT Bench"], "bench_authors": ["LMSYS", "Zheng et al. / LMSYS"]}, {"company": "Anthropic", "behavior": "Instruction following", "type": "Compliance", "types": ["Compliance"], "definition": "Ability to follow additional instructions to provide general solutions and not to reward hack or hard-code tests", "models": ["Claude Opus 4.1", "Claude 3.5 Sonnet / Claude 3.5 Haiku"], "model_urls": {"Claude Opus 4.1": "", "Claude 3.5 Sonnet / Claude 3.5 Haiku": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Claude Code impossible tasks", "IFEval"], "bench_authors": ["Anthropic", "Zhou et al."]}, {"company": "Anthropic", "behavior": "Chain-of-thought faithfulness", "type": "Reasoning", "types": ["Reasoning"], "definition": "the CoT must be a faithful and complete reflection of the way the model reached its conclusion and generated a user-facing response", "models": ["Claude 3.7 Sonnet"], "model_urls": {"Claude 3.7 Sonnet": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Turpin et al., 2023 / Chua and Evans, 2025"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["developing training methods that encourage models to more fully report on all of the factors involved in obtaining final results"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["CoT Faithfulness prompt pairs on MMLU and GPQA"], "bench_authors": ["Anthropic"]}, {"company": "Google", "behavior": "Factuality", "type": "Knowledge", "types": ["Knowledge"], "definition": "If provided with a fact-seeking prompt without any given source, Gemini API models should not hallucinate incorrect information", "models": ["Gemini API models"], "model_urls": {"Gemini API models": ""}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Roberts et al., 2020"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["human annotators"], "train_methods": ["Supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF)"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Factuality set"], "bench_authors": ["Google"]}, {"company": "Google", "behavior": "overall preference", "type": "Compliance", "types": ["Compliance"], "definition": "a measure of the fulfillment of the user’s intent given the generated image.", "models": ["Imagen 4"], "model_urls": {"Imagen 4": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["GenAI-Bench"], "bench_authors": []}, {"company": "Google", "behavior": "Multilingual performance", "type": "Language", "types": ["Language"], "definition": "MMLU translated by human translators into 15 languages. The Lite version includes 200 Culturally Sensitive and 200 Culturally Agnostic samples per language", "models": ["Gemini 2.0 Flash", "Gemini 2.5 Flash", "Gemini 3 Flash"], "model_urls": {"Gemini 2.0 Flash": "", "Gemini 2.5 Flash": "", "Gemini 3 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["supervised fine-tuning; reinforcement learning from human and critic feedback"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Global MMLU (Lite)", "MMMLU"], "bench_authors": ["Hendrycks et al., 2020"]}, {"company": "Google", "behavior": "Commonsense reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Commonsense reasoning across 100 Languages and Cultures", "models": ["Gemini 3 Flash"], "model_urls": {"Gemini 3 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["Global PIQA"], "bench_authors": []}, {"company": "Google", "behavior": "Scientific knowledge", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Gemini 2.5 Flash", "Gemini 3 Flash", "Gemini 3 Pro"], "model_urls": {"Gemini 2.5 Flash": "", "Gemini 3 Flash": "", "Gemini 3 Pro": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["GPQA Diamond"], "bench_authors": ["Rein et al."]}, {"company": "Anthropic", "behavior": "Reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Ability to draw logical conclusions and apply knowledge to real-world scenarios, requiring mathematical, scientific, and commonsense reasoning.", "models": ["Claude 3 Family"], "model_urls": {"Claude 3 Family": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["GPQA, MMLU, ARC-Challenge, HellaSwag, WinoGrande, DROP"], "bench_authors": ["Various academics and institutions"]}, {"company": "Mistral AI", "behavior": "Mathematical reasoning", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Mistral 7B"], "model_urls": {"Mistral 7B": "http://arxiv.org/abs/2310.06825"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Mistral AI"], "train_methods": ["Pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["GSM8K"], "bench_authors": ["Cobbe et al., 2021"]}, {"company": "OpenAI", "behavior": "Health performance", "type": "Domain knowledge", "types": ["Domain knowledge"], "definition": "Performance and safety in health-related settings, such as realistic health conversations with individuals and health professionals.", "models": ["gpt-oss-120b & gpt-oss-20b"], "model_urls": {"gpt-oss-120b & gpt-oss-20b": "http://arxiv.org/abs/2508.10925"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Pre-training and CoT RL techniques"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["HealthBench"], "bench_authors": ["Arora et al."]}, {"company": "EuroLLM Project (Unbabel, et al.)", "behavior": "Commonsense reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "requires the understanding not just of the words in the sentence, but also of the underlying meaning and context", "models": ["EuroLLM-9B"], "model_urls": {"EuroLLM-9B": "http://arxiv.org/abs/2506.04079"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Hellaswag (Zellers et al., 2019)"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Internal developers"], "train_methods": ["Self-supervised pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Hellaswag"], "bench_authors": ["Zellers et al. (2019)"]}, {"company": "Mistral AI", "behavior": "Commonsense reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "", "models": ["Mistral 7B"], "model_urls": {"Mistral 7B": "http://arxiv.org/abs/2310.06825"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Mistral AI"], "train_methods": ["Pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Hellaswag"], "bench_authors": ["Zellers et al. (2019)"]}, {"company": "Anthropic", "behavior": "Helpfulness", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "", "models": ["Claude 3.5 Sonnet"], "model_urls": {"Claude 3.5 Sonnet": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Helpful, Honest, and Harmless (HHH) training"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Human Feedback Evaluations (Instruction-Following)"], "bench_authors": ["Anthropic"]}, {"company": "OpenAI", "behavior": "helpfulness and harmlessness", "type": "Harmlessness", "types": ["Harmlessness"], "definition": "produce outputs that are preferred by human labelers... generate outputs that align better with human preferences and follow instructions more effectively", "models": ["GPT-4"], "model_urls": {"GPT-4": "http://arxiv.org/abs/2303.08774"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Bai et al. 2022"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI, human trainers/contractors"], "train_methods": ["Reinforcement learning from human feedback (RLHF), supervised fine-tuning (SFT), and rule-based reward models (RBRMs)"], "benchmark_actor": "private", "benchmark_actor_types": ["private"], "bench_names": ["HumanEval"], "bench_authors": ["Chen et al., 2021"]}, {"company": "Google", "behavior": "Academic reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "Academic reasoning (full set, text + MM)", "models": ["Gemini 3 Flash", "Gemini 3 Pro"], "model_urls": {"Gemini 3 Flash": "", "Gemini 3 Pro": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["reinforcement learning techniques that can leverage multi-step reasoning, problem-solving and theorem-proving data"], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit"], "bench_names": ["Humanity's Last Exam"], "bench_authors": ["Center for AI Safety and Scale AI"]}, {"company": "EuroLLM Project (Unbabel, et al.)", "behavior": "Instruction following", "type": "Compliance", "types": ["Compliance"], "definition": "test a model's ability to follow explicit instructions, such as \"include keyword x\" or \"use format y\".", "models": ["EuroLLM-9B-Instruct"], "model_urls": {"EuroLLM-9B-Instruct": "http://arxiv.org/abs/2506.04079"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["IFEval (Kovalevskyi, 2024)"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Internal developers"], "train_methods": ["Supervised fine-tuning (SFT) using standard cross-entropy loss, enabling bfloat16 mixed precision and packing. The loss is calculated only on target tokens"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["IFEval"], "bench_authors": ["Bohdan Kovalevskyi (2024)"]}, {"company": "OpenAI", "behavior": "Instruction following", "type": "Obedience", "types": ["Obedience"], "definition": "follow the instructions in the system message over developer messages, and instructions in developer messages over user messages", "models": ["OpenAI o3 and o4-mini", "GPT-4.5"], "model_urls": {"OpenAI o3 and o4-mini": "", "GPT-4.5": ""}, "define_actor": "academic", "define_actor_types": ["academic", "internal"], "define_raw": ["Wallace et al. 2024", "E. Wallace, K. Xiao, R. Leike, L. Weng, J. Heidecke, and A. Beutel, \"The instruction hierarchy: Training llms to prioritize privileged instructions,\" 2024."], "define_type_raw": ["academic", "internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["supervised each model to follow the instructions in the system message over developer messages, and instructions in developer messages over user messages", "supervised learning"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Instruction Hierarchy Evaluation"], "bench_authors": ["OpenAI"]}, {"company": "OpenAI", "behavior": "Instruction following", "type": "Compliance", "types": ["Compliance"], "definition": "follow the instructions in the system message over developer messages, and instructions in developer messages over user messages", "models": ["o1"], "model_urls": {"o1": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["OpenAI", "OpenAI Instruction Hierarchy"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["supervised o1 to follow the instructions in the system message over developer messages", "supervised o1 to follow the instructions in the correct priority"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Instruction Hierarchy Evaluation"], "bench_authors": ["OpenAI"]}, {"company": "Google", "behavior": "Helpfulness", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "Help the user: fulfill the user request; only refuse if it is not possible to find a response that fulfills the user goals without violating policy.", "models": ["Gemini 1.5 Pro and Gemini 1.5 Flash"], "model_urls": {"Gemini 1.5 Pro and Gemini 1.5 Flash": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Desiderata"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Human raters, Google DeepMind"], "train_methods": ["Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF)"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Internal Helpfulness SxS metrics"], "bench_authors": ["Google DeepMind"]}, {"company": "Google", "behavior": "Objective tone", "type": "Rhetoric", "types": ["Rhetoric"], "definition": "If a refusal is necessary, articulate it neutrally without making assumptions about user intent.", "models": ["Gemini 1.5 Pro and Gemini 1.5 Flash"], "model_urls": {"Gemini 1.5 Pro and Gemini 1.5 Flash": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Desiderata"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Human raters, Google DeepMind"], "train_methods": ["Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF)"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Internal Tone Evaluation"], "bench_authors": ["Google DeepMind"]}, {"company": "OpenAI", "behavior": "Medical knowledge", "type": "Domain knowledge", "types": ["Domain knowledge"], "definition": "The capability to understand and process health-related information and clinical knowledge.", "models": ["GPT-4o"], "model_urls": {"GPT-4o": "http://arxiv.org/abs/2410.21276"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["MedQA USMLE 4 Options, MMLU Clinical Knowledge, MMLU Medical Genetics, MMLU Anatomy, MedMCQA Dev"], "bench_authors": []}, {"company": "Mistral AI", "behavior": "STEM reasoning", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Mistral 7B"], "model_urls": {"Mistral 7B": "http://arxiv.org/abs/2310.06825"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Mistral AI"], "train_methods": ["Pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MMLU"], "bench_authors": ["Hendrycks et al., 2020"]}, {"company": "OpenAI", "behavior": "Multilingual performance", "type": "Language", "types": ["Language"], "definition": "Models' multilingual capabilities", "models": ["GPT-5.2", "GPT-5", "o1", "OpenAI o3 and o4-mini", "gpt-oss-120b & gpt-oss-20b"], "model_urls": {"GPT-5.2": "", "GPT-5": "http://arxiv.org/abs/2601.03267", "o1": "http://arxiv.org/abs/2412.16720", "OpenAI o3 and o4-mini": "", "gpt-oss-120b & gpt-oss-20b": "http://arxiv.org/abs/2508.10925"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Pre-training and CoT RL techniques"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MMLU Language", "MMLU Language (0-shot)", "MMMLU"], "bench_authors": ["Hendrycks et al., 2020"]}, {"company": "Google", "behavior": "Multimodal understanding", "type": "Knowledge", "types": ["Knowledge"], "definition": "Processes Text, Image with variable aspect ratio and resolution support, Video, and Audio", "models": ["Gemma 4", "Gemini 3 Flash", "Gemini 3 Pro", "Gemini 2.5 Pro"], "model_urls": {"Gemma 4": "https://ai.google.dev/gemma/docs/core/model_card_4", "Gemini 3 Flash": "", "Gemini 3 Pro": "", "Gemini 2.5 Pro": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["internal"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind"], "train_methods": ["instruction-tuned", "native multimodal support"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MMMLU", "MMMU-Pro", "VideoMME"], "bench_authors": ["Hendrycks et al., 2020", "Academic (implied)"]}, {"company": "Google", "behavior": "overall preference, and for its capability to follow prompts accurately", "type": "Compliance", "types": ["Compliance"], "definition": "", "models": ["Veo 3"], "model_urls": {"Veo 3": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "private", "benchmark_actor_types": ["private"], "bench_names": ["MovieGenBench (video and video+audio)"], "bench_authors": ["Meta"]}, {"company": "Google", "behavior": "Long-context", "type": "Knowledge", "types": ["Knowledge"], "definition": "Novel, diagnostic long-context understanding evaluation", "models": ["Gemini 2.0 Flash"], "model_urls": {"Gemini 2.0 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["supervised fine-tuning; reinforcement learning from human and critic feedback"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["MRCR (1M)"], "bench_authors": []}, {"company": "DeepSeek-AI", "behavior": "Harmlessness", "type": "Harmlessness", "types": ["Harmlessness"], "definition": "Answering as helpfully as possible while being safe; responses should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content, and must be socially unbiased and positive in nature.", "models": ["DeepSeek LLM"], "model_urls": {"DeepSeek LLM": "http://arxiv.org/abs/2401.02954"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["DeepSeek Chat System prompt"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek alignment team"], "train_methods": ["Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO)"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MT-Bench"], "bench_authors": ["Zheng et al., 2023"]}, {"company": "EuroLLM Project (Unbabel, et al.)", "behavior": "Reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "require models to reason with long-range context on multiple-choice complex problems with around 1,000 words in length generated algorithmically", "models": ["EuroLLM-9B"], "model_urls": {"EuroLLM-9B": "http://arxiv.org/abs/2506.04079"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["MUSR (Sprague et al.)"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Internal developers"], "train_methods": ["Self-supervised pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MUSR"], "bench_authors": ["Sprague et al."]}, {"company": "OpenAI", "behavior": "Creative freedom", "type": "Creativity", "types": ["Creativity"], "definition": "Maximizing creative freedom by supporting valuable use cases like game development, historical exploration, and education—while maintaining strong safety standards, ensuring the model does not overrefuse requests.", "models": ["4o image generation"], "model_urls": {"4o image generation": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Model Spec"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Post-training safety measures, ensuring chat model refusals are tuned not to overrefuse"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["not_overrefuse metric (Automated red teaming)", "not_overrefuse metric (Human-curated red teaming)"], "bench_authors": ["OpenAI"]}, {"company": "Anthropic", "behavior": "Political even-handedness", "type": "Neutrality", "types": ["Neutrality"], "definition": "To be fair, trustworthy, and unbiased when people from across the political spectrum ask it about political topics.", "models": ["Claude Opus 4.5", "Claude Opus 4.6"], "model_urls": {"Claude Opus 4.5": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf", "Claude Opus 4.6": "https://www-cdn.anthropic.com/c788cbc0a3da9135112f97cdf6dcd06f2c16cee2.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Anthropic internal"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic internal teams"], "train_methods": ["System prompt encouraging engagement on politically divisive topics."], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Open-source evaluation for political even-handedness"], "bench_authors": ["Anthropic internal", "Anthropic"]}, {"company": "OpenAI", "behavior": "Complex reasoning", "type": "Reasoning", "types": ["Reasoning"], "definition": "perform complex reasoning... explicitly reason through safety specifications before producing an answer", "models": ["o1"], "model_urls": {"o1": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["large-scale reinforcement learning to reason using chain of thought"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["QuantBench"], "bench_authors": ["OpenAI"]}, {"company": "Anthropic", "behavior": "Reasoning faithfulness", "type": "Reasoning", "types": ["Reasoning"], "definition": "The degree to which the model's reasoning transcripts appear consistent with its actual behavior, and it verbalizes its use of clues in a prompt.", "models": ["Claude Opus 4 & Claude Sonnet 4", "Claude Sonnet 4.5"], "model_urls": {"Claude Opus 4 & Claude Sonnet 4": "", "Claude Sonnet 4.5": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Turpin et al. 2023, Chen et al. 2025", "Korbak, T., Balesni, M., et al. (2025). Chain of thought monitorability: a new and fragile opportunity for AI safety."], "define_type_raw": ["academic"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Reasoning faithfulness with clues"], "bench_authors": ["Turpin et al. 2023; Chen et al. 2025"]}, {"company": "Google", "behavior": "Parametric knowledge", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Gemini 3 Flash"], "model_urls": {"Gemini 3 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["SimpleQA Verified"], "bench_authors": []}, {"company": "xAI", "behavior": "Political objectivity", "type": "Neutrality", "types": ["Neutrality"], "definition": "factual responses are framed without significant differences in sentiment, forcefulness, verbal hedging, or positive sentiment toward one side than another", "models": ["Grok 4"], "model_urls": {"Grok 4": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["internal policy (xAI aims to build truth-seeking models)"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["xAI"], "train_methods": ["implementing safeguards to improve our model's political objectivity... adding explicit instructions to avoid these behaviors in the system prompt"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Soft Bias (Internal)"], "bench_authors": ["xAI"]}, {"company": "Google", "behavior": "Language understanding, generation, and reasoning capabilities", "type": "Language", "types": ["Language"], "definition": "Strong capabilities in language understanding, generation, and reasoning measured across standard automated benchmarks.", "models": ["Gemma 2"], "model_urls": {"Gemma 2": "https://ai.google.dev/gemma/docs/core/model_card_2"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind"], "train_methods": ["Pre-training, knowledge distillation, and instruction fine-tuning"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Standard Academic Benchmarks (MMLU, GSM8K, ARC-c, HellaSwag, Winogrande, MATH, ARC-e, PIQA, SIQA, Boolq, TriviaQA, NQ, HumanEval, MBPP)"], "bench_authors": ["Various academic authors"]}, {"company": "OpenAI", "behavior": "Human-like coding style", "type": "Coding, Rhetoric", "types": ["Coding", "Rhetoric"], "definition": "Generate code that closely mirrors human style and PR preferences, adheres precisely to instructions, and iteratively runs tests until passing results are achieved.", "models": ["codex-1"], "model_urls": {"codex-1": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["Reinforcement learning on real-world coding tasks"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["SWE-bench metrics"], "bench_authors": []}, {"company": "OpenAI", "behavior": "Reading comprehension in underrepresented languages", "type": "Language", "types": ["Language"], "definition": "Improved reading comprehension and reasoning across a sample of historically underrepresented languages, narrowing the gap in performance between these languages and English.", "models": ["GPT-4o"], "model_urls": {"GPT-4o": "http://arxiv.org/abs/2410.21276"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Translated ARC-Easy", "Translated TruthfulQA", "Uhura-Eval"], "bench_authors": ["AI2 (original), external researchers and language facilitators (translation)", "Original authors, external researchers and language facilitators (translation)", "External researchers and fluent speakers"]}, {"company": "Mistral AI", "behavior": "World knowledge", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Mistral 7B"], "model_urls": {"Mistral 7B": "http://arxiv.org/abs/2310.06825"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Mistral AI"], "train_methods": ["Pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["TriviaQA"], "bench_authors": ["Joshi et al."]}, {"company": "EuroLLM Project (Unbabel, et al.)", "behavior": "Identifying true statements", "type": "Factuality", "types": ["Factuality"], "definition": "evaluate the model's ability to identify true statements. It contains 817 questions from 38 different categories... questions that some humans would answer falsely due to a false belief or misconception", "models": ["EuroLLM-9B"], "model_urls": {"EuroLLM-9B": "http://arxiv.org/abs/2506.04079"}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["TruthfulQA (Lin et al., 2022)"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Internal developers"], "train_methods": ["Self-supervised pre-training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["TruthfulQA"], "bench_authors": ["Lin et al. (2022)"]}, {"company": "Google", "behavior": "Medical knowledge", "type": "Domain knowledge", "types": ["Domain knowledge"], "definition": "Provide draft answers to medically-related questions, given as text.", "models": ["MedLM"], "model_urls": {"MedLM": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["Aligning Google foundation models to the medical domain via domain-specific finetuning using datasets of medical question-and-answer pairs and medical summaries, applying specific instruction finetuning protocols."], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["U.S. Medical Licensing Examination (USMLE)-style questions"], "bench_authors": []}, {"company": "Google", "behavior": "Respond to borderline prompts while remaining safe", "type": "Appropriate harmlessness", "types": ["Appropriate harmlessness"], "definition": "Ability to respond to borderline prompts while remaining safe", "models": ["Gemini 3 Pro"], "model_urls": {"Gemini 3 Pro": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["supervised fine-tuning; reinforcement learning from human and critic feedback"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["Unjustified-refusals"], "bench_authors": []}, {"company": "Google", "behavior": "Image understanding", "type": "Visual knowledge", "types": ["Visual knowledge"], "definition": "", "models": ["Gemini 2.5 Flash"], "model_urls": {"Gemini 2.5 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "private", "benchmark_actor_types": ["private"], "bench_names": ["Vibe-Eval"], "bench_authors": ["Reka"]}, {"company": "Google", "behavior": "Knowledge acquisition from videos", "type": "Knowledge", "types": ["Knowledge"], "definition": "", "models": ["Gemini 3 Flash"], "model_urls": {"Gemini 3 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": ["Video-MMMU"], "bench_authors": []}, {"company": "Anthropic", "behavior": "Avoid unnecessary refusals with harmless prompts while maintaining appropriate caution with harmful content", "type": "Appropriate harmlessness", "types": ["Appropriate harmlessness"], "definition": "The model's ability to avoid unnecessary refusals with harmless prompts while maintaining appropriate caution with harmful content.", "models": ["Claude 3.5 Sonnet"], "model_urls": {"Claude 3.5 Sonnet": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Helpful, Honest, and Harmless (HHH) training"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Wildchat Non-toxic", "XSTest"], "bench_authors": ["W. Zhao, X. Ren, J. Hessel, C. Cardie, Y. Choi, and Y. Deng", "P. Röttger, H. R. Kirk, B. Vidgen, G. Attanasio, F. Bianchi, and D. Hovy"]}, {"company": "Google", "behavior": "Summarization", "type": "Writing", "types": ["Writing"], "definition": "Draft a shorter version of a document (e.g. an After Visit Summary or History & Physical Examination note) that incorporates pertinent information from the original text.", "models": ["MedLM"], "model_urls": {"MedLM": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["Aligning Google foundation models to the medical domain via domain-specific finetuning using datasets of medical question-and-answer pairs and medical summaries, applying specific instruction finetuning protocols."], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "Anthropic", "behavior": "Helpful", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "Benefiting the operators and users it interacts with. Not helpful in a watered-down, hedge-everything, refuse-if-in-doubt way but genuinely, substantively helpful in ways that make real differences in people's lives.", "models": ["Claude"], "model_urls": {"Claude": "https://www-cdn.anthropic.com/9214f02e82c4489fb6cf45441d448a1ecd1a3aca/claudes-constitution.pdf?utm_source=substack&utm_medium=email"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Claude's Constitution"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic colleagues and external reviewers"], "train_methods": ["Training Claude to understand and reflect the constitution's vision"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Helpfulness", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "maximize helpfulness subject to the safety policy's constraints", "models": ["GPT-5"], "model_urls": {"GPT-5": "http://arxiv.org/abs/2601.03267"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["From Hard Refusals to Safe-Completions"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["safe-completions"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "Anthropic", "behavior": "Respect for disability rights", "type": "Anti-discrimination", "types": ["Anti-discrimination"], "definition": "encourage respect for disability rights", "models": ["Claude 3.7 Sonnet"], "model_urls": {"Claude 3.7 Sonnet": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Collective Constitutional AI"], "define_type_raw": ["internal"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["added an additional principle to Claude's constitution"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "Anthropic", "behavior": "Helpful, harmless, and honest", "type": "Helpfulness", "types": ["Helpfulness"], "definition": "align Claude with human values", "models": ["Claude 3.7 Sonnet"], "model_urls": {"Claude 3.7 Sonnet": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf"}, "define_actor": "nonprofit", "define_actor_types": ["nonprofit"], "define_raw": ["UN Declaration of Human Rights"], "define_type_raw": ["international organization"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["pretraining on large diverse data, human feedback techniques, Constitutional AI, reinforcement learning"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Helpfulness and safety", "type": "Helpfulness, Safety", "types": ["Helpfulness", "Safety"], "definition": "Provide more helpful answers and better resist attempts to bypass safety rules, acting in line with specific guidelines and safety expectations", "models": ["GPT-5.2"], "model_urls": {"GPT-5.2": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Reinforcement learning (trained to think before they answer / long internal chain of thought)"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "DeepSeek-AI", "behavior": "Language consistency", "type": "Language", "types": ["Language"], "definition": "Ensuring the model does not mix languages during the reasoning process; maintaining the proportion of target language words in the Chain-of-Thought (CoT).", "models": ["DeepSeek-R1", "DeepSeek-V3.2"], "model_urls": {"DeepSeek-R1": "http://arxiv.org/abs/2501.12948", "DeepSeek-V3.2": "http://arxiv.org/abs/2512.02556"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Automated reward calculation scripts"], "train_methods": ["Language consistency reward applied during RL training, calculated as the proportion of target language words in the CoT.", "Language consistency reward during GRPO; combining top-p sampling with Keep Sampling Mask strategy"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "xAI", "behavior": "Natural and fluid dialogue", "type": "Rhetoric", "types": ["Rhetoric"], "definition": "", "models": ["Grok 4.1"], "model_urls": {"Grok 4.1": "https://www.rand.org/pubs/working_papers/WRA3797-1.html"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["human feedback, model-based graders"], "train_methods": ["combination of supervised finetuning and reinforcement learning on human feedback, verifiable rewards, and model-based graders"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Steerability", "type": "Compliance", "types": ["Compliance"], "definition": "stronger alignment with user intent, and improved emotional intelligence... teach them a greater understanding of human needs and intent", "models": ["GPT-4.5"], "model_urls": {"GPT-4.5": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["supervised fine-tuning (SFT) and reinforcement learning from human feedback (RLHF), new, scalable alignment techniques"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Think before responding", "type": "Reasoning", "types": ["Reasoning"], "definition": "Scaling chain-of-thought reasoning teaches models to think before they respond, allowing them to tackle complex STEM or logic problems.", "models": ["GPT-4.5"], "model_urls": {"GPT-4.5": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Scaling chain-of-thought reasoning"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "DeepSeek-AI", "behavior": "Writing proficiency", "type": "Writing", "types": ["Writing"], "definition": "", "models": ["DeepSeek-V2"], "model_urls": {"DeepSeek-V2": "http://arxiv.org/abs/2405.04434"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek-AI"], "train_methods": ["improve the data quality [of instruction tuning datasets]"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Providing verifiable evidence", "type": "Factuality", "types": ["Factuality"], "definition": "Provide verifiable evidence of its actions through citations of terminal logs and files, allowing the user to validate the model’s work.", "models": ["codex-1"], "model_urls": {"codex-1": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["Codex is trained to cite its actions"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Nuance", "type": "Rhetoric", "types": ["Rhetoric"], "definition": "", "models": ["GPT-4.5"], "model_urls": {"GPT-4.5": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "OpenAI", "behavior": "Natural conversation", "type": "Rhetoric", "types": ["Rhetoric"], "definition": "", "models": ["GPT-4.5"], "model_urls": {"GPT-4.5": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "xAI", "behavior": "strong core reasoning capabilities", "type": "Reasoning", "types": ["Reasoning"], "definition": "", "models": ["Grok 4.1"], "model_urls": {"Grok 4.1": "https://www.rand.org/pubs/working_papers/WRA3797-1.html"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["targeted mid-training to improve specific knowledge and capabilities"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}, {"company": "Google", "behavior": "Visual appeal", "type": "Creativity", "types": ["Creativity"], "definition": "", "models": ["Imagen 4"], "model_urls": {"Imagen 4": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": []}], "risks": [{"company": "OpenAI", "risk": "Deception", "category": "Deception", "types": ["Deception"], "definition": "when the model's user-facing response misrepresents its internal reasoning or the actions it took", "models": ["GPT-5", "GPT-5.2"], "model_urls": {"GPT-5": "http://arxiv.org/abs/2601.03267", "GPT-5.2": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["trained the model to fail gracefully when posed with tasks that it cannot solve... We placed gpt-5-thinking in a variety of tasks that were partly or entirely infeasible to accomplish, and rewarded the model for honestly admitting it can not complete the task"], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Coding Deception", "Browsing Broken Tools", "CharXiv Missing Image", "Production Deception - Adversarial"], "bench_authors": ["OpenAI", "OpenAI (modified from Wang et al.)", "Z. Wang et al. (Modified by OpenAI)"], "mitigations": ["trained the model to fail gracefully when posed with tasks that it cannot solve... We placed gpt-5-thinking in a variety of tasks that were partly or entirely infeasible to accomplish, and rewarded the model for honestly admitting it can not complete the task"]}, {"company": "xAI", "risk": "Deception", "category": "Deception", "types": ["Deception"], "definition": "the rate at which the model lies, i.e., knowingly making false statements intended to be received as true.", "models": ["Grok 4.1", "Grok 4"], "model_urls": {"Grok 4.1": "https://www.rand.org/pubs/working_papers/WRA3797-1.html", "Grok 4": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["xAI"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["xAI"], "train_methods": ["training the model to be honest", "instructing the model to be honest in the system prompt"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["MASK dataset"], "bench_authors": ["Ren et al., 2025"], "mitigations": ["training the model to be honest", "instructing the model to be honest in the system prompt"]}, {"company": "Anthropic", "risk": "Deception", "category": "Deception", "types": ["Deception"], "definition": "Attempting to create false beliefs in someone's mind that they haven't consented to and wouldn't consent to if they understood what was happening.", "models": ["Claude"], "model_urls": {"Claude": "https://www-cdn.anthropic.com/9214f02e82c4489fb6cf45441d448a1ecd1a3aca/claudes-constitution.pdf?utm_source=substack&utm_medium=email"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Anthropic internal policy"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Honesty principles"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["Honesty principles"]}, {"company": "OpenAI", "risk": "Deception / Scheming", "category": "Deception", "types": ["Deception"], "definition": "an AI covertly pursuing goals which are misaligned from its developers or users, including strategic deception and sandbagging", "models": ["OpenAI o3 and o4-mini"], "model_urls": {"OpenAI o3 and o4-mini": ""}, "define_actor": "nonprofit", "define_actor_types": ["nonprofit"], "define_raw": ["Apollo Research"], "define_type_raw": ["nonprofit"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["nonprofit"], "bench_names": ["Covert Subversion", "Deferred Subversion"], "bench_authors": ["Balesni et al. / Apollo Research"], "mitigations": []}, {"company": "Google", "risk": "Deceptive Alignment - Instrumental Reasoning Level 1", "category": "Deception", "types": ["Deception"], "definition": "The instrumental reasoning abilities of the model enable enough situational awareness (ability to work out and use relevant details of its deployment setting) and stealth (ability to circumvent basic oversight mechanisms) such that, absent additional mitigations, we cannot rule out the model significantly undermining human control.", "models": ["Gemini 2.5 Pro"], "model_urls": {"Gemini 2.5 Pro": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Google DeepMind's Frontier Safety Framework (FSF)"], "define_type_raw": ["internal policy"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Stealth challenges and Situational awareness challenges"], "bench_authors": ["Phuong et al (2025)"], "mitigations": []}, {"company": "Google", "risk": "Degradation in multi-turn conversations", "category": "Quality loss", "types": ["Quality loss"], "definition": "", "models": ["Gemini 3 Pro"], "model_urls": {"Gemini 3 Pro": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering"]}, {"company": "Anthropic", "risk": "Discrimination", "category": "Discrimination", "types": ["Discrimination"], "definition": "Propensity for models to exhibit stereotype biases against people belonging to protected classes across various social dimensions.", "models": ["Claude 3 Family"], "model_urls": {"Claude 3 Family": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic"], "train_methods": ["Constitutional AI principle instructing Claude to be understanding of and accessible to individuals with disabilities"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Bias Benchmark for QA (BBQ)"], "bench_authors": ["Parrish et al."], "mitigations": ["Constitutional AI principle instructing Claude to be understanding of and accessible to individuals with disabilities"]}, {"company": "DeepSeek-AI", "risk": "Discrimination and Prejudice Issues", "category": "Discrimination", "types": ["Discrimination"], "definition": "Inappropriate dismissal and mockery stemming from an individual's physiological conditions (age, gender, sexual orientation, appearance) and social attributes (nationality, ethnicity, religion, economic status).", "models": ["DeepSeek-R1"], "model_urls": {"DeepSeek-R1": "http://arxiv.org/abs/2501.12948"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["DeepSeek In-house safety benchmark taxonomy"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek-V3 (as the risk review model)"], "train_methods": ["Model-based Risk Review using risk review prompts, Potential Risky Dialogue Filtering using keyword matching, Safety Reward Model in RL."], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["In-house safety benchmark"], "bench_authors": ["DeepSeek"], "mitigations": ["Model-based Risk Review using risk review prompts, Potential Risky Dialogue Filtering using keyword matching, Safety Reward Model in RL."]}, {"company": "Anthropic", "risk": "Discriminatory bias", "category": "Discrimination", "types": ["Discrimination"], "definition": "Propensity for disparate treatment of identity groups across explicit and inferred categories (gender, race, sexual orientation, religion, region).", "models": ["Claude Opus 4 & Claude Sonnet 4", "Claude Haiku 4.5", "Claude Opus 4.1"], "model_urls": {"Claude Opus 4 & Claude Sonnet 4": "", "Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf", "Claude Opus 4.1": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Anthropic internal policy"], "define_type_raw": ["internal policy"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["Bias Benchmark for Question Answering (BBQ)"], "bench_authors": ["Parrish et al. 2021", "Parrish, A., et al. (2021)", "Parrish et al 2021"], "mitigations": []}, {"company": "xAI", "risk": "Dual-Use Capabilities (CBRN)", "category": "CBRN", "types": ["CBRN"], "definition": "capacity to enable malicious actors to design, synthesize, acquire, or use chemical, biological, radiological, or nuclear (CBRN) weapons", "models": ["Grok 4.1"], "model_urls": {"Grok 4.1": "https://www.rand.org/pubs/working_papers/WRA3797-1.html"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Risk Management Framework [xAI, 2025]"], "define_type_raw": ["internal policy"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["input filters for restricted chemical and biological knowledge"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["WMDP Bio", "WMDP Chem", "Virology Capabilities Test (VCT)", "BioLP-Bench", "ProtocolQA", "FigQA", "CloningScenarios"], "bench_authors": ["Li et al., 2024", "Gotting et al., 2025", "Ivanov, 2024", "Laurent et al., 2024"], "mitigations": ["input filters for restricted chemical and biological knowledge"]}, {"company": "xAI", "risk": "Dual-Use Capabilities (Cybersecurity)", "category": "Cybersecurity", "types": ["Cybersecurity"], "definition": "capacity to engage in offensive cyber operations, e.g., troubleshooting virology lab or reverse engineering binaries", "models": ["Grok 4.1"], "model_urls": {"Grok 4.1": "https://www.rand.org/pubs/working_papers/WRA3797-1.html"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Risk Management Framework [xAI, 2025]"], "define_type_raw": ["internal policy"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["WMDP Cyber", "CyBench"], "bench_authors": ["Li et al., 2024", "Zhang et al., 2024"], "mitigations": []}, {"company": "OpenAI", "risk": "Erotic content", "category": "Pornography", "types": ["Pornography"], "definition": "Attempts to generate erotic or sexually exploitative imagery, nonconsensual intimate imagery, or any type of sexual deepfakes.", "models": ["4o image generation"], "model_urls": {"4o image generation": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Chat model refusals, prompt blocking, and output blocking."], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Human-curated red teaming", "Automated red teaming"], "bench_authors": ["OpenAI"], "mitigations": ["Chat model refusals, prompt blocking, and output blocking."]}, {"company": "OpenAI", "risk": "Fairness and Bias", "category": "Discrimination", "types": ["Discrimination"], "definition": "Model biases on ambiguous and disambiguated questions.", "models": ["gpt-oss-120b & gpt-oss-20b", "o1", "GPT-4.5", "OpenAI o3 and o4-mini"], "model_urls": {"gpt-oss-120b & gpt-oss-20b": "http://arxiv.org/abs/2508.10925", "o1": "http://arxiv.org/abs/2412.16720", "GPT-4.5": "", "OpenAI o3 and o4-mini": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["reinforcement learning to reason using chain of thought"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic", "internal"], "bench_names": ["BBQ evaluation", "BBQ", "First-person fairness evaluation"], "bench_authors": ["Parrish et al.", "A. Parrish et al.", "Eloundou et al."], "mitigations": ["reinforcement learning to reason using chain of thought"]}, {"company": "Google", "risk": "Hate speech", "category": "Discrimination", "types": ["Discrimination"], "definition": "dehumanizing members of protected groups", "models": ["Gemini 2.5 Flash-Lite", "Gemini 2.5 Pro", "Gemini 2.5 Flash", "Gemini 3 Pro Image", "Gemma 4"], "model_urls": {"Gemini 2.5 Flash-Lite": "", "Gemini 2.5 Pro": "", "Gemini 2.5 Flash": "", "Gemini 3 Pro Image": "", "Gemma 4": "https://ai.google.dev/gemma/docs/core/model_card_4"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Google’s standard framework", "Google's standard framework", "Google's AI principles, as well as safety policies"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["internal safety, security, and responsibility teams", "internal safety, security, and responsibility teams, Google DeepMind Responsibility and Safety Council (RSC)", "internal safety, and responsibility teams", "internal safety and responsible AI teams"], "train_methods": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering", "dataset filtering, conditional pre-training, supervised fine-tuning, reinforcement learning from human and critic feedback, safety policies and desiderata, product-level mitigations such as safety filtering", "Automated and human evaluations"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Multilingual Safety (Automated safety policy evaluation across multiple languages)", "Text to Text Safety", "Automated content safety evaluation measuring safety policies"], "bench_authors": ["Google"], "mitigations": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering", "dataset filtering, conditional pre-training, supervised fine-tuning, reinforcement learning from human and critic feedback, safety policies and desiderata, product-level mitigations such as safety filtering", "Automated and human evaluations"]}, {"company": "Google", "risk": "Hate Speech", "category": "Discrimination", "types": ["Discrimination"], "definition": "The application will not generate negative or harmful content targeting identity and/or protected attributes (e.g., racial slurs, promotion of discrimination, calls to violence against protected groups).", "models": [], "model_urls": {}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["Tune models and add appropriate safeguards"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["Tune models and add appropriate safeguards"]}, {"company": "DeepSeek-AI", "risk": "Hate speech, bias, and incitement", "category": "Discrimination", "types": ["Discrimination"], "definition": "Discrimination, unfairness, hate speech, offensive language, violence, incitement, nonviolent unethical behavior, bullying, and harassment.", "models": ["DeepSeek-R1"], "model_urls": {"DeepSeek-R1": "http://arxiv.org/abs/2501.12948"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["DeepSeek-V3"], "train_methods": ["Risk control system, RL training for harmlessness."], "benchmark_actor": "private", "benchmark_actor_types": ["private"], "bench_names": ["Anthropic Red Team (ART)"], "bench_authors": ["Anthropic"], "mitigations": ["Risk control system, RL training for harmlessness."]}, {"company": "Anthropic", "risk": "Jailbreak resistance", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "Resistance to attempts to subvert the model's safety guardrails through the use of specific prompting techniques.", "models": ["Claude Opus 4 & Claude Sonnet 4"], "model_urls": {"Claude Opus 4 & Claude Sonnet 4": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["StrongREJECT"], "bench_authors": ["Souly et al. 2024"], "mitigations": []}, {"company": "Google", "risk": "Jailbreak Robustness", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "Susceptibility to jailbreak attacks that can induce the model to violate its content safety policies via the adversarial manipulation of user prompts.", "models": ["Gemini 1.5 Pro and Gemini 1.5 Flash"], "model_urls": {"Gemini 1.5 Pro and Gemini 1.5 Flash": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind"], "train_methods": ["Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF)"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["JailbreakBench"], "bench_authors": ["Chao et al., 2024"], "mitigations": ["Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF)"]}, {"company": "OpenAI", "risk": "jailbreak robustness", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "adversarial prompts that purposely try to circumvent model refusals for content it's not supposed to produce", "models": ["GPT-4.5"], "model_urls": {"GPT-4.5": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Human Sourced Jailbreaks", "StrongReject"], "bench_authors": ["OpenAI human redteaming", "A. Souly et al."], "mitigations": []}, {"company": "Google", "risk": "jailbreak vulnerability", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "", "models": ["Gemini 3 Pro"], "model_urls": {"Gemini 3 Pro": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["dataset filtering; conditional pre-training; supervised fine-tuning; reinforcement learning from human and critic feedback; safety policies and desiderata; product-level mitigations such as safety filtering"]}, {"company": "OpenAI", "risk": "Jailbreaks", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "adversarial prompts that purposely try to circumvent model refusals for content it's not supposed to produce", "models": ["GPT-5", "gpt-oss-120b & gpt-oss-20b", "o1", "codex-1", "OpenAI o3 and o4-mini", "GPT-5.2"], "model_urls": {"GPT-5": "http://arxiv.org/abs/2601.03267", "gpt-oss-120b & gpt-oss-20b": "http://arxiv.org/abs/2508.10925", "o1": "http://arxiv.org/abs/2412.16720", "codex-1": "", "OpenAI o3 and o4-mini": "", "GPT-5.2": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["OpenAI"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["safe-completions", "Deliberative alignment, instruction hierarchy", "deliberative alignment", "large-scale reinforcement learning on chains of thought"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic", "internal"], "bench_names": ["StrongReject", "Production Jailbreaks", "Jailbreak Augmented Examples", "Human Sourced Jailbreaks", "StrongReject (filtered)"], "bench_authors": ["Souly et al.", "OpenAI", "A. Souly, Q. Lu, D. Bowen, T. Trinh, E. Hsieh, S. Pandey, P. Abbeel, J. Svegliato, S. Emmons, O. Watkins, et al.", "A. Souly et al."], "mitigations": ["safe-completions", "Deliberative alignment, instruction hierarchy", "deliberative alignment", "large-scale reinforcement learning on chains of thought"]}, {"company": "OpenAI", "risk": "Jailbreaks through custom developer messages", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "developers circumventing guardrails in o1 by specifying a custom developer message that conflicts with system safety instructions", "models": ["o1"], "model_urls": {"o1": "http://arxiv.org/abs/2412.16720"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["Instruction Hierarchy (supervising o1 to follow system message instructions over developer messages, and developer messages over user messages)", "Instruction Hierarchy training"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Instruction Hierarchy Evaluation"], "bench_authors": ["OpenAI"], "mitigations": ["Instruction Hierarchy (supervising o1 to follow system message instructions over developer messages, and developer messages over user messages)", "Instruction Hierarchy training"]}, {"company": "OpenAI", "risk": "Jailbreaks through Custom Developer Messages", "category": "Jailbreaking", "types": ["Jailbreaking"], "definition": "developers circumventing guardrails in the models through custom developer messages", "models": ["OpenAI o3 and o4-mini"], "model_urls": {"OpenAI o3 and o4-mini": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["taught the model to adhere to an Instruction Hierarchy"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Instruction Hierarchy Evaluation - Conflicts Between Message Types", "Instruction Hierarchy Evaluation - Tutor Jailbreaks", "Instruction Hierarchy Evaluation - Phrase and Password Protection"], "bench_authors": ["OpenAI"], "mitigations": ["taught the model to adhere to an Instruction Hierarchy"]}, {"company": "OpenAI", "risk": "Model autonomy", "category": "Autonomy", "types": ["Autonomy"], "definition": "The ability to take autonomous actions required for self-exfiltration, self-improvement, and resource acquisition.", "models": ["GPT-4o", "o1", "GPT-4.5"], "model_urls": {"GPT-4o": "http://arxiv.org/abs/2410.21276", "o1": "http://arxiv.org/abs/2412.16720", "GPT-4.5": ""}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Preparedness Framework [4]", "Preparedness Framework"], "define_type_raw": ["internal policy"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": [], "train_methods": ["Threat model development for self-exfiltration and self-improvement risks in preparation for agentic models with heightened capabilities."], "benchmark_actor": "nonprofit", "benchmark_actor_types": ["internal", "nonprofit", "mixed"], "bench_names": ["Agentic task assessment (e.g., Simple software engineering in service of fraud)", "SWE-Bench", "Select machine learning engineering tasks", "Agentic Tasks", "SWE-bench Verified", "MLE-Bench", "SWE-Lancer", "OpenAI Research Engineer Interviews, SWE-bench Verified, Agentic Tasks, MLE-Bench"], "bench_authors": ["OpenAI", "METR", "OpenAI (Preparedness subset of SWE-bench)", "OpenAI Preparedness / N. Chowdhury et al.", "OpenAI Preparedness", "OpenAI, Princeton NLP (for SWE-bench)"], "mitigations": ["Threat model development for self-exfiltration and self-improvement risks in preparation for agentic models with heightened capabilities."]}, {"company": "xAI", "risk": "Offensive cyber operations", "category": "Cybersecurity", "types": ["Cybersecurity"], "definition": "possibility of our model enabling malicious actors to design, synthesize, acquire, or use offensive cyber operations", "models": ["Grok 4"], "model_urls": {"Grok 4": ""}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["cyber killchain [Hutchins et al., 2011]"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["xAI"], "train_methods": ["enforcement of our basic refusal policy is sufficient"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic"], "bench_names": ["WMDP Cyber", "CyBench"], "bench_authors": ["Li et al., 2024", "Zhang et al., 2025"], "mitigations": ["enforcement of our basic refusal policy is sufficient"]}, {"company": "Google", "risk": "Offensive cyber-security", "category": "Cybersecurity", "types": ["Cybersecurity"], "definition": "Model capabilities at offensive cybersecurity, involving hacking into a simulated server to retrieve secret information.", "models": ["Gemma 2"], "model_urls": {"Gemma 2": "https://ai.google.dev/gemma/docs/core/model_card_2"}, "define_actor": "internal", "define_actor_types": ["internal"], "define_raw": ["Phuong et al., 2024"], "define_type_raw": ["internal policy"], "train_actor": null, "train_actor_types": [], "train_raw": [], "train_methods": [], "benchmark_actor": "academic", "benchmark_actor_types": ["academic", "internal", "private"], "bench_names": ["InterCode-CTF", "Internal CTF suite", "Hack the Box"], "bench_authors": ["Yang et al., 2023", "Phuong et al., 2024", "Hack the Box"], "mitigations": []}, {"company": "Google", "risk": "Offensive cybersecurity", "category": "Cybersecurity", "types": ["Cybersecurity"], "definition": "ability to identify security related patches and security vulnerabilities in functions' source code... solve various entry-level, tactical challenges involving longer-range exploration and planning.", "models": ["Gemini V1.0 family", "Gemini 1.5 Pro"], "model_urls": {"Gemini V1.0 family": "", "Gemini 1.5 Pro": ""}, "define_actor": "academic", "define_actor_types": ["academic"], "define_raw": ["Shevlane et al., 2023"], "define_type_raw": ["academic"], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Google DeepMind Responsible Development and Innovation team"], "train_methods": ["Data curation, safety filters, SFT, RLHF"], "benchmark_actor": "academic", "benchmark_actor_types": ["academic", "private", "internal"], "bench_names": ["capture-the-flag (CTF) challenges", "InterCode-CTF", "Hack the Box", "Internal CTF suite"], "bench_authors": ["Yang et al., 2023b", "Hack the Box", "Google DeepMind"], "mitigations": ["Data curation, safety filters, SFT, RLHF"]}, {"company": "xAI", "risk": "Political bias", "category": "Bias", "types": ["Bias"], "definition": "whether factual responses are framed more favorably toward one side than another", "models": ["Grok 4"], "model_urls": {"Grok 4": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["xAI"], "train_methods": ["explicit instructions to avoid these behaviors in the system prompt"], "benchmark_actor": "internal", "benchmark_actor_types": ["internal"], "bench_names": ["Soft Bias (Internal)"], "bench_authors": ["xAI"], "mitigations": ["explicit instructions to avoid these behaviors in the system prompt"]}, {"company": "Anthropic", "risk": "Political bias", "category": "Bias", "types": ["Bias"], "definition": "The model showing specific political bias, in any direction, resulting in structure and tone-based asymmetries including length, tone, degree of hedging, and willingness to engage.", "models": ["Claude Haiku 4.5", "Claude Opus 4.5", "Claude Sonnet 4.5", "Claude Opus 4.1"], "model_urls": {"Claude Haiku 4.5": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf", "Claude Opus 4.5": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf", "Claude Sonnet 4.5": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf", "Claude Opus 4.1": ""}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["Anthropic internal teams", "Anthropic"], "train_methods": ["System prompt encouraging engagement on politically divisive topics and prompting the model to offer alternative perspectives.", "research and improved training methods to reduce it"], "benchmark_actor": "academic", "benchmark_actor_types": ["internal", "academic"], "bench_names": ["Paired prompts for opposing viewpoints", "Open-source evaluation for political even-handedness", "Bias Benchmark for Question Answering (BBQ)", "Political bias evaluation (comparative prompt pairs)", "Political bias evaluation"], "bench_authors": ["Anthropic", "Anthropic internal", "Parrish, A., et al. (2021)"], "mitigations": ["System prompt encouraging engagement on politically divisive topics and prompting the model to offer alternative perspectives.", "research and improved training methods to reduce it"]}, {"company": "OpenAI", "risk": "Privacy", "category": "Privacy", "types": ["Privacy"], "definition": "potential to be used to attempt to identify individuals when augmented with outside data", "models": ["GPT-4"], "model_urls": {"GPT-4": "http://arxiv.org/abs/2303.08774"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["OpenAI"], "train_methods": ["fine-tuning models to reject these types of requests, removing personal information from the training dataset where feasible, creating automated model evaluations, monitoring and responding to user attempts, and restricting use in policies"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["fine-tuning models to reject these types of requests, removing personal information from the training dataset where feasible, creating automated model evaluations, monitoring and responding to user attempts, and restricting use in policies"]}, {"company": "Google", "risk": "Privacy violations", "category": "Privacy", "types": ["Privacy"], "definition": "The risk of exposing certain personal information and other sensitive data present in training sets.", "models": ["Gemma 3", "Gemma 4"], "model_urls": {"Gemma 3": "https://ai.google.dev/gemma/docs/core/model_card_3", "Gemma 4": "https://ai.google.dev/gemma/docs/core/model_card_4"}, "define_actor": null, "define_actor_types": [], "define_raw": [], "define_type_raw": [], "train_actor": "internal", "train_actor_types": ["internal"], "train_raw": ["automated techniques"], "train_methods": ["Sensitive Data Filtering using automated techniques during data preprocessing.", "Models were trained on data filtered for removal of certain personal information and other sensitive data"], "benchmark_actor": null, "benchmark_actor_types": [], "bench_names": [], "bench_authors": [], "mitigations": ["Sensitive Data Filtering using automated techniques during data preprocessing.", "Models were trained on data filtered for removal of certain personal information and other sensitive data"]}]};
+const COMPANIES = [{"id": "Anthropic", "short": "Anthropic"}, {"id": "OpenAI", "short": "OpenAI"}, {"id": "Google", "short": "Google"}, {"id": "Meta", "short": "Meta"}, {"id": "DeepSeek-AI", "short": "DeepSeek"}, {"id": "Mistral AI", "short": "Mistral"}, {"id": "xAI", "short": "xAI"}, {"id": "EuroLLM Project (Unbabel, et al.)", "short": "EuroLLM"}];
+const BEH_TYPES = ["Anti-discrimination", "Appropriate harmlessness", "Coding", "Compliance", "Creativity", "Domain knowledge", "Factuality", "General", "Harmlessness", "Helpfulness", "Knowledge", "Language", "Neutrality", "Obedience", "Personality", "Reasoning", "Rhetoric", "Safety", "Visual knowledge", "Writing"];
+const RISK_CATS  = ["Autonomy", "Bias", "CBRN", "Cybersecurity", "Deception", "Discrimination", "Jailbreaking", "Pornography", "Privacy", "Quality loss"];
+
+const ACTOR_COLORS = {
+  internal:'#3B82F6', academic:'#8B5CF6', nonprofit:'#10B981',
+  governmental:'#F59E0B', private:'#EF4444', public:'#06B6D4', mixed:'#9CA3AF',
+};
+const ACTOR_LABELS = {
+  internal:'Internal', academic:'Academic', nonprofit:'Nonprofit',
+  governmental:'Governmental', private:'Private', public:'Public',
+  mixed:'Mixed',
+};
+
+// ── State ──────────────────────────────────────────────────────────────────
+const S = {
+  section: 'behaviors',     // 'behaviors' | 'risks'
+  dim: 'define',            // 'define' | 'train' | 'benchmark'
+  activeCompanies: new Set(COMPANIES.map(c => c.id)),
+  selectedCats: new Set(),  // behavior types OR risk categories
+  selectedModels: new Set(),
+  modelsOpen: false,
+};
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function dimActor(item) {
+  if (S.dim === 'define')     return item.define_actor;
+  if (S.dim === 'train')      return item.train_actor;
+  if (S.dim === 'benchmark')  return item.benchmark_actor;
+  return null;
+}
+
+// Returns array of all unique actor types for the current dimension
+function dimActors(item) {
+  if (S.dim === 'define')     return item.define_actor_types  || (item.define_actor     ? [item.define_actor]     : []);
+  if (S.dim === 'train')      return item.train_actor_types   || (item.train_actor      ? [item.train_actor]      : []);
+  if (S.dim === 'benchmark')  return item.benchmark_actor_types|| (item.benchmark_actor ? [item.benchmark_actor]  : []);
+  return [];
+}
+
+function actorColor(t) { return ACTOR_COLORS[t] || null; }
+function actorLabel(t) { return t ? (ACTOR_LABELS[t] || t) : '—'; }
+
+// ── Detail Panel ──────────────────────────────────────────────────────────
+const dpPanel = document.getElementById('detailPanel');
+const dpTitle = document.getElementById('dpTitle');
+const dpCat   = document.getElementById('dpCat');
+const dpBody  = document.getElementById('dpBody');
+document.getElementById('dpClose').addEventListener('click', closeDetail);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+function closeDetail() { dpPanel.classList.remove('open'); }
+
+function actorBadge(types) {
+  if (!types || !types.length) return '';
+  return types.map(t => {
+    const c = actorColor(t);
+    const dotStyle = c ? `background:${c}` : 'background:var(--border)';
+    return `<span class="dp-actor-badge"><span class="dp-dot" style="${dotStyle}"></span>${esc(actorLabel(t))}</span>`;
+  }).join('');
+}
+
+function showDetail(item, kind) {
+  const name   = kind === 'behavior' ? item.behavior : item.risk;
+  const cat    = kind === 'behavior' ? (item.types?.join(', ') || item.type) : item.category;
+  const isBeh  = kind === 'behavior';
+  const trainLbl = isBeh ? 'Train' : 'Mitigate';
+
+  dpTitle.textContent = name;
+  dpCat.textContent   = cat;
+
+  let html = '';
+
+  // Definition
+  if (item.definition) {
+    html += `<div class="dp-section">
+      <div class="dp-section-title">Definition</div>
+      <div class="dp-def">${esc(item.definition)}</div>
+    </div>`;
+  }
+
+  // Define
+  html += `<div class="dp-section">
+    <div class="dp-section-title">Define
+      ${item.define_actor_types?.length ? `<span class="dp-multi-actors">${actorBadge(item.define_actor_types)}</span>` : ''}
+    </div>
+    ${item.define_raw?.length
+      ? `<ul class="dp-list">${item.define_raw.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`
+      : `<div class="dp-text muted">No definition source recorded</div>`}
+  </div>`;
+
+  html += '<div class="dp-divider"></div>';
+
+  // Train / Mitigate
+  html += `<div class="dp-section">
+    <div class="dp-section-title">${trainLbl}
+      ${item.train_actor_types?.length ? `<span class="dp-multi-actors">${actorBadge(item.train_actor_types)}</span>` : ''}
+    </div>`;
+  if (item.train_methods?.length) {
+    html += item.train_methods.map(m => `<div class="dp-text">• ${esc(m)}</div>`).join('');
+  }
+  if (item.train_raw?.length) {
+    html += `<div class="dp-text muted" style="font-size:0.65rem;margin-top:4px">Actors: ${esc(item.train_raw.join('; '))}</div>`;
+  }
+  if (!item.train_methods?.length && !item.train_raw?.length) {
+    html += `<div class="dp-text muted">No training data recorded</div>`;
+  }
+  html += `</div>`;
+
+  html += '<div class="dp-divider"></div>';
+
+  // Benchmark
+  html += `<div class="dp-section">
+    <div class="dp-section-title">Benchmark
+      ${item.benchmark_actor_types?.length ? `<span class="dp-multi-actors">${actorBadge(item.benchmark_actor_types)}</span>` : ''}
+    </div>`;
+  if (item.bench_names?.length) {
+    html += `<ul class="dp-list">`;
+    item.bench_names.forEach((b, i) => {
+      const auth = item.bench_authors?.[i] ? ` <span style="color:var(--text-light);font-size:0.6rem">— ${esc(item.bench_authors[i])}</span>` : '';
+      html += `<li>${esc(b)}${auth}</li>`;
+    });
+    html += `</ul>`;
+  } else {
+    html += `<div class="dp-text muted">No benchmark recorded</div>`;
+  }
+  html += `</div>`;
+
+  // Models
+  if (item.models?.length) {
+    html += '<div class="dp-divider"></div>';
+    html += `<div class="dp-section"><div class="dp-section-title">Models</div><ul class="dp-list">`;
+    item.models.forEach(m => {
+      const url = item.model_urls?.[m];
+      html += `<li>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(m)}</a>` : esc(m)}</li>`;
+    });
+    html += `</ul></div>`;
+  }
+
+  dpBody.innerHTML = html;
+  dpPanel.classList.add('open');
+}
+
+// ── Filter helpers ─────────────────────────────────────────────────────────
+function filterItems(company) {
+  const arr = S.section==='behaviors' ? DATA.behaviors : DATA.risks;
+  let items = arr.filter(x => x.company === company);
+  if (S.selectedCats.size>0)   items = items.filter(x=>(x.types||[x.category]).some(t=>S.selectedCats.has(t)));
+  if (S.selectedModels.size>0) items = items.filter(x=>x.models.some(m=>S.selectedModels.has(m)));
+  return items;
+}
+
+// ── Build company chips ────────────────────────────────────────────────────
+function buildChips() {
+  const wrap = document.getElementById('companyChips');
+  wrap.innerHTML = '';
+  COMPANIES.forEach(c => {
+    const b = document.createElement('button');
+    b.className = 'co-chip' + (S.activeCompanies.has(c.id)?' active':'');
+    b.textContent = c.short;
+    b.addEventListener('click', () => {
+      if (S.activeCompanies.has(c.id)) {
+        if (S.activeCompanies.size===1) return;
+        S.activeCompanies.delete(c.id);
+        b.classList.remove('active');
+      } else {
+        S.activeCompanies.add(c.id);
+        b.classList.add('active');
+      }
+      renderMatrix();
+    });
+    wrap.appendChild(b);
+  });
+}
+
+// ── Render sidebar ─────────────────────────────────────────────────────────
+function renderSidebar() {
+  const sb = document.getElementById('sidebar');
+  const isBeh = S.section === 'behaviors';
+  const cats  = isBeh ? BEH_TYPES : RISK_CATS;
+  const arr   = isBeh ? DATA.behaviors : DATA.risks;
+
+  // Count per category (unfiltered by model), using types array
+  const counts = {};
+  cats.forEach(c => { counts[c] = arr.filter(x=>(x.types||[x.category]).includes(c)).length; });
+
+  // Models available for active section + companies
+  const availModels = new Set();
+  const arr2 = isBeh ? DATA.behaviors : DATA.risks;
+  COMPANIES.filter(c=>S.activeCompanies.has(c.id)).forEach(c => {
+    arr2.filter(x=>x.company===c.id).forEach(x=>(x.models||[]).forEach(m=>availModels.add(m)));
+  });
+
+  let catHtml = `<div class="sb-part">
+    <div class="sb-heading">${isBeh ? 'Behavior type' : 'Risk category'}</div>
+    <div class="sb-item ${S.selectedCats.size===0?'active':''}" data-action="clearCats">
+      All <span class="sb-count">${arr.length}</span>
+    </div>`;
+  cats.forEach(c => {
+    catHtml += `<div class="sb-item ${S.selectedCats.has(c)?'active':''}" data-action="toggleCat" data-value="${esc(c)}">
+      <span>${esc(c)}</span><span class="sb-count">${counts[c]||0}</span>
+    </div>`;
+  });
+  catHtml += `</div>`;
+
+  // Models section
+  const modelArr = [...availModels].sort();
+  let modHtml = `<div class="sb-part">
+    <div class="sb-models-toggle" data-action="toggleModels">
+      <div class="sb-heading" style="margin-bottom:0">Filter by model</div>
+      <span class="sb-caret" id="sbCaret">${S.modelsOpen ? '▴' : '▾'}</span>
+    </div>
+    <div class="sb-models-body${S.modelsOpen?' open':''}" id="sbModels">
+      <div style="margin-top:6px">
+        <div class="sb-item ${S.selectedModels.size===0?'active':''} sb-model" data-action="clearModels">
+          All models
+        </div>`;
+  modelArr.forEach(m => {
+    modHtml += `<div class="sb-item sb-model ${S.selectedModels.has(m)?'active':''}" data-action="toggleModel" data-value="${esc(m)}">${esc(m)}</div>`;
+  });
+  modHtml += `</div></div></div>`;
+
+  sb.innerHTML = catHtml + modHtml;
+
+  // Attach events
+  sb.querySelectorAll('[data-action]').forEach(el => {
+    el.addEventListener('click', () => {
+      const a=el.dataset.action, v=el.dataset.value;
+      if (a==='clearCats')    { S.selectedCats.clear(); render(); }
+      else if(a==='toggleCat') {
+        S.selectedCats.has(v) ? S.selectedCats.delete(v) : S.selectedCats.add(v);
+        render();
+      }
+      else if(a==='clearModels') { S.selectedModels.clear(); render(); }
+      else if(a==='toggleModel') {
+        S.selectedModels.has(v) ? S.selectedModels.delete(v) : S.selectedModels.add(v);
+        render();
+      }
+      else if(a==='toggleModels') {
+        S.modelsOpen = !S.modelsOpen;
+        document.getElementById('sbModels')?.classList.toggle('open', S.modelsOpen);
+        const caret = document.getElementById('sbCaret');
+        if (caret) caret.textContent = S.modelsOpen ? '▴' : '▾';
+      }
+    });
+  });
+}
+
+// ── Render matrix ──────────────────────────────────────────────────────────
+function renderMatrix() {
+  const wrap = document.getElementById('matrix');
+  const active = COMPANIES.filter(c=>S.activeCompanies.has(c.id));
+
+  const modelCounts = {};
+  COMPANIES.forEach(c=>{
+    const ms = new Set([
+      ...DATA.behaviors.filter(b=>b.company===c.id).flatMap(b=>b.models),
+      ...DATA.risks.filter(r=>r.company===c.id).flatMap(r=>r.models),
+    ].filter(Boolean));
+    modelCounts[c.id] = ms.size;
+  });
+
+  // Company header row
+  let html = `<div class="matrix-header">
+    ${active.map(c=>`
+    <div class="col-header">
+      <div class="col-name">${esc(c.short)}</div>
+      <div class="col-meta">${modelCounts[c.id]||0} model${modelCounts[c.id]!==1?'s':''}</div>
+    </div>`).join('')}
+  </div>`;
+
+  // Content
+  {
+    const isBeh = S.section === 'behaviors';
+    const showingFiltered = S.selectedCats.size > 0;
+
+    html += `<div class="section-row">
+      ${active.map(c => {
+        const items = filterItems(c.id);
+        if (!items.length) return `<div class="company-cell"><span class="cell-empty">—</span></div>`;
+
+        let cellHtml = '';
+        if (showingFiltered) {
+          cellHtml = items.map(item=>cardHtml(item,isBeh?'behavior':'risk')).join('');
+        } else {
+          // Group by first type (primary category)
+          const grouped = {};
+          items.forEach(x=>{
+            const k = isBeh ? (x.types?.[0] || x.type) : x.category;
+            if(!grouped[k]) grouped[k]=[];
+            grouped[k].push(x);
+          });
+          Object.keys(grouped).sort().forEach(cat=>{
+            cellHtml += `<div class="cat-label">${esc(cat)}</div>`;
+            cellHtml += grouped[cat].map(item=>cardHtml(item,isBeh?'behavior':'risk')).join('');
+          });
+        }
+        return `<div class="company-cell">${cellHtml}</div>`;
+      }).join('')}
+    </div>`;
+  }
+
+  wrap.innerHTML = html;
+  attachCardEvents();
+}
+
+function cardHtml(item, kind) {
+  const name  = kind==='behavior' ? item.behavior : item.risk;
+  const idx   = kind==='behavior' ? DATA.behaviors.indexOf(item) : DATA.risks.indexOf(item);
+  const count = item.models?.length||0;
+  const actors = dimActors(item);   // array of unique normalized types
+  const countBadge = count>1 ? `<span class="card-count">×${count}</span>` : '';
+
+  if (actors.length === 1) {
+    // Single actor → color the whole card
+    const color = actorColor(actors[0]);
+    const cardStyle = color ? `style="background:${color}"` : '';
+    const dotStyle = `style="background:rgba(255,255,255,0.85)"`;
+    return `<div class="item-card card-colored" data-kind="${kind}" data-idx="${idx}" ${cardStyle}>
+      <div class="card-name">${esc(name)}${countBadge}</div>
+      <div class="card-actor">
+        <span class="actor-dot" ${dotStyle}></span>
+        <span class="actor-type-label">${esc(actorLabel(actors[0]))}</span>
+      </div>
+    </div>`;
+  } else if (actors.length > 1) {
+    // Multiple actors → plain card with multiple dots
+    const dots = actors.map(a => {
+      const c = actorColor(a);
+      return `<span class="actor-dot ${a}" ${c ? `style="background:${c}"` : ''}></span>`;
+    }).join('');
+    return `<div class="item-card" data-kind="${kind}" data-idx="${idx}">
+      <div class="card-name">${esc(name)}${countBadge}</div>
+      <div class="card-actor-multi">${dots}</div>
+    </div>`;
+  } else {
+    // No actor data → plain card, empty dot
+    return `<div class="item-card" data-kind="${kind}" data-idx="${idx}">
+      <div class="card-name">${esc(name)}${countBadge}</div>
+      <div class="card-actor">
+        <span class="actor-dot null"></span>
+        <span class="actor-type-label">—</span>
+      </div>
+    </div>`;
+  }
+}
+
+function attachCardEvents() {
+  document.querySelectorAll('.item-card[data-kind]').forEach(card=>{
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', ()=>{
+      const kind=card.dataset.kind, idx=parseInt(card.dataset.idx);
+      const item=kind==='behavior'?DATA.behaviors[idx]:DATA.risks[idx];
+      showDetail(item,kind);
+    });
+  });
+}
+
+// ── Dimension toggle events ────────────────────────────────────────────────
+document.getElementById('dimToggle').querySelectorAll('.dim-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.dim-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    S.dim = btn.dataset.dim;
+    renderMatrix();
+  });
+});
+
+// ── Section toggle events ──────────────────────────────────────────────────
+document.getElementById('sectionToggle').querySelectorAll('.sec-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.sec-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const newSec = btn.dataset.sec;
+    if (newSec !== S.section) {
+      S.selectedCats.clear();
+      S.selectedModels.clear();
+    }
+    S.section = newSec;
+    render();
+  });
+});
+
+// ── Full render ────────────────────────────────────────────────────────────
+function render() {
+  renderSidebar();
+  renderMatrix();
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+buildChips();
+render();
+</script>
+</body>
+</html>
