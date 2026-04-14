@@ -6,8 +6,15 @@
 <title>AI Alignment Actors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=iA+Writer+Quattro+S:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
+@font-face {
+  font-family: 'Gridlite PE';
+  src: url('GridlitePE.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --bg:          #F5F3EE;
   --surface:     #FFFFFF;
@@ -22,13 +29,14 @@
   --sidebar-w:   230px;
   --col-w:       224px;
   --font-serif:  'EB Garamond', Georgia, 'Times New Roman', serif;
-  --font-grid:   'iA Writer Quattro S', 'Courier New', monospace;
-  --actor-internal:     #3B82F6;
-  --actor-academic:     #8B5CF6;
-  --actor-nonprofit:    #10B981;
-  --actor-governmental: #F59E0B;
+  --font-grid:   'Gridlite PE', monospace;
+  --font-grid-settings: 'wght' 400, 'BACK' 1, 'RECT' 1, 'ELSH' 3;
+  --actor-internal:     #bde6ff;
+  --actor-academic:     #ffecc2;
+  --actor-nonprofit:    #c8ffc0;
+  --actor-governmental: #ffc5f1;
   --actor-private:      #EF4444;
-  --actor-public:       #06B6D4;
+  --actor-public:       #c7fff4;
   --actor-mixed:        #9CA3AF;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -207,9 +215,21 @@ body {
   color: var(--hdr-muted);
   white-space: nowrap;
   letter-spacing: 0.02em;
+  cursor: pointer;
+  padding: 2px 5px 2px 3px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  transition: all 0.12s;
+  user-select: none;
+}
+.lg-item:hover { color: var(--hdr-text); border-color: #3C3C3E; }
+.lg-item.active {
+  color: var(--hdr-text);
+  border-color: #555;
+  background: #2C2C2E;
 }
 .lg-dot {
-  width: 6px; height: 6px;
+  width: 7px; height: 7px;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -395,18 +415,18 @@ body {
   z-index: 3;
   position: relative;
 }
-/* Solid colored card (single actor) */
+/* Solid colored card (single actor) — pastel bg, dark text */
 .item-card.card-colored {
   border-color: transparent;
 }
 .item-card.card-colored .card-name,
 .item-card.card-colored .card-count,
 .item-card.card-colored .actor-type-label {
-  color: rgba(255,255,255,0.92);
+  color: rgba(0,0,0,0.75);
 }
 .item-card.card-colored .actor-dot {
-  border: 1.5px solid rgba(255,255,255,0.5);
-  background: rgba(255,255,255,0.85) !important;
+  border: 1.5px solid rgba(0,0,0,0.18);
+  background: rgba(0,0,0,0.12) !important;
 }
 /* Multi-dot row */
 .card-actor-multi {
@@ -419,11 +439,12 @@ body {
 .card-name {
   font-family: var(--font-grid);
   font-weight: 400;
-  font-size: 0.72rem;
+  font-variation-settings: var(--font-grid-settings);
+  font-size: 0.82rem;
   line-height: 1.35;
   color: var(--text);
   word-break: break-word;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 .card-count {
   font-family: var(--font-serif);
@@ -515,7 +536,8 @@ body {
 .dp-title {
   font-family: var(--font-grid);
   font-weight: 400;
-  font-size: 0.85rem;
+  font-variation-settings: var(--font-grid-settings);
+  font-size: 0.95rem;
   line-height: 1.3;
   color: var(--text);
   flex: 1;
@@ -664,15 +686,7 @@ body {
   <!-- Company chips + legend row -->
   <div class="hdr-companies" id="companyChips">
     <div class="hdr-co-sep"></div>
-    <div class="actor-legend">
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-internal)"></div>Internal</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-academic)"></div>Academic</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-nonprofit)"></div>Nonprofit</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-governmental)"></div>Governmental</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-private)"></div>Private</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-public)"></div>Public</div>
-      <div class="lg-item"><div class="lg-dot" style="background:var(--actor-mixed)"></div>Mixed</div>
-    </div>
+    <!-- legend injected by buildChips() -->
   </div>
 </header>
 
@@ -694,8 +708,8 @@ const BEH_TYPES = ["Anti-discrimination", "Appropriate harmlessness", "Coding", 
 const RISK_CATS  = ["Autonomy", "Bias", "CBRN", "Cybersecurity", "Deception", "Discrimination", "Jailbreaking", "Pornography", "Privacy", "Quality loss"];
 
 const ACTOR_COLORS = {
-  internal:'#3B82F6', academic:'#8B5CF6', nonprofit:'#10B981',
-  governmental:'#F59E0B', private:'#EF4444', public:'#06B6D4', mixed:'#9CA3AF',
+  internal:'#bde6ff', academic:'#ffecc2', nonprofit:'#c8ffc0',
+  governmental:'#ffc5f1', private:'#EF4444', public:'#c7fff4', mixed:'#9CA3AF',
 };
 const ACTOR_LABELS = {
   internal:'Internal', academic:'Academic', nonprofit:'Nonprofit',
@@ -710,6 +724,7 @@ const S = {
   activeCompanies: new Set(COMPANIES.map(c => c.id)),
   selectedCats: new Set(),  // behavior types OR risk categories
   selectedModels: new Set(),
+  selectedActor: null,      // actor type filter from legend
   modelsOpen: false,
 };
 
@@ -835,11 +850,19 @@ function showDetail(item, kind) {
 }
 
 // ── Filter helpers ─────────────────────────────────────────────────────────
+function itemHasActor(x, actor) {
+  // Check all three dimensions for this actor type
+  return (x.define_actor_types||[]).includes(actor) ||
+         (x.train_actor_types||[]).includes(actor) ||
+         (x.benchmark_actor_types||[]).includes(actor);
+}
+
 function filterItems(company) {
   const arr = S.section==='behaviors' ? DATA.behaviors : DATA.risks;
   let items = arr.filter(x => x.company === company);
   if (S.selectedCats.size>0)   items = items.filter(x=>(x.types||[x.category]).some(t=>S.selectedCats.has(t)));
   if (S.selectedModels.size>0) items = items.filter(x=>x.models.some(m=>S.selectedModels.has(m)));
+  if (S.selectedActor)         items = items.filter(x=>itemHasActor(x, S.selectedActor));
   return items;
 }
 
@@ -864,6 +887,43 @@ function buildChips() {
     });
     wrap.appendChild(b);
   });
+
+  // Spacer + actor legend
+  const sep = document.createElement('div');
+  sep.className = 'hdr-co-sep';
+  wrap.appendChild(sep);
+
+  const legend = document.createElement('div');
+  legend.className = 'actor-legend';
+  legend.id = 'actorLegend';
+  const actors = [
+    ['internal',     'Internal',     'var(--actor-internal)'],
+    ['academic',     'Academic',     'var(--actor-academic)'],
+    ['nonprofit',    'Nonprofit',    'var(--actor-nonprofit)'],
+    ['governmental', 'Governmental', 'var(--actor-governmental)'],
+    ['private',      'Private',      'var(--actor-private)'],
+    ['public',       'Public',       'var(--actor-public)'],
+    ['mixed',        'Mixed',        'var(--actor-mixed)'],
+  ];
+  actors.forEach(([key, label, color]) => {
+    const item = document.createElement('div');
+    item.className = 'lg-item';
+    item.dataset.actor = key;
+    item.innerHTML = `<div class="lg-dot" style="background:${color}"></div>${label}`;
+    item.addEventListener('click', () => {
+      if (S.selectedActor === key) {
+        S.selectedActor = null;
+        item.classList.remove('active');
+      } else {
+        S.selectedActor = key;
+        legend.querySelectorAll('.lg-item').forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      }
+      render();
+    });
+    legend.appendChild(item);
+  });
+  wrap.appendChild(legend);
 }
 
 // ── Render sidebar ─────────────────────────────────────────────────────────
@@ -1008,7 +1068,7 @@ function cardHtml(item, kind) {
     // Single actor → color the whole card
     const color = actorColor(actors[0]);
     const cardStyle = color ? `style="background:${color}"` : '';
-    const dotStyle = `style="background:rgba(255,255,255,0.85)"`;
+    const dotStyle = `style="background:rgba(0,0,0,0.12)"`;  // dark dot on pastel bg
     return `<div class="item-card card-colored" data-kind="${kind}" data-idx="${idx}" ${cardStyle}>
       <div class="card-name">${esc(name)}${countBadge}</div>
       <div class="card-actor">
