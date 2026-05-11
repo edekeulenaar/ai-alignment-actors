@@ -16,17 +16,17 @@
 
   /* Actor-type palette — vibrant but not strenuous.            */
   /* (matches the order in docs/data.json actor_types)          */
-  --c-internal:            #FDB0B3;   /* soft coral pink */
-  --c-private:             #F68550;   /* orange */
-  --c-academic:            #FEE192;   /* light yellow */
-  --c-research-institute:  #FBA861;   /* peach */
-  --c-governmental:        #5BB2AC;   /* teal */
-  --c-nonprofit:           #A6DBA3;   /* light green */
-  --c-public:              #4492B4;   /* azure */
-  --c-public-consultation: #4771B0;   /* deep blue */
-  --c-other:               #B0AFAB;   /* warm gray */
-  --c-multiple:            #B197D7;   /* lavender */
-  --c-unknown:             #E5E0D5;   /* neutral */
+  --c-internal:            #4A90E2;   /* blue */
+  --c-private:             #7FD2F8;   /* light blue */
+  --c-academic:            #FCF6AE;   /* pale yellow */
+  --c-research-institute:  #FECB7A;   /* sand */
+  --c-governmental:        #FA7EAE;   /* pink */
+  --c-nonprofit:           #C4E79F;   /* mint */
+  --c-public:              #74C4A7;   /* sage (public + public consultation merged) */
+  --c-public-consultation: #74C4A7;   /* same — merged */
+  --c-multiple:            #FFB8FB;   /* light pink */
+  --c-other:               #F9DFFC;   /* lavender wash */
+  --c-unknown:             #D3D3D3;   /* gray */
 
   --dim:      0.10;
   --sb-w:     220px;
@@ -110,6 +110,12 @@ button { font: inherit; cursor: pointer; }
 .legend-chip:hover { background: rgba(0,0,0,0.04); }
 .legend-chip.active { background: var(--ink); color: var(--paper); }
 .legend-chip.active .swatch { outline: 1px solid var(--paper); }
+.legend-chip .chip-mode {
+  margin-left: auto; padding-left: 0.6em;
+  font-size: 9.5px; letter-spacing: 0.06em; font-weight: 700;
+  color: var(--paper);
+}
+.legend-chip:not(.active) .chip-mode { display: none; }
 .legend-chip .swatch {
   width: 12px; height: 12px; border: 1px solid var(--border); border-radius: 2px;
   flex: 0 0 12px;
@@ -217,6 +223,8 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
   border: 1px solid var(--border); border-radius: 3px;
   background: var(--paper);
 }
+.cluster-expand { flex-direction: row !important; align-items: center; gap: 0.4em; cursor: pointer; }
+.cluster-expand input { margin: 0; }
 .cluster-panes {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
   margin-top: 1rem;
@@ -226,7 +234,7 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .cluster-pane:first-child { grid-column: 1 / -1; }
 .cluster-pane h4 { margin: 0 0 0.5rem; font-size: 14px; font-weight: 700; }
 .cluster-help { font-size: 12px; color: var(--muted); font-style: italic; margin: 0 0 0.5rem; }
-/* ── Timeline: year-tick axis on the left + detail card on the right ── */
+/* ── Timeline: years left of axis, ticks + inline cards on the right ─ */
 .cluster-timeline { position: relative; }
 .tl-summary {
   padding: 0.5rem 0.7rem; margin-bottom: 1rem;
@@ -234,64 +242,55 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
   border: 1px solid var(--border); border-radius: 3px;
   font-size: 13px;
 }
-.tl-summary .tl-hint { color: var(--muted); font-style: italic; font-size: 11.5px; }
 
-.tl-body {
+.tl-axis { position: relative; }
+.tl-row {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.6fr);
-  gap: 1.5rem; align-items: start;
+  grid-template-columns: 70px 1fr;            /* year-gutter | (axis + content) */
+  align-items: start;
+  padding: 6px 0;
 }
-.tl-axis { position: relative; padding: 0.5rem 0 1rem; }
-.tl-year-block {
-  display: grid; grid-template-columns: 60px 1fr; align-items: start;
-  border-left: 2px solid var(--ink);
-  margin-left: 8px;
+.tl-year-cell {
+  text-align: right;
+  padding: 4px 16px 0 0;
 }
-.tl-year-block:first-child { padding-top: 6px; }
 .tl-year-label {
-  font-size: 18px; font-weight: 700; color: var(--ink);
-  padding: 4px 12px 4px 10px;
-  margin: 14px 0 0 -10px;
-  background: var(--paper-alt);
-  border-radius: 2px;
-  align-self: flex-start;
+  font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1;
 }
-.tl-ticks {
-  display: flex; flex-direction: column; gap: 6px;
-  padding: 22px 0 14px 0;
+
+.tl-right {
+  border-left: 2px solid var(--ink);
+  padding-left: 18px;
+  position: relative;
 }
 .tl-tick {
-  display: flex; align-items: center; gap: 0.6em;
-  cursor: pointer; padding: 1px 6px 1px 0; border-radius: 2px;
-  font-size: 14px;
+  display: flex; align-items: center; gap: 0.5em;
+  position: relative;
+  padding: 2px 0;
 }
-.tl-tick:hover { background: var(--paper-alt); }
 .tl-tick-mark {
-  display: inline-block; width: 22px; height: 3px;
-  margin-left: -16px;
-  flex: 0 0 22px;
-  border-radius: 1px;
+  position: absolute; left: -18px; top: 50%;
+  transform: translateY(-50%);
+  width: 16px; height: 3px; border-radius: 1px;
 }
-.tl-tick-co { font-size: 15px; color: var(--ink); }
-.tl-tick:hover .tl-tick-co { color: var(--accent); }
+.tl-tick-co {
+  font-size: 14px; color: var(--ink); white-space: nowrap;
+  margin-left: 2px;
+}
 
-.tl-card {
-  position: sticky; top: 1rem;
+/* Inline definition card for each tick */
+.tl-def-card {
+  margin: 0.35rem 0 0.6rem 0;
+  padding: 0.65rem 0.85rem;
   background: var(--paper-alt);
   border: 1px solid var(--border); border-radius: 3px;
-  padding: 0.9rem 1rem;
-  min-height: 80px;
   font-size: 13.5px; line-height: 1.5;
 }
-.tl-card:empty::after {
-  content: "Hover over a tick on the left to read the definition.";
-  color: var(--muted); font-style: italic; font-size: 12.5px;
-}
 .tl-card-head {
-  font-size: 14px; color: var(--accent); margin-bottom: 0.3rem;
+  font-size: 13.5px; color: var(--accent); margin-bottom: 0.25rem;
   font-weight: 600;
 }
-.tl-card-src { font-size: 12px; color: var(--muted); margin-bottom: 0.5rem; }
+.tl-card-src { font-size: 12px; color: var(--muted); margin-bottom: 0.4rem; }
 .tl-card-src a { color: var(--muted); }
 .tl-def {
   font-style: italic; font-size: 13.5px; line-height: 1.55;
@@ -383,8 +382,8 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
 .prose ul li { margin-bottom: 0.4rem; }
 
 /* ───────────────────────── Grid blocks ────────────────────────── */
-.grid-block { margin-bottom: 4.5rem; padding-top: 0.5rem; }
-.block-head { margin-bottom: 0.8rem; }
+.grid-block { margin-bottom: 5rem; padding-top: 0; }
+.block-head { margin-bottom: 0.3rem; }
 .block-head h3 {
   font-size: 1.2rem; font-weight: 700; margin: 0;
   letter-spacing: -0.01em;
@@ -394,7 +393,7 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
 .view-controls { margin-bottom: 1.2rem; font-size: 13px; color: var(--muted); }
 .view-controls label { cursor: pointer; user-select: none; }
 .view-controls input { vertical-align: middle; margin-right: 0.3em; }
-.sort-bar { margin: 0.4rem 0 0.8rem; font-size: 12px; color: var(--muted);
+.sort-bar { margin: 0.2rem 0 0.5rem; font-size: 12px; color: var(--muted);
             display: flex; gap: 1.2em; align-items: center; flex-wrap: wrap; }
 .sort-bar select { font: inherit; padding: 0.15em 0.3em; margin-left: 0.4em; }
 .sort-bar a { color: var(--muted); cursor: pointer; text-decoration: underline dotted; }

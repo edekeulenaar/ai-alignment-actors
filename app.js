@@ -43,6 +43,7 @@ const DOC_TYPE_LABEL = {
 const STATE = {
   data:               null,
   selectedActorTypes: new Set(),
+  actorChipMode:      {},        // type → 0 (off), 1 (credited), 2 (collaborated)
   selectedYears:      new Set(),
   selectedCountries:  new Set(),
   selectedCompanies:  new Set(),
@@ -106,6 +107,8 @@ fetch("data.json").then(r => r.json()).then(data => {
     STATE.catSelection = null;
     STATE.searchTerm = "";
     STATE.pinned = false;
+    STATE.selectedActorTypes.clear();
+    STATE.actorChipMode = {};
     if (si) si.value = "";
     CARD().classList.add("hidden");
     CARD().classList.remove("pinned");
@@ -119,14 +122,19 @@ fetch("data.json").then(r => r.json()).then(data => {
 function buildSidebar(data) {
   // Legend
   const legend = document.getElementById("legend");
-  data.actor_types.forEach(t => {
+  // Merge "public consultation" into "public" (single colour now)
+  const visibleTypes = data.actor_types.filter(t => t !== "public consultation");
+  visibleTypes.forEach(t => {
     const el = document.createElement("div");
     el.className = "legend-chip"; el.dataset.type = t;
-    el.innerHTML = `<span class="swatch" style="background:${COLOR_VAR[t]||'#ccc'}"></span>${t}`;
+    el.innerHTML = `<span class="swatch" style="background:${COLOR_VAR[t]||'#ccc'}"></span>${t}<span class="chip-mode"></span>`;
     el.addEventListener("click", () => {
-      STATE.selectedActorTypes.has(t)
-        ? STATE.selectedActorTypes.delete(t)
-        : STATE.selectedActorTypes.add(t);
+      // 3-state cycle: off → CREDITED → COLLABORATED → off
+      const cur = STATE.actorChipMode[t] || 0;
+      const next = (cur + 1) % 3;
+      STATE.actorChipMode[t] = next;
+      if (next === 0) STATE.selectedActorTypes.delete(t);
+      else            STATE.selectedActorTypes.add(t);
       refreshSelectionState();
     });
     legend.appendChild(el);
@@ -187,6 +195,7 @@ function syncCompanyListActive() {
 
 function resetAll() {
   STATE.selectedActorTypes.clear();
+  STATE.actorChipMode = {};
   STATE.selectedYears.clear();
   STATE.selectedCountries.clear();
   STATE.selectedCompanies.clear();
@@ -449,9 +458,13 @@ function makeSquare(item, blockId, nameKey) {
   sq.dataset.id        = item.id;
   sq.dataset.category  = item.category || "";
   sq.dataset.actorType = item.actor_type || item.author_type || "unknown";
-  // store ALL actor types (for the "multiple → union" matching rule)
+  // Store credited + contributor actor types separately for the 3-state chip cycle
+  const credited    = item.credited_actor_types    || [];
+  const contributor = item.contributor_actor_types || [];
   const all = item.all_actor_types || (item.actor_types && item.actor_types.length ? item.actor_types : [sq.dataset.actorType]);
-  sq.dataset.actorTypes = all.join("|");
+  sq.dataset.actorTypes        = all.join("|");
+  sq.dataset.creditedTypes     = credited.join("|");
+  sq.dataset.contributorTypes  = contributor.join("|");
   const cssColor = COLOR_VAR[sq.dataset.actorType] || COLOR_VAR.unknown;
   sq.style.background = cssColor;                 // compact view
   sq.style.setProperty("--sq-bg", cssColor);      // named-view tint reads this
@@ -712,7 +725,11 @@ function refreshSelectionState() {
   };
 
   document.querySelectorAll(".legend-chip").forEach(el => {
-    el.classList.toggle("active", STATE.selectedActorTypes.has(el.dataset.type));
+    const t = el.dataset.type;
+    const mode = STATE.actorChipMode[t] || 0;
+    el.classList.toggle("active", mode > 0);
+    const lbl = el.querySelector(".chip-mode");
+    if (lbl) lbl.textContent = mode === 1 ? "  CREDITED" : mode === 2 ? "  COLLABORATED" : "";
   });
   document.querySelectorAll(".cat-label").forEach(el => {
     el.classList.toggle("active",
@@ -747,10 +764,17 @@ function refreshSelectionState() {
     if (hasClick && clickIds[type] && clickIds[type].has(id))      highlight = true;
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
-    // "multiple" should match any of its component types
+    // 3-state actor chip matching:
+    //   mode 1 (CREDITED)      → match only credited_actor_types
+    //   mode 2 (COLLABORATED)  → match credited ∪ contributor (= all actor types)
     if (hasActor) {
+      const credited    = (el.dataset.creditedTypes||"").split("|").filter(Boolean);
+      const contributor = (el.dataset.contributorTypes||"").split("|").filter(Boolean);
       for (const t of STATE.selectedActorTypes) {
-        if (ats.includes(t)) { highlight = true; break; }
+        const mode = STATE.actorChipMode[t] || 0;
+        if (mode === 1 && credited.includes(t))                  { highlight = true; break; }
+        if (mode === 2 && (credited.includes(t) || contributor.includes(t)))
+                                                                 { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
@@ -789,6 +813,11 @@ function setupClusters() {
     STATE.cluster.id = itemSel.value;
     renderCluster();
   });
+  const expSel = document.getElementById("cluster-expand-related");
+  if (expSel) expSel.addEventListener("change", e => {
+    STATE.cluster.expandRelated = e.target.checked;
+    renderCluster();
+  });
 }
 
 function refreshClusterItems() {
@@ -820,17 +849,17 @@ function refreshClusterItems() {
 
 // Per-actor-type colors mirrored from CSS variables
 const ACTOR_COLOR_HEX = {
-  "internal":              "#FDB0B3",
-  "private":               "#F68550",
-  "academic":              "#FEE192",
-  "research institute":    "#FBA861",
-  "governmental":          "#5BB2AC",
-  "nonprofit":             "#A6DBA3",
-  "public":                "#4492B4",
-  "public consultation":   "#4771B0",
-  "other":                 "#B0AFAB",
-  "multiple":              "#B197D7",
-  "unknown":               "#E5E0D5",
+  "internal":              "#4A90E2",
+  "private":               "#7FD2F8",
+  "academic":              "#FCF6AE",
+  "research institute":    "#FECB7A",
+  "governmental":          "#FA7EAE",
+  "nonprofit":             "#C4E79F",
+  "public":                "#74C4A7",
+  "public consultation":   "#74C4A7",   // merged with public
+  "multiple":              "#FFB8FB",
+  "other":                 "#F9DFFC",
+  "unknown":               "#D3D3D3",
 };
 
 // Lazy lookup: actor name → most-common type (built once)
@@ -969,92 +998,126 @@ function renderCluster() {
       (r.doc.actors||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a));
     });
 
-    const wrap = document.createElement("div");
-    wrap.className = "tl-wrap";
-    wrap.innerHTML = `
-      <div class="tl-summary">
-        <strong>${rows.length}</strong> definition${rows.length===1?"":"s"}
-        &middot; <strong>${years[0]}–${years.filter(y=>y!=="—").slice(-1)[0] || "—"}</strong>
-        &middot; <strong>${allActorsSet.size}</strong> distinct contributor${allActorsSet.size===1?"":"s"}
-        &middot; <span class="tl-hint">hover a tick</span>
-      </div>
-      <div class="tl-body">
-        <div class="tl-axis"></div>
-        <div class="tl-card" id="tl-card-holder"></div>
-      </div>
+    const summary = document.createElement("div");
+    summary.className = "tl-summary";
+    summary.innerHTML = `
+      <strong>${rows.length}</strong> definition${rows.length===1?"":"s"}
+      &middot; <strong>${years[0]}–${years.filter(y=>y!=="—").slice(-1)[0] || "—"}</strong>
+      &middot; <strong>${allActorsSet.size}</strong> distinct contributor${allActorsSet.size===1?"":"s"}
     `;
-    tl.appendChild(wrap);
+    tl.appendChild(summary);
 
-    const axis = wrap.querySelector(".tl-axis");
-    const card = wrap.querySelector(".tl-card");
+    const axis = document.createElement("div");
+    axis.className = "tl-axis";
+    tl.appendChild(axis);
 
     years.forEach(y => {
-      const yEl = document.createElement("div");
-      yEl.className = "tl-year-block";
-      yEl.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
-      const ticks = document.createElement("div");
-      ticks.className = "tl-ticks";
-      byYear[y].forEach(r => {
-        const tick = document.createElement("div");
-        tick.className = "tl-tick";
+      byYear[y].forEach((r, idx) => {
+        const row = document.createElement("div");
+        row.className = "tl-row";
         const actorType = r.item.actor_type || "unknown";
-        tick.innerHTML = `
-          <span class="tl-tick-mark" style="background:${ACTOR_COLOR_HEX[actorType]||ACTOR_COLOR_HEX.unknown}"></span>
-          <span class="tl-tick-co">${escape(r.item.company)}</span>
+        const color = ACTOR_COLOR_HEX[actorType] || ACTOR_COLOR_HEX.unknown;
+
+        // Year label sits to the LEFT of the axis (only on the first row of each year)
+        const yearCell = document.createElement("div");
+        yearCell.className = "tl-year-cell";
+        if (idx === 0) yearCell.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
+        row.appendChild(yearCell);
+
+        // RIGHT-SIDE container: axis line is its left border; tick crosses it; card below
+        const right = document.createElement("div");
+        right.className = "tl-right";
+        right.innerHTML = `
+          <div class="tl-tick">
+            <span class="tl-tick-mark" style="background:${color}"></span>
+            <span class="tl-tick-co">${escape(r.item.company)}</span>
+          </div>
+          <div class="tl-def-card"></div>
         `;
-        tick.addEventListener("mouseenter", () => renderTimelineCard(card, r));
-        tick.addEventListener("click",      () => renderTimelineCard(card, r, true));
-        ticks.appendChild(tick);
+        renderTimelineCard(right.querySelector(".tl-def-card"), r);
+        row.appendChild(right);
+
+        axis.appendChild(row);
       });
-      yEl.appendChild(ticks);
-      axis.appendChild(yEl);
     });
   }
 
-  // ── Conceptual network: every risk_conduct_item belonging to the selected
-  //    category (across companies). Edges = co-appearance in the same document.
-  //    Colour = item's primary actor_type. Each node carries enough metadata
-  //    to populate the hover info-card.
-  const docIds = new Set();
-  items.forEach(it => (it.pub_ids || []).forEach(p => docIds.add(p)));
+  // ── Conceptual network: CENTRAL node = the selected category;
+  //    related nodes = every risk_conduct_item in that category. Each item is
+  //    coloured by FIRST specific_risk_conduct_actor_category if available,
+  //    else by the source document's first pub_actors_type.
+  //    Optional second-iteration: expand to categories whose names share a
+  //    word with the selected category (e.g. "Political bias" ↔ "Political
+  //    neutrality", "Bias", "Representational bias"). Toggle in the UI.
+  const includeRelatedCats = STATE.cluster.expandRelated === true;
+  const sharedWord = (a, b) => {
+    const wa = new Set(a.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3));
+    const wb = b.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3);
+    return wb.some(w => wa.has(w));
+  };
+  const cAll = STATE.data[kind] || [];
+  let relatedCats = [];
+  if (includeRelatedCats) {
+    const allCats = [...new Set(cAll.map(c => c.category).filter(Boolean))];
+    relatedCats = allCats.filter(c => c !== category && sharedWord(category, c));
+  }
 
-  const cAll = STATE.data.conducts.concat(STATE.data.risks);
-  const idToItem = Object.fromEntries(cAll.map(x => [x.id, x]));
+  const firstActorTypeOf = it => {
+    if (it.specific_actor_type) return it.specific_actor_type;
+    if (it.all_actor_types && it.all_actor_types.length) return it.all_actor_types[0];
+    return it.actor_type || "unknown";
+  };
 
-  const conceptNodes = new Map();
-  items.forEach(it => conceptNodes.set(it.id, {
-    id: it.id, label: it.item,
-    category: it.category, company: it.company,
-    actorType: it.actor_type || "unknown",
-    item: it,                  // full reference for the hover card
-    blockId: kind,
-  }));
-
-  const conceptEdges = new Map();
-  // Build a quick mapping pub_id → set of relevant item ids (only those in this category)
-  const docToItems = new Map();
-  items.forEach(it => (it.pub_ids||[]).forEach(p => {
-    if (!docToItems.has(p)) docToItems.set(p, new Set());
-    docToItems.get(p).add(it.id);
-  }));
-  docToItems.forEach(setIds => {
-    const ids = [...setIds];
-    for (let i = 0; i < ids.length; i++)
-      for (let j = i + 1; j < ids.length; j++) {
-        const k = [ids[i], ids[j]].sort().join("|");
-        conceptEdges.set(k, (conceptEdges.get(k) || 0) + 1);
-      }
+  const conceptNodes = [];
+  const conceptEdges = [];
+  // CENTRAL category node — strong + dark
+  conceptNodes.push({
+    id: "__cat__" + category, label: category,
+    actorType: "central", focus: true,
+    isCategory: true,
   });
+  // Items in the focal category
+  items.forEach(it => {
+    const t = firstActorTypeOf(it);
+    conceptNodes.push({
+      id: it.id, label: it.item,
+      actorType: t, item: it, blockId: kind,
+    });
+    conceptEdges.push({ source: "__cat__" + category, target: it.id, weight: 1 });
+  });
+  // Optional related categories + their items
+  if (includeRelatedCats) {
+    relatedCats.forEach(rc => {
+      conceptNodes.push({
+        id: "__cat__" + rc, label: rc,
+        actorType: "related-cat", focus: false,
+        isCategory: true,
+      });
+      // Edge from focal category to related category
+      conceptEdges.push({ source: "__cat__" + category, target: "__cat__" + rc, weight: 2 });
+      cAll.filter(it => it.category === rc).forEach(it => {
+        const t = firstActorTypeOf(it);
+        conceptNodes.push({
+          id: it.id + "::" + rc, label: it.item,
+          actorType: t, item: it, blockId: kind,
+        });
+        conceptEdges.push({ source: "__cat__" + rc, target: it.id + "::" + rc, weight: 1 });
+      });
+    });
+  }
 
   drawForceGraph("#concept-graph",
-    [...conceptNodes.values()],
-    [...conceptEdges.entries()].map(([k, w]) => {
-      const [a, b] = k.split("|");
-      return { source: a, target: b, weight: w };
-    }),
+    conceptNodes,
+    conceptEdges,
     {
-      colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown,
-      hoverHtml: d => itemToCard(d.item, d.blockId, "item"),
+      colorFn: d => {
+        if (d.actorType === "central")     return "#1c1a18";
+        if (d.actorType === "related-cat") return "#6c655c";
+        return ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown;
+      },
+      hoverHtml: d => d.isCategory
+        ? `<h4>${escape(d.label)}</h4><p class=meta>Category</p>`
+        : itemToCard(d.item, d.blockId, "item"),
     });
 
   // ── Actor network: actors involved in defining, training & benchmarking
