@@ -164,9 +164,8 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 
 /* ── Masthead (paper title + byline) ───────────────────────────── */
 .masthead {
-  margin-bottom: 9rem;          /* generous breathing room before introduction */
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3.5rem;
+  padding-bottom: 0;
 }
 .masthead-title {
   font-size: 2.6rem; font-weight: 800;
@@ -227,56 +226,97 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .cluster-pane:first-child { grid-column: 1 / -1; }
 .cluster-pane h4 { margin: 0 0 0.5rem; font-size: 14px; font-weight: 700; }
 .cluster-help { font-size: 12px; color: var(--muted); font-style: italic; margin: 0 0 0.5rem; }
-.cluster-timeline {
-  max-height: 420px; overflow-y: auto; padding-right: 0.5rem;
-  position: relative;
-}
-.cluster-timeline .tl-summary {
-  position: sticky; top: 0; z-index: 5;
+/* ── Timeline: year-tick axis on the left + detail card on the right ── */
+.cluster-timeline { position: relative; }
+.tl-summary {
+  padding: 0.5rem 0.7rem; margin-bottom: 1rem;
   background: var(--paper-alt);
-  padding: 0.5rem 0.6rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--rule);
+  border: 1px solid var(--border); border-radius: 3px;
   font-size: 13px;
 }
-.cluster-timeline .tl-entry {
-  margin-bottom: 0.9rem; padding-left: 0.8rem;
-  border-left: 2px solid var(--rule);
+.tl-summary .tl-hint { color: var(--muted); font-style: italic; font-size: 11.5px; }
+
+.tl-body {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.6fr);
+  gap: 1.5rem; align-items: start;
 }
-.cluster-timeline .tl-year {
-  position: sticky; top: 38px; z-index: 4;
+.tl-axis { position: relative; padding: 0.5rem 0 1rem; }
+.tl-year-block {
+  display: grid; grid-template-columns: 60px 1fr; align-items: start;
+  border-left: 2px solid var(--ink);
+  margin-left: 8px;
+}
+.tl-year-block:first-child { padding-top: 6px; }
+.tl-year-label {
+  font-size: 18px; font-weight: 700; color: var(--ink);
+  padding: 4px 12px 4px 10px;
+  margin: 14px 0 0 -10px;
   background: var(--paper-alt);
-  padding: 2px 0;
-  font-weight: 700; font-size: 12px; color: var(--accent);
-  letter-spacing: 0.04em;
-  margin: 0 0 0.25rem -0.8rem; padding-left: 0.8rem;
+  border-radius: 2px;
+  align-self: flex-start;
 }
-.cluster-timeline .tl-src { font-size: 12px; color: var(--muted); margin-bottom: 0.25rem; }
-.cluster-timeline .tl-src a { color: var(--muted); }
-.cluster-timeline .tl-def {
-  font-style: italic; font-size: 13px; line-height: 1.45;
-  margin-bottom: 0.4rem;
+.tl-ticks {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 22px 0 14px 0;
 }
-.cluster-timeline .tl-step {
-  font-size: 12px; color: var(--ink); margin: 0.15rem 0;
-  display: flex; gap: 0.5em; align-items: baseline;
+.tl-tick {
+  display: flex; align-items: center; gap: 0.6em;
+  cursor: pointer; padding: 1px 6px 1px 0; border-radius: 2px;
+  font-size: 14px;
 }
-.cluster-timeline .tl-step-tag {
-  display: inline-block; min-width: 90px;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+.tl-tick:hover { background: var(--paper-alt); }
+.tl-tick-mark {
+  display: inline-block; width: 22px; height: 3px;
+  margin-left: -16px;
+  flex: 0 0 22px;
+  border-radius: 1px;
+}
+.tl-tick-co { font-size: 15px; color: var(--ink); }
+.tl-tick:hover .tl-tick-co { color: var(--accent); }
+
+.tl-card {
+  position: sticky; top: 1rem;
+  background: var(--paper-alt);
+  border: 1px solid var(--border); border-radius: 3px;
+  padding: 0.9rem 1rem;
+  min-height: 80px;
+  font-size: 13.5px; line-height: 1.5;
+}
+.tl-card:empty::after {
+  content: "Hover over a tick on the left to read the definition.";
+  color: var(--muted); font-style: italic; font-size: 12.5px;
+}
+.tl-card-head {
+  font-size: 14px; color: var(--accent); margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.tl-card-src { font-size: 12px; color: var(--muted); margin-bottom: 0.5rem; }
+.tl-card-src a { color: var(--muted); }
+.tl-def {
+  font-style: italic; font-size: 13.5px; line-height: 1.55;
+  padding: 0.2em 0 0.2em 0.6em; border-left: 2px solid var(--rule);
+  margin: 0.5rem 0;
+}
+.tl-step {
+  font-size: 12.5px; color: var(--ink); margin: 0.3rem 0;
+  display: flex; gap: 0.6em; align-items: baseline;
+}
+.tl-step-tag {
+  display: inline-block; min-width: 100px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--accent);
 }
-.cluster-timeline .tl-step-body { flex: 1; }
-.cluster-timeline .tl-meta { color: var(--muted); font-size: 11.5px; }
-.cluster-pane > svg.cluster-graph,
-.cluster-pane .actor-detail,
-.cluster-pane .graph-recenter { /* anchored inside the pane */ }
+.tl-step-body { flex: 1; }
+.tl-meta { color: var(--muted); font-size: 11.5px; }
+.cluster-pane { position: relative; }
 .cluster-pane .cluster-graph {
-  width: 100%; height: 420px;
+  width: 100%; height: 360px;
+  min-height: 240px;
   background: var(--paper); border-radius: 3px;
   display: block; overflow: hidden;
+  resize: vertical;                    /* user can drag-resize the graph height */
 }
-.cluster-pane { position: relative; }
 .cluster-graph .node-label {
   font-size: 10.5px; pointer-events: none; user-select: none;
 }

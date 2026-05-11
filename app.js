@@ -64,7 +64,6 @@ const STATE = {
 fetch("data.json").then(r => r.json()).then(data => {
   STATE.data = data;
   buildSidebar(data);
-  buildDocKey();
   wireSortBars();
   renderAll();
   wireCardDismiss();
@@ -863,6 +862,9 @@ function actorTypeMap() {
     tc.forEach((n, t) => { if (n > bestN) { bestN = n; best = t; } });
     _actorTypeMap.set(name, best);
   });
+  // Manual overrides (from actors.csv) win over inferred types
+  const manual = STATE.data.actor_types_manual || {};
+  Object.entries(manual).forEach(([name, type]) => _actorTypeMap.set(name, type));
   return _actorTypeMap;
 }
 
@@ -948,75 +950,71 @@ function renderCluster() {
   });
   rows.sort((a, b) => (a.year || "").localeCompare(b.year || ""));
 
-  // ── Summary header: count + year range + unique contributors ──
-  const years = [...new Set(rows.map(r => r.year).filter(y => y && y !== "—"))].sort();
-  const allActorsSet = new Set();
-  rows.forEach(r => {
-    if (r.item.specific_actor) allActorsSet.add(r.item.specific_actor);
-    (r.doc.actors||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a));
-    r.trainings.forEach(t => (t.actor||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a)));
-    r.benchmarks.forEach(b => (b.author||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a)));
-  });
-  const summary = document.createElement("div");
-  summary.className = "tl-summary";
-  summary.innerHTML = `
-    <div><strong>${rows.length}</strong> definition${rows.length===1?"":"s"}${
-      years.length ? ` &middot; <strong>${years[0]}–${years[years.length-1]}</strong>` : ""
-    } &middot; <strong>${allActorsSet.size}</strong> distinct contributor${allActorsSet.size===1?"":"s"}</div>
-  `;
-  tl.appendChild(summary);
-
+  // ── Render: vertical timeline with ticks per definition, detail card on right
   if (!rows.length) {
     tl.innerHTML = "<p class=meta>No definitions recorded for this category.</p>";
   } else {
+    // Group rows by year → array of definitions
+    const byYear = {};
     rows.forEach(r => {
-      const entry = document.createElement("div");
-      entry.className = "tl-entry";
-      const link = r.doc.url
-        ? `<a href="${r.doc.url}" target="_blank">${escape(r.doc.title)}</a>`
-        : escape(r.doc.title);
-      const def = r.item.definition || r.item.verbatim || "";
+      const y = r.year || "—";
+      (byYear[y] = byYear[y] || []).push(r);
+    });
+    const years = Object.keys(byYear).filter(y => y !== "—").sort();
+    if (byYear["—"]) years.push("—");
 
-      const trainBlock = r.trainings.length
-        ? r.trainings.map(t => `
-            <div class="tl-step"><span class="tl-step-tag">Trained</span>
-              <span class="tl-step-body">
-                ${escape(t.item)} <span class="tl-meta">(${escape(t.category)})</span>
-                ${t.actor ? ` — actors: ${escape(t.actor)}` : ""}
-              </span>
-            </div>`).join("")
-        : "";
+    const allActorsSet = new Set();
+    rows.forEach(r => {
+      if (r.item.specific_actor) allActorsSet.add(r.item.specific_actor);
+      (r.doc.actors||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a));
+    });
 
-      const benchBlock = r.benchmarks.length
-        ? r.benchmarks.map(b => `
-            <div class="tl-step"><span class="tl-step-tag">Benchmarked</span>
-              <span class="tl-step-body">
-                ${escape(b.name)} <span class="tl-meta">(${escape(b.category)})</span>
-                ${b.author ? ` — author: ${escape(b.author)}` : ""}
-              </span>
-            </div>`).join("")
-        : "";
+    const wrap = document.createElement("div");
+    wrap.className = "tl-wrap";
+    wrap.innerHTML = `
+      <div class="tl-summary">
+        <strong>${rows.length}</strong> definition${rows.length===1?"":"s"}
+        &middot; <strong>${years[0]}–${years.filter(y=>y!=="—").slice(-1)[0] || "—"}</strong>
+        &middot; <strong>${allActorsSet.size}</strong> distinct contributor${allActorsSet.size===1?"":"s"}
+        &middot; <span class="tl-hint">hover a tick</span>
+      </div>
+      <div class="tl-body">
+        <div class="tl-axis"></div>
+        <div class="tl-card" id="tl-card-holder"></div>
+      </div>
+    `;
+    tl.appendChild(wrap);
 
-      const defActors = r.item.specific_actor
-        ? `<span class="tl-meta">Defined by ${escape(r.item.specific_actor)}</span>`
-        : r.doc.actors
-          ? `<span class="tl-meta">Contributors: ${escape(r.doc.actors)}</span>`
-          : "";
+    const axis = wrap.querySelector(".tl-axis");
+    const card = wrap.querySelector(".tl-card");
 
-      entry.innerHTML = `
-        <div class="tl-year">${escape(r.year)} · ${escape(r.item.company)} · <em>${escape(r.item.item)}</em></div>
-        <div class="tl-src">${link}</div>
-        ${def ? `<div class="tl-def">"${escape(snippet(def, 280))}"</div>` : ""}
-        ${defActors ? `<div class="tl-step">${defActors}</div>` : ""}
-        ${trainBlock}
-        ${benchBlock}
-      `;
-      tl.appendChild(entry);
+    years.forEach(y => {
+      const yEl = document.createElement("div");
+      yEl.className = "tl-year-block";
+      yEl.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
+      const ticks = document.createElement("div");
+      ticks.className = "tl-ticks";
+      byYear[y].forEach(r => {
+        const tick = document.createElement("div");
+        tick.className = "tl-tick";
+        const actorType = r.item.actor_type || "unknown";
+        tick.innerHTML = `
+          <span class="tl-tick-mark" style="background:${ACTOR_COLOR_HEX[actorType]||ACTOR_COLOR_HEX.unknown}"></span>
+          <span class="tl-tick-co">${escape(r.item.company)}</span>
+        `;
+        tick.addEventListener("mouseenter", () => renderTimelineCard(card, r));
+        tick.addEventListener("click",      () => renderTimelineCard(card, r, true));
+        ticks.appendChild(tick);
+      });
+      yEl.appendChild(ticks);
+      axis.appendChild(yEl);
     });
   }
 
-  // ── Conceptual network: items (across categories) that co-appear with these items.
-  //    Node colour = item's risk_conduct_category.
+  // ── Conceptual network: every risk_conduct_item belonging to the selected
+  //    category (across companies). Edges = co-appearance in the same document.
+  //    Colour = item's primary actor_type. Each node carries enough metadata
+  //    to populate the hover info-card.
   const docIds = new Set();
   items.forEach(it => (it.pub_ids || []).forEach(p => docIds.add(p)));
 
@@ -1024,48 +1022,40 @@ function renderCluster() {
   const idToItem = Object.fromEntries(cAll.map(x => [x.id, x]));
 
   const conceptNodes = new Map();
-  // Always include the focal items themselves
   items.forEach(it => conceptNodes.set(it.id, {
-    id: it.id, label: it.item, category: it.category, focus: true,
+    id: it.id, label: it.item,
+    category: it.category, company: it.company,
+    actorType: it.actor_type || "unknown",
+    item: it,                  // full reference for the hover card
+    blockId: kind,
   }));
-  // Then add anything that co-appears in the same source docs
-  docIds.forEach(pid => {
-    const d = docById(pid);
-    if (!d) return;
-    [...(d.conduct_ids||[]), ...(d.risk_ids||[])].forEach(cid => {
-      if (conceptNodes.has(cid)) return;
-      const it = idToItem[cid];
-      if (!it) return;
-      conceptNodes.set(cid, {
-        id: cid, label: it.item, category: it.category, focus: false,
-      });
-    });
-  });
-  // Edges: pairs of nodes that share a document
+
   const conceptEdges = new Map();
-  docIds.forEach(pid => {
-    const d = docById(pid);
-    if (!d) return;
-    const ids = [...(d.conduct_ids||[]), ...(d.risk_ids||[])].filter(i => conceptNodes.has(i));
+  // Build a quick mapping pub_id → set of relevant item ids (only those in this category)
+  const docToItems = new Map();
+  items.forEach(it => (it.pub_ids||[]).forEach(p => {
+    if (!docToItems.has(p)) docToItems.set(p, new Set());
+    docToItems.get(p).add(it.id);
+  }));
+  docToItems.forEach(setIds => {
+    const ids = [...setIds];
     for (let i = 0; i < ids.length; i++)
       for (let j = i + 1; j < ids.length; j++) {
         const k = [ids[i], ids[j]].sort().join("|");
         conceptEdges.set(k, (conceptEdges.get(k) || 0) + 1);
       }
   });
-  // Conceptual network nodes coloured by the item's primary actor_type.
-  // (Concepts come from items; each item carries an actor_type already.)
-  const itemActorTypeOf = id => {
-    const it = idToItem[id];
-    return (it && it.actor_type) || "unknown";
-  };
+
   drawForceGraph("#concept-graph",
-    [...conceptNodes.values()].map(n => ({ ...n, actorType: itemActorTypeOf(n.id) })),
+    [...conceptNodes.values()],
     [...conceptEdges.entries()].map(([k, w]) => {
       const [a, b] = k.split("|");
       return { source: a, target: b, weight: w };
     }),
-    { colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown });
+    {
+      colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown,
+      hoverHtml: d => itemToCard(d.item, d.blockId, "item"),
+    });
 
   // ── Actor network: actors involved in defining, training & benchmarking
   //    items in this category. Edges = co-appearance in the same document.
@@ -1117,7 +1107,45 @@ function renderCluster() {
     {
       colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown,
       onNodeClick: showActorDetails,
+      hoverHtml: d => actorNodeCard(d),
     });
+}
+
+function actorNodeCard(node) {
+  const info = actorIndex().get(node.id) || { type:"unknown", docs:[], credited:[] };
+  return `
+    <h4>${escape(node.id)}</h4>
+    <dt>Type</dt><dd>${escape(info.type)}</dd>
+    <dt>Documents</dt><dd>${info.docs.length}</dd>
+    <dt>Credited as defining</dt><dd>${info.credited.length} item${info.credited.length===1?"":"s"}</dd>
+    <p style="margin:0.6em 0 0;font-size:11px;color:var(--muted)">Click for full details</p>
+  `;
+}
+
+function renderTimelineCard(card, r, pinned=false) {
+  const link = r.doc.url
+    ? `<a href="${r.doc.url}" target="_blank">${escape(r.doc.title)}</a>`
+    : escape(r.doc.title);
+  const def = r.item.definition || r.item.verbatim || "";
+  const contribs = r.item.specific_actor
+    ? r.item.specific_actor
+    : (r.doc.actors || "");
+  const trainLines = (r.trainings || []).map(t =>
+    `<div class="tl-step"><span class="tl-step-tag">Trained</span>
+       <span class="tl-step-body">${escape(t.item)} <span class="tl-meta">(${escape(t.category)})</span>${t.actor ? ` — ${escape(t.actor)}` : ""}</span></div>`).join("");
+  const benchLines = (r.benchmarks || []).map(b =>
+    `<div class="tl-step"><span class="tl-step-tag">Benchmarked</span>
+       <span class="tl-step-body">${escape(b.name)} <span class="tl-meta">(${escape(b.category)})</span>${b.author ? ` — ${escape(b.author)}` : ""}</span></div>`).join("");
+  card.innerHTML = `
+    <div class="tl-card-head">
+      <strong>${escape(r.year)}</strong> · <strong>${escape(r.item.company)}</strong> · <em>${escape(r.item.item)}</em>
+    </div>
+    <div class="tl-card-src">${link}</div>
+    ${def ? `<div class="tl-def">"${escape(snippet(def, 320))}"</div>` : ""}
+    ${contribs ? `<div class="tl-step"><span class="tl-step-tag">Contributors</span><span class="tl-step-body">${escape(contribs)}</span></div>` : ""}
+    ${trainLines}
+    ${benchLines}
+  `;
 }
 
 // Render a small panel below the actor graph for the clicked actor
@@ -1187,13 +1215,13 @@ function drawForceGraph(selector, nodes, links, opts) {
   }
   btn.onclick = () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
 
-  // Approximate label width to size the collision radius — prevents labels overlapping
-  const labelLen = d => Math.min(36, (d.label || "").length);
-  const collideR = d => 14 + labelLen(d) * 3.2;
+  // Compact collision radius so the graph stays within the pane.
+  // Labels overlap is mitigated by the paper-coloured stroke halo + hover scale.
+  const collideR = d => d.focus ? 28 : 18;
 
   const sim = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(90).strength(0.55))
-    .force("charge", d3.forceManyBody().strength(-180))
+    .force("link", d3.forceLink(links).id(d => d.id).distance(55).strength(0.7))
+    .force("charge", d3.forceManyBody().strength(-90))
     .force("center", d3.forceCenter(w/2, h/2))
     .force("collide", d3.forceCollide(collideR));
 
@@ -1230,6 +1258,11 @@ function drawForceGraph(selector, nodes, links, opts) {
   if (opts.onNodeClick) {
     node.style("cursor", "pointer");
     node.on("click", (_, d) => opts.onNodeClick(d));
+  }
+  if (opts.hoverHtml) {
+    node.on("mouseenter", (e, d) => showCard(opts.hoverHtml(d), e));
+    node.on("mousemove",  e      => positionCard(e));
+    node.on("mouseleave", ()      => hideCard());
   }
 
   sim.on("tick", () => {
