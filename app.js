@@ -3,17 +3,21 @@
    ════════════════════════════════════════════════════════════════ */
 
 const COLOR_VAR = {
-  "internal":              "var(--c-internal)",
-  "private":               "var(--c-private)",
-  "academic":              "var(--c-academic)",
-  "research institute":    "var(--c-research-institute)",
-  "governmental":          "var(--c-governmental)",
-  "nonprofit":             "var(--c-nonprofit)",
-  "public":                "var(--c-public)",
-  "public consultation":   "var(--c-public-consultation)",
-  "other":                 "var(--c-other)",
-  "multiple":              "var(--c-multiple)",
-  "unknown":               "var(--c-unknown)",
+  "internal":                     "var(--c-internal)",
+  "private":                      "var(--c-private)",
+  "academic":                     "var(--c-academic)",
+  "research institute":           "var(--c-research-institute)",
+  "governmental":                 "var(--c-governmental)",
+  "nonprofit":                    "var(--c-nonprofit)",
+  "public":                       "var(--c-public)",
+  "public consultation":          "var(--c-public-consultation)",
+  "ai company":                   "var(--c-ai-company)",
+  "industry consortium":          "var(--c-industry-consortium)",
+  "public benefit corporation":   "var(--c-public-benefit-corporation)",
+  "public deliberation platform": "var(--c-public-deliberation-platform)",
+  "multiple":                     "var(--c-multiple)",
+  "other":                        "var(--c-other)",
+  "unknown":                      "var(--c-unknown)",
 };
 
 const DOC_TYPE_CLASS = {
@@ -461,16 +465,14 @@ function makeSquare(item, blockId, nameKey) {
   sq.dataset.id        = item.id;
   sq.dataset.category  = item.category || "";
   sq.dataset.actorType = item.actor_type || item.author_type || "unknown";
-  // Store credited + collaborated actor types separately for the 3-state chip cycle.
-  // CREDITED     = the actor directly named (specific_actor / training_actor / author)
-  // COLLABORATED = appears in any multi-actor list (pub_actors of source docs or the
-  //                attribution field itself when it lists multiple types)
-  const credited     = item.credited_actor_types     || [];
-  const collaborated = item.collaborated_actor_types || item.contributor_actor_types || [];
+  // AUTHOR types = actor types of the source document(s)' authors (pub_author/company)
+  // CITED  types = actor types named inside the document but not its author
+  const authors = item.author_actor_types || item.credited_actor_types     || [];
+  const cited   = item.cited_actor_types  || item.collaborated_actor_types || [];
   const all = item.all_actor_types || (item.actor_types && item.actor_types.length ? item.actor_types : [sq.dataset.actorType]);
-  sq.dataset.actorTypes         = all.join("|");
-  sq.dataset.creditedTypes      = credited.join("|");
-  sq.dataset.collaboratedTypes  = collaborated.join("|");
+  sq.dataset.actorTypes  = all.join("|");
+  sq.dataset.authorTypes = authors.join("|");
+  sq.dataset.citedTypes  = cited.join("|");
   const cssColor = COLOR_VAR[sq.dataset.actorType] || COLOR_VAR.unknown;
   sq.style.background = cssColor;                 // compact view
   sq.style.setProperty("--sq-bg", cssColor);      // named-view tint reads this
@@ -494,11 +496,12 @@ function makeDocIcon(doc) {
   el.dataset.id        = doc.id;
   el.dataset.actorType = doc.primary_actor_type;
   const docTypes = (doc.actor_types && doc.actor_types.length ? doc.actor_types : [doc.primary_actor_type]);
-  el.dataset.actorTypes        = docTypes.join("|");
-  // For documents: every author is CREDITED; if there are >1 distinct types,
-  // each is also COLLABORATED (group authorship).
-  el.dataset.creditedTypes     = docTypes.join("|");
-  el.dataset.collaboratedTypes = docTypes.length > 1 ? docTypes.join("|") : "";
+  el.dataset.actorTypes  = docTypes.join("|");
+  // For documents themselves: every pub_actor IS by definition an author of
+  // the doc (with cited types being any that appear named inside the body —
+  // we don't have that per-document here, so leave cited empty).
+  el.dataset.authorTypes = docTypes.join("|");
+  el.dataset.citedTypes  = "";
   el.style.color       = COLOR_VAR[doc.primary_actor_type] || COLOR_VAR.unknown;
   el.style.borderColor = COLOR_VAR[doc.primary_actor_type] || "var(--ink)";
   el.addEventListener("mouseenter", e => showCard(docToCard(doc), e));
@@ -740,7 +743,7 @@ function refreshSelectionState() {
     const mode = STATE.actorChipMode[t] || 0;
     el.classList.toggle("active", mode > 0);
     const lbl = el.querySelector(".chip-mode");
-    if (lbl) lbl.textContent = mode === 1 ? "  CREDITED" : mode === 2 ? "  COLLABORATED" : "";
+    if (lbl) lbl.textContent = mode === 1 ? "  AUTHOR" : mode === 2 ? "  CITED" : "";
   });
   document.querySelectorAll(".cat-label").forEach(el => {
     el.classList.toggle("active",
@@ -776,15 +779,16 @@ function refreshSelectionState() {
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
     // 3-state actor chip matching:
-    //   mode 1 (CREDITED)      → actor is the directly attributed authority
-    //   mode 2 (COLLABORATED)  → credited OR appears in a multi-actor list
+    //   mode 1 (AUTHOR) → actor type is among the authors of the source document
+    //   mode 2 (CITED)  → actor type appears in the source document as a cited
+    //                     (non-author) actor
     if (hasActor) {
-      const credited     = (el.dataset.creditedTypes||"").split("|").filter(Boolean);
-      const collaborated = (el.dataset.collaboratedTypes||"").split("|").filter(Boolean);
+      const authors = (el.dataset.authorTypes||"").split("|").filter(Boolean);
+      const cited   = (el.dataset.citedTypes ||"").split("|").filter(Boolean);
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
-        if (mode === 1 && credited.includes(t))                                      { highlight = true; break; }
-        if (mode === 2 && (credited.includes(t) || collaborated.includes(t)))        { highlight = true; break; }
+        if (mode === 1 && authors.includes(t)) { highlight = true; break; }
+        if (mode === 2 && cited.includes(t))   { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
@@ -816,9 +820,14 @@ function setupTopActors() {
   const roleSel = document.getElementById("top-actors-role");
   if (!typeSel || !nSel || !roleSel) return;
 
-  // Populate type dropdown from the data (also include curated extras)
-  const allTypes = new Set();
-  (STATE.data.actors || []).forEach(a => { if (a.type) allTypes.add(a.type); });
+  // Populate type dropdown: union of types observed in actors AND those in
+  // the canonical vocabulary, so the new types (AI company, industry
+  // consortium, etc.) appear even if no actor is tagged yet.
+  const allTypes = new Set([...(STATE.data.actor_types || [])]);
+  (STATE.data.actors || []).forEach(a => {
+    if (a.type) allTypes.add(a.type);
+    (a.types_all || []).forEach(t => allTypes.add(t));
+  });
   [...allTypes].sort().forEach(t => {
     const o = document.createElement("option");
     o.value = t; o.textContent = t;
@@ -837,7 +846,9 @@ function renderTopActors(typeFilter, n, roleFilter) {
   if (!tbody) return;
   tbody.innerHTML = "";
   let arr = (STATE.data.actors || []).slice();
-  if (typeFilter) arr = arr.filter(a => a.type === typeFilter);
+  if (typeFilter) arr = arr.filter(a =>
+    a.type === typeFilter || (a.types_all || []).includes(typeFilter)
+  );
   if (roleFilter) arr = arr.filter(a => (a.role || "") === roleFilter);
   arr = arr.slice(0, n || 25);
   if (!arr.length) {
@@ -926,17 +937,21 @@ function refreshClusterItems() {
 
 // Per-actor-type colors mirrored from CSS variables
 const ACTOR_COLOR_HEX = {
-  "internal":              "#4A90E2",
-  "private":               "#7FD2F8",
-  "academic":              "#FCF6AE",
-  "research institute":    "#FECB7A",
-  "governmental":          "#FA7EAE",
-  "nonprofit":             "#C4E79F",
-  "public":                "#74C4A7",
-  "public consultation":   "#74C4A7",   // merged with public
-  "multiple":              "#FFB8FB",
-  "other":                 "#F9DFFC",
-  "unknown":               "#D3D3D3",
+  "internal":                     "#7585BE",
+  "private":                      "#80C2CA",
+  "academic":                     "#EFCE44",
+  "research institute":           "#ECB280",
+  "governmental":                 "#8EDE78",
+  "nonprofit":                    "#ADD672",
+  "public":                       "#53B3AD",
+  "public consultation":          "#53B3AD",
+  "ai company":                   "#6DA5D8",
+  "industry consortium":          "#BECF54",
+  "public benefit corporation":   "#9193C4",
+  "public deliberation platform": "#4146C3",
+  "multiple":                     "#E69FC1",
+  "other":                        "#BABABA",
+  "unknown":                      "#BABABA",
 };
 
 // Lazy lookup: actor name → most-common type (built once)

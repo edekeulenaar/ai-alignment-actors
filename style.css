@@ -16,17 +16,21 @@
 
   /* Actor-type palette — vibrant but not strenuous.            */
   /* (matches the order in docs/data.json actor_types)          */
-  --c-internal:            #4A90E2;   /* blue */
-  --c-private:             #7FD2F8;   /* light blue */
-  --c-academic:            #FCF6AE;   /* pale yellow */
-  --c-research-institute:  #FECB7A;   /* sand */
-  --c-governmental:        #FA7EAE;   /* pink */
-  --c-nonprofit:           #C4E79F;   /* mint */
-  --c-public:              #74C4A7;   /* sage (public + public consultation merged) */
-  --c-public-consultation: #74C4A7;   /* same — merged */
-  --c-multiple:            #FFB8FB;   /* light pink */
-  --c-other:               #F9DFFC;   /* lavender wash */
-  --c-unknown:             #D3D3D3;   /* gray */
+  --c-internal:                       #7585BE;
+  --c-private:                        #80C2CA;
+  --c-academic:                       #EFCE44;
+  --c-research-institute:             #ECB280;
+  --c-governmental:                   #8EDE78;
+  --c-nonprofit:                      #ADD672;
+  --c-public:                         #53B3AD;
+  --c-public-consultation:            #53B3AD;   /* merged with public */
+  --c-ai-company:                     #6DA5D8;
+  --c-industry-consortium:            #BECF54;
+  --c-public-benefit-corporation:     #9193C4;
+  --c-public-deliberation-platform:   #4146C3;
+  --c-multiple:                       #E69FC1;
+  --c-other:                          #BABABA;
+  --c-unknown:                        #BABABA;
 
   --dim:      0.10;
   --sb-w:     220px;
