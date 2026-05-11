@@ -492,7 +492,12 @@ function makeDocIcon(doc) {
   el.dataset.type      = "documents";
   el.dataset.id        = doc.id;
   el.dataset.actorType = doc.primary_actor_type;
-  el.dataset.actorTypes = (doc.actor_types && doc.actor_types.length ? doc.actor_types : [doc.primary_actor_type]).join("|");
+  const docTypes = (doc.actor_types && doc.actor_types.length ? doc.actor_types : [doc.primary_actor_type]);
+  el.dataset.actorTypes        = docTypes.join("|");
+  // For documents: every author is CREDITED; if there are >1 distinct types,
+  // each is also COLLABORATED (group authorship).
+  el.dataset.creditedTypes     = docTypes.join("|");
+  el.dataset.collaboratedTypes = docTypes.length > 1 ? docTypes.join("|") : "";
   el.style.color       = COLOR_VAR[doc.primary_actor_type] || COLOR_VAR.unknown;
   el.style.borderColor = COLOR_VAR[doc.primary_actor_type] || "var(--ink)";
   el.addEventListener("mouseenter", e => showCard(docToCard(doc), e));
@@ -770,15 +775,15 @@ function refreshSelectionState() {
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
     // 3-state actor chip matching:
-    //   mode 1 (CREDITED)      → actor directly attributed to the item
-    //   mode 2 (COLLABORATED)  → actor appears in a multi-actor list
+    //   mode 1 (CREDITED)      → actor is the directly attributed authority
+    //   mode 2 (COLLABORATED)  → credited OR appears in a multi-actor list
     if (hasActor) {
       const credited     = (el.dataset.creditedTypes||"").split("|").filter(Boolean);
       const collaborated = (el.dataset.collaboratedTypes||"").split("|").filter(Boolean);
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
-        if (mode === 1 && credited.includes(t))     { highlight = true; break; }
-        if (mode === 2 && collaborated.includes(t)) { highlight = true; break; }
+        if (mode === 1 && credited.includes(t))                                      { highlight = true; break; }
+        if (mode === 2 && (credited.includes(t) || collaborated.includes(t)))        { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
