@@ -33,7 +33,7 @@
   --c-unknown:                        #BABABA;
 
   --dim:      0.10;
-  --sb-w:     220px;
+  --sb-w:     250px;
   --rail-w:   0px;
 }
 
@@ -256,13 +256,12 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .tl-axis { position: relative; padding: 0.4rem 0; }
 .tl-row {
   display: grid;
-  grid-template-columns: 70px 32px 1fr;        /* year | dot column | content */
+  /* year | dot | company | card (card to the right of company) */
+  grid-template-columns: 70px 24px 170px 1fr;
   align-items: start;
-  padding: 5px 0;
+  padding: 4px 0;
 }
-.tl-year-cell {
-  text-align: right; padding: 4px 16px 0 0;
-}
+.tl-year-cell { text-align: right; padding: 4px 16px 0 0; }
 .tl-year-label {
   font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1;
 }
@@ -270,37 +269,32 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .tl-dot-cell {
   position: relative;
   align-self: stretch;
-  display: flex; justify-content: center; padding-top: 7px;
+  display: flex; justify-content: center; padding-top: 9px;
 }
 .tl-dot {
-  width: 10px; height: 10px; border-radius: 50%;
+  width: 6px; height: 6px; border-radius: 50%;       /* smaller dot */
   background: var(--ink);
   cursor: pointer;
   transition: transform 0.12s ease;
-  position: relative;
-  z-index: 2;
+  position: relative; z-index: 2;
 }
-.tl-dot:hover { transform: scale(1.5); }
-.tl-dot.pinned { background: var(--accent); transform: scale(1.4); }
+.tl-dot:hover { transform: scale(1.8); }
+.tl-dot.pinned { background: var(--accent); transform: scale(2); }
 
-.tl-content {
-  display: flex; flex-direction: column; gap: 4px;
-  padding-left: 6px;
-}
-.tl-tick-co {
+.tl-company {
   font-size: 14px; color: var(--ink); white-space: nowrap;
-  padding-top: 2px; cursor: pointer;
+  padding-top: 3px; cursor: pointer;
 }
-.tl-tick-co:hover { color: var(--accent); }
+.tl-company:hover { color: var(--accent); }
 
-/* Definition cards — collapsed by default; open when pinned (clicked) or hovered */
+/* Definition cards — collapsed by default; open when pinned or hovered. */
 .tl-def-card {
   display: none;
-  margin: 0.3rem 0 0.4rem 0;
-  padding: 0.65rem 0.85rem;
+  margin: 0; padding: 0.65rem 0.85rem;
   background: var(--paper-alt);
   border: 1px solid var(--border); border-radius: 3px;
   font-size: 13.5px; line-height: 1.5;
+  max-height: 60vh; overflow-y: auto;                /* long cards scroll */
 }
 .tl-row.is-pinned .tl-def-card,
 .tl-row.is-hover .tl-def-card { display: block; }
@@ -641,11 +635,12 @@ body.has-selection .doc:not(.hl) {
   background: #fffbe6;
   border: 1px solid var(--ink);
   padding: 0.8em 1em;
-  max-width: 320px; font-size: 12.5px; line-height: 1.45;
+  max-width: 360px; font-size: 12.5px; line-height: 1.45;
   box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
   pointer-events: none;
+  max-height: 70vh; overflow-y: auto;
 }
-.info-card.pinned   { pointer-events: auto; }
+.info-card.pinned { pointer-events: auto; }
 .info-card.hidden   { display: none; }
 .info-card h4       { margin: 0 0 0.5em 0; font-size: 13.5px; font-weight: 700; }
 .info-card dt       { font-weight: 700; color: var(--muted); font-size: 10.5px;

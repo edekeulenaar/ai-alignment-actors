@@ -16956,6 +16956,13 @@
      "name": "E. Wallace et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -17004,6 +17011,12 @@
      "name": "Khlaaf, 2023",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private"
    ]
   },
   {
@@ -17057,6 +17070,12 @@
      "name": "Coalition for Content Provenance and Authenticity",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit"
    ]
   },
   {
@@ -17163,6 +17182,16 @@
      "name": "Röttger et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit",
+    "public benefit corporation",
+    "research institute"
    ]
   },
   {
@@ -17230,6 +17259,13 @@
      "name": "NIST",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "industry consortium"
    ]
   },
   {
@@ -17335,6 +17371,15 @@
      "name": "Sharma et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -17393,7 +17438,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "2SJNI77F",
@@ -17505,6 +17554,14 @@
      "name": "Sharma et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "research institute"
    ]
   },
   {
@@ -17545,6 +17602,12 @@
      "name": "Jimenez et al. (2024)",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -17631,6 +17694,14 @@
      "name": "Amodei et al.",
      "type": "private"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -17789,6 +17860,16 @@
      "name": "Artificial Analysis",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -17847,6 +17928,12 @@
      "name": "Nathaniel Hartley",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -17926,6 +18013,12 @@
      "name": "Varieties of Democracy (vDem)",
      "type": "other"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "other"
    ]
   },
   {
@@ -18010,6 +18103,12 @@
      "name": "Baker et al. (2025)",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit"
    ]
   },
   {
@@ -18099,6 +18198,15 @@
      "name": "Apollo Research",
      "type": "public benefit corporation"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -18166,7 +18274,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "3Z75ND8Q",
@@ -18264,6 +18376,15 @@
      "name": "Souly et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -18309,6 +18430,12 @@
      "name": "UK Government",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental"
    ]
   },
   {
@@ -18369,6 +18496,13 @@
      "name": "Biden-Harris administration",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "governmental"
+   ],
+   "cited_actor_types": [
+    "ai company",
+    "governmental"
    ]
   },
   {
@@ -18433,6 +18567,15 @@
      "name": "Acemoglu & Autor",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "internal",
+    "other"
    ]
   },
   {
@@ -18522,6 +18665,14 @@
      "name": "Ren et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "research institute"
    ]
   },
   {
@@ -18630,6 +18781,12 @@
      "name": "Karthik Narasimhan",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -18763,6 +18920,16 @@
      "name": "Wallace et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "multiple",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -18889,6 +19056,14 @@
      "name": "NVIDIA",
      "type": "private"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "ai company",
+    "governmental",
+    "other",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -18981,6 +19156,12 @@
      "name": "Vaswani et al., 2017",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -19032,6 +19213,12 @@
      "name": "Bugcrowd",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private"
    ]
   },
   {
@@ -19109,6 +19296,13 @@
      "name": "Shannon (1948)",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit"
    ]
   },
   {
@@ -19202,6 +19396,15 @@
      "name": "Jane Street",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -19290,6 +19493,15 @@
      "name": "Apollo Research",
      "type": "public benefit corporation"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -19368,6 +19580,12 @@
      "name": "OpenAI",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "internal"
    ]
   },
   {
@@ -19410,7 +19628,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "7SUY4C2C",
@@ -19440,7 +19662,9 @@
    ],
    "benchmark_ids": [],
    "author_actors": [],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [],
+   "cited_actor_types": []
   },
   {
    "id": "8666LHQ4",
@@ -19485,7 +19709,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "8AC5MJHG",
@@ -19576,6 +19804,15 @@
      "name": "Parrish et al (2021)",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -19686,6 +19923,12 @@
      "name": "Yinpeng Dong et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "private"
    ]
   },
   {
@@ -19733,7 +19976,12 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "99337X5A",
@@ -19796,6 +20044,12 @@
      "name": "Wijk et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -19910,6 +20164,10 @@
      "name": "David G. Robinson",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -19943,7 +20201,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "9MZ9LX9G",
@@ -20054,6 +20316,14 @@
      "name": "Zhao et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -20160,6 +20430,16 @@
      "name": "Hicks et al. 2026",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -20220,6 +20500,13 @@
      "name": "Anthropic",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company"
    ]
   },
   {
@@ -20307,6 +20594,12 @@
      "name": "Lilian Weng",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -20352,7 +20645,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "B6A9MNRF",
@@ -20411,6 +20708,10 @@
      "name": "Pamela Mishkin",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -20441,7 +20742,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "B9KS8GF8",
@@ -20507,6 +20812,10 @@
      "name": "Holden Karnofsky",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -20583,6 +20892,13 @@
      "name": "Tejal Patwardhan",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -20626,7 +20942,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "BPRGHRFU",
@@ -20726,6 +21046,15 @@
      "name": "Acemoglu 2021a",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -20808,6 +21137,16 @@
      "name": "Clemson University",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "internal",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -20886,6 +21225,14 @@
      "name": "C2PA",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "internal",
+    "nonprofit"
    ]
   },
   {
@@ -21048,6 +21395,12 @@
      "name": "Yara Khakbaz",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -21121,6 +21474,13 @@
      "name": "Jess Whittlestone",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -21194,7 +21554,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "CDHU7CUP",
@@ -21271,6 +21635,13 @@
      "name": "Ilya Sutskever",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -21323,6 +21694,14 @@
      "name": "Bugcrowd",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "private",
+    "public"
    ]
   },
   {
@@ -21388,6 +21767,13 @@
      "name": "Souly et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "research institute"
    ]
   },
   {
@@ -21418,7 +21804,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "D7JU8J2S",
@@ -21484,6 +21874,13 @@
      "name": "Cybersecurity and Infrastructure Security Agency",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "internal"
    ]
   },
   {
@@ -21589,6 +21986,14 @@
      "name": "Hendrycks et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -21645,6 +22050,12 @@
      "name": "Kara Olive",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -21744,6 +22155,13 @@
      "name": "Gehman et al., 2020",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -21814,6 +22232,15 @@
      "name": "research-oriented journalism nonprofits",
      "type": "other"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "nonprofit",
+    "other"
    ]
   },
   {
@@ -21878,6 +22305,12 @@
      "name": "Souly et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -21926,7 +22359,12 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "EX5MJA8V",
@@ -21972,7 +22410,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "FAQQKXKC",
@@ -22018,6 +22460,12 @@
      "name": "MLCommons",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit"
    ]
   },
   {
@@ -22048,7 +22496,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "FHTLRAWN",
@@ -22108,7 +22560,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "FPFBD8PV",
@@ -22203,6 +22659,15 @@
      "name": "Askell et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -22240,7 +22705,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "GARYFXHG",
@@ -22345,6 +22814,16 @@
      "name": "Signature Science",
      "type": "research institute"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "multiple",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -22409,7 +22888,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "GMPNNKLY",
@@ -22477,6 +22960,14 @@
      "name": "Röttger et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit"
    ]
   },
   {
@@ -22608,6 +23099,12 @@
      "name": "William El Sayed",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -22707,6 +23204,13 @@
      "name": "Google DeepMind",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "ai company",
+    "internal"
    ]
   },
   {
@@ -22813,6 +23317,13 @@
      "name": "Zou et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -22902,6 +23413,13 @@
      "name": "Diabolocom",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "private"
    ]
   },
   {
@@ -22989,6 +23507,14 @@
      "name": "Tech Coalition",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "ai company",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -23058,6 +23584,13 @@
      "name": "EleutherAI",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit"
    ]
   },
   {
@@ -23100,6 +23633,12 @@
      "name": "David Rozado",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -23149,6 +23688,12 @@
      "name": "Weidinger et al.",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -23225,6 +23770,15 @@
      "name": "Elhage et al., 2022b",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -23310,6 +23864,13 @@
      "name": "Greenblatt et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -23427,6 +23988,14 @@
      "name": "Askell et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -23459,7 +24028,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "IGUW6VXY",
@@ -23508,6 +24081,12 @@
      "name": "Lindner et al., 2026",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -23583,6 +24162,12 @@
      "name": "Röttger et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -23632,7 +24217,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "J497CEWS",
@@ -23710,6 +24299,12 @@
      "name": "Chris Koch",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -23774,6 +24369,12 @@
      "name": "Dejian Yang",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -23842,7 +24443,12 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "JSVWRMC3",
@@ -23894,7 +24500,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "K58FEDKQ",
@@ -24007,6 +24617,16 @@
      "name": "Wallace et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -24042,6 +24662,12 @@
      "name": "OASIS Open",
      "type": "industry consortium"
     }
+   ],
+   "author_actor_types": [
+    "industry consortium"
+   ],
+   "cited_actor_types": [
+    "industry consortium"
    ]
   },
   {
@@ -24108,6 +24734,14 @@
      "name": "internal red teamers",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company",
+    "multiple"
+   ],
+   "cited_actor_types": [
+    "internal",
+    "nonprofit"
    ]
   },
   {
@@ -24148,7 +24782,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "KLJWPLS5",
@@ -24244,6 +24882,13 @@
      "name": "Amelia Glaese",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -24349,6 +24994,15 @@
      "name": "Starace et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -24404,6 +25058,11 @@
      "name": "Kynka¨anniemi et al. (2019)",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -24542,6 +25201,15 @@
      "name": "A. Souly et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -24627,6 +25295,15 @@
      "name": "Khashabi et al. 2020",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "academic",
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "private"
    ]
   },
   {
@@ -24688,6 +25365,14 @@
      "name": "experts",
      "type": "multiple"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "multiple",
+    "private"
    ]
   },
   {
@@ -24753,6 +25438,12 @@
      "name": "Wallace et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -24856,6 +25547,16 @@
      "name": "Bai et al.",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -24936,6 +25637,14 @@
      "name": "Rein et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -25015,6 +25724,12 @@
      "name": "Lilian Weng",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -25060,7 +25775,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "N4W4H56I",
@@ -25186,6 +25905,16 @@
      "name": "Souly et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -25262,6 +25991,12 @@
      "name": "Boaz Barak",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -25331,6 +26066,15 @@
      "name": "human raters",
      "type": "public"
     }
+   ],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": [
+    "ai company",
+    "internal",
+    "public"
    ]
   },
   {
@@ -25383,7 +26127,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "NWKEIQTV",
@@ -25471,6 +26219,14 @@
      "name": "Askell et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "private"
    ]
   },
   {
@@ -25559,6 +26315,13 @@
      "name": "Rodriguez et al., (2025)",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -25613,6 +26376,12 @@
      "name": "bioweapons expert",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private"
    ]
   },
   {
@@ -25687,6 +26456,13 @@
      "name": "CCPA",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "private"
    ]
   },
   {
@@ -25769,6 +26545,16 @@
      "name": "Collective Dialogues",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "other",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -25861,6 +26647,12 @@
      "name": "Vaswani et al., 2017",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -25895,7 +26687,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-chatgpt-(openai)-business-privacy-policy",
@@ -25936,6 +26732,13 @@
      "name": "ChatGPT users",
      "type": "public"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "public",
+    "unknown"
    ]
   },
   {
@@ -25968,7 +26771,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-chatgpt-(openai)-terms-of-service",
@@ -25999,7 +26806,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-acceptable-use-policy",
@@ -26032,7 +26843,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-commercial-terms",
@@ -26062,7 +26877,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-developer-terms",
@@ -26094,7 +26913,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-privacy-policy",
@@ -26133,6 +26956,12 @@
      "name": "Universal Declaration of Human Rights",
      "type": "other"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "other"
    ]
   },
   {
@@ -26164,7 +26993,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-vulnerability-disclosure-policy",
@@ -26194,7 +27027,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-deepseek-terms-of-service",
@@ -26224,7 +27061,11 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-le-chat-(mistral)-acceptable-use-policy",
@@ -26256,7 +27097,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-le-chat-(mistral)-commercial-terms",
@@ -26288,7 +27133,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-le-chat-(mistral)-data-processor-agreement",
@@ -26319,7 +27168,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-le-chat-(mistral)-privacy-policy",
@@ -26350,7 +27203,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-le-chat-(mistral)-terms-of-service",
@@ -26380,7 +27237,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-llama-api-(meta)-privacy-policy",
@@ -26415,7 +27276,12 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-llama-api-(meta)-terms-of-service",
@@ -26449,7 +27315,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-meta-ai-(meta)-terms-of-service",
@@ -26481,7 +27351,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-microsoft-copilot-(microsoft)-acceptable-use-policy",
@@ -26512,7 +27386,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-microsoft-copilot-(microsoft)-privacy-policy",
@@ -26551,6 +27429,12 @@
      "name": "National Center for Missing and Exploited Children",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit"
    ]
   },
   {
@@ -26583,7 +27467,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-data-processor-agreement",
@@ -26613,7 +27501,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-developer-terms",
@@ -26643,7 +27535,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-privacy-policy",
@@ -26674,7 +27570,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-terms-of-service",
@@ -26704,7 +27604,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-qwen-chat-privacy-policy",
@@ -26735,7 +27639,11 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-qwen-chat-terms-of-service",
@@ -26766,7 +27674,11 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-xai-acceptable-use-policy",
@@ -26803,6 +27715,12 @@
      "name": "National Center for Missing and Exploited Children",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit"
    ]
   },
   {
@@ -26833,7 +27751,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "policy-xai-privacy-policy",
@@ -26871,6 +27793,12 @@
      "name": "Brave Software, Inc.",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private"
    ]
   },
   {
@@ -26904,7 +27832,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "PTLXCZX4",
@@ -26957,7 +27889,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "Q4VNGWTU",
@@ -27064,6 +28000,16 @@
      "name": "Souly et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -27118,7 +28064,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "QPXDE3M2",
@@ -27170,7 +28120,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "R6QXZ9PE",
@@ -27211,6 +28165,12 @@
      "name": "Sam Altman",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -27251,7 +28211,11 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "RPLQQPCF",
@@ -27346,6 +28310,17 @@
      "name": "Hicks et al. 2026",
      "type": "research institute"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "internal",
+    "nonprofit",
+    "public benefit corporation",
+    "research institute"
    ]
   },
   {
@@ -27388,7 +28363,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "RRG8PNSF",
@@ -27565,6 +28544,16 @@
      "name": "Teddy Lee",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "nonprofit",
+    "private",
+    "public deliberation platform"
    ]
   },
   {
@@ -27640,6 +28629,13 @@
      "name": "Hendrycks et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "research institute"
    ]
   },
   {
@@ -27729,6 +28725,16 @@
      "name": "Ranger",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -27812,6 +28818,13 @@
      "name": "Stuart Armstrong",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "internal",
+    "nonprofit"
    ]
   },
   {
@@ -27871,6 +28884,12 @@
      "name": "UK AI Safety Institute",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental"
    ]
   },
   {
@@ -27922,7 +28941,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "SUE568KL",
@@ -27975,6 +28998,12 @@
      "name": "Bai et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -28067,6 +29096,14 @@
      "name": "Hendrycks et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "governmental",
+    "nonprofit"
    ]
   },
   {
@@ -28219,6 +29256,17 @@
      "name": "Greenblatt et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "internal",
+    "nonprofit",
+    "public benefit corporation"
    ]
   },
   {
@@ -28268,7 +29316,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "TFEIW8MA",
@@ -28341,6 +29393,12 @@
      "name": "Jan Leike",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -28422,6 +29480,15 @@
      "name": "Transparency in Frontier Artificial Intelligence Act",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "nonprofit"
    ]
   },
   {
@@ -28466,6 +29533,12 @@
      "name": "Apollo Research",
      "type": "public benefit corporation"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "public benefit corporation"
    ]
   },
   {
@@ -28539,6 +29612,12 @@
      "name": "Frontier Model Forum",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "internal",
+    "nonprofit",
+    "public benefit corporation"
    ]
   },
   {
@@ -28578,6 +29657,12 @@
      "name": "Microsoft Threat Intelligence",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "ai company"
    ]
   },
   {
@@ -28694,6 +29779,14 @@
      "name": "Röttger et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private"
    ]
   },
   {
@@ -28800,6 +29893,17 @@
      "name": "Anthropic",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "nonprofit",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -28864,6 +29968,13 @@
      "name": "White House",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "internal"
    ]
   },
   {
@@ -28964,6 +30075,12 @@
      "name": "O. Watkins",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -29022,6 +30139,14 @@
      "name": "human evaluators independent of the model development team",
      "type": "public"
     }
+   ],
+   "author_actor_types": [
+    "ai company",
+    "internal"
+   ],
+   "cited_actor_types": [
+    "public",
+    "unknown"
    ]
   },
   {
@@ -29100,6 +30225,14 @@
      "name": "Askell et al.",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -29190,6 +30323,13 @@
      "name": "Lin et al., 2021",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal"
    ]
   },
   {
@@ -29253,6 +30393,13 @@
      "name": "AI Risks Technical Assessment Group",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "internal"
    ]
   },
   {
@@ -29362,6 +30509,16 @@
      "name": "Anthropic",
      "type": "ai company"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -29428,6 +30585,13 @@
      "name": "Apollo Research",
      "type": "public benefit corporation"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -29494,6 +30658,15 @@
      "name": "U.S. Public",
      "type": "public"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit",
+    "private",
+    "public",
+    "public deliberation platform"
    ]
   },
   {
@@ -29580,6 +30753,14 @@
      "name": "Lakera AI 2023",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "private"
    ]
   },
   {
@@ -29750,6 +30931,14 @@
      "name": "Scottie Yan",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "private"
    ]
   },
   {
@@ -29800,6 +30989,10 @@
      "name": "Committee on Rules and Administration",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "governmental"
    ]
   },
   {
@@ -29850,7 +31043,11 @@
      "type": "internal"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "WCR95HDP",
@@ -29929,6 +31126,14 @@
      "name": "Matthias Bethge",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "industry consortium",
+    "private"
    ]
   },
   {
@@ -29986,6 +31191,12 @@
      "name": "Penda Health",
      "type": "private"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "private"
    ]
   },
   {
@@ -30050,7 +31261,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "X7PAUFTV",
@@ -30112,6 +31327,13 @@
      "name": "NIST",
      "type": "governmental"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "governmental",
+    "private"
    ]
   },
   {
@@ -30172,6 +31394,12 @@
      "name": "C2PA",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit"
    ]
   },
   {
@@ -30250,6 +31478,12 @@
      "name": "Amodei et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "private"
    ]
   },
   {
@@ -30302,7 +31536,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "XPE2R9SS",
@@ -30393,6 +31631,15 @@
      "name": "Yueh-Han, 2026",
      "type": "research institute"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "private",
+    "public benefit corporation",
+    "research institute"
    ]
   },
   {
@@ -30449,6 +31696,13 @@
      "name": "civil society organizations",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "nonprofit",
+    "public"
    ]
   },
   {
@@ -30556,6 +31810,15 @@
      "name": "Wallace et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "nonprofit",
+    "private",
+    "public benefit corporation"
    ]
   },
   {
@@ -30621,6 +31884,16 @@
      "name": "Mouton et al.",
      "type": "research institute"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "governmental",
+    "private",
+    "research institute"
    ]
   },
   {
@@ -30674,7 +31947,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "Z3HFLRZ8",
@@ -30730,6 +32007,13 @@
      "name": "MLCommons",
      "type": "nonprofit"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "industry consortium",
+    "nonprofit"
    ]
   },
   {
@@ -30770,7 +32054,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "ZIRULXYS",
@@ -30824,7 +32112,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "ZJL3LT6R",
@@ -30883,6 +32175,12 @@
      "name": "CINECA",
      "type": "industry consortium"
     }
+   ],
+   "author_actor_types": [
+    "internal"
+   ],
+   "cited_actor_types": [
+    "industry consortium"
    ]
   },
   {
@@ -30983,6 +32281,14 @@
      "name": "Dekoninck et al. 2024",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic",
+    "ai company",
+    "internal"
    ]
   },
   {
@@ -31051,6 +32357,10 @@
      "name": "Girish Sastry",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "internal"
    ]
   },
   {
@@ -31199,6 +32509,12 @@
      "name": "Schoen et al.",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [],
+   "cited_actor_types": [
+    "academic",
+    "internal",
+    "public benefit corporation"
    ]
   },
   {
@@ -31234,7 +32550,11 @@
      "type": "ai company"
     }
    ],
-   "cited_actors": []
+   "cited_actors": [],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": []
   },
   {
    "id": "ZYS34BH7",
@@ -31278,6 +32598,12 @@
      "name": "Harvard",
      "type": "academic"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "academic"
    ]
   },
   {
@@ -31386,6 +32712,12 @@
      "name": "Léonard Hussenot",
      "type": "internal"
     }
+   ],
+   "author_actor_types": [
+    "ai company"
+   ],
+   "cited_actor_types": [
+    "internal"
    ]
   }
  ],

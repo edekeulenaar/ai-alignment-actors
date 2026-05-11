@@ -276,16 +276,17 @@ const countryOf = name => (STATE.data.companies.find(c=>c.name===name)||{}).coun
 
 function renderAll() {
   renderSources();
-  // Items derived ONLY from company policies go to the Misuses block.
-  const nonPolicy  = arr => arr.filter(x => !x.only_policy);
-  const policyOnly = arr => arr.filter(x =>  x.only_policy);
-  renderItemBlock("conducts",  nonPolicy(STATE.data.conducts),   {nameKey:"item"});
-  renderItemBlock("risks",     nonPolicy(STATE.data.risks),      {nameKey:"item"});
+  // Items whose risk_conduct_category is literally "misuse" go to the
+  // Misuses block; everything else stays in its native block.
+  const isMisuse  = x => (x.category || "").trim().toLowerCase() === "misuse";
+  const notMisuse = x => !isMisuse(x);
+  renderItemBlock("conducts",  STATE.data.conducts.filter(notMisuse),   {nameKey:"item"});
+  renderItemBlock("risks",     STATE.data.risks.filter(notMisuse),      {nameKey:"item"});
   renderItemBlock("misuses",
-                  policyOnly(STATE.data.conducts).concat(policyOnly(STATE.data.risks)),
+                  [...STATE.data.conducts, ...STATE.data.risks].filter(isMisuse),
                   {nameKey:"item"});
-  renderItemBlock("training",  nonPolicy(STATE.data.trainings),  {nameKey:"item"});
-  renderItemBlock("benchmark", nonPolicy(STATE.data.benchmarks), {nameKey:"name"});
+  renderItemBlock("training",  STATE.data.trainings,                    {nameKey:"item"});
+  renderItemBlock("benchmark", STATE.data.benchmarks,                   {nameKey:"name"});
   refreshClusterItems();
   refreshSelectionState();
 }
@@ -369,30 +370,35 @@ function renderItemBlock(blockId, items, opts) {
   });
   let cats = Object.keys(byCat);
 
-  // Sort categories
+  // ── Category sort ────────────────────────────────────────────────────
   const sortBy = STATE.sortMode[blockId] || "alpha";
-  if (sortBy === "alpha")    cats.sort();
-  if (sortBy === "quantity") cats.sort((a,b) => byCat[b].length - byCat[a].length);
-  if (sortBy === "newest" || sortBy === "oldest") {
-    const yearOf = cat => {
-      const ys = byCat[cat]
-        .flatMap(it => (it.pub_ids||[]).map(pid => yearByDocId[pid]))
-        .filter(Boolean);
-      return ys.length ? (sortBy === "newest" ? Math.max(...ys) : Math.min(...ys)) : 0;
-    };
-    const yearByDocId = Object.fromEntries(STATE.data.documents.map(d => [d.id, parseInt(d.year)||0]));
-    cats.sort((a,b) => sortBy === "newest" ? yearOf(b)-yearOf(a) : yearOf(a)-yearOf(b));
-  }
+  const yearByDocId = Object.fromEntries(
+    STATE.data.documents.map(d => [d.id, parseInt(d.year) || 0])
+  );
+  const counts = Object.fromEntries(
+    Object.entries(byCat).map(([k, v]) => [k, v.length])
+  );
+  const yearOfCat = cat => {
+    const ys = byCat[cat]
+      .flatMap(it => (it.pub_ids || []).map(pid => yearByDocId[pid]))
+      .filter(y => y > 0);
+    if (!ys.length) return 0;
+    return sortBy === "oldest" ? Math.min(...ys) : Math.max(...ys);
+  };
+  const applySort = (arr) => {
+    if (sortBy === "alpha")    arr.sort();
+    if (sortBy === "quantity") arr.sort((a, b) => counts[b] - counts[a]);
+    if (sortBy === "newest")   arr.sort((a, b) => yearOfCat(b) - yearOfCat(a));
+    if (sortBy === "oldest")   arr.sort((a, b) => yearOfCat(a) - yearOfCat(b));
+  };
+  applySort(cats);
 
-  // Truncate long category lists unless the user asked to expand
+  // Truncate long category lists unless the user asked to expand.
+  // Always pick top-N by quantity; then re-apply the user's sort over them.
   const totalCats = cats.length;
   if (!STATE.showAllCats[blockId] && totalCats > STATE.maxCats) {
-    // Always sort by quantity for the "top N" cut to make sense
-    const counts = Object.fromEntries(Object.entries(byCat).map(([k,v]) => [k, v.length]));
-    cats = [...cats].sort((a,b) => counts[b]-counts[a]).slice(0, STATE.maxCats);
-    // Restore the user-chosen sort order over the truncated set
-    if (sortBy === "alpha")    cats.sort();
-    if (sortBy === "quantity") cats.sort((a,b) => counts[b]-counts[a]);
+    cats = [...cats].sort((a, b) => counts[b] - counts[a]).slice(0, STATE.maxCats);
+    applySort(cats);
   }
 
   // ── "Showing N of M categories" + toggle ───────────────────────
@@ -497,11 +503,11 @@ function makeDocIcon(doc) {
   el.dataset.actorType = doc.primary_actor_type;
   const docTypes = (doc.actor_types && doc.actor_types.length ? doc.actor_types : [doc.primary_actor_type]);
   el.dataset.actorTypes  = docTypes.join("|");
-  // For documents themselves: every pub_actor IS by definition an author of
-  // the doc (with cited types being any that appear named inside the body —
-  // we don't have that per-document here, so leave cited empty).
-  el.dataset.authorTypes = docTypes.join("|");
-  el.dataset.citedTypes  = "";
+  // Author = types of pub_actors that match pub_author/company;
+  // Cited  = types of pub_actors that DON'T match (external references named
+  // inside the document). Both come from the build step.
+  el.dataset.authorTypes = (doc.author_actor_types || []).join("|");
+  el.dataset.citedTypes  = (doc.cited_actor_types  || []).join("|");
   el.style.color       = COLOR_VAR[doc.primary_actor_type] || COLOR_VAR.unknown;
   el.style.borderColor = COLOR_VAR[doc.primary_actor_type] || "var(--ink)";
   el.addEventListener("mouseenter", e => showCard(docToCard(doc), e));
@@ -763,7 +769,7 @@ function refreshSelectionState() {
     const mode = STATE.actorChipMode[t] || 0;
     el.classList.toggle("active", mode > 0);
     const lbl = el.querySelector(".chip-mode");
-    if (lbl) lbl.textContent = mode === 1 ? "  AUTHOR" : mode === 2 ? "  CITED" : "";
+    if (lbl) lbl.textContent = mode === 1 ? "  AUTHOR" : mode === 2 ? "  + CITED" : "";
   });
   document.querySelectorAll(".cat-label").forEach(el => {
     el.classList.toggle("active",
@@ -798,25 +804,24 @@ function refreshSelectionState() {
     if (hasClick && clickIds[type] && clickIds[type].has(id))      highlight = true;
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
-    // 3-state actor chip matching — AUTHOR and CITED are DISJOINT matchings:
-    //   mode 1 (AUTHOR) → this actor type AUTHORED the source document
-    //   mode 2 (CITED)  → this actor type was CITED inside the source document
-    // (An item where the type does both will light up in either mode.)
-    //
-    // Special case: clicking "multiple" matches items whose author / cited
-    // list contains more than one distinct type.
+    // 3-state actor chip matching:
+    //   mode 1 (AUTHOR)         → this actor type AUTHORED the source document
+    //   mode 2 (AUTHOR + CITED) → this actor type is anywhere on the item
+    //                             (author OR cited)
+    // For the "multiple" chip: any item with >1 distinct types lights up.
     if (hasActor) {
       const authors = (el.dataset.authorTypes||"").split("|").filter(Boolean);
       const cited   = (el.dataset.citedTypes ||"").split("|").filter(Boolean);
+      const union   = [...new Set([...authors, ...cited])];
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
         if (t === "multiple") {
           if (mode === 1 && authors.length > 1) { highlight = true; break; }
-          if (mode === 2 && cited.length   > 1) { highlight = true; break; }
+          if (mode === 2 && union.length   > 1) { highlight = true; break; }
           continue;
         }
-        if (mode === 1 && authors.includes(t)) { highlight = true; break; }
-        if (mode === 2 && cited.includes(t))   { highlight = true; break; }
+        if (mode === 1 && authors.includes(t))                       { highlight = true; break; }
+        if (mode === 2 && (authors.includes(t) || cited.includes(t))){ highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
@@ -1155,18 +1160,19 @@ function renderCluster() {
         dotCell.appendChild(dot);
         row.appendChild(dotCell);
 
-        // Content (company label + collapsed card)
-        const content = document.createElement("div");
-        content.className = "tl-content";
-        content.innerHTML = `
-          <div class="tl-tick-co">${escape(r.item.company)}</div>
-          <div class="tl-def-card"></div>
-        `;
-        renderTimelineCard(content.querySelector(".tl-def-card"), r);
-        row.appendChild(content);
+        // Company name (its own grid column, sits next to the dot)
+        const co = document.createElement("div");
+        co.className = "tl-company";
+        co.textContent = r.item.company;
+        row.appendChild(co);
 
-        // Interactions: hover shows card (transient); click pins it (persistent)
-        const co = content.querySelector(".tl-tick-co");
+        // Card sits in the rightmost grid column, opens beside the company name
+        const card = document.createElement("div");
+        card.className = "tl-def-card";
+        renderTimelineCard(card, r);
+        row.appendChild(card);
+
+        // Interactions
         const showHover = () => { if (!row.classList.contains("is-pinned")) row.classList.add("is-hover"); };
         const hideHover = () => row.classList.remove("is-hover");
         const togglePin = () => {
