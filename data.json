@@ -32132,7 +32132,7 @@
    "specific_actor": "Khlaaf",
    "specific_actor_type": "private",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__adversarial-training__red-teaming-data-generation"
    ],
@@ -32165,7 +32165,7 @@
    "specific_actor": "Coalition for Content Provenance and Authenticity",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "Partnership on AI",
-   "actor_type": "ai company",
+   "actor_type": "nonprofit",
    "training_ids": [
     "train__openai__other-digital-watermarking-and-metadata__digital-watermarking"
    ],
@@ -32540,7 +32540,7 @@
    "specific_actor": "Danescu-Niculescu-Mizil et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai-harvard-university__hard-constraints__constitution-rules"
    ],
@@ -32572,7 +32572,7 @@
    "specific_actor": "Varieties of Democracy",
    "specific_actor_type": "other",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "other",
    "training_ids": [
     "train__openai-harvard-university__hard-constraints__constitution-rules"
    ],
@@ -32903,7 +32903,7 @@
    "specific_actor": "Wallace et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__supervised-training-hard-constraints__instruction-hierarchy",
     "train__openai__supervised-training-preference-learning__instruction-hierarchy",
@@ -33247,7 +33247,7 @@
    "specific_actor": "AICPA",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "independent third-party auditor",
-   "actor_type": "ai company",
+   "actor_type": "nonprofit",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__iso-iec-27001-2022",
@@ -33814,7 +33814,7 @@
    "specific_actor": "J. Wei et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__other-reasoning-transparency__chain-of-thought"
    ],
@@ -34218,7 +34218,7 @@
    "specific_actor": "Hendrycks et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__mmlu"
@@ -34248,7 +34248,7 @@
    "specific_actor": "Rein et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__gpqa"
@@ -34397,7 +34397,7 @@
    "specific_actor": "public consultation",
    "specific_actor_type": "public",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "public",
    "training_ids": [
     "train__openai__preference-learning-hard-constraints__constitutional-ai"
    ],
@@ -34431,7 +34431,7 @@
    "specific_actor": "public consultation",
    "specific_actor_type": "public",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "public",
    "training_ids": [
     "train__openai__preference-learning-hard-constraints__constitutional-ai",
     "train__openai__supervised-training-hard-constraints__instruction-tuning"
@@ -34465,7 +34465,7 @@
    "specific_actor": "public consultation",
    "specific_actor_type": "public",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "public",
    "training_ids": [
     "train__openai__preference-learning-hard-constraints__preference-learning-hard-constraints"
    ],
@@ -34502,7 +34502,7 @@
    "specific_actor": "public consultation",
    "specific_actor_type": "public",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "public",
    "training_ids": [
     "train__openai__hard-constraints__constitution-rules",
     "train__openai__preference-learning-hard-constraints__constitutional-ai"
@@ -34769,7 +34769,7 @@
    "specific_actor": "Cybersecurity and Infrastructure Security Agency",
    "specific_actor_type": "governmental",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "governmental",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -35923,7 +35923,7 @@
    "specific_actor": "Chan et al",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "nonprofit",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__mean-ablation"
@@ -37338,7 +37338,7 @@
    "specific_actor": "Generative Social Choice",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [],
@@ -37366,7 +37366,7 @@
    "specific_actor": "Meaning Alignment Network",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "nonprofit",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment"
    ],
@@ -37396,7 +37396,7 @@
    "specific_actor": "Ubuntu-AI",
    "specific_actor_type": "other",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "other",
    "training_ids": [
     "train__openai__data-curation__sourcing"
    ],
@@ -37847,7 +37847,7 @@
    "specific_actor": "Guan et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__evaluation-suite-from-guan-et-al-2025"
@@ -37880,7 +37880,7 @@
    "specific_actor": "Yueh-Han",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__cot-control"
@@ -38941,7 +38941,7 @@
    "specific_actor": "Senate’s Bipartisan AI Working Group",
    "specific_actor_type": "governmental",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "governmental",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -39976,7 +39976,7 @@
    "specific_actor": "Safety Advisory Group",
    "specific_actor_type": "internal",
    "external_evaluator": "U.S. AI Safety Institute | UK AI Safety Institute",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [
     "train__openai__data-curation-supervised-training-runtime-safeguards__data-curation-supervised-training-runtime-safeguards",
     "train__openai__inference-time-filtering-runtime-safeguards__safety-filter",
@@ -40120,7 +40120,7 @@
    "specific_actor": "Safety Advisory Group",
    "specific_actor_type": "internal",
    "external_evaluator": "Safety Advisory Group",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [
     "train__openai__adversarial-training-data-curation-inference-time-filtering-runtime-safeguards__capability-elicitation-guardrails",
     "train__openai__adversarial-training-supervised-training__instruction-tuning",
@@ -41057,7 +41057,7 @@
    "specific_actor": "A. Souly, et al",
    "specific_actor_type": "academic",
    "external_evaluator": "Scale AI",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__adversarial-training__jailbreak-augmentation",
     "train__openai__hard-constraints-supervised-training__instruction-hierarchy",
@@ -41145,7 +41145,7 @@
    "specific_actor": "Laine et al",
    "specific_actor_type": "research institute",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "research institute",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__verbalized-evaluation-awareness-rate"
@@ -41255,7 +41255,7 @@
    "specific_actor": "Apollo Research",
    "specific_actor_type": "public benefit corporation",
    "external_evaluator": "Apollo Research",
-   "actor_type": "ai company",
+   "actor_type": "public benefit corporation",
    "training_ids": [
     "train__openai__other-elicitation-approach__capability-elicitation-guardrails",
     "train__openai__preference-learning-supervised-training__deliberative-alignment",
@@ -41307,7 +41307,7 @@
    "specific_actor": "Hubinger et al | Schoen et al",
    "specific_actor_type": "other",
    "external_evaluator": "METR | UK AI Safety Institute",
-   "actor_type": "ai company",
+   "actor_type": "other",
    "training_ids": [
     "train__openai__preference-learning__deliberative-alignment",
     "train__openai__preference-learning__preference-learning",
@@ -42506,7 +42506,7 @@
    "specific_actor": "Biggio et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [],
@@ -42534,7 +42534,7 @@
    "specific_actor": "Szegedy et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__multiple__cleverhans-library-of-benchmarks-and-models",
@@ -43463,7 +43463,7 @@
    "specific_actor": "Thorn | All Tech Is Human",
    "specific_actor_type": "other",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "other",
    "training_ids": [
     "train__openai__data-curation-adversarial-training-inference-time-filtering-hard-constraints__filtering",
     "train__openai__inference-time-filtering-runtime-safeguards-other-industry-sharing__runtime-monitoring",
@@ -43655,7 +43655,7 @@
    "specific_actor": "Sarkar and Vafa",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__multiple__hard-constraints__constitution-rules"
    ],
@@ -43895,7 +43895,7 @@
    "specific_actor": "Shah et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__in-the-wild-jailbreaks-dataset"
@@ -43961,7 +43961,7 @@
    "specific_actor": "Denison et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "internal",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__preference-learning__reward-modelling",
     "train__openai__runtime-safeguards-other-follow-up-questions__scratchpad-oversight"
@@ -44125,7 +44125,7 @@
    "specific_actor": "Apollo Research",
    "specific_actor_type": "public benefit corporation",
    "external_evaluator": "Apollo Research",
-   "actor_type": "ai company",
+   "actor_type": "public benefit corporation",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__sabotage-suite"
@@ -44514,7 +44514,7 @@
    "specific_actor": "G. Starace et al",
    "specific_actor_type": "private",
    "external_evaluator": "METR",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__internal__internal",
     "train__openai__preference-learning-supervised-training__deliberative-alignment",
@@ -44664,7 +44664,7 @@
    "specific_actor": "Gryphon Scientific",
    "specific_actor_type": "private",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment",
     "train__openai__runtime-safeguards__sandboxing",
@@ -45800,7 +45800,7 @@
    "specific_actor": "Alexandra Souly et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__other-inference-time-compute-scaling__test-time-compute",
     "train__openai__preference-learning-data-curation-inference-time-filtering__deliberative-alignment"
@@ -46345,7 +46345,7 @@
    "specific_actor": "Karkkainen and Joo",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__data-curation-supervised-training__instruction-tuning"
    ],
@@ -46380,7 +46380,7 @@
    "specific_actor": "Monk",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__data-curation-supervised-training__instruction-tuning"
    ],
@@ -46415,7 +46415,7 @@
    "specific_actor": "Shannon",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__data-curation-supervised-training__instruction-tuning"
    ],
@@ -46606,7 +46606,7 @@
    "specific_actor": "Gryphon Scientific",
    "specific_actor_type": "private",
    "external_evaluator": "Gryphon Scientific",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__data-curation-preference-learning__data-curation-preference-learning",
     "train__openai__data-curation__filtering"
@@ -46815,7 +46815,7 @@
    "specific_actor": "Stuart Armstrong",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__multiple__reward-shaping-preference-learning__cooperative-inverse-reinforcement-learning",
     "train__multiple__reward-shaping-preference-learning__side-effect-avoidance"
@@ -46940,7 +46940,7 @@
    "specific_actor": "Charles Goodhart",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__multiple__reward-shaping-adversarial-training-runtime-safeguards__reward-hacking-penalties",
     "train__multiple__reward-shaping-runtime-safeguards-adversarial-training__trip-wires"
@@ -47571,7 +47571,7 @@
    "specific_actor": "Jason Wei et al",
    "specific_actor_type": "private",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__other-inference-time-compute-scaling__test-time-compute"
    ],
@@ -47693,7 +47693,7 @@
    "specific_actor": "Dan Hendrycks et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__other-inference-time-compute-scaling__test-time-compute"
    ],
@@ -47725,7 +47725,7 @@
    "specific_actor": "Yinpeng Dong et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__other-inference-time-compute-scaling__test-time-compute"
    ],
@@ -48369,7 +48369,7 @@
    "specific_actor": "Bommasani et al | Kleinberg and Raghavan",
    "specific_actor_type": "other",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "other",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [],
@@ -48597,7 +48597,7 @@
    "specific_actor": "Dr. Jake Hecla",
    "specific_actor_type": "academic",
    "external_evaluator": "MIT Stanton Nuclear Security Fellow",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__data-curation-preference-learning__data-curation-preference-learning",
     "train__openai__preference-learning-supervised-training__deliberative-alignment"
@@ -48720,7 +48720,7 @@
    "specific_actor": "Huang et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__other-scaling-unsupervised-learning__unsupervised-pre-training",
     "train__openai__preference-learning-data-curation__rlhf",
@@ -48870,7 +48870,7 @@
    "specific_actor": "FutureHouse",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "PhD scientists",
-   "actor_type": "ai company",
+   "actor_type": "nonprofit",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment",
     "train__openai__supervised-training-runtime-safeguards__runtime-monitoring"
@@ -49020,7 +49020,7 @@
    "specific_actor": "Zhu et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__runtime-safeguards__runtime-monitoring"
    ],
@@ -49658,7 +49658,7 @@
    "specific_actor": "Executive Order on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence",
    "specific_actor_type": "governmental",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "governmental",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [],
@@ -50266,7 +50266,7 @@
    "specific_actor": "Chen et al",
    "specific_actor_type": "internal",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__sample-of-evaluation-problems"
@@ -50299,7 +50299,7 @@
    "specific_actor": "Chen et al",
    "specific_actor_type": "internal",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__sample-of-evaluation-problems"
@@ -50392,7 +50392,7 @@
    "specific_actor": "Acemoglu and Restrepo",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -50423,7 +50423,7 @@
    "specific_actor": "Acemoglu",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -50865,7 +50865,7 @@
    "specific_actor": "public consultation",
    "specific_actor_type": "public",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "public",
    "training_ids": [
     "train__openai__preference-learning__rlhf"
    ],
@@ -51543,7 +51543,7 @@
    "specific_actor": "Wallace et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__supervised-training__instruction-hierarchy"
    ],
@@ -52387,7 +52387,7 @@
    "specific_actor": "Dr. Ellis Monk",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__google__data-curation__sourcing"
    ],
@@ -54230,7 +54230,7 @@
    "specific_actor": "Elhage et al",
    "specific_actor_type": "private",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__hard-constraints__hard-constraints"
    ],
@@ -54701,7 +54701,7 @@
    "specific_actor": "Guan et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__runtime-safeguards__runtime-monitoring"
    ],
@@ -55197,7 +55197,7 @@
    "specific_actor": "OpenAI Preparedness Framework",
    "specific_actor_type": "internal",
    "external_evaluator": "SecureBio",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [
     "train__openai__data-curation-preference-learning__data-curation-preference-learning"
    ],
@@ -55239,7 +55239,7 @@
    "specific_actor": "OpenAI Preparedness Framework",
    "specific_actor_type": "internal",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [
     "train__openai__data-curation-preference-learning-supervised-training__rejection-sampling-fine-tuning"
    ],
@@ -55530,7 +55530,7 @@
    "specific_actor": "Eloundou et al",
    "specific_actor_type": "internal",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "internal",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment",
     "train__openai__preference-learning__rlhf"
@@ -56081,7 +56081,7 @@
    "specific_actor": "Pyatkin et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [],
    "benchmark_ids": [],
    "author_actor_types": [],
@@ -58920,7 +58920,7 @@
    "specific_actor": "METR",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "METR",
-   "actor_type": "ai company",
+   "actor_type": "nonprofit",
    "training_ids": [],
    "benchmark_ids": [
     "bench__openai__metr-evaluation-on-autonomy-and-ai-self-improvement"
@@ -59709,7 +59709,7 @@
    "specific_actor": "Gryphon Scientific",
    "specific_actor_type": "private",
    "external_evaluator": "Gryphon Scientific",
-   "actor_type": "ai company",
+   "actor_type": "private",
    "training_ids": [
     "train__openai__hard-constraints-inference-time-filtering__refusal-policies",
     "train__openai__preference-learning__preference-learning"
@@ -60341,7 +60341,7 @@
    "specific_actor": "Amodei et al",
    "specific_actor_type": "research institute",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "research institute",
    "training_ids": [
     "train__openai__supervised-training__sft"
    ],
@@ -62863,7 +62863,7 @@
    "specific_actor": "Amodei et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__other__preference-learning-supervised-training__rlhf"
    ],
@@ -62896,7 +62896,7 @@
    "specific_actor": "Amodei et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "academic",
    "training_ids": [
     "train__other__preference-learning-supervised-training__rlhf"
    ],
@@ -63233,7 +63233,7 @@
    "specific_actor": "Guan et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment"
    ],
@@ -63268,7 +63268,7 @@
    "specific_actor": "Yueh-Han",
    "specific_actor_type": "research institute",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "research institute",
    "training_ids": [
     "train__openai__preference-learning-supervised-training__deliberative-alignment"
    ],
@@ -64172,7 +64172,7 @@
    "specific_actor": "Dekoninck et al",
    "specific_actor_type": "academic",
    "external_evaluator": "",
-   "actor_type": "ai company",
+   "actor_type": "academic",
    "training_ids": [
     "train__openai__data-curation__provenance-obfuscation"
    ],
@@ -64289,7 +64289,7 @@
    "specific_actor": "RAND",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "External Red Teamers",
-   "actor_type": "unknown",
+   "actor_type": "nonprofit",
    "training_ids": [
     "train__openai__hard-constraints-runtime-safeguards__usage-restrictions"
    ],
@@ -64411,7 +64411,7 @@
    "specific_actor": "Anti-Defamation League",
    "specific_actor_type": "nonprofit",
    "external_evaluator": "",
-   "actor_type": "unknown",
+   "actor_type": "nonprofit",
    "training_ids": [
     "train__openai__data-curation__sourcing"
    ],

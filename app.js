@@ -372,18 +372,29 @@ function renderItemBlock(blockId, items, opts) {
   const counts = Object.fromEntries(
     Object.entries(byCat).map(([k, v]) => [k, v.length])
   );
-  const yearOfCat = cat => {
+  // Two scores per category: max year (recency peak) and avg year (recency
+  // mass). Sort by max with avg as tiebreaker so categories that are *mostly*
+  // recent rank above ones with a single 2025 outlier in an older dataset.
+  const yearStats = cat => {
     const ys = byCat[cat]
       .flatMap(it => (it.pub_ids || []).map(pid => yearByDocId[pid]))
       .filter(y => y > 0);
-    if (!ys.length) return 0;
-    return sortBy === "oldest" ? Math.min(...ys) : Math.max(...ys);
+    if (!ys.length) return { max: 0, min: 9999, avg: 0 };
+    const sum = ys.reduce((s, y) => s + y, 0);
+    return { max: Math.max(...ys), min: Math.min(...ys), avg: sum / ys.length };
+  };
+  const cmp = (a, b, dir) => {
+    const ya = yearStats(a), yb = yearStats(b);
+    if (dir === "newest") {
+      return (yb.max - ya.max) || (yb.avg - ya.avg) || (counts[b] - counts[a]) || a.localeCompare(b);
+    }
+    return (ya.min - yb.min) || (ya.avg - yb.avg) || (counts[b] - counts[a]) || a.localeCompare(b);
   };
   const applySort = (arr) => {
     if (sortBy === "alpha")    arr.sort();
     if (sortBy === "quantity") arr.sort((a, b) => counts[b] - counts[a]);
-    if (sortBy === "newest")   arr.sort((a, b) => yearOfCat(b) - yearOfCat(a));
-    if (sortBy === "oldest")   arr.sort((a, b) => yearOfCat(a) - yearOfCat(b));
+    if (sortBy === "newest")   arr.sort((a, b) => cmp(a, b, "newest"));
+    if (sortBy === "oldest")   arr.sort((a, b) => cmp(a, b, "oldest"));
   };
   applySort(cats);
 
@@ -599,7 +610,7 @@ function itemToCard(it, blockId, nameKey) {
       ${it.verbatim ? `<div class="quote">"${escape(snippet(it.verbatim, 220))}"</div>` : ""}
       <dt>Category</dt><dd>${escape(it.category)}</dd>
       <dt>Found in</dt><dd>${found}</dd>
-      <dt>Trained by</dt><dd>${actorPills(trainActors)}</dd>
+      <dt>Done by</dt><dd>${actorPills(trainActors)}</dd>
       <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
       ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
   }
@@ -610,7 +621,7 @@ function itemToCard(it, blockId, nameKey) {
       <h4>${escape(it.name)}</h4>
       <dt>Category</dt><dd>${escape(it.category)}</dd>
       <dt>Found in</dt><dd>${found}</dd>
-      <dt>Benchmarked by</dt><dd>${actorPills(benchActors)}</dd>
+      <dt>Benchmark creator</dt><dd>${actorPills(benchActors)}</dd>
       <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
       ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
   }
@@ -1373,7 +1384,7 @@ function renderTimelineCard(card, r) {
 
   const trainBlock = (r.trainings || []).map(t => {
     const actorPairs = pairsFrom(t.actor, t.actor_type_raw);
-    return `<div class="tl-step"><span class="tl-step-tag">Trained by</span>
+    return `<div class="tl-step"><span class="tl-step-tag">Done by</span>
               <span class="tl-step-body">
                 <span class="tl-meta">${escape(t.item)} · ${escape(t.category)}</span><br>
                 ${actorPills(actorPairs)}
@@ -1382,7 +1393,7 @@ function renderTimelineCard(card, r) {
 
   const benchBlock = (r.benchmarks || []).map(b => {
     const actorPairs = pairsFrom(b.author, b.author_type_raw);
-    return `<div class="tl-step"><span class="tl-step-tag">Benchmarked by</span>
+    return `<div class="tl-step"><span class="tl-step-tag">Benchmark creator</span>
               <span class="tl-step-body">
                 <span class="tl-meta">${escape(b.name)} · ${escape(b.category)}</span><br>
                 ${actorPills(actorPairs)}
