@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260511r">
+<link rel="stylesheet" href="style.css?v=20260511s">
 </head>
 <body>
 
@@ -602,7 +602,8 @@
     <article class="grid-block" id="block-sources">
       <header class="block-head">
         <h3>Documents</h3>
-        <p class="block-sub">Who crafts alignment policies?</p>
+        <p class="block-sub">Who writes alignment documents? Who is cited?</p>
+        <p class="block-caption">Document colour = author type. Click an actor in the sidebar to highlight the documents they author; click again (+ cited) to also see the documents that cite them via <code>specific_risk_conduct_actor</code>, training-actor, benchmark-author or external-evaluator.</p>
       </header>
       <div class="sort-bar"></div>
       <div class="row-grid" id="grid-sources"></div>
@@ -612,7 +613,8 @@
     <article class="grid-block" id="block-conducts">
       <header class="block-head">
         <h3>Conducts</h3>
-        <p class="block-sub">How should a model behave, and who defines ideal conducts?</p>
+        <p class="block-sub">Who is the author of documents where conducts are mentioned? Who is cited?</p>
+        <p class="block-caption">Square colour = author of the source document. Click an actor for AUTHOR; click again (+ cited) to also see items explicitly attributed to that actor via <code>specific_risk_conduct_actor</code>.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="conducts">
@@ -628,7 +630,8 @@
     <article class="grid-block" id="block-risks">
       <header class="block-head">
         <h3>Risks</h3>
-        <p class="block-sub">What risks does alignment try to mitigate?</p>
+        <p class="block-sub">Who is the author of documents where risks are mentioned? Who is cited?</p>
+        <p class="block-caption">Square colour = author of the source document. Click for AUTHOR; click again (+ cited) for actors explicitly credited via <code>specific_risk_conduct_actor</code>.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="risks">
@@ -644,7 +647,8 @@
     <article class="grid-block" id="block-misuses">
       <header class="block-head">
         <h3>Misuses</h3>
-        <p class="block-sub">How companies frame the <em>misuse</em> of their models — extracted from company policies (acceptable-use, privacy, terms of service, developer terms).</p>
+        <p class="block-sub">Who crafts company policies? Who is cited?</p>
+        <p class="block-caption">Square colour = author of the policy (typically the company itself). Click for AUTHOR; click again (+ cited) for anyone else named in the row (e.g., national regulators, third-party reviewers).</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="misuses">
@@ -660,7 +664,8 @@
     <article class="grid-block" id="block-training">
       <header class="block-head">
         <h3>Training</h3>
-        <p class="block-sub">Who participates in training, red-teaming or data curation?</p>
+        <p class="block-sub">Who is credited with training models?</p>
+        <p class="block-caption">Square colour = type of the named <code>risk_conduct_training_actor</code> (who actually did the training). Click for AUTHOR; click again (+ cited) for any other actor in the row — including the document's authors.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="training">
@@ -676,7 +681,8 @@
     <article class="grid-block" id="block-benchmark">
       <header class="block-head">
         <h3>Benchmarking</h3>
-        <p class="block-sub">Whose benchmarks are used?</p>
+        <p class="block-sub">Who is the creator of a cited benchmark?</p>
+        <p class="block-caption">Square colour = type of the named <code>risk_conduct_benchmark_author</code>. Click for AUTHOR; click again (+ cited) for any other actor in the row — the document's authors, training actors and explicit credits.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="benchmark">
@@ -804,6 +810,6 @@
 <div id="info-card" class="info-card hidden"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260511r"></script>
+<script src="app.js?v=20260511s"></script>
 </body>
 </html>
