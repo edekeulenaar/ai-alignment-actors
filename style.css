@@ -1,0 +1,496 @@
+/* ════════════════════════════════════════════════════════════════
+   The actors in AI alignment — site styles
+   Designed for a 13–14" laptop: sidebar 240px, content ~900–1000px.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Editorial palette — paper-style, warm. */
+  --ink:        #1c1a18;
+  --paper:      #fbf7f0;
+  --paper-alt:  #f3ece1;
+  --muted:      #6c655c;
+  --border:     #d5cdbf;
+  --rule:       #b3a999;
+
+  --accent:     #c0431f;  /* "you are here" + active states */
+
+  /* Actor-type palette — vibrant but not strenuous.            */
+  /* (matches the order in docs/data.json actor_types)          */
+  --c-internal:            #FDB0B3;   /* soft coral pink */
+  --c-private:             #F68550;   /* orange */
+  --c-academic:            #FEE192;   /* light yellow */
+  --c-research-institute:  #FBA861;   /* peach */
+  --c-governmental:        #5BB2AC;   /* teal */
+  --c-nonprofit:           #A6DBA3;   /* light green */
+  --c-public:              #4492B4;   /* azure */
+  --c-public-consultation: #4771B0;   /* deep blue */
+  --c-other:               #B0AFAB;   /* warm gray */
+  --c-multiple:            #B197D7;   /* lavender */
+  --c-unknown:             #E5E0D5;   /* neutral */
+
+  --dim:      0.10;
+  --sb-w:     220px;
+  --rail-w:   0px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-size: 14.5px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+
+/* ─────────────────────────── Sidebar ─────────────────────────── */
+.sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: var(--sb-w);
+  padding: 1.5rem 1.2rem;
+  background: var(--paper-alt);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  font-size: 13px;
+}
+.brand h1 {
+  font-size: 1.05rem; font-weight: 700; margin: 0 0 0.35em 0;
+  letter-spacing: 0.01em; line-height: 1.2;
+}
+.brand-sub {
+  font-size: 11.5px; color: var(--muted); margin: 0 0 1.4rem 0;
+  font-style: italic;
+}
+
+.side-nav { display: flex; flex-direction: column; margin-bottom: 1.6rem; }
+.side-nav > a {
+  text-decoration: none; padding: 0.25em 0;
+  font-style: italic; color: var(--muted);
+  border-left: 2px solid transparent; padding-left: 0.6rem; margin-left: -0.6rem;
+}
+.side-nav > a.active {
+  color: var(--ink); border-left-color: var(--accent); font-style: normal;
+  font-weight: 600;
+}
+.side-nav .sub-nav {
+  list-style: none; padding: 0; margin: 0.1rem 0 0.1rem 0.8rem;
+  font-size: 12px;
+}
+.side-nav .sub-nav a {
+  display: block; text-decoration: none; padding: 0.18em 0;
+  color: var(--muted);
+  border-left: 2px solid transparent; padding-left: 0.6rem; margin-left: -0.6rem;
+}
+.side-nav .sub-nav a.active {
+  color: var(--ink); border-left-color: var(--accent); font-weight: 600;
+}
+
+.side-toggle { display: flex; align-items: center; gap: 0.45em;
+               font-size: 12px; cursor: pointer; padding: 0.2em 0; }
+.side-toggle input { margin: 0; }
+
+.side-block { margin-bottom: 1.6rem; }
+.side-block h4 {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.10em;
+  text-transform: uppercase; color: var(--muted);
+  margin: 0 0 0.6rem 0; padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Legend */
+.legend { display: flex; flex-direction: column; gap: 0.25em; }
+.legend-chip {
+  display: flex; align-items: center; gap: 0.55em;
+  font-size: 12px; cursor: pointer; user-select: none;
+  padding: 0.15em 0.25em; border-radius: 2px;
+}
+.legend-chip:hover { background: rgba(0,0,0,0.04); }
+.legend-chip.active { background: var(--ink); color: var(--paper); }
+.legend-chip.active .swatch { outline: 1px solid var(--paper); }
+.legend-chip .swatch {
+  width: 12px; height: 12px; border: 1px solid var(--border); border-radius: 2px;
+  flex: 0 0 12px;
+}
+
+/* Filters — dropdown multiselect via <details> */
+.filters .filter-dd { margin-bottom: 0.35em; border: 1px solid var(--border); border-radius: 3px; background: var(--paper); }
+.filters summary {
+  list-style: none; cursor: pointer;
+  padding: 0.3em 0.5em; font-size: 12px;
+}
+.filters summary::-webkit-details-marker { display: none; }
+.filters summary::after { content: " ▾"; color: var(--muted); }
+.filters details[open] summary::after { content: " ▴"; }
+.filters .multi {
+  max-height: 160px; overflow-y: auto;
+  border-top: 1px solid var(--border);
+  padding: 0.35em 0.5em; font-size: 12px;
+}
+.filters .multi label {
+  display: flex; align-items: center; gap: 0.4em;
+  padding: 0.1em 0; cursor: pointer;
+}
+.filters .multi input { margin: 0; }
+.filters button#reset-filters {
+  width: 100%; margin-top: 0.5em; padding: 0.35em 0.5em;
+  background: var(--paper); border: 1px solid var(--border); border-radius: 3px;
+  font-size: 12px;
+}
+.filters button#reset-filters:hover { background: var(--ink); color: var(--paper); }
+
+/* Companies list */
+.company-list { list-style: none; padding: 0; margin: 0; font-size: 12px; }
+.company-list li {
+  padding: 0.2em 0.4em; border-radius: 2px; cursor: pointer; user-select: none;
+}
+.company-list li:hover { background: rgba(0,0,0,0.04); }
+.company-list li.active { background: var(--ink); color: var(--paper); }
+.company-list li .ct { color: var(--muted); font-size: 10.5px; margin-left: 0.4em; }
+.company-list li.active .ct { color: var(--paper); opacity: 0.7; }
+
+/* (Progress rail removed) */
+.progress-rail { display: none; }
+
+/* ─────────────────────────── Main ─────────────────────────────── */
+main {
+  margin-left: var(--sb-w);
+  padding: 3rem 3rem 6rem;
+  max-width: calc(100vw - var(--sb-w));
+}
+main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
+
+/* ── Masthead (paper title + byline) ───────────────────────────── */
+.masthead {
+  margin-bottom: 9rem;          /* generous breathing room before introduction */
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.masthead-title {
+  font-size: 2.6rem; font-weight: 800;
+  letter-spacing: -0.02em; line-height: 1.1;
+  margin: 0 0 0.6rem;
+}
+.byline {
+  font-size: 15px; color: var(--muted);
+  font-style: italic; max-width: none; margin: 0;
+}
+.byline a { color: var(--ink); }
+
+/* ── Sidebar search ───────────────────────────────────────────── */
+.side-search { margin-bottom: 1.6rem; }
+.side-search input[type="search"] {
+  width: 100%; font: inherit; font-size: 13px;
+  padding: 0.45em 0.6em;
+  border: 1px solid var(--border); border-radius: 3px;
+  background: var(--paper);
+}
+.side-search input[type="search"]:focus { outline: none; border-color: var(--ink); }
+.side-hint { color: var(--muted); font-size: 10.5px; font-style: italic; margin: 0.35em 0 0; }
+.side-hint kbd {
+  font-family: ui-monospace, Menlo, monospace;
+  border: 1px solid var(--border); border-radius: 2px;
+  padding: 0 4px; background: var(--paper-alt);
+  font-size: 10px;
+}
+
+/* ── References ───────────────────────────────────────────────── */
+.references {
+  list-style: decimal inside; padding: 0; margin: 0;
+}
+.references li {
+  padding: 0.4em 0; border-bottom: 1px dotted var(--border);
+  font-size: 14px;
+}
+.references li:last-child { border-bottom: none; }
+
+/* ── Conceptual-clusters block ────────────────────────────────── */
+.cluster-controls {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  margin: 0.8rem 0 1.2rem;
+  font-size: 13px; color: var(--muted);
+}
+.cluster-controls label { display: flex; flex-direction: column; gap: 0.25em; }
+.cluster-controls select {
+  font: inherit; padding: 0.35em 0.6em; min-width: 220px;
+  border: 1px solid var(--border); border-radius: 3px;
+  background: var(--paper);
+}
+.cluster-panes {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  margin-top: 1rem;
+}
+.cluster-pane { background: var(--paper-alt); padding: 1rem; border-radius: 4px;
+                border: 1px solid var(--border); }
+.cluster-pane:first-child { grid-column: 1 / -1; }
+.cluster-pane h4 { margin: 0 0 0.5rem; font-size: 14px; font-weight: 700; }
+.cluster-help { font-size: 12px; color: var(--muted); font-style: italic; margin: 0 0 0.5rem; }
+.cluster-timeline {
+  max-height: 360px; overflow-y: auto; padding-right: 0.5rem;
+}
+.cluster-timeline .tl-entry {
+  margin-bottom: 0.9rem; padding-left: 0.8rem;
+  border-left: 2px solid var(--rule);
+}
+.cluster-timeline .tl-year {
+  font-weight: 700; font-size: 12px; color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.cluster-timeline .tl-src { font-size: 12px; color: var(--muted); margin-bottom: 0.25rem; }
+.cluster-timeline .tl-src a { color: var(--muted); }
+.cluster-timeline .tl-def {
+  font-style: italic; font-size: 13px; line-height: 1.45;
+  margin-bottom: 0.4rem;
+}
+.cluster-timeline .tl-step {
+  font-size: 12px; color: var(--ink); margin: 0.15rem 0;
+  display: flex; gap: 0.5em; align-items: baseline;
+}
+.cluster-timeline .tl-step-tag {
+  display: inline-block; min-width: 90px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--accent);
+}
+.cluster-timeline .tl-step-body { flex: 1; }
+.cluster-timeline .tl-meta { color: var(--muted); font-size: 11.5px; }
+.cluster-graph {
+  width: 100%; height: 320px;
+  background: var(--paper); border-radius: 3px;
+}
+.cluster-graph .node-label { font-size: 10.5px; pointer-events: none; }
+.cluster-graph .node circle { stroke: var(--ink); stroke-width: 1px; cursor: pointer; }
+.cluster-graph .link { stroke: var(--rule); stroke-opacity: 0.6; }
+
+/* Hide Misuses block when toggled off */
+body.hide-misuses #block-misuses { display: none; }
+
+/* Prose typography — full available width for Introduction / Method / Discussion */
+.prose p, section.prose p { max-width: none; }
+h2 {
+  font-size: 1.75rem; font-weight: 700; margin: 0 0 1.2rem 0;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+}
+/* Uniform body type for Introduction / Method / Discussion / References */
+.prose, .prose p, .prose li, .lede { font-size: 15px; line-height: 1.65; }
+.lede { font-style: normal; }
+.meta { color: var(--muted); font-style: italic; font-size: 13px; }
+code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
+       background: var(--paper-alt); padding: 1px 4px; border-radius: 2px; }
+
+/* Method subheadings */
+.prose h3 {
+  font-size: 1.15rem; font-weight: 700;
+  margin: 2.4rem 0 0.6rem;
+  letter-spacing: -0.005em;
+}
+.prose ul { max-width: none; padding-left: 1.4rem; margin: 0.6rem 0 1rem; }
+.prose ul li { margin-bottom: 0.4rem; }
+
+/* ───────────────────────── Grid blocks ────────────────────────── */
+.grid-block { margin-bottom: 4.5rem; padding-top: 0.5rem; }
+.block-head { margin-bottom: 0.8rem; }
+.block-head h3 {
+  font-size: 1.2rem; font-weight: 700; margin: 0;
+  letter-spacing: -0.01em;
+}
+.block-sub { color: var(--muted); font-style: italic; margin: 0.1em 0 0; font-size: 13px; }
+
+.view-controls { margin-bottom: 1.2rem; font-size: 13px; color: var(--muted); }
+.view-controls label { cursor: pointer; user-select: none; }
+.view-controls input { vertical-align: middle; margin-right: 0.3em; }
+.sort-bar { margin: 0.4rem 0 0.8rem; font-size: 12px; color: var(--muted);
+            display: flex; gap: 1.2em; align-items: center; flex-wrap: wrap; }
+.sort-bar select { font: inherit; padding: 0.15em 0.3em; margin-left: 0.4em; }
+.sort-bar a { color: var(--muted); cursor: pointer; text-decoration: underline dotted; }
+.sort-bar a:hover { color: var(--ink); }
+
+/* Document-type key (under the Documents block) */
+.doc-key {
+  display: flex; flex-wrap: wrap; gap: 0.6em 1.5em;
+  padding: 0.6em 0.8em; margin-bottom: 1rem;
+  background: var(--paper-alt); border: 1px solid var(--border);
+  border-radius: 4px; font-size: 12px;
+}
+.doc-key .key-item { display: flex; align-items: center; gap: 0.4em; color: var(--muted); }
+.doc-key .doc { transform: scale(0.85); cursor: default; }
+.doc-key .doc:hover { transform: scale(0.85); }
+
+/* Transposed grid: rows = categories, columns = label + top-N companies.
+   The very first row is a sticky company header. */
+.row-grid {
+  --label-w: 170px;
+  --col-w:   95px;
+  display: grid;
+  /* grid-template-columns is set inline by JS */
+  row-gap: 5px; column-gap: 8px;
+  align-items: start;
+}
+body.view-named .row-grid { --col-w: 150px; }
+.co-head {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--paper);
+  height: 84px;              /* FIXED so all bottom borders align */
+  padding: 6px 4px 4px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 12.5px; font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.co-head.spacer { background: var(--paper); cursor: default; }
+.co-head:hover .co-name { color: var(--accent); }
+.co-head .co-name { line-height: 1.15; }
+.co-head .country { font-size: 10.5px; font-weight: 400; color: var(--muted);
+                    margin-top: 2px; line-height: 1.2; }
+
+.cat-row-label {
+  font-size: 12.5px; color: var(--ink);
+  font-style: italic;
+  padding: 4px 12px 4px 0;
+  text-align: left;
+  white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+  max-width: var(--label-w, 170px);
+  cursor: pointer; user-select: none;
+  line-height: 16px;
+}
+.cat-row-label:hover  { color: var(--accent); }
+.cat-row-label.active { color: var(--accent); font-weight: 700; }
+
+/* ── Cells holding squares / doc icons ──────────────────────────── */
+.cat-cell {
+  display: flex; flex-wrap: wrap; gap: 2px;
+  align-content: flex-start;
+  padding: 2px 0;
+  min-height: 18px;
+}
+.docs-cell { gap: 3px; }
+
+/* ───────────────────── Square markers & doc icons ─────────────── */
+.sq {
+  width: 16px; height: 16px;
+  border: 1px solid var(--ink);
+  background: var(--c-unknown);
+  cursor: pointer;
+  flex: 0 0 auto;
+  border-radius: 2px;
+  transition: transform 0.08s ease;
+}
+.sq:hover { transform: scale(1.4); z-index: 2; position: relative; }
+
+/* Named-view: squares become labeled chips with the item name inside.
+   Document cells (.docs-cell) keep their normal icon layout. */
+body.view-named .sq {
+  width: 100%; height: auto; min-height: 20px;
+  padding: 3px 6px;
+  font-size: 10.5px; line-height: 1.2;
+  font-family: inherit;
+  color: var(--ink);
+  text-align: left;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  border-radius: 2px;
+  border: 1px solid var(--sq-bg, var(--ink));
+  /* Use a soft tint of the actor color rather than a solid block. */
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 22%, var(--paper));
+}
+body.view-named .sq:hover {
+  transform: none;
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 40%, var(--paper));
+}
+body.view-named .sq.hl {
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 50%, var(--paper));
+}
+body.view-named .cat-cell:not(.docs-cell) {
+  flex-direction: column; align-items: stretch; gap: 2px;
+}
+
+.doc {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 28px;
+  border: 1.5px solid var(--ink); background: white;
+  cursor: pointer; position: relative;
+  font-size: 0.7rem; font-weight: 700; color: var(--ink);
+  flex: 0 0 auto; border-radius: 1.5px;
+  transition: transform 0.08s ease;
+}
+.doc::before {
+  content: "";
+  position: absolute; left: 3px; right: 3px; top: 5px; bottom: 5px;
+  background-image:
+    linear-gradient(to bottom,
+      transparent 0, transparent 3px,
+      currentColor 3px, currentColor 4px,
+      transparent 4px, transparent 8px,
+      currentColor 8px, currentColor 9px,
+      transparent 9px, transparent 13px,
+      currentColor 13px, currentColor 14px,
+      transparent 14px);
+  opacity: 0.25;
+}
+.doc:hover { transform: scale(1.18); z-index: 2; }
+
+/* Doc-type glyphs (replaced if you drop SVGs into icons/) */
+.doc.t-model-card::after        { content: ""; }
+.doc.t-company-policy           { background: #f4ecd8; }
+.doc.t-principle::after         { content: "§"; }
+.doc.t-grant::after             { content: "$"; }
+.doc.t-initiative::after        { content: "!"; }
+.doc.t-report::after            { content: "R"; font-size: 0.7em; }
+.doc.t-research::after          { content: "✎"; font-size: 0.85em; }
+.doc.t-announcement::after      { content: "▶"; font-size: 0.6em; }
+.doc.t-audit::after             { content: "✓"; font-size: 0.8em; }
+.doc.t-legislation::after       { content: "⚖"; font-size: 0.85em; }
+.doc.t-other::after             { content: "?"; }
+.doc::after { z-index: 1; position: relative; }
+
+/* If a custom SVG is provided, swap the background */
+.doc.has-svg::before { display: none; }
+.doc.has-svg::after  { content: ""; }
+.doc.has-svg { background: center / 70% no-repeat var(--svg-url, none) white; }
+
+/* ───────────────────── Selection / dimming ────────────────────── */
+body.has-selection .sq:not(.hl),
+body.has-selection .doc:not(.hl) {
+  opacity: var(--dim);
+}
+/* Highlighted elements stay at full opacity; non-highlighted fade.
+   No coloured outlines — selection contrast comes from the dim alone. */
+.sq.hl, .doc.hl { opacity: 1; }
+
+/* ───────────────────── Info card (hover/click) ────────────────── */
+.info-card {
+  position: fixed; z-index: 100;
+  background: #fffbe6;
+  border: 1px solid var(--ink);
+  padding: 0.8em 1em;
+  max-width: 320px; font-size: 12.5px; line-height: 1.45;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+  pointer-events: none;
+}
+.info-card.pinned   { pointer-events: auto; }
+.info-card.hidden   { display: none; }
+.info-card h4       { margin: 0 0 0.5em 0; font-size: 13.5px; font-weight: 700; }
+.info-card dt       { font-weight: 700; color: var(--muted); font-size: 10.5px;
+                      text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.55em; }
+.info-card dd       { margin: 0 0 0.3em 0; }
+.info-card a        { color: var(--ink); }
+.info-card .type-chip {
+  display: inline-block; width: 9px; height: 9px;
+  border: 1px solid var(--border); border-radius: 1.5px;
+  margin-right: 0.3em; vertical-align: middle;
+}
+.info-card .quote {
+  font-style: italic; color: var(--ink);
+  margin: 0.4em 0 0.6em 0;
+  padding: 0.1em 0 0.1em 0.6em;
+  border-left: 2px solid var(--rule);
+}
+.info-card .src-line { margin-bottom: 0.2em; }
+.info-card .src-line .pg { color: var(--muted); font-size: 11px; }
+
+/* Hidden when filter excludes */
+.hidden { display: none !important; }

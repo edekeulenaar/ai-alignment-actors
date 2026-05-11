@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The actors in AI alignment</title>
+<link rel="stylesheet" href="style.css?v=20260510a">
+</head>
+<body>
+
+<!-- ─────────────────────────  SIDEBAR  ───────────────────────── -->
+<aside class="sidebar" id="sidebar">
+
+  <header class="brand">
+    <h1>The&nbsp;actors in <br>AI&nbsp;alignment</h1>
+    <p class="brand-sub">Actors cited in model cards, company policies, principles &amp; grants.</p>
+  </header>
+
+  <div class="side-block side-search">
+    <input type="search" id="search-input"
+           placeholder="Search anything…" autocomplete="off">
+    <p class="side-hint"><kbd>Esc</kbd> to clear</p>
+  </div>
+
+  <nav class="side-nav" aria-label="Sections">
+    <a href="#introduction" data-target="introduction">Introduction</a>
+    <a href="#method"       data-target="method"      >Method</a>
+    <ul class="sub-nav">
+      <li><a href="#method-corpus"        data-target="method-corpus"      >Corpus</a></li>
+      <li><a href="#method-doctaxonomy"   data-target="method-doctaxonomy" >Document-type taxonomy</a></li>
+      <li><a href="#method-extraction"    data-target="method-extraction"  >Per-document extraction</a></li>
+      <li><a href="#method-vocab"         data-target="method-vocab"       >Controlled vocabularies</a></li>
+      <li><a href="#method-postclassify"  data-target="method-postclassify">Post-extraction classification</a></li>
+      <li><a href="#method-aggregation"   data-target="method-aggregation" >Aggregation</a></li>
+      <li><a href="#method-interface"     data-target="method-interface"   >Interface</a></li>
+      <li><a href="#method-limitations"   data-target="method-limitations" >Limitations</a></li>
+      <li><a href="#method-files"         data-target="method-files"       >Files</a></li>
+    </ul>
+    <a href="#findings"     data-target="findings"    >Findings</a>
+    <ul class="sub-nav">
+      <li><a href="#block-sources"   data-target="block-sources"  >Documents</a></li>
+      <li><a href="#block-conducts"  data-target="block-conducts" >Conducts</a></li>
+      <li><a href="#block-risks"     data-target="block-risks"    >Risks</a></li>
+      <li><a href="#block-misuses"   data-target="block-misuses"  >Misuses</a></li>
+      <li><a href="#block-training"  data-target="block-training" >Training</a></li>
+      <li><a href="#block-benchmark" data-target="block-benchmark">Benchmark</a></li>
+      <li><a href="#block-clusters"  data-target="block-clusters" >Conceptual clusters</a></li>
+    </ul>
+    <a href="#discussion"   data-target="discussion"  >Discussion</a>
+    <a href="#references"   data-target="references"  >References</a>
+  </nav>
+
+  <div class="side-block">
+    <h4>View</h4>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-named">
+      <span>Show item names</span>
+    </label>
+    <label class="side-toggle">
+      <input type="checkbox" id="show-all-cos">
+      <span>Show all companies</span>
+    </label>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-misuses" checked>
+      <span>Show Misuses section</span>
+    </label>
+  </div>
+
+  <div class="side-block">
+    <h4>Actors</h4>
+    <div id="legend" class="legend"></div>
+  </div>
+
+  <div class="side-block">
+    <h4>Filters</h4>
+    <div class="filters">
+      <details class="filter-dd"><summary>Year</summary>          <div id="filter-year"    class="multi"></div></details>
+      <details class="filter-dd"><summary>Country</summary>       <div id="filter-country" class="multi"></div></details>
+      <details class="filter-dd"><summary>Company</summary>       <div id="filter-company" class="multi"></div></details>
+      <details class="filter-dd"><summary>Model</summary>         <div id="filter-model"   class="multi"></div></details>
+      <button id="reset-filters" type="button">Reset</button>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h4>Companies</h4>
+    <ul id="company-list" class="company-list"></ul>
+  </div>
+</aside>
+
+<!-- ──────────────────────────  MAIN  ─────────────────────────── -->
+<main>
+
+  <header class="masthead">
+    <h1 class="masthead-title">The actors in AI alignment</h1>
+    <p class="byline">
+      A working paper by Emillie de Keulenaar, Rasmus Kleis Nielsen and
+      Diyi Liu from the
+      <a href="https://cts.ku.dk/projects/power-over-platforms/?obvius_session_id=012b79b028990cb2b72a557abba11897"
+         target="_blank">Power Over Platforms</a> project.
+    </p>
+  </header>
+
+  <section id="introduction" class="prose">
+    <h2>Introduction</h2>
+
+    <p class="lede">
+      Part of processing the surprise that AI has brought to our everyday
+      lives is to contemplate the role it now plays as a new means of access
+      to and discovery of information. For two decades we spoke of
+      <em>algorithms</em> as a catch-all phrase for the mechanisms behind a
+      great many media — the nuts and bolts of search engines, recommender
+      systems, newsfeeds, "for you" pages. Today, access to online
+      information is increasingly remediated by AI generation, which is on
+      its way to replacing search, discovery, content creation and even
+      governance systems like content moderation under a single
+      computational umbrella.
+    </p>
+
+    <p>
+      This shift has political consequences. Where the algorithmic age
+      framed democratic participation as a question of <em>design</em> —
+      designing markets and regulations that constrain platforms, designing
+      protocols and middleware that pluralise our exposure to information,
+      designing intellectual frameworks for algorithmic pluralism — the
+      generative age reframes the same question as one of <em>value
+      alignment</em>. Alignment is equivalent to what we used to call
+      algorithms in a double sense: it shapes both the <em>circulation</em>
+      of information (what one finds and how) and its <em>regeneration</em>
+      (the direction in which what already <em>is</em> is rewritten by a
+      model). Its cast is fundamentally prescriptive. Choosing the direction
+      in which information is regenerated is the key political power of
+      alignment, and not a trivial one. Considerable amounts of power are
+      concentrated on this decision alone.
+    </p>
+
+    <p>
+      Like algorithmic systems before it, alignment is not a single thing
+      but a stack of choices: <em>what</em> data is selected and how it is
+      curated; <em>which</em> norms are decided, defined and operationalised
+      — the behaviours a model should display, the risks it should avoid,
+      the capabilities it should acquire; and <em>how</em> all of this is
+      benchmarked. Each step has its own politics. Benchmarking, in
+      particular, is not only a method of verification but also a
+      <em>model</em>: a ground truth, a legitimising apparatus, an instrument
+      for declaring that something has been done. As <a href="#ref-gabriel-2020">Iason Gabriel</a> has
+      argued, the <em>process</em> by which alignment values are defined may
+      matter as much as, or more than, the values themselves.
+    </p>
+
+    <p>
+      That process is marked by multiple interventions and a great deal of
+      arbitrary choice. Legal frameworks shape some of it; so do external
+      actors — red teamers, ethicists, domain experts, civil-society
+      organisations, academic citations — who consult or inform what counts
+      as a value and how it is defined. And yet, the space of potential
+      directions is enormous, which means there are many possible ways for
+      companies to delimit themselves and their products through alignment.
+      The broader question, then, is one of delegation:
+      <strong>to whom is alignment delegated, and how do different actors
+      participate in deciding what a model should and should not do?</strong>
+    </p>
+
+    <p>
+      This is a large question, so we have restricted it. The project
+      proceeds along two complementary readings: a <em>distant</em> reading
+      of the documents AI companies publish about their alignment practices
+      — model cards, system cards, company policies, principles, grant
+      calls, audits, announcements — and a <em>close</em> reading of a
+      single norm: <em>political even-handedness</em>. The distant reading,
+      which produced the maps below, covers 213 documents from 29 companies
+      across roughly a dozen countries. The close reading traces how a
+      politically charged ideal is operationalised across the alignment
+      stack.
+    </p>
+
+    <p>
+      Political even-handedness is a productive case because it sits at the
+      junction of multiple values and risk categories — bias,
+      anti-discrimination, neutrality, objectivity, freedom of speech,
+      viewpoint diversity — and because companies have themselves begun to
+      recognise that it cannot be determined top-down. Increasingly,
+      even-handedness is framed as something that <em>must</em> be the
+      product of pluralistic deliberation, even while remaining a corporate
+      product. Various projects have moved in that direction at different
+      levels — governance (Jigsaw, Meta's community-led pilots), techniques
+      (deliberative alignment, democratic fine-tuning, prosocial
+      recommender systems). Across them, attention has tended to focus on
+      democratising the <em>definition</em> of alignment values; we know
+      less about how the entire <em>process</em> of alignment — sourcing,
+      defining, training, evaluating — is itself democratised, or not.
+    </p>
+
+    <p>
+      The animating question of this project is therefore:
+      <strong>how does the translation of normative expertise and risk
+      estimation into measurable metrics, training data, and ultimately
+      model behaviour occur across the AI industry?</strong> Risk, after
+      all, is essentially prospective; it must be deliberative by
+      definition. The maps that follow are a first attempt to make that
+      deliberation visible.
+    </p>
+  </section>
+
+  <section id="method" class="prose">
+    <h2>Method</h2>
+
+    <p class="lede">
+      The visualisation rests on a structured reading of 213 <em>alignment
+      documents</em> — model cards, system cards, company policies, principles
+      documents, grant calls, audits, blog announcements and research papers
+      — analysed end-to-end by a large language model against a fixed schema.
+      Each document yields one or more rows of the form
+      <em>(document × conduct or risk × training method × benchmark × actors)</em>.
+      The result is a flat dataset of 2,062 rows describing 290 conducts,
+      918 risks, 557 training methods and 788 benchmarks across 29 companies,
+      together with the actors named at every stage. The pipeline is fully
+      scripted and resumable; the entire extraction can be re-run cheaply
+      whenever the schema or taxonomy is revised.
+    </p>
+
+    <h3 id="method-corpus">Corpus</h3>
+
+    <p>
+      The corpus combines two parallel sources. The first is a Zotero
+      bibliography of 181 alignment-relevant publications — model cards and
+      system cards from the major labs (OpenAI, Anthropic, Google,
+      Google&nbsp;DeepMind, Meta, xAI, Mistral, DeepSeek, Microsoft, Alibaba,
+      Black&nbsp;Forest&nbsp;Labs, Aleph&nbsp;Alpha, and others), accompanied by
+      published principles documents, charters, audit reports and grant
+      calls. Each item carries a Zotero key, item type, author, year, URL,
+      and a file attachment (PDF or HTML snapshot). The second source is a
+      folder of 53 deduplicated <em>company policies</em>: acceptable-use,
+      privacy, terms-of-service, developer terms, data-processor agreements
+      and related documents, tracked through time via dated snapshots
+      stored as Markdown. For each <em>(product, policy type)</em> pair only
+      the most recent snapshot is analysed, on the basis that operative
+      policy is what affects training.
+    </p>
+
+    <p>
+      Document resolution is layered. The script first looks for a local PDF
+      attachment, then a local HTML snapshot (passed through
+      <a href="https://trafilatura.readthedocs.io/" target="_blank">trafilatura</a>
+      for clean markdown extraction so the result fits within the model's
+      context window), then a live URL. Live URLs are fetched through a
+      cascading chain — <code>httpx</code>, then <code>requests</code>, then
+      a <code>curl</code> subprocess, then Jina Reader as a final
+      content-extraction fallback — and wrapped in a retry loop with
+      exponential back-off to absorb transient SSL or DNS errors.
+    </p>
+
+    <h3 id="method-doctaxonomy">Document-type taxonomy</h3>
+
+    <p>
+      Each document is classified into one of ten types — <em>Model card</em>,
+      <em>Company policy</em>, <em>Principle</em>, <em>Grant</em>,
+      <em>Announcement</em>, <em>Audit</em>, <em>Initiative</em>,
+      <em>Report</em>, <em>Research</em>, or <em>Other</em> — with an
+      optional sub-type for policies (Acceptable&nbsp;Use, Privacy, Terms of
+      Service, Developer Terms, Data Processor Agreement, etc.). For company
+      policies, the schema is restricted to information that informs how the
+      model is <em>trained, moderated, filtered or evaluated</em>;
+      user-facing usage rules, billing terms and account terms are explicitly
+      excluded. This keeps the dataset focused on alignment governance and
+      avoids drowning it in the boilerplate of consumer contracts.
+    </p>
+
+    <h3 id="method-extraction">Per-document extraction</h3>
+
+    <p>
+      Each document is read in a single call to Gemini
+      (<code>gemini-3-flash-preview</code>) with a 3,084-token system prompt
+      that defines the schema, the document-type taxonomy, the conduct and
+      risk vocabularies, the training-method categories, the actor-type
+      vocabulary, and slug-generation rules for stable cross-document
+      identifiers. The model is instructed to return a JSON object with a
+      single key <code>rows</code>, whose value is an array of row objects.
+      <strong>Row granularity is one row per (conduct or risk × benchmark)
+      combination found in the document.</strong> A conduct or risk with
+      three benchmarks therefore generates three rows, in which the
+      training/mitigation fields are repeated; a conduct or risk discussed
+      but not benchmarked still produces one row, so it appears in the
+      dataset.
+    </p>
+
+    <p>
+      For each row the schema records 41 fields, grouped as follows:
+    </p>
+
+    <ul>
+      <li><strong>Document classification</strong> — <code>pub_type</code>,
+      <code>policy_type</code>, plus the Zotero-derived <code>key</code>,
+      <code>item_type</code>, <code>pub_year</code>, <code>pub_author</code>,
+      <code>pub_title</code>, <code>pub_url</code>.</li>
+
+      <li><strong>Company &amp; model</strong> — <code>company</code>,
+      <code>company_country</code>, <code>company_model</code>.</li>
+
+      <li><strong>Document contributors</strong> — pipe-separated lists of
+      named actors and their types, including any actors cited from
+      external publications inside the verbatim conduct/risk passages
+      (<code>pub_actors</code>, <code>pub_actors_type</code>,
+      <code>pub_actor_type_id</code>, <code>pub_actor_page</code>).</li>
+
+      <li><strong>Conduct or risk</strong> — verbatim definition,
+      canonical category from a controlled vocabulary,
+      <em>conduct</em> vs <em>risk</em> flag, verbatim item name, source
+      page (<code>risk_conduct_definition</code>,
+      <code>risk_conduct_category</code>, <code>risk_conduct_type</code>,
+      <code>risk_conduct_item</code>,
+      <code>pub_risk_conduct_definition_page</code>).</li>
+
+      <li><strong>Specific actor credited with defining the conduct or
+      risk</strong>, if and only if the document explicitly credits one
+      (<code>specific_risk_conduct_actor</code>,
+      <code>specific_risk_conduct_actor_category</code>). When the document
+      defines the concept inline without external attribution, both fields
+      are null.</li>
+
+      <li><strong>Training or mitigation method</strong> — verbatim
+      description, category from the eight-class taxonomy below, page,
+      and actors involved (<code>risk_conduct_training_verbatim</code>,
+      <code>risk_conduct_training_category</code>,
+      <code>pub_training_page</code>, <code>risk_conduct_training_actor</code>,
+      <code>risk_conduct_training_actor_type</code>).</li>
+
+      <li><strong>Benchmark</strong> — verbatim name, author and author
+      type, page (<code>risk_conduct_benchmark</code>,
+      <code>risk_conduct_benchmark_author</code>,
+      <code>risk_conduct_benchmark_author_type</code>,
+      <code>pub_benchmark_page</code>).</li>
+
+      <li><strong>External evaluator</strong> — third-party evaluators
+      (e.g. METR, ARC&nbsp;Evals, the UK&nbsp;AI&nbsp;Safety Institute) when
+      commissioned (<code>external_evaluator</code>,
+      <code>external_evaluator_type</code>, <code>pub_evaluator_page</code>).</li>
+    </ul>
+
+    <p>
+      Extraction is parallelised across six worker threads and incremental:
+      a per-document <code>.analyse_done.txt</code> log tracks successful
+      extractions, so any failure is automatically retried on the next run
+      while completed documents are skipped.
+    </p>
+
+    <h3 id="method-vocab">Controlled vocabularies</h3>
+
+    <p>
+      Free-form extraction is paired with two stages of controlled
+      vocabulary. The model is constrained to choose one of nine
+      <strong>actor types</strong> — <em>internal</em>, <em>private</em>,
+      <em>academic</em>, <em>research institute</em>, <em>governmental</em>,
+      <em>nonprofit</em>, <em>public</em>, <em>public consultation</em>,
+      <em>other</em> — to which we add the meta-category <em>multiple</em>
+      when a row contains several types. <strong>Conduct categories</strong>
+      are drawn from a 17-class vocabulary covering norms such as
+      <em>Honesty</em>, <em>Helpfulness</em>, <em>Harmlessness</em>,
+      <em>Anti-discrimination</em>, <em>Political neutrality</em>,
+      <em>Factuality</em>, <em>Reasoning</em>, <em>Safety</em> and
+      <em>Knowledge</em>. <strong>Risk categories</strong> are drawn from
+      a 40-class vocabulary covering specific risk areas — <em>CBRN</em>,
+      <em>Cybersecurity</em>, <em>Bias</em>, <em>Sycophancy</em>,
+      <em>Reward hacking</em>, <em>Persuasion</em>, <em>Misalignment</em>,
+      <em>Hallucinations</em>, <em>Child Safety</em>, <em>Jailbreaking</em>,
+      and so on. Where a document uses language that does not map, the
+      model returns <code>Other: &lt;specify&gt;</code>; these are reviewed
+      and either folded back into the vocabulary or kept as an open
+      category.
+    </p>
+
+    <p>
+      Training and mitigation methods are mapped to one of eight
+      categories: <strong>Preference learning</strong> (RLHF, RLAIF, DPO,
+      reward modelling), <strong>Supervised training</strong> (SFT,
+      instruction tuning, demonstration fine-tuning, deliberative
+      alignment), <strong>Reward shaping</strong> (adversarial reward
+      functions, reward capping, rule-based rewards),
+      <strong>Data curation</strong> (filtering, deduplication, synthetic
+      data, PII redaction), <strong>Adversarial training</strong>
+      (red-teaming data, adversarial examples),
+      <strong>Inference-time filtering</strong> (content classifiers,
+      safety filters, moderation APIs), <strong>Hard constraints</strong>
+      (system-prompt rules, refusal policies, hardcoded refusals), and
+      <strong>Runtime safeguards</strong> (trip wires, model lookahead,
+      runtime monitoring, scratchpad oversight, sandboxing). A pipe
+      separator is used when several categories co-apply.
+    </p>
+
+    <p>
+      The prompt is strict about what counts as a training method.
+      Constitutional frameworks (e.g. <em>Constitutional AI</em>,
+      <em>Anthropic's Constitution</em>) are treated as <em>sources</em>
+      of norms — listed in <code>pub_actors</code> or
+      <code>risk_conduct_definition</code> — and not as techniques; the
+      underlying technique is RLAIF or SFT. Narratives about how a risk
+      arises are likewise excluded from the training fields.
+    </p>
+
+    <h3 id="method-postclassify">Post-extraction classification</h3>
+
+    <p>
+      Two further classification passes are run after extraction, against
+      the unique values discovered in the data. The first maps each
+      training description to a specific <em>technique</em> within a
+      structured per-category taxonomy (e.g. <em>Preference
+      learning</em>&nbsp;→&nbsp;RLHF, RLAIF, DPO, KTO, Reward modelling;
+      <em>Supervised training</em>&nbsp;→&nbsp;SFT, deliberative
+      alignment, rejection-sampling fine-tuning; etc.). This pass is
+      grounded in <a href="#ref-ji-2023">Ji et al.'s</a> <em>AI Alignment: a Comprehensive
+      Survey</em> (2023), passed to Gemini as taxonomic context. The
+      second pass categorises each benchmark into one of 24 domains —
+      <em>Safety / Harmlessness</em>, <em>Refusal / Over-refusal</em>,
+      <em>Honesty / Factuality</em>, <em>Hallucination</em>, <em>Bias /
+      Fairness</em>, <em>Toxicity</em>, <em>Cybersecurity</em>,
+      <em>CBRN</em>, <em>Privacy</em>, <em>Jailbreak / Adversarial</em>,
+      <em>Agentic / Autonomy</em>, capability sub-categories (coding,
+      reasoning, maths, multilingual, multimodal, long context,
+      instruction following), <em>Persuasion</em>, <em>Sycophancy</em>,
+      <em>Reward hacking</em>, <em>Misalignment / Scheming</em>,
+      <em>Internal evaluation suite</em>, <em>Other</em>.
+    </p>
+
+    <p>
+      Both passes work on the deduplicated set of values rather than the
+      full 2,062 rows, which keeps the API cost modest (roughly 700
+      unique training entries and 800 unique benchmarks). Results are
+      cached to JSON; re-running the classifier is free for already-seen
+      values, so the taxonomy can be revised iteratively without
+      re-paying for stable classifications. Both classifiers retry
+      transient network errors with capped exponential back-off (up to
+      ten attempts at 1 s, 2 s, 4 s, 8 s, 16 s, then 30 s with jitter).
+    </p>
+
+    <h3 id="method-aggregation">Aggregation for the interface</h3>
+
+    <p>
+      The flat CSV is reshaped into a compact JSON file
+      (<code>docs/data.json</code>) consumed by the front-end. Conducts
+      and risks are aggregated on <em>(company × item)</em>; training
+      methods on <em>(company × category × item)</em>; benchmarks on
+      <em>(company × name)</em>. For each aggregated entry, the actor
+      types are computed as the union across <em>all</em> source rows and
+      source documents — so an entry that appears in multiple documents
+      with different contributor profiles is matched correctly when the
+      reader filters by, say, <em>academic</em> or <em>governmental</em>.
+      A separate <em>primary</em> actor type is preserved for colour
+      coding: the colour comes from the explicitly credited actor type
+      when one is present, otherwise from the first contributing
+      document.
+    </p>
+
+    <h3 id="method-interface">Interface</h3>
+
+    <p>
+      The site is a single static page (<code>index.html</code> +
+      <code>data.json</code>) published via GitHub Pages. The sidebar
+      contains:
+    </p>
+
+    <ul>
+      <li>A scrolling <strong>section nav</strong> with sub-navigation for
+      Documents, Conducts, Risks, Training and Benchmark.</li>
+      <li>An <strong>Actors key</strong>: click an actor-type chip to
+      highlight every element associated with that type. "Multiple"
+      entries are treated as the <em>union</em> of their component types,
+      so clicking <em>academic</em> highlights any item whose aggregated
+      actor types include academic, even when its primary type is
+      multiple.</li>
+      <li>Multi-select dropdown <strong>filters</strong> for year,
+      country, company and model.</li>
+      <li>A <strong>view toggle</strong> for naming squares (compact
+      view shows colour-coded blocks; named view replaces them with
+      labelled chips that contain the verbatim item name).</li>
+      <li>A <strong>show-all-companies</strong> toggle that lifts the
+      default top-ten cap.</li>
+      <li>A <strong>company list</strong> with document counts, where
+      clicking a company name acts as a shortcut filter.</li>
+    </ul>
+
+    <p>
+      The main canvas is divided into five blocks (Documents, Conducts,
+      Risks, Training, Benchmarking). In each block, rows are categories
+      and columns are the top-ten companies for that block. Squares are
+      colour-coded by the primary actor type; document icons use a
+      pub-type-specific glyph and a coloured border. Hovering a square or
+      a document icon shows an info card with the verbatim definition,
+      "Found in" links (with page numbers), contributors, and any
+      external evaluator. Clicking pins the card and highlights every
+      element linked to that square across all five blocks — sources,
+      conducts and risks defined or mentioned, training methods and
+      benchmarks applied. Re-clicking dismisses the selection. Categories
+      themselves are clickable too: clicking a category label highlights
+      every item in that category and its full set of cross-links.
+      Categories can be sorted alphabetically, by quantity, by
+      newest-source, or by oldest-source publication year.
+    </p>
+
+    <h3 id="method-limitations">Methodological limitations</h3>
+
+    <p>
+      Three limitations are worth stating up front. First, model cards
+      and policies are <em>governance artefacts</em>: they record what
+      companies choose to disclose. Their silences are themselves a
+      finding, but it means the dataset reproduces the asymmetries of
+      disclosure across the industry — well-documented labs (OpenAI,
+      Anthropic, Google) are over-represented relative to those that
+      publish less. The visualisation's "top ten by document count" is
+      not a ranking of <em>alignment activity</em> but of
+      <em>alignment disclosure</em>.
+    </p>
+
+    <p>
+      Second, LLM-assisted extraction trades exhaustive human reading for
+      coverage. Gemini may miss content buried in footnotes, conflate
+      training methods with risk narratives, or assign actor types
+      inconsistently across documents that use similar phrasing for
+      different parties. Each row preserves the verbatim source passage
+      and a page number to facilitate manual verification, and a separate
+      validation script checks every row's join keys against the
+      bibliography.
+    </p>
+
+    <p>
+      Third, the controlled vocabularies are necessarily incomplete.
+      Vocabularies have grown iteratively as the documents are read; new
+      categories are added where companies use language the existing
+      taxonomy cannot capture (<em>Multilingual incoherences</em>,
+      <em>Encouraging mental illness</em>, <em>Historical revisionism</em>,
+      <em>Reward hacking</em>). The benchmark taxonomy in particular
+      collapses substantively different evaluations into a single bucket
+      where their published descriptions are too brief to disambiguate
+      (e.g. internal company suites that share a name but differ in
+      content from one model version to the next).
+    </p>
+
+    <h3 id="method-files">Files &amp; reproducibility</h3>
+
+    <p>The pipeline is fully scripted. The principal files are:</p>
+
+    <ul>
+      <li><code>analyse_model_cards.py</code> — main Gemini extraction
+      driver: loads the Zotero CSV and the policy snapshots, resolves
+      each document to a usable input (PDF / Markdown / HTML / URL with
+      retry chain), calls Gemini against the 3,084-token system prompt,
+      injects Zotero metadata into each returned row, and appends to
+      <code>details_all.csv</code>. Resumable; parallelised over six
+      worker threads.</li>
+      <li><code>classify_training_and_benchmarks.py</code> — adds
+      <code>risk_conduct_training_item</code> and
+      <code>risk_conduct_benchmark_category</code> columns by classifying
+      unique values against the two reference taxonomies. Caches results
+      in <code>.classify_*_cache.json</code>.</li>
+      <li><code>build_site_data.py</code> — aggregates the flat CSV into
+      the JSON shape consumed by the front-end (documents, conducts,
+      risks, trainings, benchmarks with cross-links and union actor-type
+      sets).</li>
+      <li><code>validate_outputs.py</code> — sanity-checks the join keys
+      between the bibliography and the extraction outputs.</li>
+      <li><code>PoP - Zotero alignment database.csv</code> —
+      bibliography (181 records).</li>
+      <li><code>PoP - Company policies/</code> — dated policy snapshots
+      (folder structure: <em>Product (Company) / Policy type /
+      ISO-timestamp.md</em>).</li>
+      <li><code>details_all.csv</code> — final flat extraction
+      (2,062 rows × 41 columns).</li>
+      <li><code>docs/data.json</code> — aggregated dataset consumed by
+      the front-end.</li>
+    </ul>
+  </section>
+
+  <section id="findings">
+    <h2>Findings</h2>
+
+    <!-- DOCUMENTS ─────────────────────────── -->
+    <article class="grid-block" id="block-sources">
+      <header class="block-head">
+        <h3>Documents</h3>
+        <p class="block-sub">Who crafts alignment policies?</p>
+      </header>
+      <div class="doc-key" id="doc-key"></div>
+      <div class="sort-bar"></div>
+      <div class="row-grid" id="grid-sources"></div>
+    </article>
+
+    <!-- CONDUCTS ──────────────────────────── -->
+    <article class="grid-block" id="block-conducts">
+      <header class="block-head">
+        <h3>Conducts</h3>
+        <p class="block-sub">How should a model behave, and who defines ideal conducts?</p>
+      </header>
+      <div class="sort-bar"><label>Sort categories
+        <select data-sort-for="conducts">
+          <option value="quantity">quantity</option>
+          <option value="alpha">alphabetical</option>
+          <option value="newest">newest</option>
+          <option value="oldest">oldest</option>
+        </select></label></div>
+      <div class="row-grid" id="grid-conducts"></div>
+    </article>
+
+    <!-- RISKS ──────────────────────────────── -->
+    <article class="grid-block" id="block-risks">
+      <header class="block-head">
+        <h3>Risks</h3>
+        <p class="block-sub">What risks does alignment try to mitigate?</p>
+      </header>
+      <div class="sort-bar"><label>Sort categories
+        <select data-sort-for="risks">
+          <option value="quantity">quantity</option>
+          <option value="alpha">alphabetical</option>
+          <option value="newest">newest</option>
+          <option value="oldest">oldest</option>
+        </select></label></div>
+      <div class="row-grid" id="grid-risks"></div>
+    </article>
+
+    <!-- MISUSES (extracted from company policies) ──────────────── -->
+    <article class="grid-block" id="block-misuses">
+      <header class="block-head">
+        <h3>Misuses</h3>
+        <p class="block-sub">How companies frame the <em>misuse</em> of their models — extracted from company policies (acceptable-use, privacy, terms of service, developer terms).</p>
+      </header>
+      <div class="sort-bar"><label>Sort categories
+        <select data-sort-for="misuses">
+          <option value="quantity">quantity</option>
+          <option value="alpha">alphabetical</option>
+          <option value="newest">newest</option>
+          <option value="oldest">oldest</option>
+        </select></label></div>
+      <div class="row-grid" id="grid-misuses"></div>
+    </article>
+
+    <!-- TRAINING ──────────────────────────── -->
+    <article class="grid-block" id="block-training">
+      <header class="block-head">
+        <h3>Training</h3>
+        <p class="block-sub">Who participates in training, red-teaming or data curation?</p>
+      </header>
+      <div class="sort-bar"><label>Sort categories
+        <select data-sort-for="training">
+          <option value="quantity">quantity</option>
+          <option value="alpha">alphabetical</option>
+          <option value="newest">newest</option>
+          <option value="oldest">oldest</option>
+        </select></label></div>
+      <div class="row-grid" id="grid-training"></div>
+    </article>
+
+    <!-- BENCHMARK ─────────────────────────── -->
+    <article class="grid-block" id="block-benchmark">
+      <header class="block-head">
+        <h3>Benchmarking</h3>
+        <p class="block-sub">Whose benchmarks are used?</p>
+      </header>
+      <div class="sort-bar"><label>Sort categories
+        <select data-sort-for="benchmark">
+          <option value="quantity">quantity</option>
+          <option value="alpha">alphabetical</option>
+          <option value="newest">newest</option>
+          <option value="oldest">oldest</option>
+        </select></label></div>
+      <div class="row-grid" id="grid-benchmark"></div>
+    </article>
+
+    <!-- CONCEPTUAL CLUSTERS ─────────────────── -->
+    <article class="grid-block" id="block-clusters">
+      <header class="block-head">
+        <h3>Conceptual clusters</h3>
+        <p class="block-sub">Pick a conduct or risk. See how it is defined across companies and time, which other concepts it travels with, and which actors have shaped its definition together.</p>
+      </header>
+      <div class="cluster-controls">
+        <label>Concept type
+          <select id="cluster-kind">
+            <option value="conducts">Conducts</option>
+            <option value="risks">Risks</option>
+          </select>
+        </label>
+        <label>Concept
+          <select id="cluster-item"></select>
+        </label>
+      </div>
+      <div class="cluster-panes">
+        <div class="cluster-pane">
+          <h4>Definitions over time</h4>
+          <div id="cluster-timeline" class="cluster-timeline"></div>
+        </div>
+        <div class="cluster-pane">
+          <h4>Conceptual network</h4>
+          <p class="cluster-help">Other concepts that co-appear with this one in the same documents.</p>
+          <svg id="concept-graph" class="cluster-graph"></svg>
+        </div>
+        <div class="cluster-pane">
+          <h4>Actor network</h4>
+          <p class="cluster-help">Actors involved in defining this concept, linked when they appear in the same document.</p>
+          <svg id="actor-graph" class="cluster-graph"></svg>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="discussion" class="prose">
+    <h2>Discussion</h2>
+    <p>Drop your discussion copy here.</p>
+  </section>
+
+  <section id="references" class="prose">
+    <h2>References</h2>
+    <ol class="references">
+      <li id="ref-gabriel-2020">
+        Gabriel, I. (2020).
+        <em>Artificial Intelligence, Values and Alignment.</em>
+        <a href="https://link.springer.com/article/10.1007/s11023-020-09539-2" target="_blank">Minds and Machines, 30, 411–437</a>.
+      </li>
+      <li id="ref-ji-2023">
+        Ji, J., Qiu, T., Chen, B., et al. (2023).
+        <em>AI Alignment: A Comprehensive Survey.</em>
+        <a href="https://arxiv.org/abs/2310.19852" target="_blank">arXiv:2310.19852</a>.
+      </li>
+    </ol>
+    <p class="meta">Add citations here as the paper develops.</p>
+  </section>
+
+</main>
+
+<div id="info-card" class="info-card hidden"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="app.js?v=20260510a"></script>
+</body>
+</html>
