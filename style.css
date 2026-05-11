@@ -167,7 +167,9 @@ button { font: inherit; cursor: pointer; }
 /* ─────────────────────────── Main ─────────────────────────────── */
 main {
   margin-left: var(--sb-w);
-  padding: 3rem 3rem 6rem;
+  /* top padding matches the sidebar's top padding so the masthead title's
+     first line sits at the same y as the sidebar's brand heading. */
+  padding: 1.5rem 3rem 6rem;
   max-width: calc(100vw - var(--sb-w));
 }
 main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
@@ -178,9 +180,9 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
   padding-bottom: 0;
 }
 .masthead-title {
-  font-size: 2.6rem; font-weight: 800;
-  letter-spacing: -0.02em; line-height: 1.1;
-  margin: 0 0 0.6rem;
+  font-size: 1.85rem; font-weight: 600;
+  letter-spacing: -0.005em; line-height: 1.2;
+  margin: 0 0 0.5rem;
 }
 .byline {
   font-size: 15px; color: var(--muted);
