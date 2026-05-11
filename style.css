@@ -228,15 +228,28 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .cluster-pane h4 { margin: 0 0 0.5rem; font-size: 14px; font-weight: 700; }
 .cluster-help { font-size: 12px; color: var(--muted); font-style: italic; margin: 0 0 0.5rem; }
 .cluster-timeline {
-  max-height: 360px; overflow-y: auto; padding-right: 0.5rem;
+  max-height: 420px; overflow-y: auto; padding-right: 0.5rem;
+  position: relative;
+}
+.cluster-timeline .tl-summary {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--paper-alt);
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
 }
 .cluster-timeline .tl-entry {
   margin-bottom: 0.9rem; padding-left: 0.8rem;
   border-left: 2px solid var(--rule);
 }
 .cluster-timeline .tl-year {
+  position: sticky; top: 38px; z-index: 4;
+  background: var(--paper-alt);
+  padding: 2px 0;
   font-weight: 700; font-size: 12px; color: var(--accent);
   letter-spacing: 0.04em;
+  margin: 0 0 0.25rem -0.8rem; padding-left: 0.8rem;
 }
 .cluster-timeline .tl-src { font-size: 12px; color: var(--muted); margin-bottom: 0.25rem; }
 .cluster-timeline .tl-src a { color: var(--muted); }
@@ -255,13 +268,53 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 }
 .cluster-timeline .tl-step-body { flex: 1; }
 .cluster-timeline .tl-meta { color: var(--muted); font-size: 11.5px; }
-.cluster-graph {
-  width: 100%; height: 320px;
+.cluster-pane > svg.cluster-graph,
+.cluster-pane .actor-detail,
+.cluster-pane .graph-recenter { /* anchored inside the pane */ }
+.cluster-pane .cluster-graph {
+  width: 100%; height: 420px;
   background: var(--paper); border-radius: 3px;
+  display: block; overflow: hidden;
 }
-.cluster-graph .node-label { font-size: 10.5px; pointer-events: none; }
-.cluster-graph .node circle { stroke: var(--ink); stroke-width: 1px; cursor: pointer; }
-.cluster-graph .link { stroke: var(--rule); stroke-opacity: 0.6; }
+.cluster-pane { position: relative; }
+.cluster-graph .node-label {
+  font-size: 10.5px; pointer-events: none; user-select: none;
+}
+.cluster-graph .node circle { cursor: grab; }
+.cluster-graph .link { stroke: var(--rule); stroke-opacity: 0.7; }
+
+/* Recenter button overlaid on each graph */
+.graph-recenter {
+  position: absolute; top: 8px; right: 8px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--paper); border: 1px solid var(--border);
+  font-size: 16px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 5;
+}
+.graph-recenter:hover { background: var(--ink); color: var(--paper); }
+
+/* Actor detail panel below the actor graph */
+.actor-detail {
+  position: relative;
+  margin-top: 0.8rem; padding: 0.7rem 0.9rem;
+  background: var(--paper); border: 1px solid var(--border); border-radius: 4px;
+  font-size: 12.5px;
+}
+.actor-detail.hidden { display: none; }
+.actor-detail h4 { margin: 0 0 0.4rem; font-size: 14px; }
+.actor-detail dt {
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--muted); margin-top: 0.5rem;
+}
+.actor-detail dd { margin: 0; }
+.actor-detail .src-line { padding: 1px 0; }
+.actor-detail .close {
+  position: absolute; top: 4px; right: 6px;
+  background: none; border: none; font-size: 16px; cursor: pointer;
+  color: var(--muted); line-height: 1;
+}
+.actor-detail .close:hover { color: var(--ink); }
 
 /* Hide Misuses block when toggled off */
 body.hide-misuses #block-misuses { display: none; }

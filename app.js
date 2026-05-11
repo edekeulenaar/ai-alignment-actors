@@ -342,6 +342,9 @@ function renderItemBlock(blockId, items, opts) {
 
   // Top-N companies for THIS block
   const cos = topCompaniesBy(items);
+  if (window.console && blockId === "misuses") {
+    console.log("[misuses] items:", items.length, "companies:", cos.length, cos);
+  }
 
   // Group by category
   const byCat = {};
@@ -656,12 +659,13 @@ function gatherHighlightIds(sel) {
 // Category selection: highlight every item in that category + all its links.
 function gatherCategoryHighlights() {
   const out = { documents:new Set(), conducts:new Set(), risks:new Set(),
-                training:new Set(),  benchmark:new Set() };
+                training:new Set(),  benchmark:new Set(), misuses:new Set() };
   const sel = STATE.catSelection;
   if (!sel) return out;
   const arr = sel.block === "conducts"  ? STATE.data.conducts
             : sel.block === "risks"     ? STATE.data.risks
             : sel.block === "training"  ? STATE.data.trainings
+            : sel.block === "misuses"   ? STATE.data.conducts.concat(STATE.data.risks).filter(x => x.only_policy)
             : STATE.data.benchmarks;
   arr.filter(it => (it.category||"") === sel.cat).forEach(it => {
     out[sel.block].add(it.id);
@@ -695,6 +699,7 @@ function refreshSelectionState() {
     if (type === "documents") it = data.documents.find(x => x.id === id);
     if (type === "conducts")  it = data.conducts.find(x => x.id === id);
     if (type === "risks")     it = data.risks.find(x => x.id === id);
+    if (type === "misuses")   it = data.conducts.concat(data.risks).find(x => x.id === id);
     if (type === "training")  it = data.trainings.find(x => x.id === id);
     if (type === "benchmark") it = data.benchmarks.find(x => x.id === id);
     if (!it) return false;
@@ -814,16 +819,84 @@ function refreshClusterItems() {
   renderCluster();
 }
 
-// Color palette for the conceptual-network nodes (by category)
-const CAT_PALETTE = ["#FDB0B3","#F68550","#FEE192","#FBA861","#5BB2AC","#A6DBA3",
-                     "#4492B4","#4771B0","#B197D7","#E8A0BF","#C6CDD4","#B0AFAB"];
-const catColorOf = (() => {
-  let m = new Map();
-  return cat => {
-    if (!m.has(cat)) m.set(cat, CAT_PALETTE[m.size % CAT_PALETTE.length]);
-    return m.get(cat);
+// Per-actor-type colors mirrored from CSS variables
+const ACTOR_COLOR_HEX = {
+  "internal":              "#FDB0B3",
+  "private":               "#F68550",
+  "academic":              "#FEE192",
+  "research institute":    "#FBA861",
+  "governmental":          "#5BB2AC",
+  "nonprofit":             "#A6DBA3",
+  "public":                "#4492B4",
+  "public consultation":   "#4771B0",
+  "other":                 "#B0AFAB",
+  "multiple":              "#B197D7",
+  "unknown":               "#E5E0D5",
+};
+
+// Lazy lookup: actor name → most-common type (built once)
+let _actorTypeMap = null;
+function actorTypeMap() {
+  if (_actorTypeMap) return _actorTypeMap;
+  const counts = new Map();
+  const note = (names, types) => {
+    const nArr = (names||"").split("|").map(s => s.trim());
+    const tArr = (types||"").split("|").map(s => s.trim().toLowerCase());
+    nArr.forEach((n, i) => {
+      if (!n) return;
+      let t = tArr[i] || tArr[0] || "unknown";
+      if (t.startsWith("other")) t = "other";
+      if (!counts.has(n)) counts.set(n, new Map());
+      const tc = counts.get(n);
+      tc.set(t, (tc.get(t)||0) + 1);
+    });
   };
-})();
+  STATE.data.documents.forEach(d => note(d.actors, d.actors_type_raw));
+  STATE.data.trainings.forEach(t => note(t.actor, t.actor_type_raw));
+  STATE.data.benchmarks.forEach(b => note(b.author, b.author_type_raw));
+  [...STATE.data.conducts, ...STATE.data.risks].forEach(it => {
+    if (it.specific_actor && it.specific_actor_type) note(it.specific_actor, it.specific_actor_type);
+  });
+  _actorTypeMap = new Map();
+  counts.forEach((tc, name) => {
+    let best = "unknown", bestN = 0;
+    tc.forEach((n, t) => { if (n > bestN) { bestN = n; best = t; } });
+    _actorTypeMap.set(name, best);
+  });
+  return _actorTypeMap;
+}
+
+// Lazy lookup: actor name → { type, docs:[], credited:[], trainings:[], benchmarks:[] }
+let _actorIndex = null;
+function actorIndex() {
+  if (_actorIndex) return _actorIndex;
+  const idx = new Map();
+  const get = name => {
+    if (!idx.has(name)) idx.set(name, {
+      type: "unknown", docs:[], credited:[], trainings:[], benchmarks:[],
+    });
+    return idx.get(name);
+  };
+  STATE.data.documents.forEach(d => {
+    (d.actors||"").split("|").map(s=>s.trim()).filter(Boolean)
+      .forEach(a => get(a).docs.push(d.id));
+  });
+  [...STATE.data.conducts, ...STATE.data.risks].forEach(it => {
+    if (it.specific_actor) get(it.specific_actor).credited.push(it.id);
+  });
+  STATE.data.trainings.forEach(t => {
+    (t.actor||"").split("|").map(s=>s.trim()).filter(Boolean)
+      .forEach(a => get(a).trainings.push(t.id));
+  });
+  STATE.data.benchmarks.forEach(b => {
+    (b.author||"").split("|").map(s=>s.trim()).filter(Boolean)
+      .forEach(a => get(a).benchmarks.push(b.id));
+  });
+  const tm = actorTypeMap();
+  idx.forEach((info, name) => { info.type = tm.get(name) || "unknown"; });
+  _actorIndex = idx;
+  return _actorIndex;
+}
 
 function renderCluster() {
   const tl = document.getElementById("cluster-timeline");
@@ -875,11 +948,27 @@ function renderCluster() {
   });
   rows.sort((a, b) => (a.year || "").localeCompare(b.year || ""));
 
+  // ── Summary header: count + year range + unique contributors ──
+  const years = [...new Set(rows.map(r => r.year).filter(y => y && y !== "—"))].sort();
+  const allActorsSet = new Set();
+  rows.forEach(r => {
+    if (r.item.specific_actor) allActorsSet.add(r.item.specific_actor);
+    (r.doc.actors||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a));
+    r.trainings.forEach(t => (t.actor||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a)));
+    r.benchmarks.forEach(b => (b.author||"").split("|").map(s=>s.trim()).filter(Boolean).forEach(a => allActorsSet.add(a)));
+  });
+  const summary = document.createElement("div");
+  summary.className = "tl-summary";
+  summary.innerHTML = `
+    <div><strong>${rows.length}</strong> definition${rows.length===1?"":"s"}${
+      years.length ? ` &middot; <strong>${years[0]}–${years[years.length-1]}</strong>` : ""
+    } &middot; <strong>${allActorsSet.size}</strong> distinct contributor${allActorsSet.size===1?"":"s"}</div>
+  `;
+  tl.appendChild(summary);
+
   if (!rows.length) {
     tl.innerHTML = "<p class=meta>No definitions recorded for this category.</p>";
   } else {
-    const fmtActors = list => list && list.length ? typeChips([]) // placeholder for type chips
-      : "—";
     rows.forEach(r => {
       const entry = document.createElement("div");
       entry.className = "tl-entry";
@@ -964,13 +1053,19 @@ function renderCluster() {
         conceptEdges.set(k, (conceptEdges.get(k) || 0) + 1);
       }
   });
+  // Conceptual network nodes coloured by the item's primary actor_type.
+  // (Concepts come from items; each item carries an actor_type already.)
+  const itemActorTypeOf = id => {
+    const it = idToItem[id];
+    return (it && it.actor_type) || "unknown";
+  };
   drawForceGraph("#concept-graph",
-    [...conceptNodes.values()],
+    [...conceptNodes.values()].map(n => ({ ...n, actorType: itemActorTypeOf(n.id) })),
     [...conceptEdges.entries()].map(([k, w]) => {
       const [a, b] = k.split("|");
       return { source: a, target: b, weight: w };
     }),
-    { colorFn: d => catColorOf(d.category || "Other") });
+    { colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown });
 
   // ── Actor network: actors involved in defining, training & benchmarking
   //    items in this category. Edges = co-appearance in the same document.
@@ -1011,19 +1106,56 @@ function renderCluster() {
         actorEdges.set(k, (actorEdges.get(k) || 0) + 1);
       }
   });
+  // Actor nodes coloured by their primary actor type, clickable for details.
+  const tm = actorTypeMap();
   drawForceGraph("#actor-graph",
-    [...actorNodes.values()],
+    [...actorNodes.values()].map(n => ({ ...n, actorType: tm.get(n.id) || "unknown" })),
     [...actorEdges.entries()].map(([k, w]) => {
       const [a, b] = k.split("|");
       return { source: a, target: b, weight: w };
     }),
-    { color: "#F68550" });
+    {
+      colorFn: d => ACTOR_COLOR_HEX[d.actorType] || ACTOR_COLOR_HEX.unknown,
+      onNodeClick: showActorDetails,
+    });
 }
 
-// Minimal D3 force-directed graph renderer
+// Render a small panel below the actor graph for the clicked actor
+function showActorDetails(node) {
+  const pane = document.getElementById("actor-detail");
+  if (!pane) return;
+  const info = actorIndex().get(node.id);
+  if (!info) { pane.innerHTML = ""; pane.classList.add("hidden"); return; }
+  const docs = info.docs.map(id => STATE.data.documents.find(d => d.id === id)).filter(Boolean);
+  const credited = info.credited.map(id => {
+    const arr = STATE.data.conducts.concat(STATE.data.risks);
+    return arr.find(x => x.id === id);
+  }).filter(Boolean);
+  pane.classList.remove("hidden");
+  pane.innerHTML = `
+    <button class="close" onclick="document.getElementById('actor-detail').classList.add('hidden')" type="button">×</button>
+    <h4>${escape(node.id)}</h4>
+    <dt>Type</dt><dd><span class="type-chip" style="background:${ACTOR_COLOR_HEX[info.type]||'#ccc'}"></span>${escape(info.type)}</dd>
+    <dt>Documents (${docs.length})</dt><dd>${docs.length
+      ? docs.map(d => d.url
+          ? `<div class="src-line"><a href="${d.url}" target="_blank">${escape(d.title)}</a></div>`
+          : `<div class="src-line">${escape(d.title)}</div>`).join("")
+      : "—"}</dd>
+    <dt>Credited as defining (${credited.length})</dt><dd>${credited.length
+      ? credited.map(it => `<div class="src-line">${escape(it.item)} <span class="pg">(${escape(it.category)} · ${escape(it.company)})</span></div>`).join("")
+      : "—"}</dd>
+  `;
+}
+
+// D3 force-directed graph with zoom/pan + recenter button + node click + hover labels.
 function drawForceGraph(selector, nodes, links, opts) {
   const svg = d3.select(selector);
   svg.selectAll("*").remove();
+  // Reset detail pane for actor graph on re-render
+  if (selector === "#actor-graph") {
+    const p = document.getElementById("actor-detail");
+    if (p) { p.innerHTML = ""; p.classList.add("hidden"); }
+  }
   if (!nodes.length) {
     svg.append("text").attr("x", 10).attr("y", 20)
        .attr("font-size", "11px").attr("fill", "#999")
@@ -1031,43 +1163,74 @@ function drawForceGraph(selector, nodes, links, opts) {
     return;
   }
   const rect = svg.node().getBoundingClientRect();
-  const w = rect.width || 400, h = rect.height || 320;
+  const w = rect.width || 400, h = rect.height || 360;
   svg.attr("viewBox", `0 0 ${w} ${h}`);
 
-  const sim = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(70).strength(0.6))
-    .force("charge", d3.forceManyBody().strength(-110))
-    .force("center", d3.forceCenter(w/2, h/2))
-    .force("collide", d3.forceCollide(18));
+  // Outer group that pans/zooms; all content sits inside it.
+  const root = svg.append("g").attr("class", "graph-root");
 
-  const link = svg.append("g").attr("class", "links")
+  const zoom = d3.zoom()
+    .scaleExtent([0.2, 5])
+    .on("zoom", ev => root.attr("transform", ev.transform));
+  svg.call(zoom);
+
+  // Recenter button (HTML overlay handled in CSS)
+  const parent = svg.node().parentElement;
+  let btn = parent.querySelector(".graph-recenter");
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.className = "graph-recenter";
+    btn.type = "button";
+    btn.title = "Recenter";
+    btn.textContent = "⊕";
+    parent.appendChild(btn);
+  }
+  btn.onclick = () => svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+
+  // Approximate label width to size the collision radius — prevents labels overlapping
+  const labelLen = d => Math.min(36, (d.label || "").length);
+  const collideR = d => 14 + labelLen(d) * 3.2;
+
+  const sim = d3.forceSimulation(nodes)
+    .force("link", d3.forceLink(links).id(d => d.id).distance(90).strength(0.55))
+    .force("charge", d3.forceManyBody().strength(-180))
+    .force("center", d3.forceCenter(w/2, h/2))
+    .force("collide", d3.forceCollide(collideR));
+
+  const link = root.append("g").attr("class", "links")
     .selectAll("line").data(links).enter()
     .append("line").attr("class", "link")
-    .attr("stroke-width", d => Math.min(4, 1 + d.weight));
+    .attr("stroke-width", d => Math.min(4, 0.6 + d.weight * 0.4));
 
-  const node = svg.append("g").attr("class", "nodes")
+  const node = root.append("g").attr("class", "nodes")
     .selectAll("g").data(nodes).enter()
     .append("g").attr("class", "node");
 
   node.append("circle")
-    .attr("r", d => d.focus ? 9 : 6)
-    .attr("fill", d => {
-      if (opts.colorFn) return opts.colorFn(d);
-      return d.focus ? "#1c1a18" : (opts.color || "#888");
-    })
-    .attr("stroke", d => d.focus ? "#1c1a18" : "#1c1a18")
-    .attr("stroke-width", d => d.focus ? 2 : 1);
+    .attr("r", d => d.focus ? 10 : 6)
+    .attr("fill", d => opts.colorFn ? opts.colorFn(d) : (opts.color || "#888"))
+    .attr("stroke", "#1c1a18")
+    .attr("stroke-width", d => d.focus ? 1.8 : 0.8);
 
   node.append("text")
     .attr("class", "node-label")
-    .attr("x", 10).attr("y", 4)
+    .attr("x", 11).attr("y", 4)
     .attr("fill", "#1c1a18")
-    .text(d => d.label.length > 26 ? d.label.slice(0, 25) + "…" : d.label);
+    .style("paint-order", "stroke")
+    .style("stroke", "rgba(251,247,240,0.92)")
+    .style("stroke-width", "3px")
+    .style("stroke-linejoin", "round")
+    .text(d => (d.label||"").length > 28 ? (d.label||"").slice(0, 27) + "…" : d.label);
 
   node.call(d3.drag()
     .on("start", (event, d) => { if (!event.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
     .on("drag",  (event, d) => { d.fx = event.x; d.fy = event.y; })
     .on("end",   (event, d) => { if (!event.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+  if (opts.onNodeClick) {
+    node.style("cursor", "pointer");
+    node.on("click", (_, d) => opts.onNodeClick(d));
+  }
 
   sim.on("tick", () => {
     link.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
