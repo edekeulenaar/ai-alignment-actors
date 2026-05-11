@@ -800,15 +800,26 @@ function refreshSelectionState() {
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
     // 3-state actor chip matching:
     //   mode 1 (AUTHOR) → actor type is among the authors of the source document
-    //   mode 2 (CITED)  → actor type appears in the source document as a cited
-    //                     (non-author) actor
+    //   mode 2 (CITED)  → actor type appears anywhere on this item (authored
+    //                     OR cited) — CITED is a superset of AUTHOR
+    //
+    // Special case for the "multiple" chip: a square is "multiple" when the
+    // distinct types on its authored / cited list are more than one. So
+    // clicking "multiple" in AUTHOR mode matches items with multi-author lists,
+    // in CITED mode matches items with multi-actor (author ∪ cited) lists.
     if (hasActor) {
       const authors = (el.dataset.authorTypes||"").split("|").filter(Boolean);
       const cited   = (el.dataset.citedTypes ||"").split("|").filter(Boolean);
+      const union   = [...new Set([...authors, ...cited])];
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
-        if (mode === 1 && authors.includes(t)) { highlight = true; break; }
-        if (mode === 2 && cited.includes(t))   { highlight = true; break; }
+        if (t === "multiple") {
+          if (mode === 1 && authors.length > 1) { highlight = true; break; }
+          if (mode === 2 && union.length   > 1) { highlight = true; break; }
+          continue;
+        }
+        if (mode === 1 && authors.includes(t))                       { highlight = true; break; }
+        if (mode === 2 && (authors.includes(t) || cited.includes(t))){ highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
