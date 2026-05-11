@@ -401,7 +401,7 @@ body.hide-misuses #block-misuses { display: none; }
 .top-actors-table-wrap { overflow-x: auto; }
 .top-actors-table {
   border-collapse: collapse; width: 100%;
-  font-size: 13px;
+  font-size: 13px; table-layout: auto;
 }
 .top-actors-table th,
 .top-actors-table td {
@@ -409,6 +409,14 @@ body.hide-misuses #block-misuses { display: none; }
   padding: 6px 10px;
   border-bottom: 1px solid var(--border);
 }
+/* Predictable column widths so the table doesn't drift apart. */
+.top-actors-table th:nth-child(1), .top-actors-table td:nth-child(1) { width: 32px; }
+.top-actors-table th:nth-child(2), .top-actors-table td:nth-child(2) { width: 180px; }
+.top-actors-table th:nth-child(3), .top-actors-table td:nth-child(3) { width: 130px; white-space: nowrap; }
+.top-actors-table th:nth-child(4), .top-actors-table td:nth-child(4) { width: 80px;  white-space: nowrap; }
+.top-actors-table th:nth-child(5), .top-actors-table td:nth-child(5) { width: 110px; }
+.top-actors-table th:nth-child(6), .top-actors-table td:nth-child(6) { width: 180px; }
+.top-actors-table th:nth-child(8), .top-actors-table td:nth-child(8) { width: 70px; text-align: right; }
 .top-actors-table th {
   position: sticky; top: 0; background: var(--paper-alt);
   font-weight: 700; font-size: 11.5px;

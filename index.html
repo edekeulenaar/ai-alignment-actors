@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260511q">
+<link rel="stylesheet" href="style.css?v=20260511r">
 </head>
 <body>
 
@@ -69,6 +69,12 @@
 
   <div class="side-block">
     <h4>Actors</h4>
+    <p class="side-hint">
+      Squares are coloured by the <em>author</em> of the source document.
+      Click a type once to highlight items whose <strong>author</strong>
+      is of that type; click again for <strong>author + cited</strong>
+      (the actor is named anywhere on the item).
+    </p>
     <div id="legend" class="legend"></div>
   </div>
 
@@ -437,18 +443,37 @@
 
     <p>
       The flat CSV is reshaped into a compact JSON file
-      (<code>docs/data.json</code>) consumed by the front-end. Conducts
-      and risks are aggregated on <em>(company × item)</em>; training
-      methods on <em>(company × category × item)</em>; benchmarks on
-      <em>(company × name)</em>. For each aggregated entry, the actor
-      types are computed as the union across <em>all</em> source rows and
-      source documents — so an entry that appears in multiple documents
-      with different contributor profiles is matched correctly when the
-      reader filters by, say, <em>academic</em> or <em>governmental</em>.
-      A separate <em>primary</em> actor type is preserved for colour
-      coding: the colour comes from the explicitly credited actor type
-      when one is present, otherwise from the first contributing
-      document.
+      (<code>docs/data.json</code>) consumed by the front-end. Conducts,
+      risks and misuses are aggregated on <em>(company × item)</em>;
+      training methods on <em>(company × category × item)</em>; benchmarks
+      on <em>(company × name)</em>.
+    </p>
+
+    <p>
+      For each aggregated item, the actor types appearing on its source
+      rows are split into two sets:
+    </p>
+
+    <ul>
+      <li><strong>Author</strong> types — every actor whose name matches
+      the document's <code>pub_author</code> or <code>company</code>
+      (loose substring match, so "Google" ↔ "Google&nbsp;DeepMind" still
+      counts).</li>
+      <li><strong>Cited</strong> types — every other actor named anywhere
+      in the document's actor columns, plus any
+      <code>specific_risk_conduct_actor</code> explicitly credited with
+      defining the conduct or risk.</li>
+    </ul>
+
+    <p>
+      Square <strong>colour is decided solely by the author types</strong>
+      of the item's source document(s): a single type if the authors all
+      share one, "multiple" if more than one, "unknown" if no author can
+      be identified. The cited types do not influence colour. They drive
+      the second state of the actor-type chips in the sidebar — clicking
+      a chip once highlights items <em>authored</em> by that type;
+      clicking again broadens the highlight to items where the type
+      appears as author <em>or</em> cited.
     </p>
 
     <h3 id="method-interface">Interface</h3>
@@ -677,8 +702,8 @@
         </label>
         <label>Show top
           <select id="top-actors-n">
-            <option value="10">10</option>
-            <option value="25" selected>25</option>
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
             <option value="50">50</option>
             <option value="100">100</option>
             <option value="500">500</option>
@@ -779,6 +804,6 @@
 <div id="info-card" class="info-card hidden"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260511q"></script>
+<script src="app.js?v=20260511r"></script>
 </body>
 </html>

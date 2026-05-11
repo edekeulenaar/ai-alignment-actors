@@ -276,17 +276,11 @@ const countryOf = name => (STATE.data.companies.find(c=>c.name===name)||{}).coun
 
 function renderAll() {
   renderSources();
-  // Items whose risk_conduct_category is literally "misuse" go to the
-  // Misuses block; everything else stays in its native block.
-  const isMisuse  = x => (x.category || "").trim().toLowerCase() === "misuse";
-  const notMisuse = x => !isMisuse(x);
-  renderItemBlock("conducts",  STATE.data.conducts.filter(notMisuse),   {nameKey:"item"});
-  renderItemBlock("risks",     STATE.data.risks.filter(notMisuse),      {nameKey:"item"});
-  renderItemBlock("misuses",
-                  [...STATE.data.conducts, ...STATE.data.risks].filter(isMisuse),
-                  {nameKey:"item"});
-  renderItemBlock("training",  STATE.data.trainings,                    {nameKey:"item"});
-  renderItemBlock("benchmark", STATE.data.benchmarks,                   {nameKey:"name"});
+  renderItemBlock("conducts",  STATE.data.conducts || [],  {nameKey:"item"});
+  renderItemBlock("risks",     STATE.data.risks    || [],  {nameKey:"item"});
+  renderItemBlock("misuses",   STATE.data.misuses  || [],  {nameKey:"item"});
+  renderItemBlock("training",  STATE.data.trainings || [], {nameKey:"item"});
+  renderItemBlock("benchmark", STATE.data.benchmarks||[],  {nameKey:"name"});
   refreshClusterItems();
   refreshSelectionState();
 }
