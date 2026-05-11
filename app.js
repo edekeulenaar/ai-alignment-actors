@@ -62,7 +62,9 @@ const STATE = {
 };
 
 // ── Boot ──────────────────────────────────────────────────────────
-fetch("data.json").then(r => r.json()).then(data => {
+// Cache-bust data.json with the same build tag as the script — keeps it in sync
+const DATA_VERSION = (document.querySelector('script[src*="app.js"]')||{}).src?.split("v=")[1] || Date.now();
+fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
   STATE.data = data;
   buildSidebar(data);
   wireSortBars();
