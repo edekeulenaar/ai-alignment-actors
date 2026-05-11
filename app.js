@@ -1205,12 +1205,22 @@ function renderCluster() {
   //    word with the selected category (e.g. "Political bias" ↔ "Political
   //    neutrality", "Bias", "Representational bias"). Toggle in the UI.
   const includeRelatedCats = STATE.cluster.expandRelated === true;
+  // Loose word-overlap check. Strips punctuation, lower-cases, ignores
+  // 3-letter "stop" words ("the", "and", etc.). Any shared 4+-letter token
+  // between two category names counts as a match.
+  const STOP = new Set(["the","and","for","with","into","over","this","that","from"]);
+  const tokens = s => s.toLowerCase().split(/[^a-z]+/).filter(w => w.length >= 4 && !STOP.has(w));
   const sharedWord = (a, b) => {
-    const wa = new Set(a.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3));
-    const wb = b.toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3);
-    return wb.some(w => wa.has(w));
+    const wa = new Set(tokens(a));
+    return tokens(b).some(w => wa.has(w));
   };
-  const cAll = STATE.data[kind] || [];
+  // The dataset of items to search for related categories — every kind, so
+  // a Conduct's category can pull related Risk and Misuse categories too.
+  const cAll = [
+    ...(STATE.data.conducts || []),
+    ...(STATE.data.risks    || []),
+    ...(STATE.data.misuses  || []),
+  ];
   let relatedCats = [];
   if (includeRelatedCats) {
     const allCats = [...new Set(cAll.map(c => c.category).filter(Boolean))];
@@ -1231,6 +1241,11 @@ function renderCluster() {
     actorType: "central", focus: true,
     isCategory: true,
   });
+  const blockIdOf = id =>
+       id && id.startsWith("risk__")   ? "risks"
+     : id && id.startsWith("misuse__") ? "misuses"
+     :                                   "conducts";
+
   // Items in the focal category
   items.forEach(it => {
     const t = firstActorTypeOf(it);
@@ -1254,7 +1269,7 @@ function renderCluster() {
         const t = firstActorTypeOf(it);
         conceptNodes.push({
           id: it.id + "::" + rc, label: it.item,
-          actorType: t, item: it, blockId: kind,
+          actorType: t, item: it, blockId: blockIdOf(it.id),
         });
         conceptEdges.push({ source: "__cat__" + rc, target: it.id + "::" + rc, weight: 1 });
       });
@@ -1384,7 +1399,7 @@ function renderTimelineCard(card, r) {
 
   const trainBlock = (r.trainings || []).map(t => {
     const actorPairs = pairsFrom(t.actor, t.actor_type_raw);
-    return `<div class="tl-step"><span class="tl-step-tag">Done by</span>
+    return `<div class="tl-step"><span class="tl-step-tag">Training</span>
               <span class="tl-step-body">
                 <span class="tl-meta">${escape(t.item)} · ${escape(t.category)}</span><br>
                 ${actorPills(actorPairs)}
@@ -1393,7 +1408,7 @@ function renderTimelineCard(card, r) {
 
   const benchBlock = (r.benchmarks || []).map(b => {
     const actorPairs = pairsFrom(b.author, b.author_type_raw);
-    return `<div class="tl-step"><span class="tl-step-tag">Benchmark creator</span>
+    return `<div class="tl-step"><span class="tl-step-tag">Benchmark</span>
               <span class="tl-step-body">
                 <span class="tl-meta">${escape(b.name)} · ${escape(b.category)}</span><br>
                 ${actorPills(actorPairs)}
