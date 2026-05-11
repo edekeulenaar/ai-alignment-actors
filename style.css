@@ -223,8 +223,12 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
   border: 1px solid var(--border); border-radius: 3px;
   background: var(--paper);
 }
-.cluster-expand { flex-direction: row !important; align-items: center; gap: 0.4em; cursor: pointer; }
-.cluster-expand input { margin: 0; }
+.pane-toggle {
+  display: inline-flex; align-items: center; gap: 0.45em;
+  font-size: 12px; color: var(--muted); cursor: pointer;
+  margin: 0 0 0.5rem 0;
+}
+.pane-toggle input { margin: 0; }
 .cluster-panes {
   display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
   margin-top: 1rem;
@@ -260,32 +264,40 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 
 .tl-right {
   border-left: 2px solid var(--ink);
-  padding-left: 18px;
+  padding-left: 38px;          /* generous gap between axis and content */
   position: relative;
 }
 .tl-tick {
   display: flex; align-items: center; gap: 0.5em;
   position: relative;
-  padding: 2px 0;
+  padding: 3px 0;
 }
 .tl-tick-mark {
-  position: absolute; left: -18px; top: 50%;
+  position: absolute; left: -36px; top: 50%;
   transform: translateY(-50%);
-  width: 16px; height: 3px; border-radius: 1px;
+  width: 22px; height: 3px; border-radius: 1px;
 }
 .tl-tick-co {
   font-size: 14px; color: var(--ink); white-space: nowrap;
-  margin-left: 2px;
+  margin-left: 0;
 }
 
-/* Inline definition card for each tick */
+/* Year label is clickable to expand / collapse this year's cards */
+.tl-year-cell { cursor: default; }
+.tl-year-cell[data-year] { cursor: pointer; }
+.tl-year-cell[data-year]:hover .tl-year-label { color: var(--accent); }
+.tl-year-cell.expanded .tl-year-label { color: var(--accent); }
+
+/* Definition cards: collapsed by default, expanded when the year is selected */
 .tl-def-card {
-  margin: 0.35rem 0 0.6rem 0;
+  display: none;
+  margin: 0.4rem 0 0.7rem 0;
   padding: 0.65rem 0.85rem;
   background: var(--paper-alt);
   border: 1px solid var(--border); border-radius: 3px;
   font-size: 13.5px; line-height: 1.5;
 }
+.tl-row.is-expanded .tl-def-card { display: block; }
 .tl-card-head {
   font-size: 13.5px; color: var(--accent); margin-bottom: 0.25rem;
   font-weight: 600;

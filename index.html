@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260511d">
+<link rel="stylesheet" href="style.css?v=20260511e">
 </head>
 <body>
 
@@ -678,10 +678,6 @@
         <label>Concept
           <select id="cluster-item"></select>
         </label>
-        <label class="cluster-expand">
-          <input type="checkbox" id="cluster-expand-related">
-          <span>Include categories sharing a word</span>
-        </label>
       </div>
       <div class="cluster-panes">
         <div class="cluster-pane">
@@ -690,7 +686,11 @@
         </div>
         <div class="cluster-pane">
           <h4>Conceptual network</h4>
-          <p class="cluster-help">Other concepts that co-appear with this one — coloured by actor type. Drag to move, scroll to zoom, ⊕ to recenter.</p>
+          <p class="cluster-help">Central node = the selected category. Surrounding nodes = every item in it, coloured by actor type. Drag, scroll to zoom, ⊕ to recenter.</p>
+          <label class="pane-toggle">
+            <input type="checkbox" id="cluster-expand-related">
+            <span>Include categories sharing a word</span>
+          </label>
           <svg id="concept-graph" class="cluster-graph"></svg>
         </div>
         <div class="cluster-pane">
@@ -729,6 +729,6 @@
 <div id="info-card" class="info-card hidden"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260511d"></script>
+<script src="app.js?v=20260511e"></script>
 </body>
 </html>

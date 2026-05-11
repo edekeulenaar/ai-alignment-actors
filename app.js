@@ -460,13 +460,16 @@ function makeSquare(item, blockId, nameKey) {
   sq.dataset.id        = item.id;
   sq.dataset.category  = item.category || "";
   sq.dataset.actorType = item.actor_type || item.author_type || "unknown";
-  // Store credited + contributor actor types separately for the 3-state chip cycle
-  const credited    = item.credited_actor_types    || [];
-  const contributor = item.contributor_actor_types || [];
+  // Store credited + collaborated actor types separately for the 3-state chip cycle.
+  // CREDITED     = the actor directly named (specific_actor / training_actor / author)
+  // COLLABORATED = appears in any multi-actor list (pub_actors of source docs or the
+  //                attribution field itself when it lists multiple types)
+  const credited     = item.credited_actor_types     || [];
+  const collaborated = item.collaborated_actor_types || item.contributor_actor_types || [];
   const all = item.all_actor_types || (item.actor_types && item.actor_types.length ? item.actor_types : [sq.dataset.actorType]);
-  sq.dataset.actorTypes        = all.join("|");
-  sq.dataset.creditedTypes     = credited.join("|");
-  sq.dataset.contributorTypes  = contributor.join("|");
+  sq.dataset.actorTypes         = all.join("|");
+  sq.dataset.creditedTypes      = credited.join("|");
+  sq.dataset.collaboratedTypes  = collaborated.join("|");
   const cssColor = COLOR_VAR[sq.dataset.actorType] || COLOR_VAR.unknown;
   sq.style.background = cssColor;                 // compact view
   sq.style.setProperty("--sq-bg", cssColor);      // named-view tint reads this
@@ -767,16 +770,15 @@ function refreshSelectionState() {
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
     // 3-state actor chip matching:
-    //   mode 1 (CREDITED)      → match only credited_actor_types
-    //   mode 2 (COLLABORATED)  → match credited ∪ contributor (= all actor types)
+    //   mode 1 (CREDITED)      → actor directly attributed to the item
+    //   mode 2 (COLLABORATED)  → actor appears in a multi-actor list
     if (hasActor) {
-      const credited    = (el.dataset.creditedTypes||"").split("|").filter(Boolean);
-      const contributor = (el.dataset.contributorTypes||"").split("|").filter(Boolean);
+      const credited     = (el.dataset.creditedTypes||"").split("|").filter(Boolean);
+      const collaborated = (el.dataset.collaboratedTypes||"").split("|").filter(Boolean);
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
-        if (mode === 1 && credited.includes(t))                  { highlight = true; break; }
-        if (mode === 2 && (credited.includes(t) || contributor.includes(t)))
-                                                                 { highlight = true; break; }
+        if (mode === 1 && credited.includes(t))     { highlight = true; break; }
+        if (mode === 2 && collaborated.includes(t)) { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
@@ -1017,16 +1019,23 @@ function renderCluster() {
       byYear[y].forEach((r, idx) => {
         const row = document.createElement("div");
         row.className = "tl-row";
+        row.dataset.year = y;
         const actorType = r.item.actor_type || "unknown";
         const color = ACTOR_COLOR_HEX[actorType] || ACTOR_COLOR_HEX.unknown;
 
-        // Year label sits to the LEFT of the axis (only on the first row of each year)
         const yearCell = document.createElement("div");
         yearCell.className = "tl-year-cell";
-        if (idx === 0) yearCell.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
+        if (idx === 0) {
+          yearCell.dataset.year = y;
+          yearCell.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
+          yearCell.addEventListener("click", () => {
+            STATE.cluster.expandedYear =
+              STATE.cluster.expandedYear === y ? null : y;
+            updateExpandedYear();
+          });
+        }
         row.appendChild(yearCell);
 
-        // RIGHT-SIDE container: axis line is its left border; tick crosses it; card below
         const right = document.createElement("div");
         right.className = "tl-right";
         right.innerHTML = `
@@ -1042,6 +1051,8 @@ function renderCluster() {
         axis.appendChild(row);
       });
     });
+
+    updateExpandedYear();   // apply default (no expansion) or restore prior choice
   }
 
   // ── Conceptual network: CENTRAL node = the selected category;
@@ -1185,6 +1196,16 @@ function actorNodeCard(node) {
     <dt>Credited as defining</dt><dd>${info.credited.length} item${info.credited.length===1?"":"s"}</dd>
     <p style="margin:0.6em 0 0;font-size:11px;color:var(--muted)">Click for full details</p>
   `;
+}
+
+function updateExpandedYear() {
+  const ey = STATE.cluster.expandedYear;
+  document.querySelectorAll(".tl-row").forEach(r => {
+    r.classList.toggle("is-expanded", ey != null && r.dataset.year === ey);
+  });
+  document.querySelectorAll(".tl-year-cell[data-year]").forEach(c => {
+    c.classList.toggle("expanded", ey != null && c.dataset.year === ey);
+  });
 }
 
 function renderTimelineCard(card, r, pinned=false) {
