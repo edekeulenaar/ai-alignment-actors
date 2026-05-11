@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260511f">
+<link rel="stylesheet" href="style.css?v=20260511g">
 </head>
 <body>
 
@@ -43,8 +43,9 @@
       <li><a href="#block-risks"     data-target="block-risks"    >Risks</a></li>
       <li><a href="#block-misuses"   data-target="block-misuses"  >Misuses</a></li>
       <li><a href="#block-training"  data-target="block-training" >Training</a></li>
-      <li><a href="#block-benchmark" data-target="block-benchmark">Benchmark</a></li>
-      <li><a href="#block-clusters"  data-target="block-clusters" >Conceptual clusters</a></li>
+      <li><a href="#block-benchmark"   data-target="block-benchmark"  >Benchmark</a></li>
+      <li><a href="#block-top-actors"  data-target="block-top-actors" >Top actors</a></li>
+      <li><a href="#block-clusters"    data-target="block-clusters"   >Conceptual clusters</a></li>
     </ul>
     <a href="#discussion"   data-target="discussion"  >Discussion</a>
     <a href="#references"   data-target="references"  >References</a>
@@ -662,6 +663,55 @@
       <div class="row-grid" id="grid-benchmark"></div>
     </article>
 
+    <!-- TOP ACTORS ──────────────────────────── -->
+    <article class="grid-block" id="block-top-actors">
+      <header class="block-head">
+        <h3>Top actors</h3>
+        <p class="block-sub">The most-mentioned actors by type. Pick a type and how many to show.</p>
+      </header>
+      <div class="top-actors-controls">
+        <label>Type
+          <select id="top-actors-type">
+            <option value="">all types</option>
+          </select>
+        </label>
+        <label>Show top
+          <select id="top-actors-n">
+            <option value="10">10</option>
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+          </select>
+        </label>
+        <label>Role
+          <select id="top-actors-role">
+            <option value="">any</option>
+            <option value="AUTHOR">authors only</option>
+            <option value="CITED">cited only</option>
+            <option value="MIXED">mixed</option>
+          </select>
+        </label>
+      </div>
+      <div class="top-actors-table-wrap">
+        <table class="top-actors-table" id="top-actors-table">
+          <thead>
+            <tr>
+              <th class="num">#</th>
+              <th>Actor</th>
+              <th>Type</th>
+              <th>Role</th>
+              <th>Based in</th>
+              <th>Collaborated with</th>
+              <th>Documents</th>
+              <th class="num">Mentions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+
     <!-- CONCEPTUAL CLUSTERS ─────────────────── -->
     <article class="grid-block" id="block-clusters">
       <header class="block-head">
@@ -729,6 +779,6 @@
 <div id="info-card" class="info-card hidden"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260511f"></script>
+<script src="app.js?v=20260511g"></script>
 </body>
 </html>

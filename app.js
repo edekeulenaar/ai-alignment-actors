@@ -118,6 +118,7 @@ fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
   });
 
   setupClusters();
+  setupTopActors();
 });
 
 // ── Sidebar pieces ────────────────────────────────────────────────
@@ -807,6 +808,73 @@ function refreshSelectionState() {
 }
 
 // ════════════════════════════════════════════════════════════════
+// TOP ACTORS — table of the most-mentioned actors per type
+// ════════════════════════════════════════════════════════════════
+function setupTopActors() {
+  const typeSel = document.getElementById("top-actors-type");
+  const nSel    = document.getElementById("top-actors-n");
+  const roleSel = document.getElementById("top-actors-role");
+  if (!typeSel || !nSel || !roleSel) return;
+
+  // Populate type dropdown from the data (also include curated extras)
+  const allTypes = new Set();
+  (STATE.data.actors || []).forEach(a => { if (a.type) allTypes.add(a.type); });
+  [...allTypes].sort().forEach(t => {
+    const o = document.createElement("option");
+    o.value = t; o.textContent = t;
+    typeSel.appendChild(o);
+  });
+
+  const render = () => renderTopActors(typeSel.value, parseInt(nSel.value, 10), roleSel.value);
+  typeSel.addEventListener("change", render);
+  nSel.addEventListener("change", render);
+  roleSel.addEventListener("change", render);
+  render();
+}
+
+function renderTopActors(typeFilter, n, roleFilter) {
+  const tbody = document.querySelector("#top-actors-table tbody");
+  if (!tbody) return;
+  tbody.innerHTML = "";
+  let arr = (STATE.data.actors || []).slice();
+  if (typeFilter) arr = arr.filter(a => a.type === typeFilter);
+  if (roleFilter) arr = arr.filter(a => (a.role || "") === roleFilter);
+  arr = arr.slice(0, n || 25);
+  if (!arr.length) {
+    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;color:var(--muted);font-style:italic">No actors match.</td></tr>`;
+    return;
+  }
+  arr.forEach((a, i) => {
+    const tr = document.createElement("tr");
+    const swatch = ACTOR_COLOR_HEX[a.type] || "#ccc";
+    const cos = (a.companies || []).slice(0, 4).map(c => `<span class="co-pill">${escape(c)}</span>`).join("");
+    const more = a.companies && a.companies.length > 4 ? ` <span class="co-pill" style="background:transparent">+${a.companies.length-4}</span>` : "";
+    const docs = (a.doc_ids || []).slice(0, 5).map(id => {
+      const d = STATE.data.documents.find(x => x.id === id);
+      if (!d) return "";
+      return d.url
+        ? `<div class="src-line"><a href="${d.url}" target="_blank">${escape(d.title)}</a></div>`
+        : `<div class="src-line">${escape(d.title)}</div>`;
+    }).filter(Boolean).join("");
+    const moreDocs = a.doc_ids && a.doc_ids.length > 5
+      ? `<div class="src-line" style="color:var(--muted);font-style:italic">+ ${a.doc_ids.length-5} more</div>`
+      : "";
+    const role = (a.role || "").toUpperCase();
+    tr.innerHTML = `
+      <td class="num">${i+1}</td>
+      <td><strong>${escape(a.name)}</strong></td>
+      <td><span class="type-chip" style="background:${swatch}"></span>${escape(a.type)}</td>
+      <td>${role ? `<span class="badge ${role}">${role}</span>` : "—"}</td>
+      <td>${escape(a.based_in || "—")}</td>
+      <td>${cos || "—"}${more}</td>
+      <td>${docs}${moreDocs}</td>
+      <td class="num">${a.mention_count}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+// ════════════════════════════════════════════════════════════════
 // CONCEPTUAL CLUSTERS — definitions over time + two networks
 // ════════════════════════════════════════════════════════════════
 function setupClusters() {
@@ -1366,8 +1434,8 @@ function drawForceGraph(selector, nodes, links, opts) {
 // ── Scroll spy (sidebar) ─────────────────────────────────────────
 function setupScrollSpy() {
   const topIds = ["introduction", "method", "findings", "discussion", "references"];
-  const subIds = ["block-sources", "block-conducts", "block-risks", "block-uses",
-                  "block-training", "block-benchmark", "block-clusters"];
+  const subIds = ["block-sources", "block-conducts", "block-risks", "block-misuses",
+                  "block-training", "block-benchmark", "block-top-actors", "block-clusters"];
   const allIds = [...topIds, ...subIds];
 
   const sections = allIds.map(id => document.getElementById(id)).filter(Boolean);
