@@ -798,28 +798,25 @@ function refreshSelectionState() {
     if (hasClick && clickIds[type] && clickIds[type].has(id))      highlight = true;
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
-    // 3-state actor chip matching:
-    //   mode 1 (AUTHOR) → actor type is among the authors of the source document
-    //   mode 2 (CITED)  → actor type appears anywhere on this item (authored
-    //                     OR cited) — CITED is a superset of AUTHOR
+    // 3-state actor chip matching — AUTHOR and CITED are DISJOINT matchings:
+    //   mode 1 (AUTHOR) → this actor type AUTHORED the source document
+    //   mode 2 (CITED)  → this actor type was CITED inside the source document
+    // (An item where the type does both will light up in either mode.)
     //
-    // Special case for the "multiple" chip: a square is "multiple" when the
-    // distinct types on its authored / cited list are more than one. So
-    // clicking "multiple" in AUTHOR mode matches items with multi-author lists,
-    // in CITED mode matches items with multi-actor (author ∪ cited) lists.
+    // Special case: clicking "multiple" matches items whose author / cited
+    // list contains more than one distinct type.
     if (hasActor) {
       const authors = (el.dataset.authorTypes||"").split("|").filter(Boolean);
       const cited   = (el.dataset.citedTypes ||"").split("|").filter(Boolean);
-      const union   = [...new Set([...authors, ...cited])];
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
         if (t === "multiple") {
           if (mode === 1 && authors.length > 1) { highlight = true; break; }
-          if (mode === 2 && union.length   > 1) { highlight = true; break; }
+          if (mode === 2 && cited.length   > 1) { highlight = true; break; }
           continue;
         }
-        if (mode === 1 && authors.includes(t))                       { highlight = true; break; }
-        if (mode === 2 && (authors.includes(t) || cited.includes(t))){ highlight = true; break; }
+        if (mode === 1 && authors.includes(t)) { highlight = true; break; }
+        if (mode === 2 && cited.includes(t))   { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
