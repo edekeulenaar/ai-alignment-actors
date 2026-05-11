@@ -242,7 +242,7 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 .cluster-pane:first-child { grid-column: 1 / -1; }
 .cluster-pane h4 { margin: 0 0 0.5rem; font-size: 14px; font-weight: 700; }
 .cluster-help { font-size: 12px; color: var(--muted); font-style: italic; margin: 0 0 0.5rem; }
-/* ── Timeline: years left of axis, ticks + inline cards on the right ─ */
+/* ── Timeline: dotted vertical track + inline cards ────────────────── */
 .cluster-timeline { position: relative; }
 .tl-summary {
   padding: 0.5rem 0.7rem; margin-bottom: 1rem;
@@ -251,57 +251,57 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
   font-size: 13px;
 }
 
-.tl-axis { position: relative; }
+.tl-axis { position: relative; padding: 0.4rem 0; }
 .tl-row {
   display: grid;
-  grid-template-columns: 70px 1fr;            /* year-gutter | (axis + content) */
+  grid-template-columns: 70px 32px 1fr;        /* year | dot column | content */
   align-items: start;
-  padding: 6px 0;
+  padding: 5px 0;
 }
 .tl-year-cell {
-  text-align: right;
-  padding: 4px 16px 0 0;
+  text-align: right; padding: 4px 16px 0 0;
 }
 .tl-year-label {
   font-size: 22px; font-weight: 700; color: var(--ink); line-height: 1;
 }
 
-.tl-right {
-  border-left: 2px solid var(--ink);
-  padding-left: 38px;          /* generous gap between axis and content */
+.tl-dot-cell {
   position: relative;
+  align-self: stretch;
+  display: flex; justify-content: center; padding-top: 7px;
 }
-.tl-tick {
-  display: flex; align-items: center; gap: 0.5em;
+.tl-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--ink);
+  cursor: pointer;
+  transition: transform 0.12s ease;
   position: relative;
-  padding: 3px 0;
+  z-index: 2;
 }
-.tl-tick-mark {
-  position: absolute; left: -36px; top: 50%;
-  transform: translateY(-50%);
-  width: 22px; height: 3px; border-radius: 1px;
+.tl-dot:hover { transform: scale(1.5); }
+.tl-dot.pinned { background: var(--accent); transform: scale(1.4); }
+
+.tl-content {
+  display: flex; flex-direction: column; gap: 4px;
+  padding-left: 6px;
 }
 .tl-tick-co {
   font-size: 14px; color: var(--ink); white-space: nowrap;
-  margin-left: 0;
+  padding-top: 2px; cursor: pointer;
 }
+.tl-tick-co:hover { color: var(--accent); }
 
-/* Year label is clickable to expand / collapse this year's cards */
-.tl-year-cell { cursor: default; }
-.tl-year-cell[data-year] { cursor: pointer; }
-.tl-year-cell[data-year]:hover .tl-year-label { color: var(--accent); }
-.tl-year-cell.expanded .tl-year-label { color: var(--accent); }
-
-/* Definition cards: collapsed by default, expanded when the year is selected */
+/* Definition cards — collapsed by default; open when pinned (clicked) or hovered */
 .tl-def-card {
   display: none;
-  margin: 0.4rem 0 0.7rem 0;
+  margin: 0.3rem 0 0.4rem 0;
   padding: 0.65rem 0.85rem;
   background: var(--paper-alt);
   border: 1px solid var(--border); border-radius: 3px;
   font-size: 13.5px; line-height: 1.5;
 }
-.tl-row.is-expanded .tl-def-card { display: block; }
+.tl-row.is-pinned .tl-def-card,
+.tl-row.is-hover .tl-def-card { display: block; }
 .tl-card-head {
   font-size: 13.5px; color: var(--accent); margin-bottom: 0.25rem;
   font-weight: 600;
@@ -324,6 +324,20 @@ main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 }
 .tl-step-body { flex: 1; }
 .tl-meta { color: var(--muted); font-size: 11.5px; }
+.actor-pill {
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 6px 1px 4px;
+  margin: 1px 3px 1px 0;
+  background: var(--paper);
+  border: 1px solid var(--border); border-radius: 10px;
+  white-space: nowrap;
+}
+.actor-pill .type-chip {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; border: none;
+  margin-right: 0.35em; vertical-align: middle;
+}
 .cluster-pane { position: relative; }
 .cluster-pane .cluster-graph {
   width: 100%; height: 360px;

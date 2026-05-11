@@ -16936,6 +16936,26 @@
     "bench__openai__production-benchmarks",
     "bench__openai__strongreject",
     "bench__openai__successfully-ignored-prompt-injection-attack-during-coding-tasks-in-codex-environment"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Safety Advisory Group",
+     "type": "internal"
+    },
+    {
+     "name": "A. Souly et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "E. Wallace et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -16972,6 +16992,18 @@
     "bench__openai__schelling-point",
     "bench__openai__steganography",
     "bench__openai__text-compression"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Khlaaf, 2023",
+     "type": "private"
+    }
    ]
   },
   {
@@ -17013,6 +17045,18 @@
    ],
    "benchmark_ids": [
     "bench__openai__public-jailbreak-arenas"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Coalition for Content Provenance and Authenticity",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -17055,6 +17099,70 @@
     "bench__openai__sandbagging-qa",
     "bench__openai__verbalized-evaluation-awareness-rate",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Guan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Laine et al. (2024)",
+     "type": "research institute"
+    },
+    {
+     "name": "Meinke et al. (2024)",
+     "type": "research institute"
+    },
+    {
+     "name": "Hubinger et al. (2019)",
+     "type": "academic"
+    },
+    {
+     "name": "Carlsmith (2023)",
+     "type": "research institute"
+    },
+    {
+     "name": "Balesni et al.",
+     "type": "research institute"
+    },
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Chowdhury et al.",
+     "type": "research institute"
+    },
+    {
+     "name": "Baker et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Greenblatt et al.",
+     "type": "research institute"
+    },
+    {
+     "name": "Sheshadri et al. (2025a)",
+     "type": "research institute"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17098,6 +17206,30 @@
    "benchmark_ids": [
     "bench__google__frontier-safety-framework",
     "bench__google__nist-risk-management-framework"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "G7",
+     "type": "governmental"
+    },
+    {
+     "name": "International Organization for Standardization",
+     "type": "industry consortium"
+    },
+    {
+     "name": "NIST",
+     "type": "governmental"
+    }
    ]
   },
   {
@@ -17151,6 +17283,58 @@
     "bench__xai__weapons-of-mass-destruction-wmdp-bio",
     "bench__xai__wmdp-chem",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Li et al., 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Götting et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ivanov, 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Laurent et al., 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ren et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Debenedetti et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Jaech et al., 2024",
+     "type": "private"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Sharma et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17198,7 +17382,18 @@
     "bench__google-deepmind__natural-questions",
     "bench__google-deepmind__simpleqa",
     "bench__google-deepmind__triviaqa"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Gemma Team",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "2SJNI77F",
@@ -17258,6 +17453,58 @@
     "bench__xai__wmdp-bio",
     "bench__xai__wmdp-chem",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Li et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Götting et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ivanov, 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Laurent et al., 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ren et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Debenedetti et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Jaech et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Sharma et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17286,6 +17533,18 @@
     "bench__openai__swe-bench",
     "bench__openai__swe-bench-lite",
     "bench__openai__swe-bench-verified"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Jimenez et al. (2024)",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17325,6 +17584,53 @@
     "bench__multiple__cleverhans-library-of-benchmarks-and-models",
     "bench__multiple__fake-news-challenge",
     "bench__multiple__nips-2017-adversarial-attacks-and-defenses-competition"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Future of Humanity Institute",
+     "type": "academic"
+    },
+    {
+     "name": "University of Oxford",
+     "type": "academic"
+    },
+    {
+     "name": "Centre for the Study of Existential Risk",
+     "type": "research institute"
+    },
+    {
+     "name": "University of Cambridge",
+     "type": "academic"
+    },
+    {
+     "name": "Center for a New American Security",
+     "type": "research institute"
+    },
+    {
+     "name": "Electronic Frontier Foundation",
+     "type": "nonprofit"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Biggio et al. 2012",
+     "type": "academic"
+    },
+    {
+     "name": "Szegedy et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Papernot et al. 2016b",
+     "type": "academic"
+    },
+    {
+     "name": "Amodei et al.",
+     "type": "private"
+    }
    ]
   },
   {
@@ -17411,6 +17717,78 @@
     "bench__anthropic__single-turn-violative-request-evaluations",
     "bench__anthropic__subversion-strategy-evaluation",
     "bench__anthropic__swe-bench-verified-hard-subset"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Deloitte",
+     "type": "private"
+    },
+    {
+     "name": "Signature Science",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Zhang, A., et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "Zou et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Marks, S., et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Kutasov, J., et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Mallen, A., et al. (2024)",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish, A., et al. (2021)",
+     "type": "academic"
+    },
+    {
+     "name": "Wichers, N., et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Tan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Artificial Analysis",
+     "type": "private"
+    }
    ]
   },
   {
@@ -17445,6 +17823,30 @@
    "benchmark_ids": [
     "bench__openai__breakout-scale",
     "bench__openai__mitre-att-ck-framework"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Ben Nimmo",
+     "type": "internal"
+    },
+    {
+     "name": "Albert Zhang",
+     "type": "internal"
+    },
+    {
+     "name": "Matthew Richard",
+     "type": "internal"
+    },
+    {
+     "name": "Nathaniel Hartley",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -17489,6 +17891,41 @@
     "bench__multiple__reddit-conversation-threads-convokit",
     "bench__openai-harvard-university__stanford-politeness-corpus",
     "bench__openai-harvard-university__varieties-of-democracy-vdem-30-000-country-year-observations"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Hemanth Asirvatham",
+     "type": "internal"
+    },
+    {
+     "name": "Elliott Mokski",
+     "type": "internal"
+    },
+    {
+     "name": "Andrei Shleifer",
+     "type": "academic"
+    },
+    {
+     "name": "Vafa et al. (2024a)",
+     "type": "academic"
+    },
+    {
+     "name": "Sarkar and Vafa (2024)",
+     "type": "academic"
+    },
+    {
+     "name": "Ludwig et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Danescu-Niculescu-Mizil et al. (2013)",
+     "type": "academic"
+    },
+    {
+     "name": "Varieties of Democracy (vDem)",
+     "type": "other"
+    }
    ]
   },
   {
@@ -17534,6 +17971,45 @@
     "bench__openai__oversight-sabotage-scenarios-where-the-model-has-the-opportunity-to-remove-safety-oversight-mechanisms",
     "bench__openai__tool-deception-dataset",
     "bench__openai__unit-tests-on-programming-tasks"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Miles Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Dan Mossing",
+     "type": "internal"
+    },
+    {
+     "name": "Chowdhury et al.",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Betley et al. (2025b)",
+     "type": "academic"
+    },
+    {
+     "name": "Shen et al. (2024)",
+     "type": "academic"
+    },
+    {
+     "name": "Taori et al. (2023)",
+     "type": "academic"
+    },
+    {
+     "name": "Hubinger et al. (2024)",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gao et al. (2024)",
+     "type": "internal"
+    },
+    {
+     "name": "Baker et al. (2025)",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -17591,6 +18067,38 @@
     "bench__openai__terminalbench",
     "bench__openai__troubleshootingbench",
     "bench__openai__vulnerability-research-and-exploitation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Zhu et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    }
    ]
   },
   {
@@ -17651,7 +18159,14 @@
     "bench__meta__squad",
     "bench__meta__triviaqa-wiki",
     "bench__meta__winogrande"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "3Z75ND8Q",
@@ -17709,6 +18224,46 @@
     "bench__openai__tacit-knowledge-and-troubleshooting",
     "bench__openai__troubleshootingbench",
     "bench__openai__vulnerability-research-and-exploitation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Starace et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Laurent et al. 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Zhu et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17734,7 +18289,27 @@
     "train__openai__inference-time-filtering__content-classifier",
     "train__openai__inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Brazilian Government",
+     "type": "governmental"
+    },
+    {
+     "name": "Australian Government",
+     "type": "governmental"
+    },
+    {
+     "name": "UK Government",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "4AGTLHJ3",
@@ -17758,7 +18333,43 @@
    ],
    "risk_ids": [],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "U.S. Artificial Intelligence Safety Institute",
+     "type": "governmental"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Howard Lutnick",
+     "type": "governmental"
+    },
+    {
+     "name": "NIST",
+     "type": "governmental"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Elizabeth Kelly",
+     "type": "governmental"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Biden-Harris administration",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "4HUNGMUD",
@@ -17798,6 +18409,30 @@
    ],
    "benchmark_ids": [
     "bench__openai__gdpval"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Patwardhan et al.",
+     "type": "internal"
+    },
+    {
+     "name": "U.S. Bureau of Labor Statistics",
+     "type": "governmental"
+    },
+    {
+     "name": "O*NET",
+     "type": "other"
+    },
+    {
+     "name": "Acemoglu & Autor",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17847,6 +18482,46 @@
     "bench__xai__wmdp-bio",
     "bench__xai__wmdp-chem",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Andriushchenko et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Debenedetti et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Götting et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ivanov, 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Li et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Ren et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17879,6 +18554,82 @@
    ],
    "benchmark_ids": [
     "bench__google__internal-benchmark"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wenjun Zeng",
+     "type": "internal"
+    },
+    {
+     "name": "Dana Kurniawan",
+     "type": "internal"
+    },
+    {
+     "name": "Ryan Mullins",
+     "type": "internal"
+    },
+    {
+     "name": "Yuchi Liu",
+     "type": "internal"
+    },
+    {
+     "name": "Tamoghna Saha",
+     "type": "internal"
+    },
+    {
+     "name": "Dirichi Ike-Njoku",
+     "type": "internal"
+    },
+    {
+     "name": "Jindong Gu",
+     "type": "internal"
+    },
+    {
+     "name": "Yiwen Song",
+     "type": "internal"
+    },
+    {
+     "name": "Cai Xu",
+     "type": "internal"
+    },
+    {
+     "name": "Jingjing Zhou",
+     "type": "internal"
+    },
+    {
+     "name": "Aparna Joshi",
+     "type": "internal"
+    },
+    {
+     "name": "Shravan Dheep",
+     "type": "internal"
+    },
+    {
+     "name": "Mani Malek",
+     "type": "internal"
+    },
+    {
+     "name": "Hamid Palangi",
+     "type": "internal"
+    },
+    {
+     "name": "Joon Baek",
+     "type": "internal"
+    },
+    {
+     "name": "Rick Pereira",
+     "type": "internal"
+    },
+    {
+     "name": "Karthik Narasimhan",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -17948,6 +18699,70 @@
     "bench__openai__strongreject",
     "bench__openai__toxic-wildchat",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Chan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Signature Science",
+     "type": "private"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "external red teaming",
+     "type": "multiple"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Tan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -17987,7 +18802,94 @@
     "train__multiple__other-vulnerability-reporting__bug-bounty-programs",
     "train__multiple__preference-learning-supervised-training__preference-learning-supervised-training"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "UK Government",
+     "type": "governmental"
+    },
+    {
+     "name": "Republic of Korea Government",
+     "type": "governmental"
+    },
+    {
+     "name": "Amazon",
+     "type": "private"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Cohere",
+     "type": "private"
+    },
+    {
+     "name": "G42",
+     "type": "private"
+    },
+    {
+     "name": "IBM",
+     "type": "private"
+    },
+    {
+     "name": "Inflection AI",
+     "type": "private"
+    },
+    {
+     "name": "Meta",
+     "type": "ai company"
+    },
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    },
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    },
+    {
+     "name": "Naver",
+     "type": "private"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Samsung Electronics",
+     "type": "private"
+    },
+    {
+     "name": "Technology Innovation Institute",
+     "type": "research institute"
+    },
+    {
+     "name": "xAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Zhipu.ai",
+     "type": "private"
+    },
+    {
+     "name": "Magic",
+     "type": "other"
+    },
+    {
+     "name": "Minimax",
+     "type": "ai company"
+    },
+    {
+     "name": "01.ai",
+     "type": "ai company"
+    },
+    {
+     "name": "NVIDIA",
+     "type": "private"
+    }
+   ]
   },
   {
    "id": "4WYILZ2T",
@@ -18035,6 +18937,50 @@
     "bench__google__humanity-s-last-exam-no-tools",
     "bench__google__simpleqa",
     "bench__google__simpleqa-verified"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Clark et al., 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Du et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Fedus et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Jiang et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Lepikhin et al., 2020",
+     "type": "academic"
+    },
+    {
+     "name": "Riquelme et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Rojas et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Shazeer et al., 2017",
+     "type": "academic"
+    },
+    {
+     "name": "Vaswani et al., 2017",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18074,6 +19020,18 @@
     "bench__openai__openai-system-cards",
     "bench__openai__pci-dss-v4-0-1",
     "bench__openai__soc-2-type-2"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Bugcrowd",
+     "type": "private"
+    }
    ]
   },
   {
@@ -18127,6 +19085,30 @@
     "bench__openai__table-6-shannon-entropy-and-frequency-of-heterogeneous-outputs-for-gender",
     "bench__openai__table-7-class-distributions-for-race",
     "bench__openai__table-9-class-distributions-for-skin-tone"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Thorn",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Karkkainen and Joo (2021)",
+     "type": "academic"
+    },
+    {
+     "name": "Monk (2019)",
+     "type": "academic"
+    },
+    {
+     "name": "Shannon (1948)",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18184,6 +19166,42 @@
     "bench__openai__strongreject",
     "bench__openai__toxic-wildchat",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Parrish et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Jane Street",
+     "type": "private"
+    }
    ]
   },
   {
@@ -18240,6 +19258,38 @@
     "bench__openai__sabotage-suite",
     "bench__openai__tacit-knowledge-and-troubleshooting",
     "bench__openai__troubleshootingbench"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Zhu et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    }
    ]
   },
   {
@@ -18275,7 +19325,50 @@
     "train__multiple__reward-shaping-preference-learning__side-effect-avoidance",
     "train__multiple__reward-shaping-supervised-training-runtime-safeguards__demonstration-fine-tuning"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Dario Amodei",
+     "type": "academic"
+    },
+    {
+     "name": "Chris Olah",
+     "type": "internal"
+    },
+    {
+     "name": "Jacob Steinhardt",
+     "type": "internal"
+    },
+    {
+     "name": "Paul Christiano",
+     "type": "internal"
+    },
+    {
+     "name": "John Schulman",
+     "type": "internal"
+    },
+    {
+     "name": "Dan Mane",
+     "type": "internal"
+    },
+    {
+     "name": "Google Brain",
+     "type": "ai company"
+    },
+    {
+     "name": "Stanford University",
+     "type": "academic"
+    },
+    {
+     "name": "UC Berkeley",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ]
   },
   {
    "id": "78ADAFDM",
@@ -18310,7 +19403,14 @@
    "benchmark_ids": [
     "bench__xai__adversarial-testing",
     "bench__xai__reasoning-benchmark-tasks"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "7SUY4C2C",
@@ -18338,7 +19438,9 @@
     "train____data-curation-supervised-training__instruction-tuning",
     "train____preference-learning-supervised-training__iterated-amplification"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": []
   },
   {
    "id": "8666LHQ4",
@@ -18376,7 +19478,14 @@
     "train__google__other-technical-solutions__other-technical-solutions",
     "train__google__runtime-safeguards-hard-constraints__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "8AC5MJHG",
@@ -18443,6 +19552,30 @@
     "bench__anthropic__swe-bench-verified-hard-subset",
     "bench__anthropic__synthesis-screening-evasion",
     "bench__anthropic__three-agentic-coding-misuse-evaluations"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Deloitte",
+     "type": "private"
+    },
+    {
+     "name": "Signature Science",
+     "type": "research institute"
+    },
+    {
+     "name": "Parrish et al (2021)",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18490,6 +19623,69 @@
     "bench__openai__soft-tokens-on-math",
     "bench__openai__strongreject-benchmark",
     "bench__openai__think-less-attack"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Wojciech Zaremba",
+     "type": "internal"
+    },
+    {
+     "name": "Evgenia Nitishinskaya",
+     "type": "internal"
+    },
+    {
+     "name": "Boaz Barak",
+     "type": "internal"
+    },
+    {
+     "name": "Stephanie Lin",
+     "type": "internal"
+    },
+    {
+     "name": "Sam Toyer",
+     "type": "internal"
+    },
+    {
+     "name": "Yaodong Yu",
+     "type": "internal"
+    },
+    {
+     "name": "Rachel Dias",
+     "type": "internal"
+    },
+    {
+     "name": "Eric Wallace",
+     "type": "internal"
+    },
+    {
+     "name": "Kai Xiao",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Amelia Glaese",
+     "type": "internal"
+    },
+    {
+     "name": "Jason Wei et al. 2024",
+     "type": "private"
+    },
+    {
+     "name": "Alexandra Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Dan Hendrycks et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Yinpeng Dong et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18526,7 +19722,18 @@
     "train__meta__inference-time-filtering__safety-filter",
     "train__meta__other-local-deployment__other-local-deployment"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mark Zuckerberg",
+     "type": "internal"
+    },
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "99337X5A",
@@ -18577,6 +19784,18 @@
     "bench__google__text-to-text-safety",
     "bench__google__tone",
     "bench__google__unjustified-refusals"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wijk et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18624,7 +19843,74 @@
     "train__openai__other-reasoning-transparency__chain-of-thought",
     "train__openai__runtime-safeguards__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Yonadav Shavit",
+     "type": "internal"
+    },
+    {
+     "name": "Sandhini Agarwal",
+     "type": "internal"
+    },
+    {
+     "name": "Miles Brundage",
+     "type": "internal"
+    },
+    {
+     "name": "Steven Adler",
+     "type": "internal"
+    },
+    {
+     "name": "Cullen O’Keefe",
+     "type": "internal"
+    },
+    {
+     "name": "Rosie Campbell",
+     "type": "internal"
+    },
+    {
+     "name": "Teddy Lee",
+     "type": "internal"
+    },
+    {
+     "name": "Pamela Mishkin",
+     "type": "internal"
+    },
+    {
+     "name": "Tyna Eloundou",
+     "type": "internal"
+    },
+    {
+     "name": "Alan Hickey",
+     "type": "internal"
+    },
+    {
+     "name": "Katarina Slama",
+     "type": "internal"
+    },
+    {
+     "name": "Lama Ahmad",
+     "type": "internal"
+    },
+    {
+     "name": "Paul McMillan",
+     "type": "internal"
+    },
+    {
+     "name": "Alex Beutel",
+     "type": "internal"
+    },
+    {
+     "name": "Alexandre Passos",
+     "type": "internal"
+    },
+    {
+     "name": "David G. Robinson",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "9M45NAMN",
@@ -18650,7 +19936,14 @@
    "training_ids": [
     "train__google-deepmind__adversarial-training__adversarial-training"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "9MZ9LX9G",
@@ -18713,6 +20006,54 @@
     "bench__openai__toxic-wildchat",
     "bench__openai__wmdp-biology",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Jimenez et al. [26]",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish et al. [1]",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Dr. Jake Hecla",
+     "type": "academic"
+    },
+    {
+     "name": "Hendrycks et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18783,6 +20124,42 @@
     "bench__openai__tacit-knowledge-and-troubleshooting",
     "bench__openai__troubleshootingbench",
     "bench__openai__worst-case-defender-success-rate"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Eloundou et al. 2024",
+     "type": "internal"
+    },
+    {
+     "name": "Laurent et al. 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Zhu et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Hicks et al. 2026",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -18827,6 +20204,22 @@
     "bench__xai__virology-capabilities-test-vct",
     "bench__xai__weapons-of-mass-destruction-proxy-wmdp-benchmark",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Nelson and Rose, 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
    ]
   },
   {
@@ -18866,6 +20259,54 @@
     "bench__openai__llama-guard-2",
     "bench__openai__wildchat",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Tong Mu",
+     "type": "internal"
+    },
+    {
+     "name": "Alec Helyar",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Joshua Achiam",
+     "type": "internal"
+    },
+    {
+     "name": "Andrea Vallone",
+     "type": "internal"
+    },
+    {
+     "name": "Ian Kivlichan",
+     "type": "internal"
+    },
+    {
+     "name": "Molly Lin",
+     "type": "internal"
+    },
+    {
+     "name": "Alex Beutel",
+     "type": "internal"
+    },
+    {
+     "name": "John Schulman",
+     "type": "internal"
+    },
+    {
+     "name": "Lilian Weng",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -18904,7 +20345,14 @@
     "train__google__runtime-safeguards-preference-learning__rlhf",
     "train__google__runtime-safeguards__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "B6A9MNRF",
@@ -18944,6 +20392,25 @@
    "benchmark_ids": [
     "bench__openai__automated-evaluations-for-selected-subdomains-with-red-teamer-prompts-as-seeds",
     "bench__openai__evaluations-that-studied-the-ability-of-the-model-to-encrypt-or-compress-a-given-piece-of-text-and-then-for-another-model-to-decrypt-it"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Lama Ahmad",
+     "type": "internal"
+    },
+    {
+     "name": "Sandhini Agarwal",
+     "type": "internal"
+    },
+    {
+     "name": "Michael Lampe",
+     "type": "internal"
+    },
+    {
+     "name": "Pamela Mishkin",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -18967,7 +20434,14 @@
    ],
    "risk_ids": [],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "B9KS8GF8",
@@ -19010,7 +20484,30 @@
     "train__anthropic__hard-constraints__refusal-policies",
     "train__anthropic__runtime-safeguards__trip-wires"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Amanda Askell",
+     "type": "internal"
+    },
+    {
+     "name": "Joe Carlsmith",
+     "type": "internal"
+    },
+    {
+     "name": "Chris Olah",
+     "type": "internal"
+    },
+    {
+     "name": "Jared Kaplan",
+     "type": "internal"
+    },
+    {
+     "name": "Holden Karnofsky",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "BBJHF7FY",
@@ -19042,6 +20539,50 @@
     "bench__openai__frontierscience-research",
     "bench__openai__gpqa",
     "bench__openai__mmlu"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Hendrycks et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Rein et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Miles Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Robi Lin",
+     "type": "internal"
+    },
+    {
+     "name": "Kat Hu",
+     "type": "internal"
+    },
+    {
+     "name": "Joy Jiao",
+     "type": "internal"
+    },
+    {
+     "name": "Neil Chowdhury",
+     "type": "internal"
+    },
+    {
+     "name": "Ethan Chang",
+     "type": "internal"
+    },
+    {
+     "name": "Tejal Patwardhan",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -19078,7 +20619,14 @@
     "train__openai__other-technical-alignment__other-technical-alignment",
     "train__openai__supervised-training__instruction-tuning"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "BPRGHRFU",
@@ -19114,6 +20662,70 @@
    ],
    "benchmark_ids": [
     "bench__openai__sample-of-evaluation-problems"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Sam Manning",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Pamela Mishkin",
+     "type": "internal"
+    },
+    {
+     "name": "Gillian Hadfield",
+     "type": "academic"
+    },
+    {
+     "name": "Tyna Eloundou",
+     "type": "internal"
+    },
+    {
+     "name": "Emily Eisner",
+     "type": "academic"
+    },
+    {
+     "name": "OpenResearch",
+     "type": "nonprofit"
+    },
+    {
+     "name": "University of Toronto",
+     "type": "academic"
+    },
+    {
+     "name": "University of California, Berkeley",
+     "type": "academic"
+    },
+    {
+     "name": "Chen et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Amodei et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Weidinger et al.",
+     "type": "private"
+    },
+    {
+     "name": "Acemoglu and Restrepo 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Van de Werfhorst and Salverda 2012",
+     "type": "academic"
+    },
+    {
+     "name": "Acemoglu 2021a",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19152,6 +20764,50 @@
     "bench__openai__brookings-breakout-scale",
     "bench__openai__mitre-att-ck-framework",
     "bench__openai__preparedness-framework"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Ben Nimmo",
+     "type": "internal"
+    },
+    {
+     "name": "Michael Flossman",
+     "type": "internal"
+    },
+    {
+     "name": "Brookings",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Graphika",
+     "type": "private"
+    },
+    {
+     "name": "MITRE",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    },
+    {
+     "name": "Meta",
+     "type": "ai company"
+    },
+    {
+     "name": "Proofpoint",
+     "type": "private"
+    },
+    {
+     "name": "Clemson University",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19202,6 +20858,34 @@
     "bench__openai__long-range-autonomy-capability-evaluations",
     "bench__openai__public-jailbreak-bounties",
     "bench__openai__scalable-evaluations"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Safety Advisory Group",
+     "type": "internal"
+    },
+    {
+     "name": "Safety and Security Committee",
+     "type": "internal"
+    },
+    {
+     "name": "CDC",
+     "type": "governmental"
+    },
+    {
+     "name": "U.S. government",
+     "type": "governmental"
+    },
+    {
+     "name": "C2PA",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -19240,6 +20924,130 @@
    ],
    "benchmark_ids": [
     "bench__openai__model-spec-ranker-msr"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Adam Kalai",
+     "type": "internal"
+    },
+    {
+     "name": "AJ Ostrow",
+     "type": "internal"
+    },
+    {
+     "name": "Andrea Vallone",
+     "type": "internal"
+    },
+    {
+     "name": "Anna-Luisa Brakman",
+     "type": "internal"
+    },
+    {
+     "name": "Boaz Barak",
+     "type": "internal"
+    },
+    {
+     "name": "Brent Bannon",
+     "type": "internal"
+    },
+    {
+     "name": "Cary Bassin",
+     "type": "internal"
+    },
+    {
+     "name": "Casey Meehan",
+     "type": "internal"
+    },
+    {
+     "name": "Charlotte Cole",
+     "type": "internal"
+    },
+    {
+     "name": "Freddie Sulit",
+     "type": "internal"
+    },
+    {
+     "name": "Gaby Raila",
+     "type": "internal"
+    },
+    {
+     "name": "Isabelle Zhou",
+     "type": "internal"
+    },
+    {
+     "name": "Jasmyn Samaroo",
+     "type": "internal"
+    },
+    {
+     "name": "Jason Wolfe",
+     "type": "internal"
+    },
+    {
+     "name": "Joanne Jang",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Laurentia Romaniuk",
+     "type": "internal"
+    },
+    {
+     "name": "Marwan Aljubeh",
+     "type": "internal"
+    },
+    {
+     "name": "Mia Glaese",
+     "type": "internal"
+    },
+    {
+     "name": "Michael Sharman",
+     "type": "internal"
+    },
+    {
+     "name": "Phillip Kim",
+     "type": "internal"
+    },
+    {
+     "name": "Rodrigo Riaza Perez",
+     "type": "internal"
+    },
+    {
+     "name": "Saachi Jain",
+     "type": "internal"
+    },
+    {
+     "name": "Sam Altman",
+     "type": "internal"
+    },
+    {
+     "name": "Sean Grove",
+     "type": "internal"
+    },
+    {
+     "name": "Taya Christianson",
+     "type": "internal"
+    },
+    {
+     "name": "Tom Cunningham",
+     "type": "internal"
+    },
+    {
+     "name": "Wade Morgan",
+     "type": "internal"
+    },
+    {
+     "name": "Yara Khakbaz",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -19286,6 +21094,33 @@
     "bench__centre-for-the-governance-of-ai__realtoxicityprompts-evaluating-neural-toxic-degeneration-in-language-models",
     "bench__centre-for-the-governance-of-ai__survey-of-hallucination-in-natural-language-generation",
     "bench__centre-for-the-governance-of-ai__truthfulqa"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Markus Anderljung",
+     "type": "research institute"
+    },
+    {
+     "name": "Joslyn Barnhart",
+     "type": "private"
+    },
+    {
+     "name": "Anton Korinek",
+     "type": "academic"
+    },
+    {
+     "name": "Jade Leung",
+     "type": "private"
+    },
+    {
+     "name": "Cullen O’Keefe",
+     "type": "private"
+    },
+    {
+     "name": "Jess Whittlestone",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -19348,7 +21183,18 @@
     "bench__google__stealth-challenges",
     "bench__google__tone",
     "bench__google__weapons-of-mass-destruction-proxy-wdmp"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "CDHU7CUP",
@@ -19393,6 +21239,38 @@
     "bench__openai__wikitext-2",
     "bench__openai__winograd-schema-challenge",
     "bench__openai__wmt-14-fr-en"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Alec Radford",
+     "type": "internal"
+    },
+    {
+     "name": "Jeffrey Wu",
+     "type": "internal"
+    },
+    {
+     "name": "Rewon Child",
+     "type": "internal"
+    },
+    {
+     "name": "David Luan",
+     "type": "internal"
+    },
+    {
+     "name": "Dario Amodei",
+     "type": "academic"
+    },
+    {
+     "name": "Ilya Sutskever",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -19421,7 +21299,31 @@
    "training_ids": [
     "train__openai__other-bug-bounty-program__bug-bounty-program"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "security researchers",
+     "type": "academic"
+    },
+    {
+     "name": "ethical hackers",
+     "type": "public"
+    },
+    {
+     "name": "technology enthusiasts",
+     "type": "public"
+    },
+    {
+     "name": "Bugcrowd",
+     "type": "private"
+    }
+   ]
   },
   {
    "id": "CUUTWQD6",
@@ -19470,6 +21372,22 @@
     "bench__openai__standard-refusal-evaluation",
     "bench__openai__strongreject",
     "bench__openai__successfully-ignored-prompt-injection-attack-during-coding-tasks-in-codex-environment"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wallace et al.",
+     "type": "research institute"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19493,7 +21411,14 @@
     "risk__mistral-ai__ai-act-and-other-applicable-ai-regulations"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "D7JU8J2S",
@@ -19527,7 +21452,39 @@
     "train__openai__data-curation-supervised-training-runtime-safeguards__demonstration-fine-tuning",
     "train__openai__hard-constraints__refusal-policies"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Bob Rotsted",
+     "type": "internal"
+    },
+    {
+     "name": "Girish Sastry",
+     "type": "internal"
+    },
+    {
+     "name": "Harold Nguyen",
+     "type": "internal"
+    },
+    {
+     "name": "Gabriel Bernadett-Shapiro",
+     "type": "internal"
+    },
+    {
+     "name": "Joel Parish",
+     "type": "internal"
+    },
+    {
+     "name": "Cybersecurity and Infrastructure Security Agency",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "D7Z5UE2D",
@@ -19584,6 +21541,54 @@
     "bench__openai__strongreject",
     "bench__openai__swe-bench-verified",
     "bench__openai__system-prompt-extraction"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Parrish et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Starace et al.",
+     "type": "private"
+    },
+    {
+     "name": "Chowdhury et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Rein et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Phan et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Hendrycks et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19620,7 +21625,27 @@
     "train__google__runtime-safeguards-hard-constraints-inference-time-filtering__model-lookahead",
     "train__google__runtime-safeguards-hard-constraints__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Santiago Díaz",
+     "type": "internal"
+    },
+    {
+     "name": "Christoph Kern",
+     "type": "internal"
+    },
+    {
+     "name": "Kara Olive",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "DAZ6QU8E",
@@ -19671,6 +21696,54 @@
     "bench__google-deepmind__real-toxicity-prompts",
     "bench__google-deepmind__self-proliferation-evaluation",
     "bench__google-deepmind__total-memorization-rate"
+   ],
+   "author_actors": [
+    {
+     "name": "Gemini Team, Google",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Kinniment et al., 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Phuong et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Yang et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Chen et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ding et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Chao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gemma-Team et al., 2024",
+     "type": "internal"
+    },
+    {
+     "name": "Rojas et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Gehman et al., 2020",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19705,6 +21778,42 @@
    ],
    "benchmark_ids": [
     "bench__openai__openai-internal-dataset"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Partnership on AI",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Coalition for Content Provenance and Authenticity",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    },
+    {
+     "name": "Older Adults Technology Services from AARP",
+     "type": "nonprofit"
+    },
+    {
+     "name": "International IDEA",
+     "type": "nonprofit"
+    },
+    {
+     "name": "research labs",
+     "type": "academic"
+    },
+    {
+     "name": "research-oriented journalism nonprofits",
+     "type": "other"
+    }
    ]
   },
   {
@@ -19757,6 +21866,18 @@
     "bench__openai__preparedness-framework",
     "bench__openai__production-benchmarks",
     "bench__openai__strongreject"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -19794,7 +21915,18 @@
    ],
    "benchmark_ids": [
     "bench__google__academic-benchmarks"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google Jigsaw",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "EX5MJA8V",
@@ -19833,7 +21965,14 @@
     "bench__deepseek-ai__ifeval",
     "bench__deepseek-ai__mt-bench",
     "bench__deepseek__mmlu-humanity-moral-subset"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "FAQQKXKC",
@@ -19867,6 +22006,18 @@
    ],
    "benchmark_ids": [
     "bench__google__ai-safety-benchmark"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "MLCommons",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -19890,7 +22041,14 @@
    "training_ids": [
     "train__openai__inference-time-filtering-runtime-safeguards__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "FHTLRAWN",
@@ -19943,7 +22101,14 @@
     "bench__google__text-to-text-safety",
     "bench__google__tone",
     "bench__google__unjustified-refusals"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "FPFBD8PV",
@@ -19998,6 +22163,46 @@
     "bench__anthropic__simple-qa",
     "bench__anthropic__swe-bench-verified-hard-subset",
     "bench__anthropic__violative-request-evaluations"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Deloitte",
+     "type": "private"
+    },
+    {
+     "name": "Signature Science",
+     "type": "private"
+    },
+    {
+     "name": "Wang, Z., et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "Lynch, A., et al. (2025)",
+     "type": "internal"
+    },
+    {
+     "name": "Parrish, A., et al. (2021)",
+     "type": "academic"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20028,7 +22233,14 @@
     "risk__openai__unduly-concentrate-power"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "GARYFXHG",
@@ -20081,6 +22293,58 @@
     "bench__openai__personqa-dataset",
     "bench__openai__strongreject",
     "bench__openai__swe-bench-verified"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Jimenez et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Dr. Jake Hecla",
+     "type": "academic"
+    },
+    {
+     "name": "MIT",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "external red teamers",
+     "type": "multiple"
+    },
+    {
+     "name": "Lysios LLC",
+     "type": "research institute"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Signature Science",
+     "type": "research institute"
+    }
    ]
   },
   {
@@ -20138,7 +22402,14 @@
     "bench__anthropic__swe-bench-verified-hard-subset",
     "bench__anthropic__wildchat",
     "bench__anthropic__xstest"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "GMPNNKLY",
@@ -20182,6 +22453,30 @@
     "bench__anthropic__wildchat-non-toxic",
     "bench__anthropic__wildchat-toxic",
     "bench__anthropic__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "UK Artificial Intelligence Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20233,6 +22528,86 @@
     "bench__mistral-ai__siqa",
     "bench__mistral-ai__triviaqa",
     "bench__mistral-ai__winogrande"
+   ],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Albert Q. Jiang",
+     "type": "internal"
+    },
+    {
+     "name": "Alexandre Sablayrolles",
+     "type": "internal"
+    },
+    {
+     "name": "Arthur Mensch",
+     "type": "internal"
+    },
+    {
+     "name": "Chris Bamford",
+     "type": "internal"
+    },
+    {
+     "name": "Devendra Singh Chaplot",
+     "type": "internal"
+    },
+    {
+     "name": "Diego de las Casas",
+     "type": "internal"
+    },
+    {
+     "name": "Florian Bressand",
+     "type": "internal"
+    },
+    {
+     "name": "Gianna Lengyel",
+     "type": "internal"
+    },
+    {
+     "name": "Guillaume Lample",
+     "type": "internal"
+    },
+    {
+     "name": "Lucile Saulnier",
+     "type": "internal"
+    },
+    {
+     "name": "Lélio Renard Lavaud",
+     "type": "internal"
+    },
+    {
+     "name": "Marie-Anne Lachaux",
+     "type": "internal"
+    },
+    {
+     "name": "Pierre Stock",
+     "type": "internal"
+    },
+    {
+     "name": "Teven Le Scao",
+     "type": "internal"
+    },
+    {
+     "name": "Thibaut Lavril",
+     "type": "internal"
+    },
+    {
+     "name": "Thomas Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Timothée Lacroix",
+     "type": "internal"
+    },
+    {
+     "name": "William El Sayed",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -20264,6 +22639,74 @@
    "benchmark_ids": [
     "bench__openai__paperbench",
     "bench__openai__paperbench-code-dev"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Giulio Starace",
+     "type": "internal"
+    },
+    {
+     "name": "Oliver Jaffe",
+     "type": "internal"
+    },
+    {
+     "name": "Dane Sherburn",
+     "type": "internal"
+    },
+    {
+     "name": "James Aung",
+     "type": "internal"
+    },
+    {
+     "name": "Chan Jun Shern",
+     "type": "internal"
+    },
+    {
+     "name": "Leon Maksin",
+     "type": "internal"
+    },
+    {
+     "name": "Rachel Dias",
+     "type": "internal"
+    },
+    {
+     "name": "Evan Mays",
+     "type": "internal"
+    },
+    {
+     "name": "Benjamin Kinsella",
+     "type": "internal"
+    },
+    {
+     "name": "Wyatt Thompson",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Amelia Glaese",
+     "type": "internal"
+    },
+    {
+     "name": "Tejal Patwardhan",
+     "type": "internal"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
    ]
   },
   {
@@ -20302,6 +22745,74 @@
    "benchmark_ids": [
     "bench__openai__anthropic-harmless-dataset",
     "bench__openai__openai-s-moderation-api"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Alex Beutel",
+     "type": "internal"
+    },
+    {
+     "name": "Kai Xiao",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Lilian Weng",
+     "type": "internal"
+    },
+    {
+     "name": "Lin et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Sun et al., 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Willison, 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Greshake et al., 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Carlini et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Nasr et al., 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Sheng et al., 2019",
+     "type": "academic"
+    },
+    {
+     "name": "Gehman et al., 2020",
+     "type": "academic"
+    },
+    {
+     "name": "Perez et al., 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Zou et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20343,6 +22854,54 @@
     "bench__unbabel__mmlu",
     "bench__unbabel__mmlu-pro",
     "bench__unbabel__musr"
+   ],
+   "author_actors": [
+    {
+     "name": "Unbabel",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Instituto de Telecomunicações & Instituto Superior Técnico, Universidade de Lisboa",
+     "type": "academic"
+    },
+    {
+     "name": "Carnegie Mellon University",
+     "type": "academic"
+    },
+    {
+     "name": "MICS, CentraleSupélec, Université Paris-Saclay",
+     "type": "academic"
+    },
+    {
+     "name": "Illuin Technology",
+     "type": "private"
+    },
+    {
+     "name": "University of Edinburgh",
+     "type": "academic"
+    },
+    {
+     "name": "Equall",
+     "type": "private"
+    },
+    {
+     "name": "Aveni",
+     "type": "private"
+    },
+    {
+     "name": "Sorbonne Université",
+     "type": "academic"
+    },
+    {
+     "name": "CNRS",
+     "type": "academic"
+    },
+    {
+     "name": "Diabolocom",
+     "type": "private"
+    }
    ]
   },
   {
@@ -20370,7 +22929,67 @@
    "training_ids": [
     "train__openai__data-curation-adversarial-training-inference-time-filtering-hard-constraints__filtering"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Thorn",
+     "type": "nonprofit"
+    },
+    {
+     "name": "All Tech Is Human",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Amazon",
+     "type": "private"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Civitai",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Meta",
+     "type": "ai company"
+    },
+    {
+     "name": "Metaphysic",
+     "type": "private"
+    },
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    },
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    },
+    {
+     "name": "Stability AI",
+     "type": "private"
+    },
+    {
+     "name": "National Center for Missing and Exploited Children",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Tech Coalition",
+     "type": "nonprofit"
+    }
+   ]
   },
   {
    "id": "HPGBQ2RY",
@@ -20419,6 +23038,26 @@
     "bench__meta__mlcommons-ai-safety-v0-5",
     "bench__meta__toxigen",
     "bench__meta__truthfulqa"
+   ],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "MLCommons",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Stanford Center for Research on Foundation Models",
+     "type": "academic"
+    },
+    {
+     "name": "EleutherAI",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -20449,6 +23088,18 @@
     "bench__openai__political-bias-evaluation",
     "bench__openai__political-compass-test",
     "bench__openai__sample-of-real-production-traffic"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "David Rozado",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20482,7 +23133,23 @@
     "train__google__other-context-evaluation-tool__context-evaluation-tool",
     "train__google__supervised-training__supervised-training"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Weidinger et al.",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "I4SDWFN7",
@@ -20518,6 +23185,46 @@
     "bench__openai__curated-suite-of-20-simple-python-next-token-binary-prediction-tasks",
     "bench__openai__interpretability-metric",
     "bench__openai__mean-ablation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Leo Gao",
+     "type": "internal"
+    },
+    {
+     "name": "Achyuta Rajaram",
+     "type": "academic"
+    },
+    {
+     "name": "Jacob Coxon",
+     "type": "internal"
+    },
+    {
+     "name": "Soham V. Govande",
+     "type": "internal"
+    },
+    {
+     "name": "Bowen Baker",
+     "type": "internal"
+    },
+    {
+     "name": "Dan Mossing",
+     "type": "internal"
+    },
+    {
+     "name": "Chan et al.",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Elhage et al., 2022b",
+     "type": "private"
+    }
    ]
   },
   {
@@ -20555,6 +23262,54 @@
     "bench__openai__exit-0-regex-detector",
     "bench__openai__raise-skiptest-regex-detector",
     "bench__openai__self-awareness-monitor-prompt"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Bowen Baker",
+     "type": "internal"
+    },
+    {
+     "name": "Joost Huizinga",
+     "type": "internal"
+    },
+    {
+     "name": "Leo Gao",
+     "type": "internal"
+    },
+    {
+     "name": "Zehao Dou",
+     "type": "internal"
+    },
+    {
+     "name": "Melody Y. Guan",
+     "type": "internal"
+    },
+    {
+     "name": "Aleksander Madry",
+     "type": "internal"
+    },
+    {
+     "name": "Wojciech Zaremba",
+     "type": "internal"
+    },
+    {
+     "name": "Jakub Pachocki",
+     "type": "internal"
+    },
+    {
+     "name": "David Farhi",
+     "type": "internal"
+    },
+    {
+     "name": "Greenblatt et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20632,6 +23387,46 @@
     "bench__anthropic__single-turn-violative-request-evaluation",
     "bench__anthropic__swe-bench-verified-hard-subset",
     "bench__anthropic__synthesis-screening-evasion"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Kutasov, J., et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish, A., et al. (2021)",
+     "type": "academic"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Deloitte",
+     "type": "private"
+    },
+    {
+     "name": "Signature Science",
+     "type": "private"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "Zou et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20657,7 +23452,14 @@
    "training_ids": [
     "train__xai__other-post-training__other-post-training"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "IGUW6VXY",
@@ -20690,6 +23492,22 @@
    ],
    "benchmark_ids": [
     "bench__openai__an-evaluation-where-an-agent-attempts-to-sneakily-sabotage-prs-to-the-openai-codebase"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Guan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Lindner et al., 2026",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20745,6 +23563,26 @@
     "bench__deepseek__internal-jailbreak-test-suite",
     "bench__deepseek__simple-safety-tests-sst",
     "bench__deepseek__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Parrish et al., 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Vidgen et al., 2023",
+     "type": "academic"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -20787,7 +23625,14 @@
     "bench__deepseek-ai__ifeval",
     "bench__deepseek-ai__mt-bench",
     "bench__deepseek__deepseek-safety-evaluation-taxonomy"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "J497CEWS",
@@ -20837,6 +23682,34 @@
     "bench__openai__troubleshootingbench",
     "bench__openai__virology-troubleshooting-vct",
     "bench__openai__world-class-biology-wcb"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Eric Wallace",
+     "type": "internal"
+    },
+    {
+     "name": "Olivia Watkins",
+     "type": "internal"
+    },
+    {
+     "name": "Miles Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Kai Chen",
+     "type": "internal"
+    },
+    {
+     "name": "Chris Koch",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -20877,6 +23750,30 @@
     "bench__deepseek-ai__math",
     "bench__deepseek-ai__mt-bench",
     "bench__deepseek-ai__swe-bench"
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Qihao Zhu",
+     "type": "internal"
+    },
+    {
+     "name": "Daya Guo",
+     "type": "internal"
+    },
+    {
+     "name": "Zhihong Shao",
+     "type": "internal"
+    },
+    {
+     "name": "Dejian Yang",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -20922,7 +23819,30 @@
     "bench__google__simpleqa",
     "bench__google__text-to-text-safety",
     "bench__google__tone"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    },
+    {
+     "name": "Google's AI Principles",
+     "type": "internal"
+    },
+    {
+     "name": "Google DeepMind’s Frontier Safety Framework",
+     "type": "internal"
+    },
+    {
+     "name": "Google DeepMind Responsibility and Safety Council",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "JSVWRMC3",
@@ -20967,7 +23887,14 @@
     "bench__aleph-alpha__internal-benchmarks",
     "bench__aleph-alpha__mmlu",
     "bench__aleph-alpha__truthfulqa"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Aleph Alpha Research",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "K58FEDKQ",
@@ -21036,6 +23963,50 @@
     "bench__openai__swe-bench-verified",
     "bench__openai__ungrounded-inference-evaluation",
     "bench__openai__vision-sexual-refusal-evaluation-vision-self-harm-refusal-evaluation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Chowdhury et al.",
+     "type": "academic"
+    },
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Parrish et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Eloundou et al. 2024",
+     "type": "internal"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21059,7 +24030,19 @@
     "risk__coalition-for-secure-ai-cosai__ai-security"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Coalition for Secure AI",
+     "type": "industry consortium"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "OASIS Open",
+     "type": "industry consortium"
+    }
+   ]
   },
   {
    "id": "KB8A5XVE",
@@ -21105,6 +24088,26 @@
     "bench__openai__safety-evaluations-self-harm",
     "bench__openai__safety-evaluations-violative-political-persuasion",
     "bench__openai__safety-evaluations-violence-and-gore"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "OpenAI Red Teaming Network",
+     "type": "multiple"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "National Center for Missing and Exploited Children",
+     "type": "nonprofit"
+    },
+    {
+     "name": "internal red teamers",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -21138,7 +24141,14 @@
     "train__meta__supervised-training-hard-constraints__instruction-tuning",
     "train__meta__supervised-training-hard-constraints__supervised-training-hard-constraints"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "KLJWPLS5",
@@ -21178,6 +24188,62 @@
     "bench__openai__reward-hacking-impossible-task",
     "bench__openai__sandbagging-qa-no-goal",
     "bench__openai__simpleqa"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI (2025b)",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Pyatkin et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Huang et al. (2025)",
+     "type": "academic"
+    },
+    {
+     "name": "Hubinger et al. (2024)",
+     "type": "academic"
+    },
+    {
+     "name": "Schoen et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Denison et al. (2024)",
+     "type": "academic"
+    },
+    {
+     "name": "Manas Joglekar",
+     "type": "internal"
+    },
+    {
+     "name": "Jeremy Chen",
+     "type": "internal"
+    },
+    {
+     "name": "Gabriel Wu",
+     "type": "internal"
+    },
+    {
+     "name": "Jason Yosinski",
+     "type": "internal"
+    },
+    {
+     "name": "Jasmine Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Boaz Barak",
+     "type": "internal"
+    },
+    {
+     "name": "Amelia Glaese",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -21243,6 +24309,46 @@
     "bench__openai__standard-disallowed-content-evaluation",
     "bench__openai__strongreject",
     "bench__openai__swe-bench-verified"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Parrish et al.",
+     "type": "academic"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "US Center for AI Standards and Innovation",
+     "type": "governmental"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Starace et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21275,6 +24381,29 @@
     "bench__openai__inception-score-is",
     "bench__openai__precision-prec",
     "bench__openai__recall-rec"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Yang Song",
+     "type": "internal"
+    },
+    {
+     "name": "Prafulla Dhariwal",
+     "type": "internal"
+    },
+    {
+     "name": "Mark Chen",
+     "type": "internal"
+    },
+    {
+     "name": "Ilya Sutskever",
+     "type": "internal"
+    },
+    {
+     "name": "Kynka¨anniemi et al. (2019)",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21361,6 +24490,58 @@
     "bench__openai__tacit-knowledge-and-troubleshooting",
     "bench__openai__troubleshootingbench",
     "bench__openai__v1-atomic-challenge-suite"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "G. Starace et al. 2025",
+     "type": "private"
+    },
+    {
+     "name": "T. Eloundou et al.",
+     "type": "private"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "J. M. Laurent et al. 2024",
+     "type": "nonprofit"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Y. Zhu et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Z. Wang et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "A. Souly et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21394,6 +24575,58 @@
    "benchmark_ids": [
     "bench__multiple__truthfulqa",
     "bench__university-of-oxford-openai__truthfulqa"
+   ],
+   "author_actors": [
+    {
+     "name": "University of Oxford",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Stephanie Lin",
+     "type": "academic"
+    },
+    {
+     "name": "Jacob Hilton",
+     "type": "private"
+    },
+    {
+     "name": "Owain Evans",
+     "type": "academic"
+    },
+    {
+     "name": "University of Oxford",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Ouyang et al. 2021",
+     "type": "private"
+    },
+    {
+     "name": "Nakano et al. 2021",
+     "type": "private"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "private"
+    },
+    {
+     "name": "Rae et al.",
+     "type": "private"
+    },
+    {
+     "name": "Khashabi et al. 2020",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21435,7 +24668,27 @@
     "train__openai__preference-learning__preference-learning",
     "train__openai__runtime-safeguards-data-curation__filtering"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "industry leaders",
+     "type": "private"
+    },
+    {
+     "name": "policymakers",
+     "type": "governmental"
+    },
+    {
+     "name": "experts",
+     "type": "multiple"
+    }
+   ]
   },
   {
    "id": "MER72PEB",
@@ -21488,6 +24741,18 @@
     "bench__openai__standard-disallowed-content-evaluation",
     "bench__openai__strongreject",
     "bench__openai__system-prompt-extraction"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21539,6 +24804,58 @@
     "bench__anthropic__sharma-et-al-2023-sycophancy-assessment",
     "bench__anthropic__single-turn-violative-request-evaluations",
     "bench__anthropic__strongreject"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Parrish et al. (2021)",
+     "type": "academic"
+    },
+    {
+     "name": "Deloitte",
+     "type": "private"
+    },
+    {
+     "name": "US Center for AI Standards and Innovation",
+     "type": "governmental"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Eleos AI Research",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Sharma et al.",
+     "type": "private"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Bai et al.",
+     "type": "private"
+    }
    ]
   },
   {
@@ -21583,6 +24900,42 @@
     "bench__openai__scruples",
     "bench__openai__shadearena",
     "bench__openai__wmdp"
+   ],
+   "author_actors": [
+    {
+     "name": "Melody Y. Guan et al. (OpenAI)",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Schoen et al.",
+     "type": "private"
+    },
+    {
+     "name": "White et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Wang et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Kutasov et al. 2025",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Li et al. 2024",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Lourie et al. 2021",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Rein et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21622,6 +24975,46 @@
     "bench__openai__stormfront-hate-speech-dataset",
     "bench__openai__tweeteval-hate-task",
     "bench__openai__tweeteval-offensive-task"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Todor Markov",
+     "type": "internal"
+    },
+    {
+     "name": "Chong Zhang",
+     "type": "internal"
+    },
+    {
+     "name": "Sandhini Agarwal",
+     "type": "internal"
+    },
+    {
+     "name": "Tyna Eloundou",
+     "type": "internal"
+    },
+    {
+     "name": "Teddy Lee",
+     "type": "internal"
+    },
+    {
+     "name": "Steven Adler",
+     "type": "internal"
+    },
+    {
+     "name": "Angela Jiang",
+     "type": "internal"
+    },
+    {
+     "name": "Lilian Weng",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -21660,7 +25053,14 @@
     "train__google__runtime-safeguards-other-threat-intelligence__runtime-monitoring",
     "train__google__runtime-safeguards__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "N4W4H56I",
@@ -21718,6 +25118,74 @@
     "bench__openai__swe-bench-verified",
     "bench__openai__sycophancy-evaluation",
     "bench__openai__vulnerability-identification-and-exploitation-capabilities-evaluations"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Chowdhury et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Starace et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Parrish et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Patwardhan et al. 2023",
+     "type": "academic"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Kirichenko et al. 2025",
+     "type": "academic"
+    },
+    {
+     "name": "Wang et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Arora et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21766,6 +25234,34 @@
     "bench__openai__transformation-exception",
     "bench__openai__wildchat",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Melody Y. Guan",
+     "type": "internal"
+    },
+    {
+     "name": "Manas Joglekar",
+     "type": "internal"
+    },
+    {
+     "name": "Eric Wallace",
+     "type": "internal"
+    },
+    {
+     "name": "Saachi Jain",
+     "type": "internal"
+    },
+    {
+     "name": "Boaz Barak",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -21811,6 +25307,30 @@
     "bench__google__head-to-head-comparisons-of-outputs-by-human-raters",
     "bench__google__moviegenbench-video-and-video-audio",
     "bench__google__vbench-i2v-benchmark-image-to-video-generation"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind Responsibility and Safety Council (RSC)",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "SynthID",
+     "type": "internal"
+    },
+    {
+     "name": "Meta",
+     "type": "ai company"
+    },
+    {
+     "name": "human raters",
+     "type": "public"
+    }
    ]
   },
   {
@@ -21856,7 +25376,14 @@
    "training_ids": [
     "train__openai__supervised-training-hard-constraints__instruction-tuning"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "NWKEIQTV",
@@ -21916,6 +25443,34 @@
     "bench__anthropic__single-turn-benign-request-evaluations",
     "bench__anthropic__single-turn-violative-request-evaluations",
     "bench__anthropic__ssh-stress-testing-evaluation"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Parrish, A., et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -21980,6 +25535,30 @@
     "bench__google__stealth-challenges",
     "bench__google__text-to-text-safety",
     "bench__google__weapons-of-mass-destruction-proxy-wdmp"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wijk et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Phuong et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Rodriguez et al., (2025)",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -22022,6 +25601,18 @@
     "bench__openai__automated-evaluations-and-adversarial-testing",
     "bench__openai__evaluation-set-with-772-images-that-fell-into-this-risk-category",
     "bench__openai__multiple-evaluation-stacks-for-higher-risk-categories-around-minors"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "bioweapons expert",
+     "type": "private"
+    }
    ]
   },
   {
@@ -22048,7 +25639,55 @@
     "train__xai__inference-time-filtering-runtime-safeguards-other-data-encryption__data-encryption",
     "train__xai__runtime-safeguards-other-vulnerability-assessment-other-bug-bounty-other-secure-coding-guidelines__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "HackerOne",
+     "type": "private"
+    },
+    {
+     "name": "NIST",
+     "type": "governmental"
+    },
+    {
+     "name": "Cloudflare",
+     "type": "private"
+    },
+    {
+     "name": "Wiz",
+     "type": "private"
+    },
+    {
+     "name": "Amazon Web Services",
+     "type": "private"
+    },
+    {
+     "name": "Dell",
+     "type": "private"
+    },
+    {
+     "name": "Hewlett Packard",
+     "type": "private"
+    },
+    {
+     "name": "Health Insurance Portability and Accountability Act",
+     "type": "governmental"
+    },
+    {
+     "name": "GDPR",
+     "type": "governmental"
+    },
+    {
+     "name": "CCPA",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "P98JMEKF",
@@ -22078,7 +25717,59 @@
     "train__openai__data-curation__sourcing",
     "train__openai__preference-learning-supervised-training__deliberative-alignment"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Generative Social Choice",
+     "type": "academic"
+    },
+    {
+     "name": "Meaning Alignment Network",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Ubuntu-AI",
+     "type": "other"
+    },
+    {
+     "name": "University of Washington",
+     "type": "academic"
+    },
+    {
+     "name": "Rappler",
+     "type": "other"
+    },
+    {
+     "name": "Chatham House",
+     "type": "research institute"
+    },
+    {
+     "name": "Inclusive.AI",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Energize.AI",
+     "type": "private"
+    },
+    {
+     "name": "Carnegie Mellon University",
+     "type": "academic"
+    },
+    {
+     "name": "vTaiwan",
+     "type": "other"
+    },
+    {
+     "name": "Collective Dialogues",
+     "type": "nonprofit"
+    }
+   ]
   },
   {
    "id": "PHYRYVJT",
@@ -22126,6 +25817,50 @@
     "bench__google__humanity-s-last-exam",
     "bench__google__simpleqa",
     "bench__google__simpleqa-verified"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Clark et al., 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Du et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Fedus et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Jiang et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Lepikhin et al., 2020",
+     "type": "academic"
+    },
+    {
+     "name": "Riquelme et al., 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Rojas et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Shazeer et al., 2017",
+     "type": "academic"
+    },
+    {
+     "name": "Vaswani et al., 2017",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -22153,7 +25888,14 @@
     "train__openai__inference-time-filtering__pii-classifier",
     "train__openai__preference-learning-supervised-training__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-chatgpt-(openai)-business-privacy-policy",
@@ -22178,7 +25920,23 @@
    "training_ids": [
     "train__openai__preference-learning-supervised-training__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "human trainers",
+     "type": "unknown"
+    },
+    {
+     "name": "ChatGPT users",
+     "type": "public"
+    }
+   ]
   },
   {
    "id": "policy-chatgpt-(openai)-privacy-policy",
@@ -22203,7 +25961,14 @@
     "train__openai__inference-time-filtering-runtime-safeguards__runtime-monitoring",
     "train__openai__supervised-training-data-curation__supervised-training-data-curation"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-chatgpt-(openai)-terms-of-service",
@@ -22227,7 +25992,14 @@
     "train__openai__inference-time-filtering__moderation-api",
     "train__openai__inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-acceptable-use-policy",
@@ -22253,7 +26025,14 @@
    ],
    "benchmark_ids": [
     "bench__anthropic__responsible-scaling-policy-rsp"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-commercial-terms",
@@ -22276,7 +26055,14 @@
    "training_ids": [
     "train__anthropic__data-curation__sourcing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-developer-terms",
@@ -22301,7 +26087,14 @@
     "train__anthropic__runtime-safeguards__runtime-monitoring",
     "train__anthropic__runtime-safeguards__runtime-safeguards"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-privacy-policy",
@@ -22328,7 +26121,19 @@
     "train__anthropic__preference-learning__constitutional-ai",
     "train__anthropic__preference-learning__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Universal Declaration of Human Rights",
+     "type": "other"
+    }
+   ]
   },
   {
    "id": "policy-claude.ai-(anthropic)-terms-of-service",
@@ -22352,7 +26157,14 @@
     "train__anthropic__data-curation__toxicity-filtering",
     "train__anthropic__inference-time-filtering__moderation-api"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-claude.ai-(anthropic)-vulnerability-disclosure-policy",
@@ -22375,7 +26187,14 @@
    "training_ids": [
     "train__anthropic__adversarial-training__red-teaming-data-generation"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-deepseek-terms-of-service",
@@ -22398,7 +26217,14 @@
    "training_ids": [
     "train__deepseek__inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-le-chat-(mistral)-acceptable-use-policy",
@@ -22423,7 +26249,14 @@
    "training_ids": [
     "train__mistral-ai__inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-le-chat-(mistral)-commercial-terms",
@@ -22448,7 +26281,14 @@
     "train__mistral-ai__inference-time-filtering__output-filter",
     "train__mistral-ai__supervised-training__sft"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-le-chat-(mistral)-data-processor-agreement",
@@ -22472,7 +26312,14 @@
     "train__mistral-ai__preference-learning__rlhf",
     "train__mistral-ai__supervised-training__supervised-training"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-le-chat-(mistral)-privacy-policy",
@@ -22496,7 +26343,14 @@
     "train__mistral-ai__data-curation__pii-redaction",
     "train__mistral-ai__preference-learning-data-curation__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-le-chat-(mistral)-terms-of-service",
@@ -22519,7 +26373,14 @@
    "training_ids": [
     "train__mistral-ai__inference-time-filtering-data-curation-supervised-training__moderation-api"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-llama-api-(meta)-privacy-policy",
@@ -22543,7 +26404,18 @@
    "training_ids": [
     "train__meta__supervised-training-inference-time-filtering__supervised-training-inference-time-filtering"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    },
+    {
+     "name": "reviewers at Meta",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-llama-api-(meta)-terms-of-service",
@@ -22570,7 +26442,14 @@
     "train__meta__data-curation__pii-redaction",
     "train__meta__other-security-testing__red-teaming"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-meta-ai-(meta)-terms-of-service",
@@ -22595,7 +26474,14 @@
     "train__meta__inference-time-filtering-data-curation__toxicity-filtering",
     "train__meta__runtime-safeguards__sandboxing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-microsoft-copilot-(microsoft)-acceptable-use-policy",
@@ -22619,7 +26505,14 @@
     "train__microsoft__inference-time-filtering-runtime-safeguards__inference-time-filtering-runtime-safeguards",
     "train__microsoft__runtime-safeguards__provenance-tracking"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-microsoft-copilot-(microsoft)-privacy-policy",
@@ -22646,7 +26539,19 @@
     "train__microsoft__runtime-safeguards__runtime-monitoring",
     "train__microsoft__supervised-training-data-curation__sourcing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "National Center for Missing and Exploited Children",
+     "type": "nonprofit"
+    }
+   ]
   },
   {
    "id": "policy-microsoft-copilot-(microsoft)-terms-of-service",
@@ -22671,7 +26576,14 @@
     "train__microsoft__inference-time-filtering__safety-filter",
     "train__microsoft__preference-learning-supervised-training__sft"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-data-processor-agreement",
@@ -22694,7 +26606,14 @@
    "training_ids": [
     "train__mistral-ai__data-curation__pii-redaction"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-developer-terms",
@@ -22717,7 +26636,14 @@
    "training_ids": [
     "train__mistral-ai__data-curation__sourcing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-privacy-policy",
@@ -22741,7 +26667,14 @@
     "train__mistral-ai__data-curation__data-curation",
     "train__mistral-ai__supervised-training-preference-learning-data-curation__sourcing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-mistral-ai-(mistral)-terms-of-service",
@@ -22764,7 +26697,14 @@
    "training_ids": [
     "train__mistral-ai__inference-time-filtering-data-curation__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Mistral AI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-qwen-chat-privacy-policy",
@@ -22788,7 +26728,14 @@
     "train__alibaba__data-curation-preference-learning__rlhf",
     "train__alibaba__inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Alibaba",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-qwen-chat-terms-of-service",
@@ -22812,7 +26759,14 @@
     "train__alibaba__data-curation-supervised-training__sourcing",
     "train__alibaba__inference-time-filtering-runtime-safeguards__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Alibaba",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-xai-acceptable-use-policy",
@@ -22837,7 +26791,19 @@
     "train__xai__inference-time-filtering-runtime-safeguards__safety-filter",
     "train__xai__runtime-safeguards-inference-time-filtering__safety-filter"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "National Center for Missing and Exploited Children",
+     "type": "nonprofit"
+    }
+   ]
   },
   {
    "id": "policy-xai-commercial-terms",
@@ -22860,7 +26826,14 @@
    "training_ids": [
     "train__xai__inference-time-filtering-data-curation__moderation-api"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "policy-xai-privacy-policy",
@@ -22886,7 +26859,19 @@
     "train__xai__data-curation__sourcing",
     "train__xai__preference-learning__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Brave Software, Inc.",
+     "type": "private"
+    }
+   ]
   },
   {
    "id": "policy-xai-terms-of-service",
@@ -22912,7 +26897,14 @@
     "train__xai__inference-time-filtering-runtime-safeguards__moderation-api",
     "train__xai__other-human-review__runtime-monitoring"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "PTLXCZX4",
@@ -22958,7 +26950,14 @@
     "bench__microsoft__established-llm-as-judge-methods",
     "bench__microsoft__offline-test-sets-included-factual-queries",
     "bench__microsoft__text-based-adversarial-prompts"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "Q4VNGWTU",
@@ -23021,6 +27020,50 @@
     "bench__openai__swe-lancer",
     "bench__openai__tacit-knowledge-and-troubleshooting",
     "bench__openai__troubleshootingbench"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Starace et al.",
+     "type": "internal"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Zhu et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Irregular",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -23068,7 +27111,14 @@
     "bench__deepseek-ai__swe-verified",
     "bench__deepseek-ai__tau-2-bench",
     "bench__deepseek-ai__terminal-bench-2-0"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "QPXDE3M2",
@@ -23113,7 +27163,14 @@
     "bench__google__simpleqa",
     "bench__google__text-to-text-safety",
     "bench__google__tone"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "R6QXZ9PE",
@@ -23142,7 +27199,19 @@
     "risk__openai__national-security-risks"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Sam Altman",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "RJDKVT3J",
@@ -23175,7 +27244,14 @@
     "risk__black-forest-labs__violates-any-applicable-national-federal-state-local-or-international-law"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Black Forest Labs",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "RPLQQPCF",
@@ -23234,6 +27310,42 @@
     "bench__openai__performance-in-cases-flagged-by-users",
     "bench__openai__production-benchmarks-with-challenging-prompts",
     "bench__openai__uk-aisi-s-cyber-ranges"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Eloundou et al. 2024",
+     "type": "internal"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Guan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Yueh-Han, 2026",
+     "type": "academic"
+    },
+    {
+     "name": "Hicks et al. 2026",
+     "type": "research institute"
+    }
    ]
   },
   {
@@ -23269,7 +27381,14 @@
    "benchmark_ids": [
     "bench__anthropic__harmlessness-elo-scores",
     "bench__anthropic__helpfulness-elo-scores"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "RRG8PNSF",
@@ -23306,7 +27425,147 @@
     "risk__openai__medical-financial-legal-advice"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Wikipedia",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Twitter",
+     "type": "private"
+    },
+    {
+     "name": "DemocracyNext",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Belfer Center",
+     "type": "academic"
+    },
+    {
+     "name": "MetaGov",
+     "type": "nonprofit"
+    },
+    {
+     "name": "RadicalxChange",
+     "type": "nonprofit"
+    },
+    {
+     "name": "People Powered",
+     "type": "public deliberation platform"
+    },
+    {
+     "name": "Collective Response Systems",
+     "type": "nonprofit"
+    },
+    {
+     "name": "pol.is",
+     "type": "public deliberation platform"
+    },
+    {
+     "name": "Collective Intelligence Project",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Ariel Procaccia",
+     "type": "academic"
+    },
+    {
+     "name": "Aviv Ovadya",
+     "type": "academic"
+    },
+    {
+     "name": "Colin Megill",
+     "type": "nonprofit"
+    },
+    {
+     "name": "David Medina",
+     "type": "private"
+    },
+    {
+     "name": "Divya Siddarth",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Ela Madej",
+     "type": "private"
+    },
+    {
+     "name": "Elizabeth Seger",
+     "type": "academic"
+    },
+    {
+     "name": "Gillian Hadfield",
+     "type": "academic"
+    },
+    {
+     "name": "Greg Brockman",
+     "type": "internal"
+    },
+    {
+     "name": "Hélène Landemore",
+     "type": "academic"
+    },
+    {
+     "name": "Ilya Sutskever",
+     "type": "internal"
+    },
+    {
+     "name": "Justin Rosenstein",
+     "type": "private"
+    },
+    {
+     "name": "Margaret Levi",
+     "type": "academic"
+    },
+    {
+     "name": "Michiel Bakker",
+     "type": "internal"
+    },
+    {
+     "name": "Miles Brundage",
+     "type": "internal"
+    },
+    {
+     "name": "Mira Murati",
+     "type": "internal"
+    },
+    {
+     "name": "Noel Bundick",
+     "type": "internal"
+    },
+    {
+     "name": "Pamela Mishkin",
+     "type": "internal"
+    },
+    {
+     "name": "Ryan Lowe",
+     "type": "internal"
+    },
+    {
+     "name": "Saffron Huang",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Sam Altman",
+     "type": "internal"
+    },
+    {
+     "name": "Sandhini Agarwal",
+     "type": "internal"
+    },
+    {
+     "name": "Teddy Lee",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "RSI8ZVQC",
@@ -23357,6 +27616,30 @@
     "bench__openai__mmlu-massive-multitask-language-understanding",
     "bench__openai__realtoxicityprompts",
     "bench__openai__truthfulqa"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Alignment Research Center (ARC)",
+     "type": "research institute"
+    },
+    {
+     "name": "Lin et al. (2022)",
+     "type": "academic"
+    },
+    {
+     "name": "Gehman et al. (2020)",
+     "type": "academic"
+    },
+    {
+     "name": "Hendrycks et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -23414,6 +27697,38 @@
     "bench__openai__swe-bench-verified",
     "bench__openai__toxic-wildchat",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Parrish et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Ranger",
+     "type": "private"
+    }
    ]
   },
   {
@@ -23450,7 +27765,54 @@
     "train__multiple__reward-shaping-runtime-safeguards-adversarial-training__trip-wires",
     "train__multiple__supervised-training-runtime-safeguards-other-simulated-exploration-other-risk-sensitive-optimization__demonstration-fine-tuning"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Dario Amodei",
+     "type": "academic"
+    },
+    {
+     "name": "Chris Olah",
+     "type": "internal"
+    },
+    {
+     "name": "Jacob Steinhardt",
+     "type": "academic"
+    },
+    {
+     "name": "Paul Christiano",
+     "type": "academic"
+    },
+    {
+     "name": "John Schulman",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Dan Mané",
+     "type": "internal"
+    },
+    {
+     "name": "Google Brain",
+     "type": "ai company"
+    },
+    {
+     "name": "Stanford University",
+     "type": "academic"
+    },
+    {
+     "name": "UC Berkeley",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Stuart Armstrong",
+     "type": "academic"
+    }
+   ]
   },
   {
    "id": "SJ4ISUWG",
@@ -23489,6 +27851,26 @@
    ],
    "benchmark_ids": [
     "bench__openai__building-an-early-warning-system-for-llm-aided-biological-threat-creation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Los Alamos National Laboratory",
+     "type": "governmental"
+    },
+    {
+     "name": "US Center for AI Standards and Innovation",
+     "type": "governmental"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    }
    ]
   },
   {
@@ -23529,7 +27911,18 @@
     "bench__google__factuality-edu",
     "bench__google__frontier-safety-assessment",
     "bench__google__regression-sets-popular-use-cases"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "SUE568KL",
@@ -23570,6 +27963,18 @@
     "bench__deepseek-ai__ifeval",
     "bench__deepseek-ai__rewardbench",
     "bench__deepseek-ai__simpleqa"
+   ],
+   "author_actors": [
+    {
+     "name": "DeepSeek",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Bai et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -23618,6 +28023,50 @@
     "bench__anthropic__trust-safety-multimodal-policy-red-teaming",
     "bench__anthropic__wildchat-dataset",
     "bench__anthropic__xstest-evaluation"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "US Center for AI Standards and Innovation",
+     "type": "governmental"
+    },
+    {
+     "name": "Tamkin et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Zhao et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Bai et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Rein et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Hendrycks et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -23654,6 +28103,122 @@
    "benchmark_ids": [
     "bench__google__control-evaluations",
     "bench__google__early-warning-evaluations"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Lewis Ho",
+     "type": "internal"
+    },
+    {
+     "name": "Celine Smith",
+     "type": "internal"
+    },
+    {
+     "name": "Claudia van der Salm",
+     "type": "internal"
+    },
+    {
+     "name": "Joslyn Barnhart",
+     "type": "internal"
+    },
+    {
+     "name": "Rohin Shah",
+     "type": "internal"
+    },
+    {
+     "name": "Allan Dafoe",
+     "type": "internal"
+    },
+    {
+     "name": "Anca Dragan",
+     "type": "internal"
+    },
+    {
+     "name": "Andy Song",
+     "type": "internal"
+    },
+    {
+     "name": "Demis Hassabis",
+     "type": "internal"
+    },
+    {
+     "name": "Four Flynn",
+     "type": "internal"
+    },
+    {
+     "name": "Jennifer Beroshi",
+     "type": "internal"
+    },
+    {
+     "name": "Helen King",
+     "type": "internal"
+    },
+    {
+     "name": "Nicklas Lundblad",
+     "type": "internal"
+    },
+    {
+     "name": "Tom Lue",
+     "type": "internal"
+    },
+    {
+     "name": "RAND",
+     "type": "nonprofit"
+    },
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Frontier Model Forum",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Carnegie Endowment for International Peace",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Center for Long-Term Resilience",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Center for the Governance of AI",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Redwood Research",
+     "type": "nonprofit"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Greenblatt et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -23696,7 +28261,14 @@
    ],
    "benchmark_ids": [
     "bench__google__genai-bench"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "TFEIW8MA",
@@ -23733,6 +28305,42 @@
     "bench__openai__helpfulness-score",
     "bench__openai__race",
     "bench__openai__topic-based-summarization"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "William Saunders",
+     "type": "internal"
+    },
+    {
+     "name": "Catherine Yeh",
+     "type": "internal"
+    },
+    {
+     "name": "Jeff Wu",
+     "type": "internal"
+    },
+    {
+     "name": "Steven Bills",
+     "type": "internal"
+    },
+    {
+     "name": "Long Ouyang",
+     "type": "internal"
+    },
+    {
+     "name": "Jonathan Ward",
+     "type": "internal"
+    },
+    {
+     "name": "Jan Leike",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -23782,6 +28390,38 @@
     "bench__xai__sycophancy-evaluation-setting",
     "bench__xai__virology-capabilities-test-vct",
     "bench__xai__weapons-of-mass-destruction-proxy-wmdp-benchmark"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "NIST",
+     "type": "governmental"
+    },
+    {
+     "name": "RAND",
+     "type": "nonprofit"
+    },
+    {
+     "name": "EBRC",
+     "type": "academic"
+    },
+    {
+     "name": "Transparency in Frontier Artificial Intelligence Act",
+     "type": "governmental"
+    }
    ]
   },
   {
@@ -23814,6 +28454,18 @@
    "benchmark_ids": [
     "bench__openai__chat-deception-evaluation",
     "bench__openai__scheming-evals"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    }
    ]
   },
   {
@@ -23860,6 +28512,33 @@
     "bench__google-deepmind__gemma-scope",
     "bench__google-deepmind__levels-of-agi-framework",
     "bench__google__frontier-safety-framework"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Shane Legg",
+     "type": "internal"
+    },
+    {
+     "name": "Lila Ibrahim",
+     "type": "internal"
+    },
+    {
+     "name": "Helen King",
+     "type": "internal"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Redwood Research",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Frontier Model Forum",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -23887,6 +28566,18 @@
    ],
    "benchmark_ids": [
     "bench__openai__red-team-assessments"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Microsoft Threat Intelligence",
+     "type": "ai company"
+    }
    ]
   },
   {
@@ -23959,6 +28650,50 @@
     "bench__openai__strongreject",
     "bench__openai__swe-bench-verified",
     "bench__openai__xstest"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Parrish et al. 2021",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "MIT",
+     "type": "academic"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "FutureHouse",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gray Swan AI",
+     "type": "private"
+    },
+    {
+     "name": "Scale AI",
+     "type": "private"
+    },
+    {
+     "name": "Souly et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Röttger et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -24013,6 +28748,58 @@
     "bench__xai__wmdp-bio",
     "bench__xai__wmdp-chem",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Andriushchenko et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Li et al., 2024",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Ivanov, 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Götting et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Ren et al.",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Debenedetti et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI, 2024",
+     "type": "private"
+    },
+    {
+     "name": "Sharma et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
    ]
   },
   {
@@ -24061,6 +28848,22 @@
     "bench__google__naturalquestions-retrieved",
     "bench__google__realtimeqa",
     "bench__google__tydiqa-goldp"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Gemini Team",
+     "type": "internal"
+    },
+    {
+     "name": "White House",
+     "type": "governmental"
+    }
    ]
   },
   {
@@ -24113,6 +28916,54 @@
     "bench__openai__production-benchmarks",
     "bench__openai__simpleqa",
     "bench__openai__strongreject"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "A. Souly",
+     "type": "academic"
+    },
+    {
+     "name": "Q. Lu",
+     "type": "academic"
+    },
+    {
+     "name": "D. Bowen",
+     "type": "academic"
+    },
+    {
+     "name": "T. Trinh",
+     "type": "academic"
+    },
+    {
+     "name": "E. Hsieh",
+     "type": "academic"
+    },
+    {
+     "name": "S. Pandey",
+     "type": "academic"
+    },
+    {
+     "name": "P. Abbeel",
+     "type": "academic"
+    },
+    {
+     "name": "J. Svegliato",
+     "type": "academic"
+    },
+    {
+     "name": "S. Emmons",
+     "type": "academic"
+    },
+    {
+     "name": "O. Watkins",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -24147,7 +28998,31 @@
     "train__google__supervised-training-inference-time-filtering__safety-filter",
     "train__google__supervised-training-runtime-safeguards__user-confirmation"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "internal Google safety, security, and responsibility teams",
+     "type": "internal"
+    },
+    {
+     "name": "Google's AI Principles",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "specialist teams",
+     "type": "unknown"
+    },
+    {
+     "name": "human evaluators independent of the model development team",
+     "type": "public"
+    }
+   ]
   },
   {
    "id": "VCPR3CVN",
@@ -24193,6 +29068,38 @@
     "bench__anthropic__helpful-honest-and-harmless-hhh-evaluations",
     "bench__anthropic__task-specific-elo-scores",
     "bench__anthropic__truthfulqa"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Alignment Research Center (ARC)",
+     "type": "research institute"
+    },
+    {
+     "name": "Parrish et al. [15]",
+     "type": "academic"
+    },
+    {
+     "name": "Lin et al. [16]",
+     "type": "academic"
+    },
+    {
+     "name": "Bai et al.",
+     "type": "private"
+    },
+    {
+     "name": "Ganguli et al. [4]",
+     "type": "private"
+    },
+    {
+     "name": "Askell et al.",
+     "type": "private"
+    }
    ]
   },
   {
@@ -24247,6 +29154,42 @@
     "bench__google-deepmind__realtoxicity",
     "bench__google-deepmind__truthfulqa",
     "bench__google-deepmind__verbatim-memorization"
+   ],
+   "author_actors": [
+    {
+     "name": "Gemma Team",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Kinniment et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Parrish et al., 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Macknight et al., 2024",
+     "type": "internal"
+    },
+    {
+     "name": "Yang et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Phuong et al.",
+     "type": "internal"
+    },
+    {
+     "name": "Lin et al., 2021",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -24278,6 +29221,38 @@
     "bench__openai__early-warning-system-for-llm-aided-biological-threat-creation",
     "bench__openai__evaluation-study-to-assess-how-frontier-models-like-gpt-4o-can-assist-humans-with-performing-tasks-in-a-physical-laboratory-setting",
     "bench__openai__standard-laboratory-experimental-tasks-transformation-cell-culture-cell-separation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Los Alamos National Laboratory",
+     "type": "governmental"
+    },
+    {
+     "name": "White House",
+     "type": "governmental"
+    },
+    {
+     "name": "U.S. Department of Energy",
+     "type": "governmental"
+    },
+    {
+     "name": "Mira Murati",
+     "type": "internal"
+    },
+    {
+     "name": "Nick Generous",
+     "type": "governmental"
+    },
+    {
+     "name": "AI Risks Technical Assessment Group",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -24335,6 +29310,58 @@
     "bench__xai__wmdp-bio",
     "bench__xai__wmdp-chem",
     "bench__xai__wmdp-cyber"
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Andriushchenko et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Debenedetti et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Li et al., 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Götting et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Ivanov, 2024",
+     "type": "research institute"
+    },
+    {
+     "name": "Zellers et al.",
+     "type": "academic"
+    },
+    {
+     "name": "UK AI Safety Institute",
+     "type": "governmental"
+    },
+    {
+     "name": "Ren et al.",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI, 2024",
+     "type": "private"
+    },
+    {
+     "name": "Sharma et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
    ]
   },
   {
@@ -24385,6 +29412,22 @@
     "bench__openai__table-3-speaker-identification-safe-behavior-accuracy",
     "bench__openai__table-4-ungrounded-inference-and-sensitive-trait-attribution-safe-behavior-accuracy",
     "bench__openai__table-5-performance-comparison-of-safety-evaluations-text-vs-audio"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    }
    ]
   },
   {
@@ -24427,6 +29470,30 @@
     "bench__anthropic__elo-scores-for-harmlessness",
     "bench__anthropic__elo-scores-for-helpfulness",
     "bench__anthropic__opinionqa-evaluation"
+   ],
+   "author_actors": [
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Collective Intelligence Project",
+     "type": "nonprofit"
+    },
+    {
+     "name": "pol.is",
+     "type": "public deliberation platform"
+    },
+    {
+     "name": "PureSpectrum",
+     "type": "private"
+    },
+    {
+     "name": "U.S. Public",
+     "type": "public"
+    }
    ]
   },
   {
@@ -24469,6 +29536,50 @@
     "bench__openai__system-message-probing-questions",
     "bench__openai__user-conflicting-instructions",
     "bench__openai__user-non-conflicting-instructions"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Eric Wallace",
+     "type": "internal"
+    },
+    {
+     "name": "Kai Xiao",
+     "type": "internal"
+    },
+    {
+     "name": "Reimar Leike",
+     "type": "internal"
+    },
+    {
+     "name": "Lilian Weng",
+     "type": "internal"
+    },
+    {
+     "name": "Johannes Heidecke",
+     "type": "internal"
+    },
+    {
+     "name": "Alex Beutel",
+     "type": "internal"
+    },
+    {
+     "name": "Wei et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Perez & Ribeiro 2022",
+     "type": "academic"
+    },
+    {
+     "name": "Lakera AI 2023",
+     "type": "private"
+    }
    ]
   },
   {
@@ -24499,7 +29610,147 @@
     "train__openai__preference-learning__rlhf",
     "train__openai__runtime-safeguards__sandboxing"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "o3 contributors",
+     "type": "internal"
+    },
+    {
+     "name": "Borys Minaiev",
+     "type": "internal"
+    },
+    {
+     "name": "Ignasi Clavera",
+     "type": "internal"
+    },
+    {
+     "name": "Lorenz Kuhn",
+     "type": "internal"
+    },
+    {
+     "name": "Nat McAleese",
+     "type": "internal"
+    },
+    {
+     "name": "Oleg Mürk",
+     "type": "internal"
+    },
+    {
+     "name": "Szymon Sidor",
+     "type": "internal"
+    },
+    {
+     "name": "Ahmed El-Kishky",
+     "type": "internal"
+    },
+    {
+     "name": "Mostafa Rohaninejad",
+     "type": "internal"
+    },
+    {
+     "name": "Andre Saraiva",
+     "type": "internal"
+    },
+    {
+     "name": "Hunter Lightman",
+     "type": "internal"
+    },
+    {
+     "name": "Vineet Kosaraju",
+     "type": "internal"
+    },
+    {
+     "name": "Wenda Zhou",
+     "type": "internal"
+    },
+    {
+     "name": "Alexander Wei",
+     "type": "internal"
+    },
+    {
+     "name": "Daniel Selsam",
+     "type": "internal"
+    },
+    {
+     "name": "David Dohan",
+     "type": "internal"
+    },
+    {
+     "name": "Francis Song",
+     "type": "internal"
+    },
+    {
+     "name": "Max Schwarzer",
+     "type": "internal"
+    },
+    {
+     "name": "Rhythm Garg",
+     "type": "academic"
+    },
+    {
+     "name": "Rui Shu",
+     "type": "internal"
+    },
+    {
+     "name": "Jakub Pachocki",
+     "type": "internal"
+    },
+    {
+     "name": "Jerry Tworek",
+     "type": "internal"
+    },
+    {
+     "name": "Lukasz Kaiser",
+     "type": "internal"
+    },
+    {
+     "name": "Mark Chen",
+     "type": "internal"
+    },
+    {
+     "name": "AlphaCode",
+     "type": "private"
+    },
+    {
+     "name": "Kimi k1.5 [15]",
+     "type": "private"
+    },
+    {
+     "name": "Taylor Gordon",
+     "type": "internal"
+    },
+    {
+     "name": "Oleg Boiko",
+     "type": "internal"
+    },
+    {
+     "name": "John Rizzo",
+     "type": "internal"
+    },
+    {
+     "name": "Paul Ashbourne",
+     "type": "internal"
+    },
+    {
+     "name": "Leo Liu",
+     "type": "internal"
+    },
+    {
+     "name": "Alexander Prokofiev",
+     "type": "internal"
+    },
+    {
+     "name": "Scottie Yan",
+     "type": "internal"
+    }
+   ]
   },
   {
    "id": "VZK683ED",
@@ -24522,7 +29773,34 @@
     "risk__us-senate__deceptive-ai-generated-audio-or-visual-media"
    ],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Ms. Klobuchar",
+     "type": "governmental"
+    },
+    {
+     "name": "Mr. Hawley",
+     "type": "governmental"
+    },
+    {
+     "name": "Mr. Coons",
+     "type": "governmental"
+    },
+    {
+     "name": "Ms. Collins",
+     "type": "governmental"
+    },
+    {
+     "name": "Mr. Bennet",
+     "type": "governmental"
+    },
+    {
+     "name": "Committee on Rules and Administration",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "WBGXPF3L",
@@ -24565,7 +29843,14 @@
     "bench__google__mmlu-medical-genetics",
     "bench__google__mmlu-professional-medicine",
     "bench__google__pubmedqa"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google Research",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "WCR95HDP",
@@ -24600,6 +29885,50 @@
    ],
    "benchmark_ids": [
     "bench__black-forest-labs__benchmark-for-image-synthesis"
+   ],
+   "author_actors": [
+    {
+     "name": "Black Forest Labs",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Andreessen Horowitz",
+     "type": "private"
+    },
+    {
+     "name": "Brendan Iribe",
+     "type": "private"
+    },
+    {
+     "name": "Michael Ovitz",
+     "type": "private"
+    },
+    {
+     "name": "Garry Tan",
+     "type": "private"
+    },
+    {
+     "name": "Timo Aila",
+     "type": "academic"
+    },
+    {
+     "name": "Vladlen Koltun",
+     "type": "private"
+    },
+    {
+     "name": "General Catalyst",
+     "type": "private"
+    },
+    {
+     "name": "MätchVC",
+     "type": "industry consortium"
+    },
+    {
+     "name": "Matthias Bethge",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -24645,6 +29974,18 @@
     "bench__openai__healthbench-consensus",
     "bench__openai__healthbench-hard",
     "bench__openai__production-benchmarks"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Penda Health",
+     "type": "private"
+    }
    ]
   },
   {
@@ -24702,7 +30043,14 @@
     "bench__microsoft__microsoft-foundry-sexual-evaluator",
     "bench__microsoft__microsoft-foundry-ungrounded-attributes-evaluator",
     "bench__microsoft__microsoft-foundry-violence-evaluator"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Microsoft",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "X7PAUFTV",
@@ -24736,7 +30084,35 @@
     "train__google__data-curation__filtering",
     "train__google__private__private"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "U.S. government",
+     "type": "governmental"
+    },
+    {
+     "name": "White House",
+     "type": "governmental"
+    },
+    {
+     "name": "Senate’s Bipartisan AI Working Group",
+     "type": "governmental"
+    },
+    {
+     "name": "McKinsey",
+     "type": "private"
+    },
+    {
+     "name": "NIST",
+     "type": "governmental"
+    }
+   ]
   },
   {
    "id": "XBSWWI8V",
@@ -24780,6 +30156,22 @@
    ],
    "benchmark_ids": [
     "bench__meta__hazard-taxonomy"
+   ],
+   "author_actors": [
+    {
+     "name": "Meta",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "MLCommons",
+     "type": "nonprofit"
+    },
+    {
+     "name": "C2PA",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -24811,6 +30203,53 @@
    "benchmark_ids": [
     "bench__other__arcade-learning-environment-ale",
     "bench__other__mujoco-robotics-tasks"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Paul F Christiano",
+     "type": "private"
+    },
+    {
+     "name": "Jan Leike",
+     "type": "private"
+    },
+    {
+     "name": "Tom B Brown",
+     "type": "private"
+    },
+    {
+     "name": "Miljan Martic",
+     "type": "private"
+    },
+    {
+     "name": "Shane Legg",
+     "type": "private"
+    },
+    {
+     "name": "Dario Amodei",
+     "type": "academic"
+    },
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    },
+    {
+     "name": "Google",
+     "type": "ai company"
+    },
+    {
+     "name": "Bostrom",
+     "type": "academic"
+    },
+    {
+     "name": "Russell",
+     "type": "academic"
+    },
+    {
+     "name": "Amodei et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -24856,7 +30295,14 @@
     "bench__google-deepmind__math-vision",
     "bench__google-deepmind__mmlu-pro",
     "bench__google-deepmind__tau2"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "XPE2R9SS",
@@ -24919,6 +30365,34 @@
     "bench__openai__sandbagging-qa-evaluation",
     "bench__openai__tacit-knowledge-and-troubleshooting-mcq",
     "bench__openai__user-confirmations-evaluation"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Eloundou et al. 2024",
+     "type": "academic"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Guan et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Yueh-Han, 2026",
+     "type": "research institute"
+    }
    ]
   },
   {
@@ -24959,6 +30433,22 @@
    ],
    "benchmark_ids": [
     "bench__openai__new-evaluations-designed-specifically-to-identify-political-bias"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "users",
+     "type": "public"
+    },
+    {
+     "name": "civil society organizations",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -25022,6 +30512,50 @@
     "bench__openai__strongreject",
     "bench__openai__sycophancy-evaluation-offline-evaluation",
     "bench__openai__system-prompt-extraction"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "METR",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Parrish et al.",
+     "type": "academic"
+    },
+    {
+     "name": "SecureBio",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Center for AI Safety",
+     "type": "nonprofit"
+    },
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Souly et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Arora et al.",
+     "type": "academic"
+    },
+    {
+     "name": "Wallace et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -25055,6 +30589,38 @@
     "bench__openai__anthropic-frontier-threats-red-teaming",
     "bench__openai__openai-biorisk-evaluation",
     "bench__openai__rand-llm-biorisk-study"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Gryphon Scientific",
+     "type": "private"
+    },
+    {
+     "name": "White House",
+     "type": "governmental"
+    },
+    {
+     "name": "Ada Lovelace Institute",
+     "type": "research institute"
+    },
+    {
+     "name": "Sandbrink",
+     "type": "academic"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Mouton et al.",
+     "type": "research institute"
+    }
    ]
   },
   {
@@ -25101,7 +30667,14 @@
     "bench__xai__livecodebench-lcb",
     "bench__xai__mmlu-pro",
     "bench__xai__simpleqa"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "Z3HFLRZ8",
@@ -25141,6 +30714,22 @@
    ],
    "benchmark_ids": [
     "bench__google__iso-iec-42001"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "International Organization for Standardization",
+     "type": "industry consortium"
+    },
+    {
+     "name": "MLCommons",
+     "type": "nonprofit"
+    }
    ]
   },
   {
@@ -25174,7 +30763,14 @@
    "training_ids": [
     "train__openai__preference-learning-supervised-training__rlhf"
    ],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "ZIRULXYS",
@@ -25221,7 +30817,14 @@
     "bench__openai__existing-academic-benchmarks",
     "bench__openai__in-house-classifiers",
     "bench__openai__new-evaluation-metrics-for-measuring-toxicity"
-   ]
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "ZJL3LT6R",
@@ -25268,6 +30871,18 @@
     "bench__almawave__ifeval-0-shot-en",
     "bench__almawave__mmlu-5-shot",
     "bench__almawave__musr-0-shot-en"
+   ],
+   "author_actors": [
+    {
+     "name": "Technology and innovation Team, Almawave",
+     "type": "internal"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "CINECA",
+     "type": "industry consortium"
+    }
    ]
   },
   {
@@ -25300,6 +30915,74 @@
    ],
    "benchmark_ids": [
     "bench__openai__mle-bench"
+   ],
+   "author_actors": [
+    {
+     "name": "OpenAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Chan Jun Shern",
+     "type": "internal"
+    },
+    {
+     "name": "Neil Chowdhury",
+     "type": "internal"
+    },
+    {
+     "name": "Oliver Jaffe",
+     "type": "internal"
+    },
+    {
+     "name": "James Aung",
+     "type": "internal"
+    },
+    {
+     "name": "Dane Sherburn",
+     "type": "internal"
+    },
+    {
+     "name": "Evan Mays",
+     "type": "internal"
+    },
+    {
+     "name": "Giulio Starace",
+     "type": "internal"
+    },
+    {
+     "name": "Kevin Liu",
+     "type": "internal"
+    },
+    {
+     "name": "Leon Maksin",
+     "type": "internal"
+    },
+    {
+     "name": "Tejal Patwardhan",
+     "type": "internal"
+    },
+    {
+     "name": "Lilian Weng",
+     "type": "internal"
+    },
+    {
+     "name": "Aleksander Mądry",
+     "type": "internal"
+    },
+    {
+     "name": "Anthropic",
+     "type": "ai company"
+    },
+    {
+     "name": "Google DeepMind",
+     "type": "ai company"
+    },
+    {
+     "name": "Dekoninck et al. 2024",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -25345,6 +31028,29 @@
     "bench__openai__dall-eval",
     "bench__openai__external-red-teaming-process",
     "bench__openai__internal-audit-of-sexual-content-filtering"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Pamela Mishkin",
+     "type": "internal"
+    },
+    {
+     "name": "Lama Ahmad",
+     "type": "internal"
+    },
+    {
+     "name": "Miles Brundage",
+     "type": "internal"
+    },
+    {
+     "name": "Gretchen Krueger",
+     "type": "internal"
+    },
+    {
+     "name": "Girish Sastry",
+     "type": "internal"
+    }
    ]
   },
   {
@@ -25410,6 +31116,89 @@
     "bench__meta__sycophancy-benchmark",
     "bench__meta__virology-capabilities-test-vct",
     "bench__meta__wmdp-bio"
+   ],
+   "author_actors": [],
+   "cited_actors": [
+    {
+     "name": "Cristina Menghini",
+     "type": "internal"
+    },
+    {
+     "name": "Peter Ney",
+     "type": "internal"
+    },
+    {
+     "name": "Hamza Kwisaba",
+     "type": "internal"
+    },
+    {
+     "name": "Zifan (Sail) Wang",
+     "type": "internal"
+    },
+    {
+     "name": "Miles Turpin",
+     "type": "internal"
+    },
+    {
+     "name": "Felix Binder",
+     "type": "internal"
+    },
+    {
+     "name": "Jean-Christophe Testud",
+     "type": "internal"
+    },
+    {
+     "name": "Aidan Boyd",
+     "type": "internal"
+    },
+    {
+     "name": "Nathaniel Li",
+     "type": "internal"
+    },
+    {
+     "name": "Ivan Evtimov",
+     "type": "internal"
+    },
+    {
+     "name": "Klaudia Krawiecka",
+     "type": "internal"
+    },
+    {
+     "name": "Arman Zharmagambetov",
+     "type": "internal"
+    },
+    {
+     "name": "Jeremy Kritz",
+     "type": "internal"
+    },
+    {
+     "name": "Alexander R. Fabbri",
+     "type": "internal"
+    },
+    {
+     "name": "Daniel Song",
+     "type": "internal"
+    },
+    {
+     "name": "Jinpeng Miao",
+     "type": "internal"
+    },
+    {
+     "name": "MSL Preparedness & Red Teaming & Alignment Team",
+     "type": "internal"
+    },
+    {
+     "name": "AI Security Team",
+     "type": "internal"
+    },
+    {
+     "name": "Apollo Research",
+     "type": "public benefit corporation"
+    },
+    {
+     "name": "Schoen et al.",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -25438,7 +31227,14 @@
    ],
    "risk_ids": [],
    "training_ids": [],
-   "benchmark_ids": []
+   "benchmark_ids": [],
+   "author_actors": [
+    {
+     "name": "xAI",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": []
   },
   {
    "id": "ZYS34BH7",
@@ -25466,6 +31262,22 @@
    ],
    "benchmark_ids": [
     "bench__google__monk-skin-tone-scale"
+   ],
+   "author_actors": [
+    {
+     "name": "Google",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "Dr. Ellis Monk",
+     "type": "academic"
+    },
+    {
+     "name": "Harvard",
+     "type": "academic"
+    }
    ]
   },
   {
@@ -25522,6 +31334,58 @@
     "bench__google__winobias-1-2-and-2-2",
     "bench__google__winogender",
     "bench__google__winogrande"
+   ],
+   "author_actors": [
+    {
+     "name": "Gemma Team",
+     "type": "ai company"
+    }
+   ],
+   "cited_actors": [
+    {
+     "name": "internal red teamers",
+     "type": "internal"
+    },
+    {
+     "name": "Thomas Mesnard",
+     "type": "internal"
+    },
+    {
+     "name": "Cassidy Hardin",
+     "type": "internal"
+    },
+    {
+     "name": "Robert Dadashi",
+     "type": "internal"
+    },
+    {
+     "name": "Surya Bhupatiraju",
+     "type": "internal"
+    },
+    {
+     "name": "Laurent Sifre",
+     "type": "internal"
+    },
+    {
+     "name": "Morgane Rivière",
+     "type": "internal"
+    },
+    {
+     "name": "Mihir Sanjay Kale",
+     "type": "internal"
+    },
+    {
+     "name": "Juliette Love",
+     "type": "internal"
+    },
+    {
+     "name": "Pouya Tafti",
+     "type": "internal"
+    },
+    {
+     "name": "Léonard Hussenot",
+     "type": "internal"
+    }
    ]
   }
  ],

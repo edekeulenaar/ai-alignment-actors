@@ -567,42 +567,62 @@ function foundInBlock(it) {
   }).filter(Boolean).join("");
 }
 
-// Aggregate unique pub_actors across an item's source documents
-function contributorsOf(it) {
+// Aggregate AUTHOR and CITED actors (with their types) across an item's source docs.
+function authorsAndCitedOf(it) {
   const data = STATE.data;
-  const set = new Set();
+  const authors = new Map();   // name → type
+  const cited   = new Map();
   (it.pub_ids || []).forEach(pid => {
     const d = data.documents.find(x => x.id === pid);
-    if (d && d.actors) d.actors.split("|").map(s => s.trim()).filter(Boolean).forEach(a => set.add(a));
+    if (!d) return;
+    (d.author_actors || []).forEach(a => authors.set(a.name, a.type));
+    (d.cited_actors  || []).forEach(a => cited.set(a.name, a.type));
   });
-  return [...set].join(" | ");
+  if (it.specific_actor && !cited.has(it.specific_actor)) {
+    cited.set(it.specific_actor, it.specific_actor_type || "unknown");
+  }
+  return {
+    authors: [...authors.entries()].map(([name, type]) => ({ name, type })),
+    cited:   [...cited.entries()  ].map(([name, type]) => ({ name, type })),
+  };
 }
 function itemToCard(it, blockId, nameKey) {
   const found = foundInBlock(it);
-  const contribs = contributorsOf(it);
+  const { authors, cited } = authorsAndCitedOf(it);
   const evalLine = it.external_evaluator
     ? `<dt>External evaluator</dt><dd>${escape(it.external_evaluator)}</dd>` : "";
 
-  if (blockId === "training") return `
-    <h4>${escape(it.item)}</h4>
-    ${it.verbatim ? `<div class="quote">"${escape(snippet(it.verbatim, 220))}"</div>` : ""}
-    <dt>Category</dt><dd>${escape(it.category)}</dd>
-    <dt>Found in</dt><dd>${found}</dd>
-    <dt>Contributors</dt><dd>${escape(it.actor || contribs) || "—"}</dd>`;
+  if (blockId === "training") {
+    const trainActors = pairsFrom(it.actor, it.actor_type_raw);
+    return `
+      <h4>${escape(it.item)}</h4>
+      ${it.verbatim ? `<div class="quote">"${escape(snippet(it.verbatim, 220))}"</div>` : ""}
+      <dt>Category</dt><dd>${escape(it.category)}</dd>
+      <dt>Found in</dt><dd>${found}</dd>
+      <dt>Trained by</dt><dd>${actorPills(trainActors)}</dd>
+      <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
+      ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
+  }
 
-  if (blockId === "benchmark") return `
-    <h4>${escape(it.name)}</h4>
-    <dt>Category</dt><dd>${escape(it.category)}</dd>
-    <dt>Found in</dt><dd>${found}</dd>
-    <dt>Contributors</dt><dd>${escape(it.author || contribs) || "—"}</dd>`;
+  if (blockId === "benchmark") {
+    const benchActors = pairsFrom(it.author, it.author_type_raw);
+    return `
+      <h4>${escape(it.name)}</h4>
+      <dt>Category</dt><dd>${escape(it.category)}</dd>
+      <dt>Found in</dt><dd>${found}</dd>
+      <dt>Benchmarked by</dt><dd>${actorPills(benchActors)}</dd>
+      <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
+      ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
+  }
 
   // conduct / risk
   return `
     <h4>${escape(it.item)}</h4>
     ${it.definition ? `<div class="quote">"${escape(snippet(it.definition, 220))}"</div>` : ""}
     <dt>Found in</dt><dd>${found}</dd>
-    <dt>Contributors</dt><dd>${escape(contribs) || "—"}</dd>
-    ${it.specific_actor ? `<dt>Defined by</dt><dd>${escape(it.specific_actor)}</dd>` : ""}
+    <dt>Author</dt><dd>${actorPills(authors)}</dd>
+    ${cited.length ? `<dt>Cited</dt><dd>${actorPills(cited)}</dd>` : ""}
+    ${it.specific_actor ? `<dt>Defined by</dt><dd>${escape(it.specific_actor)} <span class="tl-meta">(${escape(it.specific_actor_type || "unknown")})</span></dd>` : ""}
     ${evalLine}`;
 }
 const snippet = (s,n) => !s ? "" : (s.length>n ? s.slice(0,n).trim()+"…" : s);
@@ -971,7 +991,7 @@ function actorTypeMap() {
       tc.set(t, (tc.get(t)||0) + 1);
     });
   };
-  STATE.data.documents.forEach(d => note(d.actors, d.actors_type_raw));
+  STATE.data.documents.forEach(d => note(d.actors, d.actor_types_raw));
   STATE.data.trainings.forEach(t => note(t.actor, t.actor_type_raw));
   STATE.data.benchmarks.forEach(b => note(b.author, b.author_type_raw));
   [...STATE.data.conducts, ...STATE.data.risks].forEach(it => {
@@ -1103,44 +1123,59 @@ function renderCluster() {
     axis.className = "tl-axis";
     tl.appendChild(axis);
 
+    let rowIdx = 0;
     years.forEach(y => {
       byYear[y].forEach((r, idx) => {
         const row = document.createElement("div");
         row.className = "tl-row";
         row.dataset.year = y;
-        const actorType = r.item.actor_type || "unknown";
-        const color = ACTOR_COLOR_HEX[actorType] || ACTOR_COLOR_HEX.unknown;
+        row.dataset.idx  = rowIdx++;
 
+        // Year (only on the first row of each year)
         const yearCell = document.createElement("div");
         yearCell.className = "tl-year-cell";
         if (idx === 0) {
-          yearCell.dataset.year = y;
           yearCell.innerHTML = `<div class="tl-year-label">${escape(y)}</div>`;
-          yearCell.addEventListener("click", () => {
-            STATE.cluster.expandedYear =
-              STATE.cluster.expandedYear === y ? null : y;
-            updateExpandedYear();
-          });
         }
         row.appendChild(yearCell);
 
-        const right = document.createElement("div");
-        right.className = "tl-right";
-        right.innerHTML = `
-          <div class="tl-tick">
-            <span class="tl-tick-mark" style="background:${color}"></span>
-            <span class="tl-tick-co">${escape(r.item.company)}</span>
-          </div>
+        // Black dot on the timeline
+        const dotCell = document.createElement("div");
+        dotCell.className = "tl-dot-cell";
+        const dot = document.createElement("div");
+        dot.className = "tl-dot";
+        dotCell.appendChild(dot);
+        row.appendChild(dotCell);
+
+        // Content (company label + collapsed card)
+        const content = document.createElement("div");
+        content.className = "tl-content";
+        content.innerHTML = `
+          <div class="tl-tick-co">${escape(r.item.company)}</div>
           <div class="tl-def-card"></div>
         `;
-        renderTimelineCard(right.querySelector(".tl-def-card"), r);
-        row.appendChild(right);
+        renderTimelineCard(content.querySelector(".tl-def-card"), r);
+        row.appendChild(content);
+
+        // Interactions: hover shows card (transient); click pins it (persistent)
+        const co = content.querySelector(".tl-tick-co");
+        const showHover = () => { if (!row.classList.contains("is-pinned")) row.classList.add("is-hover"); };
+        const hideHover = () => row.classList.remove("is-hover");
+        const togglePin = () => {
+          const pinned = row.classList.toggle("is-pinned");
+          dot.classList.toggle("pinned", pinned);
+          if (pinned) row.classList.remove("is-hover");
+        };
+        dot.addEventListener("mouseenter", showHover);
+        dot.addEventListener("mouseleave", hideHover);
+        co .addEventListener("mouseenter", showHover);
+        co .addEventListener("mouseleave", hideHover);
+        dot.addEventListener("click", togglePin);
+        co .addEventListener("click", togglePin);
 
         axis.appendChild(row);
       });
     });
-
-    updateExpandedYear();   // apply default (no expansion) or restore prior choice
   }
 
   // ── Conceptual network: CENTRAL node = the selected category;
@@ -1296,29 +1331,74 @@ function updateExpandedYear() {
   });
 }
 
-function renderTimelineCard(card, r, pinned=false) {
+// Render an array of {name, type} as colour-coded chips.
+function actorPills(actors) {
+  if (!actors || !actors.length) return `<span class="tl-meta">—</span>`;
+  return actors.map(a => {
+    const c = ACTOR_COLOR_HEX[(a.type||"").toLowerCase()] || ACTOR_COLOR_HEX.unknown;
+    return `<span class="actor-pill"><span class="type-chip" style="background:${c}"></span>${escape(a.name)} <span class="tl-meta">(${escape(a.type||"unknown")})</span></span>`;
+  }).join(" ");
+}
+
+// Split parallel pipe-separated "name | name" and "type | type" into pairs
+function pairsFrom(namesStr, typesStr) {
+  const names = (namesStr||"").split("|").map(s => s.trim()).filter(Boolean);
+  const types = (typesStr||"").split("|").map(s => s.trim().toLowerCase());
+  return names.map((n, i) => ({ name: n, type: types[i] || types[0] || "unknown" }));
+}
+
+function renderTimelineCard(card, r) {
   const link = r.doc.url
     ? `<a href="${r.doc.url}" target="_blank">${escape(r.doc.title)}</a>`
     : escape(r.doc.title);
   const def = r.item.definition || r.item.verbatim || "";
-  const contribs = r.item.specific_actor
-    ? r.item.specific_actor
-    : (r.doc.actors || "");
-  const trainLines = (r.trainings || []).map(t =>
-    `<div class="tl-step"><span class="tl-step-tag">Trained</span>
-       <span class="tl-step-body">${escape(t.item)} <span class="tl-meta">(${escape(t.category)})</span>${t.actor ? ` — ${escape(t.actor)}` : ""}</span></div>`).join("");
-  const benchLines = (r.benchmarks || []).map(b =>
-    `<div class="tl-step"><span class="tl-step-tag">Benchmarked</span>
-       <span class="tl-step-body">${escape(b.name)} <span class="tl-meta">(${escape(b.category)})</span>${b.author ? ` — ${escape(b.author)}` : ""}</span></div>`).join("");
+
+  const authors = r.doc.author_actors || [];
+  const cited   = r.doc.cited_actors  || [];
+
+  // Specific actor (if any) is an explicit external credit — count as cited
+  let citedFull = cited.slice();
+  if (r.item.specific_actor) {
+    citedFull = citedFull.concat([{ name: r.item.specific_actor,
+                                    type: r.item.specific_actor_type || "unknown" }]);
+  }
+
+  const trainBlock = (r.trainings || []).map(t => {
+    const actorPairs = pairsFrom(t.actor, t.actor_type_raw);
+    return `<div class="tl-step"><span class="tl-step-tag">Trained by</span>
+              <span class="tl-step-body">
+                <span class="tl-meta">${escape(t.item)} · ${escape(t.category)}</span><br>
+                ${actorPills(actorPairs)}
+              </span></div>`;
+  }).join("");
+
+  const benchBlock = (r.benchmarks || []).map(b => {
+    const actorPairs = pairsFrom(b.author, b.author_type_raw);
+    return `<div class="tl-step"><span class="tl-step-tag">Benchmarked by</span>
+              <span class="tl-step-body">
+                <span class="tl-meta">${escape(b.name)} · ${escape(b.category)}</span><br>
+                ${actorPills(actorPairs)}
+              </span></div>`;
+  }).join("");
+
+  const evalLine = r.item.external_evaluator
+    ? `<div class="tl-step"><span class="tl-step-tag">External evaluator</span>
+         <span class="tl-step-body">${escape(r.item.external_evaluator)}</span></div>`
+    : "";
+
   card.innerHTML = `
     <div class="tl-card-head">
       <strong>${escape(r.year)}</strong> · <strong>${escape(r.item.company)}</strong> · <em>${escape(r.item.item)}</em>
     </div>
     <div class="tl-card-src">${link}</div>
     ${def ? `<div class="tl-def">"${escape(snippet(def, 320))}"</div>` : ""}
-    ${contribs ? `<div class="tl-step"><span class="tl-step-tag">Contributors</span><span class="tl-step-body">${escape(contribs)}</span></div>` : ""}
-    ${trainLines}
-    ${benchLines}
+    <div class="tl-step"><span class="tl-step-tag">Author</span>
+      <span class="tl-step-body">${actorPills(authors)}</span></div>
+    ${citedFull.length ? `<div class="tl-step"><span class="tl-step-tag">Cited</span>
+      <span class="tl-step-body">${actorPills(citedFull)}</span></div>` : ""}
+    ${trainBlock}
+    ${benchBlock}
+    ${evalLine}
   `;
 }
 
