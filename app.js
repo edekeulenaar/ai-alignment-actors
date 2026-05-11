@@ -543,7 +543,7 @@ function docToCard(d) {
     <dt>Year</dt><dd>${escape(d.year)}</dd>
     <dt>Type</dt><dd>${escape(d.pub_type)}${d.policy_type ? ` — ${escape(d.policy_type)}` : ""}</dd>
     <dt>Model</dt><dd>${escape(d.company_model || "—")}</dd>
-    <dt>Contributors</dt><dd>${escape(d.actors) || "—"}</dd>
+    <dt>Authors</dt><dd>${escape(d.actors) || "—"}</dd>
     <dt>Defines</dt><dd>${d.conduct_ids.length} conduct(s), ${d.risk_ids.length} risk(s)</dd>
   `;
 }
