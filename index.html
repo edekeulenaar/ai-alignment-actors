@@ -430,8 +430,10 @@
       The flat CSV is reshaped into a compact JSON file
       (<code>docs/data.json</code>) consumed by the front-end. Conducts,
       risks and misuses are aggregated on <em>(company × item)</em>;
-      training methods on <em>(company × category × item)</em>; benchmarks
-      on <em>(company × name)</em>.
+      training methods on <em>(company × risk/conduct category × training
+      item)</em>; benchmarks on <em>(company × risk/conduct category ×
+      benchmark name)</em>. The original training-method and benchmark-domain
+      classifications are preserved as item metadata.
     </p>
 
     <p>
@@ -665,8 +667,8 @@
     <article class="grid-block" id="block-training">
       <header class="block-head">
         <h3>Training</h3>
-        <p class="block-sub">Who is credited with training models?</p>
-        <p class="block-caption">Square colour = type of the named <code>risk_conduct_training_actor</code> (who actually did the training). Click for AUTHOR; click again (+ cited) for any other actor in the row — including the document's authors.</p>
+        <p class="block-sub">Which training methods are used for each risk or conduct category?</p>
+        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = training methods. Square colour = type of the named <code>risk_conduct_training_actor</code> (who actually did the training). Click for AUTHOR; click again (+ cited) for any other actor in the row — including the document's authors.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="training">
@@ -682,8 +684,8 @@
     <article class="grid-block" id="block-benchmark">
       <header class="block-head">
         <h3>Benchmarking</h3>
-        <p class="block-sub">Who is the creator of a cited benchmark?</p>
-        <p class="block-caption">Square colour = type of the named <code>risk_conduct_benchmark_author</code>. Click for AUTHOR; click again (+ cited) for any other actor in the row — the document's authors, training actors and explicit credits.</p>
+        <p class="block-sub">Which benchmarks are used for each risk or conduct category?</p>
+        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = benchmarks. Square colour = type of the named <code>risk_conduct_benchmark_author</code>. Click for AUTHOR; click again (+ cited) for any other actor in the row — the document's authors, training actors and explicit credits.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="benchmark">
@@ -875,6 +877,6 @@
 <div id="info-card" class="info-card hidden"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260512T095657"></script>
+<script src="app.js?v=20260512T120000"></script>
 </body>
 </html>

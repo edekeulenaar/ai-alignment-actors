@@ -617,7 +617,8 @@ function itemToCard(it, blockId, nameKey) {
     return `
       <h4>${escape(it.item)}</h4>
       ${it.verbatim ? `<div class="quote">"${escape(snippet(it.verbatim, 220))}"</div>` : ""}
-      <dt>Category</dt><dd>${escape(it.category)}</dd>
+      <dt>Risk / conduct category</dt><dd>${escape(it.category)}</dd>
+      <dt>Training method category</dt><dd>${escape(it.training_category || "—")}</dd>
       <dt>Found in</dt><dd>${found}</dd>
       <dt>Done by</dt><dd>${actorPills(trainActors)}</dd>
       <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
@@ -628,7 +629,8 @@ function itemToCard(it, blockId, nameKey) {
     const benchActors = pairsFrom(it.author, it.author_type_raw);
     return `
       <h4>${escape(it.name)}</h4>
-      <dt>Category</dt><dd>${escape(it.category)}</dd>
+      <dt>Risk / conduct category</dt><dd>${escape(it.category)}</dd>
+      <dt>Benchmark domain</dt><dd>${escape(it.benchmark_category || "—")}</dd>
       <dt>Found in</dt><dd>${found}</dd>
       <dt>Benchmark creator</dt><dd>${actorPills(benchActors)}</dd>
       <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
@@ -770,7 +772,8 @@ function refreshSelectionState() {
     if (type === "benchmark") it = data.benchmarks.find(x => x.id === id);
     if (!it) return false;
     const blob = [
-      it.title, it.item, it.name, it.category, it.definition, it.verbatim,
+      it.title, it.item, it.name, it.category, it.training_category,
+      it.benchmark_category, it.definition, it.verbatim,
       it.actor, it.author, it.actors, it.specific_actor, it.external_evaluator,
       it.company, it.pub_type, (it.all_actor_types||[]).join(" "),
       (it.actor_types||[]).join(" ")
@@ -1408,18 +1411,24 @@ function renderTimelineCard(card, r) {
 
   const trainBlock = (r.trainings || []).map(t => {
     const actorPairs = pairsFrom(t.actor, t.actor_type_raw);
+    // t.category is now the conduct/risk category; show the training-method
+    // category (t.training_category) when available.
+    const meta = [t.item, t.training_category].filter(Boolean).join(" · ");
     return `<div class="tl-step"><span class="tl-step-tag">Training</span>
               <span class="tl-step-body">
-                <span class="tl-meta">${escape(t.item)} · ${escape(t.category)}</span><br>
+                <span class="tl-meta">${escape(meta)}</span><br>
                 ${actorPills(actorPairs)}
               </span></div>`;
   }).join("");
 
   const benchBlock = (r.benchmarks || []).map(b => {
     const actorPairs = pairsFrom(b.author, b.author_type_raw);
+    // b.category is now the conduct/risk category; show the benchmark-domain
+    // category (b.benchmark_category) when available.
+    const meta = [b.name, b.benchmark_category].filter(Boolean).join(" · ");
     return `<div class="tl-step"><span class="tl-step-tag">Benchmark</span>
               <span class="tl-step-body">
-                <span class="tl-meta">${escape(b.name)} · ${escape(b.category)}</span><br>
+                <span class="tl-meta">${escape(meta)}</span><br>
                 ${actorPills(actorPairs)}
               </span></div>`;
   }).join("");
