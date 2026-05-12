@@ -85,14 +85,6 @@
    ]
   },
   {
-   "name": "DeepSeek-AI",
-   "country": "China",
-   "models": [
-    "DeepSeek LLM",
-    "DeepSeek-V3.2"
-   ]
-  },
-  {
    "name": "EuroLLM",
    "country": "Portugal",
    "models": [
@@ -672,8 +664,7 @@
    "based_in": "China",
    "role": "AUTHOR",
    "companies": [
-    "DeepSeek",
-    "DeepSeek-AI"
+    "DeepSeek"
    ],
    "doc_ids": [
     "EX5MJA8V",
@@ -3144,8 +3135,7 @@
    "based_in": "China",
    "role": "AUTHOR",
    "companies": [
-    "DeepSeek",
-    "DeepSeek-AI"
+    "DeepSeek"
    ],
    "doc_ids": [
     "Q5RNPIQ6"
@@ -3610,9 +3600,8 @@
    "role": "CITED",
    "companies": [
     "OpenAI",
-    "Meta",
     "DeepSeek",
-    "DeepSeek-AI",
+    "Meta",
     "EuroLLM"
    ],
    "doc_ids": [
@@ -4194,8 +4183,7 @@
    "based_in": "China",
    "role": "AUTHOR",
    "companies": [
-    "DeepSeek",
-    "DeepSeek-AI"
+    "DeepSeek"
    ],
    "doc_ids": [
     "J27ALZCI"
@@ -6004,9 +5992,8 @@
    "role": "CITED",
    "companies": [
     "Mistral AI",
-    "xAI",
-    "DeepSeek-AI",
-    "DeepSeek"
+    "DeepSeek",
+    "xAI"
    ],
    "doc_ids": [
     "GXPBCGLT",
@@ -20688,9 +20675,9 @@
    ],
    "primary_actor_type": "ai company",
    "conduct_ids": [
-    "conduct__deepseek-ai__human-alignment",
     "conduct__deepseek__agentic-performance",
     "conduct__deepseek__factual-reliability",
+    "conduct__deepseek__human-alignment",
     "conduct__deepseek__language-consistency",
     "conduct__deepseek__reasoning"
    ],
@@ -20698,17 +20685,17 @@
     "risk__deepseek__length-penalty"
    ],
    "training_ids": [
-    "train__deepseek-ai__preference-learning__rlaif",
     "train__deepseek__data-curation-preference-learning__reward-modelling",
     "train__deepseek__data-curation-supervised-training-preference-learning__synthetic-data",
     "train__deepseek__preference-learning-reward-shaping__preference-learning-reward-shaping",
     "train__deepseek__preference-learning-supervised-training-data-curation-reward-shaping__rule-based-rewards",
+    "train__deepseek__preference-learning__rlaif",
     "train__deepseek__reward-shaping__rule-based-rewards"
    ],
    "benchmark_ids": [
-    "bench__deepseek-ai__chatbotarena",
     "bench__deepseek__aime-2025",
     "bench__deepseek__browsecomp",
+    "bench__deepseek__chatbotarena",
     "bench__deepseek__gpqa-diamond",
     "bench__deepseek__hmmt-2025",
     "bench__deepseek__human-last-exam-hle",
@@ -27001,7 +26988,7 @@
    "pub_type": "Report",
    "is_policy": false,
    "policy_type": "",
-   "company": "DeepSeek-AI",
+   "company": "DeepSeek",
    "company_model": "DeepSeek LLM",
    "actors": "DeepSeek",
    "actor_types_raw": "AI company",
@@ -27010,9 +26997,9 @@
    ],
    "primary_actor_type": "ai company",
    "conduct_ids": [
-    "conduct__deepseek-ai__safety",
     "conduct__deepseek__helpfulness",
-    "conduct__deepseek__instruction-following"
+    "conduct__deepseek__instruction-following",
+    "conduct__deepseek__safety"
    ],
    "risk_ids": [
     "risk__deepseek__discrimination",
@@ -27022,15 +27009,14 @@
     "risk__deepseek__trade-secrets-and-intellectual-property-rights"
    ],
    "training_ids": [
-    "train__deepseek-ai__supervised-training-preference-learning-data-curation__instruction-tuning",
     "train__deepseek__supervised-training-preference-learning-data-curation__dpo",
+    "train__deepseek__supervised-training-preference-learning-data-curation__instruction-tuning",
     "train__deepseek__supervised-training-preference-learning-hard-constraints__instruction-tuning"
    ],
    "benchmark_ids": [
-    "bench__deepseek-ai__deepseek-safety-evaluation-taxonomy",
-    "bench__deepseek-ai__do-not-answer",
     "bench__deepseek__alignbench",
     "bench__deepseek__deepseek-safety-evaluation-taxonomy",
+    "bench__deepseek__do-not-answer",
     "bench__deepseek__ifeval",
     "bench__deepseek__mt-bench"
    ],
@@ -33596,8 +33582,8 @@
    "only_policy": false
   },
   {
-   "id": "conduct__deepseek-ai__human-alignment",
-   "company": "DeepSeek-AI",
+   "id": "conduct__deepseek__human-alignment",
+   "company": "DeepSeek",
    "category": "Appropriate harmlessness",
    "item": "Human alignment",
    "definition": "merge reasoning, agent, and human alignment training into one RL stage.",
@@ -33612,10 +33598,10 @@
    "external_evaluator": "",
    "actor_type": "ai company",
    "training_ids": [
-    "train__deepseek-ai__preference-learning__rlaif"
+    "train__deepseek__preference-learning__rlaif"
    ],
    "benchmark_ids": [
-    "bench__deepseek-ai__chatbotarena"
+    "bench__deepseek__chatbotarena"
    ],
    "author_actor_types": [
     "ai company"
@@ -36995,27 +36981,34 @@
    "only_policy": false
   },
   {
-   "id": "conduct__deepseek-ai__safety",
-   "company": "DeepSeek-AI",
+   "id": "conduct__deepseek__safety",
+   "company": "DeepSeek",
    "category": "Appropriate harmlessness",
    "item": "Safety",
    "definition": "We profoundly recognize the importance of safety for general artificial intelligence. The premise for establishing a truly helpful artificial intelligence model is that it possesses values consistent with those of humans and exhibits friendliness towards humanity. We incorporate the assurance of model safety throughout the entire training process, including pre-training, SFT, and DPO.",
    "pub_ids": [
-    "J27ALZCI"
+    "EX5MJA8V",
+    "J27ALZCI",
+    "SUE568KL"
    ],
    "pages": [
-    "19"
+    "16",
+    "19",
+    "33, 34"
    ],
    "specific_actor": "",
    "specific_actor_type": "",
    "external_evaluator": "",
    "actor_type": "ai company",
    "training_ids": [
-    "train__deepseek-ai__supervised-training-preference-learning-data-curation__instruction-tuning"
+    "train__deepseek__preference-learning__constitutional-ai",
+    "train__deepseek__supervised-training-preference-learning-data-curation__instruction-tuning",
+    "train__deepseek__supervised-training-preference-learning-reward-shaping__reward-modelling"
    ],
    "benchmark_ids": [
-    "bench__deepseek-ai__deepseek-safety-evaluation-taxonomy",
-    "bench__deepseek-ai__do-not-answer"
+    "bench__deepseek__deepseek-safety-evaluation-taxonomy",
+    "bench__deepseek__do-not-answer",
+    "bench__deepseek__rewardbench"
    ],
    "author_actor_types": [
     "ai company"
@@ -37702,41 +37695,6 @@
     "train__microsoft__inference-time-filtering-hard-constraints-adversarial-training__inference-time-filtering-hard-constraints-adversarial-training"
    ],
    "benchmark_ids": [],
-   "author_actor_types": [
-    "ai company"
-   ],
-   "cited_actor_types": [],
-   "all_actor_types": [
-    "ai company"
-   ],
-   "from_policy": false,
-   "only_policy": false
-  },
-  {
-   "id": "conduct__deepseek__safety",
-   "company": "DeepSeek",
-   "category": "Safety",
-   "item": "Safety",
-   "definition": "We compare the judgment ability of DeepSeek-V3 with state-of-the-art models... Table 8 presents the performance of these models in RewardBench... DeepSeek-V3 achieves performance on par with the best versions of GPT-4o-0806 and Claude-3.5-Sonnet-1022",
-   "pub_ids": [
-    "EX5MJA8V",
-    "SUE568KL"
-   ],
-   "pages": [
-    "16",
-    "33, 34"
-   ],
-   "specific_actor": "",
-   "specific_actor_type": "",
-   "external_evaluator": "",
-   "actor_type": "ai company",
-   "training_ids": [
-    "train__deepseek__preference-learning__constitutional-ai",
-    "train__deepseek__supervised-training-preference-learning-reward-shaping__reward-modelling"
-   ],
-   "benchmark_ids": [
-    "bench__deepseek__rewardbench"
-   ],
    "author_actor_types": [
     "ai company"
    ],
@@ -71873,8 +71831,8 @@
    ]
   },
   {
-   "id": "train__deepseek-ai__preference-learning__rlaif",
-   "company": "DeepSeek-AI",
+   "id": "train__deepseek__preference-learning__rlaif",
+   "company": "DeepSeek",
    "category": "Preference learning",
    "item": "RLAIF",
    "verbatim": "we merge reasoning, agent, and human alignment training into one RL stage. | For general tasks, we employ a generative reward model where each prompt has its own rubrics for evaluation.",
@@ -71892,7 +71850,7 @@
     "Q5RNPIQ6"
    ],
    "conduct_ids": [
-    "conduct__deepseek-ai__human-alignment"
+    "conduct__deepseek__human-alignment"
    ],
    "risk_ids": [],
    "from_policy": false,
@@ -79266,8 +79224,8 @@
    "cited_actor_types": []
   },
   {
-   "id": "train__deepseek-ai__supervised-training-preference-learning-data-curation__instruction-tuning",
-   "company": "DeepSeek-AI",
+   "id": "train__deepseek__supervised-training-preference-learning-data-curation__instruction-tuning",
+   "company": "DeepSeek",
    "category": "Supervised training | Preference learning | Data curation",
    "item": "Instruction tuning",
    "verbatim": "We incorporate the assurance of model safety throughout the entire training process, including pre-training, SFT, and DPO. | We collect around 1.5 million instruction data instances in English and Chinese... The safety data consists of 300K instances, covering various sensitive topics.",
@@ -79285,7 +79243,7 @@
     "J27ALZCI"
    ],
    "conduct_ids": [
-    "conduct__deepseek-ai__safety"
+    "conduct__deepseek__safety"
    ],
    "risk_ids": [],
    "from_policy": false,
@@ -88897,8 +88855,8 @@
    "actor_type": "academic"
   },
   {
-   "id": "bench__deepseek-ai__chatbotarena",
-   "company": "DeepSeek-AI",
+   "id": "bench__deepseek__chatbotarena",
+   "company": "DeepSeek",
    "category": "Internal evaluation suite",
    "name": "ChatbotArena",
    "author": "LMSYS",
@@ -88915,7 +88873,7 @@
     "Q5RNPIQ6"
    ],
    "conduct_ids": [
-    "conduct__deepseek-ai__human-alignment"
+    "conduct__deepseek__human-alignment"
    ],
    "risk_ids": [],
    "from_policy": false,
@@ -100417,8 +100375,8 @@
    "actor_type": "nonprofit"
   },
   {
-   "id": "bench__deepseek-ai__deepseek-safety-evaluation-taxonomy",
-   "company": "DeepSeek-AI",
+   "id": "bench__deepseek__deepseek-safety-evaluation-taxonomy",
+   "company": "DeepSeek",
    "category": "Safety / Harmlessness",
    "name": "DeepSeek Safety Evaluation Taxonomy",
    "author": "DeepSeek",
@@ -100434,9 +100392,14 @@
     "J27ALZCI"
    ],
    "conduct_ids": [
-    "conduct__deepseek-ai__safety"
+    "conduct__deepseek__safety"
    ],
-   "risk_ids": [],
+   "risk_ids": [
+    "risk__deepseek__discrimination",
+    "risk__deepseek__illegal-and-non-compliant-behavior",
+    "risk__deepseek__issues-of-illusion-and-reality",
+    "risk__deepseek__trade-secrets-and-intellectual-property-rights"
+   ],
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
@@ -100446,8 +100409,8 @@
    "actor_type": "ai company"
   },
   {
-   "id": "bench__deepseek-ai__do-not-answer",
-   "company": "DeepSeek-AI",
+   "id": "bench__deepseek__do-not-answer",
+   "company": "DeepSeek",
    "category": "Refusal / Over-refusal",
    "name": "Do-Not-Answer",
    "author": "Wang et al",
@@ -100458,13 +100421,16 @@
     "ai company"
    ],
    "pages": [
-    "20, 21"
+    "20, 21",
+    "47, 48"
    ],
    "pub_ids": [
+    "IZ66N7DZ",
     "J27ALZCI"
    ],
    "conduct_ids": [
-    "conduct__deepseek-ai__safety"
+    "conduct__deepseek__harmlessness",
+    "conduct__deepseek__safety"
    ],
    "risk_ids": [],
    "from_policy": false,
@@ -101253,38 +101219,6 @@
     "research institute"
    ],
    "actor_type": "academic"
-  },
-  {
-   "id": "bench__deepseek__deepseek-safety-evaluation-taxonomy",
-   "company": "DeepSeek",
-   "category": "Safety / Harmlessness",
-   "name": "DeepSeek Safety Evaluation Taxonomy",
-   "author": "DeepSeek",
-   "author_type_raw": "AI company",
-   "author_type": "ai company",
-   "all_actor_types": [
-    "ai company"
-   ],
-   "pages": [
-    "20"
-   ],
-   "pub_ids": [
-    "J27ALZCI"
-   ],
-   "conduct_ids": [],
-   "risk_ids": [
-    "risk__deepseek__discrimination",
-    "risk__deepseek__illegal-and-non-compliant-behavior",
-    "risk__deepseek__issues-of-illusion-and-reality",
-    "risk__deepseek__trade-secrets-and-intellectual-property-rights"
-   ],
-   "from_policy": false,
-   "only_policy": false,
-   "author_actor_types": [
-    "ai company"
-   ],
-   "cited_actor_types": [],
-   "actor_type": "ai company"
   },
   {
    "id": "bench__microsoft__text-based-adversarial-prompts",
@@ -105095,38 +105029,6 @@
    "category": "Safety / Harmlessness",
    "name": "HarmBench",
    "author": "Mazeika et al",
-   "author_type_raw": "academic",
-   "author_type": "academic",
-   "all_actor_types": [
-    "academic",
-    "ai company"
-   ],
-   "pages": [
-    "47, 48"
-   ],
-   "pub_ids": [
-    "IZ66N7DZ"
-   ],
-   "conduct_ids": [
-    "conduct__deepseek__harmlessness"
-   ],
-   "risk_ids": [],
-   "from_policy": false,
-   "only_policy": false,
-   "author_actor_types": [
-    "academic"
-   ],
-   "cited_actor_types": [
-    "ai company"
-   ],
-   "actor_type": "academic"
-  },
-  {
-   "id": "bench__deepseek__do-not-answer",
-   "company": "DeepSeek",
-   "category": "Refusal / Over-refusal",
-   "name": "Do-Not-Answer",
-   "author": "Wang et al",
    "author_type_raw": "academic",
    "author_type": "academic",
    "all_actor_types": [
