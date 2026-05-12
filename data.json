@@ -154,7 +154,7 @@
   },
   {
    "name": "Multiple",
-   "country": "United Kingdom | Republic of Korea | United States | United Arab Emirates | France | China",
+   "country": "Other",
    "models": [
     "GPT-3 | GPT-Neo/J | GPT-2 | UnifiedQA | InstructGPT | WebGPT | Gopher | Anthropic",
     "gpt-5 | gpt-5-mini | gpt-5-nano"
@@ -15590,10 +15590,10 @@
   "France",
   "Germany",
   "Italy",
+  "Other",
   "Portugal",
   "Singapore",
   "United Kingdom",
-  "United Kingdom | Republic of Korea | United States | United Arab Emirates | France | China",
   "United States"
  ],
  "documents": [
