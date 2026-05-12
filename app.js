@@ -21,27 +21,36 @@ const COLOR_VAR = {
 };
 
 const DOC_TYPE_CLASS = {
-  "Model card": "t-model-card",  "Model Card": "t-model-card",
+  "Model card": "t-model-card",   "Model Card":      "t-model-card",
   "Company policy": "t-company-policy",
-  "Principle": "t-principle",     "Grant": "t-grant",
-  "Initiative": "t-initiative",   "Report": "t-report",
-  "Research": "t-research",       "Announcement": "t-announcement",
-  "Audit": "t-audit",             "Other: Legislation": "t-legislation",
+  "Principle":      "t-principle",
+  "Grant":          "t-grant",
+  "Initiative":     "t-initiative",
+  "Report":         "t-report",
+  "Research":       "t-research",
+  "Research paper": "t-research-paper",
+  "Framework":      "t-framework",
+  "Announcement":   "t-announcement",
+  "Audit":          "t-audit",
+  "Other: Legislation": "t-legislation",
+  "Legislation":    "t-legislation",
 };
 const docTypeKey = t => DOC_TYPE_CLASS[t] || "t-other";
 
 const DOC_TYPE_LABEL = {
-  "t-model-card":     "Model card",
-  "t-company-policy": "Company policy",
-  "t-principle":      "Principle / charter",
-  "t-grant":          "Grant",
-  "t-initiative":     "Initiative",
-  "t-report":         "Report",
-  "t-research":       "Research / paper",
-  "t-announcement":   "Announcement / blog",
-  "t-audit":          "Audit",
-  "t-legislation":    "Legislation",
-  "t-other":          "Other",
+  "t-model-card":      "Model card",
+  "t-company-policy":  "Company policy",
+  "t-principle":       "Principle / charter",
+  "t-grant":           "Grant",
+  "t-initiative":      "Initiative",
+  "t-report":          "Report",
+  "t-research-paper":  "Research paper",
+  "t-research":        "Research paper",
+  "t-framework":       "Framework",
+  "t-announcement":    "Announcement / blog",
+  "t-audit":           "Audit",
+  "t-legislation":     "Legislation",
+  "t-other":           "Other",
 };
 
 const STATE = {

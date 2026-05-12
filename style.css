@@ -620,11 +620,13 @@ body.view-named .cat-cell:not(.docs-cell) {
 .doc.t-model-card::after        { content: ""; }
 .doc.t-company-policy           { background: #f4ecd8; }
 .doc.t-principle::after         { content: "§"; }
-.doc.t-grant::after             { content: "$"; }
-.doc.t-initiative::after        { content: "!"; }
+.doc.t-grant::after             { content: "$"; font-weight: 700; }
+.doc.t-initiative::after        { content: "$"; font-weight: 700; }
 .doc.t-report::after            { content: "R"; font-size: 0.7em; }
-.doc.t-research::after          { content: "✎"; font-size: 0.85em; }
-.doc.t-announcement::after      { content: "▶"; font-size: 0.6em; }
+.doc.t-research::after,
+.doc.t-research-paper::after    { content: "✎"; font-size: 0.95em; }
+.doc.t-framework::after         { content: "⚙"; font-size: 0.95em; }
+.doc.t-announcement::after      { content: "!"; font-weight: 700; }
 .doc.t-audit::after             { content: "✓"; font-size: 0.8em; }
 .doc.t-legislation::after       { content: "⚖"; font-size: 0.85em; }
 .doc.t-other::after             { content: "?"; }
