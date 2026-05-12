@@ -106,100 +106,91 @@
     <h2>Introduction</h2>
 
     <p class="lede">
-      Part of processing the surprise that AI has brought to our everyday
-      lives is to contemplate the role it now plays as a new means of access
-      to and discovery of information. For two decades we spoke of
-      <em>algorithms</em> as a catch-all phrase for the mechanisms behind a
-      great many media — the nuts and bolts of search engines, recommender
-      systems, newsfeeds, "for you" pages. Today, access to online
-      information is increasingly remediated by AI generation, which is on
-      its way to replacing search, discovery, content creation and even
-      governance systems like content moderation under a single
-      computational umbrella.
+      One of the major controversies that AI has brought to societal debate
+      has been its renewed role in public access to information
+      (<a href="#ref-branford-2025">Branford, Soulier, and Fichtner 2025</a>).
+      One once spoke to "algorithms" as a catch-all denominator of the
+      underlying infrastructures and politics behind information management
+      (<a href="#ref-bowker-2000">Bowker and Star 2000</a>), be that as
+      ranking systems (<a href="#ref-rieder-2018">Rieder, Matamoros-Fernández,
+      and Coromina 2018</a>), newsfeeds (<a href="#ref-kalogeropoulos-2019">Kalogeropoulos
+      et al. 2019</a>), recommenders (<a href="#ref-moller-2018">Möller et
+      al. 2018</a>) and a variety of content moderation systems
+      (<a href="#ref-gillespie-2022">Gillespie 2022</a>;
+      <a href="#ref-gorwa-2020">Gorwa, Binns, and Katzenbach 2020</a>).
+      While that is still very much the case, there is an understanding that
+      AI systems — LLMs, in particular — come to replace these as ever more
+      intuitive and precise personalization systems. And as seamless as this
+      shift may feel, the political implications remain profound: both
+      algorithmic and AI-based information systems get to conjugate the
+      circulation of information with societal norms.
     </p>
 
     <p>
-      This shift has political consequences. Where the algorithmic age
-      framed democratic participation as a question of <em>design</em> —
-      designing markets and regulations that constrain platforms, designing
-      protocols and middleware that pluralise our exposure to information,
-      designing intellectual frameworks for algorithmic pluralism — the
-      generative age reframes the same question as one of <em>value
-      alignment</em>. Alignment is equivalent to what we used to call
-      algorithms in a double sense: it shapes both the <em>circulation</em>
-      of information (what one finds and how) and its <em>regeneration</em>
-      (the direction in which what already <em>is</em> is rewritten by a
-      model). Its cast is fundamentally prescriptive. Choosing the direction
-      in which information is regenerated is the key political power of
-      alignment, and not a trivial one. Considerable amounts of power are
-      concentrated on this decision alone.
+      In this sense, another political consequence of this shift is the
+      question of <em>who</em> gets to decide and operationalise societal
+      norms into technical systems, be these epistemic (for what concerns
+      definitions of "misinformation" and other types of information
+      integrity); bias (be it representational or political); harm (personal
+      or societal); and a myriad other contested concepts
+      (<a href="#ref-collier-2006">Collier, Hidalgo, and Maciuceanu 2006</a>).
+      Part of that question is one of <em>inclusion</em>: who is consulted
+      about these norms, and what is their participation in technical design?
+      Another is a question of <em>negotiation</em> — or <em>struggle</em>,
+      should we confront the irredeemably diverse nature of stakeholder
+      interests: <em>how</em> are different actors invited to deliberate and
+      collaborate in the design of technical values
+      (<a href="#ref-habe-1989">Habe 1989</a>)? Algorithmic systems had
+      called for a variety of "participative", "collaborative" or
+      "reflective" methods (<a href="#ref-sengers-2005">Sengers et al.
+      2005</a>), yielding protocols like algorithmic pluralism
+      (<a href="#ref-szymielewicz-2025">Szymielewicz 2025</a>) or "prosocial
+      design" (<a href="#ref-schirch-2025">Schirch 2025</a>).
     </p>
 
     <p>
-      Like algorithmic systems before it, alignment is not a single thing
-      but a stack of choices: <em>what</em> data is selected and how it is
-      curated; <em>which</em> norms are decided, defined and operationalised
-      — the behaviours a model should display, the risks it should avoid,
-      the capabilities it should acquire; and <em>how</em> all of this is
-      benchmarked. Each step has its own politics. Benchmarking, in
-      particular, is not only a method of verification but also a
-      <em>model</em>: a ground truth, a legitimising apparatus, an instrument
-      for declaring that something has been done. As <a href="#ref-gabriel-2020">Iason Gabriel</a> has
-      argued, the <em>process</em> by which alignment values are defined may
-      matter as much as, or more than, the values themselves.
+      But what does this look like in <em>alignment</em> systems? Who
+      participates in alignment processes, and in what capacity? Like
+      algorithmic systems before it, alignment is constituted by a stack of
+      contributions from multiple actors: legislations (where applicable, or
+      if available); data production and curation; norm definition (be those
+      ideal AI behaviours, or risks); the training of each conduct, or
+      mitigation of each risk; their benchmarking and evaluation; and so on.
+      Each of these steps constitute "governance mechanisms"
+      (<a href="#ref-gorwa-2020">Gorwa, Binns, and Katzenbach 2020</a>) in
+      their own right: the selection of a knowledge base; the adjudication
+      and domestication of different speech norms
+      (<a href="#ref-dekeulenaar-2025">de Keulenaar 2025</a>); and the
+      legitimation of each learned behaviour. This also means an emerging AI
+      governance infrastructure, where AI companies crystallise norms in
+      "principles" or "charter" documents; devise ideal uses and misuses in
+      trust &amp; safety policies; disclose training design in model cards;
+      announce normative pivots and other decisions in blog posts, and so
+      on.
     </p>
 
     <p>
-      That process is marked by multiple interventions and a great deal of
-      arbitrary choice. Legal frameworks shape some of it; so do external
-      actors — red teamers, ethicists, domain experts, civil-society
-      organisations, academic citations — who consult or inform what counts
-      as a value and how it is defined. And yet, the space of potential
-      directions is enormous, which means there are many possible ways for
-      companies to delimit themselves and their products through alignment.
-      The broader question, then, is one of delegation:
-      <strong>to whom is alignment delegated, and how do different actors
-      participate in deciding what a model should and should not do?</strong>
-    </p>
-
-    <p>
-      This is a large question, so we have restricted it. The project
-      proceeds along two complementary readings: a <em>distant</em> reading
-      of the documents AI companies publish about their alignment practices
-      — model cards, system cards, company policies, principles, grant
-      calls, audits, announcements — and a <em>close</em> reading of a
-      single norm: <em>political even-handedness</em>. The distant reading,
-      which produced the maps below, covers 213 documents from 29 companies
-      across roughly a dozen countries. The close reading traces how a
-      politically charged ideal is operationalised across the alignment
-      stack.
-    </p>
-
-    <p>
-      Political even-handedness is a productive case because it sits at the
-      junction of multiple values and risk categories — bias,
-      anti-discrimination, neutrality, objectivity, freedom of speech,
-      viewpoint diversity — and because companies have themselves begun to
-      recognise that it cannot be determined top-down. Increasingly,
-      even-handedness is framed as something that <em>must</em> be the
-      product of pluralistic deliberation, even while remaining a corporate
-      product. Various projects have moved in that direction at different
-      levels — governance (Jigsaw, Meta's community-led pilots), techniques
-      (deliberative alignment, democratic fine-tuning, prosocial
-      recommender systems). Across them, attention has tended to focus on
-      democratising the <em>definition</em> of alignment values; we know
-      less about how the entire <em>process</em> of alignment — sourcing,
-      defining, training, evaluating — is itself democratised, or not.
-    </p>
-
-    <p>
-      The animating question of this project is therefore:
-      <strong>how does the translation of normative expertise and risk
-      estimation into measurable metrics, training data, and ultimately
-      model behaviour occur across the AI industry?</strong> Risk, after
-      all, is essentially prospective; it must be deliberative by
-      definition. The maps that follow are a first attempt to make that
-      deliberation visible.
+      The question posed above is broad enough that we restrict this article
+      into a <em>mapping exercise</em>. We explore <em>what types of
+      actors</em> are involved in five alignment steps: crafting
+      documentation, defining risks and ideal conducts, training, and
+      benchmarking. The method builds a static visualisation from a scripted
+      LLM-assisted extraction pipeline: 213 alignment-relevant documents,
+      drawn from a Zotero bibliography and the latest company-policy
+      snapshots, are resolved from local PDFs, HTML/Markdown snapshots or
+      live URLs, then read end-to-end by Gemini against a fixed schema. Each
+      extraction produces row-level evidence linking a document to conducts
+      or risks, training or mitigation methods, benchmarks, evaluators,
+      companies, models, actors and actor types, yielding <code>details_all.csv</code>
+      with 2,062 rows and 43 fields. Post-processing scripts classify
+      training methods and benchmarks into controlled taxonomies, cache those
+      classifications for cheap reruns, validate joins against the
+      bibliography, and aggregate the flat CSV into <code>docs/data.json</code>
+      for the GitHub Pages interface. The resulting site groups documents,
+      conducts, risks, training methods and benchmarks by company and
+      category, colours items by primary actor type, preserves cited actors
+      separately, and supports filtering, highlighting and cross-linking back
+      to the underlying source passages and page references.
     </p>
   </section>
 
@@ -801,18 +792,82 @@
   <section id="references" class="prose">
     <h2>References</h2>
     <ol class="references">
+      <li id="ref-bowker-2000">
+        Bowker, G. C., and S. L. Star. (2000).
+        <em>Sorting Things Out: Classification and Its Consequences.</em>
+        Cambridge, MA: MIT Press.
+      </li>
+      <li id="ref-branford-2025">
+        Branford, J., E. Soulier, and L. Fichtner. (2025).
+        <em>Generative AI and Democratic Culture.</em>
+        <a href="https://doi.org/10.1007/s13347-025-00953-x" target="_blank">Philosophy &amp; Technology, 38, Article 123</a>.
+      </li>
+      <li id="ref-collier-2006">
+        Collier, D., F. D. Hidalgo, and A. O. Maciuceanu. (2006).
+        <em>Essentially Contested Concepts: Debates and Applications.</em>
+        <a href="https://doi.org/10.1080/13569310600923782" target="_blank">Journal of Political Ideologies, 11(3), 211–246</a>.
+      </li>
+      <li id="ref-dekeulenaar-2025">
+        de Keulenaar, E. (2025).
+        <em>LLMs and the Generation of Moderate Speech.</em>
+        <a href="https://doi.org/10.2139/ssrn.5250537" target="_blank">SSRN working paper</a>.
+      </li>
       <li id="ref-gabriel-2020">
         Gabriel, I. (2020).
         <em>Artificial Intelligence, Values and Alignment.</em>
         <a href="https://link.springer.com/article/10.1007/s11023-020-09539-2" target="_blank">Minds and Machines, 30, 411–437</a>.
+      </li>
+      <li id="ref-gillespie-2022">
+        Gillespie, T. (2022).
+        <em>Do Not Recommend? Reduction as a Form of Content Moderation.</em>
+        <a href="https://doi.org/10.1177/20563051221117552" target="_blank">Social Media + Society, 8(3)</a>.
+      </li>
+      <li id="ref-gorwa-2020">
+        Gorwa, R., R. Binns, and C. Katzenbach. (2020).
+        <em>Algorithmic Content Moderation: Technical and Political Challenges in the Automation of Platform Governance.</em>
+        <a href="https://doi.org/10.1177/2053951719897945" target="_blank">Big Data &amp; Society, 7(1), 1–15</a>.
+      </li>
+      <li id="ref-habe-1989">
+        Habe, R. (1989).
+        <em>Public Design Control in American Communities: Design Guidelines/Design Review.</em>
+        Town Planning Review, 60(2), 195–219.
       </li>
       <li id="ref-ji-2023">
         Ji, J., Qiu, T., Chen, B., et al. (2023).
         <em>AI Alignment: A Comprehensive Survey.</em>
         <a href="https://arxiv.org/abs/2310.19852" target="_blank">arXiv:2310.19852</a>.
       </li>
+      <li id="ref-kalogeropoulos-2019">
+        Kalogeropoulos, A., J. Suiter, L. Udris, and M. Eisenegger. (2019).
+        <em>News Media Trust and News Consumption: Factors Related to Trust in News in 35 Countries.</em>
+        <a href="https://ijoc.org/index.php/ijoc/article/view/10141" target="_blank">International Journal of Communication, 13, 3672–3693</a>.
+      </li>
+      <li id="ref-moller-2018">
+        Möller, J., D. Trilling, N. Helberger, and B. van Es. (2018).
+        <em>Do Not Blame It on the Algorithm: An Empirical Assessment of Multiple Recommender Systems and Their Impact on Content Diversity.</em>
+        <a href="https://doi.org/10.1080/1369118X.2018.1444076" target="_blank">Information, Communication &amp; Society, 21(7), 959–977</a>.
+      </li>
+      <li id="ref-rieder-2018">
+        Rieder, B., A. Matamoros-Fernández, and Ò. Coromina. (2018).
+        <em>From Ranking Algorithms to "Ranking Cultures": Investigating the Modulation of Visibility in YouTube Search Results.</em>
+        <a href="https://doi.org/10.1177/1354856517736982" target="_blank">Convergence, 24(1), 50–68</a>.
+      </li>
+      <li id="ref-schirch-2025">
+        Schirch, L. (2025).
+        <em>Blueprint on Prosocial Tech Design Governance.</em>
+        Council on Technology and Social Cohesion / Toda Peace Institute.
+      </li>
+      <li id="ref-sengers-2005">
+        Sengers, P., K. Boehner, S. David, and J. Kaye. (2005).
+        <em>Reflective Design.</em>
+        <a href="https://doi.org/10.1145/1094562.1094569" target="_blank">Proceedings of the 4th Decennial Conference on Critical Computing, 49–58</a>.
+      </li>
+      <li id="ref-szymielewicz-2025">
+        Szymielewicz, K. (2025).
+        <em>Towards Algorithmic Pluralism in EU Policy.</em>
+        Panoptykon Foundation discussion paper.
+      </li>
     </ol>
-    <p class="meta">More citations will be added as the paper develops.</p>
   </section>
 
 </main>
