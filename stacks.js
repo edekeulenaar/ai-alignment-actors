@@ -385,15 +385,23 @@ function render() {
         return [lx + shift, planeY + ly];
       };
 
-      // Draw intra edges first.
+      // Draw intra edges first. Carry source/target/stack/layer data
+      // attributes so the click-to-highlight handler can identify each
+      // edge's endpoints.
       const edgeG = g.append("g");
       links.forEach(e => {
-        const s = nodes.find(n => n.name === (e.source.name || e.source));
-        const t = nodes.find(n => n.name === (e.target.name || e.target));
+        const sName = e.source.name || e.source;
+        const tName = e.target.name || e.target;
+        const s = nodes.find(n => n.name === sName);
+        const t = nodes.find(n => n.name === tName);
         if (!s || !t) return;
         const [sx, sy] = project(s.x, s.y);
         const [tx, ty] = project(t.x, t.y);
         edgeG.append("line").attr("class", "intra-edge")
+          .attr("data-source", sName)
+          .attr("data-target", tName)
+          .attr("data-stack", stack.key)
+          .attr("data-layer", key)
           .attr("x1", sx).attr("y1", sy)
           .attr("x2", tx).attr("y2", ty);
       });
@@ -430,9 +438,13 @@ function render() {
           const mx = (a.x + b.x) / 2;
           const my = (a.y + b.y) / 2;
           interBackG.append("line").attr("class", "inter-edge inter-back-seg")
+            .attr("data-actor-name", name)
+            .attr("data-stack", stack.key)
             .attr("x1", a.x).attr("y1", a.y)
             .attr("x2", mx).attr("y2", my);
           interFrontG.append("line").attr("class", "inter-edge inter-front-seg")
+            .attr("data-actor-name", name)
+            .attr("data-stack", stack.key)
             .attr("x1", mx).attr("y1", my)
             .attr("x2", b.x).attr("y2", b.y);
         }
@@ -458,13 +470,17 @@ function render() {
         const citedOnly = isCitedOnlyLayer(fullNode);
         nodesG.append("circle")
           .attr("class", citedOnly ? "node node-cited" : "node")
+          .attr("data-actor-name", n.name)
+          .attr("data-stack", stack.key)
+          .attr("data-layer", key)
           .attr("cx", px).attr("cy", py).attr("r", radius)
           .attr("fill", citedOnly ? "#ffffff" : baseColor)
           .attr("stroke", citedOnly ? baseColor : "#1a1a1a")
           .attr("stroke-width", citedOnly ? 1.4 : 0.7)
           .on("mouseover", ev => showTip(ev, fullNode, key, stack.label))
           .on("mouseout", scheduleHideTip)
-          .on("mousemove", ev => moveTip(ev));
+          .on("mousemove", ev => moveTip(ev))
+          .on("click", ev => { ev.stopPropagation(); selectActor(n.name); });
         if (showLabels) {
           nodesG.append("text").attr("class", "node-label")
             .attr("x", px + 7).attr("y", py + 3)
@@ -474,6 +490,98 @@ function render() {
     });
   });
 }
+
+// ────────────────────────────────────────────────────────────────
+// Click-to-highlight: focus an actor's full sub-network across the
+// stack. Highlighted = the clicked actor (everywhere it appears),
+// every co-mention edge it touches inside any plane, every actor on
+// the other end of those edges, and every cyan vertical line linking
+// the actor across layers. Everything else dims.
+// ────────────────────────────────────────────────────────────────
+let _selectedActor = null;
+
+function selectActor(actorName) {
+  if (_selectedActor === actorName) { clearSelection(); return; }
+  _selectedActor = actorName;
+  const svg = document.getElementById("stack-svg");
+  if (!svg) return;
+  svg.classList.add("has-selection");
+
+  // First pass: mark intra-edges where this actor is an endpoint, and
+  // collect the names of the actors on the other end (the neighbours).
+  const neighbours = new Set();
+  svg.querySelectorAll(".intra-edge").forEach(e => {
+    const s = e.getAttribute("data-source");
+    const t = e.getAttribute("data-target");
+    const hit = (s === actorName) || (t === actorName);
+    e.classList.toggle("hl", hit);
+    if (hit) neighbours.add(s === actorName ? t : s);
+  });
+
+  // Cross-layer (cyan) edges of this actor — both back and front halves.
+  svg.querySelectorAll(".inter-edge").forEach(e => {
+    e.classList.toggle("hl", e.getAttribute("data-actor-name") === actorName);
+  });
+
+  // Nodes: the actor itself = primary highlight; neighbours = secondary.
+  svg.querySelectorAll(".node").forEach(el => {
+    const name = el.getAttribute("data-actor-name");
+    el.classList.remove("hl", "hl-related");
+    if (name === actorName) el.classList.add("hl");
+    else if (neighbours.has(name)) el.classList.add("hl-related");
+  });
+
+  // Show a small banner with the selection + a Clear control.
+  showSelectionBanner(actorName, neighbours.size);
+}
+
+function clearSelection() {
+  _selectedActor = null;
+  const svg = document.getElementById("stack-svg");
+  if (!svg) return;
+  svg.classList.remove("has-selection");
+  svg.querySelectorAll(".hl, .hl-related").forEach(el => {
+    el.classList.remove("hl"); el.classList.remove("hl-related");
+  });
+  hideSelectionBanner();
+}
+
+function showSelectionBanner(actorName, neighbourCount) {
+  let banner = document.getElementById("stack-selection-banner");
+  if (!banner) {
+    banner = document.createElement("div");
+    banner.id = "stack-selection-banner";
+    const block = document.getElementById("block-stacks");
+    const svg = document.getElementById("stack-svg");
+    (block || svg.parentNode).insertBefore(banner, svg);
+  }
+  banner.innerHTML =
+    `<span class="sel-label">Selected:</span> ` +
+    `<strong>${escapeHtml(actorName)}</strong> ` +
+    `<span class="sel-meta">(${neighbourCount} direct co-mention neighbour` +
+    `${neighbourCount === 1 ? "" : "s"})</span>` +
+    `<button type="button" id="stack-clear-sel">Clear</button>`;
+  banner.style.display = "flex";
+  document.getElementById("stack-clear-sel")
+    .addEventListener("click", clearSelection);
+}
+function hideSelectionBanner() {
+  const banner = document.getElementById("stack-selection-banner");
+  if (banner) banner.style.display = "none";
+}
+
+// Background click on the SVG clears the selection.
+document.addEventListener("DOMContentLoaded", () => {
+  const svg = document.getElementById("stack-svg");
+  if (svg) {
+    svg.addEventListener("click", ev => {
+      if (ev.target.tagName !== "circle") clearSelection();
+    });
+  }
+});
+document.addEventListener("keydown", ev => {
+  if (ev.key === "Escape" && _selectedActor) clearSelection();
+});
 
 const tip = document.getElementById("stack-tooltip");
 let _hideTimer = null;
