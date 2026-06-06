@@ -683,3 +683,71 @@ body.has-selection .doc:not(.hl) {
 
 /* Hidden when filter excludes */
 .hidden { display: none !important; }
+
+/* ────────────────  Stack view  ──────────────── */
+#block-stacks .stacks-controls {
+  margin: 14px 0 8px;
+  display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-end;
+  padding: 10px 12px; border: 1px solid #ddd; background: #fff;
+}
+#block-stacks .stacks-controls label {
+  display: flex; flex-direction: column; font-size: 0.78rem; gap: 4px;
+  font-family: inherit;
+}
+#block-stacks .stacks-controls label.inline {
+  flex-direction: row; align-items: center; gap: 6px;
+}
+#block-stacks .stacks-controls select {
+  font: inherit; padding: 3px 6px; border: 1px solid #aaa; background: #fff;
+  min-width: 140px;
+}
+#block-stacks .stack-legend {
+  display: flex; flex-wrap: wrap; gap: 8px 14px;
+  margin: 8px 0 6px; font-size: 0.75rem;
+}
+#block-stacks .stack-legend .legend-item {
+  display: inline-flex; align-items: center; gap: 5px;
+}
+#block-stacks .stack-legend .legend-swatch {
+  width: 11px; height: 11px; border-radius: 50%;
+  border: 1px solid #222; display: inline-block;
+}
+#stack-svg {
+  width: 100%; height: auto; display: block;
+  background: #fff; border: 1px solid #ddd;
+}
+#stack-svg .plane-top   { fill: rgba(255,255,250,0.78); stroke: #222; stroke-width: 1; }
+#stack-svg .plane-front { fill: #d8d4c5; stroke: #222; stroke-width: 1; }
+#stack-svg .plane-right { fill: #b9b3a1; stroke: #222; stroke-width: 1; }
+#stack-svg .plane-shadow { fill: rgba(0,0,0,0.10); filter: blur(2px); }
+#stack-svg .plane-label { font-size: 12px; fill: #222; }
+#stack-svg .stack-title { font-size: 12px; font-weight: bold; fill: #111;
+  text-transform: uppercase; letter-spacing: 0.5px; }
+#stack-svg .stack-sub { font-size: 10px; fill: #555; }
+#stack-svg .intra-edge { stroke: #222; stroke-width: 0.6; stroke-opacity: 0.55; fill: none; }
+#stack-svg .inter-edge { stroke: #4fc4cf; stroke-width: 1; stroke-opacity: 0.75; fill: none; }
+#stack-svg .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
+#stack-svg .node:hover { stroke-width: 1.8; }
+#stack-svg .node-label { font-size: 8px; pointer-events: none; fill: #111; }
+#stack-tooltip {
+  position: absolute; background: #fff; border: 1px solid #333;
+  padding: 7px 10px; font-size: 11px; pointer-events: auto;
+  opacity: 0; max-width: 340px; z-index: 100; line-height: 1.4;
+  box-shadow: 2px 3px 0 rgba(0,0,0,0.08);
+  font-family: ui-monospace, "Courier New", monospace;
+}
+#stack-tooltip strong { font-size: 12px; }
+#stack-tooltip ul { margin: 4px 0 0 0; padding-left: 16px; }
+#stack-tooltip li { margin: 2px 0; }
+#stack-tooltip a { color: #2255a8; text-decoration: none; }
+#stack-tooltip a:hover { text-decoration: underline; }
+#stack-tooltip .tip-section { margin-top: 5px; color: #444; font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.4px; }
+
+#stack-svg .stack-spine {
+  fill: none;
+  stroke: #b8b3a6;
+  stroke-width: 0.7;
+  stroke-dasharray: 3 3;
+  opacity: 0.65;
+}

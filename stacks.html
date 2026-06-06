@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack view — The actors in AI alignment</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { margin: 0; padding: 24px 32px; background: #fbfbf6;
+         font-family: 'Courier New', ui-monospace, monospace; color: #222; }
+  .stacks-header { max-width: 920px; }
+  .stacks-header h1 { font-size: 1.4rem; margin: 0 0 8px 0; }
+  .stacks-header p { font-size: 0.85rem; line-height: 1.45; }
+  .back { font-size: 0.8rem; }
+  .stacks-controls { margin: 18px 0 8px 0; display: flex; gap: 18px;
+                     flex-wrap: wrap; align-items: flex-end;
+                     padding: 10px 12px; border: 1px solid #ddd;
+                     background: #fff; }
+  .stacks-controls label { display: flex; flex-direction: column;
+                           font-size: 0.78rem; gap: 4px; }
+  .stacks-controls label.inline { flex-direction: row; align-items: center; gap: 6px; }
+  .stacks-controls select, .stacks-controls input[type=number] {
+      font: inherit; padding: 3px 6px; border: 1px solid #aaa;
+      background: #fff; min-width: 140px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 8px 0 4px 0;
+            font-size: 0.75rem; }
+  .legend-item { display: inline-flex; align-items: center; gap: 5px; }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 50%;
+                   border: 1px solid #222; display: inline-block; }
+  #stack-svg { width: 100%; height: auto; display: block;
+               background: #fff; border: 1px solid #ddd; }
+  .plane-top   { fill: rgba(255,255,250,0.78); stroke: #222; stroke-width: 1; }
+  .plane-front { fill: #d8d4c5; stroke: #222; stroke-width: 1; }
+  .plane-right { fill: #b9b3a1; stroke: #222; stroke-width: 1; }
+  .plane-shadow { fill: rgba(0,0,0,0.10); filter: blur(2px); }
+  .stack-spine { fill: none; stroke: #b8b3a6; stroke-width: 0.7; stroke-dasharray: 3 3; opacity: 0.65; }
+  .plane-label { font-size: 12px; fill: #222; }
+  .stack-title { font-size: 12px; font-weight: bold; fill: #111;
+                 text-transform: uppercase; letter-spacing: 0.5px; }
+  .stack-sub { font-size: 10px; fill: #555; }
+  .intra-edge { stroke: #222; stroke-width: 0.6; stroke-opacity: 0.55; fill: none; }
+  .inter-edge { stroke: #4fc4cf; stroke-width: 1; stroke-opacity: 0.75; fill: none; }
+  .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
+  .node:hover { stroke-width: 1.8; }
+  .node-label { font-size: 8px; pointer-events: none; fill: #111; }
+  #tooltip { position: absolute; background: #fff; border: 1px solid #333;
+             padding: 7px 10px; font-size: 11px; pointer-events: auto;
+             opacity: 0; max-width: 340px; z-index: 10; line-height: 1.4;
+             box-shadow: 2px 3px 0 rgba(0,0,0,0.08); }
+  #tooltip strong { font-size: 12px; }
+  #tooltip ul { margin: 4px 0 0 0; padding-left: 16px; }
+  #tooltip li { margin: 2px 0; }
+  #tooltip a { color: #2255a8; text-decoration: none; }
+  #tooltip a:hover { text-decoration: underline; }
+  #tooltip .tip-section { margin-top: 5px; color: #444; font-size: 10px;
+                          text-transform: uppercase; letter-spacing: 0.4px; }
+</style>
+</head>
+<body>
+  <a class="back" href="index.html">← back to main report</a>
+  <div class="stacks-header">
+    <h1>Actor enrolment throughout the alignment stack</h1>
+    <p>
+      Each stack shows actors of one type (or one company) involved across the
+      four alignment stages — Conducts, Risks, Training, Benchmarking. A node
+      is an actor; a dark edge inside a plane connects actors mentioned in the
+      same document at that stage. Cyan vertical edges connect the
+      <em>same actor</em> when it is enrolled at more than one stage.
+    </p>
+  </div>
+
+  <div class="stacks-controls">
+    <label>Group stacks by
+      <select id="stack-group-by">
+        <option value="type">actor type</option>
+        <option value="company">company</option>
+      </select>
+    </label>
+    <label>Filter company
+      <select id="stack-company-filter">
+        <option value="">(all companies)</option>
+      </select>
+    </label>
+    <label>Max stacks
+      <select id="stack-topn">
+        <option value="4">4</option>
+        <option value="6" selected>6</option>
+        <option value="8">8</option>
+        <option value="12">12</option>
+      </select>
+    </label>
+    <label>Max nodes / plane
+      <select id="stack-cap">
+        <option value="35">35</option>
+        <option value="60">60</option>
+        <option value="120" selected>120</option>
+        <option value="9999">no cap</option>
+      </select>
+    </label>
+    <label class="inline"><input type="checkbox" id="stack-show-labels"> Show node labels</label>
+    <label class="inline"><input type="checkbox" id="stack-show-cross" checked> Vertical (same-actor) edges</label>
+    <label class="inline"><input type="checkbox" id="stack-show-cited" checked> Include cited actors</label>
+  </div>
+  <p style="font-size: 0.72rem; color: #555; margin: 4px 2px 0;">
+    Filled circles = actors explicitly credited or named as authors at that layer.
+    Hollow circles = actors only <em>cited</em> in a document on that layer.
+  </p>
+
+  <div id="stack-legend" class="legend"></div>
+  <svg id="stack-svg"></svg>
+  <div id="stack-tooltip"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="stacks.js?v=20260606h"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260512T095657">
+<link rel="stylesheet" href="style.css?v=20260606T1200">
 </head>
 <body>
 
@@ -46,6 +46,7 @@
       <li><a href="#block-benchmark"   data-target="block-benchmark"  >Benchmark</a></li>
       <li><a href="#block-top-actors"  data-target="block-top-actors" >Top actors</a></li>
       <li><a href="#block-clusters"    data-target="block-clusters"   >Conceptual clusters</a></li>
+      <li><a href="#block-stacks"      data-target="block-stacks"     >Stack view</a></li>
     </ul>
     <a href="#discussion"   data-target="discussion"  >Discussion</a>
     <a href="#references"   data-target="references"  >References</a>
@@ -785,6 +786,59 @@
         </div>
       </div>
     </article>
+
+    <!-- STACK VIEW ─────────────────────────── -->
+    <article class="grid-block" id="block-stacks">
+      <header class="block-head">
+        <h3>Stack view</h3>
+        <p class="block-sub">How enrolled is each type of actor throughout the alignment stack?</p>
+        <p class="block-caption">
+          Each stack shows actors of one type (or one company) involved across
+          four alignment stages — Conducts, Risks, Training, Benchmarking.
+          A node is an actor; a dark edge inside a plane connects actors
+          mentioned in the same document at that stage. Cyan vertical edges
+          connect the <em>same actor</em> across stages.
+          <strong>Filled circles</strong> = actors explicitly credited or named
+          as the document's author at that stage. <strong>Hollow circles</strong>
+          = actors only <em>cited</em> in a document on that stage.
+        </p>
+      </header>
+      <div class="stacks-controls">
+        <label>Group stacks by
+          <select id="stack-group-by">
+            <option value="type">actor type</option>
+            <option value="company">company</option>
+          </select>
+        </label>
+        <label>Filter company
+          <select id="stack-company-filter">
+            <option value="">(all companies)</option>
+          </select>
+        </label>
+        <label>Max stacks
+          <select id="stack-topn">
+            <option value="4">4</option>
+            <option value="6" selected>6</option>
+            <option value="8">8</option>
+            <option value="12">12</option>
+          </select>
+        </label>
+        <label>Max nodes / plane
+          <select id="stack-cap">
+            <option value="35">35</option>
+            <option value="60">60</option>
+            <option value="120" selected>120</option>
+            <option value="9999">no cap</option>
+          </select>
+        </label>
+        <label class="inline"><input type="checkbox" id="stack-show-labels"> Show node labels</label>
+        <label class="inline"><input type="checkbox" id="stack-show-cross" checked> Vertical (same-actor) edges</label>
+        <label class="inline"><input type="checkbox" id="stack-show-cited" checked> Include cited actors</label>
+      </div>
+      <div id="stack-legend" class="stack-legend"></div>
+      <svg id="stack-svg"></svg>
+      <div id="stack-tooltip"></div>
+    </article>
   </section>
 
   <section id="discussion" class="prose">
@@ -878,5 +932,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="app.js?v=20260512T120000"></script>
+<script src="stacks.js?v=20260606h"></script>
 </body>
 </html>
