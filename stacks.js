@@ -264,10 +264,14 @@ function render() {
       .attr("x", SKEW).attr("y", TITLE_H - 10)
       .text(`${stack.total} actor${stack.total === 1 ? "" : "s"}`);
 
-    // Inter-edge group created EARLY so subsequent plane slabs render on top
-    // of the cross-layer lines, giving the visual of edges passing through
-    // the stack.
-    const interEdgesG = g.append("g").attr("class", "inter-edges-group");
+    // Two inter-edge groups so we can weave cross-layer lines THROUGH the
+    // stack: the BACK group is created BEFORE any plane slab is appended
+    // (slabs paint over it → hides the line near the source node, giving
+    // the "outgoing beneath the stack" look); the FRONT group is appended
+    // AFTER all plane slabs (paints over the slabs at the target end →
+    // "incoming above the stack"). We split each inter-edge at its midpoint
+    // so one half lands in each group.
+    const interBackG  = g.append("g").attr("class", "inter-back");
 
     // Positions stored per actor across layers, for cross-plane edges.
     const positions = {}; // { actorName: { layerKey: {x,y} } }
@@ -394,18 +398,65 @@ function render() {
           .attr("x2", tx).attr("y2", ty);
       });
 
-      // Draw nodes. Look up full node record for tooltip (docs etc).
-      const nodeG = g.append("g");
-      nodes.forEach(n => {
+      // Compute node screen positions and stash for cross-layer edges.
+      // Defer drawing until after the inter-edge FRONT group is added, so
+      // nodes always sit on top of every inter-edge.
+      const nodesProjected = nodes.map(n => {
         const [px, py] = project(n.x, n.y);
         positions[n.name] = positions[n.name] || {};
         positions[n.name][key] = { x: px, y: py };
+        return { n, px, py };
+      });
+      layerNodes[key] = { key, nodesProjected };
+    });
+
+    // Inter-edge FRONT group — appended AFTER every plane slab is drawn, so
+    // it paints over the slab fronts/tops near the target node.
+    const interFrontG = g.append("g").attr("class", "inter-front");
+
+    // Cross-plane edges between successive layers for the same actor, split
+    // at the midpoint so the source half lives in the BACK group (gets
+    // hidden by the source slab) and the target half lives in the FRONT
+    // group (paints over the target slab). The line therefore weaves
+    // through the stack — leaving each slab beneath, arriving at the next
+    // above.
+    if (showCross) {
+      Object.entries(positions).forEach(([name, layerPos]) => {
+        const ordered = LAYERS.map(l => l.key).filter(k => layerPos[k]);
+        if (ordered.length < 2) return;
+        for (let i = 0; i < ordered.length - 1; i++) {
+          const a = layerPos[ordered[i]];
+          const b = layerPos[ordered[i + 1]];
+          const mx = (a.x + b.x) / 2;
+          const my = (a.y + b.y) / 2;
+          interBackG.append("line").attr("class", "inter-edge inter-back-seg")
+            .attr("x1", a.x).attr("y1", a.y)
+            .attr("x2", mx).attr("y2", my);
+          interFrontG.append("line").attr("class", "inter-edge inter-front-seg")
+            .attr("x1", mx).attr("y1", my)
+            .attr("x2", b.x).attr("y2", b.y);
+        }
+      });
+    }
+
+    // Finally, draw nodes — appended last so they sit above every edge,
+    // whether back-segment or front-segment.
+    const nodesG = g.append("g").attr("class", "nodes-top");
+    Object.values(layerNodes).forEach(({ key, nodesProjected }) => {
+      const isCitedOnlyLayer = (n) => {
+        const r = n.rolesByLayer && n.rolesByLayer[key];
+        if (!r) return false;
+        return r.has("cited") && !r.has("specific") && !r.has("author");
+      };
+      const N = nodesProjected.length;
+      const radius = N > 80 ? 3 : N > 40 ? 4 : 5;
+      nodesProjected.forEach(({ n, px, py }) => {
         const fullNode = stack.nodes.get(n.name);
         const baseColor = groupBy === "type"
           ? stack.color
           : (STACK_ACTOR_COLOR[n.type] || "#888");
-        const citedOnly = isCitedOnly(fullNode);
-        nodeG.append("circle")
+        const citedOnly = isCitedOnlyLayer(fullNode);
+        nodesG.append("circle")
           .attr("class", citedOnly ? "node node-cited" : "node")
           .attr("cx", px).attr("cy", py).attr("r", radius)
           .attr("fill", citedOnly ? "#ffffff" : baseColor)
@@ -415,30 +466,12 @@ function render() {
           .on("mouseout", scheduleHideTip)
           .on("mousemove", ev => moveTip(ev));
         if (showLabels) {
-          nodeG.append("text").attr("class", "node-label")
+          nodesG.append("text").attr("class", "node-label")
             .attr("x", px + 7).attr("y", py + 3)
             .text(n.name.length > 28 ? n.name.slice(0, 27) + "…" : n.name);
         }
       });
-      layerNodes[key] = nodes;
     });
-
-    // Cross-plane edges between successive layers for the same actor.
-    // Drawn into the EARLY-created group so they render behind every plane
-    // slab — i.e. they appear to pass through the stacks instead of over them.
-    if (showCross) {
-      Object.entries(positions).forEach(([name, layerPos]) => {
-        const ordered = LAYERS.map(l => l.key).filter(k => layerPos[k]);
-        if (ordered.length < 2) return;
-        for (let i = 0; i < ordered.length - 1; i++) {
-          const a = layerPos[ordered[i]];
-          const b = layerPos[ordered[i + 1]];
-          interEdgesG.append("line").attr("class", "inter-edge")
-            .attr("x1", a.x).attr("y1", a.y)
-            .attr("x2", b.x).attr("y2", b.y);
-        }
-      });
-    }
   });
 }
 

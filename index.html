@@ -797,7 +797,10 @@
           four alignment stages — Conducts, Risks, Training, Benchmarking.
           A node is an actor; a dark edge inside a plane connects actors
           mentioned in the same document at that stage. Cyan vertical edges
-          connect the <em>same actor</em> across stages.
+          connect the <em>same actor</em> across stages — each one is split
+          at its midpoint so the source half sits <em>behind</em> the source
+          slab and the target half is painted <em>over</em> the target slab,
+          weaving through the stack.
           <strong>Filled circles</strong> = actors explicitly credited or named
           as the document's author at that stage. <strong>Hollow circles</strong>
           = actors only <em>cited</em> in a document on that stage.
@@ -943,6 +946,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="app.js?v=20260512T120000"></script>
-<script src="stacks.js?v=20260606j"></script>
+<script src="stacks.js?v=20260606k"></script>
 </body>
 </html>
