@@ -720,15 +720,16 @@ body.has-selection .doc:not(.hl) {
 #stack-svg .plane-front { fill: #d8d4c5; stroke: #222; stroke-width: 1; }
 #stack-svg .plane-right { fill: #b9b3a1; stroke: #222; stroke-width: 1; }
 #stack-svg .plane-shadow { fill: rgba(0,0,0,0.10); filter: blur(2px); }
-#stack-svg .plane-label { font-size: 12px; fill: #222; }
-#stack-svg .stack-title { font-size: 12px; font-weight: bold; fill: #111;
+#stack-svg text { font-family: inherit; }
+#stack-svg .plane-label { font-size: 14px; fill: #222; font-style: italic; }
+#stack-svg .stack-title { font-size: 15px; font-weight: 700; fill: #111;
   text-transform: uppercase; letter-spacing: 0.5px; }
-#stack-svg .stack-sub { font-size: 10px; fill: #555; }
-#stack-svg .intra-edge { stroke: #222; stroke-width: 0.6; stroke-opacity: 0.55; fill: none; }
-#stack-svg .inter-edge { stroke: #4fc4cf; stroke-width: 1; stroke-opacity: 0.75; fill: none; }
+#stack-svg .stack-sub { font-size: 12px; fill: #555; }
+#stack-svg .intra-edge { stroke: #555; stroke-width: 0.45; stroke-opacity: 0.35; fill: none; }
+#stack-svg .inter-edge { stroke: #4fc4cf; stroke-width: 0.7; stroke-opacity: 0.45; fill: none; }
 #stack-svg .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
 #stack-svg .node:hover { stroke-width: 1.8; }
-#stack-svg .node-label { font-size: 8px; pointer-events: none; fill: #111; }
+#stack-svg .node-label { font-size: 9px; pointer-events: none; fill: #111; }
 #stack-tooltip {
   position: absolute; background: #fff; border: 1px solid #333;
   padding: 7px 10px; font-size: 11px; pointer-events: auto;
@@ -744,10 +745,4 @@ body.has-selection .doc:not(.hl) {
 #stack-tooltip .tip-section { margin-top: 5px; color: #444; font-size: 10px;
   text-transform: uppercase; letter-spacing: 0.4px; }
 
-#stack-svg .stack-spine {
-  fill: none;
-  stroke: #b8b3a6;
-  stroke-width: 0.7;
-  stroke-dasharray: 3 3;
-  opacity: 0.65;
-}
+/* Spine (vertical dashed back-wall between planes) removed by request. */

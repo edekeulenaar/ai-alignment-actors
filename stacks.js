@@ -212,7 +212,7 @@ function render() {
   const PLANE_GAP = 110;
   const SKEW      = 90;          // horizontal offset of top vs bottom
   const THICK     = 16;          // slab thickness (3D depth)
-  const TITLE_H   = 38;
+  const TITLE_H   = 56;          // room for two-line title above first plane
   const MARGIN_X  = 32;
   const MARGIN_Y  = 24;
 
@@ -255,25 +255,19 @@ function render() {
     const stackY = MARGIN_Y + row * (STACK_H + ROW_GAP);
     const g = svg.append("g").attr("transform", `translate(${stackX}, ${stackY})`);
 
+    // Stack title block sits at the top-left of the first plane,
+    // aligned with the plane's top-left corner (x = SKEW).
     g.append("text").attr("class", "stack-title")
-      .attr("x", SKEW / 2).attr("y", 18)
+      .attr("x", SKEW).attr("y", TITLE_H - 26)
       .text(stack.label.toUpperCase());
     g.append("text").attr("class", "stack-sub")
-      .attr("x", SKEW / 2).attr("y", 32)
+      .attr("x", SKEW).attr("y", TITLE_H - 10)
       .text(`${stack.total} actor${stack.total === 1 ? "" : "s"}`);
 
-    // Subtle "spine": a faint dashed parallelogram running through the back of
-    // the stack, implying all four planes belong to a single connected column.
-    const spineTopY = TITLE_H - 6;
-    const spineBotY = TITLE_H + LAYERS.length * PLANE_H
-                    + (LAYERS.length - 1) * PLANE_GAP + THICK + 6;
-    const sp = [
-      [SKEW,           spineTopY],
-      [SKEW + PLANE_W, spineTopY],
-      [PLANE_W,        spineBotY],
-      [0,              spineBotY],
-    ].map(p => p.join(",")).join(" ");
-    g.append("polygon").attr("class", "stack-spine").attr("points", sp);
+    // Inter-edge group created EARLY so subsequent plane slabs render on top
+    // of the cross-layer lines, giving the visual of edges passing through
+    // the stack.
+    const interEdgesG = g.append("g").attr("class", "inter-edges-group");
 
     // Positions stored per actor across layers, for cross-plane edges.
     const positions = {}; // { actorName: { layerKey: {x,y} } }
@@ -309,8 +303,22 @@ function render() {
       g.append("polygon").attr("class", "plane-top")
         .attr("points", poly([tl, tr, br, bl]));
 
-      g.append("text").attr("class", "plane-label")
-        .attr("x", SKEW + 4).attr("y", planeY - 6).text(label);
+      // Layer label: for the first plane, place it inline with the stack
+      // subtitle (after "39 actors") so the user sees e.g.
+      //   PRIVATE
+      //   39 actors  Conducts
+      // For subsequent planes the label sits just above the plane top-left.
+      if (li === 0) {
+        // Push past the "N actors" subtitle width (rough monospace estimate).
+        const subText = `${stack.total} actor${stack.total === 1 ? "" : "s"}`;
+        const subWidth = subText.length * 7.5;
+        g.append("text").attr("class", "plane-label")
+          .attr("x", SKEW + subWidth + 22).attr("y", TITLE_H - 10)
+          .text(label);
+      } else {
+        g.append("text").attr("class", "plane-label")
+          .attr("x", SKEW).attr("y", planeY - 8).text(label);
+      }
 
       // Helper: is this actor only "cited" on this layer (no specific/author role)?
       const isCitedOnly = (n) => {
@@ -416,15 +424,16 @@ function render() {
     });
 
     // Cross-plane edges between successive layers for the same actor.
+    // Drawn into the EARLY-created group so they render behind every plane
+    // slab — i.e. they appear to pass through the stacks instead of over them.
     if (showCross) {
-      const interG = g.append("g");
       Object.entries(positions).forEach(([name, layerPos]) => {
         const ordered = LAYERS.map(l => l.key).filter(k => layerPos[k]);
         if (ordered.length < 2) return;
         for (let i = 0; i < ordered.length - 1; i++) {
           const a = layerPos[ordered[i]];
           const b = layerPos[ordered[i + 1]];
-          interG.append("line").attr("class", "inter-edge")
+          interEdgesG.append("line").attr("class", "inter-edge")
             .attr("x1", a.x).attr("y1", a.y)
             .attr("x2", b.x).attr("y2", b.y);
         }

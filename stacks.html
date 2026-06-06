@@ -33,16 +33,16 @@
   .plane-front { fill: #d8d4c5; stroke: #222; stroke-width: 1; }
   .plane-right { fill: #b9b3a1; stroke: #222; stroke-width: 1; }
   .plane-shadow { fill: rgba(0,0,0,0.10); filter: blur(2px); }
-  .stack-spine { fill: none; stroke: #b8b3a6; stroke-width: 0.7; stroke-dasharray: 3 3; opacity: 0.65; }
-  .plane-label { font-size: 12px; fill: #222; }
-  .stack-title { font-size: 12px; font-weight: bold; fill: #111;
+  #stack-svg text { font-family: inherit; }
+  .plane-label { font-size: 14px; fill: #222; font-style: italic; }
+  .stack-title { font-size: 15px; font-weight: 700; fill: #111;
                  text-transform: uppercase; letter-spacing: 0.5px; }
-  .stack-sub { font-size: 10px; fill: #555; }
-  .intra-edge { stroke: #222; stroke-width: 0.6; stroke-opacity: 0.55; fill: none; }
-  .inter-edge { stroke: #4fc4cf; stroke-width: 1; stroke-opacity: 0.75; fill: none; }
+  .stack-sub { font-size: 12px; fill: #555; }
+  .intra-edge { stroke: #555; stroke-width: 0.45; stroke-opacity: 0.35; fill: none; }
+  .inter-edge { stroke: #4fc4cf; stroke-width: 0.7; stroke-opacity: 0.45; fill: none; }
   .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
   .node:hover { stroke-width: 1.8; }
-  .node-label { font-size: 8px; pointer-events: none; fill: #111; }
+  .node-label { font-size: 9px; pointer-events: none; fill: #111; }
   #tooltip { position: absolute; background: #fff; border: 1px solid #333;
              padding: 7px 10px; font-size: 11px; pointer-events: auto;
              opacity: 0; max-width: 340px; z-index: 10; line-height: 1.4;
@@ -111,6 +111,6 @@
   <div id="stack-tooltip"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="stacks.js?v=20260606i"></script>
+<script src="stacks.js?v=20260606j"></script>
 </body>
 </html>
