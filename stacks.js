@@ -200,23 +200,29 @@ function render() {
     .sort((a, b) => b.total - a.total)
     .slice(0, topN);
 
-  // Geometry.
-  const STACK_W   = 360;
-  const STACK_GAP = 36;
-  const PLANE_W   = 300;
-  const PLANE_H   = 110;
-  const PLANE_GAP = 100;
-  const SKEW      = 80;          // horizontal offset of top vs bottom
-  const THICK     = 14;          // slab thickness (3D depth)
+  // Geometry. Stacks are laid out in a grid (default 3 columns) so each
+  // stack can be wider and the actor nodes inside it readable.
+  const COLS      = Math.min(stacks.length, 3);
+  const ROWS      = Math.max(1, Math.ceil(stacks.length / COLS));
+  const STACK_W   = 480;
+  const STACK_GAP = 48;
+  const ROW_GAP   = 80;
+  const PLANE_W   = 400;
+  const PLANE_H   = 140;
+  const PLANE_GAP = 110;
+  const SKEW      = 90;          // horizontal offset of top vs bottom
+  const THICK     = 16;          // slab thickness (3D depth)
   const TITLE_H   = 38;
   const MARGIN_X  = 32;
   const MARGIN_Y  = 24;
 
-  const totalW = MARGIN_X * 2 + Math.max(1, stacks.length) * STACK_W
-                 + Math.max(0, stacks.length - 1) * STACK_GAP;
-  const totalH = MARGIN_Y * 2 + TITLE_H
-                 + LAYERS.length * PLANE_H
-                 + (LAYERS.length - 1) * PLANE_GAP + 20;
+  const STACK_H   = TITLE_H + LAYERS.length * PLANE_H
+                  + (LAYERS.length - 1) * PLANE_GAP + THICK + 20;
+
+  const totalW = MARGIN_X * 2 + COLS * STACK_W
+                 + Math.max(0, COLS - 1) * STACK_GAP;
+  const totalH = MARGIN_Y * 2 + ROWS * STACK_H
+                 + Math.max(0, ROWS - 1) * ROW_GAP;
 
   const svg = d3.select("#stack-svg")
     .attr("viewBox", `0 0 ${totalW} ${totalH}`)
@@ -243,8 +249,11 @@ function render() {
   }
 
   stacks.forEach((stack, idx) => {
-    const stackX = MARGIN_X + idx * (STACK_W + STACK_GAP);
-    const g = svg.append("g").attr("transform", `translate(${stackX}, ${MARGIN_Y})`);
+    const col = idx % COLS;
+    const row = Math.floor(idx / COLS);
+    const stackX = MARGIN_X + col * (STACK_W + STACK_GAP);
+    const stackY = MARGIN_Y + row * (STACK_H + ROW_GAP);
+    const g = svg.append("g").attr("transform", `translate(${stackX}, ${stackY})`);
 
     g.append("text").attr("class", "stack-title")
       .attr("x", SKEW / 2).attr("y", 18)
