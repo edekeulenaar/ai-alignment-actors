@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260606T1600">
+<link rel="stylesheet" href="style.css?v=20260606T1700">
 </head>
 <body>
 
@@ -827,7 +827,7 @@
       </div>
       <div id="stack-legend" class="stack-legend"></div>
 
-      <details class="stack-howto" open>
+      <details class="stack-howto">
         <summary>How to read this visualisation</summary>
         <div class="howto-grid">
           <section>
@@ -864,7 +864,7 @@
               isolate the network it belongs to: the actor lights up
               wherever it appears across the four stages, every grey
               co-mention edge it touches is kept visible (its direct
-              neighbours fade to a softer state), and the cyan vertical
+              neighbours fade to a softer state), and the tan vertical
               lines linking the actor across layers are highlighted.
               Everything else dims. Click the background or press
               <kbd>Esc</kbd> to clear.</p>
@@ -920,8 +920,8 @@
           </section>
 
           <section>
-            <h4>What about the cyan vertical edges?</h4>
-            <p>A cyan line connects the <em>same actor</em> appearing on
+            <h4>What about the tan vertical edges?</h4>
+            <p>A tan line connects the <em>same actor</em> appearing on
               two stages — i.e. it tracks an actor's enrolment through
               the alignment stack. Each one is split at its midpoint:</p>
             <ul>
@@ -932,7 +932,7 @@
                 <strong>over</strong> the slab → the line emerges from
                 it on arrival.</li>
             </ul>
-            <p>Read denser cyan as: this actor type is enrolled in
+            <p>Read denser tan threads as: this actor type is enrolled in
               <em>more</em> than one stage of alignment.</p>
           </section>
 
@@ -1051,6 +1051,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="app.js?v=20260512T120000"></script>
-<script src="stacks.js?v=20260606o"></script>
+<script src="stacks.js?v=20260606p"></script>
 </body>
 </html>

@@ -726,7 +726,7 @@ body.has-selection .doc:not(.hl) {
   text-transform: uppercase; letter-spacing: 0.5px; }
 #stack-svg .stack-sub { font-size: 12px; fill: #555; }
 #stack-svg .intra-edge { stroke: #6e6a5e; stroke-width: 0.5; stroke-opacity: 0.32; fill: none; }
-#stack-svg .inter-edge { stroke: #4fc4cf; stroke-width: 0.7; stroke-opacity: 0.45; fill: none; }
+#stack-svg .inter-edge { stroke: #b9b3a1; stroke-width: 0.7; stroke-opacity: 0.65; fill: none; }
 #stack-svg .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
 #stack-svg .node:hover { stroke-width: 1.8; }
 #stack-svg .node-label {

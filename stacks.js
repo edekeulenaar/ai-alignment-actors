@@ -447,21 +447,29 @@ function render() {
     // it paints over the slab fronts/tops near the target node.
     const interFrontG = g.append("g").attr("class", "inter-front");
 
-    // Cross-plane edges between successive layers for the same actor, split
-    // at the midpoint so the source half lives in the BACK group (gets
-    // hidden by the source slab) and the target half lives in the FRONT
-    // group (paints over the target slab). The line therefore weaves
-    // through the stack — leaving each slab beneath, arriving at the next
-    // above.
+    // Cross-plane edges between successive layers for the same actor. The
+    // split point is the y of the TARGET plane's top edge — anything
+    // ABOVE that y is the BACK half (hidden by every slab whose
+    // footprint it crosses, including the source); anything BELOW is the
+    // FRONT half (painted only over the target slab). This guarantees
+    // the front half never appears above its target slab, which used to
+    // happen when we split at the midpoint.
     if (showCross) {
+      const layerIdx = Object.fromEntries(LAYERS.map((l, i) => [l.key, i]));
+      const planeTopY = (li) => TITLE_H + li * (PLANE_H + PLANE_GAP);
+
       Object.entries(positions).forEach(([name, layerPos]) => {
         const ordered = LAYERS.map(l => l.key).filter(k => layerPos[k]);
         if (ordered.length < 2) return;
         for (let i = 0; i < ordered.length - 1; i++) {
           const a = layerPos[ordered[i]];
           const b = layerPos[ordered[i + 1]];
-          const mx = (a.x + b.x) / 2;
-          const my = (a.y + b.y) / 2;
+
+          const targetY = planeTopY(layerIdx[ordered[i + 1]]);
+          const t = Math.max(0, Math.min(1, (targetY - a.y) / (b.y - a.y)));
+          const mx = a.x + (b.x - a.x) * t;
+          const my = targetY;
+
           interBackG.append("line").attr("class", "inter-edge inter-back-seg")
             .attr("data-actor-name", name)
             .attr("data-stack", stack.key)
