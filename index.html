@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260606T1300">
+<link rel="stylesheet" href="style.css?v=20260606T1400">
 </head>
 <body>
 
@@ -850,6 +850,119 @@
         <label class="inline"><input type="checkbox" id="stack-show-cited" checked> Include cited actors</label>
       </div>
       <div id="stack-legend" class="stack-legend"></div>
+
+      <details class="stack-howto" open>
+        <summary>How to read this visualisation</summary>
+        <div class="howto-grid">
+          <section>
+            <h4>What is a stack?</h4>
+            <p>One stack = one group of actors (one actor type, or one
+              company when you switch the Group dropdown). The four
+              parallelograms inside it are the four alignment stages, top
+              to bottom:</p>
+            <ol>
+              <li><em>Conducts</em> — desired behaviours a model is trained for.</li>
+              <li><em>Risks</em> — harms the company names and tries to mitigate.</li>
+              <li><em>Training</em> — the techniques used (RLHF, SFT, filters, …).</li>
+              <li><em>Benchmarks</em> — the evaluations used to grade the model.</li>
+            </ol>
+          </section>
+
+          <section>
+            <h4>What is a node?</h4>
+            <p>Each circle is one actor (a person, an organisation, a
+              consortium) that appears in at least one document touching
+              that stage.</p>
+            <ul>
+              <li><strong>Filled</strong> circles are actors who are
+                <em>explicitly credited</em> at that stage (the named
+                training actor, benchmark author, or the actor a conduct
+                / risk is attributed to) or who <em>authored</em> the
+                source document.</li>
+              <li><strong>Hollow</strong> circles are actors merely
+                <em>cited</em> in a document on that stage — referenced
+                without doing the work themselves. Toggle them off with
+                <em>Include cited actors</em>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Where does a node sit on the plane?</h4>
+            <p>Position is computed by a <strong>force-directed
+              layout</strong> running on every plane separately:</p>
+            <ul>
+              <li>Each grey edge inside the plane is a spring that pulls
+                two actors together. An edge exists when both actors are
+                named in the <em>same source document</em> at this stage
+                — co-mention is the only signal.</li>
+              <li>Every node also repels every other node, so circles
+                cannot overlap.</li>
+              <li>A weak central pull keeps the cloud from drifting off
+                the slab.</li>
+            </ul>
+            <p>The simulation runs 240 ticks and is then frozen. The
+              resulting coordinates are projected into the plane's
+              isometric parallelogram.</p>
+          </section>
+
+          <section>
+            <h4>What does the distance between two nodes mean?</h4>
+            <p>Distance ≈ <em>inverse of co-mention frequency</em>. The
+              more documents two actors share at this stage, the stronger
+              the springs pulling them together, and the closer they end
+              up. A few practical readings:</p>
+            <ul>
+              <li><strong>Tight clusters</strong> = actors who keep
+                showing up together in the same model cards, audits or
+                grant programmes.</li>
+              <li><strong>Lone dots near the edge of the plane</strong> =
+                actors mentioned only once, or only in documents where
+                no peer of the same type appears.</li>
+              <li><strong>Two clusters far apart</strong> = two
+                disjoint communities of practice at this stage.</li>
+            </ul>
+            <p>Absolute position on the plane (left vs right, near vs
+              far edge) has <em>no</em> meaning — only relative distance
+              does. Reloads can rearrange clusters; the structure of
+              who-belongs-with-whom is what is stable.</p>
+          </section>
+
+          <section>
+            <h4>What about the cyan vertical edges?</h4>
+            <p>A cyan line connects the <em>same actor</em> appearing on
+              two stages — i.e. it tracks an actor's enrolment through
+              the alignment stack. Each one is split at its midpoint:</p>
+            <ul>
+              <li>The half nearest the source slab is drawn
+                <strong>behind</strong> the slab → the line disappears
+                <em>into</em> it on the way out.</li>
+              <li>The half nearest the target slab is painted
+                <strong>over</strong> the slab → the line emerges from
+                it on arrival.</li>
+            </ul>
+            <p>Read denser cyan as: this actor type is enrolled in
+              <em>more</em> than one stage of alignment.</p>
+          </section>
+
+          <section>
+            <h4>Caveats</h4>
+            <ul>
+              <li>Each plane is capped at the top-N most-mentioned
+                actors (configurable). Capped actors prefer
+                explicitly-credited / author roles over cited-only.</li>
+              <li>Force layouts are non-deterministic across reloads;
+                cluster <em>membership</em> is stable, cluster
+                <em>position</em> is not.</li>
+              <li>An actor's type is taken from the row where they
+                appear; the same name with different types (e.g. an
+                academic who also founds a nonprofit) can land in
+                different stacks. This is a feature, not a bug, but
+                worth knowing.</li>
+            </ul>
+          </section>
+        </div>
+      </details>
+
       <svg id="stack-svg"></svg>
       <div id="stack-tooltip"></div>
     </article>

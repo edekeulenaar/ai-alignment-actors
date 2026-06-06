@@ -746,3 +746,51 @@ body.has-selection .doc:not(.hl) {
   text-transform: uppercase; letter-spacing: 0.4px; }
 
 /* Spine (vertical dashed back-wall between planes) removed by request. */
+
+/* Stack-view how-to panel */
+#block-stacks .stack-howto {
+  margin: 10px 0 16px;
+  border: 1px solid #d6d2c4;
+  background: #fbf9f0;
+  padding: 0;
+}
+#block-stacks .stack-howto > summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  list-style: none;
+  background: #f1ecdd;
+  border-bottom: 1px solid #d6d2c4;
+}
+#block-stacks .stack-howto > summary::-webkit-details-marker { display: none; }
+#block-stacks .stack-howto > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s;
+}
+#block-stacks .stack-howto[open] > summary::before {
+  content: "▾ ";
+}
+#block-stacks .howto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px 24px;
+  padding: 14px 18px 18px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+#block-stacks .howto-grid section { min-width: 0; }
+#block-stacks .howto-grid h4 {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  letter-spacing: 0.2px;
+}
+#block-stacks .howto-grid p { margin: 4px 0; color: #333; }
+#block-stacks .howto-grid ul,
+#block-stacks .howto-grid ol {
+  margin: 4px 0 4px 18px; padding: 0;
+}
+#block-stacks .howto-grid li { margin: 2px 0; color: #333; }
