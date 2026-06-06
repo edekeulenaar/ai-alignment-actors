@@ -38,11 +38,14 @@
   .stack-title { font-size: 15px; font-weight: 700; fill: #111;
                  text-transform: uppercase; letter-spacing: 0.5px; }
   .stack-sub { font-size: 12px; fill: #555; }
-  .intra-edge { stroke: #555; stroke-width: 0.45; stroke-opacity: 0.35; fill: none; }
+  .intra-edge { stroke: #6e6a5e; stroke-width: 0.5; stroke-opacity: 0.32; fill: none; }
   .inter-edge { stroke: #4fc4cf; stroke-width: 0.7; stroke-opacity: 0.45; fill: none; }
   .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
   .node:hover { stroke-width: 1.8; }
-  .node-label { font-size: 9px; pointer-events: none; fill: #111; }
+  .node-label { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 10px; font-weight: 500; pointer-events: none;
+                fill: #2a2b62; paint-order: stroke;
+                stroke: #fff; stroke-width: 2.5px; stroke-linejoin: round; }
   #stack-svg.has-selection .node { opacity: 0.10; transition: opacity 0.15s; }
   #stack-svg.has-selection .intra-edge,
   #stack-svg.has-selection .inter-edge { opacity: 0.06; transition: opacity 0.15s; }
@@ -124,6 +127,6 @@
   <div id="stack-tooltip"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="stacks.js?v=20260606m"></script>
+<script src="stacks.js?v=20260606n"></script>
 </body>
 </html>

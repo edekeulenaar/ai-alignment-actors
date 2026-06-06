@@ -725,11 +725,21 @@ body.has-selection .doc:not(.hl) {
 #stack-svg .stack-title { font-size: 15px; font-weight: 700; fill: #111;
   text-transform: uppercase; letter-spacing: 0.5px; }
 #stack-svg .stack-sub { font-size: 12px; fill: #555; }
-#stack-svg .intra-edge { stroke: #555; stroke-width: 0.45; stroke-opacity: 0.35; fill: none; }
+#stack-svg .intra-edge { stroke: #6e6a5e; stroke-width: 0.5; stroke-opacity: 0.32; fill: none; }
 #stack-svg .inter-edge { stroke: #4fc4cf; stroke-width: 0.7; stroke-opacity: 0.45; fill: none; }
 #stack-svg .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
 #stack-svg .node:hover { stroke-width: 1.8; }
-#stack-svg .node-label { font-size: 9px; pointer-events: none; fill: #111; }
+#stack-svg .node-label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  pointer-events: none;
+  fill: #2a2b62;
+  paint-order: stroke;
+  stroke: #fbf7f0;
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+}
 #stack-tooltip {
   position: absolute; background: #fff; border: 1px solid #333;
   padding: 7px 10px; font-size: 11px; pointer-events: auto;

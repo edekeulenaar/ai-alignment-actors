@@ -346,22 +346,35 @@ function render() {
       }));
       const links = intra.map(e => ({ source: e.source, target: e.target }));
 
-      // Scale node radius and forces with crowding.
+      // Per-node radius — sqrt-scale by mention count so prominent actors
+      // appear as bigger circles (matches the reference aesthetic where
+      // alquds.co.uk, ahram.org.eg etc. are visibly larger).
       const N = nodes.length;
-      const radius = N > 80 ? 3 : N > 40 ? 4 : 5;
-      const linkDist = N > 80 ? 18 : N > 40 ? 22 : 28;
-      const charge = N > 80 ? -10 : N > 40 ? -16 : -22;
+      const rMin = N > 80 ? 2.4 : N > 40 ? 2.8 : 3.2;
+      const rMax = N > 80 ? 9   : N > 40 ? 11  : 13;
+      const counts = nodes.map(n => {
+        const fn = stack.nodes.get(n.name);
+        return (fn && fn._mentionCount) || 1;
+      });
+      const cMax = Math.max(2, ...counts);
+      nodes.forEach((n, i) => {
+        const t = Math.sqrt(counts[i]) / Math.sqrt(cMax);
+        n.r = rMin + (rMax - rMin) * t;
+      });
+
+      const linkDist = N > 80 ? 22 : N > 40 ? 26 : 32;
+      const charge   = N > 80 ? -16 : N > 40 ? -22 : -30;
 
       if (nodes.length) {
         const sim = d3.forceSimulation(nodes)
           .force("charge", d3.forceManyBody().strength(charge))
           .force("link", d3.forceLink(links).id(d => d.name).distance(linkDist).strength(0.45))
           .force("center", d3.forceCenter(W / 2, H / 2))
-          .force("collide", d3.forceCollide(radius + 1.5))
+          .force("collide", d3.forceCollide().radius(d => d.r + 1.5).strength(0.9))
           .stop();
-        for (let i = 0; i < 240; i++) sim.tick();
-        const pad = radius + 2;
+        for (let i = 0; i < 260; i++) sim.tick();
         nodes.forEach(n => {
+          const pad = n.r + 2;
           n.x = Math.max(pad, Math.min(W - pad, n.x));
           n.y = Math.max(pad, Math.min(H - pad, n.y));
         });
@@ -448,20 +461,19 @@ function render() {
         if (!r) return false;
         return r.has("cited") && !r.has("specific") && !r.has("author");
       };
-      const N = nodesProjected.length;
-      const radius = N > 80 ? 3 : N > 40 ? 4 : 5;
       nodesProjected.forEach(({ n, px, py }) => {
         const fullNode = stack.nodes.get(n.name);
         const baseColor = groupBy === "type"
           ? stack.color
           : (STACK_ACTOR_COLOR[n.type] || "#888");
         const citedOnly = isCitedOnlyLayer(fullNode);
+        const r = n.r || 4;
         nodesG.append("circle")
           .attr("class", citedOnly ? "node node-cited" : "node")
           .attr("data-actor-name", n.name)
           .attr("data-stack", stack.key)
           .attr("data-layer", key)
-          .attr("cx", px).attr("cy", py).attr("r", radius)
+          .attr("cx", px).attr("cy", py).attr("r", r)
           .attr("fill", citedOnly ? "#ffffff" : baseColor)
           .attr("stroke", citedOnly ? baseColor : "#1a1a1a")
           .attr("stroke-width", citedOnly ? 1.4 : 0.7)
@@ -471,7 +483,7 @@ function render() {
           .on("click", ev => { ev.stopPropagation(); selectActor(n.name); });
         if (showLabels) {
           nodesG.append("text").attr("class", "node-label")
-            .attr("x", px + 7).attr("y", py + 3)
+            .attr("x", px + r + 3).attr("y", py + 3)
             .text(n.name.length > 28 ? n.name.slice(0, 27) + "…" : n.name);
         }
       });
