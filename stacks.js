@@ -407,6 +407,30 @@ function render() {
           .attr("x2", tx).attr("y2", ty);
       });
 
+      // Compute degree per node from this plane's intra-edges. The most-
+      // connected actors get their labels rendered by default; everyone
+      // else can be revealed by hover. Tie-break by mention count.
+      const degree = new Map();
+      links.forEach(e => {
+        const sName = typeof e.source === "object" ? e.source.name : e.source;
+        const tName = typeof e.target === "object" ? e.target.name : e.target;
+        degree.set(sName, (degree.get(sName) || 0) + 1);
+        degree.set(tName, (degree.get(tName) || 0) + 1);
+      });
+      const topNames = new Set(
+        [...nodes]
+          .sort((a, b) => {
+            const da = degree.get(a.name) || 0;
+            const db = degree.get(b.name) || 0;
+            if (da !== db) return db - da;
+            const ca = (stack.nodes.get(a.name)?._mentionCount) || 0;
+            const cb = (stack.nodes.get(b.name)?._mentionCount) || 0;
+            return cb - ca;
+          })
+          .slice(0, 10)
+          .map(n => n.name)
+      );
+
       // Compute node screen positions and stash for cross-layer edges.
       // Defer drawing until after the inter-edge FRONT group is added, so
       // nodes always sit on top of every inter-edge.
@@ -416,7 +440,7 @@ function render() {
         positions[n.name][key] = { x: px, y: py };
         return { n, px, py };
       });
-      layerNodes[key] = { key, nodesProjected };
+      layerNodes[key] = { key, nodesProjected, topNames };
     });
 
     // Inter-edge FRONT group — appended AFTER every plane slab is drawn, so
@@ -455,7 +479,18 @@ function render() {
     // Finally, draw nodes — appended last so they sit above every edge,
     // whether back-segment or front-segment.
     const nodesG = g.append("g").attr("class", "nodes-top");
-    Object.values(layerNodes).forEach(({ key, nodesProjected }) => {
+
+    // Shared hover-label per stack — one <text> element we reposition as
+    // the cursor moves over unlabeled nodes. Created first, raised last
+    // so it draws above all permanent labels.
+    const hoverText = nodesG.append("text")
+      .attr("class", "node-label hover-label")
+      .style("display", "none")
+      .style("pointer-events", "none");
+
+    const truncate = name => name.length > 32 ? name.slice(0, 31) + "…" : name;
+
+    Object.values(layerNodes).forEach(({ key, nodesProjected, topNames }) => {
       const isCitedOnlyLayer = (n) => {
         const r = n.rolesByLayer && n.rolesByLayer[key];
         if (!r) return false;
@@ -468,6 +503,12 @@ function render() {
           : (STACK_ACTOR_COLOR[n.type] || "#888");
         const citedOnly = isCitedOnlyLayer(fullNode);
         const r = n.r || 4;
+
+        // Top-10 most-connected actors in this plane get a persistent
+        // label. "Show all labels" forces every node to have one.
+        const isTop = topNames.has(n.name);
+        const hasPermanentLabel = showLabels || isTop;
+
         nodesG.append("circle")
           .attr("class", citedOnly ? "node node-cited" : "node")
           .attr("data-actor-name", n.name)
@@ -477,14 +518,27 @@ function render() {
           .attr("fill", citedOnly ? "#ffffff" : baseColor)
           .attr("stroke", citedOnly ? baseColor : "#1a1a1a")
           .attr("stroke-width", citedOnly ? 1.4 : 0.7)
-          .on("mouseover", ev => showTip(ev, fullNode, key, stack.label))
-          .on("mouseout", scheduleHideTip)
+          .on("mouseover", ev => {
+            showTip(ev, fullNode, key, stack.label);
+            if (!hasPermanentLabel) {
+              hoverText
+                .attr("x", px + r + 3).attr("y", py + 3)
+                .text(truncate(n.name))
+                .style("display", null);
+              hoverText.raise();
+            }
+          })
+          .on("mouseout", () => {
+            scheduleHideTip();
+            hoverText.style("display", "none");
+          })
           .on("mousemove", ev => moveTip(ev))
           .on("click", ev => { ev.stopPropagation(); selectActor(n.name); });
-        if (showLabels) {
+
+        if (hasPermanentLabel) {
           nodesG.append("text").attr("class", "node-label")
             .attr("x", px + r + 3).attr("y", py + 3)
-            .text(n.name.length > 28 ? n.name.slice(0, 27) + "…" : n.name);
+            .text(truncate(n.name));
         }
       });
     });
