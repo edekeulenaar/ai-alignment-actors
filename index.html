@@ -821,7 +821,7 @@
             <option value="9999">no cap</option>
           </select>
         </label>
-        <label class="inline"><input type="checkbox" id="stack-show-labels"> Show all labels</label>
+        <label class="inline"><input type="checkbox" id="stack-show-labels"> Show labels</label>
         <label class="inline"><input type="checkbox" id="stack-show-cross" checked> Vertical (same-actor) edges</label>
         <label class="inline"><input type="checkbox" id="stack-show-cited" checked> Include cited actors</label>
       </div>
@@ -889,12 +889,11 @@
               isometric parallelogram. Node radius scales with the
               actor's <em>mention count</em> (sqrt-mapped), so the
               biggest circles are the most-cited actors at that stage.</p>
-            <p><strong>Labels.</strong> To keep the slabs readable,
-              only the <em>top 10 most-connected</em> actors per plane
-              get a permanent label — the ones with the most
-              co-mentions. Hover any other circle to reveal its label
-              transiently. Tick <em>Show all labels</em> in the controls
-              to label every node at once.</p>
+            <p><strong>Labels.</strong> By default, no circles carry a
+              permanent label — the slabs stay readable as a structural
+              map of clusters. Hover any circle to reveal its actor
+              name transiently. Tick <em>Show labels</em> in the
+              controls to label every node at once.</p>
           </section>
 
           <section>
@@ -1051,6 +1050,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="app.js?v=20260512T120000"></script>
-<script src="stacks.js?v=20260606p"></script>
+<script src="stacks.js?v=20260606q"></script>
 </body>
 </html>

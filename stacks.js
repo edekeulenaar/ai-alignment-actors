@@ -512,10 +512,10 @@ function render() {
         const citedOnly = isCitedOnlyLayer(fullNode);
         const r = n.r || 4;
 
-        // Top-10 most-connected actors in this plane get a persistent
-        // label. "Show all labels" forces every node to have one.
-        const isTop = topNames.has(n.name);
-        const hasPermanentLabel = showLabels || isTop;
+        // Persistent labels are off by default. The "Show labels" toggle
+        // turns them on for every node; either way, hovering an unlabeled
+        // node still reveals its name transiently.
+        const hasPermanentLabel = showLabels;
 
         nodesG.append("circle")
           .attr("class", citedOnly ? "node node-cited" : "node")
