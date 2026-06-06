@@ -212,7 +212,7 @@ function render() {
   const PLANE_GAP = 110;
   const SKEW      = 90;          // horizontal offset of top vs bottom
   const THICK     = 16;          // slab thickness (3D depth)
-  const TITLE_H   = 56;          // room for two-line title above first plane
+  const TITLE_H   = 72;          // room for title + subtitle + first-layer label
   const MARGIN_X  = 32;
   const MARGIN_Y  = 24;
 
@@ -256,12 +256,13 @@ function render() {
     const g = svg.append("g").attr("transform", `translate(${stackX}, ${stackY})`);
 
     // Stack title block sits at the top-left of the first plane,
-    // aligned with the plane's top-left corner (x = SKEW).
+    // aligned with the plane's top-left corner (x = SKEW). Three lines
+    // stacked: TITLE / N actors / first-layer label.
     g.append("text").attr("class", "stack-title")
-      .attr("x", SKEW).attr("y", TITLE_H - 26)
+      .attr("x", SKEW).attr("y", TITLE_H - 50)
       .text(stack.label.toUpperCase());
     g.append("text").attr("class", "stack-sub")
-      .attr("x", SKEW).attr("y", TITLE_H - 10)
+      .attr("x", SKEW).attr("y", TITLE_H - 32)
       .text(`${stack.total} actor${stack.total === 1 ? "" : "s"}`);
 
     // Two inter-edge groups so we can weave cross-layer lines THROUGH the
@@ -307,22 +308,9 @@ function render() {
       g.append("polygon").attr("class", "plane-top")
         .attr("points", poly([tl, tr, br, bl]));
 
-      // Layer label: for the first plane, place it inline with the stack
-      // subtitle (after "39 actors") so the user sees e.g.
-      //   PRIVATE
-      //   39 actors  Conducts
-      // For subsequent planes the label sits just above the plane top-left.
-      if (li === 0) {
-        // Push past the "N actors" subtitle width (rough monospace estimate).
-        const subText = `${stack.total} actor${stack.total === 1 ? "" : "s"}`;
-        const subWidth = subText.length * 7.5;
-        g.append("text").attr("class", "plane-label")
-          .attr("x", SKEW + subWidth + 22).attr("y", TITLE_H - 10)
-          .text(label);
-      } else {
-        g.append("text").attr("class", "plane-label")
-          .attr("x", SKEW).attr("y", planeY - 8).text(label);
-      }
+      // Layer label sits on its own line above each plane's top-left.
+      g.append("text").attr("class", "plane-label")
+        .attr("x", SKEW).attr("y", planeY - 8).text(label);
 
       // Helper: is this actor only "cited" on this layer (no specific/author role)?
       const isCitedOnly = (n) => {
