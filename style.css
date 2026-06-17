@@ -3,6 +3,31 @@
    Designed for a 13–14" laptop: sidebar 240px, content ~900–1000px.
    ════════════════════════════════════════════════════════════════ */
 
+/* ── Self-hosted fonts (shared with the Censorship & moderation site) ──
+   Body prose: Adobe Caslon Pro. Headings / sidebar / UI: Test National. */
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-Italic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-Semibold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-SemiboldItalic.otf") format("opentype");
+  font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-Bold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "ACaslon Pro"; src: url("fonts/ACaslonPro-BoldItalic.otf") format("opentype");
+  font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Test National"; src: url("fonts/TestNational-Regular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Test National"; src: url("fonts/TestNational-BookItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Test National"; src: url("fonts/TestNational-Semibold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Test National"; src: url("fonts/TestNational-Semibold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Test National Medium"; src: url("fonts/TestNational-Medium.otf") format("opentype");
+  font-weight: 500; font-style: normal; font-display: swap; }
+
 :root {
   /* Editorial palette — paper-style, warm. */
   --ink:        #1c1a18;
@@ -32,23 +57,41 @@
   --c-other:                          #BABABA;
   --c-unknown:                        #BABABA;
 
+  --ink-soft:   #3c3934;
   --dim:      0.10;
   --sb-w:     250px;
   --rail-w:   0px;
+
+  --serif:    "ACaslon Pro", "Adobe Caslon Pro", "Iowan Old Style", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --sans:     "Test National", "Helvetica Neue", Inter, "Segoe UI", Arial, sans-serif;
+  --mono:     ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html { background: #ffffff; }
 body {
-  font-family: "Iowan Old Style", "Charter", Georgia, "Times New Roman", serif;
+  font-family: var(--serif);
   color: var(--ink);
-  background: var(--paper);
-  font-size: 14.5px;
+  background: #ffffff;                 /* white page — only the sidebar stays warm */
+  font-size: 15px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 a { color: inherit; }
 button { font: inherit; cursor: pointer; }
+
+/* Sans-serif (Test National) for chrome: sidebar, headings, table/figure UI. */
+.brand h1, .masthead-title,
+.prose h2, .prose h3, .prose h4,
+.side-nav, .side-block h4, .block-head h3, .block-sub,
+.sidebar, .company-list, .legend-chip,
+.stacks-controls, .stack-legend {
+  font-family: var(--sans);
+}
+/* Prose stays in the serif. */
+.prose, .prose p, .prose li, .lede, .block-caption { font-family: var(--serif); }
 
 /* ─────────────────────────── Sidebar ─────────────────────────── */
 .sidebar {
@@ -834,4 +877,157 @@ body.has-selection .doc:not(.hl) {
 }
 #stack-selection-banner button#stack-clear-sel:hover {
   background: #c0431f; color: #fff;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   Inline citations, hover reference cards & reader comments
+   (ported from the Censorship & moderation site)
+   ════════════════════════════════════════════════════════════════ */
+
+/* Inline (Author, year) citation groups in the prose. */
+.cite-grp {
+  font-variant-numeric: oldstyle-nums;
+  font-size: 0.95em;
+  color: var(--ink-soft);
+}
+.cite-link {
+  color: var(--accent);
+  border-bottom: 1px dotted rgba(192, 67, 31, 0.30);
+  text-decoration: none;
+  cursor: pointer;
+}
+.cite-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* References list: hanging indent + flash when jumped to. */
+.references .ref-entry,
+.prose .ref-entry { scroll-margin-top: 1.5rem; }
+.references li:target,
+.prose .ref-entry:target,
+.prose .ref-entry.flash {
+  background: rgba(192, 67, 31, 0.10);
+  box-shadow: -4px 0 0 var(--accent), 0 0 0 4px rgba(192, 67, 31, 0.10);
+  border-radius: 2px;
+  animation: ref-flash 1.6s ease-out 1;
+}
+@keyframes ref-flash {
+  0%   { background: rgba(192, 67, 31, 0.32); }
+  100% { background: rgba(192, 67, 31, 0.10); }
+}
+
+/* Floating hover-card showing the full reference. */
+#data-card {
+  position: absolute; z-index: 220;
+  max-width: 24rem;
+  padding: 0.7rem 0.85rem;
+  background: #ffffff; border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(28, 26, 24, 0.16);
+  font-family: var(--sans);
+  font-size: 12.5px; line-height: 1.45; color: var(--ink);
+}
+#data-card[hidden] { display: none; }
+#data-card .dc-cite {
+  padding: 0.45em 0; border-top: 1px solid var(--rule);
+}
+#data-card .dc-cite:first-child { border-top: none; padding-top: 0; }
+#data-card .dc-cite em { font-style: italic; }
+#data-card .dc-cite .ext {
+  display: inline-block; margin-left: 0.35em; color: var(--accent);
+  font-size: 11px; border-bottom: 1px dotted rgba(192, 67, 31, 0.4);
+  white-space: nowrap;
+}
+#data-card .dc-cite .ext:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ── Reader comments — sidebar list, "+" button, popover, highlight ───── */
+#chapter-comments[hidden] { display: none; }
+#chapter-comments-list { list-style: none; margin: 0; padding: 0; }
+#chapter-comments-list .cmt-rail-count { font-size: 11px; color: var(--muted); margin-bottom: 0.4rem; }
+#chapter-comments-list .cmt-rail-item {
+  font-size: 11.5px; color: var(--ink-soft); line-height: 1.35;
+  padding: 0.3em 1.1rem 0.3em 0; border-top: 1px solid var(--rule);
+  position: relative; cursor: pointer;
+}
+#chapter-comments-list .cmt-rail-item:hover { color: var(--ink); }
+#chapter-comments-list .cmt-rail-who { font-weight: 700; color: var(--ink); }
+#chapter-comments-list .cmt-rail-item:hover .cmt-rail-who { color: var(--accent); }
+#chapter-comments-list .cmt-rail-del {
+  position: absolute; top: 0.25em; right: 0; width: 1.1em; height: 1.1em;
+  border: none; background: none; color: var(--muted); cursor: pointer;
+  font-size: 14px; line-height: 1; padding: 0; opacity: 0; transition: opacity .12s;
+}
+#chapter-comments-list .cmt-rail-item:hover .cmt-rail-del { opacity: 1; }
+#chapter-comments-list .cmt-rail-del:hover { color: #b00; }
+.cmt-export {
+  margin-top: 0.6rem; font-family: var(--sans); font-size: 11px;
+  padding: 0.35em 0.6em; background: var(--paper);
+  border: 1px solid var(--border); border-radius: 3px; color: var(--ink); cursor: pointer;
+}
+.cmt-export:hover { background: var(--ink); color: var(--paper); }
+
+.cmt-plus {
+  position: absolute; z-index: 150;
+  width: 1.6rem; height: 1.6rem; border-radius: 50%;
+  border: none; background: var(--accent); color: #fff;
+  font-size: 1.1rem; line-height: 1; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(28,26,24,0.3);
+}
+.cmt-plus[hidden] { display: none; }
+.cmt-plus:hover { filter: brightness(1.08); }
+
+.cmt-pop {
+  position: absolute; z-index: 230;
+  width: 22rem; max-width: calc(100vw - 1.5rem);
+  background: #ffffff; border: 1px solid var(--border);
+  border-radius: 5px; padding: 0.9rem 1rem;
+  box-shadow: 0 12px 34px rgba(28,26,24,0.22);
+  font-family: var(--sans);
+}
+.cmt-pop .cmt-quote {
+  font-family: var(--serif); font-style: italic; font-size: 0.9rem;
+  color: var(--ink-soft); border-left: 2px solid var(--accent);
+  padding-left: 0.55rem; margin-bottom: 0.65rem; line-height: 1.4;
+}
+.cmt-pop .cmt-name, .cmt-pop .cmt-text {
+  width: 100%; box-sizing: border-box; font-family: var(--sans);
+  font-size: 0.9rem; padding: 0.45em 0.55em; margin-bottom: 0.55rem;
+  border: 1px solid var(--border); border-radius: 3px; background: #fff;
+  color: var(--ink); resize: vertical;
+}
+.cmt-pop .cmt-name:focus, .cmt-pop .cmt-text:focus { outline: none; border-color: var(--ink); }
+.cmt-pop .cmt-actions { display: flex; justify-content: flex-end; gap: 0.5rem; }
+.cmt-pop .cmt-cancel {
+  font-family: var(--sans); font-size: 12px; padding: 0.4em 0.8em;
+  background: var(--paper); border: 1px solid var(--border);
+  border-radius: 3px; color: var(--muted); cursor: pointer;
+}
+.cmt-pop .cmt-cancel:hover { color: var(--ink); }
+.cmt-pop .cmt-save {
+  font-family: var(--sans); font-size: 12.5px; font-weight: 600;
+  padding: 0.4em 0.9em; background: var(--accent); color: #fff;
+  border: 1px solid var(--accent); border-radius: 3px; cursor: pointer;
+}
+.cmt-pop.cmt-view .cmt-entry { margin-bottom: 0.7rem; }
+.cmt-pop .cmt-meta { display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.25rem; }
+.cmt-pop .cmt-who { font-weight: 700; font-size: 0.9rem; color: var(--ink); }
+.cmt-pop .cmt-when { font-size: 11px; color: var(--muted); }
+.cmt-pop .cmt-body {
+  font-family: var(--serif); font-size: 0.95rem; line-height: 1.45;
+  color: var(--ink); margin-bottom: 0.35rem;
+}
+.cmt-pop .cmt-del {
+  font-family: var(--sans); font-size: 11px; padding: 0.2em 0.5em;
+  background: none; border: none; color: var(--accent); cursor: pointer;
+  text-decoration: underline;
+}
+mark.cmt {
+  background: rgba(255, 214, 0, 0.34);
+  border-bottom: 1px solid rgba(192, 67, 31, 0.5);
+  cursor: pointer; padding: 0.02em 0;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+mark.cmt:hover { background: rgba(255, 214, 0, 0.55); }
+mark.cmt.flash { animation: cmt-flash 1.6s ease-out 1; }
+@keyframes cmt-flash {
+  0%, 30% { background: rgba(192, 67, 31, 0.45); }
+  100%    { background: rgba(255, 214, 0, 0.34); }
 }
