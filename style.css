@@ -58,6 +58,7 @@
   --c-unknown:                        #BABABA;
 
   --ink-soft:   #3c3934;
+  --page:       #faf9f5;   /* very light off-white page background */
   --dim:      0.10;
   --sb-w:     230px;
   --right-w:  280px;
@@ -70,11 +71,11 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html { background: #ffffff; }
+html { background: var(--page); }
 body {
   font-family: var(--serif);
   color: var(--ink);
-  background: #ffffff;                 /* white page — only the sidebar stays warm */
+  background: var(--page);             /* very light off-white page */
   font-size: 15px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -582,7 +583,7 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
 body.view-named .row-grid { --col-w: 150px; }
 .co-head {
   position: sticky; top: 0; z-index: 10;
-  background: #ffffff;
+  background: var(--page);
   height: 84px;              /* FIXED so all bottom borders align */
   padding: 6px 4px 4px;
   border-bottom: 1px solid var(--rule);
@@ -593,7 +594,7 @@ body.view-named .row-grid { --col-w: 150px; }
   justify-content: flex-end;
   overflow: hidden;
 }
-.co-head.spacer { background: #ffffff; cursor: default; }
+.co-head.spacer { background: var(--page); cursor: default; }
 .co-head:hover .co-name { color: var(--accent); }
 .co-head .co-name { line-height: 1.15; }
 .co-head .country { font-size: 10.5px; font-weight: 400; color: var(--muted);
