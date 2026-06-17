@@ -1580,7 +1580,7 @@ function drawForceGraph(selector, nodes, links, opts) {
 
 // ── Scroll spy (sidebar) ─────────────────────────────────────────
 function setupScrollSpy() {
-  const topIds = ["introduction", "method", "findings", "discussion", "references"];
+  const topIds = ["introduction", "method", "findings", "references"];
   const subIds = ["block-sources", "block-conducts", "block-risks", "block-misuses",
                   "block-training", "block-benchmark", "block-top-actors", "block-clusters"];
   const allIds = [...topIds, ...subIds];

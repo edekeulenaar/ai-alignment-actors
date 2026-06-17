@@ -59,7 +59,8 @@
 
   --ink-soft:   #3c3934;
   --dim:      0.10;
-  --sb-w:     250px;
+  --sb-w:     230px;
+  --right-w:  280px;
   --rail-w:   0px;
 
   --serif:    "ACaslon Pro", "Adobe Caslon Pro", "Iowan Old Style", "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
@@ -93,15 +94,23 @@ button { font: inherit; cursor: pointer; }
 /* Prose stays in the serif. */
 .prose, .prose p, .prose li, .lede, .block-caption { font-family: var(--serif); }
 
-/* ─────────────────────────── Sidebar ─────────────────────────── */
+/* ─────────────────────────── Sidebars ─────────────────────────── */
 .sidebar {
-  position: fixed; left: 0; top: 0; bottom: 0;
-  width: var(--sb-w);
+  position: fixed; top: 0; bottom: 0;
   padding: 1.5rem 1.2rem;
   background: var(--paper-alt);
-  border-right: 1px solid var(--border);
   overflow-y: auto;
   font-size: 13px;
+}
+/* Left rail — document navigation only. */
+.sidebar-left {
+  left: 0; width: var(--sb-w);
+  border-right: 1px solid var(--border);
+}
+/* Right rail — search, figure keys, filters, companies. */
+.sidebar-right {
+  right: 0; width: var(--right-w);
+  border-left: 1px solid var(--border);
 }
 .brand h1 {
   font-size: 1.05rem; font-weight: 700; margin: 0 0 0.35em 0;
@@ -197,12 +206,24 @@ button { font: inherit; cursor: pointer; }
 /* Companies list */
 .company-list { list-style: none; padding: 0; margin: 0; font-size: 12px; }
 .company-list li {
-  padding: 0.2em 0.4em; border-radius: 2px; cursor: pointer; user-select: none;
+  display: flex; align-items: center; gap: 0.5em;
+  padding: 0.22em 0.4em; border-radius: 2px; cursor: pointer; user-select: none;
+}
+/* Explicit checkbox affordance so it's clear companies can be selected. */
+.company-list li::before {
+  content: ""; flex: 0 0 12px; width: 12px; height: 12px;
+  border: 1px solid var(--rule); border-radius: 2px; background: #fff;
+}
+.company-list li.active::before {
+  background: var(--accent); border-color: var(--accent);
+  /* white check mark */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2 2 4.8-5' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 12px 12px; background-repeat: no-repeat; background-position: center;
 }
 .company-list li:hover { background: rgba(0,0,0,0.04); }
-.company-list li.active { background: var(--ink); color: var(--paper); }
-.company-list li .ct { color: var(--muted); font-size: 10.5px; margin-left: 0.4em; }
-.company-list li.active .ct { color: var(--paper); opacity: 0.7; }
+.company-list li.active { color: var(--ink); font-weight: 600; }
+.company-list li .ct { color: var(--muted); font-size: 10.5px; margin-left: auto; }
+.side-hint-companies { margin: 0 0 0.5rem; }
 
 /* (Progress rail removed) */
 .progress-rail { display: none; }
@@ -210,10 +231,11 @@ button { font: inherit; cursor: pointer; }
 /* ─────────────────────────── Main ─────────────────────────────── */
 main {
   margin-left: var(--sb-w);
+  margin-right: var(--right-w);
   /* top padding matches the sidebar's top padding so the masthead title's
      first line sits at the same y as the sidebar's brand heading. */
   padding: 1.5rem 3rem 6rem;
-  max-width: calc(100vw - var(--sb-w));
+  max-width: calc(100vw - var(--sb-w) - var(--right-w));
 }
 main > section { margin-bottom: 5rem; scroll-margin-top: 80px; }
 
@@ -512,6 +534,9 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
 
 /* ───────────────────────── Grid blocks ────────────────────────── */
 .grid-block { margin-bottom: 5rem; padding-top: 0; }
+/* Wide company-column grids scroll horizontally inside their block so the
+   narrower two-sidebar layout never forces a page-level scrollbar. */
+.grid-block .row-grid { overflow-x: auto; overflow-y: visible; padding-bottom: 6px; }
 .block-head { margin-bottom: 0.3rem; }
 .block-head h3 {
   font-size: 1.2rem; font-weight: 700; margin: 0;
@@ -557,7 +582,7 @@ code { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px;
 body.view-named .row-grid { --col-w: 150px; }
 .co-head {
   position: sticky; top: 0; z-index: 10;
-  background: var(--paper);
+  background: #ffffff;
   height: 84px;              /* FIXED so all bottom borders align */
   padding: 6px 4px 4px;
   border-bottom: 1px solid var(--rule);
@@ -568,7 +593,7 @@ body.view-named .row-grid { --col-w: 150px; }
   justify-content: flex-end;
   overflow: hidden;
 }
-.co-head.spacer { background: var(--paper); cursor: default; }
+.co-head.spacer { background: #ffffff; cursor: default; }
 .co-head:hover .co-name { color: var(--accent); }
 .co-head .co-name { line-height: 1.15; }
 .co-head .country { font-size: 10.5px; font-weight: 400; color: var(--muted);
@@ -765,9 +790,9 @@ body.has-selection .doc:not(.hl) {
 #stack-svg .plane-shadow { fill: rgba(0,0,0,0.10); filter: blur(2px); }
 #stack-svg text { font-family: inherit; }
 #stack-svg .plane-label { font-size: 14px; fill: #222; font-style: italic; }
-#stack-svg .stack-title { font-size: 15px; font-weight: 700; fill: #111;
+#stack-svg .stack-title { font-family: var(--sans); font-size: 14px; font-weight: 700; fill: #111;
   text-transform: uppercase; letter-spacing: 0.5px; }
-#stack-svg .stack-sub { font-size: 12px; fill: #555; }
+#stack-svg .stack-sub { font-family: var(--sans); font-size: 12px; fill: #555; }
 #stack-svg .intra-edge { stroke: #6e6a5e; stroke-width: 0.5; stroke-opacity: 0.32; fill: none; }
 #stack-svg .inter-edge { stroke: #b9b3a1; stroke-width: 0.7; stroke-opacity: 0.65; fill: none; }
 #stack-svg .node { stroke: #1a1a1a; stroke-width: 0.7; cursor: pointer; }
