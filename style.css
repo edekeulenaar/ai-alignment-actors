@@ -31,8 +31,8 @@
 :root {
   /* Editorial palette — paper-style, warm. */
   --ink:        #1c1a18;
-  --paper:      #fbf7f0;
-  --paper-alt:  #f3ece1;
+  --paper:      #fbf8f2;
+  --paper-alt:  #f5efe5;   /* sidebar — lightened, same warm tone as the page */
   --muted:      #6c655c;
   --border:     #d5cdbf;
   --rule:       #b3a999;
@@ -58,7 +58,7 @@
   --c-unknown:                        #BABABA;
 
   --ink-soft:   #3c3934;
-  --page:       #faf9f5;   /* very light off-white page background */
+  --page:       #faf7f0;   /* very light warm off-white — same tone as the sidebar */
   --dim:      0.10;
   --sb-w:     230px;
   --right-w:  280px;
