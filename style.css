@@ -1149,3 +1149,8 @@ body.commitment .sq.sq-commit { border-radius: 50%; }
 #data-card .al-list-full { max-height: none; }
 #data-card .al-close { margin-top: 0.5rem; font-family: var(--sans); font-size: 10.5px;
   color: var(--muted); font-style: italic; }
+
+/* Alluvial node card extras */
+#data-card .al-sub { font-family: var(--sans); font-size: 10.5px; color: var(--muted);
+  margin-top: 0.1rem; text-transform: uppercase; letter-spacing: 0.3px; }
+#data-card .al-cnt { color: var(--accent); font-size: 10.5px; }

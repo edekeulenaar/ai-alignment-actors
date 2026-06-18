@@ -52,6 +52,37 @@
     return head + list + (full ? `<div class="al-close">click outside to close</div>` : "");
   }
 
+  // Card for a NODE box: its top actors by mention count in the training docs.
+  // Hover → top 5; click (pinned) → top 10.
+  function nodeCardHtml(node, pinnedView) {
+    const seen = new Set();
+    const members = (node.members || []).filter(m => {
+      const k = (m.name || "").toLowerCase();
+      if (seen.has(k)) return false; seen.add(k); return true;
+    }).sort((a, b) => (b.mentions - a.mentions) || (a.name || "").localeCompare(b.name || ""));
+    const n = pinnedView ? 10 : 5;
+    const isType = node.stage === 1, isCountry = node.stage === 0;
+    const row = m => {
+      const bits = [];
+      if (!isCountry && m.country && m.country !== "Unknown") bits.push(esc(m.country));
+      if (!isType && m.type) bits.push(esc(m.type));
+      const meta = bits.length ? ` <span class="al-where">— ${bits.join(", ")}</span>` : "";
+      const cnt = m.mentions ? ` <span class="al-cnt">${m.mentions}&times;</span>` : "";
+      return `<li>${esc(m.name)}${cnt}${meta}</li>`;
+    };
+    const shown = members.slice(0, n);
+    const more = members.length > n
+      ? (pinnedView
+          ? `<li class="al-more">+ ${members.length - n} more</li>`
+          : `<li class="al-more">+ ${members.length - n} more — click the box for the top 10</li>`)
+      : "";
+    const head = `<div class="dc-t">${esc(node.name)}</div>` +
+      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(node.value || members.length)}</div>` +
+      `<div class="al-sub">Top ${Math.min(n, members.length)} by mentions in training docs</div>`;
+    return head + `<ul class="al-list${pinnedView ? " al-list-full" : ""}">${shown.map(row).join("")}${more}</ul>` +
+      (pinnedView ? `<div class="al-close">click outside to close</div>` : "");
+  }
+
   // Hover-card reusing the page's #data-card element, with a pinned mode
   // (click a stream → full scrollable list that stays until dismissed).
   const card = (() => {
@@ -65,7 +96,8 @@
       n.style.left = (x + scrollX) + "px"; n.style.top = (y + scrollY) + "px";
     };
     document.addEventListener("mousedown", e => {
-      if (pinned && !e.target.closest("#data-card") && !e.target.closest("#alluvial .link")) {
+      if (pinned && !e.target.closest("#data-card") &&
+          !e.target.closest("#alluvial .link") && !e.target.closest("#alluvial rect")) {
         pinned = false; const c = el(); if (c) { c.hidden = true; c.classList.remove("dc-pinned"); }
       }
     });
@@ -91,13 +123,16 @@
     const N = new Map(), L = new Map();
     const node = (name, stage) => {
       const k = `s${stage}::${name}`;
-      if (!N.has(k)) N.set(k, { id: k, name, stage });
+      if (!N.has(k)) N.set(k, { id: k, name, stage, members: [] });
       return k;
     };
     rows.forEach(r => {
       const path = STAGES.map((f, i) => node(r[f] || "(unknown)", i));
       const member = { name: r.name || "(unnamed)", country: r.country || "Unknown",
-                       type: r.type || "", mentioned: r.mentioned || "" };
+                       type: r.type || "", mentioned: r.mentioned || "",
+                       mentions: +r.mentions || 0 };
+      // Attach the actor to each node it passes through (Country, Type, Yes/No).
+      path.forEach(k => N.get(k).members.push(member));
       for (let i = 0; i < path.length - 1; i++) {
         const a = path[i], b = path[i + 1], k = `${a}|${b}`;
         let e = L.get(k);
@@ -158,12 +193,11 @@
       .attr("height", d => Math.max(2, d.y1 - d.y0)).attr("width", d => d.x1 - d.x0)
       .attr("class", d => d.depth === maxDepth
         ? (d.name.toLowerCase() === "yes" ? "term term-yes" : "term term-no") : "")
-      .on("mouseenter", (e, d) => card.show(
-        `<div class="dc-t">${esc(d.name)}</div>
-         <div class="dc-row"><span>Actors</span> ${d3.format(",")(d.value || 0)}</div>`, e))
+      .style("cursor", "pointer")
+      .on("mouseenter", (e, d) => card.show(nodeCardHtml(d, false), e))
       .on("mousemove", e => card.move(e))
       .on("mouseleave", () => card.hide())
-      .on("click", (e, d) => highlight(d));
+      .on("click", (e, d) => { e.stopPropagation(); card.pin(nodeCardHtml(d, true), e); });
 
     // Labels: first column → left of rect, others → right.
     const isFirst = d => d.depth === 0;
