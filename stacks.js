@@ -42,9 +42,11 @@ function init() {
     const o = document.createElement("option");
     o.value = c; o.textContent = c; sel.appendChild(o);
   });
-  ["stack-group-by", "stack-company-filter", "stack-topn", "stack-cap",
-   "stack-show-labels", "stack-show-cross", "stack-show-cited"].forEach(id =>
-    document.getElementById(id).addEventListener("change", render));
+  ["stack-group-by", "stack-company-filter", "stack-topn", "stack-cap", "stack-cols",
+   "stack-show-labels", "stack-show-cross", "stack-show-cited"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("change", render);
+  });
   render();
 }
 
@@ -210,9 +212,11 @@ function render() {
     .sort((a, b) => b.total - a.total)
     .slice(0, topN);
 
-  // Geometry. Stacks are laid out in a grid (default 3 columns) so each
-  // stack can be wider and the actor nodes inside it readable.
-  const COLS      = Math.min(stacks.length, 3);
+  // Geometry. Stacks are laid out in a grid; the user picks how many per row
+  // (fewer = larger, more legible stacks on small screens).
+  const colsSel   = document.getElementById("stack-cols");
+  const colsWant  = colsSel ? parseInt(colsSel.value, 10) || 2 : 2;
+  const COLS      = Math.max(1, Math.min(stacks.length, colsWant));
   const ROWS      = Math.max(1, Math.ceil(stacks.length / COLS));
   const STACK_W   = 480;
   const STACK_GAP = 48;
