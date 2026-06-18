@@ -1128,3 +1128,10 @@ body.commitment .sq.sq-commit { border-radius: 50%; }
   color: var(--ink-soft); border-left: 2px solid var(--rule);
   padding: 1px 0 1px 6px; margin: 3px 0; line-height: 1.35;
 }
+
+/* Alluvial hover-card: example actors per stream */
+#data-card .al-list { margin: 0.4rem 0 0; padding-left: 1rem; font-family: var(--sans);
+  font-size: 11.5px; color: var(--ink); line-height: 1.4; }
+#data-card .al-list li { margin: 1px 0; }
+#data-card .al-where { color: var(--muted); }
+#data-card .al-more { color: var(--muted); font-style: italic; list-style: none; margin-left: -0.6rem; }

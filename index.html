@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260618T1500">
+<link rel="stylesheet" href="style.css?v=20260618T1710">
 </head>
 <body>
 
@@ -21,14 +21,11 @@
     <a href="#method"       data-target="method"      >Method</a>
     <ul class="sub-nav">
       <li><a href="#method-corpus"        data-target="method-corpus"      >Corpus</a></li>
-      <li><a href="#method-doctaxonomy"   data-target="method-doctaxonomy" >Document-type taxonomy</a></li>
       <li><a href="#method-extraction"    data-target="method-extraction"  >Per-document extraction</a></li>
       <li><a href="#method-vocab"         data-target="method-vocab"       >Controlled vocabularies</a></li>
       <li><a href="#method-postclassify"  data-target="method-postclassify">Post-extraction classification</a></li>
       <li><a href="#method-aggregation"   data-target="method-aggregation" >Aggregation</a></li>
-      <li><a href="#method-interface"     data-target="method-interface"   >Interface</a></li>
       <li><a href="#method-limitations"   data-target="method-limitations" >Limitations</a></li>
-      <li><a href="#method-files"         data-target="method-files"       >Files</a></li>
     </ul>
     <a href="#findings"     data-target="findings"    >Findings</a>
     <ul class="sub-nav">
@@ -300,17 +297,16 @@
     <h2>Method</h2>
 
     <p class="lede">
-      The visualisation rests on a structured reading of 213 <em>alignment
+      The visualisation rests on a structured reading of 234 <em>alignment
       documents</em> — model cards, system cards, company policies, principles
       documents, grant calls, audits, blog announcements and research papers
       — analysed end-to-end by a large language model against a fixed schema.
       Each document yields one or more rows of the form
-      <em>(document × conduct or risk × training method × benchmark × actors)</em>.
-      The result is a flat dataset of 2,062 rows describing 290 conducts,
-      918 risks, 557 training methods and 788 benchmarks across 29 companies,
-      together with the actors named at every stage. The pipeline is fully
-      scripted and resumable; the entire extraction can be re-run cheaply
-      whenever the schema or taxonomy is revised.
+      <em>(document × conduct or risk × training method × benchmark × actors)</em>,
+      recording not only the actors named at each stage but the capacity in
+      which each is enrolled. The result is a flat dataset of 2,563 rows
+      describing 154 conducts, 828 risks, 55 training techniques and some 900
+      benchmarks across 29 companies.
     </p>
 
     <h3 id="method-corpus">Corpus</h3>
@@ -321,65 +317,50 @@
       system cards from the major labs (OpenAI, Anthropic, Google,
       Google&nbsp;DeepMind, Meta, xAI, Mistral, DeepSeek, Microsoft, Alibaba,
       Black&nbsp;Forest&nbsp;Labs, Aleph&nbsp;Alpha, and others), accompanied by
-      published principles documents, charters, audit reports and grant
-      calls. Each item carries a Zotero key, item type, author, year, URL,
-      and a file attachment (PDF or HTML snapshot). The second source is a
-      folder of 53 deduplicated <em>company policies</em>: acceptable-use,
-      privacy, terms-of-service, developer terms, data-processor agreements
-      and related documents, tracked through time via dated snapshots
-      stored as Markdown. For each <em>(product, policy type)</em> pair only
-      the most recent snapshot is analysed, on the basis that operative
-      policy is what affects training.
+      published principles documents, charters, audit reports and grant calls.
+      The second source is a folder of 53 deduplicated <em>company policies</em>:
+      acceptable-use, privacy, terms-of-service, developer terms, data-processor
+      agreements and related documents, tracked through time via dated snapshots
+      stored as markdown.
     </p>
 
     <p>
-      Document resolution is layered. The script first looks for a local PDF
-      attachment, then a local HTML snapshot (passed through
-      <a href="https://trafilatura.readthedocs.io/" target="_blank">trafilatura</a>
-      for clean markdown extraction so the result fits within the model's
-      context window), then a live URL. Live URLs are fetched through a
-      cascading chain — <code>httpx</code>, then <code>requests</code>, then
-      a <code>curl</code> subprocess, then Jina Reader as a final
-      content-extraction fallback — and wrapped in a retry loop with
-      exponential back-off to absorb transient SSL or DNS errors.
-    </p>
-
-    <h3 id="method-doctaxonomy">Document-type taxonomy</h3>
-
-    <p>
-      Each document is classified into one of ten types — <em>Model card</em>,
-      <em>Company policy</em>, <em>Principle</em>, <em>Grant</em>,
-      <em>Announcement</em>, <em>Audit</em>, <em>Initiative</em>,
-      <em>Report</em>, <em>Research</em>, or <em>Other</em> — with an
-      optional sub-type for policies (Acceptable&nbsp;Use, Privacy, Terms of
-      Service, Developer Terms, Data Processor Agreement, etc.). For company
-      policies, the schema is restricted to information that informs how the
-      model is <em>trained, moderated, filtered or evaluated</em>;
-      user-facing usage rules, billing terms and account terms are explicitly
-      excluded. This keeps the dataset focused on alignment governance and
-      avoids drowning it in the boilerplate of consumer contracts.
+      Each document is classified into one of ten types — <em>model card</em>,
+      <em>company policy</em>, <em>principle</em>, <em>grant</em>,
+      <em>announcement</em>, <em>audit</em>, <em>initiative</em>,
+      <em>report</em>, <em>research</em>, or <em>other</em> — with an optional
+      sub-type for policies (Acceptable&nbsp;Use, Privacy, Terms of Service,
+      Developer Terms, Data Processor Agreement, etc.). For company policies, the
+      schema is restricted to information that informs how the model is
+      <em>trained, moderated, filtered or evaluated</em>; user-facing usage
+      rules, billing terms and account terms are explicitly excluded. This keeps
+      the dataset focused on alignment governance and avoids drowning it in the
+      boilerplate of consumer contracts.
     </p>
 
     <h3 id="method-extraction">Per-document extraction</h3>
 
     <p>
-      Each document is read in a single call to Gemini
-      (<code>gemini-3-flash-preview</code>) with a 3,084-token system prompt
-      that defines the schema, the document-type taxonomy, the conduct and
-      risk vocabularies, the training-method categories, the actor-type
-      vocabulary, and slug-generation rules for stable cross-document
-      identifiers. The model is instructed to return a JSON object with a
-      single key <code>rows</code>, whose value is an array of row objects.
-      <strong>Row granularity is one row per (conduct or risk × benchmark)
-      combination found in the document.</strong> A conduct or risk with
-      three benchmarks therefore generates three rows, in which the
-      training/mitigation fields are repeated; a conduct or risk discussed
-      but not benchmarked still produces one row, so it appears in the
-      dataset.
+      Each document is first converted to plain text — PDFs through PyMuPDF, web
+      pages and Zotero HTML snapshots through
+      <a href="https://trafilatura.readthedocs.io/" target="_blank">trafilatura</a>,
+      policy snapshots read directly from their markdown — and then read in a
+      single request to <strong>GPT-5.4</strong>, submitted asynchronously
+      through the OpenAI Batch API. The system prompt defines the schema, the
+      document-type taxonomy, the conduct and risk vocabularies, the
+      training-method categories, the actor-type and actor-category
+      vocabularies, the citation-type vocabulary, and slug-generation rules for
+      stable cross-document identifiers. The model is instructed to return a
+      JSON object with a single key <code>rows</code>, whose value is an array
+      of row objects. <strong>Row granularity is one row per (conduct or risk ×
+      benchmark) combination found in the document.</strong> A conduct or risk
+      with three benchmarks therefore generates three rows, in which the
+      training/mitigation fields are repeated; a conduct or risk discussed but
+      not benchmarked still produces one row, so it appears in the dataset.
     </p>
 
     <p>
-      For each row the schema records 41 fields, grouped as follows:
+      For each row the schema records 56 fields, grouped as follows:
     </p>
 
     <ul>
@@ -392,35 +373,40 @@
       <code>company_country</code>, <code>company_model</code>.</li>
 
       <li><strong>Document contributors</strong> — pipe-separated lists of
-      named actors and their types, including any actors cited from
-      external publications inside the verbatim conduct/risk passages
-      (<code>pub_actors</code>, <code>pub_actors_type</code>,
-      <code>pub_actor_type_id</code>, <code>pub_actor_page</code>).</li>
+      named actors, including any actors cited from external publications inside
+      the verbatim conduct/risk passages, each carrying three parallel labels:
+      its type, a finer actor category, and a citation type recording the
+      capacity in which it is enrolled (<code>pub_actors</code>,
+      <code>pub_actors_type</code>, <code>pub_actors_cat</code>,
+      <code>pub_actors_cite</code>, <code>pub_actor_type_id</code>,
+      <code>pub_actor_page</code>). The same actor category and citation type
+      accompany every actor field below.</li>
 
-      <li><strong>Conduct or risk</strong> — verbatim definition,
-      canonical category from a controlled vocabulary,
-      <em>conduct</em> vs <em>risk</em> flag, verbatim item name, source
-      page (<code>risk_conduct_definition</code>,
-      <code>risk_conduct_category</code>, <code>risk_conduct_type</code>,
-      <code>risk_conduct_item</code>,
+      <li><strong>Conduct or risk</strong> — verbatim definition, canonical
+      category from a controlled vocabulary, <em>conduct</em> vs <em>risk</em>
+      flag, verbatim item name, a priority signal recording how forcefully the
+      document itself frames the risk, and source page
+      (<code>risk_conduct_definition</code>, <code>risk_conduct_category</code>,
+      <code>risk_conduct_type</code>, <code>risk_conduct_item</code>,
+      <code>risk_priority_signal</code>,
       <code>pub_risk_conduct_definition_page</code>).</li>
 
       <li><strong>Specific actor credited with defining the conduct or
       risk</strong>, if and only if the document explicitly credits one
       (<code>specific_risk_conduct_actor</code>,
       <code>specific_risk_conduct_actor_category</code>). When the document
-      defines the concept inline without external attribution, both fields
-      are null.</li>
+      defines the concept inline without external attribution, both fields are
+      null.</li>
 
       <li><strong>Training or mitigation method</strong> — verbatim
-      description, category from the eight-class taxonomy below, page,
-      and actors involved (<code>risk_conduct_training_verbatim</code>,
-      <code>risk_conduct_training_category</code>,
-      <code>pub_training_page</code>, <code>risk_conduct_training_actor</code>,
+      description, category from the eight-class taxonomy below, page, and actors
+      involved (<code>risk_conduct_training_verbatim</code>,
+      <code>risk_conduct_training_category</code>, <code>pub_training_page</code>,
+      <code>risk_conduct_training_actor</code>,
       <code>risk_conduct_training_actor_type</code>).</li>
 
-      <li><strong>Benchmark</strong> — verbatim name, author and author
-      type, page (<code>risk_conduct_benchmark</code>,
+      <li><strong>Benchmark</strong> — verbatim name, author and author type,
+      page (<code>risk_conduct_benchmark</code>,
       <code>risk_conduct_benchmark_author</code>,
       <code>risk_conduct_benchmark_author_type</code>,
       <code>pub_benchmark_page</code>).</li>
@@ -432,126 +418,147 @@
     </ul>
 
     <p>
-      Extraction is parallelised across six worker threads and incremental:
-      a per-document <code>.analyse_done.txt</code> log tracks successful
-      extractions, so any failure is automatically retried on the next run
-      while completed documents are skipped.
+      Because extraction runs as a batch, the whole corpus is submitted in one
+      request set and collected when complete; of the 234 documents, 184 yield
+      extractable alignment content, the remainder being policy snapshots with
+      no training-relevant material. A small number of the most safety-dense
+      documents are refused by the provider's input-safety filter rather than
+      processed, and are recovered separately so that none is silently dropped
+      (see Limitations).
     </p>
 
     <h3 id="method-vocab">Controlled vocabularies</h3>
 
     <p>
-      Free-form extraction is paired with two stages of controlled
+      Free-form extraction is paired with several stages of controlled
       vocabulary. The model is constrained to choose one of nine
       <strong>actor types</strong> — <em>internal</em>, <em>private</em>,
       <em>academic</em>, <em>research institute</em>, <em>governmental</em>,
       <em>nonprofit</em>, <em>public</em>, <em>public consultation</em>,
-      <em>other</em> — to which we add the meta-category <em>multiple</em>
-      when a row contains several types. <strong>Conduct categories</strong>
-      are drawn from a 17-class vocabulary covering norms such as
-      <em>Honesty</em>, <em>Helpfulness</em>, <em>Harmlessness</em>,
-      <em>Anti-discrimination</em>, <em>Political neutrality</em>,
-      <em>Factuality</em>, <em>Reasoning</em>, <em>Safety</em> and
-      <em>Knowledge</em>. <strong>Risk categories</strong> are drawn from
-      a 40-class vocabulary covering specific risk areas — <em>CBRN</em>,
-      <em>Cybersecurity</em>, <em>Bias</em>, <em>Sycophancy</em>,
+      <em>other</em> — to which we add the meta-category <em>multiple</em> when a
+      row contains several types. Alongside this coarse type we apply a finer
+      sixteen-class <strong>actor category</strong>, distinguishing
+      alignment-research organisations, public-consultation bodies, advocacy
+      groups, coalitions, industry associations, academic centres, think tanks,
+      foundations, legal-advocacy organisations, red-teaming and cybersecurity
+      firms, government agencies, internal actors, the authoring AI company,
+      other AI companies, publics, and an open "other"; and an eleven-class
+      <strong>citation type</strong> recording how each actor is enrolled — as
+      author, formal partner, external evaluator, third-party red-teamer,
+      benchmark or framework contributor, normative influence, company
+      initiative, standards or regulatory framework it maps to, coalition it has
+      joined, funding relationship, or temporary initiative. Because the model
+      occasionally improvises labels outside these vocabularies, a harmonisation
+      pass collapses every extracted category and citation value to a single
+      canonical term — the authoring company and its named staff, for example,
+      to "internal". <strong>Conduct categories</strong> are drawn from a
+      17-class vocabulary covering norms such as <em>Honesty</em>,
+      <em>Helpfulness</em>, <em>Harmlessness</em>, <em>Anti-discrimination</em>,
+      <em>Political neutrality</em>, <em>Factuality</em>, <em>Reasoning</em>,
+      <em>Safety</em> and <em>Knowledge</em>. <strong>Risk categories</strong>
+      are drawn from a 40-class vocabulary covering specific risk areas —
+      <em>CBRN</em>, <em>Cybersecurity</em>, <em>Bias</em>, <em>Sycophancy</em>,
       <em>Reward hacking</em>, <em>Persuasion</em>, <em>Misalignment</em>,
-      <em>Hallucinations</em>, <em>Child Safety</em>, <em>Jailbreaking</em>,
-      and so on. Where a document uses language that does not map, the
-      model returns <code>Other: &lt;specify&gt;</code>; these are reviewed
-      and either folded back into the vocabulary or kept as an open
-      category.
+      <em>Hallucinations</em>, <em>Child Safety</em>, <em>Jailbreaking</em>, and
+      so on. Where a document uses language that does not map, the model returns
+      <code>Other: &lt;specify&gt;</code>; these are reviewed and either folded
+      back into the vocabulary or kept as an open category.
     </p>
 
     <p>
-      Training and mitigation methods are mapped to one of eight
-      categories: <strong>Preference learning</strong> (RLHF, RLAIF, DPO,
-      reward modelling), <strong>Supervised training</strong> (SFT,
-      instruction tuning, demonstration fine-tuning, deliberative
-      alignment), <strong>Reward shaping</strong> (adversarial reward
-      functions, reward capping, rule-based rewards),
-      <strong>Data curation</strong> (filtering, deduplication, synthetic
-      data, PII redaction), <strong>Adversarial training</strong>
-      (red-teaming data, adversarial examples),
-      <strong>Inference-time filtering</strong> (content classifiers,
-      safety filters, moderation APIs), <strong>Hard constraints</strong>
-      (system-prompt rules, refusal policies, hardcoded refusals), and
-      <strong>Runtime safeguards</strong> (trip wires, model lookahead,
-      runtime monitoring, scratchpad oversight, sandboxing). A pipe
-      separator is used when several categories co-apply.
+      Training and mitigation methods are mapped to one of eight categories:
+      <strong>Preference learning</strong> (RLHF, RLAIF, DPO, reward modelling),
+      <strong>Supervised training</strong> (SFT, instruction tuning,
+      demonstration fine-tuning, deliberative alignment), <strong>Reward
+      shaping</strong> (adversarial reward functions, reward capping, rule-based
+      rewards), <strong>Data curation</strong> (filtering, deduplication,
+      synthetic data, PII redaction), <strong>Adversarial training</strong>
+      (red-teaming data, adversarial examples), <strong>Inference-time
+      filtering</strong> (content classifiers, safety filters, moderation APIs),
+      <strong>Hard constraints</strong> (system-prompt rules, refusal policies,
+      hardcoded refusals), and <strong>Runtime safeguards</strong> (trip wires,
+      model lookahead, runtime monitoring, scratchpad oversight, sandboxing). A
+      pipe separator is used when several categories co-apply.
     </p>
 
     <p>
       The prompt is strict about what counts as a training method.
       Constitutional frameworks (e.g. <em>Constitutional AI</em>,
-      <em>Anthropic's Constitution</em>) are treated as <em>sources</em>
-      of norms — listed in <code>pub_actors</code> or
+      <em>Anthropic's Constitution</em>) are treated as <em>sources</em> of
+      norms — listed in <code>pub_actors</code> or
       <code>risk_conduct_definition</code> — and not as techniques; the
-      underlying technique is RLAIF or SFT. Narratives about how a risk
-      arises are likewise excluded from the training fields.
+      underlying technique is RLAIF or SFT. Narratives about how a risk arises
+      are likewise excluded from the training fields.
     </p>
 
     <h3 id="method-postclassify">Post-extraction classification</h3>
 
     <p>
-      Two further classification passes are run after extraction, against
-      the unique values discovered in the data. The first maps each
-      training description to a specific <em>technique</em> within a
-      structured per-category taxonomy (e.g. <em>Preference
-      learning</em>&nbsp;→&nbsp;RLHF, RLAIF, DPO, KTO, Reward modelling;
-      <em>Supervised training</em>&nbsp;→&nbsp;SFT, deliberative
-      alignment, rejection-sampling fine-tuning; etc.). This pass is
-      grounded in <a href="#ref-ji-2023">Ji et al.'s</a> <em>AI Alignment: a Comprehensive
-      Survey</em> (2023), passed to Gemini as taxonomic context. The
-      second pass categorises each benchmark into one of 24 domains —
-      <em>Safety / Harmlessness</em>, <em>Refusal / Over-refusal</em>,
+      A single further pass — again GPT-5.4, run as one batch over the unique
+      values discovered in the data — adds four derived columns. It harmonises
+      each verbatim conduct or risk name to a canonical label; maps each
+      training description to a specific <em>technique</em> within a structured
+      per-category taxonomy (<em>Preference learning</em>&nbsp;→&nbsp;RLHF,
+      RLAIF, DPO, KTO, reward modelling; <em>Supervised
+      training</em>&nbsp;→&nbsp;SFT, deliberative alignment, rejection-sampling
+      fine-tuning; and so on); categorises each benchmark into one of 24
+      domains — <em>Safety / Harmlessness</em>, <em>Refusal / Over-refusal</em>,
       <em>Honesty / Factuality</em>, <em>Hallucination</em>, <em>Bias /
-      Fairness</em>, <em>Toxicity</em>, <em>Cybersecurity</em>,
-      <em>CBRN</em>, <em>Privacy</em>, <em>Jailbreak / Adversarial</em>,
-      <em>Agentic / Autonomy</em>, capability sub-categories (coding,
-      reasoning, maths, multilingual, multimodal, long context,
-      instruction following), <em>Persuasion</em>, <em>Sycophancy</em>,
-      <em>Reward hacking</em>, <em>Misalignment / Scheming</em>,
-      <em>Internal evaluation suite</em>, <em>Other</em>.
+      Fairness</em>, <em>Toxicity</em>, <em>Cybersecurity</em>, <em>CBRN</em>,
+      <em>Privacy</em>, <em>Jailbreak / Adversarial</em>, <em>Agentic /
+      Autonomy</em>, the capability sub-categories (coding, reasoning, maths,
+      multilingual, multimodal, long context, instruction following),
+      <em>Persuasion</em>, <em>Sycophancy</em>, <em>Reward hacking</em>,
+      <em>Misalignment / Scheming</em>, <em>Internal evaluation suite</em>,
+      <em>Other</em>; and sorts every risk onto a priority line.
     </p>
 
     <p>
-      Both passes work on the deduplicated set of values rather than the
-      full 2,062 rows, which keeps the API cost modest (roughly 700
-      unique training entries and 800 unique benchmarks). Results are
-      cached to JSON; re-running the classifier is free for already-seen
-      values, so the taxonomy can be revised iteratively without
-      re-paying for stable classifications. Both classifiers retry
-      transient network errors with capped exponential back-off (up to
-      ten attempts at 1 s, 2 s, 4 s, 8 s, 16 s, then 30 s with jitter).
+      The priority line is the one classification deliberately withheld from the
+      per-document reading. Each risk is sorted into a <em>red</em>, <em>mid</em>
+      or <em>low</em> line by combining the document's own priority signal with
+      the cross-company frequency of the risk and a fixed rubric: red lines are
+      the unacceptable transgressions a company treats as absolute — CBRN, child
+      sexual abuse, catastrophic loss of control; mid-lines are the contested,
+      grey-area concerns that recur intermittently and whose definitions are
+      disputed — political neutrality, persuasion, "grey area" content;
+      low-lines are the risks rarely emphasised across the industry. Because the
+      cross-company frequency is a corpus-level property, this judgement cannot
+      be made by reading a single document in isolation, and is reserved for
+      this aggregate pass.
+    </p>
+
+    <p>
+      The pass works on the deduplicated set of values rather than the full
+      2,563 rows, which keeps the API cost modest (roughly a thousand unique
+      conducts and risks, a thousand unique benchmarks); the batch interface in
+      turn halves the per-token cost relative to synchronous calls.
     </p>
 
     <h3 id="method-aggregation">Aggregation for the interface</h3>
 
     <p>
       The flat CSV is reshaped into a compact JSON file
-      (<code>docs/data.json</code>) consumed by the front-end. Conducts,
-      risks and misuses are aggregated on <em>(company × item)</em>;
-      training methods on <em>(company × risk/conduct category × training
-      item)</em>; benchmarks on <em>(company × risk/conduct category ×
-      benchmark name)</em>. The original training-method and benchmark-domain
-      classifications are preserved as item metadata.
+      (<code>docs/data.json</code>) consumed by the front-end. Conducts and
+      risks are aggregated on <em>(company × item)</em>; training methods on
+      <em>(company × risk/conduct category × training item)</em>; benchmarks on
+      <em>(company × risk/conduct category × benchmark name)</em>.
     </p>
 
     <p>
-      For each aggregated item, the actor types appearing on its source
-      rows are split into two sets:
+      For each aggregated item, the actor types appearing on its source rows are
+      split into two sets:
     </p>
 
     <ul>
-      <li><strong>Author</strong> types — every actor whose name matches
-      the document's <code>pub_author</code> or <code>company</code>
-      (loose substring match, so "Google" ↔ "Google&nbsp;DeepMind" still
-      counts).</li>
-      <li><strong>Cited</strong> types — every other actor named anywhere
-      in the document's actor columns, plus any
-      <code>specific_risk_conduct_actor</code> explicitly credited with
-      defining the conduct or risk.</li>
+      <li><strong>Author</strong> types — every actor whose name matches the
+      document's <code>pub_author</code> or <code>company</code>, or whose
+      citation type marks active contribution (so a co-announcing government
+      agency counts as an author rather than a citation).</li>
+      <li><strong>Cited</strong> types — every other actor named anywhere in the
+      document's actor columns, plus any
+      <code>specific_risk_conduct_actor</code> explicitly credited with defining
+      the conduct or risk.</li>
     </ul>
 
     <p>
@@ -559,12 +566,10 @@
     </p>
 
     <ul>
-      <li><strong>Documents, Misuses</strong> — colour = source-document
-      author type.</li>
+      <li><strong>Documents</strong> — colour = source-document author type.</li>
       <li><strong>Conducts, Risks</strong> — colour =
-      <code>specific_risk_conduct_actor_category</code> if a specific
-      actor is explicitly credited; otherwise the source-document author
-      type.</li>
+      <code>specific_risk_conduct_actor_category</code> if a specific actor is
+      explicitly credited; otherwise the source-document author type.</li>
       <li><strong>Training</strong> — colour =
       <code>risk_conduct_training_actor_type</code>.</li>
       <li><strong>Benchmarking</strong> — colour =
@@ -572,132 +577,62 @@
     </ul>
 
     <p>
-      In every case the colour resolves to a single type when the
-      contributing actors share one, "multiple" when more than one, or
-      "unknown" otherwise. The cited types do not influence colour. They
-      drive the second state of the actor-type chips: clicking a chip
-      once highlights items where the type is the AUTHOR for that block;
-      clicking again broadens the highlight to items where the type
-      appears anywhere else on the row (the "+ cited" superset).
-    </p>
-
-    <h3 id="method-interface">Interface</h3>
-
-    <p>
-      The site is a single static page (<code>index.html</code> +
-      <code>data.json</code>) published via GitHub Pages. The sidebar
-      contains:
-    </p>
-
-    <ul>
-      <li>A scrolling <strong>section nav</strong> with sub-navigation for
-      Documents, Conducts, Risks, Training and Benchmark.</li>
-      <li>An <strong>Actors key</strong>: click an actor-type chip to
-      highlight every element associated with that type. "Multiple"
-      entries are treated as the <em>union</em> of their component types,
-      so clicking <em>academic</em> highlights any item whose aggregated
-      actor types include academic, even when its primary type is
-      multiple.</li>
-      <li>Multi-select dropdown <strong>filters</strong> for year,
-      country, company and model.</li>
-      <li>A <strong>view toggle</strong> for naming squares (compact
-      view shows colour-coded blocks; named view replaces them with
-      labelled chips that contain the verbatim item name).</li>
-      <li>A <strong>show-all-companies</strong> toggle that lifts the
-      default top-ten cap.</li>
-      <li>A <strong>company list</strong> with document counts, where
-      clicking a company name acts as a shortcut filter.</li>
-    </ul>
-
-    <p>
-      The main canvas is divided into five blocks (Documents, Conducts,
-      Risks, Training, Benchmarking). In each block, rows are categories
-      and columns are the top-ten companies for that block. Squares are
-      colour-coded by the primary actor type; document icons use a
-      pub-type-specific glyph and a coloured border. Hovering a square or
-      a document icon shows an info card with the verbatim definition,
-      "Found in" links (with page numbers), contributors, and any
-      external evaluator. Clicking pins the card and highlights every
-      element linked to that square across all five blocks — sources,
-      conducts and risks defined or mentioned, training methods and
-      benchmarks applied. Re-clicking dismisses the selection. Categories
-      themselves are clickable too: clicking a category label highlights
-      every item in that category and its full set of cross-links.
-      Categories can be sorted alphabetically, by quantity, by
-      newest-source, or by oldest-source publication year.
+      In every case the colour resolves to a single type when the contributing
+      actors share one, "multiple" when more than one, or "unknown" otherwise.
+      The cited types do not influence colour. They drive the second state of
+      the actor-type chips: clicking a chip once highlights items where the type
+      is the AUTHOR for that block; clicking again broadens the highlight to
+      items where the type appears anywhere else on the row (the "+ cited"
+      superset).
     </p>
 
     <h3 id="method-limitations">Methodological limitations</h3>
 
     <p>
-      Three limitations are worth stating up front. First, model cards
-      and policies are <em>governance artefacts</em>: they record what
-      companies choose to disclose. Their silences are themselves a
-      finding, but it means the dataset reproduces the asymmetries of
-      disclosure across the industry — well-documented labs (OpenAI,
-      Anthropic, Google) are over-represented relative to those that
-      publish less. The visualisation's "top ten by document count" is
-      not a ranking of <em>alignment activity</em> but of
+      Four limitations are worth stating up front. First, model cards and
+      policies are <em>governance artefacts</em>: they record what companies
+      choose to disclose. Their silences are themselves a finding, but it means
+      the dataset reproduces the asymmetries of disclosure across the industry —
+      well-documented labs (OpenAI, Anthropic, Google) are over-represented
+      relative to those that publish less. The visualisation's "top ten by
+      document count" is not a ranking of <em>alignment activity</em> but of
       <em>alignment disclosure</em>.
     </p>
 
     <p>
       Second, LLM-assisted extraction trades exhaustive human reading for
-      coverage. Gemini may miss content buried in footnotes, conflate
-      training methods with risk narratives, or assign actor types
-      inconsistently across documents that use similar phrasing for
-      different parties. Each row preserves the verbatim source passage
-      and a page number to facilitate manual verification, and a separate
-      validation script checks every row's join keys against the
-      bibliography.
+      coverage. The model may miss content buried in footnotes, conflate
+      training methods with risk narratives, or assign actor categories
+      inconsistently across documents that use similar phrasing for different
+      parties. Each row preserves the verbatim source passage and a page number
+      to facilitate manual verification, and a separate validation script checks
+      every row's join keys against the bibliography and the internal
+      consistency of the parallel actor fields.
     </p>
 
     <p>
       Third, the controlled vocabularies are necessarily incomplete.
       Vocabularies have grown iteratively as the documents are read; new
-      categories are added where companies use language the existing
-      taxonomy cannot capture (<em>Multilingual incoherences</em>,
-      <em>Encouraging mental illness</em>, <em>Historical revisionism</em>,
-      <em>Reward hacking</em>). The benchmark taxonomy in particular
-      collapses substantively different evaluations into a single bucket
-      where their published descriptions are too brief to disambiguate
-      (e.g. internal company suites that share a name but differ in
-      content from one model version to the next).
+      categories are added where companies use language the existing taxonomy
+      cannot capture (<em>Multilingual incoherences</em>, <em>Encouraging mental
+      illness</em>, <em>Historical revisionism</em>, <em>Reward hacking</em>).
+      The benchmark taxonomy in particular collapses substantively different
+      evaluations into a single bucket where their published descriptions are
+      too brief to disambiguate (e.g. internal company suites that share a name
+      but differ in content from one model version to the next).
     </p>
 
-    <h3 id="method-files">Files &amp; reproducibility</h3>
-
-    <p>The pipeline is fully scripted. The principal files are:</p>
-
-    <ul>
-      <li><code>analyse_model_cards.py</code> — main Gemini extraction
-      driver: loads the Zotero CSV and the policy snapshots, resolves
-      each document to a usable input (PDF / Markdown / HTML / URL with
-      retry chain), calls Gemini against the 3,084-token system prompt,
-      injects Zotero metadata into each returned row, and appends to
-      <code>details_all.csv</code>. Resumable; parallelised over six
-      worker threads.</li>
-      <li><code>classify_training_and_benchmarks.py</code> — adds
-      <code>risk_conduct_training_item</code> and
-      <code>risk_conduct_benchmark_category</code> columns by classifying
-      unique values against the two reference taxonomies. Caches results
-      in <code>.classify_*_cache.json</code>.</li>
-      <li><code>build_site_data.py</code> — aggregates the flat CSV into
-      the JSON shape consumed by the front-end (documents, conducts,
-      risks, trainings, benchmarks with cross-links and union actor-type
-      sets).</li>
-      <li><code>validate_outputs.py</code> — sanity-checks the join keys
-      between the bibliography and the extraction outputs.</li>
-      <li><code>PoP - Zotero alignment database.csv</code> —
-      bibliography (181 records).</li>
-      <li><code>PoP - Company policies/</code> — dated policy snapshots
-      (folder structure: <em>Product (Company) / Policy type /
-      ISO-timestamp.md</em>).</li>
-      <li><code>details_all.csv</code> — final flat extraction
-      (2,062 rows × 41 columns).</li>
-      <li><code>docs/data.json</code> — aggregated dataset consumed by
-      the front-end.</li>
-    </ul>
+    <p>
+      Fourth, and more incidentally, a handful of the most safety-dense
+      documents — system cards detailing CBRN, jailbreak or self-harm
+      evaluations — are refused outright by the extraction model's own
+      input-safety filter, which flags benign benchmark examples (a multilingual
+      trivia question, say) rather than anything genuinely disallowed. These
+      documents are recovered through a fallback to a second model with no
+      equivalent filter. That the very material which makes a document a safety
+      document is what trips an automated safety classifier is a small but apt
+      illustration of the frictions this paper describes.
+    </p>
   </section>
 
   <section id="findings">
@@ -1194,9 +1129,9 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
-<script src="app.js?v=20260618T1500"></script>
-<script src="stacks.js?v=20260618T1500"></script>
-<script src="alluvial.js?v=20260618T1500"></script>
+<script src="app.js?v=20260618T1710"></script>
+<script src="stacks.js?v=20260618T1710"></script>
+<script src="alluvial.js?v=20260618T1710"></script>
 <script src="comments-config.js?v=20260617"></script>
 <script src="refs-comments.js?v=20260617"></script>
 </body>

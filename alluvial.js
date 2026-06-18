@@ -25,6 +25,28 @@
     return `M${x0},${y0} C${xc},${y0} ${xc},${y1} ${x1},${y1}`;
   }
 
+  // Hover-card for a ribbon: source → target, count, and up to 5 example actors
+  // (with their country) so the reader sees *which* actors flow through it.
+  function linkCardHtml(d) {
+    // Dedupe by actor name (a few actors have duplicate rows).
+    const seen = new Set();
+    const members = (d.members || []).filter(m => {
+      const k = (m.name || "").toLowerCase();
+      if (seen.has(k)) return false;
+      seen.add(k); return true;
+    }).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+    const showCountry = d.source.depth !== 0;   // country already implied on the left
+    const lis = members.slice(0, 5).map(m => {
+      const where = (showCountry && m.country && m.country !== "Unknown")
+        ? ` <span class="al-where">— ${esc(m.country)}</span>` : "";
+      return `<li>${esc(m.name)}${where}</li>`;
+    }).join("");
+    const more = members.length > 5 ? `<li class="al-more">+ ${members.length - 5} more</li>` : "";
+    return `<div class="dc-t">${esc(d.source.name)} → ${esc(d.target.name)}</div>` +
+      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(d.value)}</div>` +
+      (members.length ? `<ul class="al-list">${lis}${more}</ul>` : "");
+  }
+
   // Minimal hover-card reusing the page's #data-card element.
   const card = (() => {
     const el = () => document.getElementById("data-card");
@@ -60,9 +82,14 @@
     };
     rows.forEach(r => {
       const path = STAGES.map((f, i) => node(r[f] || "(unknown)", i));
+      const member = { name: r.name || "(unnamed)", country: r.country || "Unknown",
+                       type: r.type || "", mentioned: r.mentioned || "" };
       for (let i = 0; i < path.length - 1; i++) {
         const a = path[i], b = path[i + 1], k = `${a}|${b}`;
-        L.set(k, { source: a, target: b, value: (L.get(k)?.value || 0) + 1 });
+        let e = L.get(k);
+        if (!e) { e = { source: a, target: b, value: 0, members: [] }; L.set(k, e); }
+        e.value += 1;
+        e.members.push(member);
       }
     });
     const nodes = [...N.values()];
@@ -104,9 +131,7 @@
         return root ? palette(root) : "#cdd5da";
       })
       .attr("stroke-width", d => Math.max(1, d.width))
-      .on("mouseenter", (e, d) => card.show(
-        `<div class="dc-t">${esc(d.source.name)} → ${esc(d.target.name)}</div>
-         <div class="dc-row"><span>Actors</span> ${d3.format(",")(d.value)}</div>`, e))
+      .on("mouseenter", (e, d) => card.show(linkCardHtml(d), e))
       .on("mousemove", e => card.move(e))
       .on("mouseleave", () => card.hide());
 
