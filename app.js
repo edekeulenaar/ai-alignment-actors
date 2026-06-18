@@ -912,9 +912,9 @@ function renderTopActors(typeFilter, n, roleFilter) {
   if (!tbody) return;
   tbody.innerHTML = "";
   let arr = (STATE.data.actors || []).slice();
-  if (typeFilter) arr = arr.filter(a =>
-    a.type === typeFilter || (a.types_all || []).includes(typeFilter)
-  );
+  // Match the actor's PRIMARY (displayed) type only, so the table never shows
+  // actors whose shown Type differs from the selected filter.
+  if (typeFilter) arr = arr.filter(a => a.type === typeFilter);
   if (roleFilter) arr = arr.filter(a => (a.role || "") === roleFilter);
   arr = arr.slice(0, n || 25);
   if (!arr.length) {
