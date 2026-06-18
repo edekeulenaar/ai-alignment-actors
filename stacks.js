@@ -139,7 +139,10 @@ function buildModel(groupBy, companyFilter) {
                      (item.name ? `Benchmark: ${item.name}` : "") ||
                      (item.item ? `${key}: ${item.item}` : "")).trim();
 
-      // (1) The row-level "primary" actor — most precisely credited.
+      // An actor appears in a component ONLY if it explicitly participates in
+      // that specific role — the definer of a conduct/risk, the training actor,
+      // or the benchmark author. Document authors and merely-cited parties are
+      // NOT placed here. (Field per layer is set in ACTOR_FIELDS.)
       const rawName = (item[fields.name] || "").trim();
       const rawType = (item[fields.type] || "").trim();
       if (rawName) {
@@ -148,22 +151,6 @@ function buildModel(groupBy, companyFilter) {
             register(an, rawType, "specific", item.company, key, pid, quote));
         });
       }
-
-      // (2) Every actor named on the documents that produced this item —
-      //     authors and cited parties alike. This is the inclusion criterion
-      //     the user asked for: if mentioned in a given stack, they appear.
-      (item.pub_ids || []).forEach(pid => {
-        const doc = DOC_BY_ID.get(pid);
-        if (!doc) return;
-        (doc.author_actors || []).forEach(a => {
-          if (a && a.name) register(a.name.trim(), a.type, "author",
-                                    item.company, key, pid, quote);
-        });
-        (doc.cited_actors || []).forEach(a => {
-          if (a && a.name) register(a.name.trim(), a.type, "cited",
-                                    item.company, key, pid, quote);
-        });
-      });
     });
   });
 
