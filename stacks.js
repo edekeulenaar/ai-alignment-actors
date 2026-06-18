@@ -72,7 +72,7 @@ function buildModel(groupBy, companyFilter) {
   };
 
   // Helper to register an (actor, layer, doc) tuple under the right group.
-  const register = (actorName, actorType, role, company, layer, pid) => {
+  const register = (actorName, actorType, role, company, layer, pid, quote) => {
     if (!actorName) return;
     // Keep the canonical category casing ("Government agency") so it matches
     // the colour palette and the legend.
@@ -104,6 +104,9 @@ function buildModel(groupBy, companyFilter) {
           conducts: new Set(), risks: new Set(),
           trainings: new Set(), benchmarks: new Set(),
         },
+        quotesByLayer: {
+          conducts: [], risks: [], trainings: [], benchmarks: [],
+        },
       });
     }
     const node = g.nodes.get(actorName);
@@ -111,6 +114,10 @@ function buildModel(groupBy, companyFilter) {
     node._mentionCount = (node._mentionCount || 0) + 1;
     node.mentionsByLayer[layer] = (node.mentionsByLayer[layer] || 0) + 1;  // per-component frequency
     if (role) node.rolesByLayer[layer].add(role);
+    if (quote && node.quotesByLayer[layer].length < 3 &&
+        !node.quotesByLayer[layer].includes(quote)) {
+      node.quotesByLayer[layer].push(quote);   // evidence for placement
+    }
     if (pid) {
       node.docsByLayer[layer].add(pid);
       if (!g.docLayerActors[layer].has(pid))
@@ -125,6 +132,10 @@ function buildModel(groupBy, companyFilter) {
       if (companyFilter && item.company !== companyFilter) return;
       const pubIds = (item.pub_ids && item.pub_ids.length)
         ? item.pub_ids : [null];
+      // Evidence quote for why an actor sits in this component.
+      const quote = (item.definition || item.verbatim ||
+                     (item.name ? `Benchmark: ${item.name}` : "") ||
+                     (item.item ? `${key}: ${item.item}` : "")).trim();
 
       // (1) The row-level "primary" actor — most precisely credited.
       const rawName = (item[fields.name] || "").trim();
@@ -132,7 +143,7 @@ function buildModel(groupBy, companyFilter) {
       if (rawName) {
         rawName.split("|").map(s => s.trim()).filter(Boolean).forEach(an => {
           pubIds.forEach(pid =>
-            register(an, rawType, "specific", item.company, key, pid));
+            register(an, rawType, "specific", item.company, key, pid, quote));
         });
       }
 
@@ -144,11 +155,11 @@ function buildModel(groupBy, companyFilter) {
         if (!doc) return;
         (doc.author_actors || []).forEach(a => {
           if (a && a.name) register(a.name.trim(), a.type, "author",
-                                    item.company, key, pid);
+                                    item.company, key, pid, quote);
         });
         (doc.cited_actors || []).forEach(a => {
           if (a && a.name) register(a.name.trim(), a.type, "cited",
-                                    item.company, key, pid);
+                                    item.company, key, pid, quote);
         });
       });
     });
@@ -189,10 +200,13 @@ function render() {
 
   const groups = buildModel(groupBy, companyFilter);
 
-  // Sort groups by total node count, take top N.
+  // Sort groups by total node count, take top N. When grouping by type, the
+  // "Multiple" and "Other" buckets are not meaningful stacks — drop them.
+  const EXCLUDE = new Set(["Multiple", "Other", "unknown"]);
   const stacks = [...groups.entries()]
     .map(([k, v]) => ({ key: k, ...v, total: v.nodes.size }))
     .filter(s => s.total > 0)
+    .filter(s => !(groupBy === "type" && EXCLUDE.has(s.key)))
     .sort((a, b) => b.total - a.total)
     .slice(0, topN);
 
@@ -330,9 +344,11 @@ function render() {
           .slice(0, cap);
       }
       const actorSet = new Set(actors.map(a => a.name));
-      // No within-plane edges: the only edges in the stack connect the SAME
-      // actor across components (drawn later as cross-layer lines).
-      const intra = [];
+      // Co-mention links WITHIN this component: two actors named together in the
+      // same document. They are NOT drawn — they only feed the force layout so
+      // that actors frequently mentioned together cluster close on the plane.
+      const intra = stack.intraEdges[key].filter(e =>
+        actorSet.has(e.source) && actorSet.has(e.target));
 
       // Local rect layout via d3-force.
       const W = PLANE_W, H = PLANE_H;
@@ -341,7 +357,7 @@ function render() {
         x: (i * 37) % W,
         y: (i * 53) % H,
       }));
-      const links = [];
+      const links = intra.map(e => ({ source: e.source, target: e.target, weight: e.weight || 1 }));
 
       // Per-node radius — sqrt-scaled by the actor's mention frequency WITHIN
       // this component (conducts / risks / training / benchmarks), so a more
@@ -363,13 +379,18 @@ function render() {
       const charge   = N > 80 ? -16 : N > 40 ? -22 : -30;
 
       if (nodes.length) {
+        const wMax = Math.max(1, ...links.map(l => l.weight || 1));
         const sim = d3.forceSimulation(nodes)
           .force("charge", d3.forceManyBody().strength(charge))
-          .force("link", d3.forceLink(links).id(d => d.name).distance(linkDist).strength(0.45))
+          // Co-mentioned actors pull together; more shared documents = shorter,
+          // stronger spring, so frequent co-mentions cluster tightly.
+          .force("link", d3.forceLink(links).id(d => d.name)
+            .distance(d => linkDist * (1 - 0.5 * ((d.weight || 1) / wMax)))
+            .strength(d => Math.min(0.9, 0.3 + 0.6 * ((d.weight || 1) / wMax))))
           .force("center", d3.forceCenter(W / 2, H / 2))
           .force("collide", d3.forceCollide().radius(d => d.r + 1.5).strength(0.9))
           .stop();
-        for (let i = 0; i < 260; i++) sim.tick();
+        for (let i = 0; i < 300; i++) sim.tick();
         nodes.forEach(n => {
           const pad = n.r + 2;
           n.x = Math.max(pad, Math.min(W - pad, n.x));
@@ -383,28 +404,10 @@ function render() {
         return [lx + shift, planeY + ly];
       };
 
-      // Draw intra edges first. Carry source/target/stack/layer data
-      // attributes so the click-to-highlight handler can identify each
-      // edge's endpoints.
-      const edgeG = g.append("g");
-      links.forEach(e => {
-        const sName = e.source.name || e.source;
-        const tName = e.target.name || e.target;
-        const s = nodes.find(n => n.name === sName);
-        const t = nodes.find(n => n.name === tName);
-        if (!s || !t) return;
-        const [sx, sy] = project(s.x, s.y);
-        const [tx, ty] = project(t.x, t.y);
-        edgeG.append("line").attr("class", "intra-edge")
-          .attr("data-source", sName)
-          .attr("data-target", tName)
-          .attr("data-stack", stack.key)
-          .attr("data-layer", key)
-          .attr("x1", sx).attr("y1", sy)
-          .attr("x2", tx).attr("y2", ty);
-      });
+      // (Within-plane co-mention links are NOT drawn — they only cluster the
+      // layout. Visible edges connect the same actor across components.)
 
-      // Compute degree per node from this plane's intra-edges. The most-
+      // Compute degree per node from this plane's co-mention links. The most-
       // connected actors get their labels rendered by default; everyone
       // else can be revealed by hover. Tie-break by mention count.
       const degree = new Map();
@@ -675,11 +678,19 @@ function showTip(ev, node, layer, stackLabel) {
   if (!roles.length) roleLabel = "mentioned";
   else if (roles.length === 1 && roles[0] === "cited") roleLabel = "cited only";
   else roleLabel = roles.map(r => ROLE_LABEL[r] || r).join(", ");
+  const quotes = (node.quotesByLayer && node.quotesByLayer[layer]) || [];
   let html =
     `<strong>${escapeHtml(node.name)}</strong><br>` +
     `<span style="color:#555">type: ${escapeHtml(node.type)} · stack: ${escapeHtml(stackLabel)}</span>` +
-    `<div class="tip-section">Role on ${layer}: ${escapeHtml(roleLabel)}</div>` +
-    `<div class="tip-section">Mentioned in (${layer})</div>`;
+    `<div class="tip-section">Role on ${layer}: ${escapeHtml(roleLabel)}</div>`;
+  if (quotes.length) {
+    html += `<div class="tip-section">Why it's here (${layer})</div>` +
+      quotes.slice(0, 2).map(q => {
+        const t = q.length > 200 ? q.slice(0, 199) + "…" : q;
+        return `<div class="tip-quote">“${escapeHtml(t)}”</div>`;
+      }).join("");
+  }
+  html += `<div class="tip-section">Mentioned in (${layer})</div>`;
   if (docIds.length) {
     html += "<ul>";
     docIds.slice(0, 10).forEach(id => {

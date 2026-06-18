@@ -882,12 +882,19 @@ function setupTopActors() {
   // Populate type dropdown: union of types observed in actors AND those in
   // the canonical vocabulary, so the new types (AI company, industry
   // consortium, etc.) appear even if no actor is tagged yet.
-  const allTypes = new Set([...(STATE.data.actor_types || [])]);
+  const canon = STATE.data.actor_types || [];
+  const order = new Map(canon.map((t, i) => [t, i]));
+  const allTypes = new Set([...canon]);
   (STATE.data.actors || []).forEach(a => {
     if (a.type) allTypes.add(a.type);
     (a.types_all || []).forEach(t => allTypes.add(t));
   });
-  [...allTypes].sort().forEach(t => {
+  // Order by the canonical legend order; anything unknown trails alphabetically.
+  [...allTypes].sort((a, b) => {
+    const ia = order.has(a) ? order.get(a) : 999;
+    const ib = order.has(b) ? order.get(b) : 999;
+    return ia !== ib ? ia - ib : a.localeCompare(b);
+  }).forEach(t => {
     const o = document.createElement("option");
     o.value = t; o.textContent = t;
     typeSel.appendChild(o);
@@ -1374,16 +1381,21 @@ function updateExpandedYear() {
 // Render an array of {name, type} as colour-coded chips.
 function actorPills(actors) {
   if (!actors || !actors.length) return `<span class="tl-meta">—</span>`;
+  const sel = STATE.selectedActorTypes;
   return actors.map(a => {
-    const c = ACTOR_COLOR_HEX[(a.type||"").toLowerCase()] || ACTOR_COLOR_HEX.unknown;
-    return `<span class="actor-pill"><span class="type-chip" style="background:${c}"></span>${escape(a.name)} <span class="tl-meta">(${escape(a.type||"unknown")})</span></span>`;
+    const type = a.type || "unknown";
+    const c = ACTOR_COLOR_HEX[type] || ACTOR_COLOR_HEX.unknown;
+    // Highlight the pill when its type matches an actor chip selected in the
+    // sidebar, so the card shows where the selected actor sits (author / cited).
+    const hot = sel && sel.size && sel.has(type) ? " sel" : "";
+    return `<span class="actor-pill${hot}"><span class="type-chip" style="background:${c}"></span>${escape(a.name)} <span class="tl-meta">(${escape(type)})</span></span>`;
   }).join(" ");
 }
 
 // Split parallel pipe-separated "name | name" and "type | type" into pairs
 function pairsFrom(namesStr, typesStr) {
   const names = (namesStr||"").split("|").map(s => s.trim()).filter(Boolean);
-  const types = (typesStr||"").split("|").map(s => s.trim().toLowerCase());
+  const types = (typesStr||"").split("|").map(s => s.trim());
   return names.map((n, i) => ({ name: n, type: types[i] || types[0] || "unknown" }));
 }
 
