@@ -679,35 +679,38 @@ function showTip(ev, node, layer, stackLabel) {
   else if (roles.length === 1 && roles[0] === "cited") roleLabel = "cited only";
   else roleLabel = roles.map(r => ROLE_LABEL[r] || r).join(", ");
   const quotes = (node.quotesByLayer && node.quotesByLayer[layer]) || [];
+  const cap = layer.charAt(0).toUpperCase() + layer.slice(1);
   let html =
-    `<strong>${escapeHtml(node.name)}</strong><br>` +
-    `<span style="color:#555">type: ${escapeHtml(node.type)} · stack: ${escapeHtml(stackLabel)}</span>` +
-    `<div class="tip-section">Role on ${layer}: ${escapeHtml(roleLabel)}</div>`;
+    `<h4>${escapeHtml(node.name)}</h4>` +
+    `<div class="st-sub">${escapeHtml(node.type)} &middot; in the ${escapeHtml(stackLabel)} stack</div>` +
+    `<dt>Role on ${escapeHtml(cap)}</dt><dd>${escapeHtml(roleLabel)}</dd>`;
   if (quotes.length) {
-    html += `<div class="tip-section">Why it's here (${layer})</div>` +
+    html += `<dt>Relevant passages</dt><dd>` +
       quotes.slice(0, 2).map(q => {
-        const t = q.length > 200 ? q.slice(0, 199) + "…" : q;
-        return `<div class="tip-quote">“${escapeHtml(t)}”</div>`;
-      }).join("");
+        const t = q.length > 220 ? q.slice(0, 219) + "…" : q;
+        return `<div class="quote">"${escapeHtml(t)}"</div>`;
+      }).join("") + `</dd>`;
   }
-  html += `<div class="tip-section">Mentioned in (${layer})</div>`;
+  html += `<dt>Mentioned in (${escapeHtml(cap)})</dt><dd>`;
   if (docIds.length) {
-    html += "<ul>";
+    html += `<ul class="st-docs">`;
     docIds.slice(0, 10).forEach(id => {
       const doc = DOC_BY_ID.get(id);
       html += `<li>${doc ? docLine(doc) : escapeHtml(id)}</li>`;
     });
-    if (docIds.length > 10) html += `<li>… and ${docIds.length - 10} more</li>`;
+    if (docIds.length > 10) html += `<li class="st-more">… and ${docIds.length - 10} more</li>`;
     html += "</ul>";
   } else {
-    html += `<div style="color:#888;font-size:10px">(no documents linked)</div>`;
+    html += `<span class="tl-meta">(no documents linked)</span>`;
   }
+  html += `</dd>`;
   if (otherLayers.length) {
-    html += `<div class="tip-section">Also enrolled at</div><div>` +
+    html += `<dt>Also enrolled at</dt><dd>` +
       otherLayers.map(l => {
         const n = node.docsByLayer[l].size;
-        return `${l} (${n})`;
-      }).join(" · ") + `</div>`;
+        const lc = l.charAt(0).toUpperCase() + l.slice(1);
+        return `${escapeHtml(lc)} (${n})`;
+      }).join(" &middot; ") + `</dd>`;
   }
 
   tip.innerHTML = html;

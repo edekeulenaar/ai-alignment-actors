@@ -27,7 +27,7 @@
 
   // Hover-card for a ribbon: source → target, count, and up to 5 example actors
   // (with their country) so the reader sees *which* actors flow through it.
-  function linkCardHtml(d) {
+  function linkCardHtml(d, full) {
     // Dedupe by actor name (a few actors have duplicate rows).
     const seen = new Set();
     const members = (d.members || []).filter(m => {
@@ -36,21 +36,27 @@
       seen.add(k); return true;
     }).sort((a, b) => (a.name || "").localeCompare(b.name || ""));
     const showCountry = d.source.depth !== 0;   // country already implied on the left
-    const lis = members.slice(0, 5).map(m => {
+    const row = m => {
       const where = (showCountry && m.country && m.country !== "Unknown")
         ? ` <span class="al-where">— ${esc(m.country)}</span>` : "";
       return `<li>${esc(m.name)}${where}</li>`;
-    }).join("");
-    const more = members.length > 5 ? `<li class="al-more">+ ${members.length - 5} more</li>` : "";
-    return `<div class="dc-t">${esc(d.source.name)} → ${esc(d.target.name)}</div>` +
-      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(d.value)}</div>` +
-      (members.length ? `<ul class="al-list">${lis}${more}</ul>` : "");
+    };
+    const shown = full ? members : members.slice(0, 5);
+    const lis = shown.map(row).join("");
+    const more = (!full && members.length > 5)
+      ? `<li class="al-more">+ ${members.length - 5} more — click the stream for the full list</li>` : "";
+    const head = `<div class="dc-t">${esc(d.source.name)} → ${esc(d.target.name)}</div>` +
+      `<div class="dc-row"><span>${full ? "All actors" : "Actors"}</span> ${d3.format(",")(members.length)}</div>`;
+    const list = members.length
+      ? `<ul class="al-list${full ? " al-list-full" : ""}">${lis}${more}</ul>` : "";
+    return head + list + (full ? `<div class="al-close">click outside to close</div>` : "");
   }
 
-  // Minimal hover-card reusing the page's #data-card element.
+  // Hover-card reusing the page's #data-card element, with a pinned mode
+  // (click a stream → full scrollable list that stays until dismissed).
   const card = (() => {
     const el = () => document.getElementById("data-card");
-    let hideT = null;
+    let hideT = null, pinned = false;
     const pos = (n, ev) => {
       const r = n.getBoundingClientRect(), pad = 12;
       let x = ev.clientX + pad, y = ev.clientY + pad;
@@ -58,11 +64,19 @@
       if (y + r.height > innerHeight - 6) y = ev.clientY - r.height - pad;
       n.style.left = (x + scrollX) + "px"; n.style.top = (y + scrollY) + "px";
     };
+    document.addEventListener("mousedown", e => {
+      if (pinned && !e.target.closest("#data-card") && !e.target.closest("#alluvial .link")) {
+        pinned = false; const c = el(); if (c) { c.hidden = true; c.classList.remove("dc-pinned"); }
+      }
+    });
     return {
-      show(html, ev) { const c = el(); if (!c) return; clearTimeout(hideT);
-        c.innerHTML = html; c.hidden = false; pos(c, ev); },
-      move(ev) { const c = el(); if (c && !c.hidden) pos(c, ev); },
-      hide() { hideT = setTimeout(() => { const c = el(); if (c) c.hidden = true; }, 150); },
+      show(html, ev) { if (pinned) return; const c = el(); if (!c) return; clearTimeout(hideT);
+        c.innerHTML = html; c.hidden = false; c.classList.remove("dc-pinned"); pos(c, ev); },
+      move(ev) { if (pinned) return; const c = el(); if (c && !c.hidden) pos(c, ev); },
+      hide() { if (pinned) return; hideT = setTimeout(() => { const c = el(); if (c) c.hidden = true; }, 150); },
+      pin(html, ev) { const c = el(); if (!c) return; clearTimeout(hideT);
+        pinned = true; c.innerHTML = html; c.hidden = false; c.classList.add("dc-pinned"); pos(c, ev); },
+      isPinned() { return pinned; },
     };
   })();
 
@@ -131,9 +145,11 @@
         return root ? palette(root) : "#cdd5da";
       })
       .attr("stroke-width", d => Math.max(1, d.width))
+      .style("cursor", "pointer")
       .on("mouseenter", (e, d) => card.show(linkCardHtml(d), e))
       .on("mousemove", e => card.move(e))
-      .on("mouseleave", () => card.hide());
+      .on("mouseleave", () => card.hide())
+      .on("click", (e, d) => { e.stopPropagation(); card.pin(linkCardHtml(d, true), e); });
 
     const maxDepth = d3.max(g.nodes, n => n.depth);
     const nodeSel = svg.append("g").selectAll("g").data(g.nodes).join("g").attr("class", "node");
