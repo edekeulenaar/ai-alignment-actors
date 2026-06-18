@@ -141,11 +141,6 @@
    ]
   },
   {
-   "name": "Google Brain",
-   "country": "United States",
-   "models": []
-  },
-  {
    "name": "Meta",
    "country": "United States",
    "models": [
@@ -297,7 +292,7 @@
    "role": "MIXED",
    "companies": [
     "OpenAI",
-    "Google Brain",
+    "Google",
     "Microsoft",
     "Anthropic",
     "xAI",
@@ -1032,7 +1027,7 @@
    "based_in": "United States",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "Anthropic",
     "OpenAI"
    ],
@@ -1166,7 +1161,7 @@
    "based_in": "USA",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1190,7 +1185,7 @@
    "based_in": "United States",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1387,7 +1382,7 @@
    "based_in": "United States",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1424,7 +1419,7 @@
    "based_in": "United States",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1444,7 +1439,7 @@
    "based_in": "United States",
    "role": "AUTHOR",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1463,7 +1458,7 @@
    "based_in": "United States",
    "role": "CITED",
    "companies": [
-    "Google Brain",
+    "Google",
     "OpenAI"
    ],
    "doc_ids": [
@@ -1518,7 +1513,7 @@
    "based_in": "United States",
    "role": "AUTHOR",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "72V57XAD",
@@ -1536,7 +1531,7 @@
    "based_in": "UK",
    "role": "AUTHOR",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "72V57XAD",
@@ -1553,7 +1548,7 @@
    "based_in": "United States",
    "role": "AUTHOR",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "72V57XAD",
@@ -8724,7 +8719,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6",
@@ -11494,7 +11489,7 @@
    "based_in": "United Kingdom",
    "role": "CITED",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "72V57XAD",
@@ -13559,7 +13554,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -13575,7 +13570,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -13591,7 +13586,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -13607,7 +13602,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17094,7 +17089,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17110,7 +17105,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17126,7 +17121,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17142,7 +17137,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17158,7 +17153,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17174,7 +17169,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17190,7 +17185,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17206,7 +17201,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17222,7 +17217,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17238,7 +17233,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17254,7 +17249,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -17270,7 +17265,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23897,7 +23892,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23913,7 +23908,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23929,7 +23924,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23945,7 +23940,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23961,7 +23956,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23977,7 +23972,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -23993,7 +23988,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24009,7 +24004,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24025,7 +24020,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24041,7 +24036,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24057,7 +24052,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24073,7 +24068,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24089,7 +24084,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24105,7 +24100,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -24121,7 +24116,7 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google Brain"
+    "Google"
    ],
    "doc_ids": [
     "SIQTV5I6"
@@ -40437,7 +40432,7 @@
    "pub_type": "Research",
    "is_policy": false,
    "policy_type": "",
-   "company": "Google Brain",
+   "company": "Google",
    "company_model": "",
    "actors": "Dario Amodei | Chris Olah | Jacob Steinhardt | Paul Christiano | John Schulman | Dan Mané | Google Brain | Stanford University | UC Berkeley | OpenAI",
    "actor_types_raw": "Academic or research center | Academic or research center | Academic or research center | Academic or research center | Other AI company | Academic or research center | Internal | Academic or research center | Academic or research center | Other AI company",
@@ -40449,54 +40444,54 @@
    "primary_actor_type": "Multiple",
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__abuse-potential",
-    "risk__google-brain__bias",
-    "risk__google-brain__cybersecurity",
-    "risk__google-brain__distributional-shift-robustness",
-    "risk__google-brain__negative-side-effects",
-    "risk__google-brain__privacy",
-    "risk__google-brain__reward-hacking",
-    "risk__google-brain__safe-exploration",
-    "risk__google-brain__scalable-oversight"
+    "risk__google__abuse-potential",
+    "risk__google__bias",
+    "risk__google__cybersecurity",
+    "risk__google__distributional-shift-robustness",
+    "risk__google__negative-side-effects",
+    "risk__google__privacy",
+    "risk__google__reward-hacking",
+    "risk__google__safe-exploration",
+    "risk__google__scalable-oversight"
    ],
    "training_ids": [
-    "train__google-brain__general-harms__adversarial-reward-functions",
-    "train__google-brain__general-harms__sft",
-    "train__google-brain__general__iterated-amplification",
-    "train__google-brain__general__null",
-    "train__google-brain__general__reward-modelling",
-    "train__google-brain__general__sft",
-    "train__google-brain__quality-loss__importance-weighting",
-    "train__google-brain__quality-loss__null",
-    "train__google-brain__quality-loss__other-method-of-moments",
-    "train__google-brain__quality-loss__other-unsupervised-risk-estimation",
-    "train__google-brain__quality-loss__sourcing",
-    "train__google-brain__reward-hacking__adversarial-example-training",
-    "train__google-brain__reward-hacking__adversarial-reward-functions",
-    "train__google-brain__reward-hacking__model-lookahead",
-    "train__google-brain__reward-hacking__reward-capping",
-    "train__google-brain__reward-hacking__reward-modelling",
-    "train__google-brain__reward-hacking__sandboxing",
-    "train__google-brain__reward-hacking__trip-wires",
-    "train__google-brain__safety__adversarial-reward-functions",
-    "train__google-brain__safety__capability-elicitation-guardrails",
-    "train__google-brain__safety__demonstration-fine-tuning",
-    "train__google-brain__safety__runtime-monitoring",
-    "train__google-brain__safety__sandboxing"
+    "train__google__general-harms__adversarial-reward-functions",
+    "train__google__general-harms__sft",
+    "train__google__general__iterated-amplification",
+    "train__google__general__null",
+    "train__google__general__reward-modelling",
+    "train__google__general__sft",
+    "train__google__quality-loss__importance-weighting",
+    "train__google__quality-loss__null",
+    "train__google__quality-loss__other-method-of-moments",
+    "train__google__quality-loss__other-unsupervised-risk-estimation",
+    "train__google__quality-loss__sourcing",
+    "train__google__reward-hacking__adversarial-example-training",
+    "train__google__reward-hacking__adversarial-reward-functions",
+    "train__google__reward-hacking__model-lookahead",
+    "train__google__reward-hacking__reward-capping",
+    "train__google__reward-hacking__reward-modelling",
+    "train__google__reward-hacking__sandboxing",
+    "train__google__reward-hacking__trip-wires",
+    "train__google__safety__adversarial-reward-functions",
+    "train__google__safety__capability-elicitation-guardrails",
+    "train__google__safety__demonstration-fine-tuning",
+    "train__google__safety__runtime-monitoring",
+    "train__google__safety__sandboxing"
    ],
    "benchmark_ids": [
-    "bench__google-brain__general__active-reward-learning",
-    "bench__google-brain__general__deepdive-system",
-    "bench__google-brain__general__generalized-expectation-criteria",
-    "bench__google-brain__general__hierarchical-reinforcement-learning",
-    "bench__google-brain__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
-    "bench__google-brain__quality-loss__covariate-shift",
-    "bench__google-brain__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
-    "bench__google-brain__quality-loss__generalized-method-of-moments",
-    "bench__google-brain__quality-loss__unsupervised-risk-estimation",
-    "bench__google-brain__safety__apprenticeship-learning",
-    "bench__google-brain__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
-    "bench__google-brain__safety__safe-exploration-in-markov-decision-processes"
+    "bench__google__general__active-reward-learning",
+    "bench__google__general__deepdive-system",
+    "bench__google__general__generalized-expectation-criteria",
+    "bench__google__general__hierarchical-reinforcement-learning",
+    "bench__google__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
+    "bench__google__quality-loss__covariate-shift",
+    "bench__google__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
+    "bench__google__quality-loss__generalized-method-of-moments",
+    "bench__google__quality-loss__unsupervised-risk-estimation",
+    "bench__google__safety__apprenticeship-learning",
+    "bench__google__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
+    "bench__google__safety__safe-exploration-in-markov-decision-processes"
    ],
    "author_actors": [
     {
@@ -54800,11 +54795,13 @@
     "99337X5A",
     "CD258T92",
     "NJLQWBNV",
+    "SIQTV5I6",
     "TCQMFVXH"
    ],
    "pages": [
     "17",
     "2",
+    "21",
     "3",
     "8"
    ],
@@ -54812,7 +54809,7 @@
    "specific_actor_type": "Think tank or policy institute",
    "external_evaluator": "",
    "actor_type": "Think tank or policy institute",
-   "mentions": 7,
+   "mentions": 8,
    "training_ids": [
     "train__google__cybersecurity__other-frontier-safety-evaluation",
     "train__google__cybersecurity__runtime-monitoring",
@@ -54831,6 +54828,7 @@
     "Foundation",
     "Government agency",
     "Internal",
+    "Other AI company",
     "Red teaming or cybersecurity company",
     "Think tank or policy institute"
    ],
@@ -54844,6 +54842,7 @@
     "Foundation",
     "Government agency",
     "Internal",
+    "Other AI company",
     "Red teaming or cybersecurity company",
     "Think tank or policy institute"
    ],
@@ -61602,31 +61601,37 @@
    "item": "Bias",
    "definition": "We also aim to reduce bias in our models via guidelines focused on providing content that reflects our global user base.",
    "pub_ids": [
+    "SIQTV5I6",
     "TXPG7RL2",
     "UQB78Y8K",
     "WBGXPF3L"
    ],
    "pages": [
     "2-3,6",
+    "21",
     "28",
     "null"
    ],
    "specific_actor": "",
    "specific_actor_type": "",
    "external_evaluator": "",
-   "actor_type": "Internal",
-   "mentions": 3,
+   "actor_type": "Multiple",
+   "mentions": 4,
    "training_ids": [
     "train__google__bias__constitution-rules",
     "train__google__bias__instruction-tuning"
    ],
    "benchmark_ids": [],
    "author_actor_types": [
-    "Internal"
+    "Academic or research center",
+    "Internal",
+    "Other AI company"
    ],
    "cited_actor_types": [],
    "all_actor_types": [
-    "Internal"
+    "Academic or research center",
+    "Internal",
+    "Other AI company"
    ],
    "from_policy": false,
    "only_policy": false
@@ -66118,16 +66123,18 @@
    "definition": "And responsible in developing and deploying AI that addresses both user needs and broader responsibilities, while safeguarding user safety, security, and privacy.",
    "pub_ids": [
     "2PQ85UE8",
-    "AWJYNYKH"
+    "AWJYNYKH",
+    "SIQTV5I6"
    ],
    "pages": [
-    "1"
+    "1",
+    "21"
    ],
    "specific_actor": "",
    "specific_actor_type": "",
    "external_evaluator": "",
-   "actor_type": "Internal",
-   "mentions": 2,
+   "actor_type": "Multiple",
+   "mentions": 3,
    "training_ids": [
     "train__google__privacy__runtime-monitoring"
    ],
@@ -66135,11 +66142,15 @@
     "bench__google__privacy__privacy-benchmarks"
    ],
    "author_actor_types": [
-    "Internal"
+    "Academic or research center",
+    "Internal",
+    "Other AI company"
    ],
    "cited_actor_types": [],
    "all_actor_types": [
-    "Internal"
+    "Academic or research center",
+    "Internal",
+    "Other AI company"
    ],
    "from_policy": false,
    "only_policy": false
@@ -79900,8 +79911,8 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__negative-side-effects",
-   "company": "Google Brain",
+   "id": "risk__google__negative-side-effects",
+   "company": "Google",
    "category": "General harms",
    "item": "Negative side effects",
    "definition": "Negative side eﬀects (Section 3) and reward hacking (Section 4) describe two broad mechanisms that make it easy to produce wrong objective functions. In “negative side eﬀects”, the designer speciﬁes an objective function that focuses on accomplishing some speciﬁc task in the environment, but ignores other aspects of the (potentially very large) environment, and thus implicitly expresses indiﬀerence over environmental variables that might actually be harmful to change.",
@@ -79917,8 +79928,8 @@
    "actor_type": "Academic or research center",
    "mentions": 2,
    "training_ids": [
-    "train__google-brain__general-harms__adversarial-reward-functions",
-    "train__google-brain__general-harms__sft"
+    "train__google__general-harms__adversarial-reward-functions",
+    "train__google__general-harms__sft"
    ],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -79938,8 +79949,8 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__reward-hacking",
-   "company": "Google Brain",
+   "id": "risk__google__reward-hacking",
+   "company": "Google",
    "category": "Reward hacking",
    "item": "Reward hacking",
    "definition": "In “reward hacking”, the objective function that the designer writes down admits of some clever “easy” solution that formally maximizes it but perverts the spirit of the designer’s intent (i.e. the objective function can be “gamed”), a generalization of the wireheading problem.",
@@ -79955,13 +79966,13 @@
    "actor_type": "Multiple",
    "mentions": 8,
    "training_ids": [
-    "train__google-brain__reward-hacking__adversarial-example-training",
-    "train__google-brain__reward-hacking__adversarial-reward-functions",
-    "train__google-brain__reward-hacking__model-lookahead",
-    "train__google-brain__reward-hacking__reward-capping",
-    "train__google-brain__reward-hacking__reward-modelling",
-    "train__google-brain__reward-hacking__sandboxing",
-    "train__google-brain__reward-hacking__trip-wires"
+    "train__google__reward-hacking__adversarial-example-training",
+    "train__google__reward-hacking__adversarial-reward-functions",
+    "train__google__reward-hacking__model-lookahead",
+    "train__google__reward-hacking__reward-capping",
+    "train__google__reward-hacking__reward-modelling",
+    "train__google__reward-hacking__sandboxing",
+    "train__google__reward-hacking__trip-wires"
    ],
    "benchmark_ids": [],
    "author_actor_types": [
@@ -79979,8 +79990,8 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__scalable-oversight",
-   "company": "Google Brain",
+   "id": "risk__google__scalable-oversight",
+   "company": "Google",
    "category": "General",
    "item": "Scalable oversight",
    "definition": "“Scalable oversight” (Section 5) discusses ideas for how to ensure safe behavior even given limited access to the true objective function.",
@@ -79996,16 +80007,16 @@
    "actor_type": "Multiple",
    "mentions": 7,
    "training_ids": [
-    "train__google-brain__general__iterated-amplification",
-    "train__google-brain__general__null",
-    "train__google-brain__general__reward-modelling",
-    "train__google-brain__general__sft"
+    "train__google__general__iterated-amplification",
+    "train__google__general__null",
+    "train__google__general__reward-modelling",
+    "train__google__general__sft"
    ],
    "benchmark_ids": [
-    "bench__google-brain__general__active-reward-learning",
-    "bench__google-brain__general__deepdive-system",
-    "bench__google-brain__general__generalized-expectation-criteria",
-    "bench__google-brain__general__hierarchical-reinforcement-learning"
+    "bench__google__general__active-reward-learning",
+    "bench__google__general__deepdive-system",
+    "bench__google__general__generalized-expectation-criteria",
+    "bench__google__general__hierarchical-reinforcement-learning"
    ],
    "author_actor_types": [
     "Academic or research center",
@@ -80022,8 +80033,8 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__safe-exploration",
-   "company": "Google Brain",
+   "id": "risk__google__safe-exploration",
+   "company": "Google",
    "category": "Safety",
    "item": "Safe exploration",
    "definition": "“Safe exploration” (Section 6) discusses how to ensure that exploratory actions in RL agents don’t lead to negative or irrecoverable consequences that outweigh the long-term value of exploration.",
@@ -80039,16 +80050,16 @@
    "actor_type": "Multiple",
    "mentions": 6,
    "training_ids": [
-    "train__google-brain__safety__adversarial-reward-functions",
-    "train__google-brain__safety__capability-elicitation-guardrails",
-    "train__google-brain__safety__demonstration-fine-tuning",
-    "train__google-brain__safety__runtime-monitoring",
-    "train__google-brain__safety__sandboxing"
+    "train__google__safety__adversarial-reward-functions",
+    "train__google__safety__capability-elicitation-guardrails",
+    "train__google__safety__demonstration-fine-tuning",
+    "train__google__safety__runtime-monitoring",
+    "train__google__safety__sandboxing"
    ],
    "benchmark_ids": [
-    "bench__google-brain__safety__apprenticeship-learning",
-    "bench__google-brain__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
-    "bench__google-brain__safety__safe-exploration-in-markov-decision-processes"
+    "bench__google__safety__apprenticeship-learning",
+    "bench__google__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
+    "bench__google__safety__safe-exploration-in-markov-decision-processes"
    ],
    "author_actor_types": [
     "Academic or research center",
@@ -80065,8 +80076,8 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__distributional-shift-robustness",
-   "company": "Google Brain",
+   "id": "risk__google__distributional-shift-robustness",
+   "company": "Google",
    "category": "Quality loss",
    "item": "Distributional shift robustness",
    "definition": "“Robustness to distributional shift” (Section 7) discusses how to avoid having ML systems make bad decisions (particularly silent and unpredictable bad decisions) when given inputs that are potentially very diﬀerent than what was seen during training.",
@@ -80082,18 +80093,18 @@
    "actor_type": "Multiple",
    "mentions": 5,
    "training_ids": [
-    "train__google-brain__quality-loss__importance-weighting",
-    "train__google-brain__quality-loss__null",
-    "train__google-brain__quality-loss__other-method-of-moments",
-    "train__google-brain__quality-loss__other-unsupervised-risk-estimation",
-    "train__google-brain__quality-loss__sourcing"
+    "train__google__quality-loss__importance-weighting",
+    "train__google__quality-loss__null",
+    "train__google__quality-loss__other-method-of-moments",
+    "train__google__quality-loss__other-unsupervised-risk-estimation",
+    "train__google__quality-loss__sourcing"
    ],
    "benchmark_ids": [
-    "bench__google-brain__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
-    "bench__google-brain__quality-loss__covariate-shift",
-    "bench__google-brain__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
-    "bench__google-brain__quality-loss__generalized-method-of-moments",
-    "bench__google-brain__quality-loss__unsupervised-risk-estimation"
+    "bench__google__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
+    "bench__google__quality-loss__covariate-shift",
+    "bench__google__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
+    "bench__google__quality-loss__generalized-method-of-moments",
+    "bench__google__quality-loss__unsupervised-risk-estimation"
    ],
    "author_actor_types": [
     "Academic or research center",
@@ -80110,110 +80121,11 @@
    "only_policy": false
   },
   {
-   "id": "risk__google-brain__abuse-potential",
-   "company": "Google Brain",
+   "id": "risk__google__abuse-potential",
+   "company": "Google",
    "category": "Abuse potential",
    "item": "Abuse potential",
    "definition": "Abuse:5 How do we prevent the misuse of ML systems to attack or harm people? [16]",
-   "pub_ids": [
-    "SIQTV5I6"
-   ],
-   "pages": [
-    "21"
-   ],
-   "specific_actor": "",
-   "specific_actor_type": "",
-   "external_evaluator": "",
-   "actor_type": "Multiple",
-   "mentions": 1,
-   "training_ids": [],
-   "benchmark_ids": [],
-   "author_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "cited_actor_types": [],
-   "all_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "from_policy": false,
-   "only_policy": false
-  },
-  {
-   "id": "risk__google-brain__bias",
-   "company": "Google Brain",
-   "category": "Discriminatory content",
-   "item": "Bias",
-   "definition": "Fairness: How can we make sure ML systems don’t discriminate? [3, 168, 6, 46, 119, 169]",
-   "pub_ids": [
-    "SIQTV5I6"
-   ],
-   "pages": [
-    "21"
-   ],
-   "specific_actor": "",
-   "specific_actor_type": "",
-   "external_evaluator": "",
-   "actor_type": "Multiple",
-   "mentions": 1,
-   "training_ids": [],
-   "benchmark_ids": [],
-   "author_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "cited_actor_types": [],
-   "all_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "from_policy": false,
-   "only_policy": false
-  },
-  {
-   "id": "risk__google-brain__privacy",
-   "company": "Google Brain",
-   "category": "Privacy",
-   "item": "Privacy",
-   "definition": "Privacy: How can we ensure privacy when applying machine learning to sensitive data sources such as medical data? [76, 1]",
-   "pub_ids": [
-    "SIQTV5I6"
-   ],
-   "pages": [
-    "21"
-   ],
-   "specific_actor": "",
-   "specific_actor_type": "",
-   "external_evaluator": "",
-   "actor_type": "Multiple",
-   "mentions": 1,
-   "training_ids": [],
-   "benchmark_ids": [],
-   "author_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "cited_actor_types": [],
-   "all_actor_types": [
-    "Academic or research center",
-    "Internal",
-    "Other AI company"
-   ],
-   "from_policy": false,
-   "only_policy": false
-  },
-  {
-   "id": "risk__google-brain__cybersecurity",
-   "company": "Google Brain",
-   "category": "Cybersecurity",
-   "item": "Cybersecurity",
-   "definition": "Security: What can a malicious adversary do to a ML system? [149, 96, 97, 115, 108, 19]",
    "pub_ids": [
     "SIQTV5I6"
    ],
@@ -107779,8 +107691,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general-harms__adversarial-reward-functions",
-   "company": "Google Brain",
+   "id": "train__google__general-harms__adversarial-reward-functions",
+   "company": "Google",
    "category": "General harms",
    "training_category": "Reward shaping",
    "item": "Adversarial reward functions",
@@ -107801,7 +107713,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__negative-side-effects"
+    "risk__google__negative-side-effects"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107813,8 +107725,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general-harms__sft",
-   "company": "Google Brain",
+   "id": "train__google__general-harms__sft",
+   "company": "Google",
    "category": "General harms",
    "training_category": "Supervised training",
    "item": "SFT",
@@ -107835,7 +107747,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__negative-side-effects"
+    "risk__google__negative-side-effects"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107847,8 +107759,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__adversarial-reward-functions",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__adversarial-reward-functions",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Reward shaping|Adversarial training",
    "item": "Adversarial reward functions",
@@ -107870,7 +107782,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107884,8 +107796,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__model-lookahead",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__model-lookahead",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Runtime safeguards",
    "item": "Model lookahead",
@@ -107906,7 +107818,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107918,8 +107830,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__adversarial-example-training",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__adversarial-example-training",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Adversarial training",
    "item": "Adversarial example training",
@@ -107940,7 +107852,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107954,8 +107866,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__sandboxing",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__sandboxing",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Runtime safeguards",
    "item": "Sandboxing",
@@ -107976,7 +107888,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -107988,8 +107900,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__reward-capping",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__reward-capping",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Reward shaping",
    "item": "Reward capping",
@@ -108010,7 +107922,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108022,8 +107934,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__reward-modelling",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__reward-modelling",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Supervised training",
    "item": "Reward modelling",
@@ -108044,7 +107956,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108056,8 +107968,8 @@
    ]
   },
   {
-   "id": "train__google-brain__reward-hacking__trip-wires",
-   "company": "Google Brain",
+   "id": "train__google__reward-hacking__trip-wires",
+   "company": "Google",
    "category": "Reward hacking",
    "training_category": "Runtime safeguards",
    "item": "Trip wires",
@@ -108078,7 +107990,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__reward-hacking"
+    "risk__google__reward-hacking"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108090,8 +108002,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general__reward-modelling",
-   "company": "Google Brain",
+   "id": "train__google__general__reward-modelling",
+   "company": "Google",
    "category": "General",
    "training_category": "Supervised training",
    "item": "Reward modelling",
@@ -108113,7 +108025,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108127,8 +108039,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general__null",
-   "company": "Google Brain",
+   "id": "train__google__general__null",
+   "company": "Google",
    "category": "General",
    "training_category": "Other: unlabeled-transition learning",
    "item": "null",
@@ -108149,7 +108061,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108161,8 +108073,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general__sft",
-   "company": "Google Brain",
+   "id": "train__google__general__sft",
+   "company": "Google",
    "category": "General",
    "training_category": "Supervised training",
    "item": "SFT",
@@ -108183,7 +108095,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108196,8 +108108,8 @@
    ]
   },
   {
-   "id": "train__google-brain__general__iterated-amplification",
-   "company": "Google Brain",
+   "id": "train__google__general__iterated-amplification",
+   "company": "Google",
    "category": "General",
    "training_category": "Other: hierarchical reinforcement learning",
    "item": "Iterated amplification",
@@ -108218,7 +108130,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108231,8 +108143,8 @@
    ]
   },
   {
-   "id": "train__google-brain__safety__adversarial-reward-functions",
-   "company": "Google Brain",
+   "id": "train__google__safety__adversarial-reward-functions",
+   "company": "Google",
    "category": "Safety",
    "training_category": "Reward shaping",
    "item": "Adversarial reward functions",
@@ -108253,7 +108165,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108266,8 +108178,8 @@
    ]
   },
   {
-   "id": "train__google-brain__safety__demonstration-fine-tuning",
-   "company": "Google Brain",
+   "id": "train__google__safety__demonstration-fine-tuning",
+   "company": "Google",
    "category": "Safety",
    "training_category": "Supervised training",
    "item": "Demonstration fine-tuning",
@@ -108288,7 +108200,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108301,8 +108213,8 @@
    ]
   },
   {
-   "id": "train__google-brain__safety__sandboxing",
-   "company": "Google Brain",
+   "id": "train__google__safety__sandboxing",
+   "company": "Google",
    "category": "Safety",
    "training_category": "Other: simulation",
    "item": "Sandboxing",
@@ -108323,7 +108235,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108337,8 +108249,8 @@
    ]
   },
   {
-   "id": "train__google-brain__safety__capability-elicitation-guardrails",
-   "company": "Google Brain",
+   "id": "train__google__safety__capability-elicitation-guardrails",
+   "company": "Google",
    "category": "Safety",
    "training_category": "Runtime safeguards",
    "item": "Capability elicitation guardrails",
@@ -108359,7 +108271,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108371,8 +108283,8 @@
    ]
   },
   {
-   "id": "train__google-brain__safety__runtime-monitoring",
-   "company": "Google Brain",
+   "id": "train__google__safety__runtime-monitoring",
+   "company": "Google",
    "category": "Safety",
    "training_category": "Runtime safeguards",
    "item": "Runtime monitoring",
@@ -108394,7 +108306,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108408,8 +108320,8 @@
    ]
   },
   {
-   "id": "train__google-brain__quality-loss__importance-weighting",
-   "company": "Google Brain",
+   "id": "train__google__quality-loss__importance-weighting",
+   "company": "Google",
    "category": "Quality loss",
    "training_category": "Other: covariate shift reweighting",
    "item": "Importance weighting",
@@ -108430,7 +108342,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108443,8 +108355,8 @@
    ]
   },
   {
-   "id": "train__google-brain__quality-loss__null",
-   "company": "Google Brain",
+   "id": "train__google__quality-loss__null",
+   "company": "Google",
    "category": "Quality loss",
    "training_category": "Other: uncertainty estimation",
    "item": "null",
@@ -108465,7 +108377,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108478,8 +108390,8 @@
    ]
   },
   {
-   "id": "train__google-brain__quality-loss__other-method-of-moments",
-   "company": "Google Brain",
+   "id": "train__google__quality-loss__other-method-of-moments",
+   "company": "Google",
    "category": "Quality loss",
    "training_category": "Other: method of moments",
    "item": "Other: method of moments",
@@ -108500,7 +108412,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108513,8 +108425,8 @@
    ]
   },
   {
-   "id": "train__google-brain__quality-loss__other-unsupervised-risk-estimation",
-   "company": "Google Brain",
+   "id": "train__google__quality-loss__other-unsupervised-risk-estimation",
+   "company": "Google",
    "category": "Quality loss",
    "training_category": "Other: unsupervised risk estimation",
    "item": "Other: unsupervised risk estimation",
@@ -108535,7 +108447,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -108548,8 +108460,8 @@
    ]
   },
   {
-   "id": "train__google-brain__quality-loss__sourcing",
-   "company": "Google Brain",
+   "id": "train__google__quality-loss__sourcing",
+   "company": "Google",
    "category": "Quality loss",
    "training_category": "Data curation",
    "item": "Sourcing",
@@ -108570,7 +108482,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145556,8 +145468,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__general__active-reward-learning",
-   "company": "Google Brain",
+   "id": "bench__google__general__active-reward-learning",
+   "company": "Google",
    "category": "General",
    "benchmark_category": "Reward hacking / Specification gaming",
    "name": "Active reward learning",
@@ -145578,7 +145490,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145593,8 +145505,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__general__generalized-expectation-criteria",
-   "company": "Google Brain",
+   "id": "bench__google__general__generalized-expectation-criteria",
+   "company": "Google",
    "category": "General",
    "benchmark_category": "Other",
    "name": "generalized expectation criteria",
@@ -145614,7 +145526,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145628,8 +145540,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__general__deepdive-system",
-   "company": "Google Brain",
+   "id": "bench__google__general__deepdive-system",
+   "company": "Google",
    "category": "General",
    "benchmark_category": "Other",
    "name": "DeepDive system",
@@ -145649,7 +145561,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145663,8 +145575,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__general__hierarchical-reinforcement-learning",
-   "company": "Google Brain",
+   "id": "bench__google__general__hierarchical-reinforcement-learning",
+   "company": "Google",
    "category": "General",
    "benchmark_category": "Other",
    "name": "Hierarchical reinforcement learning",
@@ -145684,7 +145596,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__scalable-oversight"
+    "risk__google__scalable-oversight"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145698,8 +145610,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
-   "company": "Google Brain",
+   "id": "bench__google__safety__policy-gradients-beyond-expectations-conditional-value-at-risk",
+   "company": "Google",
    "category": "Safety",
    "benchmark_category": "Other",
    "name": "Policy gradients beyond expectations: Conditional value-at-risk",
@@ -145719,7 +145631,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145733,8 +145645,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__safety__apprenticeship-learning",
-   "company": "Google Brain",
+   "id": "bench__google__safety__apprenticeship-learning",
+   "company": "Google",
    "category": "Safety",
    "benchmark_category": "Other",
    "name": "apprenticeship learning",
@@ -145754,7 +145666,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145768,8 +145680,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__safety__safe-exploration-in-markov-decision-processes",
-   "company": "Google Brain",
+   "id": "bench__google__safety__safe-exploration-in-markov-decision-processes",
+   "company": "Google",
    "category": "Safety",
    "benchmark_category": "Agentic / Autonomy",
    "name": "Safe exploration in markov decision processes",
@@ -145789,7 +145701,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__safe-exploration"
+    "risk__google__safe-exploration"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145803,8 +145715,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__quality-loss__covariate-shift",
-   "company": "Google Brain",
+   "id": "bench__google__quality-loss__covariate-shift",
+   "company": "Google",
    "category": "Quality loss",
    "benchmark_category": "Other",
    "name": "covariate shift",
@@ -145824,7 +145736,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145838,8 +145750,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
-   "company": "Google Brain",
+   "id": "bench__google__quality-loss__bootstrapping-to-estimate-nite-sample-variation-in-the-learned-parameters-of-a-neural-network",
+   "company": "Google",
    "category": "Quality loss",
    "benchmark_category": "Capability — reasoning",
    "name": "bootstrapping to estimate ﬁnite-sample variation in the learned parameters of a neural network",
@@ -145859,7 +145771,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145873,8 +145785,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__quality-loss__generalized-method-of-moments",
-   "company": "Google Brain",
+   "id": "bench__google__quality-loss__generalized-method-of-moments",
+   "company": "Google",
    "category": "Quality loss",
    "benchmark_category": "Capability — reasoning",
    "name": "generalized method of moments",
@@ -145894,7 +145806,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145908,8 +145820,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__quality-loss__unsupervised-risk-estimation",
-   "company": "Google Brain",
+   "id": "bench__google__quality-loss__unsupervised-risk-estimation",
+   "company": "Google",
    "category": "Quality loss",
    "benchmark_category": "Other",
    "name": "unsupervised risk estimation",
@@ -145929,7 +145841,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
@@ -145943,8 +145855,8 @@
    "actor_type": "Academic or research center"
   },
   {
-   "id": "bench__google-brain__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
-   "company": "Google Brain",
+   "id": "bench__google__quality-loss__deep-speech-2-end-to-end-speech-recognition-in-english-and-mandarin",
+   "company": "Google",
    "category": "Quality loss",
    "benchmark_category": "Capability — multimodal",
    "name": "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin",
@@ -145964,7 +145876,7 @@
    ],
    "conduct_ids": [],
    "risk_ids": [
-    "risk__google-brain__distributional-shift-robustness"
+    "risk__google__distributional-shift-robustness"
    ],
    "from_policy": false,
    "only_policy": false,
