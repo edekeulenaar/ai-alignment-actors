@@ -568,12 +568,15 @@ function docToCard(d) {
   const titleHtml = d.url
     ? `<a href="${d.url}" target="_blank">${escape(d.title)}</a>`
     : escape(d.title);
+  const authors = d.author_actors || [];
+  const cited   = d.cited_actors  || [];
   return `
     <h4>${titleHtml}</h4>
     <dt>Year</dt><dd>${escape(d.year)}</dd>
     <dt>Type</dt><dd>${escape(d.pub_type)}${d.policy_type ? ` — ${escape(d.policy_type)}` : ""}</dd>
     <dt>Model</dt><dd>${escape(d.company_model || "—")}</dd>
-    <dt>Authors</dt><dd>${escape(d.actors) || "—"}</dd>
+    <dt>Document author(s)</dt><dd>${actorPills(authors, "author")}</dd>
+    ${cited.length ? `<dt>Cited in the document</dt><dd>${actorPills(cited, "cited")}</dd>` : ""}
     <dt>Defines</dt><dd>${d.conduct_ids.length} conduct(s), ${d.risk_ids.length} risk(s)</dd>
   `;
 }
