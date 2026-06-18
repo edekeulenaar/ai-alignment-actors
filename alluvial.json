@@ -1790,7 +1790,7 @@
   {
    "country": "United Kingdom",
    "type": "Government agency",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "AI Security Institute"
   },
   {
@@ -2018,7 +2018,7 @@
   {
    "country": "United States",
    "type": "Government agency",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "U.S. AI Safety Institute"
   },
   {
@@ -2036,7 +2036,7 @@
   {
    "country": "United Kingdom",
    "type": "Government agency",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "UK AI Security Institute"
   },
   {
@@ -3079,5 +3079,5 @@
   }
  ],
  "total": 512,
- "matched": 26
+ "matched": 23
 }

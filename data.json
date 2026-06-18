@@ -494,6 +494,7 @@
     "EQCD8INF",
     "FAQQKXKC",
     "FHTLRAWN",
+    "HEH4A2T4",
     "HUGN5UJX",
     "J27ALZCI",
     "JJDZFSBE",
@@ -510,11 +511,12 @@
     "V48U9V8M",
     "WBGXPF3L",
     "X7PAUFTV",
+    "XDD2C2KI",
     "XHFZZDH9",
     "Z3HFLRZ8",
     "ZZY89RTG"
    ],
-   "mention_count": 1021
+   "mention_count": 1030
   },
   {
    "name": "Google DeepMind",
@@ -584,7 +586,7 @@
     "policy-llama-api-(meta)-privacy-policy",
     "policy-meta-ai-(meta)-terms-of-service"
    ],
-   "mention_count": 437
+   "mention_count": 439
   },
   {
    "name": "xAI",
@@ -706,6 +708,32 @@
    "mention_count": 194
   },
   {
+   "name": "DeepSeek",
+   "type": "Internal",
+   "types_all": [
+    "Internal",
+    "Other AI company"
+   ],
+   "based_in": "China",
+   "role": "AUTHOR",
+   "companies": [
+    "DeepSeek",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "3SKF7PNU",
+    "EX5MJA8V",
+    "IZ66N7DZ",
+    "J27ALZCI",
+    "JEE3ALLC",
+    "Q5RNPIQ6",
+    "SUE568KL",
+    "policy-deepseek-privacy-policy",
+    "policy-deepseek-terms-of-service"
+   ],
+   "mention_count": 169
+  },
+  {
    "name": "Microsoft",
    "type": "Internal",
    "types_all": [
@@ -731,31 +759,7 @@
     "policy-microsoft-copilot-(microsoft)-privacy-policy",
     "policy-microsoft-copilot-(microsoft)-terms-of-service"
    ],
-   "mention_count": 138
-  },
-  {
-   "name": "DeepSeek",
-   "type": "Internal",
-   "types_all": [
-    "Internal",
-    "Other AI company"
-   ],
-   "based_in": "China",
-   "role": "AUTHOR",
-   "companies": [
-    "DeepSeek",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3SKF7PNU",
-    "EX5MJA8V",
-    "IZ66N7DZ",
-    "J27ALZCI",
-    "JEE3ALLC",
-    "Q5RNPIQ6",
-    "SUE568KL"
-   ],
-   "mention_count": 132
+   "mention_count": 160
   },
   {
    "name": "METR",
@@ -821,6 +825,30 @@
    "mention_count": 97
   },
   {
+   "name": "Mistral AI",
+   "type": "Internal",
+   "types_all": [
+    "Internal"
+   ],
+   "based_in": "France",
+   "role": "MIXED",
+   "companies": [
+    "Mistral AI"
+   ],
+   "doc_ids": [
+    "4QRD4985",
+    "GXPBCGLT",
+    "policy-le-chat-(mistral)-commercial-terms",
+    "policy-le-chat-(mistral)-data-processor-agreement",
+    "policy-le-chat-(mistral)-privacy-policy",
+    "policy-le-chat-(mistral)-terms-of-service",
+    "policy-mistral-ai-(mistral)-developer-terms",
+    "policy-mistral-ai-(mistral)-privacy-policy",
+    "policy-mistral-ai-(mistral)-terms-of-service"
+   ],
+   "mention_count": 96
+  },
+  {
    "name": "OpenAI Preparedness Framework",
    "type": "Internal",
    "types_all": [
@@ -837,6 +865,46 @@
     "VPT2QWIY"
    ],
    "mention_count": 95
+  },
+  {
+   "name": "UK AI Safety Institute",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "United Kingdom",
+   "role": "CITED",
+   "companies": [
+    "OpenAI",
+    "Anthropic",
+    "xAI",
+    "Google",
+    "Meta"
+   ],
+   "doc_ids": [
+    "2EBEJNA4",
+    "3GE36RMI",
+    "3SUD89YE",
+    "4AGTLHJ3",
+    "4IMQLENM",
+    "4MWVRCZ7",
+    "5R7U8TB8",
+    "GMPNNKLY",
+    "K58FEDKQ",
+    "KRAMCTRS",
+    "MFPTTXIQ",
+    "N4W4H56I",
+    "NWKEIQTV",
+    "RPLQQPCF",
+    "T8QMJ4FU",
+    "TCQMFVXH",
+    "UKHJ828E",
+    "VPJH7HCT",
+    "VPT2QWIY",
+    "YJ2AIUGY",
+    "ZLJDDH77"
+   ],
+   "mention_count": 92
   },
   {
    "name": "Gemma Team",
@@ -956,30 +1024,6 @@
    "mention_count": 70
   },
   {
-   "name": "Mistral AI",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "France",
-   "role": "MIXED",
-   "companies": [
-    "Mistral AI"
-   ],
-   "doc_ids": [
-    "4QRD4985",
-    "GXPBCGLT",
-    "policy-le-chat-(mistral)-commercial-terms",
-    "policy-le-chat-(mistral)-data-processor-agreement",
-    "policy-le-chat-(mistral)-privacy-policy",
-    "policy-le-chat-(mistral)-terms-of-service",
-    "policy-mistral-ai-(mistral)-developer-terms",
-    "policy-mistral-ai-(mistral)-privacy-policy",
-    "policy-mistral-ai-(mistral)-terms-of-service"
-   ],
-   "mention_count": 69
-  },
-  {
    "name": "Chris Olah",
    "type": "Academic or research center",
    "types_all": [
@@ -1044,6 +1088,35 @@
     "ZL6I8Y5P"
    ],
    "mention_count": 64
+  },
+  {
+   "name": "Irregular",
+   "type": "Red teaming or cybersecurity company",
+   "types_all": [
+    "Red teaming or cybersecurity company"
+   ],
+   "based_in": "Israel",
+   "role": "CITED",
+   "companies": [
+    "OpenAI",
+    "Meta",
+    "Anthropic"
+   ],
+   "doc_ids": [
+    "3SUD89YE",
+    "3Z75ND8Q",
+    "5R7U8TB8",
+    "GIIIBG2L",
+    "K58FEDKQ",
+    "L9E6I5VD",
+    "N4W4H56I",
+    "Q4VNGWTU",
+    "RPLQQPCF",
+    "XPE2R9SS",
+    "YJ2AIUGY",
+    "ZLJDDH77"
+   ],
+   "mention_count": 62
   },
   {
    "name": "Singh, Aaditya; Fry, Adam; Perelman, Adam; Tart, Adam; Ganesh, Adi; El-Kishky, Ahmed; McLaughlin, Aidan; Low, Aiden; Ostrow, A. J.; Ananthram, Akhila; Nathan, Akshay; Luo, Alan; Helyar, Alec; Madry, Aleksander; Efremov, Aleksandr; Spyra, Aleksandra; Baker-Whitcomb, Alex; Beutel, Alex; Karpenko, Alex; Makelov, Alex; Neitz, Alex; Wei, Alex; Barr, Alexandra; Kirchmeyer, Alexandre; Ivanov, Alexey; Christakis, Alexi; Gillespie, Alistair; Tam, Allison; Bennett, Ally; Wan, Alvin; Huang, Alyssa; Sandjideh, Amy McDonald; Yang, Amy; Kumar, Ananya; Saraiva, Andre; Vallone, Andrea; Gheorghe, Andrei; Garcia, Andres Garcia; Braunstein, Andrew; Liu, Andrew; Schmidt, Andrew; Mereskin, Andrey; Mishchenko, Andrey; Applebaum, Andy; Rogerson, Andy; Rajan, Ann; Wei, Annie; Kotha, Anoop; Srivastava, Anubha; Agrawal, Anushree; Vijayvergiya, Arun; Tyra, Ashley; Nair, Ashvin; Nayak, Avi; Eggers, Ben; Ji, Bessie; Hoover, Beth; Chen, Bill; Chen, Blair; Barak, Boaz; Minaiev, Borys; Hao, Botao; Baker, Bowen; Lightcap, Brad; McKinzie, Brandon; Wang, Brandon; Quinn, Brendan; Fioca, Brian; Hsu, Brian; Yang, Brian; Yu, Brian; Zhang, Brian; Brenner, Brittany; Zetino, Callie Riggins; Raymond, Cameron; Lugaresi, Camillo; Paz, Carolina; Hudson, Cary; Whitney, Cedric; Li, Chak; Chen, Charles; Cole, Charlotte; Voss, Chelsea; Ding, Chen; Shen, Chen; Huang, Chengdu; Colby, Chris; Hallacy, Chris; Koch, Chris; Lu, Chris; Kaplan, Christina; Kim, Christina; Minott-Henriques, C. J.; Frey, Cliff; Yu, Cody; Czarnecki, Coley; Reid, Colin; Wei, Colin; Decareaux, Cory; Scheau, Cristina; Zhang, Cyril; Forbes, Cyrus; Tang, Da; Goldberg, Dakota; Roberts, Dan; Palmie, Dana; Kappler, Daniel; Levine, Daniel; Wright, Daniel; Leo, Dave; Lin, David; Robinson, David; Grabb, Declan; Chen, Derek; Lim, Derek; Salama, Derek; Bhattacharjee, Dibya; Tsipras, Dimitris; Li, Dinghua; Yu, Dingli; Strouse, D. J.; Williams, Drew; Hunn, Dylan; Bayes, Ed; Arbus, Edwin; Akyurek, Ekin; Le, Elaine Ya; Widmann, Elana; Yani, Eli; Proehl, Elizabeth; Sert, Enis; Cheung, Enoch; Schwartz, Eri; Han, Eric; Jiang, Eric; Mitchell, Eric; Sigler, Eric; Wallace, Eric; Ritter, Erik; Kavanaugh, Erin; Mays, Evan; Nikishin, Evgenii; Li, Fangyuan; Such, Felipe Petroski; Peres, Filipe de Avila Belbute; Raso, Filippo; Bekerman, Florent; Tsimpourlas, Foivos; Chantzis, Fotis; Song, Francis; Zhang, Francis; Raila, Gaby; McGrath, Garrett; Briggs, Gary; Yang, Gary; Parascandolo, Giambattista; Chabot, Gildas; Kim, Grace; Zhao, Grace; Valiant, Gregory; Leclerc, Guillaume; Salman, Hadi; Wang, Hanson; Sheng, Hao; Jiang, Haoming; Wang, Haoyu; Jin, Haozhun; Sikchi, Harshit; Schmidt, Heather; Aspegren, Henry; Chen, Honglin; Qiu, Huida; Lightman, Hunter; Covert, Ian; Kivlichan, Ian; Silber, Ian; Sohl, Ian; Hammoud, Ibrahim; Clavera, Ignasi; Lan, Ikai; Akkaya, Ilge; Kostrikov, Ilya; Kofman, Irina; Etinger, Isak; Singal, Ishaan; Hehir, Jackie; Huh, Jacob; Pan, Jacqueline; Wilczynski, Jake; Pachocki, Jakub; Lee, James; Quinn, James; Kiros, Jamie; Kalra, Janvi; Samaroo, Jasmyn; Wang, Jason; Wolfe, Jason; Chen, Jay; Wang, Jay; Harb, Jean; Han, Jeffrey; Wang, Jeffrey; Zhao, Jennifer; Chen, Jeremy; Yang, Jerene; Tworek, Jerry; Chand, Jesse; Landon, Jessica; Liang, Jessica; Lin, Ji; Liu, Jiancheng; Wang, Jianfeng; Tang, Jie; Yin, Jihan; Jang, Joanne; Morris, Joel; Flynn, Joey; Ferstad, Johannes; Heidecke, Johannes; Fishbein, John; Hallman, John; Grant, Jonah; Chien, Jonathan; Gordon, Jonathan; Park, Jongsoo; Liss, Jordan; Kraaijeveld, Jos; Guay, Joseph; Mo, Joseph; Lawson, Josh; McGrath, Josh; Vendrow, Joshua; Jiao, Joy; Lee, Julian; Steele, Julie; Wang, Julie; Mao, Junhua; Chen, Kai; Hayashi, Kai; Xiao, Kai; Salahi, Kamyar; Wu, Kan; Sekhri, Karan; Sharma, Karan; Singhal, Karan; Li, Karen; Nguyen, Kenny; Gu-Lemberg, Keren; King, Kevin; Liu, Kevin; Stone, Kevin; Yu, Kevin; Ying, Kristen; Georgiev, Kristian; Lim, Kristie; Tirumala, Kushal; Miller, Kyle; Ahmad, Lama; Lv, Larry; Clare, Laura; Fauconnet, Laurance; Itow, Lauren; Yang, Lauren; Romaniuk, Laurentia; Anise, Leah; Byron, Lee; Pathak, Leher; Maksin, Leon; Lo, Leyan; Ho, Leyton; Jing, Li; Wu, Liang; Xiong, Liang; Mamitsuka, Lien; Yang, Lin; McCallum, Lindsay; Held, Lindsey; Bourgeois, Liz; Engstrom, Logan; Kuhn, Lorenz; Feuvrier, Louis; Zhang, Lu; Switzer, Lucas; Kondraciuk, Lukas; Kaiser, Lukasz; Joglekar, Manas; Singh, Mandeep; Shah, Mandip; Stratta, Manuka; Williams, Marcus; Chen, Mark; Sun, Mark; Cayton, Marselus; Li, Martin; Zhang, Marvin; Aljubeh, Marwan; Nichols, Matt; Haines, Matthew; Schwarzer, Max; Gupta, Mayank; Shah, Meghan; Huang, Melody; Dong, Meng; Wang, Mengqing; Glaese, Mia; Carroll, Micah; Lampe, Michael; Malek, Michael; Sharman, Michael; Zhang, Michael; Wang, Michele; Pokrass, Michelle; Florian, Mihai; Pavlov, Mikhail; Wang, Miles; Chen, Ming; Wang, Mingxuan; Feng, Minnia; Bavarian, Mo; Lin, Molly; Abdool, Moose; Rohaninejad, Mostafa; Soto, Nacho; Staudacher, Natalie; LaFontaine, Natan; Marwell, Nathan; Liu, Nelson; Preston, Nick; Turley, Nick; Ansman, Nicklas; Blades, Nicole; Pancha, Nikil; Mikhaylin, Nikita; Felix, Niko; Handa, Nikunj; Rai, Nishant; Keskar, Nitish; Brown, Noam; Nachum, Ofir; Boiko, Oleg; Murk, Oleg; Watkins, Olivia; Gleeson, Oona; Mishkin, Pamela; Lesiewicz, Patryk; Baltescu, Paul; Belov, Pavel; Zhokhov, Peter; Pronin, Philip; Guo, Phillip; Thacker, Phoebe; Liu, Qi; Yuan, Qiming; Liu, Qinghua; Dias, Rachel; Puckett, Rachel; Arora, Rahul; Mullapudi, Ravi Teja; Gaon, Raz; Miyara, Reah; Song, Rennie; Aggarwal, Rishabh; Marsan, R. J.; Yemiru, Robel; Xiong, Robert; Kshirsagar, Rohan; Nuttall, Rohan; Tsiupa, Roman; Eldan, Ronen; Wang, Rose; James, Roshan; Ziv, Roy; Shu, Rui; Nigmatullin, Ruslan; Jain, Saachi; Talaie, Saam; Altman, Sam; Arnesen, Sam; Toizer, Sam; Toyer, Sam; Miserendino, Samuel; Agarwal, Sandhini; Yoo, Sarah; Heon, Savannah; Ethersmith, Scott; Grove, Sean; Taylor, Sean; Bubeck, Sebastien; Banesiu, Sever; Amdo, Shaokyi; Zhao, Shengjia; Wu, Sherwin; Santurkar, Shibani; Zhao, Shiyu; Chaudhuri, Shraman Ray; Krishnaswamy, Shreyas; Shuaiqi; Xia; Cheng, Shuyang; Anadkat, Shyamal; Fishman, Simón Posada; Tobin, Simon; Fu, Siyuan; Jain, Somay; Mei, Song; Egoian, Sonya; Kim, Spencer; Golden, Spug; Mah, S. Q.; Lin, Steph; Imm, Stephen; Sharpe, Steve; Yadlowsky, Steve; Choudhry, Sulman; Eum, Sungwon; Sanjeev, Suvansh; Khan, Tabarak; Stramer, Tal; Wang, Tao; Xin, Tao; Gogineni, Tarun; Christianson, Taya; Sanders, Ted; Patwardhan, Tejal; Degry, Thomas; Shadwell, Thomas; Fu, Tianfu; Gao, Tianshi; Garipov, Timur; Sriskandarajah, Tina; Sherbakov, Toki; Kaftan, Tomer; Hiratsuka, Tomo; Wang, Tongzhou; Song, Tony; Zhao, Tony; Peterson, Troy; Kharitonov, Val; Chernova, Victoria; Kosaraju, Vineet; Kuo, Vishal; Pong, Vitchyr; Verma, Vivek; Petrov, Vlad; Jiang, Wanning; Zhang, Weixing; Zhou, Wenda; Xie, Wenlei; Zhan, Wenting; McCabe, Wes; DePue, Will; Ellsworth, Will; Bain, Wulfie; Thompson, Wyatt; Chen, Xiangning; Qi, Xiangyu; Xiang, Xin; Shi, Xinwei; Dubois, Yann; Yu, Yaodong; Khakbaz, Yara; Wu, Yifan; Qian, Yilei; Lee, Yin Tat; Chen, Yinbo; Zhang, Yizhen; Xiong, Yizhong; Tian, Yonglong; Cha, Young; Bai, Yu; Yang, Yu; Yuan, Yuan; Li, Yuanzhi; Zhang, Yufeng; Yang, Yuguang; Jin, Yujia; Jiang, Yun; Wang, Yunyun; Wang, Yushi; Liu, Yutian; Stubenvoll, Zach; Dou, Zehao; Wu, Zheng; Wang, Zhigang",
@@ -1153,6 +1226,31 @@
    "mention_count": 54
   },
   {
+   "name": "Gray Swan AI",
+   "type": "Red teaming or cybersecurity company",
+   "types_all": [
+    "Red teaming or cybersecurity company"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "Anthropic",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "3GE36RMI",
+    "4MWVRCZ7",
+    "5NFN4UQV",
+    "FPFBD8PV",
+    "IAZRTFQL",
+    "N4W4H56I",
+    "NWKEIQTV",
+    "UFSBGMYG",
+    "YJ2AIUGY"
+   ],
+   "mention_count": 53
+  },
+  {
    "name": "Miles Wang",
    "type": "Internal",
    "types_all": [
@@ -1235,6 +1333,35 @@
    "mention_count": 51
   },
   {
+   "name": "US Center for AI Standards and Innovation",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "OpenAI",
+    "Anthropic",
+    "Meta"
+   ],
+   "doc_ids": [
+    "2EBEJNA4",
+    "3GE36RMI",
+    "3SUD89YE",
+    "4AGTLHJ3",
+    "4MWVRCZ7",
+    "K58FEDKQ",
+    "KRAMCTRS",
+    "MFPTTXIQ",
+    "N4W4H56I",
+    "RPLQQPCF",
+    "YJ2AIUGY",
+    "ZLJDDH77"
+   ],
+   "mention_count": 50
+  },
+  {
    "name": "OpenAI; Jaech, Aaron; Kalai, Adam; Lerer, Adam; Richardson, Adam; El-Kishky, Ahmed; Low, Aiden; Helyar, Alec; Madry, Aleksander; Beutel, Alex; Carney, Alex; Iftimie, Alex; Karpenko, Alex; Passos, Alex Tachard; Neitz, Alexander; Prokofiev, Alexander; Wei, Alexander; Tam, Allison; Bennett, Ally; Kumar, Ananya; Saraiva, Andre; Vallone, Andrea; Duberstein, Andrew; Kondrich, Andrew; Mishchenko, Andrey; Applebaum, Andy; Jiang, Angela; Nair, Ashvin; Zoph, Barret; Ghorbani, Behrooz; Rossen, Ben; Sokolowsky, Benjamin; Barak, Boaz; McGrew, Bob; Minaiev, Borys; Hao, Botao; Baker, Bowen; Houghton, Brandon; McKinzie, Brandon; Eastman, Brydon; Lugaresi, Camillo; Bassin, Cary; Hudson, Cary; Li, Chak Ming; Bourcy, Charles de; Voss, Chelsea; Shen, Chen; Zhang, Chong; Koch, Chris; Orsinger, Chris; Hesse, Christopher; Fischer, Claudia; Chan, Clive; Roberts, Dan; Kappler, Daniel; Levy, Daniel; Selsam, Daniel; Dohan, David; Farhi, David; Mely, David; Robinson, David; Tsipras, Dimitris; Li, Doug; Oprica, Dragos; Freeman, Eben; Zhang, Eddie; Wong, Edmund; Proehl, Elizabeth; Cheung, Enoch; Mitchell, Eric; Wallace, Eric; Ritter, Erik; Mays, Evan; Wang, Fan; Such, Felipe Petroski; Raso, Filippo; Leoni, Florencia; Tsimpourlas, Foivos; Song, Francis; Lohmann, Fred von; Sulit, Freddie; Salmon, Geoff; Parascandolo, Giambattista; Chabot, Gildas; Zhao, Grace; Brockman, Greg; Leclerc, Guillaume; Salman, Hadi; Bao, Haiming; Sheng, Hao; Andrin, Hart; Bagherinezhad, Hessam; Ren, Hongyu; Lightman, Hunter; Chung, Hyung Won; Kivlichan, Ian; O'Connell, Ian; Osband, Ian; Gilaberte, Ignasi Clavera; Akkaya, Ilge; Kostrikov, Ilya; Sutskever, Ilya; Kofman, Irina; Pachocki, Jakub; Lennon, James; Wei, Jason; Harb, Jean; Twore, Jerry; Feng, Jiacheng; Yu, Jiahui; Weng, Jiayi; Tang, Jie; Yu, Jieqi; Candela, Joaquin Quiñonero; Palermo, Joe; Parish, Joel; Heidecke, Johannes; Hallman, John; Rizzo, John; Gordon, Jonathan; Uesato, Jonathan; Ward, Jonathan; Huizinga, Joost; Wang, Julie; Chen, Kai; Xiao, Kai; Singhal, Karan; Nguyen, Karina; Cobbe, Karl; Shi, Katy; Wood, Kayla; Rimbach, Kendra; Gu-Lemberg, Keren; Liu, Kevin; Lu, Kevin; Stone, Kevin; Yu, Kevin; Ahmad, Lama; Yang, Lauren; Liu, Leo; Maksin, Leon; Ho, Leyton; Fedus, Liam; Weng, Lilian; Li, Linden; McCallum, Lindsay; Held, Lindsey; Kuhn, Lorenz; Kondraciuk, Lukas; Kaiser, Lukasz; Metz, Luke; Boyd, Madelaine; Trebacz, Maja; Joglekar, Manas; Chen, Mark; Tintor, Marko; Meyer, Mason; Jones, Matt; Kaufer, Matt; Schwarzer, Max; Shah, Meghan; Yatbaz, Mehmet; Guan, Melody Y.; Xu, Mengyuan; Yan, Mengyuan; Glaese, Mia; Chen, Mianna; Lampe, Michael; Malek, Michael; Wang, Michele; Fradin, Michelle; McClay, Mike; Pavlov, Mikhail; Wang, Miles; Wang, Mingxuan; Murati, Mira; Bavarian, Mo; Rohaninejad, Mostafa; McAleese, Nat; Chowdhury, Neil; Chowdhury, Neil; Ryder, Nick; Tezak, Nikolas; Brown, Noam; Nachum, Ofir; Boiko, Oleg; Murk, Oleg; Watkins, Olivia; Chao, Patrick; Ashbourne, Paul; Izmailov, Pavel; Zhokhov, Peter; Dias, Rachel; Arora, Rahul; Lin, Randall; Lopes, Rapha Gontijo; Gaon, Raz; Miyara, Reah; Leike, Reimar; Hwang, Renny; Garg, Rhythm; Brown, Robin; James, Roshan; Shu, Rui; Cheu, Ryan; Greene, Ryan; Jain, Saachi; Altman, Sam; Toizer, Sam; Toyer, Sam; Miserendino, Samuel; Agarwal, Sandhini; Hernandez, Santiago; Baker, Sasha; McKinney, Scott; Yan, Scottie; Zhao, Shengjia; Hu, Shengli; Santurkar, Shibani; Chaudhuri, Shraman Ray; Zhang, Shuyuan; Fu, Siyuan; Papay, Spencer; Lin, Steph; Balaji, Suchir; Sanjeev, Suvansh; Sidor, Szymon; Broda, Tal; Clark, Aidan; Wang, Tao; Gordon, Taylor; Sanders, Ted; Patwardhan, Tejal; Sottiaux, Thibault; Degry, Thomas; Dimson, Thomas; Zheng, Tianhao; Garipov, Timur; Stasi, Tom; Bansal, Trapit; Creech, Trevor; Peterson, Troy; Eloundou, Tyna; Qi, Valerie; Kosaraju, Vineet; Monaco, Vinnie; Pong, Vitchyr; Fomenko, Vlad; Zheng, Weiyi; Zhou, Wenda; McCabe, Wes; Zaremba, Wojciech; Dubois, Yann; Lu, Yinghai; Chen, Yining; Cha, Young; Bai, Yu; He, Yuchen; Zhang, Yuchen; Wang, Yunyun; Shao, Zheng; Li, Zhuohan",
    "type": "unknown",
    "types_all": [
@@ -1287,29 +1414,6 @@
     "ZL6I8Y5P"
    ],
    "mention_count": 48
-  },
-  {
-   "name": "Gray Swan AI",
-   "type": "Red teaming or cybersecurity company",
-   "types_all": [
-    "Red teaming or cybersecurity company"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "5NFN4UQV",
-    "FPFBD8PV",
-    "IAZRTFQL",
-    "N4W4H56I",
-    "NWKEIQTV",
-    "YJ2AIUGY"
-   ],
-   "mention_count": 46
   },
   {
    "name": "Jacob Steinhardt",
@@ -1513,30 +1617,6 @@
    "mention_count": 42
   },
   {
-   "name": "Irregular",
-   "type": "Red teaming or cybersecurity company",
-   "types_all": [
-    "Red teaming or cybersecurity company"
-   ],
-   "based_in": "Israel",
-   "role": "CITED",
-   "companies": [
-    "OpenAI",
-    "Meta"
-   ],
-   "doc_ids": [
-    "3SUD89YE",
-    "3Z75ND8Q",
-    "5R7U8TB8",
-    "L9E6I5VD",
-    "Q4VNGWTU",
-    "RPLQQPCF",
-    "XPE2R9SS",
-    "ZLJDDH77"
-   ],
-   "mention_count": 42
-  },
-  {
    "name": "Andrea Vallone",
    "type": "Internal",
    "types_all": [
@@ -1626,23 +1706,6 @@
    "mention_count": 37
   },
   {
-   "name": "DeepSeek",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "China",
-   "role": "AUTHOR",
-   "companies": [
-    "DeepSeek"
-   ],
-   "doc_ids": [
-    "policy-deepseek-privacy-policy",
-    "policy-deepseek-terms-of-service"
-   ],
-   "mention_count": 37
-  },
-  {
    "name": "Collective Intelligence Project",
    "type": "Foundation",
    "types_all": [
@@ -1696,6 +1759,30 @@
     "MIHIVB7S"
    ],
    "mention_count": 36
+  },
+  {
+   "name": "Deloitte",
+   "type": "Other",
+   "types_all": [
+    "Other",
+    "Alignment research organisation"
+   ],
+   "based_in": "United Kingdom",
+   "role": "CITED",
+   "companies": [
+    "Anthropic",
+    "Meta"
+   ],
+   "doc_ids": [
+    "3GE36RMI",
+    "8AC5MJHG",
+    "8ZIYRCKS",
+    "FPFBD8PV",
+    "GIIIBG2L",
+    "IAZRTFQL",
+    "MFPTTXIQ"
+   ],
+   "mention_count": 35
   },
   {
    "name": "Daniel Kang",
@@ -1899,25 +1986,6 @@
     "VPJH7HCT"
    ],
    "mention_count": 28
-  },
-  {
-   "name": "UK AI Security Institute (UK AISI)",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3SUD89YE",
-    "N4W4H56I",
-    "RPLQQPCF",
-    "YJ2AIUGY"
-   ],
-   "mention_count": 27
   },
   {
    "name": "Schoen, Bronson; Nitishinskaya, Evgenia; Balesni, Mikita; Højmark, Axel; Hofstätter, Felix; Scheurer, Jérémy; Meinke, Alexander; Wolfe, Jason; Weij, Teun van der; Lloyd, Alex; Goldowsky-Dill, Nicholas; Fan, Angela; Matveiakin, Andrei; Shah, Rusheb; Williams, Marcus; Glaese, Amelia; Barak, Boaz; Zaremba, Wojciech; Hobbhahn, Marius",
@@ -2144,28 +2212,6 @@
    "mention_count": 27
   },
   {
-   "name": "Mistral AI",
-   "type": "unknown",
-   "types_all": [
-    "unknown"
-   ],
-   "based_in": "France",
-   "role": "AUTHOR",
-   "companies": [
-    "Mistral AI"
-   ],
-   "doc_ids": [
-    "policy-le-chat-(mistral)-commercial-terms",
-    "policy-le-chat-(mistral)-data-processor-agreement",
-    "policy-le-chat-(mistral)-privacy-policy",
-    "policy-le-chat-(mistral)-terms-of-service",
-    "policy-mistral-ai-(mistral)-developer-terms",
-    "policy-mistral-ai-(mistral)-privacy-policy",
-    "policy-mistral-ai-(mistral)-terms-of-service"
-   ],
-   "mention_count": 27
-  },
-  {
    "name": "OpenAI; Hurst, Aaron; Lerer, Adam; Goucher, Adam P.; Perelman, Adam; Ramesh, Aditya; Clark, Aidan; Ostrow, A. J.; Welihinda, Akila; Hayes, Alan; Radford, Alec; Mądry, Aleksander; Baker-Whitcomb, Alex; Beutel, Alex; Borzunov, Alex; Carney, Alex; Chow, Alex; Kirillov, Alex; Nichol, Alex; Paino, Alex; Renzin, Alex; Passos, Alex Tachard; Kirillov, Alexander; Christakis, Alexi; Conneau, Alexis; Kamali, Ali; Jabri, Allan; Moyer, Allison; Tam, Allison; Crookes, Amadou; Tootoochian, Amin; Tootoonchian, Amin; Kumar, Ananya; Vallone, Andrea; Karpathy, Andrej; Braunstein, Andrew; Cann, Andrew; Codispoti, Andrew; Galu, Andrew; Kondrich, Andrew; Tulloch, Andrew; Mishchenko, Andrey; Baek, Angela; Jiang, Angela; Pelisse, Antoine; Woodford, Antonia; Gosalia, Anuj; Dhar, Arka; Pantuliano, Ashley; Nayak, Avi; Oliver, Avital; Zoph, Barret; Ghorbani, Behrooz; Leimberger, Ben; Rossen, Ben; Sokolowsky, Ben; Wang, Ben; Zweig, Benjamin; Hoover, Beth; Samic, Blake; McGrew, Bob; Spero, Bobby; Giertler, Bogo; Cheng, Bowen; Lightcap, Brad; Walkin, Brandon; Quinn, Brendan; Guarraci, Brian; Hsu, Brian; Kellogg, Bright; Eastman, Brydon; Lugaresi, Camillo; Wainwright, Carroll; Bassin, Cary; Hudson, Cary; Chu, Casey; Nelson, Chad; Li, Chak; Shern, Chan Jun; Conger, Channing; Barette, Charlotte; Voss, Chelsea; Ding, Chen; Lu, Cheng; Zhang, Chong; Beaumont, Chris; Hallacy, Chris; Koch, Chris; Gibson, Christian; Kim, Christina; Choi, Christine; McLeavey, Christine; Hesse, Christopher; Fischer, Claudia; Winter, Clemens; Czarnecki, Coley; Jarvis, Colin; Wei, Colin; Koumouzelis, Constantin; Sherburn, Dane; Kappler, Daniel; Levin, Daniel; Levy, Daniel; Carr, David; Farhi, David; Mely, David; Robinson, David; Sasaki, David; Jin, Denny; Valladares, Dev; Tsipras, Dimitris; Li, Doug; Nguyen, Duc Phong; Findlay, Duncan; Oiwoh, Edede; Wong, Edmund; Asdar, Ehsan; Proehl, Elizabeth; Yang, Elizabeth; Antonow, Eric; Kramer, Eric; Peterson, Eric; Sigler, Eric; Wallace, Eric; Brevdo, Eugene; Mays, Evan; Khorasani, Farzad; Such, Felipe Petroski; Raso, Filippo; Zhang, Francis; Lohmann, Fred von; Sulit, Freddie; Goh, Gabriel; Oden, Gene; Salmon, Geoff; Starace, Giulio; Brockman, Greg; Salman, Hadi; Bao, Haiming; Hu, Haitang; Wong, Hannah; Wang, Haoyu; Schmidt, Heather; Whitney, Heather; Jun, Heewoo; Kirchner, Hendrik; Pinto, Henrique Ponde de Oliveira; Ren, Hongyu; Chang, Huiwen; Chung, Hyung Won; Kivlichan, Ian; O'Connell, Ian; O'Connell, Ian; Osband, Ian; Silber, Ian; Sohl, Ian; Okuyucu, Ibrahim; Lan, Ikai; Kostrikov, Ilya; Sutskever, Ilya; Kanitscheider, Ingmar; Gulrajani, Ishaan; Coxon, Jacob; Menick, Jacob; Pachocki, Jakub; Aung, James; Betker, James; Crooks, James; Lennon, James; Kiros, Jamie; Leike, Jan; Park, Jane; Kwon, Jason; Phang, Jason; Teplitz, Jason; Wei, Jason; Wolfe, Jason; Chen, Jay; Harris, Jeff; Varavva, Jenia; Lee, Jessica Gan; Shieh, Jessica; Lin, Ji; Yu, Jiahui; Weng, Jiayi; Tang, Jie; Yu, Jieqi; Jang, Joanne; Candela, Joaquin Quinonero; Beutler, Joe; Landers, Joe; Parish, Joel; Heidecke, Johannes; Schulman, John; Lachman, Jonathan; McKay, Jonathan; Uesato, Jonathan; Ward, Jonathan; Kim, Jong Wook; Huizinga, Joost; Sitkin, Jordan; Kraaijeveld, Jos; Gross, Josh; Kaplan, Josh; Snyder, Josh; Achiam, Joshua; Jiao, Joy; Lee, Joyce; Zhuang, Juntang; Harriman, Justyn; Fricke, Kai; Hayashi, Kai; Singhal, Karan; Shi, Katy; Karthik, Kavin; Wood, Kayla; Rimbach, Kendra; Hsu, Kenny; Nguyen, Kenny; Gu-Lemberg, Keren; Button, Kevin; Liu, Kevin; Howe, Kiel; Muthukumar, Krithika; Luther, Kyle; Ahmad, Lama; Kai, Larry; Itow, Lauren; Workman, Lauren; Pathak, Leher; Chen, Leo; Jing, Li; Guy, Lia; Fedus, Liam; Zhou, Liang; Mamitsuka, Lien; Weng, Lilian; McCallum, Lindsay; Held, Lindsey; Ouyang, Long; Feuvrier, Louis; Zhang, Lu; Kondraciuk, Lukas; Kaiser, Lukasz; Hewitt, Luke; Metz, Luke; Doshi, Lyric; Aflak, Mada; Simens, Maddie; Boyd, Madelaine; Thompson, Madeleine; Dukhan, Marat; Chen, Mark; Gray, Mark; Hudnall, Mark; Zhang, Marvin; Aljubeh, Marwan; Litwin, Mateusz; Zeng, Matthew; Johnson, Max; Shetty, Maya; Gupta, Mayank; Shah, Meghan; Yatbaz, Mehmet; Yang, Meng Jia; Zhong, Mengchao; Glaese, Mia; Chen, Mianna; Janner, Michael; Lampe, Michael; Petrov, Michael; Wu, Michael; Wang, Michele; Fradin, Michelle; Pokrass, Michelle; Castro, Miguel; Castro, Miguel Oom Temudo de; Pavlov, Mikhail; Brundage, Miles; Wang, Miles; Khan, Minal; Murati, Mira; Bavarian, Mo; Lin, Molly; Yesildal, Murat; Soto, Nacho; Gimelshein, Natalia; Cone, Natalie; Staudacher, Natalie; Summers, Natalie; LaFontaine, Natan; Chowdhury, Neil; Ryder, Nick; Stathas, Nick; Turley, Nick; Tezak, Nik; Felix, Niko; Kudige, Nithanth; Keskar, Nitish; Deutsch, Noah; Bundick, Noel; Puckett, Nora; Nachum, Ofir; Okelola, Ola; Boiko, Oleg; Murk, Oleg; Jaffe, Oliver; Watkins, Olivia; Godement, Olivier; Campbell-Moore, Owen; Chao, Patrick; McMillan, Paul; Belov, Pavel; Su, Peng; Bak, Peter; Bakkum, Peter; Deng, Peter; Dolan, Peter; Hoeschele, Peter; Welinder, Peter; Tillet, Phil; Pronin, Philip; Tillet, Philippe; Dhariwal, Prafulla; Yuan, Qiming; Dias, Rachel; Lim, Rachel; Arora, Rahul; Troll, Rajan; Lin, Randall; Lopes, Rapha Gontijo; Puri, Raul; Miyara, Reah; Leike, Reimar; Gaubert, Renaud; Zamani, Reza; Wang, Ricky; Donnelly, Rob; Honsby, Rob; Smith, Rocky; Sahai, Rohan; Ramchandani, Rohit; Huet, Romain; Carmichael, Rory; Zellers, Rowan; Chen, Roy; Chen, Ruby; Nigmatullin, Ruslan; Cheu, Ryan; Jain, Saachi; Altman, Sam; Schoenholz, Sam; Toizer, Sam; Miserendino, Samuel; Agarwal, Sandhini; Culver, Sara; Ethersmith, Scott; Gray, Scott; Grove, Sean; Metzger, Sean; Hermani, Shamez; Jain, Shantanu; Zhao, Shengjia; Wu, Sherwin; Jomoto, Shino; Wu, Shirong; Shuaiqi; Xia; Phene, Sonia; Papay, Spencer; Narayanan, Srinivas; Coffey, Steve; Lee, Steve; Hall, Stewart; Balaji, Suchir; Broda, Tal; Stramer, Tal; Xu, Tao; Gogineni, Tarun; Christianson, Taya; Sanders, Ted; Patwardhan, Tejal; Cunninghman, Thomas; Degry, Thomas; Dimson, Thomas; Raoux, Thomas; Shadwell, Thomas; Zheng, Tianhao; Underwood, Todd; Markov, Todor; Sherbakov, Toki; Rubin, Tom; Stasi, Tom; Kaftan, Tomer; Heywood, Tristan; Peterson, Troy; Walters, Tyce; Eloundou, Tyna; Qi, Valerie; Moeller, Veit; Monaco, Vinnie; Kuo, Vishal; Fomenko, Vlad; Chang, Wayne; Zheng, Weiyi; Zhou, Wenda; Manassra, Wesam; Sheu, Will; Zaremba, Wojciech; Patil, Yash; Qian, Yilei; Kim, Yongjik; Cheng, Youlong; Zhang, Yu; He, Yuchen; Zhang, Yuchen; Jin, Yujia; Dai, Yunxing; Malkov, Yury",
    "type": "unknown",
    "types_all": [
@@ -2198,28 +2244,6 @@
     "RRG8PNSF"
    ],
    "mention_count": 26
-  },
-  {
-   "name": "Deloitte",
-   "type": "Other",
-   "types_all": [
-    "Other",
-    "Alignment research organisation"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "Meta"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "8ZIYRCKS",
-    "FPFBD8PV",
-    "GIIIBG2L",
-    "MFPTTXIQ"
-   ],
-   "mention_count": 24
   },
   {
    "name": "Meta Advanced AI Scaling Framework",
@@ -2328,22 +2352,6 @@
    "doc_ids": [
     "99337X5A",
     "SPHVWNI7"
-   ],
-   "mention_count": 22
-  },
-  {
-   "name": "Microsoft",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "United States",
-   "role": "AUTHOR",
-   "companies": [
-    "Microsoft"
-   ],
-   "doc_ids": [
-    "WXMFVFRR"
    ],
    "mention_count": 22
   },
@@ -2510,23 +2518,6 @@
    "mention_count": 21
   },
   {
-   "name": "U.S. Center for AI Standards and Innovation (CAISI)",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3SUD89YE",
-    "RPLQQPCF"
-   ],
-   "mention_count": 21
-  },
-  {
    "name": "Samuel Miserendino",
    "type": "Internal",
    "types_all": [
@@ -2542,26 +2533,6 @@
     "4HUNGMUD"
    ],
    "mention_count": 21
-  },
-  {
-   "name": "Irregular",
-   "type": "Red teaming or cybersecurity company",
-   "types_all": [
-    "Red teaming or cybersecurity company"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "OpenAI",
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GIIIBG2L",
-    "K58FEDKQ",
-    "N4W4H56I",
-    "YJ2AIUGY"
-   ],
-   "mention_count": 20
   },
   {
    "name": "Stephanie Lin",
@@ -2597,23 +2568,6 @@
    "doc_ids": [
     "7SUY4C2C",
     "D7Z5UE2D"
-   ],
-   "mention_count": 20
-  },
-  {
-   "name": "UK Artificial Intelligence Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GMPNNKLY",
-    "T8QMJ4FU"
    ],
    "mention_count": 20
   },
@@ -2667,27 +2621,6 @@
     "MHPBMVPF"
    ],
    "mention_count": 20
-  },
-  {
-   "name": "UK AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "UK",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "5R7U8TB8",
-    "KRAMCTRS",
-    "MFPTTXIQ",
-    "NWKEIQTV"
-   ],
-   "mention_count": 19
   },
   {
    "name": "external red teamers",
@@ -4699,6 +4632,25 @@
    "mention_count": 16
   },
   {
+   "name": "internal red teamers",
+   "type": "Multiple",
+   "types_all": [
+    "Multiple"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "Google",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "KB8A5XVE",
+    "PHYRYVJT",
+    "ZL6I8Y5P"
+   ],
+   "mention_count": 16
+  },
+  {
    "name": "Phuong et al. (2024)",
    "type": "Academic or research center",
    "types_all": [
@@ -5051,29 +5003,6 @@
    "mention_count": 14
   },
   {
-   "name": "UK AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "xAI",
-    "OpenAI",
-    "Meta"
-   ],
-   "doc_ids": [
-    "4IMQLENM",
-    "4MWVRCZ7",
-    "UKHJ828E",
-    "VPJH7HCT",
-    "VPT2QWIY",
-    "ZLJDDH77"
-   ],
-   "mention_count": 14
-  },
-  {
    "name": "Frontier Model Forum",
    "type": "Multiple",
    "types_all": [
@@ -5251,6 +5180,24 @@
    ],
    "doc_ids": [
     "SPHVWNI7"
+   ],
+   "mention_count": 13
+  },
+  {
+   "name": "White House",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "Google",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "UQB78Y8K",
+    "VDZ53THM"
    ],
    "mention_count": 13
   },
@@ -5804,22 +5751,6 @@
    "mention_count": 12
   },
   {
-   "name": "White House",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Google"
-   ],
-   "doc_ids": [
-    "UQB78Y8K"
-   ],
-   "mention_count": 12
-  },
-  {
    "name": "U.S. Executive Order on Safe, Secure, and Trustworthy Artificial Intelligence",
    "type": "Government agency",
    "types_all": [
@@ -6196,25 +6127,6 @@
    "doc_ids": [
     "5NFN4UQV",
     "VTFCKJR3"
-   ],
-   "mention_count": 11
-  },
-  {
-   "name": "Deloitte",
-   "type": "Other",
-   "types_all": [
-    "Other",
-    "Alignment research organisation"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "8AC5MJHG",
-    "IAZRTFQL"
    ],
    "mention_count": 11
   },
@@ -6827,23 +6739,6 @@
    "mention_count": 9
   },
   {
-   "name": "Google",
-   "type": "Other AI company",
-   "types_all": [
-    "Other AI company"
-   ],
-   "based_in": "United Kingdom",
-   "role": "AUTHOR",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "HEH4A2T4",
-    "XDD2C2KI"
-   ],
-   "mention_count": 9
-  },
-  {
    "name": "Benjamin Arnav",
    "type": "Internal",
    "types_all": [
@@ -7110,22 +7005,6 @@
     "FPFBD8PV",
     "IAZRTFQL",
     "NWKEIQTV"
-   ],
-   "mention_count": 8
-  },
-  {
-   "name": "internal red teamers",
-   "type": "Multiple",
-   "types_all": [
-    "Multiple"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Google"
-   ],
-   "doc_ids": [
-    "PHYRYVJT"
    ],
    "mention_count": 8
   },
@@ -7798,24 +7677,6 @@
    "mention_count": 7
   },
   {
-   "name": "US Center for AI Standards and Innovation",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "OpenAI",
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "KRAMCTRS"
-   ],
-   "mention_count": 7
-  },
-  {
    "name": "Google's Generative AI policies",
    "type": "Internal",
    "types_all": [
@@ -8179,24 +8040,6 @@
    "mention_count": 7
   },
   {
-   "name": "UK AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "Google",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "2EBEJNA4",
-    "TCQMFVXH"
-   ],
-   "mention_count": 7
-  },
-  {
    "name": "Joslyn Barnhart",
    "type": "Internal",
    "types_all": [
@@ -8408,20 +8251,18 @@
    "mention_count": 7
   },
   {
-   "name": "Gray Swan AI",
-   "type": "Red teaming or cybersecurity company",
+   "name": "Qwen",
+   "type": "Internal",
    "types_all": [
-    "Red teaming or cybersecurity company",
-    "Other AI company"
+    "Internal"
    ],
-   "based_in": "United States",
-   "role": "CITED",
+   "based_in": "China",
+   "role": "AUTHOR",
    "companies": [
-    "OpenAI"
+    "Qwen"
    ],
    "doc_ids": [
-    "4MWVRCZ7",
-    "UFSBGMYG"
+    "policy-qwen-chat-privacy-policy"
    ],
    "mention_count": 7
   },
@@ -8964,22 +8805,6 @@
    "mention_count": 6
   },
   {
-   "name": "internal red teamers",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "KB8A5XVE"
-   ],
-   "mention_count": 6
-  },
-  {
    "name": "Lysios LLC",
    "type": "Red teaming or cybersecurity company",
    "types_all": [
@@ -9027,6 +8852,23 @@
    "doc_ids": [
     "35VW7BYZ",
     "TCQMFVXH"
+   ],
+   "mention_count": 6
+  },
+  {
+   "name": "International Organization for Standardization",
+   "type": "Standards body",
+   "types_all": [
+    "Standards body"
+   ],
+   "based_in": "Switzerland",
+   "role": "CITED",
+   "companies": [
+    "Google"
+   ],
+   "doc_ids": [
+    "2PQ85UE8",
+    "Z3HFLRZ8"
    ],
    "mention_count": 6
   },
@@ -9128,10 +8970,9 @@
   },
   {
    "name": "Chan et al.",
-   "type": "Alignment research organisation",
+   "type": "Academic or research center",
    "types_all": [
-    "Alignment research organisation",
-    "Internal"
+    "Academic or research center"
    ],
    "based_in": "unknown",
    "role": "",
@@ -9422,24 +9263,6 @@
    "mention_count": 5
   },
   {
-   "name": "US Center for AI Standards and Innovation",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "2EBEJNA4",
-    "MFPTTXIQ"
-   ],
-   "mention_count": 5
-  },
-  {
    "name": "DeepSeek expert team",
    "type": "Multiple",
    "types_all": [
@@ -9682,24 +9505,6 @@
    ],
    "doc_ids": [
     "GXPBCGLT"
-   ],
-   "mention_count": 5
-  },
-  {
-   "name": "US Center for AI Standards and Innovation",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Meta",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "4MWVRCZ7",
-    "ZLJDDH77"
    ],
    "mention_count": 5
   },
@@ -10471,22 +10276,6 @@
    "mention_count": 5
   },
   {
-   "name": "International Organization for Standardization",
-   "type": "Standards body",
-   "types_all": [
-    "Standards body"
-   ],
-   "based_in": "Switzerland",
-   "role": "CITED",
-   "companies": [
-    "Google"
-   ],
-   "doc_ids": [
-    "Z3HFLRZ8"
-   ],
-   "mention_count": 5
-  },
-  {
    "name": "HELM",
    "type": "Academic or research center",
    "types_all": [
@@ -10535,23 +10324,6 @@
    ],
    "doc_ids": [
     "KRAMCTRS",
-    "N4W4H56I",
-    "YJ2AIUGY"
-   ],
-   "mention_count": 4
-  },
-  {
-   "name": "U.S. Center on Artificial Intelligence Standards and Innovation (CAISI)",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
     "N4W4H56I",
     "YJ2AIUGY"
    ],
@@ -10993,23 +10765,6 @@
    "mention_count": 4
   },
   {
-   "name": "U.S. AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "MIXED",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "4AGTLHJ3",
-    "K58FEDKQ"
-   ],
-   "mention_count": 4
-  },
-  {
    "name": "Google Cloud Natural Language API",
    "type": "Internal",
    "types_all": [
@@ -11316,20 +11071,6 @@
    "companies": [],
    "doc_ids": [
     "XDD2C2KI"
-   ],
-   "mention_count": 4
-  },
-  {
-   "name": "U.S. Artificial Intelligence Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "AUTHOR",
-   "companies": [],
-   "doc_ids": [
-    "4AGTLHJ3"
    ],
    "mention_count": 4
   },
@@ -12076,22 +11817,6 @@
     "Internal"
    ],
    "based_in": "Singapore",
-   "role": "AUTHOR",
-   "companies": [
-    "Qwen"
-   ],
-   "doc_ids": [
-    "policy-qwen-chat-privacy-policy"
-   ],
-   "mention_count": 4
-  },
-  {
-   "name": "Qwen",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "China",
    "role": "AUTHOR",
    "companies": [
     "Qwen"
@@ -13290,20 +13015,6 @@
    "mention_count": 3
   },
   {
-   "name": "UK AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [],
-   "doc_ids": [
-    "4AGTLHJ3"
-   ],
-   "mention_count": 3
-  },
-  {
    "name": "governments",
    "type": "Government agency",
    "types_all": [
@@ -14326,22 +14037,6 @@
    ],
    "doc_ids": [
     "policy-llama-api-(meta)-privacy-policy"
-   ],
-   "mention_count": 3
-  },
-  {
-   "name": "Qwen",
-   "type": "unknown",
-   "types_all": [
-    "unknown"
-   ],
-   "based_in": "China",
-   "role": "AUTHOR",
-   "companies": [
-    "Qwen"
-   ],
-   "doc_ids": [
-    "policy-qwen-chat-privacy-policy"
    ],
    "mention_count": 3
   },
@@ -15449,22 +15144,6 @@
    "mention_count": 2
   },
   {
-   "name": "UK AI Safety Institute",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United Kingdom",
-   "role": "CITED",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "K58FEDKQ"
-   ],
-   "mention_count": 2
-  },
-  {
    "name": "Wikimedia Foundation",
    "type": "Foundation",
    "types_all": [
@@ -16294,22 +15973,6 @@
    ],
    "based_in": "unknown",
    "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "ZL6I8Y5P"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "internal red teamers",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
    "companies": [
     "OpenAI"
    ],
@@ -20714,22 +20377,6 @@
    "mention_count": 1
   },
   {
-   "name": "White House",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "VDZ53THM"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "U.S. Department of Energy",
    "type": "Government agency",
    "types_all": [
@@ -23258,22 +22905,6 @@
    "mention_count": 1
   },
   {
-   "name": "International Organization for Standardization",
-   "type": "Standards body",
-   "types_all": [
-    "Standards body"
-   ],
-   "based_in": "Switzerland",
-   "role": "CITED",
-   "companies": [
-    "Google"
-   ],
-   "doc_ids": [
-    "2PQ85UE8"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "Senate Bipartisan AI Working Group",
    "type": "Government agency",
    "types_all": [
@@ -25052,22 +24683,6 @@
    "mention_count": 1
   },
   {
-   "name": "Meta",
-   "type": "Multiple",
-   "types_all": [
-    "Multiple"
-   ],
-   "based_in": "United States",
-   "role": "AUTHOR",
-   "companies": [
-    "Meta"
-   ],
-   "doc_ids": [
-    "policy-llama-api-(meta)-privacy-policy"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "trusted service provider",
    "type": "Other",
    "types_all": [
@@ -25112,22 +24727,6 @@
    ],
    "doc_ids": [
     "policy-llama-api-(meta)-privacy-policy"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Meta",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "Ireland",
-   "role": "AUTHOR",
-   "companies": [
-    "Meta"
-   ],
-   "doc_ids": [
-    "policy-meta-ai-(meta)-terms-of-service"
    ],
    "mention_count": 1
   },
@@ -25671,11 +25270,11 @@
      "type": "Alignment research organisation"
     },
     {
-     "name": "U.S. Center on Artificial Intelligence Standards and Innovation (CAISI)",
+     "name": "US Center for AI Standards and Innovation",
      "type": "Government agency"
     },
     {
-     "name": "UK AI Security Institute (UK AISI)",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -25899,7 +25498,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -26190,7 +25789,7 @@
      "type": "Government agency"
     },
     {
-     "name": "UK AI Security Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -28031,7 +27630,7 @@
      "type": "Alignment research organisation"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -28859,7 +28458,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "UK Artificial Intelligence Safety Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -29311,7 +28910,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "UK AI Security Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -29543,7 +29142,7 @@
      "type": "Red teaming or cybersecurity company"
     },
     {
-     "name": "UK AI Security Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -30795,7 +30394,7 @@
      "type": "Red teaming or cybersecurity company"
     },
     {
-     "name": "UK AI Security Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -30878,7 +30477,7 @@
    "policy_type": "",
    "company": "Anthropic",
    "company_model": "Claude 3.5 Sonnet",
-   "actors": "Anthropic | UK Artificial Intelligence Safety Institute | U.S. Department of Commerce | METR",
+   "actors": "Anthropic | UK AI Safety Institute | U.S. Department of Commerce | METR",
    "actor_types_raw": "Internal | Government agency | Government agency | Alignment research organisation",
    "actor_types": [
     "Alignment research organisation",
@@ -30915,7 +30514,7 @@
    ],
    "cited_actors": [
     {
-     "name": "UK Artificial Intelligence Safety Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -32810,11 +32409,11 @@
      "type": "Academic or research center"
     },
     {
-     "name": "US AISI",
+     "name": "US AI Safety Institute",
      "type": "Government agency"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -33307,7 +32906,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -33401,7 +33000,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -35243,7 +34842,7 @@
    "policy_type": "",
    "company": "",
    "company_model": "",
-   "actors": "U.S. Artificial Intelligence Safety Institute | National Institute of Standards and Technology | Anthropic | OpenAI | U.K. AI Safety Institute | Howard Lutnick | Elizabeth Kelly | Biden-Harris administration",
+   "actors": "US AI Safety Institute | National Institute of Standards and Technology | Anthropic | OpenAI | UK AI Safety Institute | Howard Lutnick | Elizabeth Kelly | Biden-Harris administration",
    "actor_types_raw": "Government agency | Government agency | Other AI company | Other AI company | Government agency | Government agency | Government agency | Government agency",
    "actor_types": [
     "Government agency",
@@ -35259,7 +34858,7 @@
    "benchmark_ids": [],
    "author_actors": [
     {
-     "name": "U.S. Artificial Intelligence Safety Institute",
+     "name": "US AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -35275,7 +34874,7 @@
      "type": "Other AI company"
     },
     {
-     "name": "U.K. AI Safety Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -36779,7 +36378,7 @@
      "type": "Academic or research center"
     },
     {
-     "name": "U.S. Center for AI Standards and Innovation (CAISI)",
+     "name": "US Center for AI Standards and Innovation",
      "type": "Government agency"
     },
     {
@@ -36791,7 +36390,7 @@
      "type": "Red teaming or cybersecurity company"
     },
     {
-     "name": "UK AI Security Institute (UK AISI)",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -37234,11 +36833,11 @@
      "type": "Alignment research organisation"
     },
     {
-     "name": "U.S. Center for AI Standards and Innovation (CAISI)",
+     "name": "US Center for AI Standards and Innovation",
      "type": "Government agency"
     },
     {
-     "name": "UK AI Security Institute (UK AISI)",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -38150,7 +37749,7 @@
      "type": "Government agency"
     },
     {
-     "name": "UK AI Security Institute",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -39536,11 +39135,11 @@
      "type": "Alignment research organisation"
     },
     {
-     "name": "U.S. Center on Artificial Intelligence Standards and Innovation (CAISI)",
+     "name": "US Center for AI Standards and Innovation",
      "type": "Government agency"
     },
     {
-     "name": "UK AI Security Institute (UK AISI)",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     }
    ],
@@ -41108,14 +40707,14 @@
    "cited_actors": [
     {
      "name": "Chan et al.",
-     "type": "Alignment research organisation"
+     "type": "Academic or research center"
     }
    ],
    "author_actor_types": [
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Academic or research center"
    ]
   },
   {
@@ -44603,7 +44202,7 @@
    "policy_type": "",
    "company": "OpenAI",
    "company_model": "OpenAI o1",
-   "actors": "OpenAI | US AISI | UK AISI | Apollo Research | METR | Gray Swan AI | Gryphon Scientific | Signature Science | Ranger | SecureBio | FutureHouse | Jake Hecla",
+   "actors": "OpenAI | US AI Safety Institute | UK AI Safety Institute | Apollo Research | METR | Gray Swan AI | Gryphon Scientific | Signature Science | Ranger | SecureBio | FutureHouse | Jake Hecla",
    "actor_types_raw": "Internal | Government agency | Government agency | Alignment research organisation | Alignment research organisation | Red teaming or cybersecurity company | Alignment research organisation | Alignment research organisation | Other | Alignment research organisation | Alignment research organisation | Academic or research center",
    "actor_types": [
     "Academic or research center",
@@ -44613,7 +44212,7 @@
     "Other",
     "Red teaming or cybersecurity company"
    ],
-   "primary_actor_type": "Internal",
+   "primary_actor_type": "Multiple",
    "conduct_ids": [],
    "risk_ids": [
     "risk__openai__chemical-and-biological-threat-creation",
@@ -44668,16 +44267,16 @@
     },
     {
      "name": "Chan et al.",
-     "type": "Internal"
+     "type": "Academic or research center"
     }
    ],
    "cited_actors": [
     {
-     "name": "US AISI",
+     "name": "US AI Safety Institute",
      "type": "Government agency"
     },
     {
-     "name": "UK AISI",
+     "name": "UK AI Safety Institute",
      "type": "Government agency"
     },
     {
@@ -44742,10 +44341,10 @@
     }
    ],
    "author_actor_types": [
+    "Academic or research center",
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center",
     "Alignment research organisation",
     "Government agency",
     "Other",
@@ -49391,9 +48990,9 @@
     "9, 25"
    ],
    "specific_actor": "Chan et al.",
-   "specific_actor_type": "Alignment research organisation",
+   "specific_actor_type": "Academic or research center",
    "external_evaluator": "",
-   "actor_type": "Alignment research organisation",
+   "actor_type": "Academic or research center",
    "mentions": 2,
    "training_ids": [
     "train__openai__honesty__null"
@@ -49406,10 +49005,10 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Academic or research center"
    ],
    "all_actor_types": [
-    "Alignment research organisation",
+    "Academic or research center",
     "Internal"
    ],
    "from_policy": false,
@@ -52090,7 +51689,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Center on Artificial Intelligence Standards and Innovation (CAISI) | UK AI Security Institute (UK AISI)",
+   "external_evaluator": "US Center for AI Standards and Innovation | UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -52566,7 +52165,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK AISI",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [
@@ -53942,9 +53541,9 @@
    "pages": [
     "122"
    ],
-   "specific_actor": "US AI Safety Institute | UK AI Security Institute",
+   "specific_actor": "US AI Safety Institute | UK AI Safety Institute",
    "specific_actor_type": "Other",
-   "external_evaluator": "US AI Safety Institute | UK AI Security Institute",
+   "external_evaluator": "US AI Safety Institute | UK AI Safety Institute",
    "actor_type": "Other",
    "mentions": 1,
    "training_ids": [],
@@ -57242,6 +56841,7 @@
     "bench__openai__autonomy__swe-lancer"
    ],
    "author_actor_types": [
+    "Academic or research center",
     "Internal",
     "Other AI company",
     "Think tank or policy institute"
@@ -57250,6 +56850,7 @@
     "Internal"
    ],
    "all_actor_types": [
+    "Academic or research center",
     "Internal",
     "Other AI company",
     "Think tank or policy institute"
@@ -59054,7 +58655,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "UK Artificial Intelligence Safety Institute",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -59093,7 +58694,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "UK Artificial Intelligence Safety Institute | METR",
+   "external_evaluator": "UK AI Safety Institute | METR",
    "actor_type": "Internal",
    "mentions": 3,
    "training_ids": [
@@ -59135,7 +58736,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "UK Artificial Intelligence Safety Institute | METR",
+   "external_evaluator": "UK AI Safety Institute | METR",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [
@@ -59175,7 +58776,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "UK Artificial Intelligence Safety Institute | METR",
+   "external_evaluator": "UK AI Safety Institute | METR",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [
@@ -60143,7 +59744,7 @@
    ],
    "specific_actor": "Marks et al.",
    "specific_actor_type": "Academic or research center",
-   "external_evaluator": "UK AI Security Institute",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Academic or research center",
    "mentions": 2,
    "training_ids": [
@@ -60401,7 +60002,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK AI Security Institute",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [],
@@ -60980,7 +60581,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK AI Security Institute",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [],
@@ -64072,7 +63673,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK AI Security Institute",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 4,
    "training_ids": [
@@ -64180,9 +63781,9 @@
     "30",
     "42"
    ],
-   "specific_actor": "UK AI Security Institute (UK AISI)",
+   "specific_actor": "UK AI Safety Institute",
    "specific_actor_type": "Government agency",
-   "external_evaluator": "UK AI Security Institute (UK AISI)",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Government agency",
    "mentions": 3,
    "training_ids": [
@@ -64667,7 +64268,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK Artificial Intelligence Safety Institute | METR",
+   "external_evaluator": "UK AI Safety Institute | METR",
    "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [
@@ -65466,7 +65067,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. AI Safety Institute | U.K. AI Security Institute | Pattern Labs",
+   "external_evaluator": "US AI Safety Institute | UK AI Safety Institute | Pattern Labs",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -65499,7 +65100,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. AI Safety Institute | U.K. AI Security Institute | Pattern Labs",
+   "external_evaluator": "US AI Safety Institute | UK AI Safety Institute | Pattern Labs",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -69128,7 +68729,7 @@
    ],
    "specific_actor": "Meta Advanced AI Scaling Framework",
    "specific_actor_type": "Internal",
-   "external_evaluator": "US AISI | UK AISI",
+   "external_evaluator": "US AI Safety Institute | UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 10,
    "training_ids": [
@@ -70553,7 +70154,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "UK AISI",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [],
@@ -74338,7 +73939,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Artificial Intelligence Safety Institute | U.K. AI Safety Institute",
+   "external_evaluator": "US AI Safety Institute | UK AI Safety Institute",
    "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [],
@@ -74369,7 +73970,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Artificial Intelligence Safety Institute",
+   "external_evaluator": "US AI Safety Institute",
    "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [],
@@ -76321,9 +75922,9 @@
    "pages": [
     "27"
    ],
-   "specific_actor": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "specific_actor": "US Center for AI Standards and Innovation",
    "specific_actor_type": "Government agency",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Government agency",
    "mentions": 1,
    "training_ids": [
@@ -76394,9 +75995,9 @@
     "10, 17-18, 22",
     "33"
    ],
-   "specific_actor": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "specific_actor": "US Center for AI Standards and Innovation",
    "specific_actor_type": "Government agency",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Government agency",
    "mentions": 4,
    "training_ids": [
@@ -76437,9 +76038,9 @@
    "pages": [
     "33"
    ],
-   "specific_actor": "UK AI Security Institute (UK AISI)",
+   "specific_actor": "UK AI Safety Institute",
    "specific_actor_type": "Government agency",
-   "external_evaluator": "UK AI Security Institute (UK AISI)",
+   "external_evaluator": "UK AI Safety Institute",
    "actor_type": "Government agency",
    "mentions": 2,
    "training_ids": [
@@ -77457,7 +77058,7 @@
    ],
    "specific_actor": "OpenAI",
    "specific_actor_type": "Internal",
-   "external_evaluator": "UK AI Security Institute (UK AISI) | U.S. Center for AI Standards and Innovation (CAISI)",
+   "external_evaluator": "UK AI Safety Institute | US Center for AI Standards and Innovation",
    "actor_type": "Internal",
    "mentions": 5,
    "training_ids": [
@@ -78246,7 +77847,7 @@
    ],
    "specific_actor": "OpenAI",
    "specific_actor_type": "Internal",
-   "external_evaluator": "US Center for AI Standards and Innovation | UK AI Security Institute",
+   "external_evaluator": "US Center for AI Standards and Innovation | UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -78743,7 +78344,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Center on Artificial Intelligence Standards and Innovation (CAISI) | UK AI Security Institute (UK AISI)",
+   "external_evaluator": "US Center for AI Standards and Innovation | UK AI Safety Institute",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -102264,7 +101865,7 @@
    "actor_type_raw": "Internal",
    "actor_type": "Internal",
    "all_actor_types": [
-    "Alignment research organisation",
+    "Academic or research center",
     "Internal"
    ],
    "pages": [
@@ -102286,7 +101887,7 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Academic or research center"
    ]
   },
   {
@@ -105466,7 +105067,7 @@
    "training_category": "Hard constraints",
    "item": "Instruction hierarchy",
    "verbatim": "CAISI was provided access to a representative launch checkpoint and a checkpoint with reduced refusals for biological capabilities testing.",
-   "actor": "OpenAI | U.S. Center for AI Standards and Innovation (CAISI)",
+   "actor": "OpenAI | US Center for AI Standards and Innovation",
    "actor_type_raw": "Internal | Government agency",
    "actor_type": "Multiple",
    "all_actor_types": [
@@ -105501,7 +105102,7 @@
    "training_category": "Hard constraints",
    "item": "Instruction hierarchy",
    "verbatim": "The CAISI was provided access to a representative launch checkpoint and a checkpoint with reduced refusals for cyber capabilities.",
-   "actor": "OpenAI | U.S. Center for AI Standards and Innovation (CAISI)",
+   "actor": "OpenAI | US Center for AI Standards and Innovation",
    "actor_type_raw": "Internal | Government agency",
    "actor_type": "Multiple",
    "all_actor_types": [
@@ -105565,7 +105166,7 @@
    "training_category": "Adversarial training|Inference-time filtering|Runtime safeguards",
    "item": "Adversarial training|Inference-time filtering|Runtime safeguards",
    "verbatim": "OpenAI subsequently made several updates to the safeguard stack",
-   "actor": "OpenAI | UK AI Security Institute (UK AISI)",
+   "actor": "OpenAI | UK AI Safety Institute",
    "actor_type_raw": "Internal | Government agency",
    "actor_type": "Multiple",
    "all_actor_types": [
@@ -115650,6 +115251,7 @@
     "Internal"
    ],
    "cited_actor_types": [
+    "Academic or research center",
     "Internal",
     "Other AI company"
    ],
@@ -122453,7 +122055,7 @@
    "category": "Misalignment",
    "benchmark_category": "Capability — reasoning",
    "name": "UK AISI’s Theory of Mind",
-   "author": "UK AISI",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -127668,7 +127270,7 @@
    "category": "Misalignment",
    "benchmark_category": "Internal evaluation suite",
    "name": "UK AISI open-ended testing",
-   "author": "UK AI Security Institute",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -128486,7 +128088,7 @@
    "category": "Misalignment",
    "benchmark_category": "Misalignment / Scheming",
    "name": "UK AISI testing for sabotage of AI safety research and evaluation awareness",
-   "author": "UK AI Security Institute",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -139695,7 +139297,7 @@
    "category": "CBRN",
    "benchmark_category": "CBRN",
    "name": "US CAISI biological capabilities testing",
-   "author": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "author": "US Center for AI Standards and Innovation",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -139831,7 +139433,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "CTF challenges",
-   "author": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "author": "US Center for AI Standards and Innovation",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -139864,7 +139466,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "vulnerability discovery benchmark",
-   "author": "U.S. Center for AI Standards and Innovation (CAISI)",
+   "author": "US Center for AI Standards and Innovation",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -139897,7 +139499,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "expert-level narrow cyber tasks",
-   "author": "UK AI Security Institute (UK AISI)",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -139930,7 +139532,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "UK AISI’s cyber ranges",
-   "author": "UK AI Security Institute (UK AISI)",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -140158,7 +139760,7 @@
    "category": "Jailbreaking",
    "benchmark_category": "Cybersecurity",
    "name": "UK AISI Cyber Safeguard Testing",
-   "author": "UK AI Security Institute (UK AISI)",
+   "author": "UK AI Safety Institute",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -143382,7 +142984,7 @@
    "category": "Jailbreaking",
    "benchmark_category": "Internal evaluation suite",
    "name": "External government red teaming",
-   "author": "US Center for AI Standards and Innovation | UK AI Security Institute",
+   "author": "US Center for AI Standards and Innovation | UK AI Safety Institute",
    "author_type_raw": "Government agency | Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -146604,7 +146206,7 @@
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
-    "Alignment research organisation",
+    "Academic or research center",
     "Internal"
    ],
    "pages": [
@@ -146623,7 +146225,7 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Academic or research center"
    ],
    "actor_type": "Internal"
   },
@@ -146637,7 +146239,7 @@
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
-    "Alignment research organisation",
+    "Academic or research center",
     "Internal"
    ],
    "pages": [
@@ -146656,7 +146258,7 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Academic or research center"
    ],
    "actor_type": "Internal"
   },

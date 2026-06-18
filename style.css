@@ -1115,12 +1115,9 @@ body.commitment .sq.sq-commit { border-radius: 50%; }
   font-weight: 400; font-style: normal; font-display: swap; }
 .cluster-pane h4 { font-family: "Test National Book", var(--sans); font-weight: 400; }
 
-/* Card actor-pill highlighted when its type matches the selected sidebar actor */
-.actor-pill.sel {
-  box-shadow: 0 0 0 1.5px var(--accent);
-  border-radius: 3px; padding: 0 3px;
-  background: #f7e7df;
-}
+/* Card actor-pill dimmed to grey when it is NOT part of the sidebar selection */
+.actor-pill.dim { opacity: 0.32; filter: grayscale(1); }
+.actor-pill.dim .type-chip { background: #c8c8c8 !important; }
 
 /* Stack tooltip — evidence quote */
 #stack-tooltip .tip-quote {

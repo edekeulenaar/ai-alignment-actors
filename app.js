@@ -272,8 +272,9 @@ function topCompaniesBy(items) {
   // All companies represented in this block, sorted by item count.
   // Respects country/company filters, and the "Show all companies" toggle.
   const counts = {};
-  items.forEach(it => counts[it.company] = (counts[it.company]||0)+1);
-  let cos = Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c])=>c);
+  items.forEach(it => { if (it.company) counts[it.company] = (counts[it.company]||0)+1; });
+  let cos = Object.entries(counts).sort((a,b)=>b[1]-a[1]).map(([c])=>c)
+    .filter(c => c && STATE.data.companies.some(x => x.name === c));
   if (STATE.selectedCompanies.size) cos = cos.filter(c => STATE.selectedCompanies.has(c));
   if (STATE.selectedCountries.size) {
     const ok = new Set(STATE.data.companies.filter(c => STATE.selectedCountries.has(c.country)).map(c=>c.name));
@@ -615,45 +616,76 @@ function authorsAndCitedOf(it) {
     cited:   [...cited.entries()  ].map(([name, type]) => ({ name, type })),
   };
 }
+// A coloured swatch + label for a single actor type.
+function typeSwatch(type) {
+  const c = ACTOR_COLOR_HEX[type] || ACTOR_COLOR_HEX.unknown;
+  return `<span class="type-chip" style="background:${c}"></span>`;
+}
+// Explain why an item's square has its colour.
+function colourExplain(it) {
+  const t = it.actor_type || "unknown";
+  let why;
+  if (it.specific_actor) {
+    why = `category of the credited definer`;
+  } else if (t === "Multiple") {
+    const types = (it.author_actor_types || []).filter(Boolean);
+    why = types.length ? `several author categories — ${escape(types.join(", "))}`
+                       : `several author categories`;
+  } else {
+    why = `document-author category`;
+  }
+  return `${typeSwatch(t)}<strong>${escape(t)}</strong> <span class="tl-meta">(${why})</span>`;
+}
+// The primary definer of a conduct/risk (distinct from the doc's authors).
+function definerLine(it) {
+  if (it.specific_actor) {
+    return `${typeSwatch(it.specific_actor_type || "unknown")}${escape(it.specific_actor)} ` +
+           `<span class="tl-meta">(${escape(it.specific_actor_type || "unknown")})</span>`;
+  }
+  return `<span class="tl-meta">Not explicitly credited — defined inline by the document author(s).</span>`;
+}
+
 function itemToCard(it, blockId, nameKey) {
   const found = foundInBlock(it);
   const { authors, cited } = authorsAndCitedOf(it);
   const evalLine = it.external_evaluator
     ? `<dt>External evaluator</dt><dd>${escape(it.external_evaluator)}</dd>` : "";
+  const docActors =
+    `<dt>Document author(s)</dt><dd>${actorPills(authors, "author")}</dd>` +
+    (cited.length ? `<dt>Cited in the document</dt><dd>${actorPills(cited, "cited")}</dd>` : "");
 
   if (blockId === "training") {
     const trainActors = pairsFrom(it.actor, it.actor_type_raw);
     return `
       <h4>${escape(it.item)}</h4>
       ${it.verbatim ? `<div class="quote">"${escape(snippet(it.verbatim, 220))}"</div>` : ""}
+      <dt>Done by</dt><dd>${actorPills(trainActors)}</dd>
       <dt>Risk / conduct category</dt><dd>${escape(it.category)}</dd>
       <dt>Training method category</dt><dd>${escape(it.training_category || "—")}</dd>
       <dt>Found in</dt><dd>${found}</dd>
-      <dt>Done by</dt><dd>${actorPills(trainActors)}</dd>
-      <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
-      ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
+      ${docActors}`;
   }
 
   if (blockId === "benchmark") {
     const benchActors = pairsFrom(it.author, it.author_type_raw);
     return `
       <h4>${escape(it.name)}</h4>
+      <dt>Benchmark creator</dt><dd>${actorPills(benchActors)}</dd>
       <dt>Risk / conduct category</dt><dd>${escape(it.category)}</dd>
       <dt>Benchmark domain</dt><dd>${escape(it.benchmark_category || "—")}</dd>
       <dt>Found in</dt><dd>${found}</dd>
-      <dt>Benchmark creator</dt><dd>${actorPills(benchActors)}</dd>
-      <dt>Author of doc</dt><dd>${actorPills(authors)}</dd>
-      ${cited.length ? `<dt>Cited in doc</dt><dd>${actorPills(cited)}</dd>` : ""}`;
+      ${docActors}`;
   }
 
-  // conduct / risk
+  // conduct / risk — the primary DEFINER (who this risk/conduct is attributed
+  // to) is shown first and kept distinct from the document's authors & citations.
   return `
     <h4>${escape(it.item)}</h4>
     ${it.definition ? `<div class="quote">"${escape(snippet(it.definition, 220))}"</div>` : ""}
+    <dt>Primary definer</dt><dd>${definerLine(it)}</dd>
+    <dt>Square colour</dt><dd>${colourExplain(it)}</dd>
     <dt>Found in</dt><dd>${found}</dd>
-    <dt>Author</dt><dd>${actorPills(authors)}</dd>
-    ${cited.length ? `<dt>Cited</dt><dd>${actorPills(cited)}</dd>` : ""}
-    ${it.specific_actor ? `<dt>Defined by</dt><dd>${escape(it.specific_actor)} <span class="tl-meta">(${escape(it.specific_actor_type || "unknown")})</span></dd>` : ""}
+    ${docActors}
     ${evalLine}`;
 }
 const snippet = (s,n) => !s ? "" : (s.length>n ? s.slice(0,n).trim()+"…" : s);
@@ -795,7 +827,7 @@ function refreshSelectionState() {
     const mode = STATE.actorChipMode[t] || 0;
     el.classList.toggle("active", mode > 0);
     const lbl = el.querySelector(".chip-mode");
-    if (lbl) lbl.textContent = mode === 1 ? "  AUTHOR" : mode === 2 ? "  + CITED" : "";
+    if (lbl) lbl.textContent = mode === 1 ? "  AUTHOR" : mode === 2 ? "  CITED" : "";
   });
   document.querySelectorAll(".cat-label").forEach(el => {
     el.classList.toggle("active",
@@ -831,23 +863,20 @@ function refreshSelectionState() {
     if (hasCat   && catIds[type]   && catIds[type].has(id))        highlight = true;
     if (hasSearch && matchesSearch(type, id))                      highlight = true;
     // 3-state actor chip matching:
-    //   mode 1 (AUTHOR)         → this actor type AUTHORED the source document
-    //   mode 2 (AUTHOR + CITED) → this actor type is anywhere on the item
-    //                             (author OR cited)
-    // For the "multiple" chip: any item with >1 distinct types lights up.
+    //   mode 1 (AUTHOR) → this actor type AUTHORED the source document
+    //   mode 2 (CITED)  → this actor type is CITED in the source document
     if (hasActor) {
       const authors = (el.dataset.authorTypes||"").split("|").filter(Boolean);
       const cited   = (el.dataset.citedTypes ||"").split("|").filter(Boolean);
-      const union   = [...new Set([...authors, ...cited])];
       for (const t of STATE.selectedActorTypes) {
         const mode = STATE.actorChipMode[t] || 0;
-        if (t === "multiple") {
+        if (t === "Multiple") {
           if (mode === 1 && authors.length > 1) { highlight = true; break; }
-          if (mode === 2 && union.length   > 1) { highlight = true; break; }
+          if (mode === 2 && cited.length   > 1) { highlight = true; break; }
           continue;
         }
-        if (mode === 1 && authors.includes(t))                       { highlight = true; break; }
-        if (mode === 2 && (authors.includes(t) || cited.includes(t))){ highlight = true; break; }
+        if (mode === 1 && authors.includes(t)) { highlight = true; break; }
+        if (mode === 2 && cited.includes(t))   { highlight = true; break; }
       }
     }
     if (docIdsByYearModel) {
@@ -1379,16 +1408,24 @@ function updateExpandedYear() {
 }
 
 // Render an array of {name, type} as colour-coded chips.
-function actorPills(actors) {
+function actorPills(actors, section) {
   if (!actors || !actors.length) return `<span class="tl-meta">—</span>`;
   const sel = STATE.selectedActorTypes;
+  const active = sel && sel.size;
   return actors.map(a => {
     const type = a.type || "unknown";
     const c = ACTOR_COLOR_HEX[type] || ACTOR_COLOR_HEX.unknown;
-    // Highlight the pill when its type matches an actor chip selected in the
-    // sidebar, so the card shows where the selected actor sits (author / cited).
-    const hot = sel && sel.size && sel.has(type) ? " sel" : "";
-    return `<span class="actor-pill${hot}"><span class="type-chip" style="background:${c}"></span>${escape(a.name)} <span class="tl-meta">(${escape(type)})</span></span>`;
+    // When an actor chip is selected in the sidebar, dim (grey) the pills that
+    // are NOT part of the selection. In AUTHOR mode only author-section pills of
+    // the chosen type stay lit; in CITED mode only cited-section pills do.
+    let dim = "";
+    if (active && section) {
+      const mode = STATE.actorChipMode[type] || 0;
+      const inSel = sel.has(type) &&
+        ((section === "author" && mode === 1) || (section === "cited" && mode === 2));
+      if (!inSel) dim = " dim";
+    }
+    return `<span class="actor-pill${dim}"><span class="type-chip" style="background:${c}"></span>${escape(a.name)} <span class="tl-meta">(${escape(type)})</span></span>`;
   }).join(" ");
 }
 
