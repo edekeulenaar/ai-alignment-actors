@@ -645,16 +645,18 @@ body.view-named .sq {
   text-align: left;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   border-radius: 2px;
-  border: 1px solid var(--sq-bg, var(--ink));
-  /* Use a soft tint of the actor color rather than a solid block. */
-  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 22%, var(--paper));
+  border: 1px solid color-mix(in srgb, var(--sq-bg, var(--ink)) 55%, var(--paper));
+  /* Soft tint of the actor colour rather than a solid block, so the dark
+     label text stays legible. !important overrides the inline solid colour
+     that the compact view sets. */
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 24%, var(--paper)) !important;
 }
 body.view-named .sq:hover {
   transform: none;
-  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 40%, var(--paper));
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 40%, var(--paper)) !important;
 }
 body.view-named .sq.hl {
-  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 50%, var(--paper));
+  background: color-mix(in srgb, var(--sq-bg, var(--c-unknown)) 52%, var(--paper)) !important;
 }
 body.view-named .cat-cell:not(.docs-cell) {
   flex-direction: column; align-items: stretch; gap: 2px;
