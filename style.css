@@ -1154,3 +1154,11 @@ body.commitment .sq.sq-commit { border-radius: 50%; }
 #data-card .al-sub { font-family: var(--sans); font-size: 10.5px; color: var(--muted);
   margin-top: 0.1rem; text-transform: uppercase; letter-spacing: 0.3px; }
 #data-card .al-cnt { color: var(--accent); font-size: 10.5px; }
+
+/* Alluvial node card: per-category groups */
+#data-card .al-groups { margin-top: 0.3rem; }
+#data-card .al-group { margin: 0.35rem 0; }
+#data-card .al-group-head { font-family: var(--sans); font-size: 11px; font-weight: 700;
+  color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+#data-card .al-group-head .al-group-n { color: var(--muted); font-weight: 400; }
+#data-card .al-group .al-list { margin: 0.2rem 0 0; }

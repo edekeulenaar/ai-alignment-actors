@@ -52,35 +52,54 @@
     return head + list + (full ? `<div class="al-close">click outside to close</div>` : "");
   }
 
-  // Card for a NODE box: its top actors by mention count in the training docs.
-  // Hover → top 5; click (pinned) → top 10.
+  // Card for a NODE box. Hover → flat top 5. Click (pinned) → grouped by
+  // category (Type), top 5 per category, so the user reads e.g.
+  // "Advocacy organisation — top 5; Academic research center or lab — top 5".
   function nodeCardHtml(node, pinnedView) {
     const seen = new Set();
     const members = (node.members || []).filter(m => {
       const k = (m.name || "").toLowerCase();
       if (seen.has(k)) return false; seen.add(k); return true;
     }).sort((a, b) => (b.mentions - a.mentions) || (a.name || "").localeCompare(b.name || ""));
-    const n = pinnedView ? 10 : 5;
     const isType = node.stage === 1, isCountry = node.stage === 0;
-    const row = m => {
+    const rowFor = (m, hideType) => {
       const bits = [];
       if (!isCountry && m.country && m.country !== "Unknown") bits.push(esc(m.country));
-      if (!isType && m.type) bits.push(esc(m.type));
+      if (!isType && !hideType && m.type) bits.push(esc(m.type));
       const meta = bits.length ? ` <span class="al-where">— ${bits.join(", ")}</span>` : "";
       const cnt = m.mentions ? ` <span class="al-cnt">${m.mentions}&times;</span>` : "";
       return `<li>${esc(m.name)}${cnt}${meta}</li>`;
     };
-    const shown = members.slice(0, n);
-    const more = members.length > n
-      ? (pinnedView
-          ? `<li class="al-more">+ ${members.length - n} more</li>`
-          : `<li class="al-more">+ ${members.length - n} more — click the box for the top 10</li>`)
-      : "";
     const head = `<div class="dc-t">${esc(node.name)}</div>` +
-      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(node.value || members.length)}</div>` +
-      `<div class="al-sub">Top ${Math.min(n, members.length)} by mentions in training docs</div>`;
-    return head + `<ul class="al-list${pinnedView ? " al-list-full" : ""}">${shown.map(row).join("")}${more}</ul>` +
-      (pinnedView ? `<div class="al-close">click outside to close</div>` : "");
+      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(node.value || members.length)}</div>`;
+
+    // Hover preview, or a Type node (already one category): flat top 5.
+    if (!pinnedView || isType) {
+      const n = pinnedView ? 10 : 5;
+      const shown = members.slice(0, n);
+      const more = members.length > n
+        ? `<li class="al-more">+ ${members.length - n} more${pinnedView ? "" : " — click the box for the breakdown"}</li>` : "";
+      return head + `<div class="al-sub">Top ${Math.min(n, members.length)} by mentions in training docs</div>` +
+        `<ul class="al-list${pinnedView ? " al-list-full" : ""}">${shown.map(m => rowFor(m)).join("")}${more}</ul>` +
+        (pinnedView ? `<div class="al-close">click outside to close</div>` : "");
+    }
+
+    // Pinned Country / Yes-No node: group by category, top 5 each.
+    const groups = new Map();
+    members.forEach(m => {
+      const t = m.type || "Other";
+      if (!groups.has(t)) groups.set(t, []);
+      groups.get(t).push(m);
+    });
+    const ordered = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+    const sections = ordered.map(([type, ms]) => {
+      const top = ms.slice(0, 5);
+      const more = ms.length > 5 ? `<li class="al-more">+ ${ms.length - 5} more</li>` : "";
+      return `<div class="al-group"><div class="al-group-head">${esc(type)} <span class="al-group-n">${ms.length}</span></div>` +
+        `<ul class="al-list">${top.map(m => rowFor(m, true)).join("")}${more}</ul></div>`;
+    }).join("");
+    return head + `<div class="al-sub">Top 5 per category — by mentions in training docs</div>` +
+      `<div class="al-groups">${sections}</div><div class="al-close">click outside to close</div>`;
   }
 
   // Hover-card reusing the page's #data-card element, with a pinned mode
