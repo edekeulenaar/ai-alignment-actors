@@ -92,12 +92,6 @@ fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
     renderAll();
   });
 
-  // Misuses toggle: show / hide the entire Misuses block
-  const vu = document.getElementById("view-misuses");
-  if (vu) vu.addEventListener("change", e => {
-    document.body.classList.toggle("hide-misuses", !e.target.checked);
-  });
-
   // Commitment toggle: size conduct/risk/misuse squares by mention frequency.
   const vc = document.getElementById("view-commitment");
   if (vc) vc.addEventListener("change", e => {
@@ -293,7 +287,6 @@ function renderAll() {
   renderSources();
   renderItemBlock("conducts",  STATE.data.conducts || [],  {nameKey:"item"});
   renderItemBlock("risks",     STATE.data.risks    || [],  {nameKey:"item"});
-  renderItemBlock("misuses",   STATE.data.misuses  || [],  {nameKey:"item"});
   renderItemBlock("training",  STATE.data.trainings || [], {nameKey:"item"});
   renderItemBlock("benchmark", STATE.data.benchmarks||[],  {nameKey:"name"});
   refreshClusterItems();
@@ -363,13 +356,11 @@ function coHeadCell(co) {
 function renderItemBlock(blockId, items, opts) {
   const nameKey = opts.nameKey || "item";
   const grid    = document.getElementById("grid-" + blockId);
+  if (!grid) return;                 // block removed from the page
   grid.innerHTML = "";
 
   // Top-N companies for THIS block
   const cos = topCompaniesBy(items);
-  if (window.console && blockId === "misuses") {
-    console.log("[misuses] items:", items.length, "companies:", cos.length, cos);
-  }
 
   // Group by category
   const byCat = {};
@@ -1584,8 +1575,9 @@ function drawForceGraph(selector, nodes, links, opts) {
 // ── Scroll spy (sidebar) ─────────────────────────────────────────
 function setupScrollSpy() {
   const topIds = ["introduction", "method", "findings", "references"];
-  const subIds = ["block-sources", "block-conducts", "block-risks", "block-misuses",
-                  "block-training", "block-benchmark", "block-top-actors", "block-clusters"];
+  const subIds = ["block-sources", "block-conducts", "block-risks",
+                  "block-training", "block-benchmark", "block-top-actors",
+                  "block-stacks", "block-alluvial", "block-clusters"];
   const allIds = [...topIds, ...subIds];
 
   const sections = allIds.map(id => document.getElementById(id)).filter(Boolean);

@@ -1,0 +1,3083 @@
+{
+ "stages": [
+  "country",
+  "type",
+  "mentioned"
+ ],
+ "rows": [
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Advancing Humans with AI (AHA)"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "AFAR (Algorithmic Fairness for Asylum Seekers and Refugees)"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "AI Ethics and Governance in Practice at The Alan Turing Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "AI Ethics Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "AI Ethics Working Group"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "AlFa Research Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Algorithmic Fairness and Opacity Group"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Algorithmic Fairness for Asylum-Seekers and Refugees (AFAR)"
+  },
+  {
+   "country": "Finland",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Algoritmitutkimus Research Group"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "alignAI"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Applied Machine Intelligence, Bern University of Applied Sciences"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Arizona Responsible AI Center of Excellence"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Artificial Intelligence and Explainability (AIX), Leuphana University"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Artificial Intelligence and Security Lab"
+  },
+  {
+   "country": "Czech Republic",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Artificial Intelligence Center, CTU Prague"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "ATHENE Center"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Bavarian Research Institute for Digital Transformation (bidt)"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Berkeley AI Research (BAIR)"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Berkman Klein Center for Internet & Society"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Berlin-Brandenburg Academy of Sciences and Humanities"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Cambridge Centre for Human-Inspired Artificial Intelligence (CHIA)"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "CDR Lab"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Advanced Internet Studies"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for AI Ethics, University of Southern Denmark"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Applied Scientific Computing (Lawrence Livermore National Laboratory)"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Equity, Gender, and Leadership"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Law & Economics at ETH Zurich"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "Yes",
+   "name": "Center for Long-Term Cybersecurity (CLTC), UC Berkeley"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Responsible AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Center for Responsible AI Technologies"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Centre for AI Safety"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Centre for eXplainable Artificial Intelligence"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "CISPA Helmholtz Center for Information Security"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "CISPA Helmholtz Center for Information Security"
+  },
+  {
+   "country": "Austria",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Complexity Science Hub"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Cornell Bowers CIS Ethics, Law and Policy"
+  },
+  {
+   "country": "Australia",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "CSIRO Responsible AI"
+  },
+  {
+   "country": "Australia",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "CSIRO Software Systems"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Cyber Valley"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Data Science for Social Good"
+  },
+  {
+   "country": "Australia",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Data Science Institute, University of Technology Sydney"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Delft AI Safety Initiative (DAISI)"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Digital Technology and Policy Laboratory"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "DIW Berlin"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "DLR Institute for AI Safety and Security"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "DLR Institute for AI Safety and Security"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Eindhoven Center for the Philosophy of AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "ELLIS Institute Tübingen"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "ETH AI Ethics Policy"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Explainable AI for Health Lab Amsterdam"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Explainable Intelligent Systems"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fair Machine Learning & AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fair ML - Machine Learning Group"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "FairAndGoodADM"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Forschungszentrum Jülich"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "fortiss"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer HHI Explainable Artificial Intelligence Group"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer IESE"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer IIS – Projektgruppe Comprehensible Artificial Intelligence"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Institute for Cognitive Systems IKS"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Institute for Cognitive Systems IKS"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Institute for Industrial Engineering IAO"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Institute for Industrial Engineering IAO"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Institute for Intelligent Analysis and Information Systems (Fraunhofer IAIS)"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer IOSB"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer SCS"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Fraunhofer Society"
+  },
+  {
+   "country": "Norway",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Gemini Centre for Trustworthy and Sustainable AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "German Research Center for Artificial Intelligence (DFKI)"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Harvard Center for Research on Computation and Society"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Hasso Plattner Institute"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "hessian.AI"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Human(e) AI"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Human-Robot Interaction Lab"
+  },
+  {
+   "country": "Austria",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "HUMANE-AI-NET"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "iCourts, Faculty of Law, University of Copenhagen"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute for Automation and Applied Informatics (IAI), Karlsruhe Institute of Technology"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute for Ethics in AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute for Ethics in Artificial Intelligence, Technical University of Munich"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute for Experiential AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute for Technology Assessment and Systems Analysis (ITAS), Karlsruhe Institute of Technology"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute of Cyber Security for Society"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Institute of Global Politics at Columbia SIPA"
+  },
+  {
+   "country": "Austria",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "IT:U Explainable Artificial Intelligence Research Group"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "KI-Ethik Forschungsgruppe, Technische Hochschule Ingolstadt"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Knight First Amendment Institute at Columbia University"
+  },
+  {
+   "country": "Austria",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Know Center Research GmbH"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Käte Hamburger Kolleg: Cultures of Research"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "L3S Research Center"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Lamarr Institute for Machine Learning and Artificial Intelligence"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Law, Computation, and Finance Initiative"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Leibniz Institute for Educational Media | Georg Eckert Institute"
+  },
+  {
+   "country": "New Zealand",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Machine Learning Group, University of Auckland"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Max Planck Institute for Human Development"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Max Planck Institute for Intelligent Systems"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "META mHealth"
+  },
+  {
+   "country": "Canada",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Mila – Quebec Artificial Intelligence Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "MIT AI Alignment (MAIA)"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "MIT Center for Information Systems Research"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "MIT Lincoln Laboratory"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "MIT Media Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "Yes",
+   "name": "MITRE"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "ML2R"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Munich Center for Machine Learning (MCML)"
+  },
+  {
+   "country": "Norway",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "NORCE"
+  },
+  {
+   "country": "Norway",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Norsk Regnesentral"
+  },
+  {
+   "country": "Spain",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Observatory for Artificial Intelligence and Ethics in Organizations"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "OFFIS"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Oxford Internet Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Polo Club of Data Science"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "RAILS"
+  },
+  {
+   "country": "Germany",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Research Center Trustworthy Data Science and Security"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Responsible AI UK"
+  },
+  {
+   "country": "Sweden",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "RISE Research Institutes of Sweden"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "RISS Group"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "RPA Human(e) AI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "sAIfer Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Secure AI Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Software Engineering Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "Yes",
+   "name": "Stanford Center for AI Safety"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Stanford Digital Economy Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Stanford Institute for Human-Centered Artificial Intelligence"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Stanford RegLab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Teamcore Research Group"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "The Center for Advanced Red Teaming"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Theory of Machine Learning Lab (TML), EPFL"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "TNO"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Tuck Center for Digital Strategies"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "University of Cambridge Department of Computer Science and Technology"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Value Alignment in Medical AI (VAMAI) ELSA Lab"
+  },
+  {
+   "country": "United States",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "Wharton Accountable AI Lab"
+  },
+  {
+   "country": "Norway",
+   "type": "Academic research center or lab",
+   "mentioned": "No",
+   "name": "XAI@NTNU"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Ethics"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI for Good"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Lab Watch"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Safety Group UK"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Safety Initiative Groningen"
+  },
+  {
+   "country": "Turkey",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Safety Türkiye"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI Trust Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AI-Trust"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Algoright e.V."
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Algorithmic Justice League"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Algorithmic Justice League"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AlgorithmWatch"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AlgorithmWatch"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AlgorithmWatch"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "All Tech Is Human"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Americans for Responsible Innovation"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Amnesty International"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "AnitaB.org"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Business & Human Rights Resource Centre"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Center for Humane Technology"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Charta digitale Vernetzung"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "CivAI"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Consumer Reports"
+  },
+  {
+   "country": "Belgium",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "EAVI"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "EqualAI"
+  },
+  {
+   "country": "Belgium",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "European Digital Rights"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Evitable"
+  },
+  {
+   "country": "Denmark",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Fagbevægelsens Hovedorganisation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Forbrugerrådet Tænk"
+  },
+  {
+   "country": "Denmark",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Foundation for Humane AI"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Future of Life Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Future of Life Institute"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Global Witness"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "HealthAI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Humans in AI"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Internet Watch Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Keep AI Safe Foundation"
+  },
+  {
+   "country": "Belgium",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Mental Health Europe"
+  },
+  {
+   "country": "Canada",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Montreal AI Ethics Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Mozilla Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Mozilla Foundation"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "PauseAI"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "PauseAI Deutschland"
+  },
+  {
+   "country": "Germany",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Pour Demain"
+  },
+  {
+   "country": "Belgium",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Progressive Alliance of Socialists and Democrats"
+  },
+  {
+   "country": "Nigeria",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Responsible AI Governance Initiative"
+  },
+  {
+   "country": "United States",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "Stop AI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Advocacy organisation",
+   "mentioned": "No",
+   "name": "The AI in Media Institute"
+  },
+  {
+   "country": "Singapore",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AI Safety Asia"
+  },
+  {
+   "country": "Denmark",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AI Safety Global Society"
+  },
+  {
+   "country": "Australia",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AI Safety in Australia"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AI Security Forum"
+  },
+  {
+   "country": "Germany",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AI Transparency Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Aithos Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "Alignment Research Center"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Apart Research"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Arcadia Impact"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "AVID"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Cambridge Boston Alignment Initiative"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Center for AI Risk Management & Alignment"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "Center for AI Safety"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "Center for AI Safety"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Constellation Institute"
+  },
+  {
+   "country": "Denmark",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Eleos AI Research"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "ERA Fellowship"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "FAR.AI"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Future Impact Group"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Humane Intelligence"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Humane Intelligence"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Humane Intelligence"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Humane Intelligence"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "International Research Center for AI Ethics and Governance"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "LASR Labs"
+  },
+  {
+   "country": "Denmark",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "LawZero"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Machine Intelligence Research Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "MATS Research"
+  },
+  {
+   "country": "Denmark",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Meaning Alignment Institute"
+  },
+  {
+   "country": "Unknown",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Meaning Alignment Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Meaning Alignment Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "METR"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Nonlinear"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "Objectives Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "OpenMined"
+  },
+  {
+   "country": "United States",
+   "type": "Alignment research organisation",
+   "mentioned": "Yes",
+   "name": "Redwood Research"
+  },
+  {
+   "country": "Denmark",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "SAFE AI Project"
+  },
+  {
+   "country": "Germany",
+   "type": "Alignment research organisation",
+   "mentioned": "No",
+   "name": "The AI Safety Foundation"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "AI Governance Alliance"
+  },
+  {
+   "country": "Singapore",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "AI Verify Foundation"
+  },
+  {
+   "country": "Australia",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Australians for AI Safety"
+  },
+  {
+   "country": "Belgium",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "CAIRNE"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Center for Responsible AI"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Coalition for Health AI"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "Yes",
+   "name": "Coalition for Secure AI"
+  },
+  {
+   "country": "Unknown",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Current AI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Data Innovation Alliance"
+  },
+  {
+   "country": "Belgium",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Equinet"
+  },
+  {
+   "country": "Denmark",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "European Network for AI Safety"
+  },
+  {
+   "country": "Belgium",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Forus"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "Yes",
+   "name": "Frontier Model Forum"
+  },
+  {
+   "country": "Unknown",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Fundraising.AI"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "GovAI Coalition"
+  },
+  {
+   "country": "Denmark",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HUMAINE"
+  },
+  {
+   "country": "Greece",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HumanE AI Network"
+  },
+  {
+   "country": "Portugal",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HumanE-AI Network"
+  },
+  {
+   "country": "Belgium",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HumanE-AI-Net"
+  },
+  {
+   "country": "Spain",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HumanE-AI-Net"
+  },
+  {
+   "country": "Italy",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "HumanE-AI-Net"
+  },
+  {
+   "country": "Unknown",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Humanity AI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "International Association for Safe and Ethical AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "it's OWL"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "OWASP Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "OWASP Gen AI Security Project"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "Yes",
+   "name": "Partnership on AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Plattform Lernende Systeme"
+  },
+  {
+   "country": "Unknown",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Responsible AI Alliance"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Responsible AI Institute"
+  },
+  {
+   "country": "Vatican City",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Rome Call for AI Ethics"
+  },
+  {
+   "country": "United States",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Safe AI Forum"
+  },
+  {
+   "country": "Austria",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "Vienna Manifesto on Digital Humanism"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Coalition",
+   "mentioned": "No",
+   "name": "World Economic Forum AI Governance Alliance"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "AI Alignment Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "AI for Good Foundation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "AI.NGO"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Align AI Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Amadeu Antonio Foundation"
+  },
+  {
+   "country": "France",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "AXA Research Fund"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Bertelsmann Stiftung"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Bertelsmann Stiftung"
+  },
+  {
+   "country": "Canada",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "CIFAR"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Coefficient Giving"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Effektiv Spenden"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Foresight Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Gates Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Gates Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Hanns Seidel Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Hans Böckler Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Heinrich Böll Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Heinrich Böll Foundation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Industriens Fond"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "IPAI Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "IPAI Foundation"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Joseph Rowntree Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Kapor Foundation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Knowledge 4 All Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Körber Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "MacArthur Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "National Science Foundation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Novo Nordisk Foundation"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Nuffield Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Patrick J. McGovern Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Robert Bosch Stiftung"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "Simons Foundation"
+  },
+  {
+   "country": "United States",
+   "type": "Foundation/philanthropy",
+   "mentioned": "No",
+   "name": "The AI Safety Research Fund"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Administrative Conference of the United States"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Advanced Research and Invention Agency (ARIA)"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "AI Safety Institute"
+  },
+  {
+   "country": "Japan",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "AI Safety Institute Japan"
+  },
+  {
+   "country": "South Korea",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "AI Safety Institute Korea"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "AI Security Institute"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "AI Standards Hub"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Allianz für Cyber-Sicherheit"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Artificial Intelligence Security Center"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "BaFin"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Bundesnetzagentur"
+  },
+  {
+   "country": "Canada",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Canadian Artificial Intelligence Safety Institute"
+  },
+  {
+   "country": "Canada",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Canadian Centre for Cyber Security"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Centre for Cyber Security (CFCS)"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "CERT.dk"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Cybersecurity and Infrastructure Security Agency"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "DARPA"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Dataetisk Råd"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Datatilsynet"
+  },
+  {
+   "country": "Saudi Arabia",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Digital Cooperation Organization"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Digitaliseringsstyrelsen"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "DIN"
+  },
+  {
+   "country": "Belgium",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "European Centre for Algorithmic Transparency"
+  },
+  {
+   "country": "Austria",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "European Union Agency for Fundamental Rights"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Federal Anti-Discrimination Agency"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Federal Institute for Occupational Safety and Health (BAuA)"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Federal Office for Information Security (BSI)"
+  },
+  {
+   "country": "Germany",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "German Ethics Council"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "HealthAI"
+  },
+  {
+   "country": "Singapore",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Infocomm Media Development Authority"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Information Commissioner's Office"
+  },
+  {
+   "country": "Slovenia",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "International Research Centre on Artificial Intelligence under the auspices of UNESCO (IRCAI)"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "MITRE"
+  },
+  {
+   "country": "Singapore",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Monetary Authority of Singapore"
+  },
+  {
+   "country": "Australia",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "National Artificial Intelligence Centre"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "National Cyber Security Centre"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "National Institute of Standards and Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "National Institute of Standards and Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "National Institute of Standards and Technology (NIST)"
+  },
+  {
+   "country": "Denmark",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "National Research Centre for the Working Environment"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "NIST National Cybersecurity Center of Excellence"
+  },
+  {
+   "country": "Norway",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Norwegian Digitalisation Agency (Digdir)"
+  },
+  {
+   "country": "Spain",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "Spanish Data Protection Agency"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "U.S. AI Safety Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Government agency",
+   "mentioned": "No",
+   "name": "U.S. Equal Employment Opportunity Commission"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "UK AI Safety Institute"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Government agency",
+   "mentioned": "Yes",
+   "name": "UK AI Security Institute"
+  },
+  {
+   "country": "Belgium",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Actuarial Association of Europe"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "AI Ethics and Integrity International Association"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "American National Standards Institute"
+  },
+  {
+   "country": "New Zealand",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Artificial Intelligence Forum of New Zealand"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Association of AI Ethicists"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Bitkom"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Bitkom"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Bundesverband Digitale Wirtschaft (BVDW)"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Bundesverband Digitale Wirtschaft (BVDW)"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Business in the Community"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Cloud Security Alliance"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "CREST"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "CREST International"
+  },
+  {
+   "country": "Denmark",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Dansk Erhverv"
+  },
+  {
+   "country": "Denmark",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Dansk Industri"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "DGHO"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "DIHK"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "DOAG"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "eco – Association of the Internet Industry"
+  },
+  {
+   "country": "Belgium",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "EFFAT"
+  },
+  {
+   "country": "Belgium",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "ETIS"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "European Broadcasting Union"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Gesellschaft für Informatik"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "GSMA"
+  },
+  {
+   "country": "Denmark",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "HK Denmark"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "IEEE-USA AI Policy Committee"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "International Association of Privacy Professionals"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Industry/trade association",
+   "mentioned": "Yes",
+   "name": "International Organization for Standardization"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "ISACA"
+  },
+  {
+   "country": "Denmark",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "IT-Branchen"
+  },
+  {
+   "country": "Germany",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "KI Bundesverband"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Linux Foundation"
+  },
+  {
+   "country": "France",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "Naaia"
+  },
+  {
+   "country": "United States",
+   "type": "Industry/trade association",
+   "mentioned": "No",
+   "name": "OWASP Foundation"
+  },
+  {
+   "country": "Belgium",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "Amnesty International"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "Amnesty International"
+  },
+  {
+   "country": "Denmark",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "Danish Institute for Human Rights"
+  },
+  {
+   "country": "United States",
+   "type": "Legal advocacy organisation",
+   "mentioned": "Yes",
+   "name": "Electronic Frontier Foundation"
+  },
+  {
+   "country": "Germany",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "HateAid"
+  },
+  {
+   "country": "United States",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "International Center for Advocates Against Discrimination"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "International Committee of the Red Cross"
+  },
+  {
+   "country": "Denmark",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "MetaClaimDanmark"
+  },
+  {
+   "country": "United States",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "National Fair Housing Alliance"
+  },
+  {
+   "country": "Norway",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "Norwegian Bar Association"
+  },
+  {
+   "country": "United States",
+   "type": "Legal advocacy organisation",
+   "mentioned": "No",
+   "name": "Public Knowledge"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Safe AI London"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Ethics Lab"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Kunstig Intelligens: Teknologi og Etik Kommissionen"
+  },
+  {
+   "country": "Ireland",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "The AI Sanctuary CLG"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Alignment Ecosystem Development"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Fair AI"
+  },
+  {
+   "country": "Germany",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "ARIC Hamburg"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Foundations"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "BlueDot Impact"
+  },
+  {
+   "country": "Hungary",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Hungary"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety London"
+  },
+  {
+   "country": "Unknown",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Connect"
+  },
+  {
+   "country": "Poland",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Security Foundation"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "CyberPeace Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "ARENA"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Initiative"
+  },
+  {
+   "country": "Unknown",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Founders"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Village"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI 2030"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "London Office of Technology and Innovation"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "SPAR"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Catalyze Impact"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Camp"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Amsterdam"
+  },
+  {
+   "country": "Germany",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Aachen e.V."
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Global Challenges Project"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Student Team"
+  },
+  {
+   "country": "United States",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "Kairos"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "80,000 Hours"
+  },
+  {
+   "country": "Denmark",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Quest"
+  },
+  {
+   "country": "Germany",
+   "type": "Other",
+   "mentioned": "No",
+   "name": "AI Safety Saarland"
+  },
+  {
+   "country": "United States",
+   "type": "Public consultation organisation",
+   "mentioned": "No",
+   "name": "AI & Democracy Institute"
+  },
+  {
+   "country": "Germany",
+   "type": "Public consultation organisation",
+   "mentioned": "No",
+   "name": "Liquid Democracy"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "App-Web-Entwicklung"
+  },
+  {
+   "country": "Denmark",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Aya Data"
+  },
+  {
+   "country": "Australia",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "BID Group"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Bishop Fox"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "cmt Training GmbH"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "CrowdStrike"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "CypSec"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "ditis Systeme"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "F5"
+  },
+  {
+   "country": "Netherlands",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Fox-IT"
+  },
+  {
+   "country": "France",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Giskard"
+  },
+  {
+   "country": "Denmark",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "GRC Solutions"
+  },
+  {
+   "country": "Singapore",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Group-IB"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "Yes",
+   "name": "Hack The Box"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "HackerOne"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "HiddenLayer"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "HiSolutions"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "HiSolutions"
+  },
+  {
+   "country": "Denmark",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Hunt & Hackett"
+  },
+  {
+   "country": "Israel",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Kela"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Lakera"
+  },
+  {
+   "country": "Israel",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Mend.io"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Mindgard"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "NCC Group"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "neam IT Services GmbH"
+  },
+  {
+   "country": "Unknown",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Noma Security"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "NSIDE ATTACK LOGIC GmbH"
+  },
+  {
+   "country": "Belgium",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "NVISO"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "OnSecurity"
+  },
+  {
+   "country": "France",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Orange Cyberdefense"
+  },
+  {
+   "country": "Germany",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Penligent"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "PGI"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Praetorian"
+  },
+  {
+   "country": "Israel",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Prompt Security"
+  },
+  {
+   "country": "Unknown",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Promptfoo"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Redguard"
+  },
+  {
+   "country": "Italy",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Reply"
+  },
+  {
+   "country": "Denmark",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Rootshell Security"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "SecureLayer7"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Shaip"
+  },
+  {
+   "country": "Denmark",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "SplxAI"
+  },
+  {
+   "country": "Unknown",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Straiker"
+  },
+  {
+   "country": "United States",
+   "type": "Red teaming / cybersecurity company",
+   "mentioned": "No",
+   "name": "Synack"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Ada Lovelace Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "AI Ethics Initiative"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "AI Now Institute"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "AI4People Institute"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Alexander von Humboldt Institute for Internet and Society"
+  },
+  {
+   "country": "Canada",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "AlignAB"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Aspen Institute"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Brookings Institution"
+  },
+  {
+   "country": "Belgium",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Bruegel"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "CAISA"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "Yes",
+   "name": "Carnegie Endowment for International Peace"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Center for AI and Digital Policy"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Center for AI Policy"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Center for Global Development"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Center for Security and Emerging Technology"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Center for Strategic and International Studies"
+  },
+  {
+   "country": "Belgium",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Centre for Future Generations"
+  },
+  {
+   "country": "Kenya",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Centre for Intellectual Property and Information Technology Law (CIPIT)"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "CEPOS"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Chatham House"
+  },
+  {
+   "country": "Canada",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Concordia AI"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Danish Institute for International Studies"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Danish Institute for International Studies"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Data & Society"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "DataEthics.eu"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Epoch AI"
+  },
+  {
+   "country": "Belgium",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "European Policy Centre"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Forrester"
+  },
+  {
+   "country": "Denmark",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Global AI Governance Observatory"
+  },
+  {
+   "country": "South Africa",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Global Center on AI Governance"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Global Priorities Institute"
+  },
+  {
+   "country": "Canada",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Global Risk Institute"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Global Solutions Initiative"
+  },
+  {
+   "country": "Switzerland",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Globethics"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "GovAI"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Hoover Institution"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institut für Innovation und Technik (iit)"
+  },
+  {
+   "country": "France",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institut Montaigne"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institute for AI Policy and Strategy"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institute for Ecological Economy Research"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institute for Ethical AI & Machine Learning"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Institute for the Future of Work"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Jacques Delors Centre"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Kompetenzzentrum Öffentliche IT (ÖFIT)"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Konrad-Adenauer-Stiftung"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "Yes",
+   "name": "New America"
+  },
+  {
+   "country": "India",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Observer Research Foundation"
+  },
+  {
+   "country": "France",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Organisation for Economic Co-operation and Development"
+  },
+  {
+   "country": "Germany",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "reframe[Tech]"
+  },
+  {
+   "country": "Unknown",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "Responsible AI Governance Initiative"
+  },
+  {
+   "country": "United States",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "The Aula Fellowship"
+  },
+  {
+   "country": "United Kingdom",
+   "type": "Think tank or policy institute",
+   "mentioned": "No",
+   "name": "The Policy Center"
+  }
+ ],
+ "total": 512,
+ "matched": 26
+}

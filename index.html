@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260618T1015">
+<link rel="stylesheet" href="style.css?v=20260618T1200">
 </head>
 <body>
 
@@ -35,11 +35,11 @@
       <li><a href="#block-sources"   data-target="block-sources"  >Documents</a></li>
       <li><a href="#block-conducts"  data-target="block-conducts" >Conducts</a></li>
       <li><a href="#block-risks"     data-target="block-risks"    >Risks</a></li>
-      <li><a href="#block-misuses"   data-target="block-misuses"  >Misuses</a></li>
       <li><a href="#block-training"  data-target="block-training" >Training</a></li>
       <li><a href="#block-benchmark"   data-target="block-benchmark"  >Benchmark</a></li>
       <li><a href="#block-top-actors"  data-target="block-top-actors" >Top actors</a></li>
       <li><a href="#block-stacks"      data-target="block-stacks"     >Stack view</a></li>
+      <li><a href="#block-alluvial"    data-target="block-alluvial"   >Actor coverage</a></li>
       <li><a href="#block-clusters"    data-target="block-clusters"   >Conceptual clusters</a></li>
     </ul>
     <a href="#references"   data-target="references"  >References</a>
@@ -69,10 +69,6 @@
     <label class="side-toggle">
       <input type="checkbox" id="show-all-cos">
       <span>Show all companies</span>
-    </label>
-    <label class="side-toggle">
-      <input type="checkbox" id="view-misuses" checked>
-      <span>Show Misuses section</span>
     </label>
     <label class="side-toggle">
       <input type="checkbox" id="view-commitment">
@@ -752,23 +748,6 @@
       <div class="row-grid" id="grid-risks"></div>
     </article>
 
-    <!-- MISUSES (extracted from company policies) ──────────────── -->
-    <article class="grid-block" id="block-misuses">
-      <header class="block-head">
-        <h3>Misuses</h3>
-        <p class="block-sub">Who crafts company policies? Who is cited?</p>
-        <p class="block-caption">Square colour = author of the policy (typically the company itself). Click for AUTHOR; click again (+ cited) for anyone else named in the row (e.g., national regulators, third-party reviewers).</p>
-      </header>
-      <div class="sort-bar"><label>Sort categories
-        <select data-sort-for="misuses">
-          <option value="quantity">quantity</option>
-          <option value="alpha">alphabetical</option>
-          <option value="newest">newest</option>
-          <option value="oldest">oldest</option>
-        </select></label></div>
-      <div class="row-grid" id="grid-misuses"></div>
-    </article>
-
     <!-- TRAINING ──────────────────────────── -->
     <article class="grid-block" id="block-training">
       <header class="block-head">
@@ -1006,6 +985,26 @@
       <div id="stack-tooltip"></div>
     </article>
 
+    <!-- ALLUVIAL — actor coverage ─────────────── -->
+    <article class="grid-block" id="block-alluvial">
+      <header class="block-head">
+        <h3>Who reaches the training documents?</h3>
+        <p class="block-sub">Which actors from the wider alignment ecosystem are — and are not — actually named in companies' AI training documents.</p>
+        <p class="block-caption">
+          Each ribbon is one of the
+          <strong id="alluvial-total">512</strong> actors catalogued in the
+          alignment-actor directory, flowing
+          <em>Country&nbsp;→ Type&nbsp;→ Mentioned in AI training documents</em>.
+          &ldquo;Mentioned&rdquo; means the actor is cited by name somewhere in
+          the model-card / system-card corpus. Ribbons are coloured by country;
+          hover a band or node for the actor count, click a node to isolate its
+          flows. Only
+          <strong id="alluvial-matched">26</strong> reach the training corpus.
+        </p>
+      </header>
+      <div id="alluvial" class="alluvial-host"></div>
+    </article>
+
     <article class="grid-block" id="block-clusters">
       <header class="block-head">
         <h3>Conceptual clusters</h3>
@@ -1194,8 +1193,10 @@
 <aside id="data-card" role="tooltip" hidden></aside>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260618T1015"></script>
-<script src="stacks.js?v=20260618T1015"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script src="app.js?v=20260618T1200"></script>
+<script src="stacks.js?v=20260618T1200"></script>
+<script src="alluvial.js?v=20260618T1200"></script>
 <script src="comments-config.js?v=20260617"></script>
 <script src="refs-comments.js?v=20260617"></script>
 </body>
