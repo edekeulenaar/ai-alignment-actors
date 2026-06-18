@@ -2,23 +2,14 @@
    The actors in AI alignment — interactions
    ════════════════════════════════════════════════════════════════ */
 
-const COLOR_VAR = {
-  "internal":                     "var(--c-internal)",
-  "private":                      "var(--c-private)",
-  "academic":                     "var(--c-academic)",
-  "research institute":           "var(--c-research-institute)",
-  "governmental":                 "var(--c-governmental)",
-  "nonprofit":                    "var(--c-nonprofit)",
-  "public":                       "var(--c-public)",
-  "public consultation":          "var(--c-public-consultation)",
-  "ai company":                   "var(--c-ai-company)",
-  "industry consortium":          "var(--c-industry-consortium)",
-  "public benefit corporation":   "var(--c-public-benefit-corporation)",
-  "public deliberation platform": "var(--c-public-deliberation-platform)",
-  "multiple":                     "var(--c-multiple)",
-  "other":                        "var(--c-other)",
-  "unknown":                      "var(--c-unknown)",
-};
+// Actor-category → colour. Populated from data.json's `actor_colors` at load
+// (see buildSidebar / load), so the palette lives in one place (the build).
+const COLOR_VAR = { "unknown": "#C8C8C8" };
+function applyActorColors(colors) {
+  if (!colors) return;
+  Object.assign(COLOR_VAR, colors);
+  Object.assign(ACTOR_COLOR_HEX, colors);   // graphs use the same map
+}
 
 const DOC_TYPE_CLASS = {
   "Model card": "t-model-card",   "Model Card":      "t-model-card",
@@ -79,6 +70,11 @@ const STATE = {
 const DATA_VERSION = (document.querySelector('script[src*="app.js"]')||{}).src?.split("v=")[1] || Date.now();
 fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
   STATE.data = data;
+  applyActorColors(data.actor_colors);
+  // Commitment scale: the largest (company × item) mention count across the
+  // conduct / risk / misuse blocks, used to size squares relative to it.
+  STATE.maxMentions = Math.max(1, ...["conducts", "risks", "misuses"]
+    .flatMap(k => (data[k] || []).map(x => x.mentions || 0)));
   buildSidebar(data);
   wireSortBars();
   renderAll();
@@ -100,6 +96,16 @@ fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
   const vu = document.getElementById("view-misuses");
   if (vu) vu.addEventListener("change", e => {
     document.body.classList.toggle("hide-misuses", !e.target.checked);
+  });
+
+  // Commitment toggle: size conduct/risk/misuse squares by mention frequency.
+  const vc = document.getElementById("view-commitment");
+  if (vc) vc.addEventListener("change", e => {
+    STATE.commitment = e.target.checked;
+    document.body.classList.toggle("commitment", STATE.commitment);
+    const key = document.getElementById("commit-key");
+    if (key) key.hidden = !STATE.commitment;
+    renderAll();
   });
 
   // Search bar
@@ -497,6 +503,18 @@ function makeSquare(item, blockId, nameKey) {
   sq.style.background = cssColor;                 // compact view
   sq.style.setProperty("--sq-bg", cssColor);      // named-view tint reads this
   if (STATE.viewNamed) sq.textContent = item[nameKey] || "";
+
+  // Commitment view (compact only): square size ∝ √(mention frequency) so a
+  // company that names an item more often shows a bigger square.
+  const COMMIT_BLOCKS = blockId === "conducts" || blockId === "risks" || blockId === "misuses";
+  if (STATE.commitment && !STATE.viewNamed && COMMIT_BLOCKS && (item.mentions || 0) > 0) {
+    const t = Math.sqrt(item.mentions) / Math.sqrt(STATE.maxMentions || 1);
+    const px = Math.round(8 + t * 22);            // 8 → 30 px
+    sq.style.width = px + "px";
+    sq.style.height = px + "px";
+    sq.dataset.mentions = item.mentions;
+    sq.classList.add("sq-commit");
+  }
 
   sq.addEventListener("mouseenter", e => showCard(itemToCard(item, blockId, nameKey), e));
   sq.addEventListener("mouseleave", hideCard);
@@ -985,24 +1003,9 @@ function refreshClusterItems() {
   renderCluster();
 }
 
-// Per-actor-type colors mirrored from CSS variables
-const ACTOR_COLOR_HEX = {
-  "internal":                     "#7585BE",
-  "private":                      "#80C2CA",
-  "academic":                     "#EFCE44",
-  "research institute":           "#ECB280",
-  "governmental":                 "#8EDE78",
-  "nonprofit":                    "#ADD672",
-  "public":                       "#53B3AD",
-  "public consultation":          "#53B3AD",
-  "ai company":                   "#6DA5D8",
-  "industry consortium":          "#BECF54",
-  "public benefit corporation":   "#9193C4",
-  "public deliberation platform": "#4146C3",
-  "multiple":                     "#E69FC1",
-  "other":                        "#BABABA",
-  "unknown":                      "#BABABA",
-};
+// Per-actor-category colours — populated from data.json (actor_colors) by
+// applyActorColors() at load. Kept as a mutable object so graphs share it.
+const ACTOR_COLOR_HEX = { "unknown": "#C8C8C8", "Multiple": "#E69FC1", "Other": "#BABABA" };
 
 // Lazy lookup: actor name → most-common type (built once)
 let _actorTypeMap = null;

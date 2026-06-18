@@ -1,23 +1,7 @@
 // Stack view: actor enrolment across alignment-stack layers.
-// Mirrors the colour palette from app.js.
+// Colour palette comes from data.json (actor_colors), shared with app.js.
 
-const STACK_ACTOR_COLOR = {
-  "internal":                     "#7585BE",
-  "private":                      "#80C2CA",
-  "academic":                     "#EFCE44",
-  "research institute":           "#ECB280",
-  "governmental":                 "#8EDE78",
-  "nonprofit":                    "#ADD672",
-  "public":                       "#53B3AD",
-  "public consultation":          "#53B3AD",
-  "ai company":                   "#6DA5D8",
-  "industry consortium":          "#BECF54",
-  "public benefit corporation":   "#9193C4",
-  "public deliberation platform": "#4146C3",
-  "multiple":                     "#E69FC1",
-  "other":                        "#BABABA",
-  "unknown":                      "#BABABA",
-};
+const STACK_ACTOR_COLOR = { "unknown": "#C8C8C8", "Multiple": "#E69FC1", "Other": "#BABABA" };
 
 const LAYERS = [
   { key: "conducts",   label: "Conducts" },
@@ -37,9 +21,15 @@ const ACTOR_FIELDS = {
 let DATA = null;
 let DOC_BY_ID = new Map();
 
+// Cache-buster shared with app.js (read from this script's own ?v= param) so
+// the stack view never serves a stale data.json.
+const STACK_DATA_VERSION =
+  (document.querySelector('script[src*="stacks.js"]') || {}).src?.split("v=")[1] || Date.now();
+
 if (document.getElementById("stack-svg")) {
-  fetch("data.json").then(r => r.json()).then(d => {
+  fetch("data.json?v=" + STACK_DATA_VERSION).then(r => r.json()).then(d => {
     DATA = d;
+    if (d.actor_colors) Object.assign(STACK_ACTOR_COLOR, d.actor_colors);
     DOC_BY_ID = new Map(d.documents.map(doc => [doc.id, doc]));
     init();
   });
@@ -84,7 +74,9 @@ function buildModel(groupBy, companyFilter) {
   // Helper to register an (actor, layer, doc) tuple under the right group.
   const register = (actorName, actorType, role, company, layer, pid) => {
     if (!actorName) return;
-    const t = (actorType || "unknown").toLowerCase().trim() || "unknown";
+    // Keep the canonical category casing ("Government agency") so it matches
+    // the colour palette and the legend.
+    const t = (actorType || "unknown").trim() || "unknown";
 
     let groupKey, color, label;
     if (groupBy === "type") {
@@ -101,6 +93,9 @@ function buildModel(groupBy, companyFilter) {
       g.nodes.set(actorName, {
         name: actorName, type: t,
         layers: new Set(),
+        mentionsByLayer: {
+          conducts: 0, risks: 0, trainings: 0, benchmarks: 0,
+        },
         docsByLayer: {
           conducts: new Set(), risks: new Set(),
           trainings: new Set(), benchmarks: new Set(),
@@ -114,6 +109,7 @@ function buildModel(groupBy, companyFilter) {
     const node = g.nodes.get(actorName);
     node.layers.add(layer);
     node._mentionCount = (node._mentionCount || 0) + 1;
+    node.mentionsByLayer[layer] = (node.mentionsByLayer[layer] || 0) + 1;  // per-component frequency
     if (role) node.rolesByLayer[layer].add(role);
     if (pid) {
       node.docsByLayer[layer].add(pid);
@@ -132,7 +128,7 @@ function buildModel(groupBy, companyFilter) {
 
       // (1) The row-level "primary" actor — most precisely credited.
       const rawName = (item[fields.name] || "").trim();
-      const rawType = (item[fields.type] || "").trim().toLowerCase();
+      const rawType = (item[fields.type] || "").trim();
       if (rawName) {
         rawName.split("|").map(s => s.trim()).filter(Boolean).forEach(an => {
           pubIds.forEach(pid =>
@@ -334,8 +330,9 @@ function render() {
           .slice(0, cap);
       }
       const actorSet = new Set(actors.map(a => a.name));
-      const intra = stack.intraEdges[key].filter(e =>
-        actorSet.has(e.source) && actorSet.has(e.target));
+      // No within-plane edges: the only edges in the stack connect the SAME
+      // actor across components (drawn later as cross-layer lines).
+      const intra = [];
 
       // Local rect layout via d3-force.
       const W = PLANE_W, H = PLANE_H;
@@ -344,17 +341,17 @@ function render() {
         x: (i * 37) % W,
         y: (i * 53) % H,
       }));
-      const links = intra.map(e => ({ source: e.source, target: e.target }));
+      const links = [];
 
-      // Per-node radius — sqrt-scale by mention count so prominent actors
-      // appear as bigger circles (matches the reference aesthetic where
-      // alquds.co.uk, ahram.org.eg etc. are visibly larger).
+      // Per-node radius — sqrt-scaled by the actor's mention frequency WITHIN
+      // this component (conducts / risks / training / benchmarks), so a more
+      // frequently-named actor shows a bigger circle on that plane.
       const N = nodes.length;
       const rMin = N > 80 ? 2.4 : N > 40 ? 2.8 : 3.2;
       const rMax = N > 80 ? 9   : N > 40 ? 11  : 13;
       const counts = nodes.map(n => {
         const fn = stack.nodes.get(n.name);
-        return (fn && fn._mentionCount) || 1;
+        return (fn && fn.mentionsByLayer && fn.mentionsByLayer[key]) || 1;
       });
       const cMax = Math.max(2, ...counts);
       nodes.forEach((n, i) => {

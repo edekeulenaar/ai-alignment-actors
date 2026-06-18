@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="style.css?v=20260617T1800">
+<link rel="stylesheet" href="style.css?v=20260618T1015">
 </head>
 <body>
 
@@ -39,8 +39,8 @@
       <li><a href="#block-training"  data-target="block-training" >Training</a></li>
       <li><a href="#block-benchmark"   data-target="block-benchmark"  >Benchmark</a></li>
       <li><a href="#block-top-actors"  data-target="block-top-actors" >Top actors</a></li>
-      <li><a href="#block-clusters"    data-target="block-clusters"   >Conceptual clusters</a></li>
       <li><a href="#block-stacks"      data-target="block-stacks"     >Stack view</a></li>
+      <li><a href="#block-clusters"    data-target="block-clusters"   >Conceptual clusters</a></li>
     </ul>
     <a href="#references"   data-target="references"  >References</a>
   </nav>
@@ -74,6 +74,18 @@
       <input type="checkbox" id="view-misuses" checked>
       <span>Show Misuses section</span>
     </label>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-commitment">
+      <span>Commitment (size by mentions)</span>
+    </label>
+    <div class="commit-key" id="commit-key" hidden>
+      <h5>Commitment</h5>
+      <p class="commit-key-sub">Square size = how often a company names that
+        conduct / risk in its documents.</p>
+      <div class="commit-key-row"><span class="ck-sq" style="width:9px;height:9px"></span> rarely (1)</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:18px;height:18px"></span> often</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:30px;height:30px"></span> most (peak)</div>
+    </div>
   </div>
 
   <div class="side-block">
@@ -805,7 +817,8 @@
         </label>
         <label>Show top
           <select id="top-actors-n">
-            <option value="10" selected>10</option>
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>
             <option value="100">100</option>
@@ -841,46 +854,6 @@
     </article>
 
     <!-- CONCEPTUAL CLUSTERS ─────────────────── -->
-    <article class="grid-block" id="block-clusters">
-      <header class="block-head">
-        <h3>Conceptual clusters</h3>
-        <p class="block-sub">Pick a conduct or risk. See how it is defined across companies and time, which other concepts it travels with, and which actors have shaped its definition together.</p>
-      </header>
-      <div class="cluster-controls">
-        <label>Concept type
-          <select id="cluster-kind">
-            <option value="conducts">Conducts</option>
-            <option value="risks">Risks</option>
-          </select>
-        </label>
-        <label>Concept
-          <select id="cluster-item"></select>
-        </label>
-      </div>
-      <div class="cluster-panes">
-        <div class="cluster-pane">
-          <h4>Definitions over time</h4>
-          <div id="cluster-timeline" class="cluster-timeline"></div>
-        </div>
-        <div class="cluster-pane">
-          <h4>Conceptual network</h4>
-          <p class="cluster-help">Central node = the selected category. Surrounding nodes = every item in it, coloured by actor type. Drag, scroll to zoom, ⊕ to recenter.</p>
-          <label class="pane-toggle">
-            <input type="checkbox" id="cluster-expand-related">
-            <span>Include categories sharing a word</span>
-          </label>
-          <svg id="concept-graph" class="cluster-graph"></svg>
-        </div>
-        <div class="cluster-pane">
-          <h4>Actor network</h4>
-          <p class="cluster-help">Actors involved in defining, training and benchmarking — coloured by actor type. Click a node to inspect; drag to move, scroll to zoom, ⊕ to recenter.</p>
-          <svg id="actor-graph" class="cluster-graph"></svg>
-          <div id="actor-detail" class="actor-detail hidden"></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- STACK VIEW ─────────────────────────── -->
     <article class="grid-block" id="block-stacks">
       <header class="block-head">
         <h3>Stack view</h3>
@@ -955,60 +928,42 @@
             </ul>
             <p style="margin-top: 6px"><strong>Click any node</strong> to
               isolate the network it belongs to: the actor lights up
-              wherever it appears across the four stages, every grey
-              co-mention edge it touches is kept visible (its direct
-              neighbours fade to a softer state), and the tan vertical
-              lines linking the actor across layers are highlighted.
-              Everything else dims. Click the background or press
+              wherever it appears across the four stages and the tan
+              edges linking it between components are highlighted, while
+              everything else dims. Click the background or press
               <kbd>Esc</kbd> to clear.</p>
           </section>
 
           <section>
-            <h4>Where does a node sit on the plane?</h4>
-            <p>Position is computed by a <strong>force-directed
-              layout</strong> running on every plane separately:</p>
-            <ul>
-              <li>Each grey edge inside the plane is a spring that pulls
-                two actors together. An edge exists when both actors are
-                named in the <em>same source document</em> at this stage
-                — co-mention is the only signal.</li>
-              <li>Every node also repels every other node, so circles
-                cannot overlap.</li>
-              <li>A weak central pull keeps the cloud from drifting off
-                the slab.</li>
-            </ul>
-            <p>The simulation runs 260 ticks and is then frozen. The
-              resulting coordinates are projected into the plane's
-              isometric parallelogram. Node radius scales with the
-              actor's <em>mention count</em> (sqrt-mapped), so the
-              biggest circles are the most-cited actors at that stage.</p>
-            <p><strong>Labels.</strong> By default, no circles carry a
-              permanent label — the slabs stay readable as a structural
-              map of clusters. Hover any circle to reveal its actor
-              name transiently. Tick <em>Show labels</em> in the
-              controls to label every node at once.</p>
+            <h4>How big is a node?</h4>
+            <p>A node's size is the <strong>relative frequency</strong>
+              with which that actor is mentioned <em>within that
+              component</em> (Conducts, Risks, Training or Benchmarks).
+              Radius is sqrt-scaled against the most-mentioned actor on
+              the plane, so a government agency named in many risk rows
+              shows a bigger circle on the Risks plane than one named
+              once.</p>
+            <p>The same actor can therefore be a large node on one plane
+              and a small one on another, depending on where it is named
+              most. Position within the plane is a force-directed layout
+              (repulsion + a weak central pull) and carries no meaning on
+              its own — only size and the cross-stage edges do.</p>
+            <p><strong>Labels.</strong> By default no circles carry a
+              permanent label. Hover any circle to reveal its actor name
+              transiently; tick <em>Show labels</em> to label every node.</p>
           </section>
 
           <section>
-            <h4>What does the distance between two nodes mean?</h4>
-            <p>Distance ≈ <em>inverse of co-mention frequency</em>. The
-              more documents two actors share at this stage, the stronger
-              the springs pulling them together, and the closer they end
-              up. A few practical readings:</p>
-            <ul>
-              <li><strong>Tight clusters</strong> = actors who keep
-                showing up together in the same model cards, audits or
-                grant programmes.</li>
-              <li><strong>Lone dots near the edge of the plane</strong> =
-                actors mentioned only once, or only in documents where
-                no peer of the same type appears.</li>
-              <li><strong>Two clusters far apart</strong> = two
-                disjoint communities of practice at this stage.</li>
-            </ul>
-            <p>Absolute position on the plane (left vs right, near vs
-              far edge) has <em>no</em> meaning — only relative distance
-              does. Reloads can rearrange clusters; the structure of
-              who-belongs-with-whom is what is stable.</p>
+            <h4>When do two nodes connect?</h4>
+            <p>An edge appears when the <strong>same actor</strong> is
+              mentioned in <em>more than one</em> component. For example,
+              if a government agency is named under both Conducts and
+              Training, it appears as a node on each plane and the two are
+              joined by an edge. The denser an actor's edges, the more
+              stages of the alignment stack it is enrolled in.</p>
+            <p>There are no within-plane edges: lines only ever run
+              <em>between</em> components, tracking one actor's reach up
+              and down the stack.</p>
           </section>
 
           <section>
@@ -1049,6 +1004,45 @@
 
       <svg id="stack-svg"></svg>
       <div id="stack-tooltip"></div>
+    </article>
+
+    <article class="grid-block" id="block-clusters">
+      <header class="block-head">
+        <h3>Conceptual clusters</h3>
+        <p class="block-sub">Pick a conduct or risk. See how it is defined across companies and time, which other concepts it travels with, and which actors have shaped its definition together.</p>
+      </header>
+      <div class="cluster-controls">
+        <label>Concept type
+          <select id="cluster-kind">
+            <option value="conducts">Conducts</option>
+            <option value="risks">Risks</option>
+          </select>
+        </label>
+        <label>Concept
+          <select id="cluster-item"></select>
+        </label>
+      </div>
+      <div class="cluster-panes">
+        <div class="cluster-pane">
+          <h4>Definitions over time</h4>
+          <div id="cluster-timeline" class="cluster-timeline"></div>
+        </div>
+        <div class="cluster-pane">
+          <h4>Conceptual network</h4>
+          <p class="cluster-help">Central node = the selected category. Surrounding nodes = every item in it, coloured by actor type. Drag, scroll to zoom, ⊕ to recenter.</p>
+          <label class="pane-toggle">
+            <input type="checkbox" id="cluster-expand-related">
+            <span>Include categories sharing a word</span>
+          </label>
+          <svg id="concept-graph" class="cluster-graph"></svg>
+        </div>
+        <div class="cluster-pane">
+          <h4>Actor network</h4>
+          <p class="cluster-help">Actors involved in defining, training and benchmarking — coloured by actor type. Click a node to inspect; drag to move, scroll to zoom, ⊕ to recenter.</p>
+          <svg id="actor-graph" class="cluster-graph"></svg>
+          <div id="actor-detail" class="actor-detail hidden"></div>
+        </div>
+      </div>
     </article>
   </section>
 
@@ -1200,8 +1194,8 @@
 <aside id="data-card" role="tooltip" hidden></aside>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="app.js?v=20260617T1500"></script>
-<script src="stacks.js?v=20260606q"></script>
+<script src="app.js?v=20260618T1015"></script>
+<script src="stacks.js?v=20260618T1015"></script>
 <script src="comments-config.js?v=20260617"></script>
 <script src="refs-comments.js?v=20260617"></script>
 </body>
