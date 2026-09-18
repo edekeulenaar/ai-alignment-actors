@@ -323,12 +323,18 @@
       data.categories.forEach(function (c) { max = Math.max(max, data.matrix[t][c]); });
     });
 
+    var tip = document.createElement("div");
+    tip.className = "fig2-tip";
+    tip.hidden = true;
+    host.appendChild(tip);
+
     var table = document.createElement("table");
     table.className = "fig2-matrix";
     var head = document.createElement("tr");
     head.appendChild(document.createElement("th"));
-    data.categories.forEach(function (c) {
+    data.categories.forEach(function (c, i) {
       var th = document.createElement("th");
+      th.dataset.col = String(i);
       var span = document.createElement("span");
       span.textContent = c;
       th.appendChild(span);
@@ -336,23 +342,50 @@
     });
     table.appendChild(head);
 
-    data.types.forEach(function (t) {
+    function show(ev, cell) {
+      var t = cell.dataset.type, c = cell.dataset.category, n = cell.dataset.count;
+      var who = ((data.examples[t] || {})[c] || []);
+      tip.hidden = false;
+      tip.innerHTML = "<strong>" + t + "</strong> in <strong>" + c + "</strong><br>"
+        + n + (n === "1" ? " document" : " documents") + " of this type name an actor of this type"
+        + (who.length ? "<br><span class=\"fig2-tip-who\">" + who.join(", ")
+                        + (who.length >= 6 ? " …" : "") + "</span>" : "");
+      var box = host.getBoundingClientRect();
+      var x = ev.clientX - box.left + 14, y = ev.clientY - box.top + 14;
+      tip.style.left = Math.min(x, host.clientWidth - tip.offsetWidth - 8) + "px";
+      tip.style.top = y + "px";
+    }
+    function highlight(row, col, on) {
+      table.querySelectorAll('[data-row="' + row + '"], [data-col="' + col + '"]')
+        .forEach(function (e) { e.classList.toggle("is-lit", on); });
+    }
+
+    data.types.forEach(function (t, r) {
       var tr = document.createElement("tr");
       var label = document.createElement("th");
       label.className = "fig2-matrix-row";
+      label.dataset.row = String(r);
       label.innerHTML = '<i style="background:' + (data.colors[t] || "#b9b1a2") + '"></i>' + t;
       tr.appendChild(label);
-      data.categories.forEach(function (c) {
+      data.categories.forEach(function (c, i) {
         var n = data.matrix[t][c];
         var td = document.createElement("td");
+        td.dataset.row = String(r);
+        td.dataset.col = String(i);
         if (n) {
-          // Square root keeps the smaller counts visible next to the internal actors.
+          td.className = "has-value";
+          td.dataset.type = t;
+          td.dataset.category = c;
+          td.dataset.count = String(n);
           td.style.background = data.colors[t] || "#6f6a62";
-          td.style.opacity = String(0.12 + 0.88 * Math.sqrt(n) / Math.sqrt(max));
+          // Square root keeps the smaller counts visible next to the internal actors.
+          td.style.opacity = String(0.14 + 0.86 * Math.sqrt(n) / Math.sqrt(max));
           td.textContent = n;
-          var who = (data.examples[t] || {})[c] || [];
-          td.title = t + " in " + c + ": " + n + " mentions"
-            + (who.length ? "\n" + who.join(", ") : "");
+          td.addEventListener("mousemove", function (ev) { show(ev, td); });
+          td.addEventListener("mouseenter", function () { highlight(r, i, true); });
+          td.addEventListener("mouseleave", function () {
+            highlight(r, i, false); tip.hidden = true;
+          });
         }
         tr.appendChild(td);
       });

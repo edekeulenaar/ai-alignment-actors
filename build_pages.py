@@ -33,7 +33,7 @@ DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
 TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260918s"
+VERSION = "20260918u"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -79,6 +79,8 @@ def taxonomy_table() -> str:
         rows = [r for r in csv.DictReader(fh, delimiter=";")
                 if not r["Group"].startswith("Out of scope")]
     out = ['<div class="fig2-host" id="table-1"><table class="taxonomy">',
+           "<colgroup><col style='width:11%'><col style='width:15%'><col style='width:19%'>"
+           "<col style='width:35%'><col style='width:20%'></colgroup>",
            "<thead><tr><th>Group</th><th>Category</th><th>Also known as</th>"
            "<th>Definition and decision rule</th><th>Data points to code</th></tr></thead><tbody>"]
     # One merged cell per group, spanning its categories.
