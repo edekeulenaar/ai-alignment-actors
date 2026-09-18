@@ -1,0 +1,143 @@
+/* Pages for the two drafts, and the three figures added in September 2026. */
+:root {
+  --paper-ink: #23211e;
+  --paper-bg: #fdfcf9;
+  --paper-rule: #ded8cd;
+  --paper-soft: #6f6a62;
+}
+
+body.paper-page {
+  margin: 0;
+  background: var(--paper-bg);
+  color: var(--paper-ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+.paper {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 6rem;
+}
+
+.paper-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-bottom: .75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--paper-rule);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .82rem;
+  letter-spacing: .02em;
+}
+.paper-nav a { color: var(--paper-soft); text-decoration: none; }
+.paper-nav a:hover { color: var(--paper-ink); text-decoration: underline; }
+
+.paper-lede {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .92rem;
+  color: var(--paper-soft);
+  margin: 0 0 2rem;
+}
+
+.paper h1 { font-size: 1.9rem; line-height: 1.2; margin: 2.5rem 0 1rem; }
+.paper h2 { font-size: 1.35rem; margin: 2.5rem 0 .75rem; }
+.paper h3 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
+.paper h4 { font-size: .98rem; margin: 1.5rem 0 .4rem; }
+.paper p { margin: 0 0 1.05rem; }
+.paper ul, .paper ol { margin: 0 0 1.05rem 1.2rem; padding: 0; }
+.paper li { margin-bottom: .35rem; }
+.paper table { border-collapse: collapse; width: 100%; margin: 1rem 0 1.5rem; font-size: .9rem; }
+.paper th, .paper td { border: 1px solid var(--paper-rule); padding: .35rem .5rem; text-align: left; }
+.paper code { background: #f0ece3; padding: .1em .3em; border-radius: 3px; font-size: .88em; }
+
+.cite { color: var(--paper-soft); }
+.figref {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .82rem;
+  color: var(--paper-soft);
+  background: #f2efe7;
+  border-left: 2px solid var(--paper-rule);
+  padding: .3rem .55rem;
+  margin: .25rem 0;
+}
+
+/* ── Figures ─────────────────────────────────────────────────────────────── */
+.fig2 { margin: 2.5rem 0 3rem; padding: 0; }
+.fig2 figcaption {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .85rem;
+  color: var(--paper-soft);
+  margin-bottom: .85rem;
+}
+.fig2-host {
+  border: 1px solid var(--paper-rule);
+  border-radius: 4px;
+  padding: .85rem;
+  background: #fff;
+  position: relative;
+}
+.fig2-types { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .75rem; }
+.fig2-type {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .73rem;
+  padding: .22rem .5rem;
+  border: 1px solid var(--paper-rule);
+  border-radius: 999px;
+  background: #fbf9f4;
+  color: var(--paper-soft);
+  cursor: pointer;
+}
+.fig2-type:hover { border-color: #b9b1a2; color: var(--paper-ink); }
+.fig2-type.is-on { background: #3f6fb5; border-color: #3f6fb5; color: #fff; }
+
+.fig2-legend {
+  display: flex; flex-wrap: wrap; gap: .5rem 1rem;
+  margin: 0 0 .75rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .73rem; color: var(--paper-soft);
+}
+.fig2-key { display: inline-flex; align-items: center; gap: .3rem; }
+.fig2-key i { width: .7rem; height: .7rem; border-radius: 2px; display: inline-block; }
+
+.fig2-note {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .75rem; color: var(--paper-soft); margin: .6rem 0 0;
+}
+
+.fig2-bars { list-style: none; margin: 0; padding: 0; }
+.fig2-bars li {
+  display: grid;
+  grid-template-columns: minmax(7rem, 14rem) 1fr auto;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: .28rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .8rem;
+}
+.fig2-term { text-align: right; color: var(--paper-ink); }
+.fig2-track { background: #f0ece3; border-radius: 2px; height: .8rem; overflow: hidden; }
+.fig2-bar { display: block; height: 100%; border-radius: 2px; }
+.fig2-value { font-size: .7rem; color: var(--paper-soft); white-space: nowrap; }
+
+.fig2-canvas { position: relative; }
+.fig2-tip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(35, 33, 30, .94);
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .74rem;
+  line-height: 1.35;
+  padding: .4rem .55rem;
+  border-radius: 4px;
+  max-width: 18rem;
+  z-index: 20;
+}
+
+@media (max-width: 640px) {
+  .fig2-bars li { grid-template-columns: 1fr; gap: .1rem; }
+  .fig2-term { text-align: left; }
+}

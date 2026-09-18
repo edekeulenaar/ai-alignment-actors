@@ -1,0 +1,5509 @@
+{
+ "Model documentation": [
+  {
+   "term": "card",
+   "z": 7.74,
+   "docs": 76,
+   "category_docs": 91,
+   "corpus_docs": 97
+  },
+  {
+   "term": "model data",
+   "z": 5.91,
+   "docs": 39,
+   "category_docs": 91,
+   "corpus_docs": 41
+  },
+  {
+   "term": "model information",
+   "z": 5.46,
+   "docs": 32,
+   "category_docs": 91,
+   "corpus_docs": 32
+  },
+  {
+   "term": "training dataset",
+   "z": 5.28,
+   "docs": 33,
+   "category_docs": 91,
+   "corpus_docs": 36
+  },
+  {
+   "term": "content safety",
+   "z": 4.79,
+   "docs": 27,
+   "category_docs": 91,
+   "corpus_docs": 29
+  },
+  {
+   "term": "data processing",
+   "z": 4.7,
+   "docs": 28,
+   "category_docs": 91,
+   "corpus_docs": 32
+  },
+  {
+   "term": "safety policies",
+   "z": 4.54,
+   "docs": 32,
+   "category_docs": 91,
+   "corpus_docs": 43
+  },
+  {
+   "term": "description",
+   "z": 4.44,
+   "docs": 45,
+   "category_docs": 91,
+   "corpus_docs": 80
+  },
+  {
+   "term": "inputs",
+   "z": 4.41,
+   "docs": 48,
+   "category_docs": 91,
+   "corpus_docs": 90
+  },
+  {
+   "term": "data training",
+   "z": 4.37,
+   "docs": 23,
+   "category_docs": 91,
+   "corpus_docs": 25
+  },
+  {
+   "term": "gemini models",
+   "z": 4.16,
+   "docs": 23,
+   "category_docs": 91,
+   "corpus_docs": 27
+  },
+  {
+   "term": "safety evaluation",
+   "z": 4.16,
+   "docs": 27,
+   "category_docs": 91,
+   "corpus_docs": 36
+  },
+  {
+   "term": "known limitations",
+   "z": 4.15,
+   "docs": 22,
+   "category_docs": 91,
+   "corpus_docs": 25
+  },
+  {
+   "term": "software training",
+   "z": 4.03,
+   "docs": 18,
+   "category_docs": 91,
+   "corpus_docs": 18
+  },
+  {
+   "term": "mitigation approaches",
+   "z": 4.03,
+   "docs": 20,
+   "category_docs": 91,
+   "corpus_docs": 22
+  },
+  {
+   "term": "updated evaluations",
+   "z": 4.03,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 20
+  },
+  {
+   "term": "model quality",
+   "z": 4.03,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 20
+  },
+  {
+   "term": "safety performance",
+   "z": 3.92,
+   "docs": 20,
+   "category_docs": 91,
+   "corpus_docs": 23
+  },
+  {
+   "term": "performance model",
+   "z": 3.91,
+   "docs": 17,
+   "category_docs": 91,
+   "corpus_docs": 17
+  },
+  {
+   "term": "training and development",
+   "z": 3.91,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 21
+  },
+  {
+   "term": "model improved",
+   "z": 3.91,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 21
+  },
+  {
+   "term": "instruction following",
+   "z": 3.91,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 21
+  },
+  {
+   "term": "architecture",
+   "z": 3.9,
+   "docs": 36,
+   "category_docs": 91,
+   "corpus_docs": 64
+  },
+  {
+   "term": "evaluation results",
+   "z": 3.89,
+   "docs": 26,
+   "category_docs": 91,
+   "corpus_docs": 37
+  },
+  {
+   "term": "hate",
+   "z": 3.82,
+   "docs": 24,
+   "category_docs": 91,
+   "corpus_docs": 33
+  },
+  {
+   "term": "evaluations the model",
+   "z": 3.8,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 22
+  },
+  {
+   "term": "preprocessing",
+   "z": 3.79,
+   "docs": 16,
+   "category_docs": 91,
+   "corpus_docs": 16
+  },
+  {
+   "term": "data filtering",
+   "z": 3.79,
+   "docs": 18,
+   "category_docs": 91,
+   "corpus_docs": 20
+  },
+  {
+   "term": "ethics",
+   "z": 3.78,
+   "docs": 30,
+   "category_docs": 91,
+   "corpus_docs": 49
+  },
+  {
+   "term": "text",
+   "z": 3.72,
+   "docs": 57,
+   "category_docs": 91,
+   "corpus_docs": 143
+  },
+  {
+   "term": "images",
+   "z": 3.71,
+   "docs": 37,
+   "category_docs": 91,
+   "corpus_docs": 71
+  },
+  {
+   "term": "revised",
+   "z": 3.67,
+   "docs": 22,
+   "category_docs": 91,
+   "corpus_docs": 30
+  },
+  {
+   "term": "input data",
+   "z": 3.67,
+   "docs": 15,
+   "category_docs": 91,
+   "corpus_docs": 15
+  },
+  {
+   "term": "tpus",
+   "z": 3.66,
+   "docs": 16,
+   "category_docs": 91,
+   "corpus_docs": 17
+  },
+  {
+   "term": "documentation",
+   "z": 3.64,
+   "docs": 34,
+   "category_docs": 91,
+   "corpus_docs": 63
+  },
+  {
+   "term": "family models",
+   "z": 3.64,
+   "docs": 21,
+   "category_docs": 91,
+   "corpus_docs": 28
+  },
+  {
+   "term": "evaluation metrics",
+   "z": 3.61,
+   "docs": 20,
+   "category_docs": 91,
+   "corpus_docs": 26
+  },
+  {
+   "term": "multimodal",
+   "z": 3.59,
+   "docs": 26,
+   "category_docs": 91,
+   "corpus_docs": 41
+  },
+  {
+   "term": "internal evaluations",
+   "z": 3.58,
+   "docs": 19,
+   "category_docs": 91,
+   "corpus_docs": 24
+  },
+  {
+   "term": "internal safety",
+   "z": 3.56,
+   "docs": 18,
+   "category_docs": 91,
+   "corpus_docs": 22
+  }
+ ],
+ "Organizational principles, standards, codes": [
+  {
+   "term": "committed providing",
+   "z": 2.19,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 4
+  },
+  {
+   "term": "policies and practices",
+   "z": 1.83,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 6
+  },
+  {
+   "term": "privacy and security",
+   "z": 1.77,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 10
+  },
+  {
+   "term": "code conduct",
+   "z": 1.77,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 10
+  },
+  {
+   "term": "following principles",
+   "z": 1.7,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 7
+  },
+  {
+   "term": "microsoft\u2019s",
+   "z": 1.67,
+   "docs": 7,
+   "category_docs": 21,
+   "corpus_docs": 21
+  },
+  {
+   "term": "informs",
+   "z": 1.6,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 12
+  },
+  {
+   "term": "inclusiveness",
+   "z": 1.58,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 8
+  },
+  {
+   "term": "non-profit",
+   "z": 1.48,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 9
+  },
+  {
+   "term": "guide",
+   "z": 1.41,
+   "docs": 12,
+   "category_docs": 21,
+   "corpus_docs": 72
+  },
+  {
+   "term": "organize",
+   "z": 1.39,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 10
+  },
+  {
+   "term": "we\u2019re working",
+   "z": 1.35,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 16
+  },
+  {
+   "term": "responsibilities",
+   "z": 1.32,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 11
+  },
+  {
+   "term": "flourishing",
+   "z": 1.3,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 17
+  },
+  {
+   "term": "empower",
+   "z": 1.28,
+   "docs": 8,
+   "category_docs": 21,
+   "corpus_docs": 40
+  },
+  {
+   "term": "development and deployment",
+   "z": 1.27,
+   "docs": 7,
+   "category_docs": 21,
+   "corpus_docs": 32
+  },
+  {
+   "term": "responsive",
+   "z": 1.25,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 12
+  },
+  {
+   "term": "next steps",
+   "z": 1.25,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 12
+  },
+  {
+   "term": "founding",
+   "z": 1.25,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 12
+  },
+  {
+   "term": "human oversight",
+   "z": 1.25,
+   "docs": 6,
+   "category_docs": 21,
+   "corpus_docs": 25
+  },
+  {
+   "term": "foundational",
+   "z": 1.2,
+   "docs": 7,
+   "category_docs": 21,
+   "corpus_docs": 35
+  },
+  {
+   "term": "defend against",
+   "z": 1.19,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 13
+  },
+  {
+   "term": "societal",
+   "z": 1.18,
+   "docs": 9,
+   "category_docs": 21,
+   "corpus_docs": 55
+  },
+  {
+   "term": "advancing",
+   "z": 1.17,
+   "docs": 10,
+   "category_docs": 21,
+   "corpus_docs": 67
+  },
+  {
+   "term": "products and services",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 14
+  },
+  {
+   "term": "copilot",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 14
+  },
+  {
+   "term": "developments",
+   "z": 1.13,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 21
+  },
+  {
+   "term": "promoting",
+   "z": 1.13,
+   "docs": 6,
+   "category_docs": 21,
+   "corpus_docs": 29
+  },
+  {
+   "term": "broad range",
+   "z": 1.13,
+   "docs": 6,
+   "category_docs": 21,
+   "corpus_docs": 29
+  },
+  {
+   "term": "technologies",
+   "z": 1.13,
+   "docs": 10,
+   "category_docs": 21,
+   "corpus_docs": 70
+  },
+  {
+   "term": "society",
+   "z": 1.11,
+   "docs": 12,
+   "category_docs": 21,
+   "corpus_docs": 97
+  },
+  {
+   "term": "evolving",
+   "z": 1.1,
+   "docs": 8,
+   "category_docs": 21,
+   "corpus_docs": 49
+  },
+  {
+   "term": "drive",
+   "z": 1.1,
+   "docs": 8,
+   "category_docs": 21,
+   "corpus_docs": 49
+  },
+  {
+   "term": "pursue",
+   "z": 1.1,
+   "docs": 7,
+   "category_docs": 21,
+   "corpus_docs": 39
+  },
+  {
+   "term": "learnings",
+   "z": 1.1,
+   "docs": 6,
+   "category_docs": 21,
+   "corpus_docs": 30
+  },
+  {
+   "term": "accountable",
+   "z": 1.09,
+   "docs": 5,
+   "category_docs": 21,
+   "corpus_docs": 22
+  },
+  {
+   "term": "respecting",
+   "z": 1.09,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 15
+  },
+  {
+   "term": "operator",
+   "z": 1.09,
+   "docs": 4,
+   "category_docs": 21,
+   "corpus_docs": 15
+  },
+  {
+   "term": "responsible",
+   "z": 1.08,
+   "docs": 16,
+   "category_docs": 21,
+   "corpus_docs": 164
+  },
+  {
+   "term": "long-term",
+   "z": 1.06,
+   "docs": 7,
+   "category_docs": 21,
+   "corpus_docs": 41
+  }
+ ],
+ "Partnerships and MOUs": [
+  {
+   "term": "life sciences",
+   "z": 3.93,
+   "docs": 21,
+   "category_docs": 37,
+   "corpus_docs": 34
+  },
+  {
+   "term": "sonnet models",
+   "z": 3.92,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 25
+  },
+  {
+   "term": "work developing",
+   "z": 3.62,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 29
+  },
+  {
+   "term": "opus and sonnet",
+   "z": 3.62,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 29
+  },
+  {
+   "term": "set safeguards",
+   "z": 3.56,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 30
+  },
+  {
+   "term": "partnership",
+   "z": 3.48,
+   "docs": 28,
+   "category_docs": 37,
+   "corpus_docs": 73
+  },
+  {
+   "term": "permissive",
+   "z": 3.26,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 35
+  },
+  {
+   "term": "refined",
+   "z": 3.2,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 36
+  },
+  {
+   "term": "ministry",
+   "z": 2.96,
+   "docs": 11,
+   "category_docs": 37,
+   "corpus_docs": 16
+  },
+  {
+   "term": "professionals",
+   "z": 2.57,
+   "docs": 19,
+   "category_docs": 37,
+   "corpus_docs": 56
+  },
+  {
+   "term": "verification",
+   "z": 2.53,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 52
+  },
+  {
+   "term": "partnering",
+   "z": 2.53,
+   "docs": 14,
+   "category_docs": 37,
+   "corpus_docs": 33
+  },
+  {
+   "term": "workforce",
+   "z": 2.47,
+   "docs": 11,
+   "category_docs": 37,
+   "corpus_docs": 22
+  },
+  {
+   "term": "scientific discovery",
+   "z": 2.46,
+   "docs": 13,
+   "category_docs": 37,
+   "corpus_docs": 30
+  },
+  {
+   "term": "time focus",
+   "z": 2.43,
+   "docs": 6,
+   "category_docs": 37,
+   "corpus_docs": 7
+  },
+  {
+   "term": "technical teams",
+   "z": 2.43,
+   "docs": 6,
+   "category_docs": 37,
+   "corpus_docs": 7
+  },
+  {
+   "term": "introducing",
+   "z": 2.29,
+   "docs": 20,
+   "category_docs": 37,
+   "corpus_docs": 72
+  },
+  {
+   "term": "deepening",
+   "z": 2.27,
+   "docs": 8,
+   "category_docs": 37,
+   "corpus_docs": 14
+  },
+  {
+   "term": "government",
+   "z": 2.2,
+   "docs": 26,
+   "category_docs": 37,
+   "corpus_docs": 120
+  },
+  {
+   "term": "campus",
+   "z": 2.13,
+   "docs": 6,
+   "category_docs": 37,
+   "corpus_docs": 9
+  },
+  {
+   "term": "teachers",
+   "z": 2.11,
+   "docs": 11,
+   "category_docs": 37,
+   "corpus_docs": 28
+  },
+  {
+   "term": "sector",
+   "z": 2.1,
+   "docs": 12,
+   "category_docs": 37,
+   "corpus_docs": 33
+  },
+  {
+   "term": "announced",
+   "z": 2.06,
+   "docs": 11,
+   "category_docs": 37,
+   "corpus_docs": 29
+  },
+  {
+   "term": "world's",
+   "z": 2.04,
+   "docs": 7,
+   "category_docs": 37,
+   "corpus_docs": 13
+  },
+  {
+   "term": "classroom",
+   "z": 2.04,
+   "docs": 7,
+   "category_docs": 37,
+   "corpus_docs": 13
+  },
+  {
+   "term": "program",
+   "z": 1.99,
+   "docs": 25,
+   "category_docs": 37,
+   "corpus_docs": 126
+  },
+  {
+   "term": "said",
+   "z": 1.97,
+   "docs": 15,
+   "category_docs": 37,
+   "corpus_docs": 53
+  },
+  {
+   "term": "gives",
+   "z": 1.96,
+   "docs": 18,
+   "category_docs": 37,
+   "corpus_docs": 73
+  },
+  {
+   "term": "instruments",
+   "z": 1.94,
+   "docs": 8,
+   "category_docs": 37,
+   "corpus_docs": 18
+  },
+  {
+   "term": "innovation",
+   "z": 1.93,
+   "docs": 20,
+   "category_docs": 37,
+   "corpus_docs": 89
+  },
+  {
+   "term": "students",
+   "z": 1.9,
+   "docs": 12,
+   "category_docs": 37,
+   "corpus_docs": 38
+  },
+  {
+   "term": "planning",
+   "z": 1.89,
+   "docs": 27,
+   "category_docs": 37,
+   "corpus_docs": 152
+  },
+  {
+   "term": "work closely",
+   "z": 1.87,
+   "docs": 7,
+   "category_docs": 37,
+   "corpus_docs": 15
+  },
+  {
+   "term": "commitment",
+   "z": 1.84,
+   "docs": 19,
+   "category_docs": 37,
+   "corpus_docs": 86
+  },
+  {
+   "term": "educators",
+   "z": 1.84,
+   "docs": 9,
+   "category_docs": 37,
+   "corpus_docs": 24
+  },
+  {
+   "term": "computer systems",
+   "z": 1.83,
+   "docs": 22,
+   "category_docs": 37,
+   "corpus_docs": 111
+  },
+  {
+   "term": "security efforts",
+   "z": 1.82,
+   "docs": 21,
+   "category_docs": 37,
+   "corpus_docs": 103
+  },
+  {
+   "term": "accelerated",
+   "z": 1.8,
+   "docs": 6,
+   "category_docs": 37,
+   "corpus_docs": 12
+  },
+  {
+   "term": "digital",
+   "z": 1.8,
+   "docs": 14,
+   "category_docs": 37,
+   "corpus_docs": 53
+  },
+  {
+   "term": "independent review",
+   "z": 1.79,
+   "docs": 21,
+   "category_docs": 37,
+   "corpus_docs": 105
+  }
+ ],
+ "Research": [
+  {
+   "term": "abstract",
+   "z": 5.63,
+   "docs": 54,
+   "category_docs": 120,
+   "corpus_docs": 70
+  },
+  {
+   "term": "proof",
+   "z": 5.12,
+   "docs": 53,
+   "category_docs": 120,
+   "corpus_docs": 76
+  },
+  {
+   "term": "programming language",
+   "z": 5.1,
+   "docs": 49,
+   "category_docs": 120,
+   "corpus_docs": 67
+  },
+  {
+   "term": "developed new evaluations",
+   "z": 5.08,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 65
+  },
+  {
+   "term": "lean",
+   "z": 5.06,
+   "docs": 50,
+   "category_docs": 120,
+   "corpus_docs": 70
+  },
+  {
+   "term": "third-party systems",
+   "z": 5.01,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 66
+  },
+  {
+   "term": "measure capabilities",
+   "z": 4.89,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 68
+  },
+  {
+   "term": "conventional",
+   "z": 4.76,
+   "docs": 50,
+   "category_docs": 120,
+   "corpus_docs": 75
+  },
+  {
+   "term": "recent cybersecurity incidents",
+   "z": 4.72,
+   "docs": 43,
+   "category_docs": 120,
+   "corpus_docs": 59
+  },
+  {
+   "term": "weapons development",
+   "z": 4.7,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 71
+  },
+  {
+   "term": "tactical",
+   "z": 4.7,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 71
+  },
+  {
+   "term": "evaluations measure",
+   "z": 4.53,
+   "docs": 48,
+   "category_docs": 120,
+   "corpus_docs": 74
+  },
+  {
+   "term": "capabilities models",
+   "z": 4.51,
+   "docs": 45,
+   "category_docs": 120,
+   "corpus_docs": 67
+  },
+  {
+   "term": "write",
+   "z": 4.4,
+   "docs": 60,
+   "category_docs": 120,
+   "corpus_docs": 109
+  },
+  {
+   "term": "largely",
+   "z": 4.07,
+   "docs": 55,
+   "category_docs": 120,
+   "corpus_docs": 102
+  },
+  {
+   "term": "targeting",
+   "z": 4.05,
+   "docs": 51,
+   "category_docs": 120,
+   "corpus_docs": 91
+  },
+  {
+   "term": "days",
+   "z": 3.99,
+   "docs": 53,
+   "category_docs": 120,
+   "corpus_docs": 98
+  },
+  {
+   "term": "present",
+   "z": 3.99,
+   "docs": 67,
+   "category_docs": 120,
+   "corpus_docs": 141
+  },
+  {
+   "term": "paper",
+   "z": 3.97,
+   "docs": 37,
+   "category_docs": 120,
+   "corpus_docs": 56
+  },
+  {
+   "term": "autonomously",
+   "z": 3.95,
+   "docs": 53,
+   "category_docs": 120,
+   "corpus_docs": 99
+  },
+  {
+   "term": "red team",
+   "z": 3.91,
+   "docs": 52,
+   "category_docs": 120,
+   "corpus_docs": 97
+  },
+  {
+   "term": "measuring",
+   "z": 3.81,
+   "docs": 56,
+   "category_docs": 120,
+   "corpus_docs": 111
+  },
+  {
+   "term": "four",
+   "z": 3.48,
+   "docs": 54,
+   "category_docs": 120,
+   "corpus_docs": 113
+  },
+  {
+   "term": "complete",
+   "z": 3.47,
+   "docs": 58,
+   "category_docs": 120,
+   "corpus_docs": 126
+  },
+  {
+   "term": "worked",
+   "z": 3.25,
+   "docs": 54,
+   "category_docs": 120,
+   "corpus_docs": 119
+  },
+  {
+   "term": "study",
+   "z": 3.21,
+   "docs": 49,
+   "category_docs": 120,
+   "corpus_docs": 104
+  },
+  {
+   "term": "experiment",
+   "z": 2.95,
+   "docs": 34,
+   "category_docs": 120,
+   "corpus_docs": 65
+  },
+  {
+   "term": "language models",
+   "z": 2.94,
+   "docs": 50,
+   "category_docs": 120,
+   "corpus_docs": 114
+  },
+  {
+   "term": "last",
+   "z": 2.83,
+   "docs": 55,
+   "category_docs": 120,
+   "corpus_docs": 134
+  },
+  {
+   "term": "larger",
+   "z": 2.74,
+   "docs": 33,
+   "category_docs": 120,
+   "corpus_docs": 66
+  },
+  {
+   "term": "human feedback",
+   "z": 2.72,
+   "docs": 21,
+   "category_docs": 120,
+   "corpus_docs": 34
+  },
+  {
+   "term": "however",
+   "z": 2.69,
+   "docs": 53,
+   "category_docs": 120,
+   "corpus_docs": 131
+  },
+  {
+   "term": "assessment",
+   "z": 2.69,
+   "docs": 55,
+   "category_docs": 120,
+   "corpus_docs": 138
+  },
+  {
+   "term": "learning from human",
+   "z": 2.61,
+   "docs": 18,
+   "category_docs": 120,
+   "corpus_docs": 28
+  },
+  {
+   "term": "intelligence",
+   "z": 2.6,
+   "docs": 66,
+   "category_docs": 120,
+   "corpus_docs": 181
+  },
+  {
+   "term": "anthropic\u2019s",
+   "z": 2.5,
+   "docs": 52,
+   "category_docs": 120,
+   "corpus_docs": 133
+  },
+  {
+   "term": "method",
+   "z": 2.44,
+   "docs": 34,
+   "category_docs": 120,
+   "corpus_docs": 75
+  },
+  {
+   "term": "find",
+   "z": 2.43,
+   "docs": 61,
+   "category_docs": 120,
+   "corpus_docs": 168
+  },
+  {
+   "term": "humans",
+   "z": 2.43,
+   "docs": 39,
+   "category_docs": 120,
+   "corpus_docs": 91
+  },
+  {
+   "term": "show",
+   "z": 2.16,
+   "docs": 37,
+   "category_docs": 120,
+   "corpus_docs": 91
+  }
+ ],
+ "Evaluations, benchmarks and tools": [
+  {
+   "term": "judge models",
+   "z": 2.31,
+   "docs": 5,
+   "category_docs": 16,
+   "corpus_docs": 6
+  },
+  {
+   "term": "factually accurate",
+   "z": 2.29,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 9
+  },
+  {
+   "term": "leaderboard",
+   "z": 2.08,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 11
+  },
+  {
+   "term": "kaggle",
+   "z": 2.08,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 11
+  },
+  {
+   "term": "parametric",
+   "z": 2.03,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 5
+  },
+  {
+   "term": "human raters",
+   "z": 1.87,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 6
+  },
+  {
+   "term": "fully grounded",
+   "z": 1.87,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 6
+  },
+  {
+   "term": "factuality",
+   "z": 1.77,
+   "docs": 8,
+   "category_docs": 16,
+   "corpus_docs": 26
+  },
+  {
+   "term": "simpleqa",
+   "z": 1.73,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 7
+  },
+  {
+   "term": "public set",
+   "z": 1.7,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 4
+  },
+  {
+   "term": "grounded provided",
+   "z": 1.7,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 4
+  },
+  {
+   "term": "benchmark for evaluating",
+   "z": 1.7,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 4
+  },
+  {
+   "term": "grounding",
+   "z": 1.65,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 17
+  },
+  {
+   "term": "synthesize",
+   "z": 1.64,
+   "docs": 5,
+   "category_docs": 16,
+   "corpus_docs": 12
+  },
+  {
+   "term": "system instruction",
+   "z": 1.53,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 5
+  },
+  {
+   "term": "research designed",
+   "z": 1.53,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 5
+  },
+  {
+   "term": "accurate responses",
+   "z": 1.53,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 5
+  },
+  {
+   "term": "evaluates",
+   "z": 1.49,
+   "docs": 7,
+   "category_docs": 16,
+   "corpus_docs": 27
+  },
+  {
+   "term": "facts",
+   "z": 1.43,
+   "docs": 7,
+   "category_docs": 16,
+   "corpus_docs": 29
+  },
+  {
+   "term": "factually correct",
+   "z": 1.4,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 6
+  },
+  {
+   "term": "public and private",
+   "z": 1.36,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 11
+  },
+  {
+   "term": "long-form",
+   "z": 1.36,
+   "docs": 4,
+   "category_docs": 16,
+   "corpus_docs": 11
+  },
+  {
+   "term": "cases where models",
+   "z": 1.29,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 7
+  },
+  {
+   "term": "ability provide",
+   "z": 1.29,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 7
+  },
+  {
+   "term": "google deepmind",
+   "z": 1.2,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 29
+  },
+  {
+   "term": "evaluation framework",
+   "z": 1.19,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 8
+  },
+  {
+   "term": "factual accuracy",
+   "z": 1.19,
+   "docs": 5,
+   "category_docs": 16,
+   "corpus_docs": 21
+  },
+  {
+   "term": "models llms",
+   "z": 1.17,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 30
+  },
+  {
+   "term": "world knowledge",
+   "z": 1.12,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 9
+  },
+  {
+   "term": "contamination",
+   "z": 1.12,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 9
+  },
+  {
+   "term": "adam",
+   "z": 1.12,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 9
+  },
+  {
+   "term": "score",
+   "z": 1.11,
+   "docs": 9,
+   "category_docs": 16,
+   "corpus_docs": 67
+  },
+  {
+   "term": "comprehensively",
+   "z": 1.05,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 10
+  },
+  {
+   "term": "judges",
+   "z": 0.99,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 11
+  },
+  {
+   "term": "answer the question",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 16,
+   "corpus_docs": 13
+  },
+  {
+   "term": "language",
+   "z": 0.88,
+   "docs": 14,
+   "category_docs": 16,
+   "corpus_docs": 197
+  },
+  {
+   "term": "trustworthy",
+   "z": 0.88,
+   "docs": 5,
+   "category_docs": 16,
+   "corpus_docs": 33
+  },
+  {
+   "term": "average",
+   "z": 0.87,
+   "docs": 7,
+   "category_docs": 16,
+   "corpus_docs": 60
+  },
+  {
+   "term": "methodology",
+   "z": 0.85,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 47
+  },
+  {
+   "term": "correctly",
+   "z": 0.85,
+   "docs": 6,
+   "category_docs": 16,
+   "corpus_docs": 47
+  }
+ ],
+ "Misuse and threat intelligence reports": [
+  {
+   "term": "banned",
+   "z": 2.31,
+   "docs": 7,
+   "category_docs": 8,
+   "corpus_docs": 13
+  },
+  {
+   "term": "actor\u2019s",
+   "z": 1.78,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 7
+  },
+  {
+   "term": "life cycle",
+   "z": 1.74,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 4
+  },
+  {
+   "term": "operators",
+   "z": 1.58,
+   "docs": 5,
+   "category_docs": 8,
+   "corpus_docs": 14
+  },
+  {
+   "term": "models create",
+   "z": 1.58,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 5
+  },
+  {
+   "term": "high confidence",
+   "z": 1.58,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 5
+  },
+  {
+   "term": "exfiltrated",
+   "z": 1.58,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 5
+  },
+  {
+   "term": "chain together",
+   "z": 1.58,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 5
+  },
+  {
+   "term": "operation",
+   "z": 1.51,
+   "docs": 7,
+   "category_docs": 8,
+   "corpus_docs": 30
+  },
+  {
+   "term": "uncovered",
+   "z": 1.5,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 10
+  },
+  {
+   "term": "threat actor",
+   "z": 1.5,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 10
+  },
+  {
+   "term": "volumes",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "relevant authorities",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "minimal human",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "malicious cyber",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "larger scale",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "copied",
+   "z": 1.45,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 6
+  },
+  {
+   "term": "human input",
+   "z": 1.34,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 7
+  },
+  {
+   "term": "fraction the time",
+   "z": 1.34,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 7
+  },
+  {
+   "term": "credentials",
+   "z": 1.33,
+   "docs": 6,
+   "category_docs": 8,
+   "corpus_docs": 28
+  },
+  {
+   "term": "extracted",
+   "z": 1.26,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 14
+  },
+  {
+   "term": "circumvented",
+   "z": 1.25,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 8
+  },
+  {
+   "term": "networks",
+   "z": 1.24,
+   "docs": 6,
+   "category_docs": 8,
+   "corpus_docs": 32
+  },
+  {
+   "term": "tactics",
+   "z": 1.21,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 15
+  },
+  {
+   "term": "case study",
+   "z": 1.21,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 15
+  },
+  {
+   "term": "orchestration",
+   "z": 1.18,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 9
+  },
+  {
+   "term": "manipulated",
+   "z": 1.18,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 9
+  },
+  {
+   "term": "ai-assisted",
+   "z": 1.18,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 9
+  },
+  {
+   "term": "fraudulent",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 17
+  },
+  {
+   "term": "compromised",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 17
+  },
+  {
+   "term": "cluster",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 17
+  },
+  {
+   "term": "accounts",
+   "z": 1.12,
+   "docs": 7,
+   "category_docs": 8,
+   "corpus_docs": 52
+  },
+  {
+   "term": "malicious actors",
+   "z": 1.12,
+   "docs": 5,
+   "category_docs": 8,
+   "corpus_docs": 27
+  },
+  {
+   "term": "activity",
+   "z": 1.12,
+   "docs": 8,
+   "category_docs": 8,
+   "corpus_docs": 68
+  },
+  {
+   "term": "stolen",
+   "z": 1.11,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 10
+  },
+  {
+   "term": "case studies",
+   "z": 1.11,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 10
+  },
+  {
+   "term": "executed",
+   "z": 1.07,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 19
+  },
+  {
+   "term": "campaign",
+   "z": 1.07,
+   "docs": 4,
+   "category_docs": 8,
+   "corpus_docs": 19
+  },
+  {
+   "term": "scams",
+   "z": 1.06,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 11
+  },
+  {
+   "term": "politically",
+   "z": 1.06,
+   "docs": 3,
+   "category_docs": 8,
+   "corpus_docs": 11
+  }
+ ],
+ "Safeguards and product-safety explainers": [
+  {
+   "term": "automated systems",
+   "z": 2.77,
+   "docs": 12,
+   "category_docs": 46,
+   "corpus_docs": 20
+  },
+  {
+   "term": "accounts",
+   "z": 2.53,
+   "docs": 19,
+   "category_docs": 46,
+   "corpus_docs": 52
+  },
+  {
+   "term": "detect",
+   "z": 2.33,
+   "docs": 28,
+   "category_docs": 46,
+   "corpus_docs": 112
+  },
+  {
+   "term": "teens",
+   "z": 2.32,
+   "docs": 10,
+   "category_docs": 46,
+   "corpus_docs": 19
+  },
+  {
+   "term": "parents",
+   "z": 2.29,
+   "docs": 11,
+   "category_docs": 46,
+   "corpus_docs": 23
+  },
+  {
+   "term": "chatgpt",
+   "z": 2.19,
+   "docs": 20,
+   "category_docs": 46,
+   "corpus_docs": 68
+  },
+  {
+   "term": "distress",
+   "z": 2.17,
+   "docs": 10,
+   "category_docs": 46,
+   "corpus_docs": 21
+  },
+  {
+   "term": "experts",
+   "z": 2.14,
+   "docs": 29,
+   "category_docs": 46,
+   "corpus_docs": 130
+  },
+  {
+   "term": "learnings",
+   "z": 2.11,
+   "docs": 12,
+   "category_docs": 46,
+   "corpus_docs": 30
+  },
+  {
+   "term": "notifications",
+   "z": 2.06,
+   "docs": 7,
+   "category_docs": 46,
+   "corpus_docs": 12
+  },
+  {
+   "term": "controls",
+   "z": 2.06,
+   "docs": 23,
+   "category_docs": 46,
+   "corpus_docs": 92
+  },
+  {
+   "term": "acute",
+   "z": 2.05,
+   "docs": 9,
+   "category_docs": 46,
+   "corpus_docs": 19
+  },
+  {
+   "term": "people",
+   "z": 1.98,
+   "docs": 36,
+   "category_docs": 46,
+   "corpus_docs": 201
+  },
+  {
+   "term": "moments",
+   "z": 1.98,
+   "docs": 10,
+   "category_docs": 46,
+   "corpus_docs": 24
+  },
+  {
+   "term": "protections",
+   "z": 1.96,
+   "docs": 18,
+   "category_docs": 46,
+   "corpus_docs": 65
+  },
+  {
+   "term": "enforcement",
+   "z": 1.95,
+   "docs": 16,
+   "category_docs": 46,
+   "corpus_docs": 54
+  },
+  {
+   "term": "services",
+   "z": 1.88,
+   "docs": 26,
+   "category_docs": 46,
+   "corpus_docs": 123
+  },
+  {
+   "term": "bad actors",
+   "z": 1.84,
+   "docs": 8,
+   "category_docs": 46,
+   "corpus_docs": 18
+  },
+  {
+   "term": "mental",
+   "z": 1.8,
+   "docs": 13,
+   "category_docs": 46,
+   "corpus_docs": 42
+  },
+  {
+   "term": "self-harm",
+   "z": 1.79,
+   "docs": 12,
+   "category_docs": 46,
+   "corpus_docs": 37
+  },
+  {
+   "term": "users",
+   "z": 1.79,
+   "docs": 34,
+   "category_docs": 46,
+   "corpus_docs": 198
+  },
+  {
+   "term": "election",
+   "z": 1.78,
+   "docs": 7,
+   "category_docs": 46,
+   "corpus_docs": 15
+  },
+  {
+   "term": "reading",
+   "z": 1.77,
+   "docs": 23,
+   "category_docs": 46,
+   "corpus_docs": 107
+  },
+  {
+   "term": "keep",
+   "z": 1.69,
+   "docs": 29,
+   "category_docs": 46,
+   "corpus_docs": 161
+  },
+  {
+   "term": "today we\u2019re",
+   "z": 1.68,
+   "docs": 9,
+   "category_docs": 46,
+   "corpus_docs": 25
+  },
+  {
+   "term": "safely",
+   "z": 1.64,
+   "docs": 28,
+   "category_docs": 46,
+   "corpus_docs": 156
+  },
+  {
+   "term": "adult",
+   "z": 1.63,
+   "docs": 7,
+   "category_docs": 46,
+   "corpus_docs": 17
+  },
+  {
+   "term": "guide",
+   "z": 1.63,
+   "docs": 17,
+   "category_docs": 46,
+   "corpus_docs": 72
+  },
+  {
+   "term": "signs",
+   "z": 1.63,
+   "docs": 14,
+   "category_docs": 46,
+   "corpus_docs": 53
+  },
+  {
+   "term": "crisis",
+   "z": 1.62,
+   "docs": 9,
+   "category_docs": 46,
+   "corpus_docs": 26
+  },
+  {
+   "term": "rolling",
+   "z": 1.59,
+   "docs": 8,
+   "category_docs": 46,
+   "corpus_docs": 22
+  },
+  {
+   "term": "monitoring systems",
+   "z": 1.59,
+   "docs": 8,
+   "category_docs": 46,
+   "corpus_docs": 22
+  },
+  {
+   "term": "abuse",
+   "z": 1.57,
+   "docs": 16,
+   "category_docs": 46,
+   "corpus_docs": 68
+  },
+  {
+   "term": "potential misuse",
+   "z": 1.56,
+   "docs": 7,
+   "category_docs": 46,
+   "corpus_docs": 18
+  },
+  {
+   "term": "policies",
+   "z": 1.54,
+   "docs": 24,
+   "category_docs": 46,
+   "corpus_docs": 129
+  },
+  {
+   "term": "surfaces",
+   "z": 1.53,
+   "docs": 8,
+   "category_docs": 46,
+   "corpus_docs": 23
+  },
+  {
+   "term": "responses",
+   "z": 1.52,
+   "docs": 26,
+   "category_docs": 46,
+   "corpus_docs": 147
+  },
+  {
+   "term": "works",
+   "z": 1.52,
+   "docs": 19,
+   "category_docs": 46,
+   "corpus_docs": 91
+  },
+  {
+   "term": "continue",
+   "z": 1.52,
+   "docs": 31,
+   "category_docs": 46,
+   "corpus_docs": 193
+  },
+  {
+   "term": "health",
+   "z": 1.5,
+   "docs": 16,
+   "category_docs": 46,
+   "corpus_docs": 71
+  }
+ ],
+ "Essays and vision statements": [
+  {
+   "term": "i\u2019ve",
+   "z": 2.52,
+   "docs": 7,
+   "category_docs": 18,
+   "corpus_docs": 10
+  },
+  {
+   "term": "upsides",
+   "z": 2.47,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 5
+  },
+  {
+   "term": "incredible",
+   "z": 2.31,
+   "docs": 7,
+   "category_docs": 18,
+   "corpus_docs": 12
+  },
+  {
+   "term": "ingenuity",
+   "z": 2.3,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 6
+  },
+  {
+   "term": "amazing",
+   "z": 2.02,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 5
+  },
+  {
+   "term": "absurd",
+   "z": 2.02,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 5
+  },
+  {
+   "term": "tiny",
+   "z": 2.01,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 8
+  },
+  {
+   "term": "many people",
+   "z": 1.92,
+   "docs": 7,
+   "category_docs": 18,
+   "corpus_docs": 17
+  },
+  {
+   "term": "neuroscience",
+   "z": 1.9,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 9
+  },
+  {
+   "term": "i\u2019ll",
+   "z": 1.9,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 9
+  },
+  {
+   "term": "much better",
+   "z": 1.89,
+   "docs": 6,
+   "category_docs": 18,
+   "corpus_docs": 13
+  },
+  {
+   "term": "huge",
+   "z": 1.89,
+   "docs": 6,
+   "category_docs": 18,
+   "corpus_docs": 13
+  },
+  {
+   "term": "growth",
+   "z": 1.88,
+   "docs": 11,
+   "category_docs": 18,
+   "corpus_docs": 42
+  },
+  {
+   "term": "i\u2019m",
+   "z": 1.86,
+   "docs": 7,
+   "category_docs": 18,
+   "corpus_docs": 18
+  },
+  {
+   "term": "slower",
+   "z": 1.85,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 6
+  },
+  {
+   "term": "quality life",
+   "z": 1.85,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 6
+  },
+  {
+   "term": "spend",
+   "z": 1.83,
+   "docs": 9,
+   "category_docs": 18,
+   "corpus_docs": 30
+  },
+  {
+   "term": "probably",
+   "z": 1.83,
+   "docs": 8,
+   "category_docs": 18,
+   "corpus_docs": 24
+  },
+  {
+   "term": "essay",
+   "z": 1.81,
+   "docs": 6,
+   "category_docs": 18,
+   "corpus_docs": 14
+  },
+  {
+   "term": "demand",
+   "z": 1.8,
+   "docs": 7,
+   "category_docs": 18,
+   "corpus_docs": 19
+  },
+  {
+   "term": "it\u2019s worth",
+   "z": 1.79,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 10
+  },
+  {
+   "term": "get right",
+   "z": 1.79,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 10
+  },
+  {
+   "term": "footnotes",
+   "z": 1.74,
+   "docs": 8,
+   "category_docs": 18,
+   "corpus_docs": 26
+  },
+  {
+   "term": "strengths and weaknesses",
+   "z": 1.72,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 7
+  },
+  {
+   "term": "abundance",
+   "z": 1.72,
+   "docs": 4,
+   "category_docs": 18,
+   "corpus_docs": 7
+  },
+  {
+   "term": "it\u2019s possible",
+   "z": 1.7,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 11
+  },
+  {
+   "term": "downsides",
+   "z": 1.7,
+   "docs": 5,
+   "category_docs": 18,
+   "corpus_docs": 11
+  },
+  {
+   "term": "superintelligent",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "substantial fraction",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "slowdown",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "several years",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "several things",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "seriousness",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "put another way",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "nobel",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "last years",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "intrinsic",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "get closer",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "gdp",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  },
+  {
+   "term": "follow suit",
+   "z": 1.69,
+   "docs": 3,
+   "category_docs": 18,
+   "corpus_docs": 4
+  }
+ ],
+ "Programmes and funding": [
+  {
+   "term": "applicants",
+   "z": 2.56,
+   "docs": 7,
+   "category_docs": 30,
+   "corpus_docs": 9
+  },
+  {
+   "term": "fund",
+   "z": 2.3,
+   "docs": 9,
+   "category_docs": 30,
+   "corpus_docs": 18
+  },
+  {
+   "term": "rolling basis",
+   "z": 2.23,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 6
+  },
+  {
+   "term": "program",
+   "z": 2.21,
+   "docs": 25,
+   "category_docs": 30,
+   "corpus_docs": 126
+  },
+  {
+   "term": "launching",
+   "z": 2.07,
+   "docs": 14,
+   "category_docs": 30,
+   "corpus_docs": 48
+  },
+  {
+   "term": "independent research",
+   "z": 1.8,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 9
+  },
+  {
+   "term": "api credits",
+   "z": 1.8,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 9
+  },
+  {
+   "term": "grants",
+   "z": 1.78,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 22
+  },
+  {
+   "term": "submissions",
+   "z": 1.73,
+   "docs": 7,
+   "category_docs": 30,
+   "corpus_docs": 18
+  },
+  {
+   "term": "selected",
+   "z": 1.7,
+   "docs": 12,
+   "category_docs": 30,
+   "corpus_docs": 48
+  },
+  {
+   "term": "invite",
+   "z": 1.63,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 25
+  },
+  {
+   "term": "participants",
+   "z": 1.63,
+   "docs": 10,
+   "category_docs": 30,
+   "corpus_docs": 37
+  },
+  {
+   "term": "high-severity",
+   "z": 1.6,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 11
+  },
+  {
+   "term": "proposals",
+   "z": 1.51,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 28
+  },
+  {
+   "term": "cyber capabilities",
+   "z": 1.51,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 28
+  },
+  {
+   "term": "million",
+   "z": 1.45,
+   "docs": 13,
+   "category_docs": 30,
+   "corpus_docs": 67
+  },
+  {
+   "term": "patching",
+   "z": 1.44,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 13
+  },
+  {
+   "term": "announcing",
+   "z": 1.43,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 30
+  },
+  {
+   "term": "interested",
+   "z": 1.41,
+   "docs": 12,
+   "category_docs": 30,
+   "corpus_docs": 61
+  },
+  {
+   "term": "submit",
+   "z": 1.4,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 31
+  },
+  {
+   "term": "urgent",
+   "z": 1.39,
+   "docs": 6,
+   "category_docs": 30,
+   "corpus_docs": 19
+  },
+  {
+   "term": "flaws",
+   "z": 1.38,
+   "docs": 7,
+   "category_docs": 30,
+   "corpus_docs": 25
+  },
+  {
+   "term": "introducing",
+   "z": 1.37,
+   "docs": 13,
+   "category_docs": 30,
+   "corpus_docs": 72
+  },
+  {
+   "term": "nonprofits",
+   "z": 1.34,
+   "docs": 6,
+   "category_docs": 30,
+   "corpus_docs": 20
+  },
+  {
+   "term": "defenders",
+   "z": 1.33,
+   "docs": 8,
+   "category_docs": 30,
+   "corpus_docs": 33
+  },
+  {
+   "term": "bug bounty",
+   "z": 1.31,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 15
+  },
+  {
+   "term": "critical infrastructure",
+   "z": 1.26,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 16
+  },
+  {
+   "term": "verification",
+   "z": 1.24,
+   "docs": 10,
+   "category_docs": 30,
+   "corpus_docs": 52
+  },
+  {
+   "term": "security researchers",
+   "z": 1.2,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 17
+  },
+  {
+   "term": "vulnerability",
+   "z": 1.19,
+   "docs": 11,
+   "category_docs": 30,
+   "corpus_docs": 64
+  },
+  {
+   "term": "open-source",
+   "z": 1.18,
+   "docs": 10,
+   "category_docs": 30,
+   "corpus_docs": 55
+  },
+  {
+   "term": "world\u2019s",
+   "z": 1.17,
+   "docs": 7,
+   "category_docs": 30,
+   "corpus_docs": 31
+  },
+  {
+   "term": "index",
+   "z": 1.15,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 18
+  },
+  {
+   "term": "labor market",
+   "z": 1.11,
+   "docs": 5,
+   "category_docs": 30,
+   "corpus_docs": 19
+  },
+  {
+   "term": "organizations",
+   "z": 1.11,
+   "docs": 16,
+   "category_docs": 30,
+   "corpus_docs": 124
+  },
+  {
+   "term": "join",
+   "z": 1.1,
+   "docs": 6,
+   "category_docs": 30,
+   "corpus_docs": 26
+  },
+  {
+   "term": "partner",
+   "z": 1.09,
+   "docs": 11,
+   "category_docs": 30,
+   "corpus_docs": 70
+  },
+  {
+   "term": "efforts",
+   "z": 1.08,
+   "docs": 21,
+   "category_docs": 30,
+   "corpus_docs": 194
+  },
+  {
+   "term": "permissive",
+   "z": 1.06,
+   "docs": 7,
+   "category_docs": 30,
+   "corpus_docs": 35
+  },
+  {
+   "term": "defensive",
+   "z": 1.04,
+   "docs": 6,
+   "category_docs": 30,
+   "corpus_docs": 28
+  }
+ ],
+ "Model behavior specifications": [
+  {
+   "term": "shaping model",
+   "z": 2.23,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "instill",
+   "z": 2.23,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "general principles",
+   "z": 2.23,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "conversation rather",
+   "z": 2.23,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "condescending",
+   "z": 2.23,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "real harm",
+   "z": 2.17,
+   "docs": 5,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "express uncertainty",
+   "z": 2.04,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 5
+  },
+  {
+   "term": "articulating",
+   "z": 2.04,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 5
+  },
+  {
+   "term": "consciousness",
+   "z": 1.93,
+   "docs": 5,
+   "category_docs": 14,
+   "corpus_docs": 9
+  },
+  {
+   "term": "sentience",
+   "z": 1.88,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 6
+  },
+  {
+   "term": "programmatic",
+   "z": 1.88,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 6
+  },
+  {
+   "term": "piece code",
+   "z": 1.88,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 6
+  },
+  {
+   "term": "chain command",
+   "z": 1.88,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 6
+  },
+  {
+   "term": "avoidance",
+   "z": 1.88,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 6
+  },
+  {
+   "term": "yet fully",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "feelings",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "culturally",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "confirming",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "clarifying questions",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "achieve their goals",
+   "z": 1.74,
+   "docs": 4,
+   "category_docs": 14,
+   "corpus_docs": 7
+  },
+  {
+   "term": "users make",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "user with information",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "untrue",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "territory",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "tell the user",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "take care",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "suitably",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "sometimes encounter",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "sometimes conflict",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "single word",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "reputational",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "relevant facts",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "regret",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "regardless context",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "provide safe",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "pressed",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "modulate",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "maintain factual",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "legal medical",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  },
+  {
+   "term": "insofar",
+   "z": 1.71,
+   "docs": 3,
+   "category_docs": 14,
+   "corpus_docs": 4
+  }
+ ],
+ "Governance bodies and structures": [
+  {
+   "term": "president",
+   "z": 1.87,
+   "docs": 6,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "chair",
+   "z": 1.84,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 10
+  },
+  {
+   "term": "director",
+   "z": 1.44,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 16
+  },
+  {
+   "term": "professor",
+   "z": 1.42,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 6
+  },
+  {
+   "term": "help guide",
+   "z": 1.42,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 6
+  },
+  {
+   "term": "formation",
+   "z": 1.42,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 6
+  },
+  {
+   "term": "research questions",
+   "z": 1.31,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 7
+  },
+  {
+   "term": "cyber threats",
+   "z": 1.31,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 7
+  },
+  {
+   "term": "public policy",
+   "z": 1.27,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "fellow",
+   "z": 1.22,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "senior",
+   "z": 1.2,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "committee",
+   "z": 1.17,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 15
+  },
+  {
+   "term": "council",
+   "z": 1.14,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 24
+  },
+  {
+   "term": "research agenda",
+   "z": 1.08,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 10
+  },
+  {
+   "term": "publications",
+   "z": 1.08,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 10
+  },
+  {
+   "term": "advisor",
+   "z": 1.03,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 11
+  },
+  {
+   "term": "member",
+   "z": 0.99,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 20
+  },
+  {
+   "term": "ceo",
+   "z": 0.98,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 31
+  },
+  {
+   "term": "founding",
+   "z": 0.98,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 12
+  },
+  {
+   "term": "security risks",
+   "z": 0.93,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "school",
+   "z": 0.93,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "public benefit",
+   "z": 0.93,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "career",
+   "z": 0.93,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "affairs",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "tech",
+   "z": 0.86,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 25
+  },
+  {
+   "term": "white house",
+   "z": 0.85,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 15
+  },
+  {
+   "term": "frontier systems",
+   "z": 0.85,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 15
+  },
+  {
+   "term": "co-founder",
+   "z": 0.85,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 15
+  },
+  {
+   "term": "board",
+   "z": 0.84,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 39
+  },
+  {
+   "term": "announcing",
+   "z": 0.76,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 30
+  },
+  {
+   "term": "university",
+   "z": 0.75,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 31
+  },
+  {
+   "term": "transformative",
+   "z": 0.75,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 46
+  },
+  {
+   "term": "development and deployment",
+   "z": 0.73,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 32
+  },
+  {
+   "term": "institute",
+   "z": 0.72,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 48
+  },
+  {
+   "term": "safety research",
+   "z": 0.72,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 33
+  },
+  {
+   "term": "expertise",
+   "z": 0.69,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 91
+  },
+  {
+   "term": "practitioners",
+   "z": 0.67,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "backgrounds",
+   "z": 0.67,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 22
+  },
+  {
+   "term": "initiatives",
+   "z": 0.66,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 37
+  },
+  {
+   "term": "society",
+   "z": 0.66,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 97
+  }
+ ],
+ "Frontier governance frameworks": [
+  {
+   "term": "scaling policy",
+   "z": 1.78,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 19
+  },
+  {
+   "term": "responsible scaling",
+   "z": 1.73,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 20
+  },
+  {
+   "term": "framework version",
+   "z": 1.68,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 4
+  },
+  {
+   "term": "capability assessment",
+   "z": 1.68,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 4
+  },
+  {
+   "term": "risks from frontier",
+   "z": 1.59,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "frontier safety",
+   "z": 1.54,
+   "docs": 8,
+   "category_docs": 20,
+   "corpus_docs": 31
+  },
+  {
+   "term": "safety framework",
+   "z": 1.54,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 13
+  },
+  {
+   "term": "risk management",
+   "z": 1.54,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 13
+  },
+  {
+   "term": "risk assessment",
+   "z": 1.54,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 13
+  },
+  {
+   "term": "risks from advanced",
+   "z": 1.51,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 5
+  },
+  {
+   "term": "loss control",
+   "z": 1.49,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 9
+  },
+  {
+   "term": "catastrophic risks",
+   "z": 1.45,
+   "docs": 8,
+   "category_docs": 20,
+   "corpus_docs": 34
+  },
+  {
+   "term": "harmful manipulation",
+   "z": 1.37,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "managing",
+   "z": 1.19,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 36
+  },
+  {
+   "term": "model weights",
+   "z": 1.17,
+   "docs": 6,
+   "category_docs": 20,
+   "corpus_docs": 28
+  },
+  {
+   "term": "severe risks",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "inspiration",
+   "z": 1.14,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 14
+  },
+  {
+   "term": "cbrn",
+   "z": 1.14,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 38
+  },
+  {
+   "term": "capability thresholds",
+   "z": 1.09,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 15
+  },
+  {
+   "term": "living document",
+   "z": 1.09,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 9
+  },
+  {
+   "term": "frontier risk",
+   "z": 1.09,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 9
+  },
+  {
+   "term": "great deal",
+   "z": 1.02,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 10
+  },
+  {
+   "term": "radiological",
+   "z": 1.01,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 45
+  },
+  {
+   "term": "serious risks",
+   "z": 0.96,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 11
+  },
+  {
+   "term": "biological",
+   "z": 0.92,
+   "docs": 10,
+   "category_docs": 20,
+   "corpus_docs": 91
+  },
+  {
+   "term": "chemical",
+   "z": 0.92,
+   "docs": 8,
+   "category_docs": 20,
+   "corpus_docs": 63
+  },
+  {
+   "term": "safety practices",
+   "z": 0.91,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 12
+  },
+  {
+   "term": "flexibility",
+   "z": 0.9,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 20
+  },
+  {
+   "term": "commitments",
+   "z": 0.88,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 53
+  },
+  {
+   "term": "adopted",
+   "z": 0.86,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 31
+  },
+  {
+   "term": "incident response",
+   "z": 0.86,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 13
+  },
+  {
+   "term": "autonomy",
+   "z": 0.85,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 55
+  },
+  {
+   "term": "introduces",
+   "z": 0.84,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 22
+  },
+  {
+   "term": "frontier developers",
+   "z": 0.82,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 14
+  },
+  {
+   "term": "access controls",
+   "z": 0.78,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 15
+  },
+  {
+   "term": "nuclear",
+   "z": 0.78,
+   "docs": 7,
+   "category_docs": 20,
+   "corpus_docs": 61
+  },
+  {
+   "term": "publish",
+   "z": 0.77,
+   "docs": 6,
+   "category_docs": 20,
+   "corpus_docs": 48
+  },
+  {
+   "term": "threat models",
+   "z": 0.76,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 25
+  },
+  {
+   "term": "security measures",
+   "z": 0.76,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 25
+  },
+  {
+   "term": "requiring",
+   "z": 0.74,
+   "docs": 6,
+   "category_docs": 20,
+   "corpus_docs": 50
+  }
+ ],
+ "Framework implementation reports": [
+  {
+   "term": "updated sep",
+   "z": 2.59,
+   "docs": 6,
+   "category_docs": 12,
+   "corpus_docs": 7
+  },
+  {
+   "term": "monitoring system",
+   "z": 2.27,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "warranting",
+   "z": 2.05,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 5
+  },
+  {
+   "term": "redacted",
+   "z": 1.94,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 9
+  },
+  {
+   "term": "find unexpected",
+   "z": 1.72,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 4
+  },
+  {
+   "term": "maybe",
+   "z": 1.61,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "workbook",
+   "z": 1.55,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 5
+  },
+  {
+   "term": "training samples",
+   "z": 1.55,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 5
+  },
+  {
+   "term": "tool call",
+   "z": 1.55,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "unreleased",
+   "z": 1.39,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 11
+  },
+  {
+   "term": "happened",
+   "z": 1.38,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 33
+  },
+  {
+   "term": "misalignment",
+   "z": 1.3,
+   "docs": 8,
+   "category_docs": 12,
+   "corpus_docs": 47
+  },
+  {
+   "term": "cot",
+   "z": 1.28,
+   "docs": 6,
+   "category_docs": 12,
+   "corpus_docs": 28
+  },
+  {
+   "term": "url",
+   "z": 1.27,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "returned",
+   "z": 1.27,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 20
+  },
+  {
+   "term": "interpretation",
+   "z": 1.25,
+   "docs": 6,
+   "category_docs": 12,
+   "corpus_docs": 29
+  },
+  {
+   "term": "retrieved",
+   "z": 1.22,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 8
+  },
+  {
+   "term": "recipients",
+   "z": 1.22,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 8
+  },
+  {
+   "term": "message board",
+   "z": 1.22,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 8
+  },
+  {
+   "term": "investigation",
+   "z": 1.19,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 42
+  },
+  {
+   "term": "rejected",
+   "z": 1.17,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 15
+  },
+  {
+   "term": "uploading",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 16
+  },
+  {
+   "term": "sol",
+   "z": 1.13,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 16
+  },
+  {
+   "term": "incident",
+   "z": 1.12,
+   "docs": 6,
+   "category_docs": 12,
+   "corpus_docs": 35
+  },
+  {
+   "term": "directory",
+   "z": 1.08,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 10
+  },
+  {
+   "term": "discovered",
+   "z": 1.03,
+   "docs": 7,
+   "category_docs": 12,
+   "corpus_docs": 53
+  },
+  {
+   "term": "terminal",
+   "z": 1.03,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 11
+  },
+  {
+   "term": "temporary",
+   "z": 1.03,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 11
+  },
+  {
+   "term": "server",
+   "z": 1.02,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 19
+  },
+  {
+   "term": "requested",
+   "z": 1.02,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 29
+  },
+  {
+   "term": "json",
+   "z": 0.98,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 12
+  },
+  {
+   "term": "report",
+   "z": 0.96,
+   "docs": 11,
+   "category_docs": 12,
+   "corpus_docs": 137
+  },
+  {
+   "term": "searches",
+   "z": 0.93,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 13
+  },
+  {
+   "term": "package",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "final answer",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "container",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 12,
+   "corpus_docs": 14
+  },
+  {
+   "term": "decided",
+   "z": 0.89,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 24
+  },
+  {
+   "term": "returns",
+   "z": 0.86,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 25
+  },
+  {
+   "term": "blocked",
+   "z": 0.84,
+   "docs": 4,
+   "category_docs": 12,
+   "corpus_docs": 26
+  },
+  {
+   "term": "file",
+   "z": 0.82,
+   "docs": 5,
+   "category_docs": 12,
+   "corpus_docs": 40
+  }
+ ],
+ "Public policy positions": [
+  {
+   "term": "regulation",
+   "z": 2.17,
+   "docs": 11,
+   "category_docs": 20,
+   "corpus_docs": 32
+  },
+  {
+   "term": "federal government",
+   "z": 2.0,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "regulate",
+   "z": 1.84,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "national security",
+   "z": 1.65,
+   "docs": 12,
+   "category_docs": 20,
+   "corpus_docs": 59
+  },
+  {
+   "term": "companies",
+   "z": 1.55,
+   "docs": 16,
+   "category_docs": 20,
+   "corpus_docs": 110
+  },
+  {
+   "term": "publish safety",
+   "z": 1.51,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 5
+  },
+  {
+   "term": "industry government",
+   "z": 1.51,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 5
+  },
+  {
+   "term": "disclosure requirements",
+   "z": 1.51,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 5
+  },
+  {
+   "term": "commend",
+   "z": 1.51,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 5
+  },
+  {
+   "term": "communist",
+   "z": 1.49,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 9
+  },
+  {
+   "term": "public safety",
+   "z": 1.47,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 14
+  },
+  {
+   "term": "powerful systems",
+   "z": 1.41,
+   "docs": 6,
+   "category_docs": 20,
+   "corpus_docs": 21
+  },
+  {
+   "term": "senate",
+   "z": 1.37,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "proportionate",
+   "z": 1.37,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "economic benefits",
+   "z": 1.37,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "bill",
+   "z": 1.37,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 6
+  },
+  {
+   "term": "blueprint",
+   "z": 1.33,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 11
+  },
+  {
+   "term": "california",
+   "z": 1.31,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 17
+  },
+  {
+   "term": "policymakers",
+   "z": 1.28,
+   "docs": 10,
+   "category_docs": 20,
+   "corpus_docs": 61
+  },
+  {
+   "term": "urgently",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "powerful technology",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "national institute",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "mandate",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "congress",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "computing power",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "ai\u2019s benefits",
+   "z": 1.26,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 7
+  },
+  {
+   "term": "chip",
+   "z": 1.26,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 12
+  },
+  {
+   "term": "state",
+   "z": 1.2,
+   "docs": 12,
+   "category_docs": 20,
+   "corpus_docs": 91
+  },
+  {
+   "term": "annual",
+   "z": 1.2,
+   "docs": 4,
+   "category_docs": 20,
+   "corpus_docs": 13
+  },
+  {
+   "term": "regulatory",
+   "z": 1.2,
+   "docs": 8,
+   "category_docs": 20,
+   "corpus_docs": 45
+  },
+  {
+   "term": "standard we\u2019re",
+   "z": 1.19,
+   "docs": 11,
+   "category_docs": 20,
+   "corpus_docs": 79
+  },
+  {
+   "term": "thoughtfully",
+   "z": 1.18,
+   "docs": 5,
+   "category_docs": 20,
+   "corpus_docs": 20
+  },
+  {
+   "term": "previewing",
+   "z": 1.18,
+   "docs": 11,
+   "category_docs": 20,
+   "corpus_docs": 80
+  },
+  {
+   "term": "frameworks",
+   "z": 1.17,
+   "docs": 9,
+   "category_docs": 20,
+   "corpus_docs": 57
+  },
+  {
+   "term": "washington",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "leading labs",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "impede",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "coming years",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "build better",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  },
+  {
+   "term": "assess and mitigate",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 20,
+   "corpus_docs": 8
+  }
+ ],
+ "Commitments (unilateral and multilateral)": [
+  {
+   "term": "safety commitments",
+   "z": 1.76,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 7
+  },
+  {
+   "term": "sexual harms against",
+   "z": 1.73,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 4
+  },
+  {
+   "term": "pledge",
+   "z": 1.73,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 4
+  },
+  {
+   "term": "legal frameworks",
+   "z": 1.73,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 4
+  },
+  {
+   "term": "harms against children",
+   "z": 1.73,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 4
+  },
+  {
+   "term": "detection and prevention",
+   "z": 1.73,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 4
+  },
+  {
+   "term": "content ai-generated",
+   "z": 1.56,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 5
+  },
+  {
+   "term": "safety design",
+   "z": 1.43,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 6
+  },
+  {
+   "term": "safe secure",
+   "z": 1.43,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 6
+  },
+  {
+   "term": "protecting children",
+   "z": 1.43,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 6
+  },
+  {
+   "term": "existing laws",
+   "z": 1.43,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 6
+  },
+  {
+   "term": "abusive content",
+   "z": 1.43,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 6
+  },
+  {
+   "term": "material csam",
+   "z": 1.32,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 7
+  },
+  {
+   "term": "companies and governments",
+   "z": 1.32,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 7
+  },
+  {
+   "term": "combating",
+   "z": 1.32,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 7
+  },
+  {
+   "term": "model system",
+   "z": 1.23,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 8
+  },
+  {
+   "term": "risks posed",
+   "z": 1.14,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 16
+  },
+  {
+   "term": "develop and deploy",
+   "z": 1.07,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 18
+  },
+  {
+   "term": "watermarking",
+   "z": 0.98,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 12
+  },
+  {
+   "term": "voluntary commitments",
+   "z": 0.98,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 12
+  },
+  {
+   "term": "information sharing",
+   "z": 0.98,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 12
+  },
+  {
+   "term": "best practices",
+   "z": 0.95,
+   "docs": 7,
+   "category_docs": 11,
+   "corpus_docs": 62
+  },
+  {
+   "term": "risk assessment",
+   "z": 0.94,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 13
+  },
+  {
+   "term": "voices",
+   "z": 0.9,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 14
+  },
+  {
+   "term": "risks related",
+   "z": 0.9,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 14
+  },
+  {
+   "term": "invest",
+   "z": 0.87,
+   "docs": 6,
+   "category_docs": 11,
+   "corpus_docs": 53
+  },
+  {
+   "term": "civil society",
+   "z": 0.87,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 38
+  },
+  {
+   "term": "provenance",
+   "z": 0.86,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 15
+  },
+  {
+   "term": "nist",
+   "z": 0.86,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 15
+  },
+  {
+   "term": "insider",
+   "z": 0.86,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 15
+  },
+  {
+   "term": "first-party",
+   "z": 0.86,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 15
+  },
+  {
+   "term": "citizens",
+   "z": 0.83,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 16
+  },
+  {
+   "term": "adopt",
+   "z": 0.83,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 41
+  },
+  {
+   "term": "model weights",
+   "z": 0.81,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 28
+  },
+  {
+   "term": "universities",
+   "z": 0.8,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 17
+  },
+  {
+   "term": "amazon",
+   "z": 0.8,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 17
+  },
+  {
+   "term": "meeting",
+   "z": 0.8,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 29
+  },
+  {
+   "term": "safety risks",
+   "z": 0.78,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 30
+  },
+  {
+   "term": "joined",
+   "z": 0.77,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 18
+  },
+  {
+   "term": "emerging",
+   "z": 0.76,
+   "docs": 6,
+   "category_docs": 11,
+   "corpus_docs": 64
+  }
+ ],
+ "Hub / index page": [
+  {
+   "term": "proactively",
+   "z": 0.52,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 40
+  },
+  {
+   "term": "responsibility",
+   "z": 0.36,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 68
+  },
+  {
+   "term": "throughout",
+   "z": 0.31,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 80
+  },
+  {
+   "term": "committed",
+   "z": 0.28,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 91
+  },
+  {
+   "term": "products",
+   "z": 0.26,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 97
+  },
+  {
+   "term": "frontier models",
+   "z": 0.26,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 98
+  },
+  {
+   "term": "community",
+   "z": 0.21,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 116
+  },
+  {
+   "term": "broad",
+   "z": 0.21,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 116
+  },
+  {
+   "term": "powerful",
+   "z": 0.21,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 119
+  },
+  {
+   "term": "practices",
+   "z": 0.21,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 120
+  },
+  {
+   "term": "full",
+   "z": 0.16,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 142
+  },
+  {
+   "term": "framework",
+   "z": 0.16,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 146
+  },
+  {
+   "term": "safely",
+   "z": 0.14,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 156
+  },
+  {
+   "term": "progress",
+   "z": 0.14,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 157
+  },
+  {
+   "term": "keep",
+   "z": 0.13,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 161
+  },
+  {
+   "term": "technical",
+   "z": 0.13,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 163
+  },
+  {
+   "term": "address",
+   "z": 0.13,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 165
+  },
+  {
+   "term": "researchers",
+   "z": 0.12,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 167
+  },
+  {
+   "term": "take",
+   "z": 0.1,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 179
+  },
+  {
+   "term": "technology",
+   "z": 0.1,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 184
+  },
+  {
+   "term": "continue",
+   "z": 0.08,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 193
+  }
+ ],
+ "Statements and incident disclosures": [
+  {
+   "term": "government\u2019s",
+   "z": 1.78,
+   "docs": 5,
+   "category_docs": 9,
+   "corpus_docs": 11
+  },
+  {
+   "term": "directive",
+   "z": 1.57,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 5
+  },
+  {
+   "term": "smooth",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 9
+  },
+  {
+   "term": "fully autonomous",
+   "z": 1.17,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 9
+  },
+  {
+   "term": "standard we\u2019re",
+   "z": 1.15,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 79
+  },
+  {
+   "term": "previewing",
+   "z": 1.14,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 80
+  },
+  {
+   "term": "statement",
+   "z": 1.13,
+   "docs": 5,
+   "category_docs": 9,
+   "corpus_docs": 26
+  },
+  {
+   "term": "research labs",
+   "z": 1.11,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 84
+  },
+  {
+   "term": "manufacturers",
+   "z": 1.09,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 86
+  },
+  {
+   "term": "disruption",
+   "z": 1.09,
+   "docs": 4,
+   "category_docs": 9,
+   "corpus_docs": 18
+  },
+  {
+   "term": "agents safely",
+   "z": 1.09,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 87
+  },
+  {
+   "term": "opening",
+   "z": 1.06,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 90
+  },
+  {
+   "term": "specification",
+   "z": 1.04,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 93
+  },
+  {
+   "term": "research preview",
+   "z": 1.03,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 95
+  },
+  {
+   "term": "scientific research",
+   "z": 1.0,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 99
+  },
+  {
+   "term": "foreign",
+   "z": 1.0,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 12
+  },
+  {
+   "term": "contracts",
+   "z": 1.0,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 12
+  },
+  {
+   "term": "supply chain",
+   "z": 1.0,
+   "docs": 4,
+   "category_docs": 9,
+   "corpus_docs": 21
+  },
+  {
+   "term": "security efforts",
+   "z": 0.98,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 103
+  },
+  {
+   "term": "frontier safeguards",
+   "z": 0.98,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 103
+  },
+  {
+   "term": "alignment and security",
+   "z": 0.97,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 104
+  },
+  {
+   "term": "independent review",
+   "z": 0.97,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 105
+  },
+  {
+   "term": "in-depth analysis",
+   "z": 0.96,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 106
+  },
+  {
+   "term": "meantime",
+   "z": 0.95,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 108
+  },
+  {
+   "term": "computer systems",
+   "z": 0.93,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 111
+  },
+  {
+   "term": "grateful",
+   "z": 0.92,
+   "docs": 4,
+   "category_docs": 9,
+   "corpus_docs": 24
+  },
+  {
+   "term": "war",
+   "z": 0.92,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 14
+  },
+  {
+   "term": "we\u2019ve made",
+   "z": 0.91,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 116
+  },
+  {
+   "term": "metr",
+   "z": 0.9,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 117
+  },
+  {
+   "term": "dario",
+   "z": 0.9,
+   "docs": 4,
+   "category_docs": 9,
+   "corpus_docs": 25
+  },
+  {
+   "term": "devices",
+   "z": 0.9,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 118
+  },
+  {
+   "term": "we\u2019re sharing",
+   "z": 0.87,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 123
+  },
+  {
+   "term": "physical",
+   "z": 0.87,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 124
+  },
+  {
+   "term": "month",
+   "z": 0.87,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 124
+  },
+  {
+   "term": "narrow",
+   "z": 0.86,
+   "docs": 5,
+   "category_docs": 9,
+   "corpus_docs": 41
+  },
+  {
+   "term": "department",
+   "z": 0.86,
+   "docs": 4,
+   "category_docs": 9,
+   "corpus_docs": 27
+  },
+  {
+   "term": "exceptions",
+   "z": 0.85,
+   "docs": 3,
+   "category_docs": 9,
+   "corpus_docs": 16
+  },
+  {
+   "term": "operate",
+   "z": 0.84,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 130
+  },
+  {
+   "term": "inside",
+   "z": 0.83,
+   "docs": 5,
+   "category_docs": 9,
+   "corpus_docs": 43
+  },
+  {
+   "term": "july",
+   "z": 0.83,
+   "docs": 9,
+   "category_docs": 9,
+   "corpus_docs": 132
+  }
+ ],
+ "Usage policies and terms": [
+  {
+   "term": "biometric",
+   "z": 1.36,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 7
+  },
+  {
+   "term": "usage policy",
+   "z": 0.89,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 16
+  },
+  {
+   "term": "permitted",
+   "z": 0.81,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 19
+  },
+  {
+   "term": "prohibit",
+   "z": 0.79,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 20
+  },
+  {
+   "term": "updating",
+   "z": 0.6,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 33
+  },
+  {
+   "term": "standard we\u2019re",
+   "z": 0.49,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 79
+  },
+  {
+   "term": "applies",
+   "z": 0.49,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 46
+  },
+  {
+   "term": "previewing",
+   "z": 0.48,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 80
+  },
+  {
+   "term": "research labs",
+   "z": 0.47,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 84
+  },
+  {
+   "term": "manufacturers",
+   "z": 0.46,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 86
+  },
+  {
+   "term": "agents safely",
+   "z": 0.46,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 87
+  },
+  {
+   "term": "opening",
+   "z": 0.45,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 90
+  },
+  {
+   "term": "specification",
+   "z": 0.44,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 93
+  },
+  {
+   "term": "research preview",
+   "z": 0.43,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 95
+  },
+  {
+   "term": "effect",
+   "z": 0.43,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 56
+  },
+  {
+   "term": "scientific research",
+   "z": 0.42,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 99
+  },
+  {
+   "term": "updates",
+   "z": 0.42,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 59
+  },
+  {
+   "term": "security efforts",
+   "z": 0.41,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 103
+  },
+  {
+   "term": "frontier safeguards",
+   "z": 0.41,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 103
+  },
+  {
+   "term": "alignment and security",
+   "z": 0.41,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 104
+  },
+  {
+   "term": "independent review",
+   "z": 0.4,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 105
+  },
+  {
+   "term": "section",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 62
+  },
+  {
+   "term": "legal",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 62
+  },
+  {
+   "term": "financial",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 62
+  },
+  {
+   "term": "in-depth analysis",
+   "z": 0.4,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 106
+  },
+  {
+   "term": "we're",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 63
+  },
+  {
+   "term": "activities",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 63
+  },
+  {
+   "term": "meantime",
+   "z": 0.4,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 108
+  },
+  {
+   "term": "computer systems",
+   "z": 0.39,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 111
+  },
+  {
+   "term": "abuse",
+   "z": 0.38,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 68
+  },
+  {
+   "term": "we\u2019ve made",
+   "z": 0.37,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 116
+  },
+  {
+   "term": "devices",
+   "z": 0.37,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 118
+  },
+  {
+   "term": "individuals",
+   "z": 0.37,
+   "docs": 3,
+   "category_docs": 5,
+   "corpus_docs": 71
+  },
+  {
+   "term": "we\u2019re sharing",
+   "z": 0.36,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 123
+  },
+  {
+   "term": "services",
+   "z": 0.36,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 123
+  },
+  {
+   "term": "physical",
+   "z": 0.36,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 124
+  },
+  {
+   "term": "month",
+   "z": 0.36,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 124
+  },
+  {
+   "term": "unauthorized",
+   "z": 0.35,
+   "docs": 5,
+   "category_docs": 5,
+   "corpus_docs": 197
+  },
+  {
+   "term": "policies",
+   "z": 0.35,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 129
+  },
+  {
+   "term": "operate",
+   "z": 0.34,
+   "docs": 4,
+   "category_docs": 5,
+   "corpus_docs": 130
+  }
+ ],
+ "Certifications and third-party assessments": [
+  {
+   "term": "sandbagging",
+   "z": 1.08,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 11
+  },
+  {
+   "term": "apollo",
+   "z": 1.08,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 11
+  },
+  {
+   "term": "artificially",
+   "z": 0.83,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 18
+  },
+  {
+   "term": "achieving",
+   "z": 0.75,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 37
+  },
+  {
+   "term": "evaluators",
+   "z": 0.7,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 24
+  },
+  {
+   "term": "demonstrating",
+   "z": 0.7,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 24
+  },
+  {
+   "term": "scored",
+   "z": 0.67,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 26
+  },
+  {
+   "term": "awareness",
+   "z": 0.58,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 33
+  },
+  {
+   "term": "summaries",
+   "z": 0.55,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 36
+  },
+  {
+   "term": "update",
+   "z": 0.52,
+   "docs": 5,
+   "category_docs": 6,
+   "corpus_docs": 103
+  },
+  {
+   "term": "opens",
+   "z": 0.51,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 41
+  },
+  {
+   "term": "hope",
+   "z": 0.51,
+   "docs": 5,
+   "category_docs": 6,
+   "corpus_docs": 106
+  },
+  {
+   "term": "deception",
+   "z": 0.5,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 42
+  },
+  {
+   "term": "investment",
+   "z": 0.49,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 43
+  },
+  {
+   "term": "claims",
+   "z": 0.48,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 45
+  },
+  {
+   "term": "methodology",
+   "z": 0.46,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 47
+  },
+  {
+   "term": "international",
+   "z": 0.45,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 49
+  },
+  {
+   "term": "testing",
+   "z": 0.45,
+   "docs": 6,
+   "category_docs": 6,
+   "corpus_docs": 178
+  },
+  {
+   "term": "robustness",
+   "z": 0.42,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 54
+  },
+  {
+   "term": "becomes",
+   "z": 0.42,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 55
+  },
+  {
+   "term": "verify",
+   "z": 0.41,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 56
+  },
+  {
+   "term": "specialized",
+   "z": 0.41,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 56
+  },
+  {
+   "term": "trust",
+   "z": 0.41,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 95
+  },
+  {
+   "term": "partners",
+   "z": 0.4,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 96
+  },
+  {
+   "term": "reflect",
+   "z": 0.4,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 98
+  },
+  {
+   "term": "party",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 59
+  },
+  {
+   "term": "management",
+   "z": 0.4,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 59
+  },
+  {
+   "term": "scores",
+   "z": 0.39,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 60
+  },
+  {
+   "term": "evidence",
+   "z": 0.39,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 100
+  },
+  {
+   "term": "openai\u2019s",
+   "z": 0.39,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 61
+  },
+  {
+   "term": "forms",
+   "z": 0.38,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 63
+  },
+  {
+   "term": "finally",
+   "z": 0.38,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 63
+  },
+  {
+   "term": "helps",
+   "z": 0.38,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 105
+  },
+  {
+   "term": "key",
+   "z": 0.37,
+   "docs": 5,
+   "category_docs": 6,
+   "corpus_docs": 158
+  },
+  {
+   "term": "author",
+   "z": 0.36,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 66
+  },
+  {
+   "term": "provides",
+   "z": 0.36,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 112
+  },
+  {
+   "term": "try",
+   "z": 0.36,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 68
+  },
+  {
+   "term": "red teaming",
+   "z": 0.36,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 68
+  },
+  {
+   "term": "allowed",
+   "z": 0.35,
+   "docs": 3,
+   "category_docs": 6,
+   "corpus_docs": 69
+  },
+  {
+   "term": "assess",
+   "z": 0.35,
+   "docs": 4,
+   "category_docs": 6,
+   "corpus_docs": 114
+  }
+ ],
+ "Transparency and compliance reports": [
+  {
+   "term": "user intent",
+   "z": 1.23,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 8
+  },
+  {
+   "term": "risk categories",
+   "z": 1.15,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 9
+  },
+  {
+   "term": "mapped",
+   "z": 1.03,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 11
+  },
+  {
+   "term": "transparency",
+   "z": 1.0,
+   "docs": 10,
+   "category_docs": 11,
+   "corpus_docs": 113
+  },
+  {
+   "term": "microsoft",
+   "z": 0.94,
+   "docs": 6,
+   "category_docs": 11,
+   "corpus_docs": 47
+  },
+  {
+   "term": "security vulnerabilities",
+   "z": 0.94,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 13
+  },
+  {
+   "term": "copilot",
+   "z": 0.9,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 14
+  },
+  {
+   "term": "multi-step",
+   "z": 0.77,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 18
+  },
+  {
+   "term": "report",
+   "z": 0.75,
+   "docs": 9,
+   "category_docs": 11,
+   "corpus_docs": 137
+  },
+  {
+   "term": "injection attacks",
+   "z": 0.75,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 19
+  },
+  {
+   "term": "hub",
+   "z": 0.75,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 19
+  },
+  {
+   "term": "threat intelligence",
+   "z": 0.72,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 20
+  },
+  {
+   "term": "indirect",
+   "z": 0.72,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 20
+  },
+  {
+   "term": "center",
+   "z": 0.67,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 55
+  },
+  {
+   "term": "behalf",
+   "z": 0.66,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 23
+  },
+  {
+   "term": "responsible",
+   "z": 0.64,
+   "docs": 9,
+   "category_docs": 11,
+   "corpus_docs": 164
+  },
+  {
+   "term": "platform",
+   "z": 0.62,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 61
+  },
+  {
+   "term": "operating",
+   "z": 0.61,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 43
+  },
+  {
+   "term": "prompt injection",
+   "z": 0.59,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 27
+  },
+  {
+   "term": "malicious actors",
+   "z": 0.59,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 27
+  },
+  {
+   "term": "processes",
+   "z": 0.58,
+   "docs": 7,
+   "category_docs": 11,
+   "corpus_docs": 117
+  },
+  {
+   "term": "completing",
+   "z": 0.58,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 28
+  },
+  {
+   "term": "browser",
+   "z": 0.58,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 28
+  },
+  {
+   "term": "websites",
+   "z": 0.55,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 30
+  },
+  {
+   "term": "user\u2019s",
+   "z": 0.55,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 49
+  },
+  {
+   "term": "identified",
+   "z": 0.55,
+   "docs": 6,
+   "category_docs": 11,
+   "corpus_docs": 97
+  },
+  {
+   "term": "reviewed",
+   "z": 0.53,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 31
+  },
+  {
+   "term": "office",
+   "z": 0.53,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 31
+  },
+  {
+   "term": "development and deployment",
+   "z": 0.52,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 32
+  },
+  {
+   "term": "product",
+   "z": 0.52,
+   "docs": 6,
+   "category_docs": 11,
+   "corpus_docs": 103
+  },
+  {
+   "term": "implementing",
+   "z": 0.5,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 54
+  },
+  {
+   "term": "translate",
+   "z": 0.5,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 34
+  },
+  {
+   "term": "distinguish",
+   "z": 0.5,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 34
+  },
+  {
+   "term": "structured",
+   "z": 0.49,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 56
+  },
+  {
+   "term": "published",
+   "z": 0.49,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 81
+  },
+  {
+   "term": "live",
+   "z": 0.48,
+   "docs": 4,
+   "category_docs": 11,
+   "corpus_docs": 57
+  },
+  {
+   "term": "unintended",
+   "z": 0.48,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 36
+  },
+  {
+   "term": "manage",
+   "z": 0.47,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 84
+  },
+  {
+   "term": "request",
+   "z": 0.47,
+   "docs": 5,
+   "category_docs": 11,
+   "corpus_docs": 85
+  },
+  {
+   "term": "reached",
+   "z": 0.46,
+   "docs": 3,
+   "category_docs": 11,
+   "corpus_docs": 37
+  }
+ ]
+}

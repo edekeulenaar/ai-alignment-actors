@@ -1,0 +1,3808 @@
+{
+ "Certifications and third-party assessments": [
+  {
+   "actor": "Anthropic",
+   "documents": 5,
+   "relations": {
+    "external evaluation": 1,
+    "named without a stated role": 1,
+    "partnership": 1,
+    "red teaming": 1,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 4,
+   "relations": {
+    "external evaluation": 2,
+    "named without a stated role": 1,
+    "advice": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "METR",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 3
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Apollo Research",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "ISO",
+   "documents": 2,
+   "relations": {
+    "standard setting": 2
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Irregular",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "SecureBio",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Toyer et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "YouTube",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Commitments (unilateral and multilateral)": [
+  {
+   "actor": "Thorn",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "external evaluation": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "White House",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "METR",
+   "documents": 4,
+   "relations": {
+    "external evaluation": 4
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Google",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 2,
+    "partnership": 2
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "The White House",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 3
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 3,
+   "relations": {
+    "partnership": 2,
+    "named without a stated role": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "NCMEC",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "benchmark authorship": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "NIST",
+   "documents": 3,
+   "relations": {
+    "standard setting": 2,
+    "red teaming": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "National Center for Missing and Exploited Children",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Tech Coalition",
+   "documents": 2,
+   "relations": {
+    "partnership": 2
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Carnegie Mellon University",
+   "documents": 2,
+   "relations": {
+    "funding": 1,
+    "research": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "US Center for AI Standards and Innovation",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "standard setting": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "All Tech Is Human",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amazon Web Services",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Cohere",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Department for Science, Innovation and Technology",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "EU AI Act",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "HackerOne",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "IBM",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "ISO",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Inflection AI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Magic",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Meta",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Essays and vision statements": [
+  {
+   "actor": "Dario Amodei",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 5
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "METR",
+   "documents": 5,
+   "relations": {
+    "external evaluation": 5
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 2,
+    "advice": 1,
+    "standard setting": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Demis Hassabis",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Google",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Allan Dafoe",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Chris Olah",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google DeepMind",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Jakub Pachocki",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "MIT",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "NVIDIA",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "RAND",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Sam Altman",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "xAI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Evaluations, benchmarks and tools": [
+  {
+   "actor": "Kaggle",
+   "documents": 11,
+   "relations": {
+    "benchmark authorship": 6,
+    "external evaluation": 4,
+    "named without a stated role": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 4,
+    "external evaluation": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 6,
+   "relations": {
+    "external evaluation": 3,
+    "named without a stated role": 2,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Wikipedia",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1,
+    "data and annotation": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Fernando Pereira",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Aleksander Madry",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Anca Dragan",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Chan Jun Shern",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Dane Sherburn",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Evan Mays",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Giulio Starace",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "James Aung",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Kevin Liu",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Mia Glaese",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Neil Chowdhury",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Oliver Jaffe",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Tejal Patwardhan",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Anil et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Chen et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google DeepMind",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Hyung Won Chung",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Ian Kivlichan",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  }
+ ],
+ "Framework implementation reports": [
+  {
+   "actor": "METR",
+   "documents": 9,
+   "relations": {
+    "external evaluation": 3,
+    "red teaming": 2,
+    "research": 1,
+    "named without a stated role": 1,
+    "benchmark authorship": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 7,
+   "relations": {
+    "external evaluation": 2,
+    "red teaming": 2,
+    "named without a stated role": 1,
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Deloitte",
+   "documents": 5,
+   "relations": {
+    "advice": 2,
+    "named without a stated role": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "SecureBio",
+   "documents": 5,
+   "relations": {
+    "advice": 2,
+    "named without a stated role": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Chen et al.",
+   "documents": 4,
+   "relations": {
+    "research": 3,
+    "external evaluation": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "ISO",
+   "documents": 4,
+   "relations": {
+    "standard setting": 3,
+    "red teaming": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "AWS",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "HackerOne",
+   "documents": 4,
+   "relations": {
+    "red teaming": 2,
+    "named without a stated role": 2
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Greenblatt et al.",
+   "documents": 3,
+   "relations": {
+    "research": 3
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Turpin et al.",
+   "documents": 3,
+   "relations": {
+    "research": 3
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Redwood Research",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 1,
+    "research": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Deloitte Consulting",
+   "documents": 2,
+   "relations": {
+    "advice": 2
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "RAND",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Transparency in Frontier Artificial Intelligence Act",
+   "documents": 2,
+   "relations": {
+    "regulation": 2
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Jakub Pachocki",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "advice": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Andon Labs",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Apollo Research",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Carlsmith",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Carlsmith (2023)",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Centre for the Governance of AI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Emmons et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Eric Wallace",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Faculty",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "FutureHouse",
+   "documents": 1,
+   "relations": {
+    "benchmark authorship": 1
+   },
+   "main_relation": "benchmark authorship"
+  }
+ ],
+ "Frontier governance frameworks": [
+  {
+   "actor": "RAND",
+   "documents": 11,
+   "relations": {
+    "named without a stated role": 4,
+    "benchmark authorship": 3,
+    "external evaluation": 3,
+    "standard setting": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "METR",
+   "documents": 7,
+   "relations": {
+    "external evaluation": 5,
+    "named without a stated role": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "FSF",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 2,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "EU AI Act",
+   "documents": 4,
+   "relations": {
+    "external evaluation": 2,
+    "standard setting": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "ISO",
+   "documents": 3,
+   "relations": {
+    "standard setting": 3
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "NIST",
+   "documents": 2,
+   "relations": {
+    "standard setting": 2
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Phuong et al.",
+   "documents": 2,
+   "relations": {
+    "research": 2
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "ARC Evals",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Gray Swan",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "standard setting": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "SAIF",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Wijk et al.",
+   "documents": 2,
+   "relations": {
+    "benchmark authorship": 1,
+    "research": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "van der Weij et al.",
+   "documents": 2,
+   "relations": {
+    "consultation of publics": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "consultation of publics"
+  },
+  {
+   "actor": "Allan Dafoe",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Anca Dragan",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Celine Smith",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Christoph Kern",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Claudia van der Salm",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Demis Hassabis",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Emmons et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Expert red teamers",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Google",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  }
+ ],
+ "Governance bodies and structures": [
+  {
+   "actor": "METR",
+   "documents": 4,
+   "relations": {
+    "external evaluation": 4
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Paul Christiano",
+   "documents": 3,
+   "relations": {
+    "advice": 2,
+    "named without a stated role": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "White House",
+   "documents": 3,
+   "relations": {
+    "advice": 2,
+    "standard setting": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 3,
+   "relations": {
+    "partnership": 1,
+    "named without a stated role": 1,
+    "funding": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Google",
+   "documents": 3,
+   "relations": {
+    "regulation": 1,
+    "partnership": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Brookings",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Center for a New American Security",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "The White House",
+   "documents": 2,
+   "relations": {
+    "advice": 2
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Alignment Research Center",
+   "documents": 2,
+   "relations": {
+    "advice": 1,
+    "research": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Anton Korinek",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 2,
+   "relations": {
+    "partnership": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "OECD",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "RAND",
+   "documents": 2,
+   "relations": {
+    "advice": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Carnegie Endowment for International Peace",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Faculty",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Google DeepMind",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Jack Clark",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Kent Walker",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "MIT",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "NIST",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "National Institute of Standards and Technology",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Princeton",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  }
+ ],
+ "Hub / index page": [
+  {
+   "actor": "HackerOne",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "RSC",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "advice": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Helen King",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Kaggle",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Lila Ibrahim",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "OECD",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Shane Legg",
+   "documents": 1,
+   "relations": {
+    "advice": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Wei et al.",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  }
+ ],
+ "Misuse and threat intelligence reports": [
+  {
+   "actor": "METR",
+   "documents": 7,
+   "relations": {
+    "external evaluation": 6,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Alibaba",
+   "documents": 3,
+   "relations": {
+    "red teaming": 1,
+    "named without a stated role": 1,
+    "research": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "MITRE",
+   "documents": 3,
+   "relations": {
+    "red teaming": 1,
+    "benchmark authorship": 1,
+    "partnership": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 3,
+   "relations": {
+    "research": 1,
+    "standard setting": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Brookings",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "MITRE ATT&CK",
+   "documents": 2,
+   "relations": {
+    "red teaming": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "RAND",
+   "documents": 2,
+   "relations": {
+    "standard setting": 1,
+    "research": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "AWS",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google Play",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "HackerOne",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Microsoft Threat Intelligence",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Minimax",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Redwood Research",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "YouTube",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Model behavior specifications": [
+  {
+   "actor": "HackerOne",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Alex Tamkin",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amanda Askell",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Carlsmith",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Chris Olah",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Deep Ganguli",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Evan Hubinger",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Gray Swan",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Holden Karnofsky",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Jan Leike",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Jared Kaplan",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Joe Carlsmith",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "METR",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Paul Christiano",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Ryan Greenblatt",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "UK AI Safety Institute",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "William Saunders",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Model documentation": [
+  {
+   "actor": "OpenAI",
+   "documents": 30,
+   "relations": {
+    "named without a stated role": 15,
+    "external evaluation": 8,
+    "benchmark authorship": 6,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Kaggle",
+   "documents": 24,
+   "relations": {
+    "named without a stated role": 15,
+    "benchmark authorship": 6,
+    "external evaluation": 3
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 21,
+   "relations": {
+    "named without a stated role": 11,
+    "benchmark authorship": 5,
+    "external evaluation": 3,
+    "partnership": 1,
+    "funding": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "SecureBio",
+   "documents": 20,
+   "relations": {
+    "external evaluation": 13,
+    "named without a stated role": 5,
+    "research": 1,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Gray Swan",
+   "documents": 20,
+   "relations": {
+    "red teaming": 9,
+    "benchmark authorship": 7,
+    "named without a stated role": 3,
+    "external evaluation": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 19,
+   "relations": {
+    "named without a stated role": 7,
+    "external evaluation": 5,
+    "red teaming": 3,
+    "partnership": 2,
+    "research": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Responsible Generative AI Toolkit",
+   "documents": 16,
+   "relations": {
+    "named without a stated role": 14,
+    "benchmark authorship": 2
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Google",
+   "documents": 15,
+   "relations": {
+    "named without a stated role": 6,
+    "benchmark authorship": 5,
+    "external evaluation": 3,
+    "data and annotation": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Gryphon Scientific",
+   "documents": 14,
+   "relations": {
+    "external evaluation": 6,
+    "partnership": 6,
+    "named without a stated role": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Artificial Analysis",
+   "documents": 12,
+   "relations": {
+    "external evaluation": 8,
+    "named without a stated role": 2,
+    "benchmark authorship": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "METR",
+   "documents": 11,
+   "relations": {
+    "external evaluation": 6,
+    "named without a stated role": 5
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Irregular",
+   "documents": 11,
+   "relations": {
+    "external evaluation": 4,
+    "benchmark authorship": 3,
+    "named without a stated role": 3,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "FutureHouse",
+   "documents": 10,
+   "relations": {
+    "external evaluation": 10
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Deloitte",
+   "documents": 10,
+   "relations": {
+    "external evaluation": 7,
+    "named without a stated role": 2,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Andon Labs",
+   "documents": 10,
+   "relations": {
+    "external evaluation": 5,
+    "benchmark authorship": 3,
+    "named without a stated role": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Safety Advisory Group",
+   "documents": 9,
+   "relations": {
+    "advice": 7,
+    "external evaluation": 2
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "HealthBench Professional: Evaluating large language models on real clinician chats",
+   "documents": 8,
+   "relations": {
+    "external evaluation": 8
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Signature Science",
+   "documents": 8,
+   "relations": {
+    "external evaluation": 8
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Guan et al.",
+   "documents": 8,
+   "relations": {
+    "external evaluation": 5,
+    "research": 3
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Ledidi",
+   "documents": 8,
+   "relations": {
+    "named without a stated role": 4,
+    "data and annotation": 3,
+    "benchmark authorship": 1
+   },
+   "main_relation": "data and annotation"
+  },
+  {
+   "actor": "Wikipedia",
+   "documents": 8,
+   "relations": {
+    "named without a stated role": 3,
+    "research": 2,
+    "benchmark authorship": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Vertex AI",
+   "documents": 7,
+   "relations": {
+    "named without a stated role": 6,
+    "advice": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Databricks",
+   "documents": 7,
+   "relations": {
+    "external evaluation": 5,
+    "named without a stated role": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Apollo Research",
+   "documents": 7,
+   "relations": {
+    "external evaluation": 4,
+    "research": 2,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Redwood Research",
+   "documents": 6,
+   "relations": {
+    "research": 6
+   },
+   "main_relation": "research"
+  }
+ ],
+ "Organizational principles, standards, codes": [
+  {
+   "actor": "OpenAI",
+   "documents": 10,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 2,
+    "regulation": 1,
+    "standard setting": 1,
+    "red teaming": 1,
+    "research": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "NIST",
+   "documents": 5,
+   "relations": {
+    "standard setting": 3,
+    "external evaluation": 1,
+    "red teaming": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 1,
+    "standard setting": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "METR",
+   "documents": 4,
+   "relations": {
+    "external evaluation": 4
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Universal Declaration of Human Rights",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "C2PA",
+   "documents": 4,
+   "relations": {
+    "standard setting": 1,
+    "external evaluation": 1,
+    "named without a stated role": 1,
+    "red teaming": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Google",
+   "documents": 4,
+   "relations": {
+    "research": 1,
+    "red teaming": 1,
+    "named without a stated role": 1,
+    "advice": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "UK Government",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 1,
+    "funding": 1,
+    "standard setting": 1,
+    "regulation": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "UK government",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 1,
+    "funding": 1,
+    "standard setting": 1,
+    "regulation": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "Azure AI Content Safety",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "The White House",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "White House",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 2,
+   "relations": {
+    "research": 1,
+    "red teaming": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Bletchley Declaration",
+   "documents": 2,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "GDPR",
+   "documents": 2,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "National Institute of Standards and Technology",
+   "documents": 2,
+   "relations": {
+    "standard setting": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Alibaba",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "AlphaCode",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Coalition for Content Provenance and Authenticity",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Cohere",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Demis Hassabis",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "EU AI Act",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "G42",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Partnerships and MOUs": [
+  {
+   "actor": "METR",
+   "documents": 21,
+   "relations": {
+    "external evaluation": 21
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 9,
+   "relations": {
+    "partnership": 3,
+    "standard setting": 2,
+    "named without a stated role": 2,
+    "red teaming": 1,
+    "funding": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 8,
+   "relations": {
+    "named without a stated role": 4,
+    "partnership": 2,
+    "regulation": 1,
+    "advice": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "UK Government",
+   "documents": 7,
+   "relations": {
+    "partnership": 4,
+    "named without a stated role": 3
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "UK government",
+   "documents": 7,
+   "relations": {
+    "partnership": 4,
+    "named without a stated role": 3
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Google",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 2
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 1,
+    "funding": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "OECD",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 4
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "AWS",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "NVIDIA",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 2,
+    "partnership": 1,
+    "funding": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "White House",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 2,
+    "regulation": 1,
+    "funding": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Microsoft Azure",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 3
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 3,
+   "relations": {
+    "partnership": 2,
+    "named without a stated role": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "The White House",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "Los Alamos National Laboratory",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 1,
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amazon Web Services",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "US Center for AI Standards and Innovation",
+   "documents": 2,
+   "relations": {
+    "standard setting": 2
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Vertex AI",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Demis Hassabis",
+   "documents": 2,
+   "relations": {
+    "partnership": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "AI Risks Technical Assessment Group",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Anthropic",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Apollo Research",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Department for Science, Innovation and Technology",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Elizabeth Kelly",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Faculty",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Product and sector deployments": [
+  {
+   "actor": "Gryphon Scientific",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Ledidi",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "data and annotation": 1
+   },
+   "main_relation": "data and annotation"
+  },
+  {
+   "actor": "SecureBio",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "AlphaFold 2",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "BPNet family",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Basenji2",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "FutureHouse",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "HealthBench Professional: Evaluating large language models on real clinician chats",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Nucleobench",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Penda Health",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "PhD scientists",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  }
+ ],
+ "Programmes and funding": [
+  {
+   "actor": "METR",
+   "documents": 13,
+   "relations": {
+    "external evaluation": 12,
+    "standard setting": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Google",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 3,
+    "funding": 1,
+    "research": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "HackerOne",
+   "documents": 2,
+   "relations": {
+    "red teaming": 2
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "Cloudflare",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "NVIDIA",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amazon Web Services",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Bugcrowd",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Colin Megill",
+   "documents": 1,
+   "relations": {
+    "advice": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Collective Intelligence Project",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Collective Response Systems",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "DemocracyNext",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "ISO",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "MetaGov",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Microsoft Foundry",
+   "documents": 1,
+   "relations": {
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "National Institute of Standards and Technology",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Paul Christiano",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "People Powered",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "RadicalxChange",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "The White House",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Vertex AI",
+   "documents": 1,
+   "relations": {
+    "funding": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "White House",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Wikipedia",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Public policy positions": [
+  {
+   "actor": "METR",
+   "documents": 11,
+   "relations": {
+    "external evaluation": 11
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "NIST",
+   "documents": 8,
+   "relations": {
+    "external evaluation": 4,
+    "standard setting": 3,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "The White House",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 5,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "White House",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 5,
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 4,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 4
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 4
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 3
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google DeepMind",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 3
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "National Institute of Standards and Technology",
+   "documents": 3,
+   "relations": {
+    "standard setting": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "NCMEC",
+   "documents": 3,
+   "relations": {
+    "regulation": 1,
+    "partnership": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Thorn",
+   "documents": 2,
+   "relations": {
+    "partnership": 2
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "RAND",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Alignment Research Center",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Gryphon Scientific",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Josh Hawley",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Meta",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "National Center for Missing & Exploited Children",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "National Center for Missing & Exploited Children (NCMEC)",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "National Center for Missing and Exploited Children",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Sam Altman",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "UK AI Safety Institute",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "US AI Safety Institute",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  }
+ ],
+ "Research": [
+  {
+   "actor": "Jack Clark",
+   "documents": 18,
+   "relations": {
+    "named without a stated role": 11,
+    "external evaluation": 3,
+    "research": 2,
+    "benchmark authorship": 1,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "METR",
+   "documents": 15,
+   "relations": {
+    "external evaluation": 5,
+    "named without a stated role": 4,
+    "research": 2,
+    "partnership": 2,
+    "funding": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 12,
+   "relations": {
+    "named without a stated role": 7,
+    "research": 2,
+    "partnership": 1,
+    "external evaluation": 1,
+    "red teaming": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Google",
+   "documents": 11,
+   "relations": {
+    "named without a stated role": 7,
+    "partnership": 1,
+    "research": 1,
+    "data and annotation": 1,
+    "benchmark authorship": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Jared Kaplan",
+   "documents": 11,
+   "relations": {
+    "named without a stated role": 7,
+    "red teaming": 2,
+    "external evaluation": 1,
+    "research": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 11,
+   "relations": {
+    "named without a stated role": 6,
+    "benchmark authorship": 2,
+    "research": 1,
+    "regulation": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Deep Ganguli",
+   "documents": 11,
+   "relations": {
+    "named without a stated role": 6,
+    "external evaluation": 3,
+    "research": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amanda Askell",
+   "documents": 10,
+   "relations": {
+    "named without a stated role": 8,
+    "research": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Wikipedia",
+   "documents": 9,
+   "relations": {
+    "named without a stated role": 4,
+    "standard setting": 1,
+    "funding": 1,
+    "benchmark authorship": 1,
+    "research": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Saffron Huang",
+   "documents": 8,
+   "relations": {
+    "named without a stated role": 6,
+    "external evaluation": 1,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Evan Hubinger",
+   "documents": 8,
+   "relations": {
+    "named without a stated role": 4,
+    "research": 2,
+    "external evaluation": 1,
+    "red teaming": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 7,
+   "relations": {
+    "named without a stated role": 5,
+    "benchmark authorship": 1,
+    "red teaming": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Jan Leike",
+   "documents": 7,
+   "relations": {
+    "named without a stated role": 4,
+    "research": 2,
+    "funding": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Human evaluators",
+   "documents": 6,
+   "relations": {
+    "external evaluation": 6
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Rohin Shah",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 5,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Liane Lovitt",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 4,
+    "external evaluation": 2
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Alex Tamkin",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 3,
+    "external evaluation": 1,
+    "red teaming": 1,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Miles Brundage",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 4,
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Ilya Sutskever",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "benchmark authorship": 2
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Alec Radford",
+   "documents": 5,
+   "relations": {
+    "benchmark authorship": 2,
+    "named without a stated role": 2,
+    "research": 1
+   },
+   "main_relation": "benchmark authorship"
+  },
+  {
+   "actor": "Tom Brown",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 1,
+    "research": 1,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 1,
+    "red teaming": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "IEEE",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 4
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Percy Liang",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 4
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Buck Shlegeris",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  }
+ ],
+ "Safeguards and product-safety explainers": [
+  {
+   "actor": "METR",
+   "documents": 14,
+   "relations": {
+    "external evaluation": 14
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "C2PA",
+   "documents": 8,
+   "relations": {
+    "standard setting": 3,
+    "named without a stated role": 2,
+    "external evaluation": 1,
+    "research": 1,
+    "advice": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Google",
+   "documents": 7,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 2,
+    "regulation": 1,
+    "research": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Thorn",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 3,
+    "regulation": 1,
+    "partnership": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 4,
+   "relations": {
+    "partnership": 2,
+    "regulation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "SynthID",
+   "documents": 4,
+   "relations": {
+    "research": 2,
+    "external evaluation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Voice Engine",
+   "documents": 4,
+   "relations": {
+    "research": 2,
+    "named without a stated role": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 4,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1,
+    "partnership": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "GitHub",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 3
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "NCMEC",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "data and annotation": 1
+   },
+   "main_relation": "data and annotation"
+  },
+  {
+   "actor": "National Center for Missing and Exploited Children",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 2,
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 2,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "AWS",
+   "documents": 3,
+   "relations": {
+    "partnership": 1,
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "All Tech Is Human",
+   "documents": 3,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1,
+    "partnership": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Amazon Web Services",
+   "documents": 3,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "Wikipedia",
+   "documents": 3,
+   "relations": {
+    "standard setting": 1,
+    "benchmark authorship": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "DeepMind",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Google DeepMind",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Microsoft Azure",
+   "documents": 2,
+   "relations": {
+    "regulation": 1,
+    "named without a stated role": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "NIST",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "standard setting": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 2,
+   "relations": {
+    "partnership": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Coalition for Content Provenance and Authenticity",
+   "documents": 1,
+   "relations": {
+    "standard setting": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Collective Intelligence Project",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Databricks",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "EU AI Act",
+   "documents": 1,
+   "relations": {
+    "regulation": 1
+   },
+   "main_relation": "regulation"
+  }
+ ],
+ "Statements and incident disclosures": [
+  {
+   "actor": "METR",
+   "documents": 9,
+   "relations": {
+    "external evaluation": 9
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Dario Amodei",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 4,
+   "relations": {
+    "named without a stated role": 3,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 4,
+   "relations": {
+    "partnership": 1,
+    "research": 1,
+    "named without a stated role": 1,
+    "red teaming": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Google",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 1,
+    "partnership": 1,
+    "red teaming": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 3,
+   "relations": {
+    "named without a stated role": 1,
+    "partnership": 1,
+    "red teaming": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Irregular",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "partnership": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "AWS",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Alignment Research Center",
+   "documents": 1,
+   "relations": {
+    "research": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "Chris Olah",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "HackerOne",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Microsoft Foundry",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "The White House",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "UK AISI",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "White House",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Transparency and compliance reports": [
+  {
+   "actor": "GitHub",
+   "documents": 10,
+   "relations": {
+    "named without a stated role": 2,
+    "external evaluation": 2,
+    "standard setting": 2,
+    "regulation": 1,
+    "benchmark authorship": 1,
+    "red teaming": 1,
+    "research": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "EU AI Act",
+   "documents": 9,
+   "relations": {
+    "regulation": 3,
+    "standard setting": 3,
+    "red teaming": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "regulation"
+  },
+  {
+   "actor": "C2PA",
+   "documents": 8,
+   "relations": {
+    "standard setting": 2,
+    "red teaming": 2,
+    "named without a stated role": 2,
+    "benchmark authorship": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "Azure AI Content Safety",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 3,
+    "red teaming": 1,
+    "external evaluation": 1,
+    "research": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "OECD",
+   "documents": 6,
+   "relations": {
+    "named without a stated role": 3,
+    "research": 1,
+    "external evaluation": 1,
+    "partnership": 1
+   },
+   "main_relation": "research"
+  },
+  {
+   "actor": "ISO",
+   "documents": 5,
+   "relations": {
+    "standard setting": 3,
+    "external evaluation": 1,
+    "red teaming": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "OpenAI",
+   "documents": 5,
+   "relations": {
+    "named without a stated role": 2,
+    "funding": 1,
+    "regulation": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "funding"
+  },
+  {
+   "actor": "NIST",
+   "documents": 3,
+   "relations": {
+    "standard setting": 2,
+    "external evaluation": 1
+   },
+   "main_relation": "standard setting"
+  },
+  {
+   "actor": "US Center for AI Standards and Innovation",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 2,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Safety and Security Committee",
+   "documents": 3,
+   "relations": {
+    "advice": 1,
+    "external evaluation": 1,
+    "partnership": 1
+   },
+   "main_relation": "advice"
+  },
+  {
+   "actor": "Google",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "NCMEC",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 2
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "METR",
+   "documents": 2,
+   "relations": {
+    "named without a stated role": 1,
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Amazon Web Services",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Australian Government",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Collective Intelligence Project",
+   "documents": 1,
+   "relations": {
+    "partnership": 1
+   },
+   "main_relation": "partnership"
+  },
+  {
+   "actor": "Expert red teamers",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Gray Swan",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming"
+  },
+  {
+   "actor": "Human evaluators",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Meta",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Microsoft",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Microsoft Azure",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "NVIDIA",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "National Center for Missing and Exploited Children",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ],
+ "Usage policies and terms": [
+  {
+   "actor": "METR",
+   "documents": 5,
+   "relations": {
+    "external evaluation": 4,
+    "named without a stated role": 1
+   },
+   "main_relation": "external evaluation"
+  },
+  {
+   "actor": "Amazon",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Google",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  },
+  {
+   "actor": "Vertex AI",
+   "documents": 1,
+   "relations": {
+    "named without a stated role": 1
+   },
+   "main_relation": "named without a stated role"
+  }
+ ]
+}
