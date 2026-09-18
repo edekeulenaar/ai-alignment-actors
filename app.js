@@ -298,6 +298,7 @@ function renderAll() {
 // Company policies are excluded here — they live in the Uses block.
 function renderSources() {
   const grid = document.getElementById("grid-sources");
+  if (!grid) return;                 // block removed from the page
   grid.innerHTML = "";
 
   const nonPolicyDocs = STATE.data.documents.filter(d => !d.is_policy);

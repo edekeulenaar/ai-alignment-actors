@@ -169,7 +169,8 @@ main.restructured .prose > .grid-block {
   width: min(1200px, max(100%, calc(var(--gap) - 12px)));
 }
 main.restructured figure.fig2 { border: 0; padding: 0; }
-main.restructured .fig2-host { background: #fff; }
+main.restructured .fig2-host { background: #fff; padding: 1.35rem 1.5rem 1.15rem; }
+main.restructured .prose > .grid-block { padding: .4rem .6rem; }
 main.restructured table.taxonomy { width: 100%; border-collapse: collapse; font-size: .78rem; }
 main.restructured table.taxonomy th,
 main.restructured table.taxonomy td {
@@ -179,7 +180,19 @@ main.restructured table.taxonomy td {
   text-align: left;
 }
 main.restructured table.taxonomy th { background: #f4f1ea; font-weight: 600; }
-main.restructured table.taxonomy td:nth-child(4) { min-width: 18rem; }
+main.restructured table.taxonomy td:nth-child(4),
+main.restructured table.taxonomy td:nth-child(3) { min-width: 16rem; }
+main.restructured table.taxonomy th.taxonomy-group {
+  vertical-align: middle;
+  text-align: left;
+  width: 7.5rem;
+  min-width: 7.5rem;
+  background: #f9f7f2;
+  font-weight: 600;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+main.restructured table.taxonomy td { overflow-wrap: break-word; hyphens: none; }
 main.restructured .paper-nav { display: flex; gap: 1rem; font-size: .82rem; }
 main.restructured .paper-nav-current { color: #8a8377; }
 .fig2-key-btn {

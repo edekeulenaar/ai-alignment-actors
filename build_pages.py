@@ -33,7 +33,7 @@ DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
 TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260918p"
+VERSION = "20260918s"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -81,14 +81,21 @@ def taxonomy_table() -> str:
     out = ['<div class="fig2-host" id="table-1"><table class="taxonomy">',
            "<thead><tr><th>Group</th><th>Category</th><th>Also known as</th>"
            "<th>Definition and decision rule</th><th>Data points to code</th></tr></thead><tbody>"]
-    group = None
+    # One merged cell per group, spanning its categories.
+    spans: dict[str, int] = {}
     for row in rows:
-        shown = "" if row["Group"] == group else row["Group"]
-        group = row["Group"]
-        out.append("<tr>" + "".join(
-            f"<td>{html.escape(cell)}</td>" for cell in
-            (shown, row["Category"], row["Also known as"], row["Definition and decision rule"],
-             row["Data points to code"])) + "</tr>")
+        spans[row["Group"]] = spans.get(row["Group"], 0) + 1
+    seen: set[str] = set()
+    for row in rows:
+        cells = []
+        if row["Group"] not in seen:
+            seen.add(row["Group"])
+            cells.append(f'<th class="taxonomy-group" rowspan="{spans[row["Group"]]}" scope="rowgroup">'
+                         f'{html.escape(row["Group"])}</th>')
+        cells += [f"<td>{html.escape(cell)}</td>" for cell in
+                  (row["Category"], row["Also known as"], row["Definition and decision rule"],
+                   row["Data points to code"])]
+        out.append("<tr>" + "".join(cells) + "</tr>")
     out.append("</tbody></table></div>")
     return "\n".join(out)
 
@@ -185,7 +192,9 @@ def main() -> None:
     # The shell does not load the September 2026 figures; this page needs them.
     scripts = scripts.replace("</body>", f'<script src="figures2.js?v={VERSION}"></script>\n</body>')
     # The comment layer and its configuration changed with the GitHub backend.
-    scripts = re.sub(r'(comments-config\.js\?v=|refs-comments\.js\?v=)[0-9A-Za-z]+',
+    # Every script this page loads is cache-busted together, so an edit to app.js or the
+    # comment layer reaches readers who have the old copy.
+    scripts = re.sub(r'((?:app|stacks|alluvial|comments-config|refs-comments)\.js\?v=)[0-9A-Za-z]+',
                      lambda m: m[1] + VERSION, scripts)
 
     head = head.replace("<title>The actors in AI alignment</title>",
