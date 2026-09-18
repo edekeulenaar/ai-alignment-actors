@@ -31,28 +31,30 @@ ROOT = DOCS.parent
 ARTICLES = Path.home() / "Projects" / "Master_vault" / "Articles"
 DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
 TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
-INDEX = DOCS / "index.html"
-OUT = DOCS / "restructured.html"
-VERSION = "20260918f"
+OUT = DOCS / "index.html"        # the restructured text is the site's front page
+INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
+VERSION = "20260918g"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
 
 FIGURE_HTML = {
-    "figure 1": '<figure class="fig2"><img src="fig-stack.svg" alt="The alignment stack" '
+    "figure 1": '<figure class="fig2" id="fig-stack-1"><img src="fig-stack.svg" alt="The alignment stack" '
                 'style="width:100%;height:auto"></figure>',
-    "figure 5": '<figure class="fig2"><img src="fig-method.svg" alt="The method, from seed URLs '
+    "figure 5": '<figure class="fig2" id="fig-method-5"><img src="fig-method.svg" alt="The method, from seed URLs '
                 'to analysis" style="width:100%;height:auto"></figure>',
     "figure 2": '<div id="fig-keyness" class="fig2-host"></div>',
-    "figure 3": '<div id="fig-network" class="fig2-host"></div>',
+    "figure 3a": '<div id="fig-network" class="fig2-host"></div>',
+    "figure 3b": '<div id="fig-actor-types" class="fig2-host"></div>',
     "figure 4": '<div id="fig-actors" class="fig2-host"></div>',
     "figure 6a and 6b": "@@block-conducts@@@@block-risks@@",
     "figure 7": "@@block-training@@",
     "figure 8": "@@block-benchmark@@",
+    "figure 9": "@@block-stacks@@",
+    "figure 10": "@@block-alluvial@@",
 }
 # The interface blocks kept after the article, in the order the original page has them.
-TRAILING_BLOCKS = ["block-sources", "block-top-actors", "block-stacks", "block-alluvial",
-                   "block-clusters"]
+TRAILING_BLOCKS = ["block-sources", "block-top-actors", "block-clusters"]
 
 
 def slice_block(page: str, block_id: str) -> str:
@@ -78,7 +80,7 @@ def taxonomy_table() -> str:
     with TAXONOMY.open(encoding="utf-8-sig") as fh:
         rows = [r for r in csv.DictReader(fh, delimiter=";")
                 if not r["Group"].startswith("Out of scope")]
-    out = ['<div class="fig2-host"><table class="taxonomy">',
+    out = ['<div class="fig2-host" id="table-1"><table class="taxonomy">',
            "<thead><tr><th>Group</th><th>Category</th><th>Also known as</th>"
            "<th>Definition and decision rule</th><th>Data points to code</th></tr></thead><tbody>"]
     group = None
@@ -111,22 +113,61 @@ def to_html(text: str) -> str:
     return body_html, f'<h1>References</h1>\n<ol class="references">\n{refs_html}\n</ol>'
 
 
+SLUG = re.compile(r"[^a-z0-9]+")
+
+
+def add_heading_ids(body_html: str) -> tuple[str, list[tuple[str, str, str]]]:
+    """Give every heading an id, and return (level, id, text) for the sidebar."""
+    headings: list[tuple[str, str, str]] = []
+    seen: set[str] = set()
+
+    def tag(match: re.Match) -> str:
+        level, text = match[1], match[2]
+        plain = re.sub(r"<[^>]+>", "", text).strip()
+        slug = SLUG.sub("-", plain.lower()).strip("-")[:48] or "section"
+        while slug in seen:
+            slug += "-2"
+        seen.add(slug)
+        headings.append((level, slug, plain))
+        return f'<h{level} id="{slug}">{text}</h{level}>'
+
+    return re.sub(r"<h([12])>(.*?)</h\1>", tag, body_html, flags=re.S), headings
+
+
+def sidebar_nav(headings: list[tuple[str, str, str]], figures: list[tuple[str, str]]) -> str:
+    out = ['<nav class="side-nav" aria-label="Sections">']
+    for level, slug, text in headings:
+        if level == "1":
+            out.append(f'<a href="#{slug}" data-target="{slug}">{html.escape(text)}</a>')
+        else:
+            out.append(f'<ul class="sub-nav"><li><a href="#{slug}" data-target="{slug}">'
+                       f'{html.escape(text)}</a></li></ul>')
+    out.append('<a href="#figures-list" data-target="figures-list">Figures</a><ul class="sub-nav">')
+    for anchor, label in figures:
+        out.append(f'<li><a href="#{anchor}" data-target="{anchor}">{html.escape(label)}</a></li>')
+    out.append("</ul></nav>")
+    return "\n".join(out)
+
+
 def insert_figures(body_html: str) -> str:
     """Put each figure directly under the caption paragraph that announces it."""
     out, used = [], set()
     for para in re.split(r"(?=<p><strong>)", body_html):
+        match = re.match(r"<p><strong>(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?"
+                         r"</strong>", para, re.I)
+        # A caption, not a sentence that happens to open with the figure's name.
         out.append(para)
-        match = re.match(r"<p><strong>(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)",
-                         para, re.I)
         if not match:
             continue
+        caption = para[:para.find("</p>") + 4]  # the chunk runs on to the next bold paragraph
+        after = caption[match.end():].lstrip(". ")
+        if not (after.startswith("<em>") or len(caption) < 420):
+            continue
         name = f"{match[1].lower()} {match[2].lower().replace('  ', ' ')}"
-        if name in FIGURE_HTML and name not in used:
-            out.append(FIGURE_HTML[name])
+        figure = FIGURE_HTML.get(name) or (taxonomy_table() if name == "table 1" else None)
+        if figure and name not in used:
             used.add(name)
-        elif name == "table 1" and "table 1" not in used:
-            out.append(taxonomy_table())
-            used.add(name)
+            out[-1] = caption + figure + para[len(caption):]
     missing = set(FIGURE_HTML) - used
     if missing:
         print(f"captions not found for: {sorted(missing)}", file=sys.stderr)
@@ -134,7 +175,7 @@ def insert_figures(body_html: str) -> str:
 
 
 def main() -> None:
-    page = INDEX.read_text(encoding="utf-8")
+    page = INTERFACE.read_text(encoding="utf-8")
     head_end = page.index("</head>")
     head = page[:head_end]
     main_open = page.index("<main")
@@ -149,13 +190,24 @@ def main() -> None:
 
     body_html, refs_html = to_html(DRAFT.read_text(encoding="utf-8"))
     body_html = insert_figures(body_html)
-    for block_id in ("block-conducts", "block-risks", "block-training", "block-benchmark"):
+    body_html, headings = add_heading_ids(body_html)
+    figures = [("fig-stack-1", "1. The alignment stack"), ("table-1", "Table 1. Taxonomy"),
+               ("fig-keyness", "2. Discourse per type"), ("fig-network", "3a. Document network"),
+               ("fig-actor-types", "3b. Actor types"), ("fig-actors", "4. Actors per type"),
+               ("fig-method-5", "5. Method"), ("block-conducts", "6a. Conducts"),
+               ("block-risks", "6b. Risks"), ("block-training", "7. Training"),
+               ("block-benchmark", "8. Benchmarking"), ("block-stacks", "9. Stack view"),
+               ("block-alluvial", "10. Who reaches the documents")]
+    for block_id in ("block-conducts", "block-risks", "block-training", "block-benchmark",
+                     "block-stacks", "block-alluvial"):
         body_html = body_html.replace(f"@@{block_id}@@", slice_block(page, block_id))
     trailing = "\n".join(slice_block(page, b) for b in TRAILING_BLOCKS)
 
     nav = ('<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;">'
-           '<a href="index.html">← Interface and findings</a>'
-           '<span class="paper-nav-current">Restructured text</span></nav>')
+           '<span class="paper-nav-current">The paper</span>'
+           '<a href="interface.html">Interface and original findings</a>'
+           '<span class="paper-nav-disabled" title="Set aside; the restructured text supersedes it">'
+           'Revised text</span></nav>')
     main_html = f"""<main class="restructured">
 {nav}
 <section class="prose paper">
@@ -175,8 +227,10 @@ clusters.</p>
 </section>
 </main>
 """
+    shell_top = re.sub(r'<nav class="side-nav".*?</nav>', sidebar_nav(headings, figures),
+                       shell_top, flags=re.S)
     OUT.write_text(head + "</head>" + shell_top + main_html + scripts, encoding="utf-8")
-    print(f"restructured.html: {len(main_html):,} characters")
+    print(f"index.html (restructured text): {len(main_html):,} characters")
 
 
 if __name__ == "__main__":

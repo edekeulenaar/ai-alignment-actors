@@ -314,6 +314,62 @@
     draw(types[0]);
   }
 
+  /* ── B2. Actor types across document types ──────────────────────────────── */
+  function actorTypes(data) {
+    var host = el("fig-actor-types");
+    if (!host) return;
+    var max = 0;
+    data.types.forEach(function (t) {
+      data.categories.forEach(function (c) { max = Math.max(max, data.matrix[t][c]); });
+    });
+
+    var table = document.createElement("table");
+    table.className = "fig2-matrix";
+    var head = document.createElement("tr");
+    head.appendChild(document.createElement("th"));
+    data.categories.forEach(function (c) {
+      var th = document.createElement("th");
+      var span = document.createElement("span");
+      span.textContent = c;
+      th.appendChild(span);
+      head.appendChild(th);
+    });
+    table.appendChild(head);
+
+    data.types.forEach(function (t) {
+      var tr = document.createElement("tr");
+      var label = document.createElement("th");
+      label.className = "fig2-matrix-row";
+      label.innerHTML = '<i style="background:' + (data.colors[t] || "#b9b1a2") + '"></i>' + t;
+      tr.appendChild(label);
+      data.categories.forEach(function (c) {
+        var n = data.matrix[t][c];
+        var td = document.createElement("td");
+        if (n) {
+          // Square root keeps the smaller counts visible next to the internal actors.
+          td.style.background = data.colors[t] || "#6f6a62";
+          td.style.opacity = String(0.12 + 0.88 * Math.sqrt(n) / Math.sqrt(max));
+          td.textContent = n;
+          var who = (data.examples[t] || {})[c] || [];
+          td.title = t + " in " + c + ": " + n + " mentions"
+            + (who.length ? "\n" + who.join(", ") : "");
+        }
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+    host.appendChild(table);
+
+    var note = document.createElement("p");
+    note.className = "fig2-note";
+    note.textContent = "Rows are actor types as coded in the readings, columns document types. A cell "
+      + "counts the documents of that type naming an actor of that type, so an actor named in ten "
+      + "system cards counts ten times. Colour follows the actor type, its strength the count "
+      + "(square-root scale, since internal actors would otherwise flatten everything else). "
+      + "Hover a cell for the actors behind it.";
+    host.appendChild(note);
+  }
+
   function load(file, fn) {
     fetch(file + "?v=20260918").then(function (r) { return r.json(); }).then(fn)
       .catch(function (e) { console.warn("figures2: could not load " + file, e); });
@@ -322,5 +378,6 @@
     if (el("fig-keyness")) load("keyness.json", keyness);
     if (el("fig-network")) load("citations.json", network);
     if (el("fig-actors")) load("actors_by_type.json", actors);
+    if (el("fig-actor-types")) load("actor_types_by_category.json", actorTypes);
   });
 })();
