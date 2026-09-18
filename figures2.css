@@ -199,3 +199,55 @@ main.restructured .paper-nav-current { color: #8a8377; }
   border: 1px solid #efece5; text-align: center; font-size: .66rem;
   color: #fff; height: 1.35rem; min-width: 1.6rem;
 }
+
+/* ── September 2026 paper: typography and figure layout ─────────────────────
+   Body text justified; headings, captions, tables and figure chrome in Test
+   National; figures centred with their caption underneath. */
+main.restructured .prose p,
+main.restructured .prose li { text-align: justify; hyphens: auto; }
+
+main.restructured h1, main.restructured h2, main.restructured h3,
+main.restructured h4, main.restructured h5,
+main.restructured .side-nav, .side-nav {
+  font-family: "Test National", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+main.restructured h1 { font-weight: 600; letter-spacing: -.01em; }
+main.restructured h2, main.restructured h3, main.restructured h4 { font-weight: 600; }
+
+/* A caption is the paragraph that opens with "Figure n" or "Table n". */
+main.restructured p.figure-caption {
+  font-family: "Test National", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: .82rem;
+  line-height: 1.45;
+  color: #5c574f;
+  text-align: center;
+  max-width: 44rem;
+  margin: .55rem auto 2.4rem;
+}
+main.restructured p.figure-caption strong { font-weight: 600; color: #23211e; }
+
+main.restructured figure.fig2,
+main.restructured .fig2-host { margin-left: auto; margin-right: auto; }
+main.restructured figure.fig2 { text-align: center; }
+main.restructured figure.fig2 svg { max-width: 100%; height: auto; }
+
+main.restructured .fig2-host,
+main.restructured .fig2-types,
+main.restructured .fig2-legend,
+main.restructured .fig2-note,
+main.restructured .fig2-bars,
+main.restructured table.taxonomy,
+main.restructured .fig2-matrix,
+main.restructured .grid-block,
+main.restructured .block-caption {
+  font-family: "Test National", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+main.restructured .fig2-note { text-align: left; }
+
+/* Nothing inside a figure may spill out of it. */
+main.restructured .fig2-host { overflow-x: auto; }
+main.restructured .fig2-host > * { max-width: 100%; }
+main.restructured .fig2-bars li { overflow: hidden; }
+main.restructured .fig2-term { overflow-wrap: anywhere; }
+main.restructured table.taxonomy td,
+main.restructured table.taxonomy th { overflow-wrap: anywhere; }

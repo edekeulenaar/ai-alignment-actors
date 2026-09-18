@@ -33,16 +33,14 @@ DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
 TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260918g"
+VERSION = "20260918h"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
 
 FIGURE_HTML = {
-    "figure 1": '<figure class="fig2" id="fig-stack-1"><img src="fig-stack.svg" alt="The alignment stack" '
-                'style="width:100%;height:auto"></figure>',
-    "figure 5": '<figure class="fig2" id="fig-method-5"><img src="fig-method.svg" alt="The method, from seed URLs '
-                'to analysis" style="width:100%;height:auto"></figure>',
+    "figure 1": "@@svg:fig-stack-1:fig-stack.svg@@",
+    "figure 5": "@@svg:fig-method-5:fig-method.svg@@",
     "figure 2": '<div id="fig-keyness" class="fig2-host"></div>',
     "figure 3a": '<div id="fig-network" class="fig2-host"></div>',
     "figure 3b": '<div id="fig-actor-types" class="fig2-host"></div>',
@@ -165,9 +163,12 @@ def insert_figures(body_html: str) -> str:
             continue
         name = f"{match[1].lower()} {match[2].lower().replace('  ', ' ')}"
         figure = FIGURE_HTML.get(name) or (taxonomy_table() if name == "table 1" else None)
+        marked = caption.replace("<p>", '<p class="figure-caption">', 1)
         if figure and name not in used:
             used.add(name)
-            out[-1] = caption + figure + para[len(caption):]
+            out[-1] = figure + marked + para[len(caption):]
+        else:
+            out[-1] = marked + para[len(caption):]
     missing = set(FIGURE_HTML) - used
     if missing:
         print(f"captions not found for: {sorted(missing)}", file=sys.stderr)
@@ -201,6 +202,11 @@ def main() -> None:
     for block_id in ("block-conducts", "block-risks", "block-training", "block-benchmark",
                      "block-stacks", "block-alluvial"):
         body_html = body_html.replace(f"@@{block_id}@@", slice_block(page, block_id))
+    for anchor, name in re.findall(r"@@svg:([a-z0-9-]+):([a-z-]+\.svg)@@", body_html):
+        drawing = (DOCS / name).read_text(encoding="utf-8")
+        drawing = drawing.replace("<svg ", '<svg role="img" ', 1)
+        body_html = body_html.replace(f"@@svg:{anchor}:{name}@@",
+                                      f'<figure class="fig2" id="{anchor}">{drawing}</figure>')
     trailing = "\n".join(slice_block(page, b) for b in TRAILING_BLOCKS)
 
     nav = ('<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;">'
