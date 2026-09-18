@@ -141,3 +141,40 @@ body.paper-page {
   .fig2-bars li { grid-template-columns: 1fr; gap: .1rem; }
   .fig2-term { text-align: left; }
 }
+
+/* Figures on the restructured page break out of the text column, which is narrow. */
+main.restructured .fig2-host,
+main.restructured figure.fig2 {
+  /* Grow to the right of the text column, stopping short of the two fixed sidebars. */
+  width: clamp(100%, calc(100vw - 520px), 1080px);
+  margin-left: 0;
+  margin-top: .6rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+main.restructured figure.fig2 { border: 0; padding: 0; }
+main.restructured .fig2-host { background: #fff; }
+main.restructured table.taxonomy { width: 100%; border-collapse: collapse; font-size: .78rem; }
+main.restructured table.taxonomy th,
+main.restructured table.taxonomy td {
+  border: 1px solid var(--paper-rule, #ded8cd);
+  padding: .3rem .45rem;
+  vertical-align: top;
+  text-align: left;
+}
+main.restructured table.taxonomy th { background: #f4f1ea; font-weight: 600; }
+main.restructured table.taxonomy td:nth-child(4) { min-width: 18rem; }
+main.restructured .paper-nav { display: flex; gap: 1rem; font-size: .82rem; }
+main.restructured .paper-nav-current { color: #8a8377; }
+.fig2-key-btn {
+  border: 1px solid transparent; background: none; cursor: pointer;
+  font: inherit; color: inherit; padding: .1rem .25rem; border-radius: 3px;
+}
+.fig2-key-btn:hover { border-color: #cfc7b8; }
+.fig2-key-btn.is-on { border-color: #23211e; background: #f0ece3; color: #23211e; }
+
+.paper-nav-disabled {
+  color: #b5ada0;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}

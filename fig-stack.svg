@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1180" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <style>
+      .layer { fill: #f4f1ea; stroke: #cfc7b8; stroke-width: 1; }
+      .layer-dim { fill: #efece5; stroke: #d8d1c4; }
+      .edge { fill: #ded6c6; }
+      .lname { font-size: 15px; font-weight: bold; fill: #23211e; letter-spacing: .02em; }
+      .item { font-size: 12.5px; fill: #3d3934; }
+      .note { font-size: 11.5px; fill: #7a736a; font-style: italic; }
+      .tier { fill: #fffdf8; stroke: #cfc7b8; stroke-width: .8; }
+      .tname { font-size: 12px; font-weight: bold; fill: #2b2924; }
+      .titem { font-size: 11px; fill: #55504a; }
+      .arrow { stroke: #a9a093; stroke-width: 1.2; fill: none; marker-end: url(#a); }
+      .title { font-size: 23px; fill: #23211e; }
+      .sub { font-size: 14px; fill: #6f6a62; font-style: italic; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a9a093"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="480" y="40" text-anchor="middle">The AI alignment stack</text>
+  <text class="sub" x="480" y="64" text-anchor="middle">where and how AI is aligned, and which documents govern each layer</text>
+
+  <!-- 1. High-level legislation and policies -->
+  <rect class="layer" x="40" y="96" width="880" height="104" rx="7"/>
+  <rect class="edge" x="40" y="196" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="122">HIGH-LEVEL LEGISLATION AND POLICIES</text>
+  <text class="item" x="60" y="146">EU AI Act and the GPAI Code of Practice · US executive orders and state law (SB 53) · China's generative AI</text>
+  <text class="item" x="60" y="165">measures and algorithm registry · Council of Europe Framework Convention · UN Global Digital Compact</text>
+  <text class="item" x="60" y="184">Standards: ISO/IEC 42001, NIST AI RMF, IEEE 7000, CEN-CENELEC JTC21 · media and speech legislation</text>
+
+  <!-- 2. AI platforms -->
+  <rect class="layer" x="40" y="214" width="880" height="72" rx="7"/>
+  <rect class="edge" x="40" y="282" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="240">AI PLATFORMS (HUGGING FACE, GITHUB, APP STORES)</text>
+  <text class="item" x="60" y="264">Terms of use · community guidelines · policy centres · model and dataset cards required of uploaders</text>
+
+  <!-- 3. AI company policies -->
+  <rect class="layer" x="40" y="300" width="880" height="356" rx="7"/>
+  <rect class="edge" x="40" y="652" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="326">AI COMPANY POLICIES</text>
+  <text class="note" x="292" y="326">the documentary taxonomy, from the documents that bind the company to those that report on it</text>
+
+  <rect class="tier" x="60" y="338" width="840" height="66" rx="5"/>
+  <text class="tname" x="76" y="358">Self-governance</text>
+  <text class="titem" x="76" y="376">Organisational principles, standards and codes → model behaviour specifications (constitutions, model specs)</text>
+  <text class="titem" x="76" y="393">→ frontier governance frameworks (thresholds and if-then commitments) → usage policies and terms</text>
+
+  <rect class="tier" x="60" y="414" width="840" height="66" rx="5"/>
+  <text class="tname" x="76" y="434">Disclosure</text>
+  <text class="titem" x="76" y="452">Model documentation (system and model cards, technical reports) · framework implementation reports</text>
+  <text class="titem" x="76" y="469">misuse and threat intelligence · transparency and compliance reports · certifications · incident statements</text>
+
+  <rect class="tier" x="60" y="490" width="840" height="66" rx="5"/>
+  <text class="tname" x="76" y="510">External governance</text>
+  <text class="titem" x="76" y="528">Public policy positions · commitments, unilateral and multilateral · partnerships and memoranda</text>
+  <text class="titem" x="76" y="545">governance bodies and structures (trusts, advisory councils, institutes, industry bodies)</text>
+
+  <rect class="tier" x="60" y="566" width="840" height="66" rx="5"/>
+  <text class="tname" x="76" y="586">Programmes and knowledge</text>
+  <text class="titem" x="76" y="604">Programmes and funding (grants, fellowships, bug bounties, access programmes) · safeguards explainers</text>
+  <text class="titem" x="76" y="621">research · evaluations, benchmarks and tools · essays and vision statements</text>
+
+  <path class="arrow" d="M46,344 C24,344 24,628 46,628"/>
+  <text class="note" x="18" y="492" transform="rotate(-90 18 492)" text-anchor="middle">binds the company → reports on it</text>
+
+  <!-- 4. Value alignment -->
+  <rect class="layer" x="40" y="670" width="880" height="150" rx="7"/>
+  <rect class="edge" x="40" y="816" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="696">VALUE ALIGNMENT</text>
+  <text class="note" x="196" y="696">the components in which the norms above are operationalised</text>
+
+  <rect class="tier" x="60" y="708" width="200" height="96" rx="5"/>
+  <text class="tname" x="76" y="728">Data curation</text>
+  <text class="titem" x="76" y="748">filtering, deduplication</text>
+  <text class="titem" x="76" y="765">synthetic data, PII redaction</text>
+  <text class="titem" x="76" y="782">annotation and preference data</text>
+
+  <rect class="tier" x="272" y="708" width="200" height="96" rx="5"/>
+  <text class="tname" x="288" y="728">Red teaming</text>
+  <text class="titem" x="288" y="748">internal and external teams</text>
+  <text class="titem" x="288" y="765">expert and public red teams</text>
+  <text class="titem" x="288" y="782">bug bounties, flaw disclosure</text>
+
+  <rect class="tier" x="484" y="708" width="200" height="96" rx="5"/>
+  <text class="tname" x="500" y="728">Training</text>
+  <text class="titem" x="500" y="748">SFT, RLHF, RLAIF, DPO</text>
+  <text class="titem" x="500" y="765">reward shaping, hard constraints</text>
+  <text class="titem" x="500" y="782">classifiers, runtime safeguards</text>
+
+  <rect class="tier" x="696" y="708" width="204" height="96" rx="5"/>
+  <text class="tname" x="712" y="728">Benchmarking</text>
+  <text class="titem" x="712" y="748">safety and capability suites</text>
+  <text class="titem" x="712" y="765">third-party evaluation</text>
+  <text class="titem" x="712" y="782">leaderboards, audits</text>
+
+  <!-- 5. Enforcement -->
+  <rect class="layer" x="40" y="834" width="880" height="72" rx="7"/>
+  <rect class="edge" x="40" y="902" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="860">ENFORCEMENT</text>
+  <text class="item" x="60" y="884">Generation of "moderate" content · refusals and safe completions · chain of thought · content warnings</text>
+
+  <!-- 6. User circumventions -->
+  <rect class="layer" x="40" y="920" width="880" height="66" rx="7"/>
+  <rect class="edge" x="40" y="982" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="946">USER CIRCUMVENTIONS</text>
+  <text class="item" x="60" y="970">Jailbreaking prompts · many-shot and prompt-injection attacks · workarounds shared in public forums</text>
+
+  <!-- 7. Alternative models and platforms -->
+  <rect class="layer" x="40" y="1000" width="880" height="72" rx="7"/>
+  <rect class="edge" x="40" y="1068" width="880" height="5" rx="2"/>
+  <text class="lname" x="60" y="1026">ALTERNATIVE MODELS &amp; PLATFORMS</text>
+  <text class="item" x="60" y="1050">Alternative AI platform ecologies · alternative models (geographical, religious, political) · open weights</text>
+
+  <!-- 8. Infrastructures (context) -->
+  <rect class="layer layer-dim" x="40" y="1086" width="880" height="66" rx="7"/>
+  <text class="lname" x="60" y="1112" fill="#8a8377">AI INFRASTRUCTURES</text>
+  <text class="item" x="60" y="1136" fill="#8a8377">Cloud services · content delivery networks · domain registrars · compute and telecom infrastructure</text>
+
+  <text class="note" x="920" y="1172" text-anchor="end">Layers in grey lie outside the corpus read here.</text>
+</svg>

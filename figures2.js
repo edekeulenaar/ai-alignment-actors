@@ -52,8 +52,12 @@
       var max = d3.max(terms, function (d) { return d.z; });
       var note = document.createElement("p");
       note.className = "fig2-note";
-      note.textContent = terms[0].category_docs + " documents of this type. Bars show how much more "
-        + "of this type's documents use the phrase than the rest of the corpus.";
+      note.textContent = terms[0].category_docs + " documents of this type. Candidate concepts are the "
+        + "noun chunks of each document, so verbs and bare adjectives are excluded; each is scored by the "
+        + "log-odds ratio of its document frequency in this type against the rest of the corpus, with an "
+        + "informative Dirichlet prior (Monroe, Colaresi and Quinn 2008), which keeps rare concepts and "
+        + "small types comparable. A concept counts only if more than one company uses it. Bars show that "
+        + "score; the figure on the right is the number of documents of this type naming the concept.";
       chart.appendChild(note);
       var list = document.createElement("ul");
       list.className = "fig2-bars";
@@ -87,7 +91,8 @@
     var companies = Array.from(new Set(data.nodes.map(function (n) { return n.company; }))).sort();
     var categories = Array.from(new Set(data.nodes.map(function (n) { return n.category; }))).sort();
     var colour = colourOf(categories);
-    var state = {company: "All companies"};
+    var state = {company: "All companies", category: null};
+    var applyHighlight = function () {};
 
     var controls = document.createElement("div");
     controls.className = "fig2-types";
@@ -106,9 +111,17 @@
     var legend = document.createElement("div");
     legend.className = "fig2-legend";
     categories.forEach(function (c) {
-      var s = document.createElement("span");
-      s.className = "fig2-key";
+      var s = document.createElement("button");
+      s.type = "button";
+      s.className = "fig2-key fig2-key-btn";
       s.innerHTML = '<i style="background:' + colour(c) + '"></i>' + c;
+      s.addEventListener("click", function () {
+        state.category = state.category === c ? null : c;
+        legend.querySelectorAll(".fig2-key-btn").forEach(function (o) {
+          o.classList.toggle("is-on", o === s && state.category === c);
+        });
+        applyHighlight();
+      });
       legend.appendChild(s);
     });
     host.appendChild(legend);
@@ -181,6 +194,19 @@
         .attr("font-size", 10).attr("fill", "#2b2b2b").attr("pointer-events", "none")
         .attr("paint-order", "stroke").attr("stroke", "#fdfcf9").attr("stroke-width", 3);
 
+      applyHighlight = function () {
+        var on = state.category;
+        node.attr("opacity", function (d) { return !on || d.category === on ? 1 : 0.12; })
+            .attr("stroke", function (d) { return on && d.category === on ? "#23211e" : "#fff"; })
+            .attr("stroke-width", function (d) { return on && d.category === on ? 1.4 : 0.8; });
+        link.attr("stroke-opacity", function (d) {
+          if (!on) return 0.55;
+          return d.source.category === on || d.target.category === on ? 0.5 : 0.05;
+        });
+        label.attr("opacity", function (d) { return !on || d.category === on ? 1 : 0.15; });
+      };
+      applyHighlight();
+
       sim.on("tick", function () {
         link.attr("x1", function (d) { return d.source.x; }).attr("y1", function (d) { return d.source.y; })
             .attr("x2", function (d) { return d.target.x; }).attr("y2", function (d) { return d.target.y; });
@@ -211,12 +237,24 @@
     })))).sort();
     var colour = colourOf(relations);
 
+    var picked = null;
     var legend = document.createElement("div");
     legend.className = "fig2-legend";
     relations.forEach(function (rel) {
-      var s = document.createElement("span");
-      s.className = "fig2-key";
+      var s = document.createElement("button");
+      s.type = "button";
+      s.className = "fig2-key fig2-key-btn";
       s.innerHTML = '<i style="background:' + colour(rel) + '"></i>' + rel;
+      s.addEventListener("click", function () {
+        picked = picked === rel ? null : rel;
+        legend.querySelectorAll(".fig2-key-btn").forEach(function (o) {
+          o.classList.toggle("is-on", o === s && picked === rel);
+        });
+        d3.select(chart).selectAll("g rect")
+          .attr("opacity", function (d) { return !picked || d.data.main_relation === picked ? 1 : 0.12; });
+        d3.select(chart).selectAll("g text")
+          .attr("opacity", function (d) { return !picked || d.data.main_relation === picked ? 1 : 0.12; });
+      });
       legend.appendChild(s);
     });
 
@@ -228,6 +266,8 @@
 
     function draw(type) {
       clear(chart);
+      picked = null;
+      legend.querySelectorAll(".fig2-key-btn").forEach(function (o) { o.classList.remove("is-on"); });
       var items = data[type].slice(0, 24);
       var width = chart.clientWidth || 900, height = 420;
       var root = d3.hierarchy({children: items}).sum(function (d) { return d.documents; })
@@ -263,8 +303,12 @@
       var note = document.createElement("p");
       note.className = "fig2-note";
       note.textContent = "Each square is an actor named in documents of this type; its size is the number "
-        + "of such documents naming it, and its colour the relation those documents most often state. "
-        + "The authoring company and its own models are excluded.";
+        + "of such documents naming it, and its colour the relation those documents most often state. Actor "
+        + "names come from the project's actor vocabulary, matched against every page of every document; the "
+        + "sentence around each occurrence is then read for the relation it states (red teaming, external "
+        + "evaluation, benchmark authorship, standard setting, regulation, funding, partnership, data and "
+        + "annotation, advice, consultation of publics, research). The authoring company and its own models "
+        + "are not counted as actors in their own documents. Click a relation in the legend to highlight it.";
       chart.appendChild(note);
     }
     draw(types[0]);
