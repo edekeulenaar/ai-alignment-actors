@@ -33,7 +33,7 @@ DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
 TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260918h"
+VERSION = "20260918p"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -184,6 +184,9 @@ def main() -> None:
     scripts = page[page.index("</main>") + len("</main>"):]
     # The shell does not load the September 2026 figures; this page needs them.
     scripts = scripts.replace("</body>", f'<script src="figures2.js?v={VERSION}"></script>\n</body>')
+    # The comment layer and its configuration changed with the GitHub backend.
+    scripts = re.sub(r'(comments-config\.js\?v=|refs-comments\.js\?v=)[0-9A-Za-z]+',
+                     lambda m: m[1] + VERSION, scripts)
 
     head = head.replace("<title>The actors in AI alignment</title>",
                         "<title>The actors in AI alignment — restructured</title>")
@@ -211,6 +214,7 @@ def main() -> None:
 
     nav = ('<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;">'
            '<span class="paper-nav-current">The paper</span>'
+           '<a href="more-figures.html">Further figures</a>'
            '<a href="interface.html">Interface and original findings</a>'
            '<span class="paper-nav-disabled" title="Set aside; the restructured text supersedes it">'
            'Revised text</span></nav>')
@@ -218,14 +222,6 @@ def main() -> None:
 {nav}
 <section class="prose paper">
 {body_html}
-</section>
-
-<section id="findings" class="prose">
-<h2>The rest of the interface</h2>
-<p class="fig2-note">The remaining figures of the original interface, unchanged: the corpus itself,
-the actors most often named, the stack view, the flow from actor to component, and the conceptual
-clusters.</p>
-{trailing}
 </section>
 
 <section id="references" class="prose">
@@ -236,6 +232,29 @@ clusters.</p>
     shell_top = re.sub(r'<nav class="side-nav".*?</nav>', sidebar_nav(headings, figures),
                        shell_top, flags=re.S)
     OUT.write_text(head + "</head>" + shell_top + main_html + scripts, encoding="utf-8")
+
+    # The interface figures that the paper does not use, on their own page.
+    more_nav = ('<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;">'
+                '<a href="index.html">← The paper</a>'
+                '<span class="paper-nav-current">Further figures</span>'
+                '<a href="interface.html">Interface and original findings</a></nav>')
+    more = f"""<main class="restructured">
+{more_nav}
+<section class="prose paper">
+<h1>Further figures</h1>
+<p>Figures from the original interface that the paper does not use: the corpus itself, the
+actors most often named across all components, and the conceptual clusters among conducts
+and risks. They read the earlier extraction, not the retrieval-grounded one.</p>
+</section>
+<section id="findings" class="prose">
+{trailing}
+</section>
+</main>
+"""
+    more_head = head.replace("— restructured", "— further figures")
+    (DOCS / "more-figures.html").write_text(more_head + "</head>" + shell_top + more + scripts,
+                                            encoding="utf-8")
+    print(f"more-figures.html: {len(more):,} characters")
     print(f"index.html (restructured text): {len(main_html):,} characters")
 
 

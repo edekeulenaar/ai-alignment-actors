@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment — restructured</title>
-<link rel="stylesheet" href="figures2.css?v=20260918h">
+<link rel="stylesheet" href="figures2.css?v=20260918p">
 <link rel="stylesheet" href="style.css?v=20260620T1300">
 </head>
 <body>
@@ -106,7 +106,7 @@
 
 <!-- ──────────────────────────  MAIN  ─────────────────────────── -->
 <main class="restructured">
-<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;"><span class="paper-nav-current">The paper</span><a href="interface.html">Interface and original findings</a><span class="paper-nav-disabled" title="Set aside; the restructured text supersedes it">Revised text</span></nav>
+<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;"><span class="paper-nav-current">The paper</span><a href="more-figures.html">Further figures</a><a href="interface.html">Interface and original findings</a><span class="paper-nav-disabled" title="Set aside; the restructured text supersedes it">Revised text</span></nav>
 <section class="prose paper">
 <h1 id="the-actors-in-ai-alignment">The actors in AI alignment</h1>
 <h2 id="introduction">Introduction</h2>
@@ -397,8 +397,8 @@
   <rect class="box" x="40" y="88" width="270" height="96" rx="6"/>
   <text class="step" x="56" y="110">STEP 1</text>
   <text class="head" x="56" y="130">Document selection from seed URLs</text>
-  <text class="body" x="56" y="150">Company index pages: newsrooms, transparency</text>
-  <text class="body" x="56" y="166">hubs, model-card indexes, safety and policy sections</text>
+  <text class="body" x="56" y="150">Company index pages: newsrooms, transparency hubs,</text>
+  <text class="body" x="56" y="166">model-card indexes, safety and policy sections</text>
   <text class="count" x="56" y="180">28 seeds · 8 companies</text>
 
   <!-- 2 -->
@@ -830,108 +830,6 @@
 <p>Some alignment research and civil-society organisations also act as platforms for deliberation. This raises a further institutional question: why should deliberation about generally deployed AI values be convened principally through company grants and private partnerships rather than at a governmental level? Public facilitation could make the remit, participant selection, evidence and company response answerable to institutions with a broader constituency, and connect deliberation to binding consequences. Governments could commission their forecasting, facilitation and evaluation capacities while retaining public control over the agenda, access conditions and consequences of failure. The UK AI Security Institute provides a partial model for this arrangement, though its remit remains concentrated on the "hard" security risks most readily translated into evaluations. A more complete public alignment infrastructure would extend the same institutional capacity to disputed values, affected communities and forms of harm that cannot be reduced to a benchmark.</p>
 </section>
 
-<section id="findings" class="prose">
-<h2>The rest of the interface</h2>
-<p class="fig2-note">The remaining figures of the original interface, unchanged: the corpus itself,
-the actors most often named, the stack view, the flow from actor to component, and the conceptual
-clusters.</p>
-<article class="grid-block" id="block-sources">
-      <header class="block-head">
-        <h3>Documents</h3>
-        <p class="block-sub">Who writes alignment documents? Who is cited?</p>
-        <p class="block-caption">Document colour = author type. Click an actor in the sidebar to highlight the documents they author; click again (+ cited) to also see the documents that cite them via <code>specific_risk_conduct_actor</code>, training-actor, benchmark-author or external-evaluator.</p>
-      </header>
-      <div class="sort-bar"></div>
-      <div class="row-grid" id="grid-sources"></div>
-    </article>
-<article class="grid-block" id="block-top-actors">
-      <header class="block-head">
-        <h3>Top actors</h3>
-        <p class="block-sub">The most-mentioned actors by type. Pick a type and how many to show.</p>
-      </header>
-      <div class="top-actors-controls">
-        <label>Type
-          <select id="top-actors-type">
-            <option value="">all types</option>
-          </select>
-        </label>
-        <label>Show top
-          <select id="top-actors-n">
-            <option value="5" selected>5</option>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="500">500</option>
-          </select>
-        </label>
-        <label>Role
-          <select id="top-actors-role">
-            <option value="">any</option>
-            <option value="AUTHOR">authors only</option>
-            <option value="CITED">cited only</option>
-            <option value="MIXED">mixed</option>
-          </select>
-        </label>
-      </div>
-      <div class="top-actors-table-wrap">
-        <table class="top-actors-table" id="top-actors-table">
-          <thead>
-            <tr>
-              <th class="num">#</th>
-              <th>Actor</th>
-              <th>Type</th>
-              <th>Role</th>
-              <th>Based in</th>
-              <th>Collaborated with</th>
-              <th>Documents</th>
-              <th class="num">Mentions</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </article>
-<article class="grid-block" id="block-clusters">
-      <header class="block-head">
-        <h3>Conceptual clusters</h3>
-        <p class="block-sub">Pick a conduct or risk. See how it is defined across companies and time, which other concepts it travels with, and which actors have shaped its definition together.</p>
-      </header>
-      <div class="cluster-controls">
-        <label>Concept type
-          <select id="cluster-kind">
-            <option value="conducts">Conducts</option>
-            <option value="risks">Risks</option>
-          </select>
-        </label>
-        <label>Concept
-          <select id="cluster-item"></select>
-        </label>
-      </div>
-      <div class="cluster-panes">
-        <div class="cluster-pane">
-          <h4>Definitions over time</h4>
-          <div id="cluster-timeline" class="cluster-timeline"></div>
-        </div>
-        <div class="cluster-pane">
-          <h4>Conceptual network</h4>
-          <p class="cluster-help">Central node = the selected category. Surrounding nodes = every item in it, coloured by actor type. Drag, scroll to zoom, ⊕ to recenter.</p>
-          <label class="pane-toggle">
-            <input type="checkbox" id="cluster-expand-related">
-            <span>Include categories sharing a word</span>
-          </label>
-          <svg id="concept-graph" class="cluster-graph"></svg>
-        </div>
-        <div class="cluster-pane">
-          <h4>Actor network</h4>
-          <p class="cluster-help">Actors involved in defining, training and benchmarking — coloured by actor type. Click a node to inspect; drag to move, scroll to zoom, ⊕ to recenter.</p>
-          <svg id="actor-graph" class="cluster-graph"></svg>
-          <div id="actor-detail" class="actor-detail hidden"></div>
-        </div>
-      </div>
-    </article>
-</section>
-
 <section id="references" class="prose">
 <h1>References</h1>
 <ol class="references">
@@ -1020,8 +918,8 @@ clusters.</p>
 <script src="app.js?v=20260619T2000"></script>
 <script src="stacks.js?v=20260620T1000"></script>
 <script src="alluvial.js?v=20260620T1300"></script>
-<script src="comments-config.js?v=20260617"></script>
-<script src="refs-comments.js?v=20260617"></script>
-<script src="figures2.js?v=20260918h"></script>
+<script src="comments-config.js?v=20260918p"></script>
+<script src="refs-comments.js?v=20260918p"></script>
+<script src="figures2.js?v=20260918p"></script>
 </body>
 </html>

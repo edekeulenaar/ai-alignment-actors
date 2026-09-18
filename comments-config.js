@@ -9,6 +9,16 @@
    While these are empty, comments fall back to per-browser localStorage and are
    NOT shared between readers.
    ─────────────────────────────────────────────────────────────────────────── */
+/* Shared comments, without any account to set up: they live as public GitHub issues
+   on this repository, labelled "comment". Reading them needs nothing at all — any
+   reader, on any machine, sees the same comments. Writing one opens a prefilled issue,
+   so the commenter signs it with their own GitHub account and this page never carries
+   a token. Leave SUPABASE_CFG empty to use this. */
+window.GITHUB_COMMENTS = {
+  repo: "edekeulenaar/ai-alignment-actors",
+  label: "comment",
+};
+
 window.SUPABASE_CFG = {
   url: "",        // e.g. "https://abcdefgh.supabase.co"
   anonKey: "",    // the long "anon public" key from Settings → API

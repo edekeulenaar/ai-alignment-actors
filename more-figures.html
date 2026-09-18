@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The actors in AI alignment — further figures</title>
+<link rel="stylesheet" href="figures2.css?v=20260918p">
+<link rel="stylesheet" href="style.css?v=20260620T1300">
+</head>
+<body>
+
+<!-- ───────────────────  LEFT SIDEBAR — navigation  ─────────────────── -->
+<aside class="sidebar sidebar-left" id="sidebar">
+
+  <header class="brand">
+    <h1>The&nbsp;actors in <br>AI&nbsp;alignment</h1>
+    <p class="brand-sub">Actors cited in model cards, company policies, principles &amp; grants.</p>
+  </header>
+
+  <nav class="side-nav" aria-label="Sections">
+<a href="#the-actors-in-ai-alignment" data-target="the-actors-in-ai-alignment">The actors in AI alignment</a>
+<ul class="sub-nav"><li><a href="#introduction" data-target="introduction">Introduction</a></li></ul>
+<ul class="sub-nav"><li><a href="#the-actors-of-alignment-governance" data-target="the-actors-of-alignment-governance">The actors of alignment governance</a></li></ul>
+<ul class="sub-nav"><li><a href="#method" data-target="method">Method</a></li></ul>
+<a href="#actors-and-values" data-target="actors-and-values">Actors and values</a>
+<a href="#training-and-evaluating" data-target="training-and-evaluating">Training and evaluating</a>
+<a href="#who-is-left-out" data-target="who-is-left-out">Who is left out?</a>
+<a href="#conclusion" data-target="conclusion">Conclusion</a>
+<a href="#figures-list" data-target="figures-list">Figures</a><ul class="sub-nav">
+<li><a href="#fig-stack-1" data-target="fig-stack-1">1. The alignment stack</a></li>
+<li><a href="#table-1" data-target="table-1">Table 1. Taxonomy</a></li>
+<li><a href="#fig-keyness" data-target="fig-keyness">2. Discourse per type</a></li>
+<li><a href="#fig-network" data-target="fig-network">3a. Document network</a></li>
+<li><a href="#fig-actor-types" data-target="fig-actor-types">3b. Actor types</a></li>
+<li><a href="#fig-actors" data-target="fig-actors">4. Actors per type</a></li>
+<li><a href="#fig-method-5" data-target="fig-method-5">5. Method</a></li>
+<li><a href="#block-conducts" data-target="block-conducts">6a. Conducts</a></li>
+<li><a href="#block-risks" data-target="block-risks">6b. Risks</a></li>
+<li><a href="#block-training" data-target="block-training">7. Training</a></li>
+<li><a href="#block-benchmark" data-target="block-benchmark">8. Benchmarking</a></li>
+<li><a href="#block-stacks" data-target="block-stacks">9. Stack view</a></li>
+<li><a href="#block-alluvial" data-target="block-alluvial">10. Who reaches the documents</a></li>
+</ul></nav>
+
+  <nav class="side-block" id="chapter-comments" hidden aria-label="Comments">
+    <h4>Comments</h4>
+    <ul id="chapter-comments-list"></ul>
+  </nav>
+</aside>
+
+<!-- ─────────────  RIGHT SIDEBAR — search · keys · filters  ───────────── -->
+<aside class="sidebar sidebar-right" id="sidebar-right" aria-label="Controls">
+
+  <div class="side-block side-search">
+    <input type="search" id="search-input"
+           placeholder="Search anything…" autocomplete="off">
+    <p class="side-hint"><kbd>Esc</kbd> to clear</p>
+  </div>
+
+  <div class="side-block">
+    <h4>View</h4>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-named">
+      <span>Show item names</span>
+    </label>
+    <label class="side-toggle">
+      <input type="checkbox" id="show-all-cos">
+      <span>Show all companies</span>
+    </label>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-commitment">
+      <span>Commitment (size by mentions)</span>
+    </label>
+    <div class="commit-key" id="commit-key" hidden>
+      <h5>Commitment</h5>
+      <p class="commit-key-sub">Square size = how often a company names that
+        conduct / risk in its documents.</p>
+      <div class="commit-key-row"><span class="ck-sq" style="width:9px;height:9px"></span> rarely (1)</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:18px;height:18px"></span> often</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:30px;height:30px"></span> most (peak)</div>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h4>Actors</h4>
+    <div id="legend" class="legend"></div>
+  </div>
+
+  <div class="side-block">
+    <h4>Filters</h4>
+    <div class="filters">
+      <details class="filter-dd"><summary>Year</summary>          <div id="filter-year"    class="multi"></div></details>
+      <details class="filter-dd"><summary>Country</summary>       <div id="filter-country" class="multi"></div></details>
+      <details class="filter-dd"><summary>Company</summary>       <div id="filter-company" class="multi"></div></details>
+      <details class="filter-dd"><summary>Model</summary>         <div id="filter-model"   class="multi"></div></details>
+      <button id="reset-filters" type="button">Reset</button>
+    </div>
+  </div>
+
+  <div class="side-block">
+    <h4>Companies</h4>
+    <p class="side-hint side-hint-companies">Tick to limit every figure to the chosen companies.</p>
+    <ul id="company-list" class="company-list"></ul>
+  </div>
+</aside>
+
+<!-- ──────────────────────────  MAIN  ─────────────────────────── -->
+<main class="restructured">
+<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;"><a href="index.html">← The paper</a><span class="paper-nav-current">Further figures</span><a href="interface.html">Interface and original findings</a></nav>
+<section class="prose paper">
+<h1>Further figures</h1>
+<p>Figures from the original interface that the paper does not use: the corpus itself, the
+actors most often named across all components, and the conceptual clusters among conducts
+and risks. They read the earlier extraction, not the retrieval-grounded one.</p>
+</section>
+<section id="findings" class="prose">
+<article class="grid-block" id="block-sources">
+      <header class="block-head">
+        <h3>Documents</h3>
+        <p class="block-sub">Who writes alignment documents? Who is cited?</p>
+        <p class="block-caption">Document colour = author type. Click an actor in the sidebar to highlight the documents they author; click again (+ cited) to also see the documents that cite them via <code>specific_risk_conduct_actor</code>, training-actor, benchmark-author or external-evaluator.</p>
+      </header>
+      <div class="sort-bar"></div>
+      <div class="row-grid" id="grid-sources"></div>
+    </article>
+<article class="grid-block" id="block-top-actors">
+      <header class="block-head">
+        <h3>Top actors</h3>
+        <p class="block-sub">The most-mentioned actors by type. Pick a type and how many to show.</p>
+      </header>
+      <div class="top-actors-controls">
+        <label>Type
+          <select id="top-actors-type">
+            <option value="">all types</option>
+          </select>
+        </label>
+        <label>Show top
+          <select id="top-actors-n">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+          </select>
+        </label>
+        <label>Role
+          <select id="top-actors-role">
+            <option value="">any</option>
+            <option value="AUTHOR">authors only</option>
+            <option value="CITED">cited only</option>
+            <option value="MIXED">mixed</option>
+          </select>
+        </label>
+      </div>
+      <div class="top-actors-table-wrap">
+        <table class="top-actors-table" id="top-actors-table">
+          <thead>
+            <tr>
+              <th class="num">#</th>
+              <th>Actor</th>
+              <th>Type</th>
+              <th>Role</th>
+              <th>Based in</th>
+              <th>Collaborated with</th>
+              <th>Documents</th>
+              <th class="num">Mentions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </article>
+<article class="grid-block" id="block-clusters">
+      <header class="block-head">
+        <h3>Conceptual clusters</h3>
+        <p class="block-sub">Pick a conduct or risk. See how it is defined across companies and time, which other concepts it travels with, and which actors have shaped its definition together.</p>
+      </header>
+      <div class="cluster-controls">
+        <label>Concept type
+          <select id="cluster-kind">
+            <option value="conducts">Conducts</option>
+            <option value="risks">Risks</option>
+          </select>
+        </label>
+        <label>Concept
+          <select id="cluster-item"></select>
+        </label>
+      </div>
+      <div class="cluster-panes">
+        <div class="cluster-pane">
+          <h4>Definitions over time</h4>
+          <div id="cluster-timeline" class="cluster-timeline"></div>
+        </div>
+        <div class="cluster-pane">
+          <h4>Conceptual network</h4>
+          <p class="cluster-help">Central node = the selected category. Surrounding nodes = every item in it, coloured by actor type. Drag, scroll to zoom, ⊕ to recenter.</p>
+          <label class="pane-toggle">
+            <input type="checkbox" id="cluster-expand-related">
+            <span>Include categories sharing a word</span>
+          </label>
+          <svg id="concept-graph" class="cluster-graph"></svg>
+        </div>
+        <div class="cluster-pane">
+          <h4>Actor network</h4>
+          <p class="cluster-help">Actors involved in defining, training and benchmarking — coloured by actor type. Click a node to inspect; drag to move, scroll to zoom, ⊕ to recenter.</p>
+          <svg id="actor-graph" class="cluster-graph"></svg>
+          <div id="actor-detail" class="actor-detail hidden"></div>
+        </div>
+      </div>
+    </article>
+</section>
+</main>
+
+
+<div id="info-card" class="info-card hidden"></div>
+
+<!-- floating reference hover-card -->
+<aside id="data-card" role="tooltip" hidden></aside>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script src="app.js?v=20260619T2000"></script>
+<script src="stacks.js?v=20260620T1000"></script>
+<script src="alluvial.js?v=20260620T1300"></script>
+<script src="comments-config.js?v=20260918p"></script>
+<script src="refs-comments.js?v=20260918p"></script>
+<script src="figures2.js?v=20260918p"></script>
+</body>
+</html>

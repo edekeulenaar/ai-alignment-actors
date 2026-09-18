@@ -149,6 +149,50 @@
     ? { url: window.SUPABASE_CFG.url.replace(/\/$/, ""), key: window.SUPABASE_CFG.anonKey,
         table: window.SUPABASE_CFG.table || "comments" } : null;
 
+  // GitHub Issues as the shared store: comments are public issues labelled "comment",
+  // each carrying a JSON block with the passage it is anchored to. Reading needs no
+  // account and no key; posting opens a prefilled issue, so the reader signs it with
+  // their own GitHub account and this page never holds a token.
+  const GH = (window.GITHUB_COMMENTS && window.GITHUB_COMMENTS.repo) ? window.GITHUB_COMMENTS : null;
+  const GH_FENCE = /```json\s*([\s\S]*?)```/;
+
+  async function ghFetchAll() {
+    const url = `https://api.github.com/repos/${GH.repo}/issues?state=open&labels=`
+      + encodeURIComponent(GH.label || "comment") + "&per_page=100";
+    const r = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+    if (!r.ok) throw new Error("github issues " + r.status);
+    const grouped = {};
+    for (const issue of await r.json()) {
+      const block = GH_FENCE.exec(issue.body || "");
+      if (!block) continue;
+      let meta;
+      try { meta = JSON.parse(block[1]); } catch { continue; }
+      if (!meta.chapter || !meta.quote) continue;
+      const note = (issue.body || "").replace(GH_FENCE, "").trim();
+      (grouped[meta.chapter] = grouped[meta.chapter] || []).push({
+        id: "gh" + issue.number,
+        name: (issue.user && issue.user.login) || "reader",
+        body: note || issue.title,
+        quote: meta.quote, prefix: meta.prefix || "", suffix: meta.suffix || "",
+        ts: Date.parse(issue.created_at) || Date.now(),
+        url: issue.html_url, readOnly: true,
+      });
+    }
+    return grouped;
+  }
+
+  function ghComposeUrl(slug, c) {
+    const meta = JSON.stringify({ chapter: slug, quote: c.quote, prefix: c.prefix,
+                                  suffix: c.suffix }, null, 1);
+    const title = "Comment: " + (c.quote || "").slice(0, 60).replace(/\s+/g, " ");
+    const body = `${c.body}\n\n> ${(c.quote || "").slice(0, 300)}\n\n`
+      + "<!-- keeps the comment anchored to the passage; please leave it in place -->\n"
+      + "```json\n" + meta + "\n```";
+    return `https://github.com/${GH.repo}/issues/new?labels=`
+      + encodeURIComponent(GH.label || "comment")
+      + "&title=" + encodeURIComponent(title) + "&body=" + encodeURIComponent(body);
+  }
+
   function sbHeaders(extra) { return Object.assign({ apikey: SB.key, Authorization: `Bearer ${SB.key}` }, extra || {}); }
   async function sbFetchAll() {
     const r = await fetch(`${SB.url}/rest/v1/${SB.table}?select=*`, { headers: sbHeaders() });
@@ -320,6 +364,7 @@
       const entry = { id: newId(), quote: anchor.quote, prefix: anchor.prefix, suffix: anchor.suffix, name, body, ts: new Date().toISOString() };
       (a[slug] = a[slug] || []).push(entry); save(a);
       if (SB) sbInsert(slug, entry).catch(e => { console.warn(e); alert("Saved locally, but could not reach the shared store."); });
+      else if (GH) window.open(ghComposeUrl(slug, entry), "_blank", "noopener");
       closePop(); window.getSelection().removeAllRanges(); applyAll();
     };
   }
@@ -414,9 +459,22 @@
   });
 
   async function cmtHydrate() {
-    if (!SB) return;
-    try { const g = await sbFetchAll(); _cache = g; try { localStorage.setItem(CMT_KEY, JSON.stringify(g)); } catch {} applyAll(); }
-    catch (e) { console.warn("comments backend unreachable, using local cache:", e); }
+    if (!SB && !GH) return;
+    try {
+      const shared = SB ? await sbFetchAll() : await ghFetchAll();
+      if (GH && !SB) {
+        // Keep this browser's unpublished notes next to the published ones.
+        const local = all();
+        for (const slug of Object.keys(local)) {
+          const published = new Set((shared[slug] || []).map(c => c.quote + "|" + c.body));
+          const mine = local[slug].filter(c => !published.has(c.quote + "|" + c.body));
+          if (mine.length) (shared[slug] = shared[slug] || []).push(...mine);
+        }
+      }
+      _cache = shared;
+      if (SB) { try { localStorage.setItem(CMT_KEY, JSON.stringify(shared)); } catch {} }
+      applyAll();
+    } catch (e) { console.warn("comments backend unreachable, using local cache:", e); }
   }
 
   // ───────────────────────── Boot ─────────────────────────
@@ -430,7 +488,7 @@
     wireCiteHovers();
     setup();
     applyAll();
-    if (SB) cmtHydrate();
+    if (SB || GH) cmtHydrate();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
