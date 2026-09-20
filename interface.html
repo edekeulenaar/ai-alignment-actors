@@ -661,7 +661,7 @@
       <header class="block-head">
         <h3>Conducts</h3>
         <p class="block-sub">Who specifically defines a conduct? If unknown, who is the author of the document mentioning it?</p>
-        <p class="block-caption">Square colour = <code>specific_risk_conduct_actor_category</code> when explicitly credited; otherwise the author of the source document. Click an actor for AUTHOR; click again (+ cited) to also see items where that actor appears as <code>specific_risk_conduct_actor</code>.</p>
+        <p class="block-caption">Square colour shows the credited actor type where available, and otherwise the document-author type. A fallback colour does not establish a specific contribution. Select an actor to highlight attributed roles; select again to include other citations.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="conducts">
@@ -678,7 +678,7 @@
       <header class="block-head">
         <h3>Risks</h3>
         <p class="block-sub">Who specifically defines a risk? If unknown, who is the author of the document mentioning it?</p>
-        <p class="block-caption">Square colour = <code>specific_risk_conduct_actor_category</code> when explicitly credited; otherwise the author of the source document. Click an actor for AUTHOR; click again (+ cited) to also see items where that actor appears as <code>specific_risk_conduct_actor</code>.</p>
+        <p class="block-caption">Square colour shows the credited actor type where available, and otherwise the document-author type. A fallback colour does not establish a specific contribution. Select an actor to highlight attributed roles; select again to include other citations.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="risks">
@@ -695,7 +695,7 @@
       <header class="block-head">
         <h3>Training</h3>
         <p class="block-sub">Which training methods are used for each risk or conduct category?</p>
-        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = training methods. Square colour = type of the named <code>risk_conduct_training_actor</code> (who actually did the training). Click for AUTHOR; click again (+ cited) for any other actor in the row — including the document's authors.</p>
+        <p class="block-caption">Rows group conduct and risk categories; squares represent training or mitigation methods. Colour shows the named actor category. Select an actor to highlight attributed roles, then select again to include other citations. An attribution may concern data or advice as well as implementation.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="training">
@@ -712,7 +712,7 @@
       <header class="block-head">
         <h3>Benchmarking</h3>
         <p class="block-sub">Which benchmarks are used for each risk or conduct category?</p>
-        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = benchmarks. Square colour = type of the named <code>risk_conduct_benchmark_author</code>. Click for AUTHOR; click again (+ cited) for any other actor in the row — the document's authors, training actors and explicit credits.</p>
+        <p class="block-caption">Rows group conduct and risk categories; squares represent benchmarks. Colour shows the attributed benchmark-author category. Select an actor to highlight attributed roles, then select again to include other citations. The author of a test need not have evaluated the model directly.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="benchmark">
@@ -938,18 +938,17 @@
     <!-- ALLUVIAL — actor coverage ─────────────── -->
     <article class="grid-block" id="block-alluvial">
       <header class="block-head">
-        <h3>Who reaches the training documents?</h3>
-        <p class="block-sub">Which actors from the wider alignment ecosystem are — and are not — actually named in companies' AI training documents.</p>
+        <h3>Which directory entries match the detailed extraction?</h3>
+        <p class="block-sub">Name matches between the wider alignment directory and the 184-document extraction.</p>
         <p class="block-caption">
           Each ribbon is one of the
-          <strong id="alluvial-total">512</strong> actors catalogued in the
+          <strong id="alluvial-total">512</strong> entries catalogued in the
           alignment-actor directory, flowing
-          <em>Country&nbsp;→ Type&nbsp;→ Mentioned in AI training documents</em>.
-          &ldquo;Mentioned&rdquo; means the actor is cited by name somewhere in
-          the model-card / system-card corpus. Ribbons are coloured by country;
-          hover a band or node for the actor count, click a node to isolate its
-          flows. Only
-          <strong id="alluvial-matched">26</strong> reach the training corpus.
+          <em>Country&nbsp;→ Type&nbsp;→ Name match in the detailed extraction</em>.
+          Matches use names, acronyms and recorded aliases. Ribbons are coloured by country;
+          hover a band or node for details, or click a node to isolate its flows.
+          <strong id="alluvial-matched">24</strong> entries match. Duplicate entries and aliases
+          mean that this is not a count of distinct participating organisations.
         </p>
       </header>
       <div id="alluvial" class="alluvial-host"></div>

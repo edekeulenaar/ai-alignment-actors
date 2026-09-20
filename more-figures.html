@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The actors in AI alignment — further figures</title>
-<link rel="stylesheet" href="figures2.css?v=20260918u">
+<title>The actors in AI alignment</title>
+<link rel="stylesheet" href="figures2.css?v=20260921editorial">
 <link rel="stylesheet" href="style.css?v=20260620T1300">
 </head>
 <body>
@@ -19,13 +19,14 @@
 
   <nav class="side-nav" aria-label="Sections">
 <a href="#the-actors-in-ai-alignment" data-target="the-actors-in-ai-alignment">The actors in AI alignment</a>
+<ul class="sub-nav"><li><a href="#abstract" data-target="abstract">Abstract</a></li></ul>
 <ul class="sub-nav"><li><a href="#introduction" data-target="introduction">Introduction</a></li></ul>
 <ul class="sub-nav"><li><a href="#the-actors-of-alignment-governance" data-target="the-actors-of-alignment-governance">The actors of alignment governance</a></li></ul>
 <ul class="sub-nav"><li><a href="#method" data-target="method">Method</a></li></ul>
-<a href="#actors-and-values" data-target="actors-and-values">Actors and values</a>
-<a href="#training-and-evaluating" data-target="training-and-evaluating">Training and evaluating</a>
-<a href="#who-is-left-out" data-target="who-is-left-out">Who is left out?</a>
-<a href="#conclusion" data-target="conclusion">Conclusion</a>
+<ul class="sub-nav"><li><a href="#actors-and-values" data-target="actors-and-values">Actors and values</a></li></ul>
+<ul class="sub-nav"><li><a href="#training-and-evaluating" data-target="training-and-evaluating">Training and evaluating</a></li></ul>
+<ul class="sub-nav"><li><a href="#who-appears-across-the-stack" data-target="who-appears-across-the-stack">Who appears across the stack</a></li></ul>
+<ul class="sub-nav"><li><a href="#conclusion" data-target="conclusion">Conclusion</a></li></ul>
 <a href="#figures-list" data-target="figures-list">Figures</a><ul class="sub-nav">
 <li><a href="#fig-stack-1" data-target="fig-stack-1">1. The alignment stack</a></li>
 <li><a href="#table-1" data-target="table-1">Table 1. Taxonomy</a></li>
@@ -109,6 +110,30 @@
 <nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;"><a href="index.html">← The paper</a><span class="paper-nav-current">Further figures</span><a href="interface.html">Interface and original findings</a></nav>
 <section class="prose paper">
 <h1>Further figures</h1>
+<h2>Full document taxonomy</h2>
+<div class="fig2-host" id="table-1"><table class="taxonomy">
+<colgroup><col style='width:11%'><col style='width:15%'><col style='width:19%'><col style='width:35%'><col style='width:20%'></colgroup>
+<thead><tr><th>Group</th><th>Category</th><th>Also known as</th><th>Definition and decision rule</th><th>Data points to code</th></tr></thead><tbody>
+<tr><th class="taxonomy-group" rowspan="4" scope="rowgroup">A. Self-governance (normative)</th><td>Organizational principles, standards, codes</td><td>AI principles, charters, codes of conduct, responsible AI standards, human rights statements</td><td>Binds the organization. States values or requirements for how the company develops and deploys AI in general, not for one model or risk domain.</td><td>Version; date; scope (whole firm / division); enforcement mechanism named?</td></tr>
+<tr><td>Model behavior specifications</td><td>Constitutions, model specs, character documents</td><td>Written target for model behavior, used in training or evaluation. Addressed to the model and to users.</td><td>Version; date; priority ordering of values; stated training use</td></tr>
+<tr><td>Frontier governance frameworks</td><td>Responsible Scaling Policy, Frontier Safety Framework, Preparedness Framework, Frontier Governance Framework, Frontier AI Framework, SB 53 compliance framework</td><td>Defines capability or risk thresholds, the evaluations used to detect them, and the safeguards or deployment decisions that follow. Decision rule: the document commits the company to if-then actions tied to thresholds.</td><td>Version; date; risk domains; threshold definitions; named evaluators; legal basis (voluntary / SB 53 / EU GPAI Code)</td></tr>
+<tr><td>Usage policies and terms</td><td>Acceptable use policy, usage policy, consumer terms, use guidelines</td><td>Rules for users and deployers. Decision rule: the addressee is the user or customer.</td><td>Version; date; prohibited-use list; enforcement stated</td></tr>
+<tr><th class="taxonomy-group" rowspan="6" scope="rowgroup">B. Disclosure</th><td>Model documentation</td><td>System cards, model cards, addenda, technical reports, training-data summaries, application cards</td><td>Documents one model, model family, or product: training, capabilities, evaluations, limitations.</td><td>Model; release date; sections present; third-party evaluators named; legal template used (e.g., EU AI Act training-content summary)</td></tr>
+<tr><td>Framework implementation reports</td><td>Frontier Safety Framework reports, risk reports, alignment risk updates, ASL activations, framework update logs</td><td>Applies a named frontier framework to a model or moment. Decision rule: it cites a framework threshold and reports a determination.</td><td>Framework and version cited; thresholds reached (Y/N); safeguards triggered</td></tr>
+<tr><td>Misuse and threat intelligence reports</td><td>Threat reports, disruption reports</td><td>Reports observed misuse of the company&#x27;s systems by identified or unidentified actors and the enforcement taken.</td><td>Period covered; actor types; countries; harm domains; enforcement actions</td></tr>
+<tr><td>Transparency and compliance reports</td><td>Responsible AI transparency reports, voluntary commitments trackers, regulatory compliance disclosures</td><td>Periodic or standing account of the company&#x27;s governance practice as a whole, often keyed to commitments or regulation.</td><td>Reporting period; commitments or laws referenced; metrics disclosed</td></tr>
+<tr><td>Certifications and third-party assessments</td><td>Audits, certifications, external testing, cross-lab evaluations</td><td>Assessment performed or certified by a party other than the company. Decision rule: an external party issues or conducts it.</td><td>Assessor; standard (ISO/IEC 42001, SOC 2); scope; date</td></tr>
+<tr><td>Statements and incident disclosures</td><td>Public statements, postmortems, incident reports</td><td>Responds to a specific event: a government action, a dispute, an incident. Decision rule: dated to and triggered by an event.</td><td>Triggering event; counterparty; date; actions announced</td></tr>
+<tr><th class="taxonomy-group" rowspan="4" scope="rowgroup">C. External governance</th><td>Public policy positions</td><td>Policy submissions, regulatory comments, legislative endorsements, blueprints</td><td>Addressed to governments or policy communities; states what law or public policy should require. This is what most of anthropic.com/policy contains, but see Data issues sheet.</td><td>Addressee (institution, jurisdiction); bill or docket; position; date</td></tr>
+<tr><td>Commitments (unilateral and multilateral)</td><td>Voluntary commitments, pledges, codes of practice signatures, industry principles</td><td>Company undertakes a future obligation, alone or with others. Decision rule: explicit &#x27;we commit / we sign&#x27;.</td><td>Unilateral or multilateral; co-signatories; convenor; binding status</td></tr>
+<tr><td>Partnerships and MOUs</td><td>Partnerships, memoranda of understanding, government collaborations</td><td>Bilateral or multilateral agreement with a named external party around a project or issue.</td><td>Counterparty type (state, NGO, firm, AISI); country; sector; instrument (MOU, contract)</td></tr>
+<tr><td>Governance bodies and structures</td><td>Trusts, advisory councils, expert councils, institutes, industry bodies</td><td>Creates or describes a standing body that shapes company decisions or sector coordination.</td><td>Body type; members; formal powers; internal or inter-firm</td></tr>
+<tr><th class="taxonomy-group" rowspan="5" scope="rowgroup">D. Programmes and knowledge</th><td>Programmes and funding</td><td>Initiatives, grants, fellowships, bug bounties, access programmes</td><td>Company-run programme that funds, invites, or grants access to external actors.</td><td>Amount; recipients; eligibility; duration</td></tr>
+<tr><td>Safeguards and product-safety explainers</td><td>Safety approach posts, safeguards announcements</td><td>Describes a mitigation, safeguard, or product-safety measure the company has built or applied.</td><td>Harm domain; user group (e.g., teens); mechanism type (classifier, policy, UX)</td></tr>
+<tr><td>Research</td><td>Papers, preprints, research blog posts</td><td>Advances knowledge on an AI issue; typically has authors and methods.</td><td>Authors; venue; method; alignment topic</td></tr>
+<tr><td>Evaluations, benchmarks and tools</td><td>Benchmarks, eval suites, open-source auditing tools</td><td>Releases a reusable instrument for measuring or auditing models.</td><td>What is measured; open or closed; licence; adoption by others</td></tr>
+<tr><td>Essays and vision statements</td><td>Leadership essays, vision posts</td><td>Leadership articulates views on AI&#x27;s future, ethics, or societal role, without committing to specific actions.</td><td>Author; date; themes</td></tr>
+</tbody></table></div>
 <p>Figures from the original interface that the paper does not use: the corpus itself, the
 actors most often named across all components, and the conceptual clusters among conducts
 and risks. They read the earlier extraction, not the retrieval-grounded one.</p>
@@ -220,11 +245,11 @@ and risks. They read the earlier extraction, not the retrieval-grounded one.</p>
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
-<script src="app.js?v=20260918u"></script>
-<script src="stacks.js?v=20260918u"></script>
-<script src="alluvial.js?v=20260918u"></script>
-<script src="comments-config.js?v=20260918u"></script>
-<script src="refs-comments.js?v=20260918u"></script>
-<script src="figures2.js?v=20260918u"></script>
+<script src="app.js?v=20260921editorial"></script>
+<script src="stacks.js?v=20260921editorial"></script>
+<script src="alluvial.js?v=20260921editorial"></script>
+<script src="comments-config.js?v=20260921editorial"></script>
+<script src="refs-comments.js?v=20260921editorial"></script>
+<script src="figures2.js?v=20260921editorial"></script>
 </body>
 </html>

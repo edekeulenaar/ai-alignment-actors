@@ -285,7 +285,7 @@
         .attr("rx", 2);
       cell.append("title").text(function (d) {
         return d.data.actor + " — " + d.data.main_relation + "\n" + d.data.documents
-          + " documents of this type";
+          + " document–actor–relation occurrences";
       });
       cell.append("text").attr("x", 5).attr("y", 14)
         .attr("font-size", 11).attr("fill", "#fff")
@@ -298,14 +298,15 @@
       cell.append("text").attr("x", 5).attr("y", 27)
         .attr("font-size", 9.5).attr("fill", "rgba(255,255,255,.85)")
         .text(function (d) {
-          return (d.x1 - d.x0) < 80 || (d.y1 - d.y0) < 34 ? "" : d.data.documents + " docs";
+          return (d.x1 - d.x0) < 80 || (d.y1 - d.y0) < 34 ? "" : d.data.documents + " occurrences";
         });
       var note = document.createElement("p");
       note.className = "fig2-note";
-      note.textContent = "Each square is an actor named in documents of this type; its size is the number "
-        + "of such documents naming it, and its colour the relation those documents most often state. Actor "
+      note.textContent = "Each square is an actor named in documents of this type; its size sums "
+        + "document–actor–relation occurrences, so a document can count under several relations. "
+        + "Colour shows the most frequent suggested relation. Actor "
         + "names come from the project's actor vocabulary, matched against every page of every document; the "
-        + "sentence around each occurrence is then read for the relation it states (red teaming, external "
+        + "sentence around each occurrence is classified by keyword rules (red teaming, external "
         + "evaluation, benchmark authorship, standard setting, regulation, funding, partnership, data and "
         + "annotation, advice, consultation of publics, research). The authoring company and its own models "
         + "are not counted as actors in their own documents. Click a relation in the legend to highlight it.";
@@ -347,7 +348,7 @@
       var who = ((data.examples[t] || {})[c] || []);
       tip.hidden = false;
       tip.innerHTML = "<strong>" + t + "</strong> in <strong>" + c + "</strong><br>"
-        + n + (n === "1" ? " document" : " documents") + " of this type name an actor of this type"
+        + n + " document–actor–relation occurrences"
         + (who.length ? "<br><span class=\"fig2-tip-who\">" + who.join(", ")
                         + (who.length >= 6 ? " …" : "") + "</span>" : "");
       var box = host.getBoundingClientRect();
@@ -396,8 +397,8 @@
     var note = document.createElement("p");
     note.className = "fig2-note";
     note.textContent = "Rows are actor types as coded in the readings, columns document types. A cell "
-      + "counts the documents of that type naming an actor of that type, so an actor named in ten "
-      + "system cards counts ten times. Colour follows the actor type, its strength the count "
+      + "sums document–actor–relation occurrences; several actors or relations in one document "
+      + "can contribute more than once. Colour follows the actor type, its strength the count "
       + "(square-root scale, since internal actors would otherwise flatten everything else). "
       + "Hover a cell for the actors behind it.";
     host.appendChild(note);

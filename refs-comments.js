@@ -50,6 +50,7 @@
   }
   function refIdFor(key) {
     const e = BIB[key];
+    if (e && e.ref_id && document.getElementById(e.ref_id)) return e.ref_id;
     const author = (e && e.author) || deriveFromKey(key).author;
     const year = (e && e.year) || deriveFromKey(key).year;
     const lk = author.toLowerCase().replace(/[^a-z]/g, "");

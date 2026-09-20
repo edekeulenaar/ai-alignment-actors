@@ -14,7 +14,7 @@
     "#e3c9ad", "#b8c8b2", "#e6a8a8", "#c8d6b6", "#d8c8e0",
   ];
   const GAP = 6;
-  const STAGE_HEADERS = { 0: "Country", 1: "Type", 2: "Mentioned in training docs" };
+  const STAGE_HEADERS = { 0: "Country", 1: "Type", 2: "Name match in extraction" };
 
   const esc = s => String(s).replace(/[&<>"']/g, c =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -46,7 +46,7 @@
     const more = (!full && members.length > 5)
       ? `<li class="al-more">+ ${members.length - 5} more — click the stream for the full list</li>` : "";
     const head = `<div class="dc-t">${esc(d.source.name)} → ${esc(d.target.name)}</div>` +
-      `<div class="dc-row"><span>${full ? "All actors" : "Actors"}</span> ${d3.format(",")(members.length)}</div>`;
+      `<div class="dc-row"><span>Distinct names</span> ${d3.format(",")(members.length)}</div>`;
     const list = members.length
       ? `<ul class="al-list${full ? " al-list-full" : ""}">${lis}${more}</ul>` : "";
     return head + list + (full ? `<div class="al-close">click outside to close</div>` : "");
@@ -71,7 +71,7 @@
       return `<li>${esc(m.name)}${cnt}${meta}</li>`;
     };
     const head = `<div class="dc-t">${esc(node.name)}</div>` +
-      `<div class="dc-row"><span>Actors</span> ${d3.format(",")(node.value || members.length)}</div>`;
+      `<div class="dc-row"><span>Directory entries</span> ${d3.format(",")(node.value || members.length)}</div>`;
 
     // Hover preview, or a Type node (already one category): flat top 5.
     if (!pinnedView || isType) {
@@ -230,7 +230,7 @@
       .attr("x", labelX).attr("dy", "0.32em").text(d => trunc(d.name));
     labels.append("tspan").attr("class", "lbl-count")
       .text(d => `  ${d.value || 0}`);
-    nodeSel.append("title").text(d => `${d.name} — ${d.value || 0} actors`);
+    nodeSel.append("title").text(d => `${d.name} — ${d.value || 0} directory entries`);
 
     // Italic stage headers at the top of each column.
     const stageMid = new Map();

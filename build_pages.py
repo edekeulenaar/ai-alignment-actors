@@ -29,11 +29,11 @@ from pathlib import Path
 DOCS = Path(__file__).resolve().parent
 ROOT = DOCS.parent
 ARTICLES = Path.home() / "Projects" / "Master_vault" / "Articles"
-DRAFT = ARTICLES / "PoP - Alignment actors - Restructured draft.md"
-TAXONOMY = ROOT / "PoP - Alignment actors - Taxonomy table.csv"
+DRAFT = DOCS / "manuscript.md"
+TAXONOMY = DOCS / "document-taxonomy.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260918u"
+VERSION = "20260921editorial"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -116,7 +116,11 @@ def to_html(text: str) -> str:
                                   extensions=["tables", "sane_lists", "attr_list"])
     items = [line.strip() for line in refs.splitlines() if line.strip()]
     refs_html = markdown.markdown("\n\n".join(items), extensions=["sane_lists"])
-    refs_html = refs_html.replace("<p>", "<li>").replace("</p>", "</li>")
+    ref_number = iter(range(1, len(items) + 1))
+    refs_html = re.sub(r"<p>", lambda _: f'<li id="ref-{next(ref_number)}">', refs_html)
+    refs_html = refs_html.replace("</p>", "</li>")
+    # The manuscript contains the concise, editable taxonomy table itself.
+    body_html = body_html.replace("<table>", '<table id="table-1" class="taxonomy">', 1)
     return body_html, f'<h1>References</h1>\n<ol class="references">\n{refs_html}\n</ol>'
 
 
@@ -171,7 +175,7 @@ def insert_figures(body_html: str) -> str:
         if not (after.startswith("<em>") or len(caption) < 420):
             continue
         name = f"{match[1].lower()} {match[2].lower().replace('  ', ' ')}"
-        figure = FIGURE_HTML.get(name) or (taxonomy_table() if name == "table 1" else None)
+        figure = FIGURE_HTML.get(name)
         marked = caption.replace("<p>", '<p class="figure-caption">', 1)
         if figure and name not in used:
             used.add(name)
@@ -200,7 +204,7 @@ def main() -> None:
                      lambda m: m[1] + VERSION, scripts)
 
     head = head.replace("<title>The actors in AI alignment</title>",
-                        "<title>The actors in AI alignment — restructured</title>")
+                        "<title>The actors in AI alignment</title>")
     head = re.sub(r'(figures2\.css\?v=)[0-9A-Za-z]+', r"\g<1>" + VERSION, head)
 
     body_html, refs_html = to_html(DRAFT.read_text(encoding="utf-8"))
@@ -227,8 +231,7 @@ def main() -> None:
            '<span class="paper-nav-current">The paper</span>'
            '<a href="more-figures.html">Further figures</a>'
            '<a href="interface.html">Interface and original findings</a>'
-           '<span class="paper-nav-disabled" title="Set aside; the restructured text supersedes it">'
-           'Revised text</span></nav>')
+           '<a href="alignment-actors-for-comments.docx">Download for comments</a></nav>')
     main_html = f"""<main class="restructured">
 {nav}
 <section class="prose paper">
@@ -253,6 +256,8 @@ def main() -> None:
 {more_nav}
 <section class="prose paper">
 <h1>Further figures</h1>
+<h2>Full document taxonomy</h2>
+{taxonomy_table()}
 <p>Figures from the original interface that the paper does not use: the corpus itself, the
 actors most often named across all components, and the conceptual clusters among conducts
 and risks. They read the earlier extraction, not the retrieval-grounded one.</p>

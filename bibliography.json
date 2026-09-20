@@ -1,21 +1,24 @@
 {
   "branfordGenerativeAIDemocratic2025": {
-    "author": "Branford, Soulier and Fichtner",
+    "author": "Branford et al.",
     "year": "2025",
-    "harvard": "Branford, J., Soulier, E. and Fichtner, L. (2025) ‘Generative AI and Democratic Culture’, *Philosophy & Technology*, 38, Article 123.",
-    "link": "https://doi.org/10.1007/s13347-025-00953-x"
+    "harvard": "Branford J, Soulier E and Fichtner L (2025) Generative AI and democratic culture. *Philosophy & Technology* 38: 123. DOI: 10.1007/s13347-025-00953-x.",
+    "link": "https://doi.org/10.1007/s13347-025-00953-x",
+    "ref_id": "ref-6"
   },
   "bowkerSortingThingsOut2000": {
     "author": "Bowker and Star",
     "year": "2000",
-    "harvard": "Bowker, G. C. and Star, S. L. (2000) *Sorting Things Out: Classification and Its Consequences*. Cambridge, MA: MIT Press.",
-    "link": ""
+    "harvard": "Bowker GC and Star SL (2000) *Sorting Things Out: Classification and Its Consequences*. Cambridge, MA: MIT Press.",
+    "link": "",
+    "ref_id": "ref-5"
   },
   "riederRankingAlgorithmsRanking2018": {
-    "author": "Rieder, Matamoros-Fernández and Coromina",
+    "author": "Rieder et al.",
     "year": "2018",
-    "harvard": "Rieder, B., Matamoros-Fernández, A. and Coromina, Ò. (2018) ‘From Ranking Algorithms to “Ranking Cultures”: Investigating the Modulation of Visibility in YouTube Search Results’, *Convergence*, 24(1), pp. 50–68.",
-    "link": "https://doi.org/10.1177/1354856517736982"
+    "harvard": "Rieder B, Matamoros-Fernández A and Coromina Ò (2018) From ranking algorithms to “ranking cultures”: Investigating the modulation of visibility in YouTube search results. *Convergence* 24(1): 50–68. DOI: 10.1177/1354856517736982.",
+    "link": "https://doi.org/10.1177/1354856517736982",
+    "ref_id": "ref-26"
   },
   "kalogeropoulosNewsMediaTrust2019": {
     "author": "Kalogeropoulos et al.",
@@ -36,10 +39,11 @@
     "link": "https://doi.org/10.1177/20563051221117552"
   },
   "gorwaAlgorithmicContentModeration2020": {
-    "author": "Gorwa, Binns and Katzenbach",
+    "author": "Gorwa et al.",
     "year": "2020",
-    "harvard": "Gorwa, R., Binns, R. and Katzenbach, C. (2020) ‘Algorithmic Content Moderation: Technical and Political Challenges in the Automation of Platform Governance’, *Big Data & Society*, 7(1), pp. 1–15.",
-    "link": "https://doi.org/10.1177/2053951719897945"
+    "harvard": "Gorwa R, Binns R and Katzenbach C (2020) Algorithmic content moderation: Technical and political challenges in the automation of platform governance. *Big Data & Society* 7(1). DOI: 10.1177/2053951719897945.",
+    "link": "https://doi.org/10.1177/2053951719897945",
+    "ref_id": "ref-12"
   },
   "petersMarvelousCloudsPhilosophy2015": {
     "author": "Peters",
@@ -50,14 +54,16 @@
   "nieborgIntroductionSpecialIssue2024": {
     "author": "Nieborg et al.",
     "year": "2024",
-    "harvard": "Nieborg, D. B., Poell, T. and Duffy, B. E. (2024) ‘Introduction to the Special Issue on Platform Power’, *New Media & Society*.",
-    "link": ""
+    "harvard": "Nieborg D, Poell T, Caplan R, et al. (2024) Introduction to the special issue on locating and theorising platform power. *Internet Policy Review* 13(2). DOI: 10.14763/2024.2.1781.",
+    "link": "https://doi.org/10.14763/2024.2.1781",
+    "ref_id": "ref-20"
   },
   "collierEssentiallyContestedConcepts2006": {
-    "author": "Collier, Hidalgo and Maciuceanu",
+    "author": "Collier et al.",
     "year": "2006",
-    "harvard": "Collier, D., Hidalgo, F. D. and Maciuceanu, A. O. (2006) ‘Essentially Contested Concepts: Debates and Applications’, *Journal of Political Ideologies*, 11(3), pp. 211–246.",
-    "link": "https://doi.org/10.1080/13569310600923782"
+    "harvard": "Collier D, Hidalgo FD and Maciuceanu AO (2006) Essentially contested concepts: Debates and applications. *Journal of Political Ideologies* 11(3): 211–246. DOI: 10.1080/13569310600923782.",
+    "link": "https://doi.org/10.1080/13569310600923782",
+    "ref_id": "ref-8"
   },
   "hadfieldRegulatoryMarketsFuture2026": {
     "author": "Hadfield and Clark",
@@ -74,8 +80,9 @@
   "ovadyaReimaginingDemocracyAI2023": {
     "author": "Ovadya",
     "year": "2023",
-    "harvard": "Ovadya, A. (2023) ‘Reimagining Democracy for AI’, *Journal of Democracy*, 34(4), pp. 162–170.",
-    "link": "https://doi.org/10.1353/jod.2023.a907697"
+    "harvard": "Ovadya A (2023) Reimagining democracy for AI. *Journal of Democracy* 34(4): 162–170. DOI: 10.1353/jod.2023.a907697.",
+    "link": "https://doi.org/10.1353/jod.2023.a907697",
+    "ref_id": "ref-23"
   },
   "habePublicDesignControl1989": {
     "author": "Habe",
@@ -84,10 +91,11 @@
     "link": ""
   },
   "helbergerGoverningOnlinePlatforms2018": {
-    "author": "Helberger, Pierson and Poell",
+    "author": "Helberger et al.",
     "year": "2018",
-    "harvard": "Helberger, N., Pierson, J. and Poell, T. (2018) ‘Governing Online Platforms: From Contested to Cooperative Responsibility’, *The Information Society*, 34(1), pp. 1–14.",
-    "link": "https://doi.org/10.1080/01972243.2017.1391913"
+    "harvard": "Helberger N, Pierson J and Poell T (2018) Governing online platforms: From contested to cooperative responsibility. *The Information Society* 34(1): 1–14. DOI: 10.1080/01972243.2017.1391913.",
+    "link": "https://doi.org/10.1080/01972243.2017.1391913",
+    "ref_id": "ref-13"
   },
   "fukuyamaMiddlewareDominantDigital2023": {
     "author": "Fukuyama et al.",
@@ -110,31 +118,147 @@
   "mitchellModelCardsModel2019b": {
     "author": "Mitchell et al.",
     "year": "2019",
-    "harvard": "Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D. and Gebru, T. (2019) ‘Model Cards for Model Reporting’, *Proceedings of the Conference on Fairness, Accountability, and Transparency (FAT* ’19)*, pp. 220–229.",
-    "link": "https://doi.org/10.1145/3287560.3287596"
+    "harvard": "Mitchell M, Wu S, Zaldivar A, et al. (2019) Model cards for model reporting. In: *Proceedings of the Conference on Fairness, Accountability, and Transparency*, pp.220–229. DOI: 10.1145/3287560.3287596.",
+    "link": "https://doi.org/10.1145/3287560.3287596",
+    "ref_id": "ref-18"
   },
   "gillespieAIRedTeamingSociotechnical2026": {
-    "author": "Gillespie",
+    "author": "Gillespie et al.",
     "year": "2026",
-    "harvard": "Gillespie, T. (2026) ‘AI Red-Teaming as Sociotechnical Practice’ (forthcoming).",
-    "link": ""
+    "harvard": "Gillespie T, Shaw R, Gray ML, et al. (2026) AI red-teaming is a sociotechnical problem. *Communications of the ACM* 69(2): 88–95. DOI: 10.1145/3731657.",
+    "link": "https://doi.org/10.1145/3731657",
+    "ref_id": "ref-11"
   },
   "buegerActorNetworkTheoryObjects2017": {
     "author": "Bueger and Stockbruegger",
     "year": "2017",
-    "harvard": "Bueger, C. and Stockbruegger, J. (2017) ‘Actor-Network Theory: Objects and Actants, Networks and Narratives’, in *Technology and World Politics: An Introduction*. London: Routledge, pp. 42–59.",
-    "link": ""
+    "harvard": "Bueger C and Stockbruegger J (2017) Actor-network theory: Objects and actants, networks and narratives. In: McCarthy DR (ed.) *Technology and World Politics: An Introduction*. Abingdon: Routledge, pp.42–59. DOI: 10.4324/9781317353836-3.",
+    "link": "https://doi.org/10.4324/9781317353836-3",
+    "ref_id": "ref-7"
   },
   "morettiDistantReading2013": {
     "author": "Moretti",
     "year": "2013",
-    "harvard": "Moretti, F. (2013) *Distant Reading*. London: Verso.",
-    "link": ""
+    "harvard": "Moretti F (2013) *Distant Reading*. London: Verso.",
+    "link": "",
+    "ref_id": "ref-19"
   },
   "stevensSphereTransgressionsReflecting2024": {
     "author": "Stevens et al.",
     "year": "2024",
     "harvard": "Stevens, F., Nieborg, D. B. and Helmond, A. (2024) ‘Sphere Transgressions: Reflecting on the Risks of Cross-Sector Norm Translation in Platform Governance’, *Information, Communication & Society*.",
     "link": ""
+  },
+  "agreComputationHumanExperience1997": {
+    "author": "Agre",
+    "year": "1997",
+    "harvard": "Agre P (1997) *Computation and Human Experience*. Cambridge: Cambridge University Press.",
+    "link": "",
+    "ref_id": "ref-1"
+  },
+  "ahmadOpenAIsApproachExternal2025": {
+    "author": "Ahmad et al.",
+    "year": "2025",
+    "harvard": "Ahmad L, Agarwal S, Lampe M, et al. (2025) OpenAI’s approach to external red teaming for AI models and systems. *arXiv*. DOI: 10.48550/arXiv.2503.16431.",
+    "link": "https://doi.org/10.48550/arXiv.2503.16431",
+    "ref_id": "ref-2"
+  },
+  "bergmanSTELACommunitycentredApproach2024": {
+    "author": "Bergman et al.",
+    "year": "2024",
+    "harvard": "Bergman S, Marchal N, Mellor J, et al. (2024) STELA: A community-centred approach to norm elicitation for AI alignment. *Scientific Reports* 14: 6616. DOI: 10.1038/s41598-024-56648-4.",
+    "link": "https://doi.org/10.1038/s41598-024-56648-4",
+    "ref_id": "ref-3"
+  },
+  "bommasani2023FMTI": {
+    "author": "Bommasani et al.",
+    "year": "2023",
+    "harvard": "Bommasani R, Klyman K, Longpre S, et al. (2023) The foundation model transparency index. *arXiv*. DOI: 10.48550/arXiv.2310.12941.",
+    "link": "https://doi.org/10.48550/arXiv.2310.12941",
+    "ref_id": "ref-4"
+  },
+  "delgadoParticipatoryTurnAI2023": {
+    "author": "Delgado et al.",
+    "year": "2023",
+    "harvard": "Delgado F, Yang S, Madaio M, et al. (2023) The participatory turn in AI design: Theoretical foundations and the current state of practice. In: *Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization*, pp.1–23. DOI: 10.1145/3617694.3623261.",
+    "link": "https://doi.org/10.1145/3617694.3623261",
+    "ref_id": "ref-9"
+  },
+  "gabrielArtificialIntelligenceValues2020": {
+    "author": "Gabriel",
+    "year": "2020",
+    "harvard": "Gabriel I (2020) Artificial intelligence, values, and alignment. *Minds and Machines* 30(3): 411–437. DOI: 10.1007/s11023-020-09539-2.",
+    "link": "https://doi.org/10.1007/s11023-020-09539-2",
+    "ref_id": "ref-10"
+  },
+  "huang2024CollectiveConstitutionalAI": {
+    "author": "Huang et al.",
+    "year": "2024",
+    "harvard": "Huang S, Siddarth D, Lovitt L, et al. (2024) Collective constitutional AI: Aligning a language model with public input. In: *Proceedings of the 2024 ACM Conference on Fairness, Accountability, and Transparency*, pp.1395–1417. DOI: 10.1145/3630106.3658979.",
+    "link": "https://doi.org/10.1145/3630106.3658979",
+    "ref_id": "ref-14"
+  },
+  "kallinaStakeholderParticipationResponsible2025": {
+    "author": "Kallina et al.",
+    "year": "2025",
+    "harvard": "Kallina E, Bohné T and Singh J (2025) Stakeholder participation for responsible AI development: Disconnects between guidance and current practice. In: *Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency*, pp.1060–1079. DOI: 10.1145/3715275.3732069.",
+    "link": "https://doi.org/10.1145/3715275.3732069",
+    "ref_id": "ref-15"
+  },
+  "liang2024SystematicAnalysis": {
+    "author": "Liang et al.",
+    "year": "2024",
+    "harvard": "Liang W, Rajani N, Yang X, et al. (2024) Systematic analysis of 32,111 AI model cards characterizes documentation practice in AI. *Nature Machine Intelligence* 6: 744–753. DOI: 10.1038/s42256-024-00857-z.",
+    "link": "https://doi.org/10.1038/s42256-024-00857-z",
+    "ref_id": "ref-16"
+  },
+  "miceli2022DataProduction": {
+    "author": "Miceli and Posada",
+    "year": "2022",
+    "harvard": "Miceli M and Posada J (2022) The data-production dispositif. *Proceedings of the ACM on Human-Computer Interaction* 6(CSCW2): Article 460, 1–37. DOI: 10.1145/3555561.",
+    "link": "https://doi.org/10.1145/3555561",
+    "ref_id": "ref-17"
+  },
+  "openaiGPT4oSystemCard2024": {
+    "author": "OpenAI et al.",
+    "year": "2024a",
+    "harvard": "OpenAI, Hurst A, Lerer A, et al. (2024a) GPT-4o system card. *arXiv*. DOI: 10.48550/arXiv.2410.21276.",
+    "link": "https://doi.org/10.48550/arXiv.2410.21276",
+    "ref_id": "ref-21"
+  },
+  "openaiOpenAIO1System2024": {
+    "author": "OpenAI et al.",
+    "year": "2024b",
+    "harvard": "OpenAI, Jaech A, Kalai A, et al. (2024b) OpenAI o1 system card. *arXiv*. DOI: 10.48550/arXiv.2412.16720.",
+    "link": "https://doi.org/10.48550/arXiv.2412.16720",
+    "ref_id": "ref-22"
+  },
+  "raji2022OutsiderOversight": {
+    "author": "Raji et al.",
+    "year": "2022",
+    "harvard": "Raji ID, Xu P, Honigsberg C, et al. (2022) Outsider oversight: Designing a third party audit ecosystem for AI governance. In: *Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society*, pp.557–571. DOI: 10.1145/3514094.3534181.",
+    "link": "https://doi.org/10.1145/3514094.3534181",
+    "ref_id": "ref-24"
+  },
+  "renOrganizationMattersQualitative2025": {
+    "author": "Ren et al.",
+    "year": "2025",
+    "harvard": "Ren B, Cheon E and Li J (2025) Organization matters: A qualitative study of organizational dynamics in red teaming practices for generative AI. *Proceedings of the ACM on Human-Computer Interaction* 9(7): Article CSCW460, 1–26. DOI: 10.1145/3757641.",
+    "link": "https://doi.org/10.1145/3757641",
+    "ref_id": "ref-25"
+  },
+  "veale2023AIGlobalGovernance": {
+    "author": "Veale et al.",
+    "year": "2023",
+    "harvard": "Veale M, Matus K and Gorwa R (2023) AI and global governance: Modalities, rationales, tensions. *Annual Review of Law and Social Science* 19: 255–275. DOI: 10.1146/annurev-lawsocsci-020223-040749.",
+    "link": "https://doi.org/10.1146/annurev-lawsocsci-020223-040749",
+    "ref_id": "ref-27"
+  },
+  "whittaker2021SteepCost": {
+    "author": "Whittaker",
+    "year": "2021",
+    "harvard": "Whittaker M (2021) The steep cost of capture. *Interactions* 28(6): 50–55. DOI: 10.1145/3488666.",
+    "link": "https://doi.org/10.1145/3488666",
+    "ref_id": "ref-28"
   }
 }
