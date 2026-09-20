@@ -33,7 +33,7 @@ DRAFT = DOCS / "manuscript.md"
 TAXONOMY = DOCS / "document-taxonomy.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260921editorial"
+VERSION = "20260921flow"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -119,8 +119,7 @@ def to_html(text: str) -> str:
     ref_number = iter(range(1, len(items) + 1))
     refs_html = re.sub(r"<p>", lambda _: f'<li id="ref-{next(ref_number)}">', refs_html)
     refs_html = refs_html.replace("</p>", "</li>")
-    # The manuscript contains the concise, editable taxonomy table itself.
-    body_html = body_html.replace("<table>", '<table id="table-1" class="taxonomy">', 1)
+    # Table 1 is retained verbatim in the manuscript; Table 2 remains Markdown.
     return body_html, f'<h1>References</h1>\n<ol class="references">\n{refs_html}\n</ol>'
 
 
@@ -256,8 +255,6 @@ def main() -> None:
 {more_nav}
 <section class="prose paper">
 <h1>Further figures</h1>
-<h2>Full document taxonomy</h2>
-{taxonomy_table()}
 <p>Figures from the original interface that the paper does not use: the corpus itself, the
 actors most often named across all components, and the conceptual clusters among conducts
 and risks. They read the earlier extraction, not the retrieval-grounded one.</p>

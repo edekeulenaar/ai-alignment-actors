@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
-<link rel="stylesheet" href="figures2.css?v=20260921editorial">
+<link rel="stylesheet" href="figures2.css?v=20260921flow">
 <link rel="stylesheet" href="style.css?v=20260620T1300">
 </head>
 <body>
@@ -110,20 +110,20 @@
 <nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;"><span class="paper-nav-current">The paper</span><a href="more-figures.html">Further figures</a><a href="interface.html">Interface and original findings</a><a href="alignment-actors-for-comments.docx">Download for comments</a></nav>
 <section class="prose paper">
 <h1 id="the-actors-in-ai-alignment">The actors in AI alignment</h1>
+<p><strong>Total word count including references, tables, captions and figure text: 7,784.</strong></p>
 <h2 id="abstract">Abstract</h2>
 <p>Value alignment gives AI companies considerable discretion over the norms their models reproduce. Yet companies also depend on external actors to formulate values, anticipate risks and evaluate model behaviour. This article examines how these actors are enrolled across an alignment stack, from specification to training and benchmarking. We combine a detailed reading of 184 documents with an expanded archive of 752 documents and a directory of alignment organisations. External actors appear in selective capacities, with substantially more identifiable external contributions to benchmarking than to training. In the harmonised actor mapping, 84.9% of actors appear in only one component. Alignment research organisations sometimes connect risk definition to evaluation by making prospective harms testable. We describe this capacity as ideation power. The findings qualify accounts of participation centred on consultation: inclusion in one exercise does not establish continuing involvement in the decisions through which a value becomes part of a model's conduct.</p>
 <p><strong>Keywords:</strong> AI alignment; platform governance; participation; model documentation; anticipatory governance; actor-network theory</p>
 <h2 id="introduction">Introduction</h2>
-<p>One of the major controversies AI has brought to societal debate concerns its renewed role in public access to information <span class="cite-grp" data-keys="branfordGenerativeAIDemocratic2025"></span>. One once spoke of algorithms as a catch-all denominator for the underlying infrastructures and politics of information management <span class="cite-grp" data-keys="bowkerSortingThingsOut2000"></span>, be these ranking systems <span class="cite-grp" data-keys="riederRankingAlgorithmsRanking2018"></span>, recommenders or content moderation systems <span class="cite-grp" data-keys="gorwaAlgorithmicContentModeration2020"></span>. Large language models (LLMs) now enter this configuration as interfaces that generate information as well as organise access to it. Seamless as this shift may feel, the political implications remain profound. Both algorithmic and AI-based information systems condition the levers through which access to and the circulation of information are aligned with societal norms.</p>
-<p>A central political question is who gets to decide and operationalise those norms. AI companies retain considerable discretion over what they create. A key aspect of “platform power” is indeed the “endogenous” capacity to engender the environment and conditions in which surrounding markets and societal sectors must function <span class="cite-grp" data-keys="nieborgIntroductionSpecialIssue2024"></span>. Companies nevertheless depend on actors from whom they seek expertise, legitimation and governance frameworks. Such dependencies concern epistemic norms, including definitions of misinformation; social norms concerning representation and political disagreement; and estimations of personal or societal harm. Many of these remain “essentially contested” <span class="cite-grp" data-keys="collierEssentiallyContestedConcepts2006"></span>, even when a technical system requires a decision about how to apply them.</p>
-<p>Part of alignment, then, is a question of inclusive design. Who is consulted about a norm, and what becomes of their contribution when it is translated into training data or a benchmark? Another part concerns negotiation between actors with different interests and capacities to act. Platform governance scholarship has long examined how responsibility might be distributed between companies, public institutions and civil society <span class="cite-grp" data-keys="helbergerGoverningOnlinePlatforms2018"></span>. AI companies, for their part, describe partnerships with academic and governmental experts, red-teaming networks <span class="cite-grp" data-keys="gillespieAIRedTeamingSociotechnical2026"></span> and occasional consultations with publics. Anthropic's Collective Constitutional AI and Google's STELA programme are examples of attempts to incorporate public judgements into alignment principles <span class="cite-grp" data-keys="huang2024CollectiveConstitutionalAI,bergmanSTELACommunitycentredApproach2024"></span>.</p>
-<p>Still, it is difficult to tell what participation means beyond these exercises. In AI design research, the term often implies some distribution of agency over the purpose, design or consequences of a system <span class="cite-grp" data-keys="delgadoParticipatoryTurnAI2023,kallinaStakeholderParticipationResponsible2025"></span>. A citation, survey or invitation to red team a model does not in itself establish such agency. What documentation does allow us to examine is <em>which</em> actors are named, in what capacities, and whether they reappear as a value is specified, trained and evaluated.</p>
-<p>This requires looking beyond any one site of participation. Work on AI governance has examined ethical codes, industry governance, contracts, standards and international agreements as different “modalities” through which AI is governed <span class="cite-grp" data-keys="veale2023AIGlobalGovernance"></span>. Our concern is how those arrangements enter alignment itself. We approach alignment as a <em>stack</em> of interdependent interventions, from the definition of desired conduct to data curation, training and evaluation. A principle may be open to public consultation while the decisions about its implementation remain within the company. Conversely, the author of a benchmark may help define acceptable conduct without ever having been invited to deliberate about it.</p>
-<p>Concretely, we examine a detailed extraction from 184 documents alongside an expanded archive of 752 documents associated with developers in the United States, Europe and China. We trace named actors across alignment components and compare this documentary network with a wider directory of alignment organisations. We find that external involvement is concentrated in particular tasks, especially benchmarking. A small number of alignment research organisations connect the definition of prospective risks to their evaluation. We refer to this capacity as <em>ideation power</em>: the capacity to formulate a possible AI behaviour as a problem that others can train against or test. This is an interpretation of documented relations; it does not establish how much influence any actor exercised over a company's eventual decision.</p>
+<p>One of the major controversies AI has brought to societal debate concerns its renewed role in public access to information <span class="cite-grp" data-keys="branfordGenerativeAIDemocratic2025"></span>. One once spoke of “algorithms” as a catch-all denominator for the underlying infrastructures and politics of information management <span class="cite-grp" data-keys="bowkerSortingThingsOut2000"></span>, be these ranking systems <span class="cite-grp" data-keys="riederRankingAlgorithmsRanking2018"></span>, recommenders or content moderation systems <span class="cite-grp" data-keys="gorwaAlgorithmicContentModeration2020"></span>. Large language models (LLMs) enter this configuration as interfaces that generate information as well as organise access to it. Seamless as this shift may feel, the political implications remain profound: both algorithmic and AI-based information systems condition the levers through which access to and the circulation of information are aligned with societal norms.</p>
+<p>A central political question is who gets to decide and operationalise those norms. AI companies retain considerable discretion over what they create; a key aspect of “platform power” is indeed the “endogenous” capacity to engender the environment and conditions in which surrounding markets and societal sectors must function <span class="cite-grp" data-keys="nieborgIntroductionSpecialIssue2024"></span>. But they also retain dependencies with actors from whom they seek expertise, legitimation and governance frameworks. These concern epistemic norms, including definitions of misinformation; social norms around representation and political disagreement; and estimations of personal or societal harm. Many remain “essentially contested” <span class="cite-grp" data-keys="collierEssentiallyContestedConcepts2006"></span>, even when a technical system requires a decision about how to apply them.</p>
+<p>Part of alignment is, in this sense, a question of inclusive design: who is consulted about a norm, and what becomes of their contribution when it is translated into training data or a benchmark? Another part concerns negotiation between actors with different interests and capacities to act. Platform governance scholarship has long examined how responsibility might be distributed between companies, public institutions and civil society <span class="cite-grp" data-keys="helbergerGoverningOnlinePlatforms2018"></span>. AI companies, for their part, describe partnerships with academic and governmental experts, red-teaming networks <span class="cite-grp" data-keys="gillespieAIRedTeamingSociotechnical2026"></span> and occasional consultations with publics, as in Anthropic's Collective Constitutional AI and Google's STELA programme <span class="cite-grp" data-keys="huang2024CollectiveConstitutionalAI,bergmanSTELACommunitycentredApproach2024"></span>.</p>
+<p>Still, it is difficult to tell what participation means beyond these exercises, let alone whether it entails the distribution of agency over a system's purpose, design or consequences that scholars associate with participatory AI <span class="cite-grp" data-keys="delgadoParticipatoryTurnAI2023,kallinaStakeholderParticipationResponsible2025"></span>. A public may be invited to deliberate about a principle while the decisions about its implementation remain within the company; conversely, the author of a benchmark may help define acceptable conduct without having been invited to deliberate about it. Looking beyond any one site of participation therefore requires following actors across the processes through which a norm becomes part of a model's behaviour.</p>
+<p>Concretely, we read a detailed extraction from 184 documents alongside an expanded archive of 752 documents associated with developers in the United States, Europe and China. We trace actors across an <em>alignment stack</em>, from specification to training and benchmarking, and compare these relations with a wider directory of alignment organisations. External involvement is concentrated in particular tasks, especially benchmarking; a small number of alignment research organisations nevertheless connect the definition of prospective risks to their evaluation. We describe this capacity as <em>ideation power</em>: the capacity to formulate a possible AI behaviour as a problem that others can train against or test. Our concern is with the relations documented along this passage, and with what they allow us to say about participation in alignment as a whole.</p>
 <h2 id="the-actors-of-alignment-governance">The actors of alignment governance</h2>
 <h3>Alignment as a stack</h3>
-<p>Alignment describes efforts to make a model's behaviour conform to particular intentions, preferences or values. These are not interchangeable targets. Gabriel distinguishes instructions, expressed intentions, revealed and informed preferences, interests and values, each of which implies a different account of what an AI ought to do <span class="cite-grp" data-keys="gabrielArtificialIntelligenceValues2020"></span>. The choice also concerns whose judgement counts when these targets conflict. A model that follows a user's instruction may violate another person's interests; a model trained to avoid harm may refuse a request that its user considers legitimate.</p>
-<p>In this regard, alignment extends questions familiar to values in design. The practical difference lies partly in the interventions through which a norm becomes generative behaviour. We use the term <em>stack</em> to hold these interventions together without assuming that they follow a simple sequence. Legislation, conventions and standards inform company principles and specifications; these inform training and evaluation; observations of model behaviour may in turn occasion revisions to the specification. A norm can change in the process. What is described as “harmlessness” in a principle must acquire more specific meanings when annotators compare answers or evaluators design a test.</p>
+<p>Before examining where actors intervene, it is useful to locate alignment itself. Gabriel distinguishes instructions, expressed intentions, revealed and informed preferences, interests and values as different targets of alignment <span class="cite-grp" data-keys="gabrielArtificialIntelligenceValues2020"></span>. The distinction matters because these targets do not necessarily agree: following a user's instruction may violate another person's interests, while preventing a possible harm may require refusing something the user considers legitimate. Alignment thus involves specifying whose judgement counts, under which circumstances, and how conflicts between otherwise desirable behaviours ought to be resolved.</p>
+<p>In this regard, alignment extends questions familiar to values in design, but introduces particular means of translating norms into generative behaviour. Veale et al. locate ethics councils, contracts, standards and international agreements among the different modalities of AI governance <span class="cite-grp" data-keys="veale2023AIGlobalGovernance"></span>; within companies, these arrangements enter an interdependent set of interventions which we call the alignment <em>stack</em>. Legislation, conventions and standards inform company principles and specifications, which inform training and evaluation; observations of model behaviour may, in turn, occasion revisions to the specification. Following this movement allows us to ask whether those consulted about a value retain a role when its meaning becomes more specific.</p>
 <figure class="fig2" id="fig-stack-1"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1180" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
   <defs>
     <style>
@@ -246,297 +246,189 @@
 
   <text class="note" x="920" y="1172" text-anchor="end">Layers in grey lie outside the corpus read here.</text>
 </svg>
-</figure><p class="figure-caption"><strong>Figure 1.</strong> <em>The alignment stack. Norms, specifications, training, evaluation and deployment are interdependent sites of intervention; the diagram does not imply that every company follows the same sequence.</em></p>
-<p>To begin, <em>specification</em> concerns the definition of desired conduct and of the circumstances in which it should apply. It makes an otherwise broad value actionable within a computational system <span class="cite-grp" data-keys="agreComputationHumanExperience1997"></span>. This may involve deciding what counts as a factual answer, which requests should be refused or how helpfulness should be weighed against the possibility of harm. The difficulty is that agreement about a principle does not settle its application. Choosing an example, a threshold or an exception already amounts to interpreting the value.</p>
-<p><em>Training and mitigation</em> concern the techniques through which those interpretations are incorporated into model behaviour. Supervised fine-tuning uses examples of desired responses; preference learning uses comparisons or rankings; constitutional methods use written principles to guide critique and revision. Other interventions filter data or outputs, impose instructions, or monitor behaviour during use. Here, the relevant actors may include data workers, researchers, red teamers and domain experts, with different degrees of access to the decisions their contributions inform.</p>
-<p><em>Anticipation and evaluation</em> concern what a model may do, and how one might know whether it behaves acceptably. Content moderation already involves pre-emptive judgements, but generative systems add the problem of assessing outputs and capabilities that have not yet been observed in use. Frontier safety frameworks make this problem explicit through capability thresholds and proposed safeguards. Evaluators must devise situations in which a prospective failure can become observable. Benchmarks are one means of doing so, though a score cannot settle every disagreement about the norm being measured.</p>
-<p>Finally, <em>deployment and documentation</em> concern where models are used and how their conduct is made available for scrutiny. Domain partnerships may supply knowledge about the conditions in which a model operates. Model cards, framework reports and other disclosures make some of the preceding decisions public. These components bring different actors into view, but their presence does not imply equal authority over the model or over what is disclosed about it.</p>
+</figure><p class="figure-caption"><strong>Figure 1</strong>. <em>The alignment stack</em>.</p>
+<p><em>Specification</em> consists in formalising values within computational boundaries <span class="cite-grp" data-keys="agreComputationHumanExperience1997"></span>: deciding what counts as a factual answer, which requests should be refused, or how helpfulness should be weighed against the possibility of harm. Agreement about a broad principle does not settle these questions, since choosing an example or an exception already involves interpreting the value. <em>Training and mitigation</em> carry those interpretations into model behaviour through examples, preference comparisons, principle-based critique, filters and other safeguards. The same concern with harmlessness can consequently become several different interventions, each involving different people and different opportunities to contest what is being taught.</p>
+<p><em>Anticipation and evaluation</em> introduce a further difficulty. Content moderation already entails pre-emptive judgements, but generative systems add the problem of assessing outputs and capabilities that have not yet been observed in use. Evaluators must devise circumstances in which a prospective failure becomes observable; frontier safety frameworks then connect such observations to capability thresholds and proposed safeguards. This is where the ability to imagine a risk becomes consequential for governing it, although an evaluation score cannot resolve every disagreement about the norm being measured. Deployment and documentation subsequently make some of these decisions available for scrutiny, including which organisations were involved and what their contributions were said to accomplish.</p>
 <h3>Participation and decision-making</h3>
-<p>Thus far, much of the empirical work on participation in AI has examined consultation. Delgado et al. find that participatory design is largely consultative and rarely gives participants agency over design decisions <span class="cite-grp" data-keys="delgadoParticipatoryTurnAI2023"></span>. Kallina et al. likewise identify a distance between responsible-AI guidance, where participation is often justified as a redistribution of agency, and industry practice, where developers, executives and legal teams determine its scope <span class="cite-grp" data-keys="kallinaStakeholderParticipationResponsible2025"></span>. These findings invite a more specific question: at what point does an actor's involvement end?</p>
-<p>Google's STELA programme illustrates this problem. Participants discussed chatbot interactions, after which researchers coded their statements, formulated rules and submitted the ruleset to expert review <span class="cite-grp" data-keys="bergmanSTELACommunitycentredApproach2024"></span>. This elicited situated judgements about impartiality, factuality and culturally specific harms. Participants nevertheless did not select the dialogue samples or directly formulate the final rules. In Collective Constitutional AI, public input similarly informed a constitution that researchers curated and used in training <span class="cite-grp" data-keys="huang2024CollectiveConstitutionalAI"></span>. Such exercises can alter the material available for alignment while leaving the passage from discussion to implementation under researchers' control.</p>
-<p>Data work and red teaming pose related questions. An annotator's judgement can become a training signal without giving the annotator authority over the categories, instructions or objectives of the exercise. Miceli and Posada locate these asymmetries in the organisation of data production, where workers interpret material within conditions established by clients and managers <span class="cite-grp" data-keys="miceli2022DataProduction"></span>. External red teaming likewise depends on choices about whom to invite, what access to provide and which findings to act upon <span class="cite-grp" data-keys="ahmadOpenAIsApproachExternal2025"></span>. Organisational priorities and release schedules may constrain what follows from an identified failure <span class="cite-grp" data-keys="renOrganizationMattersQualitative2025"></span>.</p>
-<p>Third-party evaluation introduces another possibility. Raji et al. argue that an audit ecosystem requires institutional arrangements that enable outsiders to scrutinise systems <span class="cite-grp" data-keys="raji2022OutsiderOversight"></span>. This brings into view organisations whose principal activity is evaluating AI, including specialised alignment research organisations. Their position may differ from that of publics invited to a consultation: they can supply both a definition of a prospective risk and an instrument for testing it. Yet access to a model and authority over its release remain separate capacities. Corporate control of resources also shapes the research questions external actors can pursue <span class="cite-grp" data-keys="whittaker2021SteepCost"></span>.</p>
-<p>In what follows, we examine these differences across the alignment stack. Actor-network theory supplies the term <em>enrolment</em> for the relations through which actors and their contributions become part of an undertaking <span class="cite-grp" data-keys="buegerActorNetworkTheoryObjects2017"></span>. Here, it directs attention to whether a judgement is carried into a principle, dataset, training intervention or evaluation, and to whom the documents credit at each point. We use this as a way of tracing involvement, rather than as a scale on which more mentions necessarily mean more power.</p>
+<p>Thus far, much empirical work on participation in AI has examined consultation. Delgado et al. find that participatory design rarely grants participants agency over design decisions <span class="cite-grp" data-keys="delgadoParticipatoryTurnAI2023"></span>, while Kallina et al. identify a distance between responsible-AI guidance and industry practice, where developers, executives and legal teams determine the scope of involvement <span class="cite-grp" data-keys="kallinaStakeholderParticipationResponsible2025"></span>. Google's STELA programme illustrates this division of labour: participants discussed chatbot interactions, after which researchers coded their statements, formulated rules and submitted them to expert review <span class="cite-grp" data-keys="bergmanSTELACommunitycentredApproach2024"></span>. Situated judgements could enter alignment without participants selecting the dialogue samples or directly formulating the final rules; in Collective Constitutional AI, public input similarly informed a constitution that researchers curated and used in training <span class="cite-grp" data-keys="huang2024CollectiveConstitutionalAI"></span>.</p>
+<p>The question reappears in data work and red teaming, where a judgement may become a training signal without giving its author authority over the exercise. Miceli and Posada locate these asymmetries in the organisation of data production, in which workers interpret material within conditions established by clients and managers <span class="cite-grp" data-keys="miceli2022DataProduction"></span>. External red teaming likewise depends on whom a company invites, what access it provides and which findings it acts upon <span class="cite-grp" data-keys="ahmadOpenAIsApproachExternal2025"></span>; organisational priorities and release schedules may constrain what follows from an identified failure <span class="cite-grp" data-keys="renOrganizationMattersQualitative2025"></span>.</p>
+<p>Third-party evaluation raises a related institutional problem: as Raji et al. argue, an audit ecosystem requires arrangements that enable outsiders to scrutinise systems <span class="cite-grp" data-keys="raji2022OutsiderOversight"></span>, while corporate control of resources also shapes the questions external researchers can pursue <span class="cite-grp" data-keys="whittaker2021SteepCost"></span>. Specialised alignment research organisations occupy an interesting position here because they may supply both a definition of a prospective risk and an instrument for testing it. To follow these contributions, we draw on the notion of <em>enrolment</em> in actor-network theory <span class="cite-grp" data-keys="buegerActorNetworkTheoryObjects2017"></span>: whose judgement is carried into a principle, dataset, training intervention or evaluation, and who is credited at each point? The purpose is to trace the organisation of involvement, without assuming that more mentions necessarily mean more power.</p>
 <h2 id="method">Method</h2>
 <h3>Reading alignment documents</h3>
-<p>Our point of departure is what companies document about alignment. Studies of model cards have examined the unevenness of disclosure <span class="cite-grp" data-keys="liang2024SystematicAnalysis"></span>, while the Foundation Model Transparency Index evaluates what developers disclose about their models and the conditions of their production <span class="cite-grp" data-keys="bommasani2023FMTI"></span>. We approach these materials through the relations they record: whose work is cited, which organisations are invited to contribute, and what those contributions are said to concern.</p>
-<p>Though these documents are of course not representative of everything that occurs in alignment processes, or of everyone involved, they do themselves <em>participate</em> in AI companies' governance. They perform public duties towards the responsible democratisation of machine learning <span class="cite-grp" data-keys="mitchellModelCardsModel2019b"></span>, respond to the sensitivities of regulators and public debates about prospective model uses, and position companies among competing alignment norms and technical benchmarks. These documents, and those they cite, may be sites of deliberation in their own right: they refer to conceptual influences from public debate, nonprofits involved in benchmarking or red teaming, consultation processes, and AI safety organisations with whom, or in response to whom, companies have formulated a norm.</p>
-<p>Of course, the corpus records what companies and affiliated authors choose to disclose, in genres with different audiences and incentives; it cannot make private meetings, rejected recommendations or uncredited labour visible. We are also cautious about deducing a company's motivation for involving an actor, and more so about estimating that actor's impact. We restrict ourselves to analysing how actors are cited and thereby publicly “enrolled” in alignment processes.</p>
-<h3>Sampling and collection</h3>
-<p>The collection centres on developers with publicly accessible documentation: OpenAI, Anthropic, Google and Google DeepMind, Meta, xAI and Microsoft in the United States; Mistral, Aleph Alpha, Almawave, Black Forest Labs and Unbabel in Europe; and Alibaba/Qwen and DeepSeek in China. It is a purposive comparison, conditioned by what these companies publish. It cannot represent all developers or support a balanced comparison between regions.</p>
-<p>The initial collection, assembled between 28 January and 9 May 2026, comprised 181 Zotero records from company websites, repositories and archived attachments, alongside the latest available snapshots of 53 product policies from the Open Terms Archive. One Zotero record contained four separate files, producing 184 documents. A second collection followed links from company newsrooms, research listings, transparency hubs and safety sections. The September 2026 archive contains 515 additional company documents, bringing the total to 752 files. Published PDFs were retained; webpages were preserved as paginated files with text extractions. Page references therefore identify a captured version, not necessarily the current webpage.</p>
-<p>The analyses use different portions of this archive. The detailed mapping of values, training and benchmarks derives from 184 extracted documents: 163 of the Zotero documents and 21 policy snapshots. The genre, phrase and citation analyses concern the 515 additional company documents. Retrieval indexes the full archive; a subsequent retrieval-grounded extraction covers 150 of the additional documents. These readings inform qualitative inspection but are not pooled into the detailed extraction's numerical findings. Keeping these scopes separate matters because an indexed document has not necessarily been read through every part of the analytical schema.</p>
-<h3>The document taxonomy</h3>
-<p>We distinguish documents by what they ask, describe or undertake. Principles set out a company's normative orientation; model specifications describe desired behaviour; frontier governance frameworks state conditions under which safeguards should apply. Model and system cards report on particular models, while implementation reports apply a named framework to a model or release. Policy positions, commitments, partnerships and funding announcements disclose other relations through which alignment is organised. Table 1 summarises these distinctions; the complete taxonomy accompanies the online article.</p>
-<table id="table-1" class="taxonomy">
-<thead>
-<tr>
-<th>Documentary function</th>
-<th>Genres</th>
-<th>What the distinction makes observable</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Stating norms and conditions</td>
-<td>Principles; model specifications; frontier frameworks; usage policies</td>
-<td>Who or what is addressed by a norm, and how compliance is described</td>
-</tr>
-<tr>
-<td>Reporting and assessment</td>
-<td>Model documentation; implementation, misuse and transparency reports; third-party assessments</td>
-<td>What is disclosed about models, tests, incidents and company practice</td>
-</tr>
-<tr>
-<td>Organising involvement</td>
-<td>Partnerships; governance bodies; programmes and funding</td>
-<td>Who is invited, supported or given a continuing role</td>
-</tr>
-<tr>
-<td>Public positioning</td>
-<td>Policy positions; commitments; statements; essays</td>
-<td>What companies request, promise or envisage</td>
-</tr>
-<tr>
-<td>Producing knowledge and instruments</td>
-<td>Research; evaluations, benchmarks and tools</td>
-<td>Which concepts and tests can enter another actor's alignment work</td>
-</tr>
-</tbody>
-</table>
-<p class="figure-caption"><strong>Table 1.</strong> <em>Alignment documents grouped by their principal function. Index pages and product-deployment announcements are retained as contextual categories, separately from substantive alignment documents.</em></p>
-<p>For the expanded collection, categories were assigned using the selected-document labels, title and URL rules, and individual overrides. We compare their characteristic phrases and links to other documents, discounting recurrent company navigation. These comparisons indicate differences between genres; they do not show that every document of a given type performs the same function.</p>
-<div id="fig-keyness" class="fig2-host"></div><p class="figure-caption"><strong>Figure 2.</strong> <em>Characteristic phrases by document type in the expanded collection. Phrases are compared through log-odds with an informative prior and must occur across more than one company.</em></p>
-<div id="fig-network" class="fig2-host"></div><p class="figure-caption"><strong>Figure 3a.</strong> <em>Links between documents in the expanded collection, detected through titles and URLs. Recurrent navigation links are discounted.</em></p>
-<p>Actor names are also located through a vocabulary scan. Rules applied to surrounding sentences suggest relations such as evaluation, partnership or funding. These are exploratory classifications: a word near an actor's name does not by itself establish the actor's role. Figures 3b and 4 aggregate document–actor–relation occurrences, so a document can contribute more than once.</p>
-<div id="fig-actor-types" class="fig2-host"></div><p class="figure-caption"><strong>Figure 3b.</strong> <em>Document–actor–relation occurrences by actor type and document genre. Counts are not numbers of distinct documents or measures of influence.</em></p>
-<div id="fig-actors" class="fig2-host"></div><p class="figure-caption"><strong>Figure 4.</strong> <em>Frequently named actors within each genre and the relations suggested by their surrounding text. These classifications guide inspection of the source passages.</em></p>
-<h3>Extracting and checking relations</h3>
-<p>The detailed extraction records ideal conducts, risks, training or mitigation methods, benchmarks and associated actors. We distinguish an actor credited with defining a conduct or risk from the author of the document. We likewise distinguish developing a benchmark from being commissioned to evaluate a company's model. A citation to prior work is insufficient to establish either relation unless the passage specifies what the actor contributed.</p>
-<p>This approach combines distant reading <span class="cite-grp" data-keys="morettiDistantReading2013"></span> with returns to individual passages. The detailed dataset contains an initial model reading and a subsequent GPT-5.4 reading, with harmonised names and categories. The later retrieval procedure divides documents into overlapping, page-bounded passages and combines lexical with semantic search. For each document, it retrieves passages about values, risks, training, benchmarks, evaluators and other actors; GPT-5.4 extracts candidate relations from those passages with page references. An exhaustive scan of known names complements retrieval, though it cannot discover actors absent from its vocabulary.</p>
-<p>In this configuration, computational reading extends the material available to the analyst while also introducing selection and classification errors. We retain source wording and page references so that interpretations can be checked against the documents. The analyst sets the schema and category distinctions and returns to passages when assessing the resulting claims. This is a form of co-reading at different distances, rather than a delegation of interpretation to an extraction model.</p>
-<p>Retrieval was evaluated on a held-out set of 480 queries derived from baseline page references. The tested hybrid configuration returned the reference page among its first five results for 84.2% of queries and among its first ten for 89.6%. These scores concern retrieval, not the accuracy of extracted relations. The reference set also favours identifiable names and native PDFs; its performance cannot be assumed for all genres in the expanded archive. We consequently use the retrieval-grounded reading to support source inspection, without treating its coverage as exhaustive.</p>
-<p>Numerical summaries of training and benchmarking count distinct stored identifiers in the detailed extraction. An item is counted as internal where at least one named actor has the harmonised category “Internal”, and as externally attributed where at least one actor has an identifiable external category. Unspecified “Other”, “Multiple” and unknown categories are not treated as evidence of an external contribution. Internal and external counts can overlap. The interactive figures group items by company and harmonised label; their displayed totals can therefore differ from identifier counts. Figure 9 uses the actor names retained in this harmonised view to trace involvement across four components: conduct definition, risk definition, training and benchmarking.</p>
-<h3>Comparing the wider field</h3>
-<p>To place these relations in a wider context, we use a directory assembled through searches for alignment, AI safety, red teaming, fairness, explainability, AI ethics and responsible AI organisations. English-, German- and Danish-language queries were run for the United States, United Kingdom, Germany and Denmark, collecting up to 50 results per search-and-location combination. Of 7,377 search results, 512 entries were retained as relevant organisations. These include research centres, advocacy organisations, public agencies, foundations, consultancies and coalitions; developers, individuals, publishers and one-off events were excluded.</p>
-<p>Names and acronyms were matched against the detailed extraction, using normalised names, long-string matches and recorded aliases. The unit is a directory entry: some organisations occur more than once, so the result is not an estimate of the proportion of all organisations involved in alignment. A match may also identify a parent organisation or a named representative rather than a direct organisational contribution. We use the comparison to examine where documentary connections appear, and return to the names when interpreting them.</p>
-<p>The main limitations follow from these choices. Companies disclose unevenly, and the expanded collection is especially concentrated on Anthropic, OpenAI and Google. Extraction and name matching can miss relations or assign them incorrectly. The directory depends on search rankings, languages and locations, and underrepresents regions outside Europe and North America. Above all, absence from these documents cannot distinguish non-participation from non-disclosure. We therefore speak of documentary absence rather than demonstrated exclusion from a company's work.</p>
-<figure class="fig2" id="fig-method-5"><?xml version="1.0" encoding="utf-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg role="img" xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="315.432pt" viewBox="0 0 468 315.432" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <metadata>
-  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-   <cc:Work>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-09-21T00:57:18.695147</dc:date>
-    <dc:format>image/svg+xml</dc:format>
-    <dc:creator>
-     <cc:Agent>
-      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
-     </cc:Agent>
-    </dc:creator>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
- </defs>
- <g id="figure_1">
-  <g id="patch_1">
-   <path d="M 0 315.432
-L 468 315.432
-L 468 0
-L 0 0
-z
-" style="fill: #ffffff"/>
-  </g>
-  <g id="axes_1">
-   <g id="patch_2">
-    <path d="M 15.264 89.29512
-L 151.416 89.29512
-Q 154.5408 89.29512 154.5408 86.3568
-L 154.5408 17.0964
-Q 154.5408 14.15808 151.416 14.15808
-L 15.264 14.15808
-Q 12.1392 14.15808 12.1392 17.0964
-L 12.1392 86.3568
-Q 12.1392 89.29512 15.264 89.29512
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_3">
-    <path d="M 167.04 89.29512
-L 298.728 89.29512
-Q 301.8528 89.29512 301.8528 86.3568
-L 301.8528 17.0964
-Q 301.8528 14.15808 298.728 14.15808
-L 167.04 14.15808
-Q 163.9152 14.15808 163.9152 17.0964
-L 163.9152 86.3568
-Q 163.9152 89.29512 167.04 89.29512
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_4">
-    <path d="M 314.352 89.29512
-L 450.504 89.29512
-Q 453.6288 89.29512 453.6288 86.3568
-L 453.6288 17.0964
-Q 453.6288 14.15808 450.504 14.15808
-L 314.352 14.15808
-Q 311.2272 14.15808 311.2272 17.0964
-L 311.2272 86.3568
-Q 311.2272 89.29512 314.352 89.29512
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_5">
-    <path d="M 15.264 185.83992
-L 450.504 185.83992
-Q 453.6288 185.83992 453.6288 182.9016
-L 453.6288 130.4316
-Q 453.6288 127.49328 450.504 127.49328
-L 15.264 127.49328
-Q 12.1392 127.49328 12.1392 130.4316
-L 12.1392 182.9016
-Q 12.1392 185.83992 15.264 185.83992
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_6">
-    <path d="M 15.264 299.17512
-L 222.84 299.17512
-Q 225.9648 299.17512 225.9648 296.2368
-L 225.9648 220.68
-Q 225.9648 217.74168 222.84 217.74168
-L 15.264 217.74168
-Q 12.1392 217.74168 12.1392 220.68
-L 12.1392 296.2368
-Q 12.1392 299.17512 15.264 299.17512
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_7">
-    <path d="M 242.928 299.17512
-L 450.504 299.17512
-Q 453.6288 299.17512 453.6288 296.2368
-L 453.6288 220.68
-Q 453.6288 217.74168 450.504 217.74168
-L 242.928 217.74168
-Q 239.8032 217.74168 239.8032 220.68
-L 239.8032 296.2368
-Q 239.8032 299.17512 242.928 299.17512
-z
-" clip-path="url(#p2b13a092bd)" style="fill: #f3f5f6; stroke: #bbc7cf; stroke-linejoin: miter"/>
-   </g>
-   <g id="text_1">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="21.96" y="38.047481" transform="rotate(-0 21.96 38.047481)">Initial documents</text>
-   </g>
-   <g id="text_2">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 55.337318)">181 Zotero records</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 68.054818)">184 document files</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 80.772318)">Initial archive material</text>
-   </g>
-   <g id="text_3">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="173.736" y="38.047481" transform="rotate(-0 173.736 38.047481)">Policy snapshots</text>
-   </g>
-   <g id="text_4">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(173.736 55.337318)">53 product policies</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(173.736 68.054818)">Latest available snapshot</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(173.736 80.772318)">per product and policy</text>
-   </g>
-   <g id="text_5">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="321.048" y="38.047481" transform="rotate(-0 321.048 38.047481)">Expanded collection</text>
-   </g>
-   <g id="text_6">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(321.048 55.337318)">515 company documents</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(321.048 68.054818)">Genres, phrases and links</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(321.048 80.772318)">Context for source reading</text>
-   </g>
-   <g id="text_7">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="21.96" y="151.382681" transform="rotate(-0 21.96 151.382681)">Searchable archive: 752 documents</text>
-   </g>
-   <g id="text_8">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start" x="21.96" y="168.672517" transform="rotate(-0 21.96 168.672517)">35,265 page-bounded passages; lexical and semantic retrieval</text>
-   </g>
-   <g id="patch_8">
-    <path d="M 82.224 91.295488
-Q 82.224 108.393554 82.224 124.373586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-    <path d="M 84.424 119.973586
-L 82.224 124.373586
-L 80.024 119.973586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-   </g>
-   <g id="patch_9">
-    <path d="M 231.768 91.295488
-Q 231.768 108.393554 231.768 124.373586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-    <path d="M 233.968 119.973586
-L 231.768 124.373586
-L 229.568 119.973586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-   </g>
-   <g id="patch_10">
-    <path d="M 383.544 91.295488
-Q 383.544 108.393554 383.544 124.373586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-    <path d="M 385.744 119.973586
-L 383.544 124.373586
-L 381.344 119.973586
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-   </g>
-   <g id="text_9">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="21.96" y="241.631081" transform="rotate(-0 21.96 241.631081)">Detailed mapping</text>
-   </g>
-   <g id="text_10">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 258.920918)">163 Zotero documents + 21 policies</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 271.638418)">Training and benchmark attributions</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(21.96 284.355918)">537 actor names in the stack view</text>
-   </g>
-   <g id="text_11">
-    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="249.624" y="241.631081" transform="rotate(-0 249.624 241.631081)">Retrieval-grounded reading</text>
-   </g>
-   <g id="text_12">
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(249.624 258.920918)">150 additional documents</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(249.624 271.638418)">Source passages with page references</text>
-    <text style="font-size: 10px; font-family: 'DejaVu Sans'" transform="translate(249.624 284.355918)">Separate from detailed mapping counts</text>
-   </g>
-   <g id="patch_11">
-    <path d="M 345.6 187.417914
-Q 345.6 201.371535 345.6 214.207122
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-    <path d="M 347.8 209.807122
-L 345.6 214.207122
-L 343.4 209.807122
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-   </g>
-   <g id="patch_12">
-    <path d="M 117.936 187.417914
-Q 117.936 201.371535 117.936 214.207122
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-    <path d="M 120.136 209.807122
-L 117.936 214.207122
-L 115.736 209.807122
-" style="fill: none; stroke: #315a7d; stroke-linecap: round"/>
-   </g>
-  </g>
- </g>
- <defs>
-  <clipPath id="p2b13a092bd">
-   <rect x="10.8" y="10.8" width="446.4" height="293.832"/>
-  </clipPath>
- </defs>
+<p>Our point of departure is what companies document about alignment. Studies of model cards have examined the unevenness of disclosure <span class="cite-grp" data-keys="liang2024SystematicAnalysis"></span>, while the Foundation Model Transparency Index evaluates what developers disclose about their models and the conditions of their production <span class="cite-grp" data-keys="bommasani2023FMTI"></span>. Here, we approach the same materials through the relations they record: whose work is cited, which organisations are invited to contribute, and what those contributions concern.</p>
+<p>Though these documents are of course not representative of everything that occurs in alignment processes, or of everyone involved, they do themselves <em>participate</em> in AI companies' governance by performing public duties towards the responsible democratisation of machine learning <span class="cite-grp" data-keys="mitchellModelCardsModel2019b"></span>, responding to the sensitivities of regulators and public debates about prospective model uses, and positioning companies among competing alignment norms and technical benchmarks. These documents, and those they cite, may be sites of deliberation in their own right: they refer to conceptual influences from public debate, nonprofits involved in benchmarking or red teaming, consultation processes, and AI safety organisations with whom, or in response to whom, companies have formulated a norm.</p>
+<p>Of course, the corpus records what companies and affiliated authors choose to disclose, in genres with different audiences and incentives; it cannot make private meetings, rejected recommendations or uncredited labour visible. We are also cautious about deducing a company's motivation for involving an actor, even more so about estimating that actor's impact. We restrict ourselves to analysing how actors are cited and thereby publicly “enrolled” in alignment processes.</p>
+<h3>Collection and classification</h3>
+<p>The collection centres on developers with publicly accessible documentation: OpenAI, Anthropic, Google and Google DeepMind, Meta, xAI and Microsoft; Mistral, Aleph Alpha, Almawave, Black Forest Labs and Unbabel; and Alibaba/Qwen and DeepSeek. It is a purposive comparison, conditioned by disclosure, rather than a representative or regionally balanced sample. The initial collection, assembled between 28 January and 9 May 2026, comprised 181 Zotero records, yielding 184 files, alongside 53 policy snapshots from the Open Terms Archive. Following links from company newsrooms, research listings and safety sections added 515 documents by September 2026, bringing the archive to 752 files.</p>
+<p>The analyses use different portions of this archive. The detailed mapping derives from 184 extracted documents: 163 Zotero-derived files and 21 policies. Genre, phrase and citation analyses concern the 515 additional documents; retrieval indexes the full archive, but the subsequent retrieval-grounded extraction covers 150 additional documents and informs qualitative inspection rather than the earlier numerical findings. Published PDFs and paginated webpage captures retain the passages to which these readings refer.</p>
+<div class="fig2-host" id="table-1"><table class="taxonomy">
+<colgroup><col style="width:11%"><col style="width:15%"><col style="width:19%"><col style="width:35%"><col style="width:20%"></colgroup>
+<thead><tr><th>Group</th><th>Category</th><th>Also known as</th><th>Definition and decision rule</th><th>Data points to code</th></tr></thead><tbody>
+<tr><th class="taxonomy-group" rowspan="4" scope="rowgroup">A. Self-governance (normative)</th><td>Organizational principles, standards, codes</td><td>AI principles, charters, codes of conduct, responsible AI standards, human rights statements</td><td>Binds the organization. States values or requirements for how the company develops and deploys AI in general, not for one model or risk domain.</td><td>Version; date; scope (whole firm / division); enforcement mechanism named?</td></tr>
+<tr><td>Model behavior specifications</td><td>Constitutions, model specs, character documents</td><td>Written target for model behavior, used in training or evaluation. Addressed to the model and to users.</td><td>Version; date; priority ordering of values; stated training use</td></tr>
+<tr><td>Frontier governance frameworks</td><td>Responsible Scaling Policy, Frontier Safety Framework, Preparedness Framework, Frontier Governance Framework, Frontier AI Framework, SB 53 compliance framework</td><td>Defines capability or risk thresholds, the evaluations used to detect them, and the safeguards or deployment decisions that follow. Decision rule: the document commits the company to if-then actions tied to thresholds.</td><td>Version; date; risk domains; threshold definitions; named evaluators; legal basis (voluntary / SB 53 / EU GPAI Code)</td></tr>
+<tr><td>Usage policies and terms</td><td>Acceptable use policy, usage policy, consumer terms, use guidelines</td><td>Rules for users and deployers. Decision rule: the addressee is the user or customer.</td><td>Version; date; prohibited-use list; enforcement stated</td></tr>
+<tr><th class="taxonomy-group" rowspan="6" scope="rowgroup">B. Disclosure</th><td>Model documentation</td><td>System cards, model cards, addenda, technical reports, training-data summaries, application cards</td><td>Documents one model, model family, or product: training, capabilities, evaluations, limitations.</td><td>Model; release date; sections present; third-party evaluators named; legal template used (e.g., EU AI Act training-content summary)</td></tr>
+<tr><td>Framework implementation reports</td><td>Frontier Safety Framework reports, risk reports, alignment risk updates, ASL activations, framework update logs</td><td>Applies a named frontier framework to a model or moment. Decision rule: it cites a framework threshold and reports a determination.</td><td>Framework and version cited; thresholds reached (Y/N); safeguards triggered</td></tr>
+<tr><td>Misuse and threat intelligence reports</td><td>Threat reports, disruption reports</td><td>Reports observed misuse of the company's systems by identified or unidentified actors and the enforcement taken.</td><td>Period covered; actor types; countries; harm domains; enforcement actions</td></tr>
+<tr><td>Transparency and compliance reports</td><td>Responsible AI transparency reports, voluntary commitments trackers, regulatory compliance disclosures</td><td>Periodic or standing account of the company's governance practice as a whole, often keyed to commitments or regulation.</td><td>Reporting period; commitments or laws referenced; metrics disclosed</td></tr>
+<tr><td>Certifications and third-party assessments</td><td>Audits, certifications, external testing, cross-lab evaluations</td><td>Assessment performed or certified by a party other than the company. Decision rule: an external party issues or conducts it.</td><td>Assessor; standard (ISO/IEC 42001, SOC 2); scope; date</td></tr>
+<tr><td>Statements and incident disclosures</td><td>Public statements, postmortems, incident reports</td><td>Responds to a specific event: a government action, a dispute, an incident. Decision rule: dated to and triggered by an event.</td><td>Triggering event; counterparty; date; actions announced</td></tr>
+<tr><th class="taxonomy-group" rowspan="4" scope="rowgroup">C. External governance</th><td>Public policy positions</td><td>Policy submissions, regulatory comments, legislative endorsements, blueprints</td><td>Addressed to governments or policy communities; states what law or public policy should require. This is what most of anthropic.com/policy contains, but see Data issues sheet.</td><td>Addressee (institution, jurisdiction); bill or docket; position; date</td></tr>
+<tr><td>Commitments (unilateral and multilateral)</td><td>Voluntary commitments, pledges, codes of practice signatures, industry principles</td><td>Company undertakes a future obligation, alone or with others. Decision rule: explicit 'we commit / we sign'.</td><td>Unilateral or multilateral; co-signatories; convenor; binding status</td></tr>
+<tr><td>Partnerships and MOUs</td><td>Partnerships, memoranda of understanding, government collaborations</td><td>Bilateral or multilateral agreement with a named external party around a project or issue.</td><td>Counterparty type (state, NGO, firm, AISI); country; sector; instrument (MOU, contract)</td></tr>
+<tr><td>Governance bodies and structures</td><td>Trusts, advisory councils, expert councils, institutes, industry bodies</td><td>Creates or describes a standing body that shapes company decisions or sector coordination.</td><td>Body type; members; formal powers; internal or inter-firm</td></tr>
+<tr><th class="taxonomy-group" rowspan="5" scope="rowgroup">D. Programmes and knowledge</th><td>Programmes and funding</td><td>Initiatives, grants, fellowships, bug bounties, access programmes</td><td>Company-run programme that funds, invites, or grants access to external actors.</td><td>Amount; recipients; eligibility; duration</td></tr>
+<tr><td>Safeguards and product-safety explainers</td><td>Safety approach posts, safeguards announcements</td><td>Describes a mitigation, safeguard, or product-safety measure the company has built or applied.</td><td>Harm domain; user group (e.g., teens); mechanism type (classifier, policy, UX)</td></tr>
+<tr><td>Research</td><td>Papers, preprints, research blog posts</td><td>Advances knowledge on an AI issue; typically has authors and methods.</td><td>Authors; venue; method; alignment topic</td></tr>
+<tr><td>Evaluations, benchmarks and tools</td><td>Benchmarks, eval suites, open-source auditing tools</td><td>Releases a reusable instrument for measuring or auditing models.</td><td>What is measured; open or closed; licence; adoption by others</td></tr>
+<tr><td>Essays and vision statements</td><td>Leadership essays, vision posts</td><td>Leadership articulates views on AI's future, ethics, or societal role, without committing to specific actions.</td><td>Author; date; themes</td></tr>
+</tbody></table></div>
+
+<p class="figure-caption"><strong>Table 1</strong>. <em>The alignment document taxonomy</em>.</p>
+<p>The taxonomy distinguishes documents by what they ask, describe or undertake. Principles state a normative orientation; specifications describe desired behaviour; frontier frameworks connect thresholds to safeguards; model cards report on particular models. Partnerships and funding announcements disclose further relations through which alignment is organised. Categories were assigned using selected-document labels, title and URL rules, and individual overrides. Comparing characteristic phrases and links between documents helps locate these differences, with recurrent company navigation discounted from the citation network.</p>
+<div id="fig-keyness" class="fig2-host"></div><p class="figure-caption"><strong>Figure 2.</strong> <em>The discursive character of each document type. The phrases that a larger share of one type's documents use than the rest of the corpus (log-odds ratio with an informative prior; a phrase counts only if more than one company uses it).</em></p>
+<div id="fig-network" class="fig2-host"></div><p class="figure-caption"><strong>Figure 3a</strong>. <em>The document network. One document points at another when it names it by title or links to it; links that a company's navigation places on every page are discounted.</em></p>
+<p>Actor names are located through a vocabulary scan, while rules applied to surrounding sentences suggest relations such as evaluation, partnership or funding. These classifications guide source inspection: a nearby word does not by itself establish an actor's role. The matrices aggregate document–actor–relation occurrences, so their counts can exceed the number of distinct documents.</p>
+<div id="fig-actor-types" class="fig2-host"></div><p class="figure-caption"><strong>Figure 3b</strong>. <em>How often each type of actor is named in each type of document. Rows are actor types, columns document types; a cell counts the documents of that type naming an actor of that type.</em></p>
+<div id="fig-actors" class="fig2-host"></div><p class="figure-caption"><strong>Figure 4</strong>. Actors named in each type of document, and what those documents say they do.</p>
+<h3>Extracting and comparing relations</h3>
+<p>Combining distant reading <span class="cite-grp" data-keys="morettiDistantReading2013"></span> with returns to individual passages, we record conducts, risks, training or mitigation methods, benchmarks and associated actors. The detailed dataset contains an initial model reading and a subsequent GPT-5.4 reading, with harmonised names and categories. The later retrieval procedure combines lexical and semantic search over page-bounded passages; GPT-5.4 extracts candidate relations with page references, complemented by a scan of known names. The analyst sets the distinctions and returns to source wording when assessing claims, including the difference between authoring a benchmark and being commissioned to evaluate a model.</p>
+<p>A held-out evaluation of 480 queries returned the reference page among the first five results for 84.2% of queries and the first ten for 89.6%. These scores concern retrieval, not extraction accuracy; the reference set favours identifiable names and native PDFs, so its performance cannot be assumed for every genre. Numerical summaries count stored item identifiers, combining actor categories across their records. An item may have both internal and external attributions; unspecified Other, Multiple and unknown categories do not establish an identifiable external contribution. Some visualisations instead group by company and harmonised label, which explains differences between their totals and identifier counts.</p>
+<p>For comparison with a wider field, searches for alignment, AI safety, red teaming, fairness, explainability, AI ethics and responsible AI organisations yielded 7,377 results, of which 512 directory entries were retained. English-, German- and Danish-language queries targeted the United States, United Kingdom, Germany and Denmark. Normalised names, acronyms and recorded aliases were matched against the detailed extraction; repeated entries and representative names prevent treating matches as a count of distinct participating organisations. Both this directory and the company corpus are geographically uneven, while extraction and matching can miss or misassign relations. Absence from these documents therefore remains a question of documentary visibility, which cannot distinguish non-participation from non-disclosure.</p>
+<figure class="fig2" id="fig-method-5"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <style>
+      .box { fill: #f4f1ea; stroke: #cfc7b8; stroke-width: 1; }
+      .box-out { fill: #fffdf8; stroke: #cfc7b8; stroke-width: 1; }
+      .step { font-size: 12px; fill: #8a8377; letter-spacing: .08em; }
+      .head { font-size: 14px; font-weight: bold; fill: #23211e; }
+      .body { font-size: 11.5px; fill: #4a463f; }
+      .tool { font-size: 11px; fill: #7a736a; font-style: italic; }
+      .flow { stroke: #a9a093; stroke-width: 1.3; fill: none; marker-end: url(#m); }
+      .title { font-size: 22px; fill: #23211e; }
+      .sub { font-size: 13.5px; fill: #6f6a62; font-style: italic; }
+      .count { font-size: 11.5px; fill: #3f6fb5; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a9a093"/>
+    </marker>
+  </defs>
+
+  <text class="title" x="480" y="38" text-anchor="middle">From seed URLs to analysis</text>
+  <text class="sub" x="480" y="60" text-anchor="middle">the empirical procedure, and what each step produced</text>
+
+  <!-- 1 -->
+  <rect class="box" x="40" y="88" width="270" height="96" rx="6"/>
+  <text class="step" x="56" y="110">STEP 1</text>
+  <text class="head" x="56" y="130">Document selection from seed URLs</text>
+  <text class="body" x="56" y="150">Company index pages: newsrooms, transparency</text>
+  <text class="body" x="56" y="166">hubs, model-card indexes, safety and policy</text>
+  <text class="count" x="56" y="180">28 seeds · 8 companies</text>
+
+  <!-- 2 -->
+  <rect class="box" x="345" y="88" width="270" height="96" rx="6"/>
+  <text class="step" x="361" y="110">STEP 2</text>
+  <text class="head" x="361" y="130">Crawling and capture</text>
+  <text class="body" x="361" y="150">Playwright renders each page, follows pagination</text>
+  <text class="body" x="361" y="166">and "load more"; PDFs kept as published, pages</text>
+  <text class="body" x="361" y="180">rendered to paginated PDF + Markdown</text>
+
+  <!-- 3 -->
+  <rect class="box" x="650" y="88" width="270" height="96" rx="6"/>
+  <text class="step" x="666" y="110">STEP 3</text>
+  <text class="head" x="666" y="130">Manual categorisation</text>
+  <text class="body" x="666" y="150">≈5 documents per company read closely to build</text>
+  <text class="body" x="666" y="166">the taxonomy; every document assigned a type</text>
+  <text class="count" x="666" y="180">1,318 links → 515 documents · 21 types</text>
+
+  <path class="flow" d="M310,136 L343,136"/>
+  <path class="flow" d="M615,136 L648,136"/>
+  <path class="flow" d="M785,184 L785,214"/>
+
+  <!-- 4 -->
+  <rect class="box" x="40" y="214" width="880" height="166" rx="6"/>
+  <text class="step" x="56" y="236">STEP 4</text>
+  <text class="head" x="56" y="256">Deriving data points with retrieval-augmented reading</text>
+
+  <rect class="box-out" x="56" y="270" width="270" height="94" rx="5"/>
+  <text class="head" x="72" y="290" font-size="12.5">Index</text>
+  <text class="body" x="72" y="309">Passages bounded by the page they sit on</text>
+  <text class="body" x="72" y="325">BM25 (exact names) + dense embeddings</text>
+  <text class="body" x="72" y="341">(descriptive questions)</text>
+  <text class="count" x="72" y="357">752 documents · 35,265 passages</text>
+
+  <rect class="box-out" x="345" y="270" width="270" height="94" rx="5"/>
+  <text class="head" x="361" y="290" font-size="12.5">Retrieve, then read</text>
+  <text class="body" x="361" y="309">One query per data point, inside one document:</text>
+  <text class="body" x="361" y="325">conducts, risks, training, benchmarks, evaluators,</text>
+  <text class="body" x="361" y="341">actors, thresholds. The model sees only those</text>
+  <text class="body" x="361" y="357">passages, each labelled with its page.</text>
+
+  <rect class="box-out" x="650" y="270" width="270" height="94" rx="5"/>
+  <text class="head" x="666" y="290" font-size="12.5">Exhaustive scan</text>
+  <text class="body" x="666" y="309">Every page scanned for every actor, benchmark</text>
+  <text class="body" x="666" y="325">and method name in the project vocabulary,</text>
+  <text class="body" x="666" y="341">to bound what ranking could have missed</text>
+  <text class="count" x="666" y="357">43,686 term-page mentions</text>
+
+  <path class="flow" d="M326,317 L343,317"/>
+  <path class="flow" d="M615,317 L648,317"/>
+  <path class="flow" d="M480,380 L480,410"/>
+
+  <!-- 5 -->
+  <rect class="box" x="40" y="410" width="880" height="300" rx="6"/>
+  <text class="step" x="56" y="432">STEP 5</text>
+  <text class="head" x="56" y="452">Analyses</text>
+
+  <rect class="box-out" x="56" y="466" width="418" height="108" rx="5"/>
+  <text class="head" x="72" y="486" font-size="12.5">Enrolment across the stack</text>
+  <text class="body" x="72" y="505">For every normalised actor, whether it appears in the definition of a</text>
+  <text class="body" x="72" y="521">conduct or risk, in data curation, in training, in benchmarking or as an</text>
+  <text class="body" x="72" y="537">evaluator — and how: citation, normative influence, authorship, red</text>
+  <text class="body" x="72" y="553">teaming, evaluation, partnership, grant.</text>
+  <text class="tool" x="72" y="569">→ Figures 6a, 6b, 7, 8 and the stack view</text>
+
+  <rect class="box-out" x="486" y="466" width="418" height="108" rx="5"/>
+  <text class="head" x="502" y="486" font-size="12.5">Exclusion</text>
+  <text class="body" x="502" y="505">A directory of 512 value-alignment organisations, built from validated</text>
+  <text class="body" x="502" y="521">search results in three languages and four countries, compared against</text>
+  <text class="body" x="502" y="537">the actor names in the corpus to ask which kinds of actor cross into</text>
+  <text class="body" x="502" y="553">company documents and which remain outside.</text>
+  <text class="tool" x="502" y="569">→ "Who is left out?"</text>
+
+  <rect class="box-out" x="56" y="586" width="270" height="108" rx="5"/>
+  <text class="head" x="72" y="606" font-size="12.5">Discourse per type</text>
+  <text class="body" x="72" y="625">Noun chunks scored by log-odds with an</text>
+  <text class="body" x="72" y="641">informative prior, against the rest of the</text>
+  <text class="body" x="72" y="657">corpus; concepts only, and only where</text>
+  <text class="body" x="72" y="673">more than one company uses them.</text>
+  <text class="tool" x="72" y="689">→ Figure 2</text>
+
+  <rect class="box-out" x="345" y="586" width="270" height="108" rx="5"/>
+  <text class="head" x="361" y="606" font-size="12.5">Document network</text>
+  <text class="body" x="361" y="625">An edge where one document names</text>
+  <text class="body" x="361" y="641">another by title or links to it; links a</text>
+  <text class="body" x="361" y="657">company repeats across its own pages</text>
+  <text class="body" x="361" y="673">are discounted as navigation.</text>
+  <text class="tool" x="361" y="689">→ Figure 3</text>
+
+  <rect class="box-out" x="634" y="586" width="270" height="108" rx="5"/>
+  <text class="head" x="650" y="606" font-size="12.5">Actors per document type</text>
+  <text class="body" x="650" y="625">The sentence around each actor's name</text>
+  <text class="body" x="650" y="641">read for the relation it states, then</text>
+  <text class="body" x="650" y="657">aggregated to document type. The</text>
+  <text class="body" x="650" y="673">authoring company is not an actor.</text>
+  <text class="tool" x="650" y="689">→ Figure 4</text>
 </svg>
-</figure><p class="figure-caption"><strong>Figure 5.</strong> <em>Collection and analysis. The archive, detailed extraction, expanded genre analysis and retrieval-grounded reading have separate scopes.</em></p>
+</figure><p class="figure-caption"><strong>Figure 5</strong>. <em>Method diagram</em>.</p>
 <h2 id="actors-and-values">Actors and values</h2>
-<p>The actors named in alignment documents are more heterogeneous than a distinction between companies and “stakeholders” might suggest. Alongside model teams and company researchers, there are government agencies, universities, cybersecurity firms, domain experts, data workers and consultation participants. Civil society includes advocacy organisations, foundations and think tanks, as well as organisations whose principal trade is alignment research. Apollo Research and METR, for example, appear in relation to the formulation and evaluation of prospective model behaviour.</p>
+<p>The actors named in alignment documents are more heterogeneous than a distinction between companies and “stakeholders” might suggest. Alongside model teams and researchers, one finds government agencies, universities, cybersecurity firms, domain experts, data workers and consultation participants. Civil society, too, encompasses several forms of involvement: advocacy organisations and foundations appear alongside organisations whose principal trade is alignment research, including Apollo Research and METR. What distinguishes these actors is partly the kind of normative problem they are equipped to formulate and the means by which they make it available to others.</p>
 <article class="grid-block" id="block-conducts">
       <header class="block-head">
         <h3>Conducts</h3>
         <p class="block-sub">Who specifically defines a conduct? If unknown, who is the author of the document mentioning it?</p>
-        <p class="block-caption">Square colour shows the credited actor type where available, and otherwise the document-author type. A fallback colour does not establish a specific contribution. Select an actor to highlight attributed roles; select again to include other citations.</p>
+        <p class="block-caption">Square colour = <code>specific_risk_conduct_actor_category</code> when explicitly credited; otherwise the author of the source document. Click an actor for AUTHOR; click again (+ cited) to also see items where that actor appears as <code>specific_risk_conduct_actor</code>.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="conducts">
@@ -550,7 +442,7 @@ L 115.736 209.807122
       <header class="block-head">
         <h3>Risks</h3>
         <p class="block-sub">Who specifically defines a risk? If unknown, who is the author of the document mentioning it?</p>
-        <p class="block-caption">Square colour shows the credited actor type where available, and otherwise the document-author type. A fallback colour does not establish a specific contribution. Select an actor to highlight attributed roles; select again to include other citations.</p>
+        <p class="block-caption">Square colour = <code>specific_risk_conduct_actor_category</code> when explicitly credited; otherwise the author of the source document. Click an actor for AUTHOR; click again (+ cited) to also see items where that actor appears as <code>specific_risk_conduct_actor</code>.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="risks">
@@ -560,19 +452,84 @@ L 115.736 209.807122
           <option value="oldest">oldest</option>
         </select></label></div>
       <div class="row-grid" id="grid-risks"></div>
-    </article><p class="figure-caption"><strong>Figure 6a and 6b.</strong> <em>Ideal conducts, risks and the actors credited with defining them in the detailed extraction. The figures allow each attribution to be read alongside its source.</em></p>
-<p>The values to which these actors are attached differ in how they become actionable. Safety, helpfulness, honesty and compliance recur among ideal conducts, alongside political neutrality, factuality, personality and diversity. Risks include cybersecurity, harmful content, chemical, biological, radiological and nuclear (CBRN) threats, privacy, deception and bias. The distinction is not that some values are political and others are settled. Cybersecurity and biosecurity also involve judgements about acceptable uses and distributions of harm. Rather, some risks are more readily formulated as tasks with observable outcomes, while other norms depend more visibly on the circumstances and standpoint from which an answer is judged.</p>
-<p>This has consequences for whose expertise is cited. Governmental instruments supply obligations and risk vocabularies; academics supply concepts and tests; security specialists devise threat scenarios. The documents also refer to White House commitments and the Bletchley Declaration as sources of frontier-risk concerns. These references record the instruments invoked at the time of publication, not necessarily their current legal status. A company's use of such a vocabulary still leaves open how it becomes a refusal rule, training example or evaluation threshold.</p>
-<p>Apollo Research illustrates a more specific kind of definitional work. In OpenAI's o1 system card, scheming is described as covertly pursuing goals that diverge from those of developers or users, and Apollo provides scenarios through which such behaviour can be tested <span class="cite-grp" data-keys="openaiOpenAIO1System2024"></span>. Its evaluations also appear in the GPT-4o system card <span class="cite-grp" data-keys="openaiGPT4oSystemCard2024"></span>. Here, the organisation contributes to the description of the problem as well as to its evaluation. A prospective risk acquires a name, a set of circumstances and an observable response.</p>
-<p>We call this a form of <em>ideation</em>: the formulation of possible model conduct in terms that others can incorporate into alignment. The power involved is relational. It depends on whether a company adopts a proposed scenario, definition or test, and on what it does with the result. The documents show that some alignment research organisations occupy more than one of these positions. They do not show that those organisations can compel the company to act, or that their definitions displace every competing account of risk.</p>
-<p>Public-consultation organisations contribute another kind of expertise. They convene participants and translate discussion into material that researchers can use. Ovadya describes the provision of deliberative expertise to institutions as “democracy-as-a-service” <span class="cite-grp" data-keys="ovadyaReimaginingDemocracyAI2023"></span>. In alignment, the promise is to widen the judgements available for defining model behaviour. Yet the STELA and Collective Constitutional AI examples also show that participant selection, prompts and the curation of principles condition what can enter training. To understand the resulting participation, one must follow what happens to these contributions after the consultation ends.</p>
+    </article><p class="figure-caption"><strong>Figure 6a and 6b</strong>. <em>Conducts, risks and the actors that participate in defining them.</em></p>
+<table>
+<thead>
+<tr>
+<th>Ideal conduct</th>
+<th style="text-align: right;">Number</th>
+<th>Risk</th>
+<th style="text-align: right;">Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Safety</td>
+<td style="text-align: right;">34</td>
+<td>Cybersecurity</td>
+<td style="text-align: right;">96</td>
+</tr>
+<tr>
+<td>Helpfulness</td>
+<td style="text-align: right;">18</td>
+<td>Harmful content</td>
+<td style="text-align: right;">93</td>
+</tr>
+<tr>
+<td>Honesty</td>
+<td style="text-align: right;">17</td>
+<td>CBRN</td>
+<td style="text-align: right;">70</td>
+</tr>
+<tr>
+<td>Compliance</td>
+<td style="text-align: right;">13</td>
+<td>Privacy</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td>Political neutrality</td>
+<td style="text-align: right;">10</td>
+<td>General harms</td>
+<td style="text-align: right;">58</td>
+</tr>
+<tr>
+<td>Appropriate harmlessness</td>
+<td style="text-align: right;">9</td>
+<td>Jailbreaking</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr>
+<td>Factuality</td>
+<td style="text-align: right;">7</td>
+<td>Deception</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr>
+<td>Personality</td>
+<td style="text-align: right;">6</td>
+<td>Bias</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr>
+<td>Diversity</td>
+<td style="text-align: right;">6</td>
+<td>Misalignment</td>
+<td style="text-align: right;">41</td>
+</tr>
+</tbody>
+</table>
+<p class="figure-caption"><strong>Table 2.</strong> Most frequent categories among the harmonised ideal conducts and risks.</p>
+<p>Safety, helpfulness, honesty and compliance recur among ideal conducts, alongside political neutrality, factuality, personality and diversity; risks include cybersecurity, harmful content, chemical, biological, radiological and nuclear (CBRN) threats, privacy, deception and bias. The distinction is not between political values and settled technical matters, since cybersecurity and biosecurity also involve judgements about acceptable uses and distributions of harm. Rather, some risks more readily lend themselves to tasks with observable outcomes, while other norms depend more visibly on the circumstances and standpoint from which an answer is judged. These differences matter for whose expertise can be incorporated into alignment: governmental instruments supply obligations and risk vocabularies, academics supply concepts and tests, and security specialists devise threat scenarios.</p>
+<p>Apollo Research illustrates how these capacities can come together. In OpenAI's o1 system card, scheming is described as covertly pursuing goals that diverge from those of developers or users; Apollo supplies scenarios through which such behaviour can be tested <span class="cite-grp" data-keys="openaiOpenAIO1System2024"></span>, and its evaluations also appear in the GPT-4o system card <span class="cite-grp" data-keys="openaiGPT4oSystemCard2024"></span>. Here, the organisation contributes to the description of the problem as well as its evaluation: a prospective risk acquires a name and circumstances in which it might become observable. This is what we mean by <em>ideation</em>, whose power depends on whether a company adopts a proposed definition or test and on what it subsequently does with the result.</p>
+<p>Public-consultation organisations offer another route into this process, convening participants and translating discussion into material researchers can use. Ovadya calls the provision of deliberative expertise to institutions “democracy-as-a-service” <span class="cite-grp" data-keys="ovadyaReimaginingDemocracyAI2023"></span>. Its promise in alignment is to widen the judgements available for defining model behaviour; yet STELA and Collective Constitutional AI also show how participant selection, prompts and the curation of principles condition what can enter training. To understand the resulting participation, one must follow these contributions beyond the consultation itself.</p>
 <h2 id="training-and-evaluating">Training and evaluating</h2>
-<p>Training is where a norm acquires a particular weight in model behaviour. An example can be included or discarded, a preference can count more or less in optimisation, and a safeguard can be adjusted to tolerate or prevent certain responses. These decisions require access to model development and its infrastructure. The documentary record is correspondingly concentrated on company actors: 740 of 787 training and mitigation items, or 94.0%, name at least one actor categorised as internal. An identifiable external actor is credited in 80 items, or 10.2%. These categories overlap, as external contributions may be incorporated alongside company work.</p>
+<p>Once a value is specified, training determines how it bears upon model behaviour: examples can be included or discarded, preferences can count more or less in optimisation, and safeguards can tolerate or prevent particular responses. The documentary record is correspondingly concentrated on company actors, with 740 of 787 training and mitigation items (94.0%) naming at least one internal actor, against 80 (10.2%) with an identifiable external category. These attributions overlap, as external contributions can be incorporated alongside company work.</p>
 <article class="grid-block" id="block-training">
       <header class="block-head">
         <h3>Training</h3>
         <p class="block-sub">Which training methods are used for each risk or conduct category?</p>
-        <p class="block-caption">Rows group conduct and risk categories; squares represent training or mitigation methods. Colour shows the named actor category. Select an actor to highlight attributed roles, then select again to include other citations. An attribution may concern data or advice as well as implementation.</p>
+        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = training methods. Square colour = type of the named <code>risk_conduct_training_actor</code> (who actually did the training). Click for AUTHOR; click again (+ cited) for any other actor in the row — including the document's authors.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="training">
@@ -582,39 +539,13 @@ L 115.736 209.807122
           <option value="oldest">oldest</option>
         </select></label></div>
       <div class="row-grid" id="grid-training"></div>
-    </article><p class="figure-caption"><strong>Figure 7.</strong> <em>Training and mitigation methods and their attributed actors, grouped by company. The source passages distinguish contributing data or expertise from carrying out an intervention.</em></p>
-<p>One reason for this concentration is the control companies retain over data mixtures, training objectives and production systems. External expertise may contribute to a training example without extending to the decisions about how it is weighted or what follows from a failure. This interpretation is consistent with work on corporate control of AI research resources <span class="cite-grp" data-keys="whittaker2021SteepCost"></span> and on the organisational conditions of red teaming <span class="cite-grp" data-keys="renOrganizationMattersQualitative2025"></span>. The count itself establishes attributed involvement, however; it cannot reveal who prevailed in an internal disagreement.</p>
-<p>Benchmarking presents a different distribution. An identifiable external category is associated with 337 of 880 benchmark items, or 38.3%. Academic or research centres are credited in 174 items, alignment research organisations in 101, and red-teaming or cybersecurity companies in 29. Actor categories can co-occur within an item. The difference from training suggests a wider opening for external contributions to evaluation, although the corpus cannot establish how much of that difference reflects more complete attribution of benchmark authors.</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th style="text-align: right;">Distinct items</th>
-<th style="text-align: right;">With an internal actor</th>
-<th style="text-align: right;">With an identifiable external actor</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Training and mitigation</td>
-<td style="text-align: right;">787</td>
-<td style="text-align: right;">740 (94.0%)</td>
-<td style="text-align: right;">80 (10.2%)</td>
-</tr>
-<tr>
-<td>Benchmarking</td>
-<td style="text-align: right;">880</td>
-<td style="text-align: right;">509 (57.8%)</td>
-<td style="text-align: right;">337 (38.3%)</td>
-</tr>
-</tbody>
-</table>
-<p class="figure-caption"><strong>Table 2.</strong> <em>Attributions in the detailed extraction, counted by stored item identifier. Columns overlap; unspecified categories do not establish external involvement. Items are neither unique techniques across the industry nor counts of individual decisions.</em></p>
+    </article><p class="figure-caption"><strong>Figure 7</strong>. <em>The training of good conducts and risk mitigation strategies and the actors involved in it, per company.</em></p>
+<p>One reason for this concentration is the control companies retain over data mixtures, training objectives and production systems: external expertise can inform an example without extending to decisions about its weight or the consequences of failure. This interpretation is consistent with work on corporate control of AI research resources <span class="cite-grp" data-keys="whittaker2021SteepCost"></span> and the organisational conditions of red teaming <span class="cite-grp" data-keys="renOrganizationMattersQualitative2025"></span>. Benchmarking offers a wider opening, with identifiable external categories associated with 337 of 880 items (38.3%); academic or research centres are credited in 174 items, alignment research organisations in 101, and red-teaming or cybersecurity companies in 29.</p>
 <article class="grid-block" id="block-benchmark">
       <header class="block-head">
         <h3>Benchmarking</h3>
         <p class="block-sub">Which benchmarks are used for each risk or conduct category?</p>
-        <p class="block-caption">Rows group conduct and risk categories; squares represent benchmarks. Colour shows the attributed benchmark-author category. Select an actor to highlight attributed roles, then select again to include other citations. The author of a test need not have evaluated the model directly.</p>
+        <p class="block-caption">Rows = <code>risk_conduct_category</code>; squares = benchmarks. Square colour = type of the named <code>risk_conduct_benchmark_author</code>. Click for AUTHOR; click again (+ cited) for any other actor in the row — the document's authors, training actors and explicit credits.</p>
       </header>
       <div class="sort-bar"><label>Sort categories
         <select data-sort-for="benchmark">
@@ -624,10 +555,10 @@ L 115.736 209.807122
           <option value="oldest">oldest</option>
         </select></label></div>
       <div class="row-grid" id="grid-benchmark"></div>
-    </article><p class="figure-caption"><strong>Figure 8.</strong> <em>Benchmarks and their attributed authors, grouped by company. Authoring a benchmark is distinguished from being commissioned to evaluate a model.</em></p>
-<p>A benchmark offers a relatively portable means of intervention. An external actor can devise a test of factuality, bias or a security capability without controlling the company's training process. If adopted, the test establishes one way of recognising whether a norm has been honoured. The company can nevertheless choose whether to use it, how to interpret the result and whether a failure warrants a change. This helps explain why a larger set of credited evaluators need not imply a comparable redistribution of decision-making. The institutional conditions of oversight remain consequential <span class="cite-grp" data-keys="raji2022OutsiderOversight"></span>.</p>
+    </article><p class="figure-caption"><strong>Figure 8</strong>. <em>The benchmarking of good conducts and risk mitigation strategies and the actors proposing it, per company.</em></p>
+<p>A benchmark can travel between models and documents because its author need not control the company's training process to propose a test of factuality, bias or a security capability. If adopted, it establishes one way of recognising whether a norm has been honoured; the company nevertheless retains choices about its use, interpretation and consequences. The larger set of credited evaluators thus need not imply a comparable redistribution of decision-making, while differences in disclosure may also make benchmark authors more visible than contributors to training. As the audit literature suggests, the institutional conditions under which evaluation becomes consequential remain part of the problem <span class="cite-grp" data-keys="raji2022OutsiderOversight"></span>.</p>
 <h2 id="who-appears-across-the-stack">Who appears across the stack</h2>
-<p>The harmonised mapping in Figure 9 contains 537 actor names: 37 appear in conduct definition, 167 in risk definition, 160 in training and 278 in benchmarking. Of the 537, 456, or 84.9%, appear in only one component; 61 appear in two, 16 in three and four in all four. These counts concern names associated with a specific alignment role in the harmonised mapping; they do not include every name mentioned in the archive. It nevertheless shows how much the account of participation changes when continuing involvement becomes the object of enquiry.</p>
+<p>The harmonised mapping contains 537 actor names: 37 appear in conduct definition, 167 in risk definition, 160 in training and 278 in benchmarking. Of these, 456 (84.9%) appear in only one component; 61 appear in two, 16 in three and four in all four. These are names associated with particular alignment roles, rather than every name mentioned in the archive, but their distribution suggests how much an account of participation changes when continuing involvement becomes the object of enquiry.</p>
 <article class="grid-block" id="block-stacks">
       <header class="block-head">
         <h3>Stack view</h3>
@@ -786,33 +717,32 @@ L 115.736 209.807122
 
       <svg id="stack-svg"></svg>
       <div id="stack-tooltip"></div>
-    </article><p class="figure-caption"><strong>Figure 9.</strong> <em>Actor names across conduct definition, risk definition, training and benchmarking in the harmonised mapping. Presence records an attributed role, not decision-making authority.</em></p>
-<p>Some external actors connect several components through specialised work. Apollo Research, METR and SecureBio appear in relation to risk definition, training-related contributions and benchmarking. The Collective Intelligence Project connects conducts, risks and training through a different route, involving the elicitation of public input. Such cases indicate that a contribution can extend beyond an isolated evaluation or consultation. They also caution against treating “external participation” as one institutional arrangement: the relevant relations depend on what an actor is invited or equipped to do.</p>
-<p>The directory comparison introduces another boundary. Twenty-four of its 512 entries, or 4.7%, match names in the detailed extraction. Twenty matching entries are based in the United States, three in the United Kingdom and one in Switzerland. These are entry counts, including repeated organisations and recorded aliases. They show a geographically concentrated set of documentary connections, rather than a population estimate of inclusion in alignment.</p>
+    </article><p class="figure-caption"><strong>Figure 9.</strong> <em>Mentions of each type of actor across alignment stages.</em></p>
+<p>Some external actors connect several components through specialised work. Apollo Research, METR and SecureBio appear in risk definition, training-related contributions and benchmarking; the Collective Intelligence Project connects conducts, risks and training through the elicitation of public input. Such cases caution against treating external participation as one institutional arrangement, since the relevant relations depend on what an actor is invited or equipped to do.</p>
+<p>The directory comparison introduces a geographical boundary. The matching data yield 24 entries out of 512 (4.7%): twenty from the United States, three from the United Kingdom and one from Switzerland. The original figure annotation states 26, but its plotted matching total is 24; the latter is the count used here. Repeated organisations and aliases also mean that these are entry counts, rather than a population estimate of inclusion in alignment.</p>
 <article class="grid-block" id="block-alluvial">
       <header class="block-head">
-        <h3>Which directory entries match the detailed extraction?</h3>
-        <p class="block-sub">Name matches between the wider alignment directory and the 184-document extraction.</p>
+        <h3>Who reaches the training documents?</h3>
+        <p class="block-sub">Which actors from the wider alignment ecosystem are — and are not — actually named in companies' AI training documents.</p>
         <p class="block-caption">
           Each ribbon is one of the
-          <strong id="alluvial-total">512</strong> entries catalogued in the
+          <strong id="alluvial-total">512</strong> actors catalogued in the
           alignment-actor directory, flowing
-          <em>Country&nbsp;→ Type&nbsp;→ Name match in the detailed extraction</em>.
-          Matches use names, acronyms and recorded aliases. Ribbons are coloured by country;
-          hover a band or node for details, or click a node to isolate its flows.
-          <strong id="alluvial-matched">24</strong> entries match. Duplicate entries and aliases
-          mean that this is not a count of distinct participating organisations.
+          <em>Country&nbsp;→ Type&nbsp;→ Mentioned in AI training documents</em>.
+          &ldquo;Mentioned&rdquo; means the actor is cited by name somewhere in
+          the model-card / system-card corpus. Ribbons are coloured by country;
+          hover a band or node for the actor count, click a node to isolate its
+          flows. Only
+          <strong id="alluvial-matched">26</strong> reach the training corpus.
         </p>
       </header>
       <div id="alluvial" class="alluvial-host"></div>
-    </article><p class="figure-caption"><strong>Figure 10.</strong> <em>Connections between the wider directory and the detailed extraction. Each ribbon represents one directory entry, linking country, organisational type and a name match. Twenty-four entries match; duplicate entries and aliases prevent interpreting this as a count of distinct participating organisations.</em></p>
-<p>The matching names include US research centres and alignment organisations, among them METR, FAR.AI, Redwood Research, the Alignment Research Center and the Center for AI Safety. The UK AI Safety Institute and the International Organization for Standardization exemplify other routes into the documents, through evaluation and standardisation. Conversely, none of the directory's 117 German or 54 Danish entries matches the detailed extraction. This does not show that organisations in those countries have never worked with a developer. It identifies a limit to the geographical range made visible by this collection and matching procedure.</p>
-<p>The distinction matters particularly for civil society. No entry categorised as a general advocacy organisation or foundation matches, but the directory does contain a match for the Electronic Frontier Foundation under legal advocacy. The categories therefore support a more qualified account than the absence of civil society altogether. Different forms of advocacy, consultation and technical evaluation obtain different kinds of documentary recognition. A larger or differently sampled corpus could reveal other relations; within this one, the visible routes remain selective.</p>
+    </article><p class="figure-caption"><strong>Figure 10.</strong> <em>Who makes it into the documents? Which actors from the wider alignment ecosystem are named in companies' AI training documents. Each ribbon is one of the 512 actors catalogued in the alignment-actor directory, flowing Country → Type → Mentioned in AI training documents. “Mentioned” means the actor is cited by name in our document corpus. Ribbons are coloured by country. Only 26 reach the training corpus.</em></p>
+<p>The matches include METR, FAR.AI, Redwood Research, the Alignment Research Center and the Center for AI Safety; the UK AI Safety Institute and the International Organization for Standardization exemplify routes through public evaluation and standardisation. None of the 117 German or 54 Danish entries matches the detailed extraction, which marks a limit to the geographical range this collection makes visible. Nor should the absence of general advocacy entries be mistaken for the absence of civil society: the Electronic Frontier Foundation matches under legal advocacy. These distinctions leave room for relations that a larger or differently sampled corpus might disclose, while indicating how selective the visible routes into alignment remain.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This article examined which actors are publicly enrolled in value alignment and how their attributed roles differ across its components. Looking across the stack qualifies what participation in any one exercise can tell us. A public may contribute to a principle without appearing in its subsequent implementation. A researcher may author a benchmark without deciding how a company responds to the result. In the detailed extraction, identifiable external contributions are considerably more common in benchmarking than in training; in the harmonised actor mapping, most actors appear in one component only.</p>
-<p>These findings speak to the organisation of governance within technologies that increasingly mediate public access to information. Norms enter model behaviour through decisions about definitions, examples, optimisation and testing. The actors recognised at one of these points need not retain a role at the next. In this sense, an account of inclusive design must also examine how the conditions of participation are distributed across the processes by which information systems are built.</p>
-<p>Alignment research organisations sometimes connect positions otherwise occupied separately. We describe their capacity to formulate prospective conduct as a testable alignment problem as ideation power. This interpretation helps explain why the ability to anticipate and model a risk may secure a place in company documentation without formal regulatory authority. It also leaves open the question that the documents cannot resolve: how those contributions fare when they conflict with a company's priorities or with other understandings of harm.</p>
-<p>A further institutional question concerns who should convene deliberation about generally deployed models. Company consultations can elicit judgements that developers would otherwise miss. Yet the choice of participants, questions and uses of their contributions remains consequential. Public institutions could commission deliberation and evaluation under conditions that make the remit, evidence and company response answerable to a broader constituency. The point would be to connect participation to the decisions it is meant to inform, including decisions about contested values that cannot be settled by a benchmark. What this study offers is a way of locating where those connections are publicly made, and where they cease to be visible.</p>
+<p>This article examined which actors are publicly enrolled in value alignment and how their attributed roles differ across its components. Looking across the stack qualifies what participation in any one exercise can tell us: a public may contribute to a principle without appearing in its implementation, while a researcher may author a benchmark without deciding what follows from its result. Identifiable external contributions are considerably more common in benchmarking than in training; most actors in the harmonised mapping appear in one component only.</p>
+<p>The implication for inclusive design concerns the passage between these sites. As norms become definitions, examples and tests, the people recognised at one point need not retain a role at the next; the organisation of participation is therefore part of how technologies that mediate public information acquire their normative dispositions. Alignment research organisations sometimes connect positions otherwise occupied separately, offering a capacity to formulate prospective conduct as a testable problem. We describe this as ideation power, while leaving open what the documents cannot resolve: how those contributions fare when they conflict with company priorities or other understandings of harm.</p>
+<p>A further question concerns who should convene deliberation about generally deployed models. Company consultations can elicit judgements that developers would otherwise miss, but their remit, participants and consequences remain subject to company choices. Public institutions could commission deliberation and evaluation under conditions that make the evidence and company response answerable to a broader constituency, including on contested values that cannot be settled by a benchmark. The purpose would be to connect participation to the decisions it is meant to inform; this study offers a way of locating where such connections are publicly made, and where they cease to be visible.</p>
 </section>
 
 <section id="references" class="prose">
@@ -858,11 +788,11 @@ L 115.736 209.807122
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
-<script src="app.js?v=20260921editorial"></script>
-<script src="stacks.js?v=20260921editorial"></script>
-<script src="alluvial.js?v=20260921editorial"></script>
-<script src="comments-config.js?v=20260921editorial"></script>
-<script src="refs-comments.js?v=20260921editorial"></script>
-<script src="figures2.js?v=20260921editorial"></script>
+<script src="app.js?v=20260921flow"></script>
+<script src="stacks.js?v=20260921flow"></script>
+<script src="alluvial.js?v=20260921flow"></script>
+<script src="comments-config.js?v=20260921flow"></script>
+<script src="refs-comments.js?v=20260921flow"></script>
+<script src="figures2.js?v=20260921flow"></script>
 </body>
 </html>
