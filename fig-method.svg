@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1006" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
   <defs>
     <style>
       .box { fill: #f4f1ea; stroke: #cfc7b8; stroke-width: 1; }
@@ -17,109 +17,116 @@
     </marker>
   </defs>
 
-  <text class="title" x="480" y="38" text-anchor="middle">From seed URLs to analysis</text>
-  <text class="sub" x="480" y="60" text-anchor="middle">the empirical procedure, and what each step produced</text>
+  <text class="title" x="480" y="40" text-anchor="middle">From seed URLs to analysis</text>
+  <text class="sub" x="480" y="63" text-anchor="middle">the empirical procedure, and what each step produced</text>
 
   <!-- 1 -->
-  <rect class="box" x="40" y="88" width="270" height="96" rx="6"/>
-  <text class="step" x="56" y="110">STEP 1</text>
-  <text class="head" x="56" y="130">Document selection from seed URLs</text>
-  <text class="body" x="56" y="150">Company index pages: newsrooms, transparency</text>
-  <text class="body" x="56" y="166">hubs, model-card indexes, safety and policy</text>
-  <text class="count" x="56" y="180">28 seeds · 8 companies</text>
+  <rect class="box" x="40" y="92" width="272" height="150" rx="6"/>
+  <text class="step" x="62" y="120">STEP 1</text>
+  <text class="head" x="62" y="142">Document selection from seed URLs</text>
+  <text class="body" x="62" y="166">Company index pages: newsrooms,</text>
+  <text class="body" x="62" y="183">transparency hubs, model-card indexes,</text>
+  <text class="body" x="62" y="200">safety and policy pages</text>
+  <text class="count" x="62" y="220">28 seeds · 8 companies</text>
 
   <!-- 2 -->
-  <rect class="box" x="345" y="88" width="270" height="96" rx="6"/>
-  <text class="step" x="361" y="110">STEP 2</text>
-  <text class="head" x="361" y="130">Crawling and capture</text>
-  <text class="body" x="361" y="150">Playwright renders each page, follows pagination</text>
-  <text class="body" x="361" y="166">and "load more"; PDFs kept as published, pages</text>
-  <text class="body" x="361" y="180">rendered to paginated PDF + Markdown</text>
+  <rect class="box" x="344" y="92" width="272" height="150" rx="6"/>
+  <text class="step" x="366" y="120">STEP 2</text>
+  <text class="head" x="366" y="142">Crawling and capture</text>
+  <text class="body" x="366" y="166">Playwright renders each page, follows</text>
+  <text class="body" x="366" y="183">pagination and "load more"; PDFs kept</text>
+  <text class="body" x="366" y="200">as published, pages rendered to</text>
+  <text class="body" x="366" y="217">paginated PDF + Markdown</text>
 
   <!-- 3 -->
-  <rect class="box" x="650" y="88" width="270" height="96" rx="6"/>
-  <text class="step" x="666" y="110">STEP 3</text>
-  <text class="head" x="666" y="130">Manual categorisation</text>
-  <text class="body" x="666" y="150">≈5 documents per company read closely to build</text>
-  <text class="body" x="666" y="166">the taxonomy; every document assigned a type</text>
-  <text class="count" x="666" y="180">1,318 links → 515 documents · 21 types</text>
+  <rect class="box" x="648" y="92" width="272" height="150" rx="6"/>
+  <text class="step" x="670" y="120">STEP 3</text>
+  <text class="head" x="670" y="142">Manual categorisation</text>
+  <text class="body" x="670" y="166">≈5 documents per company read closely</text>
+  <text class="body" x="670" y="183">to build the taxonomy; every document</text>
+  <text class="body" x="670" y="200">assigned a type</text>
+  <text class="count" x="670" y="220">1,318 links → 515 documents · 21 types</text>
 
-  <path class="flow" d="M310,136 L343,136"/>
-  <path class="flow" d="M615,136 L648,136"/>
-  <path class="flow" d="M785,184 L785,214"/>
+  <path class="flow" d="M313,167 L342,167"/>
+  <path class="flow" d="M617,167 L646,167"/>
+  <path class="flow" d="M784,242 L784,274"/>
 
   <!-- 4 -->
-  <rect class="box" x="40" y="214" width="880" height="166" rx="6"/>
-  <text class="step" x="56" y="236">STEP 4</text>
-  <text class="head" x="56" y="256">Deriving data points with retrieval-augmented reading</text>
+  <rect class="box" x="40" y="276" width="880" height="238" rx="6"/>
+  <text class="step" x="64" y="304">STEP 4</text>
+  <text class="head" x="64" y="326">Deriving data points with retrieval-augmented reading</text>
 
-  <rect class="box-out" x="56" y="270" width="270" height="94" rx="5"/>
-  <text class="head" x="72" y="290" font-size="12.5">Index</text>
-  <text class="body" x="72" y="309">Passages bounded by the page they sit on</text>
-  <text class="body" x="72" y="325">BM25 (exact names) + dense embeddings</text>
-  <text class="body" x="72" y="341">(descriptive questions)</text>
-  <text class="count" x="72" y="357">752 documents · 35,265 passages</text>
+  <rect class="box-out" x="64" y="348" width="256" height="142" rx="5"/>
+  <text class="head" x="84" y="376" font-size="12.5">Index</text>
+  <text class="body" x="84" y="398">Passages bounded by the page they</text>
+  <text class="body" x="84" y="415">sit on. BM25 (exact names) + dense</text>
+  <text class="body" x="84" y="432">embeddings (descriptive questions)</text>
+  <text class="count" x="84" y="468">752 documents · 35,265 passages</text>
 
-  <rect class="box-out" x="345" y="270" width="270" height="94" rx="5"/>
-  <text class="head" x="361" y="290" font-size="12.5">Retrieve, then read</text>
-  <text class="body" x="361" y="309">One query per data point, inside one document:</text>
-  <text class="body" x="361" y="325">conducts, risks, training, benchmarks, evaluators,</text>
-  <text class="body" x="361" y="341">actors, thresholds. The model sees only those</text>
-  <text class="body" x="361" y="357">passages, each labelled with its page.</text>
+  <rect class="box-out" x="352" y="348" width="256" height="142" rx="5"/>
+  <text class="head" x="372" y="376" font-size="12.5">Retrieve, then read</text>
+  <text class="body" x="372" y="398">One query per data point, inside one</text>
+  <text class="body" x="372" y="415">document: conducts, risks, training,</text>
+  <text class="body" x="372" y="432">benchmarks, evaluators, actors,</text>
+  <text class="body" x="372" y="449">thresholds. The model sees only those</text>
+  <text class="body" x="372" y="466">passages, each labelled with its page.</text>
 
-  <rect class="box-out" x="650" y="270" width="270" height="94" rx="5"/>
-  <text class="head" x="666" y="290" font-size="12.5">Exhaustive scan</text>
-  <text class="body" x="666" y="309">Every page scanned for every actor, benchmark</text>
-  <text class="body" x="666" y="325">and method name in the project vocabulary,</text>
-  <text class="body" x="666" y="341">to bound what ranking could have missed</text>
-  <text class="count" x="666" y="357">43,686 term-page mentions</text>
+  <rect class="box-out" x="640" y="348" width="256" height="142" rx="5"/>
+  <text class="head" x="660" y="376" font-size="12.5">Exhaustive scan</text>
+  <text class="body" x="660" y="398">Every page scanned for every actor,</text>
+  <text class="body" x="660" y="415">benchmark and method name in the</text>
+  <text class="body" x="660" y="432">project vocabulary, to bound what</text>
+  <text class="body" x="660" y="449">ranking could have missed</text>
+  <text class="count" x="660" y="468">43,686 term-page mentions</text>
 
-  <path class="flow" d="M326,317 L343,317"/>
-  <path class="flow" d="M615,317 L648,317"/>
-  <path class="flow" d="M480,380 L480,410"/>
+  <path class="flow" d="M321,419 L350,419"/>
+  <path class="flow" d="M609,419 L638,419"/>
+  <path class="flow" d="M480,514 L480,546"/>
 
   <!-- 5 -->
-  <rect class="box" x="40" y="410" width="880" height="300" rx="6"/>
-  <text class="step" x="56" y="432">STEP 5</text>
-  <text class="head" x="56" y="452">Analyses</text>
+  <rect class="box" x="40" y="548" width="880" height="428" rx="6"/>
+  <text class="step" x="64" y="576">STEP 5</text>
+  <text class="head" x="64" y="598">Analyses</text>
 
-  <rect class="box-out" x="56" y="466" width="418" height="108" rx="5"/>
-  <text class="head" x="72" y="486" font-size="12.5">Enrolment across the stack</text>
-  <text class="body" x="72" y="505">For every normalised actor, whether it appears in the definition of a</text>
-  <text class="body" x="72" y="521">conduct or risk, in data curation, in training, in benchmarking or as an</text>
-  <text class="body" x="72" y="537">evaluator — and how: citation, normative influence, authorship, red</text>
-  <text class="body" x="72" y="553">teaming, evaluation, partnership, grant.</text>
-  <text class="tool" x="72" y="569">→ Figures 6a, 6b, 7, 8 and the stack view</text>
+  <rect class="box-out" x="64" y="620" width="400" height="164" rx="5"/>
+  <text class="head" x="84" y="648" font-size="12.5">Enrolment across the stack</text>
+  <text class="body" x="84" y="670">For every normalised actor, whether it appears in the</text>
+  <text class="body" x="84" y="687">definition of a conduct or risk, in data curation, in</text>
+  <text class="body" x="84" y="704">training, in benchmarking or as an evaluator — and how:</text>
+  <text class="body" x="84" y="721">citation, normative influence, authorship, red teaming,</text>
+  <text class="body" x="84" y="738">evaluation, partnership, grant.</text>
+  <text class="tool" x="84" y="762">→ Figures 6a, 6b, 7, 8 and the stack view</text>
 
-  <rect class="box-out" x="486" y="466" width="418" height="108" rx="5"/>
-  <text class="head" x="502" y="486" font-size="12.5">Exclusion</text>
-  <text class="body" x="502" y="505">A directory of 512 value-alignment organisations, built from validated</text>
-  <text class="body" x="502" y="521">search results in three languages and four countries, compared against</text>
-  <text class="body" x="502" y="537">the actor names in the corpus to ask which kinds of actor cross into</text>
-  <text class="body" x="502" y="553">company documents and which remain outside.</text>
-  <text class="tool" x="502" y="569">→ "Who is left out?"</text>
+  <rect class="box-out" x="496" y="620" width="400" height="164" rx="5"/>
+  <text class="head" x="516" y="648" font-size="12.5">Exclusion</text>
+  <text class="body" x="516" y="670">A directory of 512 value-alignment organisations, built</text>
+  <text class="body" x="516" y="687">from validated search results in three languages and four</text>
+  <text class="body" x="516" y="704">countries, compared against the actor names in the corpus</text>
+  <text class="body" x="516" y="721">to ask which kinds of actor cross into company documents</text>
+  <text class="body" x="516" y="738">and which remain outside.</text>
+  <text class="tool" x="516" y="762">→ "Who is left out?"</text>
 
-  <rect class="box-out" x="56" y="586" width="270" height="108" rx="5"/>
-  <text class="head" x="72" y="606" font-size="12.5">Discourse per type</text>
-  <text class="body" x="72" y="625">Noun chunks scored by log-odds with an</text>
-  <text class="body" x="72" y="641">informative prior, against the rest of the</text>
-  <text class="body" x="72" y="657">corpus; concepts only, and only where</text>
-  <text class="body" x="72" y="673">more than one company uses them.</text>
-  <text class="tool" x="72" y="689">→ Figure 2</text>
+  <rect class="box-out" x="64" y="808" width="256" height="144" rx="5"/>
+  <text class="head" x="84" y="836" font-size="12.5">Discourse per type</text>
+  <text class="body" x="84" y="858">Noun chunks scored by log-odds with</text>
+  <text class="body" x="84" y="875">an informative prior, against the rest</text>
+  <text class="body" x="84" y="892">of the corpus; concepts only, and only</text>
+  <text class="body" x="84" y="909">where more than one company uses them.</text>
+  <text class="tool" x="84" y="932">→ Figure 2</text>
 
-  <rect class="box-out" x="345" y="586" width="270" height="108" rx="5"/>
-  <text class="head" x="361" y="606" font-size="12.5">Document network</text>
-  <text class="body" x="361" y="625">An edge where one document names</text>
-  <text class="body" x="361" y="641">another by title or links to it; links a</text>
-  <text class="body" x="361" y="657">company repeats across its own pages</text>
-  <text class="body" x="361" y="673">are discounted as navigation.</text>
-  <text class="tool" x="361" y="689">→ Figure 3</text>
+  <rect class="box-out" x="352" y="808" width="256" height="144" rx="5"/>
+  <text class="head" x="372" y="836" font-size="12.5">Document network</text>
+  <text class="body" x="372" y="858">An edge where one document names</text>
+  <text class="body" x="372" y="875">another by title or links to it; links</text>
+  <text class="body" x="372" y="892">a company repeats across its own</text>
+  <text class="body" x="372" y="909">pages are discounted as navigation.</text>
+  <text class="tool" x="372" y="932">→ Figure 3</text>
 
-  <rect class="box-out" x="634" y="586" width="270" height="108" rx="5"/>
-  <text class="head" x="650" y="606" font-size="12.5">Actors per document type</text>
-  <text class="body" x="650" y="625">The sentence around each actor's name</text>
-  <text class="body" x="650" y="641">read for the relation it states, then</text>
-  <text class="body" x="650" y="657">aggregated to document type. The</text>
-  <text class="body" x="650" y="673">authoring company is not an actor.</text>
-  <text class="tool" x="650" y="689">→ Figure 4</text>
+  <rect class="box-out" x="640" y="808" width="256" height="144" rx="5"/>
+  <text class="head" x="660" y="836" font-size="12.5">Actors per document type</text>
+  <text class="body" x="660" y="858">The sentence around each actor's name</text>
+  <text class="body" x="660" y="875">read for the relation it states, then</text>
+  <text class="body" x="660" y="892">aggregated to document type. The</text>
+  <text class="body" x="660" y="909">authoring company is not an actor.</text>
+  <text class="tool" x="660" y="932">→ Figure 4</text>
 </svg>

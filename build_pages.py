@@ -33,7 +33,7 @@ DRAFT = DOCS / "manuscript.md"
 TAXONOMY = DOCS / "document-taxonomy.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20260921flow"
+VERSION = "20261001pad"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
