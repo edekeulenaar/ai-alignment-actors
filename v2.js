@@ -336,10 +336,9 @@
     host.appendChild(scroller);
     const note = document.createElement("p");
     note.className = "fig2-note";
-    note.innerHTML = "The year scale accumulates: each year lights up the statements of that year and the "
-      + "years before, the branches that grew in that year in blue, while branches still to come stay faint "
-      + "in their place, so the tree never rearranges; press play to watch it fill in. Statements without a "
-      + "date appear only at <em>Now</em>. "
+    note.innerHTML = "The year scale accumulates: each year shows the statements of that year and the years "
+      + "before, and the branches that grew in that year are shown in blue; press play to watch the tree grow. "
+      + "Statements without a date appear only at <em>Now</em>. "
       + "Read from the left: the phrase you type is the root, and every branch is a continuation "
       + "that documents actually wrote, sized by how many statements share it. Click a branch to make it the new "
       + "root. Statements come from every page of the corpus: a broad pattern picked candidate sentences in which "
@@ -353,11 +352,10 @@
 
     function draw() {
       const rootToks = tokens(state.root).map(t => t.toLowerCase());
-      // The tree is laid out from every year, so branches keep their place and size; the
-      // year scale lights up the branches whose statements date from that year or before.
-      const pool = all.filter(s => (state.kind === "all" || (state.kind === "risk" ? s.risk : s.kind === state.kind))
-        && (!state.company || s.company === state.company));
+      // The tree grows with the years: it is laid out from the statements up to the chosen year.
       const inYear = s => withinYear(s, state.tv);
+      const pool = all.filter(s => (state.kind === "all" || (state.kind === "risk" ? s.risk : s.kind === state.kind))
+        && (!state.company || s.company === state.company) && inYear(s));
       // Sentences that contain the root phrase, and what follows it.
       const tree = { word: state.root, count: 0, children: new Map(), ids: [] };
       pool.forEach((s, id) => {
@@ -377,10 +375,8 @@
         }
       });
       const added = state.tv ? tree.ids.filter(s => s.year === state.tv.year).length : 0;
-      const shown = tree.ids.filter(inYear).length;
-      info.innerHTML = esc(`${shown} statement${shown === 1 ? "" : "s"} begin${shown === 1 ? "s" : ""} with “${state.root}”`
-        + (state.tv ? ` up to ${state.tv.year}, of ${tree.count} in all years` : "")
-        + ` (${pool.filter(inYear).length} statements in the current selection).`)
+      info.innerHTML = esc(`${tree.count} statement${tree.count === 1 ? "" : "s"} begin${tree.count === 1 ? "s" : ""} with “${state.root}”`
+        + (state.tv ? ` up to ${state.tv.year}` : "") + ` (${pool.length} statements in the current selection).`)
         + (state.tv ? ` <span class="wt-new-key">${added} added in ${esc(state.tv.year)}</span>` : "");
       if (!tree.count) { scroller.innerHTML = ""; return; }
       // Merge single-child chains into phrases; keep the strongest branches.
@@ -425,21 +421,18 @@
       const W = Math.max(...nodes.map(n => n.x + n.w)) + 20, H = y + 10;
       const svg = d3.create("svg").attr("width", W).attr("height", H).attr("class", "v2-wordtree");
       svg.append("g").selectAll("path").data(links).join("path")
-        .classed("wt-later", ([, b]) => state.tv && !b.ids.some(inYear))
         .attr("d", ([a, b]) => `M${a.x + a.w + 3},${a.y} C${a.x + a.w + 14},${a.y} ${b.x - 12},${b.y} ${b.x - 3},${b.y}`)
         .attr("class", "wt-link");
       const g = svg.append("g").selectAll("g").data(nodes).join("g").attr("class", "wt-node")
         .attr("transform", n => `translate(${n.x},${n.y})`);
       const fresh = n => state.tv && n.ids.some(s => s.year === state.tv.year);
-      const present = n => !state.tv || n.ids.some(inYear);
-      g.classed("wt-new", fresh).classed("wt-later", n => !present(n));
+      g.classed("wt-new", fresh);
       g.append("text").attr("dy", "0.35em").attr("font-size", n => n.size).text(n => n.word);
       g.filter(n => n.more).append("text").attr("class", "wt-more").attr("dy", n => n.size / 2 + 12)
         .attr("x", n => n.w + 22).text(n => `+${n.more} more`);
       g.on("mouseenter", (e, n) => {
-        const ex = (state.tv ? n.ids.filter(inYear) : n.ids).slice(0, 4).map(s => `<li>“${esc(s.t.length > 200 ? s.t.slice(0, 200) + "…" : s.t)}”<br><span class="fig2-tip-who">${esc(s.company)}, ${esc(s.title)} (${esc(s.year || "n.d.")})</span></li>`).join("");
-        const k = state.tv ? n.ids.filter(inYear).length : n.count;
-        tip.show(`<b>${k}</b> statement${k === 1 ? "" : "s"}${state.tv ? ` up to ${state.tv.year} (${n.count} in all years)` : ""}<ul class="wt-ex">${ex}</ul>${n !== tree ? '<span class="fig2-tip-who">Click to make this the root.</span>' : ""}`, e);
+        const ex = n.ids.slice(0, 4).map(s => `<li>“${esc(s.t.length > 200 ? s.t.slice(0, 200) + "…" : s.t)}”<br><span class="fig2-tip-who">${esc(s.company)}, ${esc(s.title)} (${esc(s.year || "n.d.")})</span></li>`).join("");
+        tip.show(`<b>${n.count}</b> statement${n.count === 1 ? "" : "s"}${state.tv ? ` up to ${state.tv.year}` : ""}<ul class="wt-ex">${ex}</ul>${n !== tree ? '<span class="fig2-tip-who">Click to make this the root.</span>' : ""}`, e);
       }).on("mousemove", (e, n) => tip.show(document.querySelector(".v2-tip").innerHTML, e))
         .on("mouseleave", tip.hide)
         .on("click", (e, n) => {
