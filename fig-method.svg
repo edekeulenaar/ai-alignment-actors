@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1420" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1446" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
   <defs>
     <style>
       .box { fill: #f4f1ea; stroke: #cfc7b8; stroke-width: 1; }
@@ -17,108 +17,110 @@
 
   <text class="title" x="480" y="44" text-anchor="middle">From seed URLs to analysis</text>
 
-  <rect class="box" x="40" y="92" width="880" height="94" rx="6"/>
-  <text class="step" x="64" y="120">STEP 1</text>
-  <text class="head" x="64" y="142">Reading a sample by hand</text>
-  <text class="body" x="64" y="164">Documents read by hand to define the categories of conducts, risks, training methods, benchmarks and actors used in the extraction.</text>
-  <path class="flow" d="M480,186 L480,216"/>
-  <rect class="box" x="40" y="218" width="272" height="150" rx="6"/>
-  <text class="step" x="62" y="246">STEP 2</text>
-  <text class="head" x="62" y="268">Selecting seed URLs</text>
-  <text class="body" x="62" y="292">Newsrooms, transparency hubs,</text>
-  <text class="body" x="62" y="309">model-card and safety pages</text>
-  <text class="count" x="62" y="346">28 seeds · 8 companies</text>
-  <path class="flow" d="M313,293 L342,293"/>
-  <rect class="box" x="344" y="218" width="272" height="150" rx="6"/>
-  <text class="step" x="366" y="246">STEP 3</text>
-  <text class="head" x="366" y="268">Crawling 1,318 links</text>
-  <text class="body" x="366" y="292">Pages rendered with Playwright.</text>
-  <text class="body" x="366" y="309">PDFs kept as published.</text>
-  <text class="count" x="366" y="346">515 documents</text>
-  <path class="flow" d="M617,293 L646,293"/>
-  <rect class="box" x="648" y="218" width="272" height="150" rx="6"/>
-  <text class="step" x="670" y="246">STEP 4</text>
-  <text class="head" x="670" y="268">Categorising by type</text>
-  <text class="body" x="670" y="292">Types assigned at selection, by</text>
-  <text class="body" x="670" y="309">hand or by rules on title and URL.</text>
-  <text class="count" x="670" y="346">21 types</text>
-  <path class="flow" d="M784,368 L784,400"/>
-  <rect class="box" x="40" y="402" width="880" height="104" rx="6"/>
-  <text class="step" x="64" y="430">STEP 5</text>
-  <text class="head" x="64" y="452">Applying RAG</text>
-  <text class="body" x="64" y="474">Company documents, Zotero items and policies indexed page by page and split into passages.</text>
-  <text class="count" x="64" y="492">752 documents · 13,660 pages · 35,265 passages</text>
-  <path class="flow" d="M480,506 L480,536"/>
-  <rect class="box" x="40" y="538" width="880" height="212" rx="6"/>
-  <text class="step" x="64" y="566">STEP 6</text>
-  <text class="head" x="64" y="588">Extracting data points</text>
-  <rect class="box-out" x="64" y="608" width="400" height="118" rx="5"/>
-  <text class="head" x="84" y="634" font-size="12.5">Reading each document</text>
-  <text class="body" x="84" y="655">Claude Opus 5.5 reads each document page by page.</text>
-  <text class="body" x="84" y="672">Long documents are read in sections.</text>
-  <text class="count" x="84" y="712">863 readings</text>
-  <rect class="box-out" x="496" y="608" width="400" height="118" rx="5"/>
-  <text class="head" x="516" y="634" font-size="12.5">Recording data points</text>
-  <text class="body" x="516" y="655">Definitions of conducts and risks, training methods, benchmarks,</text>
-  <text class="body" x="516" y="672">credited actors and dates. Each has a quote and page number.</text>
-  <text class="count" x="516" y="712">3,327 definitions · 2,109 trainings · 3,311 benchmarks</text>
-  <path class="flow" d="M480,750 L480,780"/>
-  <rect class="box" x="40" y="782" width="880" height="212" rx="6"/>
-  <text class="step" x="64" y="810">STEP 7</text>
-  <text class="head" x="64" y="832">Verifying</text>
-  <rect class="box-out" x="64" y="852" width="256" height="118" rx="5"/>
-  <text class="head" x="84" y="878" font-size="12.5">Checking quotes against pages</text>
-  <text class="body" x="84" y="899">Each quote is matched to the</text>
-  <text class="body" x="84" y="916">page it cites.</text>
-  <text class="count" x="84" y="956">9,533 kept · 37 dropped</text>
-  <rect class="box-out" x="352" y="852" width="256" height="118" rx="5"/>
-  <text class="head" x="372" y="878" font-size="12.5">Checking who each actor is</text>
-  <text class="body" x="372" y="899">Each actor's type is checked</text>
-  <text class="body" x="372" y="916">against how the corpus describes it.</text>
-  <text class="count" x="372" y="956">1,204 actors · 139 corrected</text>
-  <rect class="box-out" x="640" y="852" width="256" height="118" rx="5"/>
-  <text class="head" x="660" y="878" font-size="12.5">Harmonising names</text>
-  <text class="body" x="660" y="899">Names for the same conduct or</text>
-  <text class="body" x="660" y="916">risk are merged.</text>
-  <text class="count" x="660" y="956">3,152 names → 1,233 concepts</text>
-  <path class="flow" d="M480,994 L480,1024"/>
-  <rect class="box" x="40" y="1026" width="880" height="374" rx="6"/>
-  <text class="step" x="64" y="1054">STEP 8</text>
-  <text class="head" x="64" y="1076">Analysing</text>
-  <rect class="box-out" x="64" y="1096" width="256" height="130" rx="5"/>
-  <text class="head" x="84" y="1122" font-size="12.5">Document discourses</text>
-  <text class="body" x="84" y="1143">Noun phrases per document type,</text>
-  <text class="body" x="84" y="1160">scored by log-odds against the</text>
-  <text class="body" x="84" y="1177">rest of the corpus.</text>
-  <text class="count" x="84" y="1212">Figure 2</text>
-  <rect class="box-out" x="352" y="1096" width="256" height="130" rx="5"/>
-  <text class="head" x="372" y="1122" font-size="12.5">Document relations</text>
-  <text class="body" x="372" y="1143">An edge where one document links</text>
-  <text class="body" x="372" y="1160">to another or names it.</text>
-  <text class="count" x="372" y="1212">Figure 3a</text>
-  <rect class="box-out" x="640" y="1096" width="256" height="130" rx="5"/>
-  <text class="head" x="660" y="1122" font-size="12.5">How risks are defined</text>
-  <text class="head" x="660" y="1138" font-size="12.5">and by whom</text>
-  <text class="body" x="660" y="1159">Risk definitions per company, with</text>
-  <text class="body" x="660" y="1176">the actors cited as their sources.</text>
-  <text class="count" x="660" y="1212">Figure 6b</text>
-  <rect class="box-out" x="64" y="1246" width="256" height="130" rx="5"/>
-  <text class="head" x="84" y="1272" font-size="12.5">How conducts are defined</text>
-  <text class="head" x="84" y="1288" font-size="12.5">and by whom</text>
-  <text class="body" x="84" y="1309">Conduct definitions per company,</text>
-  <text class="body" x="84" y="1326">with the actors cited as their sources.</text>
-  <text class="count" x="84" y="1362">Figure 6a</text>
-  <rect class="box-out" x="352" y="1246" width="256" height="130" rx="5"/>
-  <text class="head" x="372" y="1272" font-size="12.5">Who participates in training</text>
-  <text class="head" x="372" y="1288" font-size="12.5">and benchmarking</text>
-  <text class="body" x="372" y="1309">Actors credited with training methods</text>
-  <text class="body" x="372" y="1326">and benchmarks, per conduct and risk.</text>
-  <text class="count" x="372" y="1362">Figures 7, 8 and 9</text>
-  <rect class="box-out" x="640" y="1246" width="256" height="130" rx="5"/>
-  <text class="head" x="660" y="1272" font-size="12.5">Comparing with external</text>
-  <text class="head" x="660" y="1288" font-size="12.5">alignment actors</text>
-  <text class="body" x="660" y="1309">512 organisations from a directory</text>
-  <text class="body" x="660" y="1326">of alignment actors, matched by name</text>
-  <text class="body" x="660" y="1343">to the actors found.</text>
-  <text class="count" x="660" y="1362">Figure 10</text>
+  <rect class="box" x="40" y="92" width="272" height="168" rx="6"/>
+  <text class="step" x="62" y="120">STEP 1</text>
+  <text class="head" x="62" y="142">Selecting seed URLs</text>
+  <text class="body" x="62" y="166">Newsrooms, transparency hubs,</text>
+  <text class="body" x="62" y="183">model-card and safety pages.</text>
+  <text class="count" x="62" y="240">28 seeds · 8 companies</text>
+  <path class="flow" d="M313,176 L342,176"/>
+  <rect class="box" x="344" y="92" width="272" height="168" rx="6"/>
+  <text class="step" x="366" y="120">STEP 2</text>
+  <text class="head" x="366" y="142">Crawling the seed URLs</text>
+  <text class="body" x="366" y="166">Pages rendered with Playwright.</text>
+  <text class="body" x="366" y="183">PDFs kept as published.</text>
+  <text class="count" x="366" y="240">1,318 links · 515 documents</text>
+  <path class="flow" d="M617,176 L646,176"/>
+  <rect class="box" x="648" y="92" width="272" height="168" rx="6"/>
+  <text class="step" x="670" y="120">STEP 3</text>
+  <text class="head" x="670" y="142">Categorising a sample by hand</text>
+  <text class="body" x="670" y="166">A sample of documents read by hand</text>
+  <text class="body" x="670" y="183">to define the categories of conducts,</text>
+  <text class="body" x="670" y="200">risks, training methods, benchmarks</text>
+  <text class="body" x="670" y="217">and actors.</text>
+  <path class="flow" d="M784,260 L784,290"/>
+  <rect class="box" x="40" y="292" width="880" height="104" rx="6"/>
+  <text class="step" x="64" y="320">STEP 4</text>
+  <text class="head" x="64" y="342">Categorising document types</text>
+  <text class="body" x="64" y="364">Each document given one of 21 types: at selection, by hand, or by rules on title and URL.</text>
+  <text class="count" x="64" y="382">515 documents · 21 types</text>
+  <path class="flow" d="M480,396 L480,426"/>
+  <rect class="box" x="40" y="428" width="880" height="104" rx="6"/>
+  <text class="step" x="64" y="456">STEP 5</text>
+  <text class="head" x="64" y="478">Applying RAG</text>
+  <text class="body" x="64" y="500">Company documents, Zotero items and policies indexed page by page and split into passages.</text>
+  <text class="count" x="64" y="518">752 documents · 13,660 pages · 35,265 passages</text>
+  <path class="flow" d="M480,532 L480,562"/>
+  <rect class="box" x="40" y="564" width="880" height="212" rx="6"/>
+  <text class="step" x="64" y="592">STEP 6</text>
+  <text class="head" x="64" y="614">Processing with Claude Opus 5.5 via RAG</text>
+  <rect class="box-out" x="64" y="634" width="400" height="118" rx="5"/>
+  <text class="head" x="84" y="660" font-size="12.5">Reading each document</text>
+  <text class="body" x="84" y="681">Opus 5.5 reads each document from the index, page by</text>
+  <text class="body" x="84" y="698">page. Long documents are read in sections.</text>
+  <text class="count" x="84" y="738">863 readings</text>
+  <rect class="box-out" x="496" y="634" width="400" height="118" rx="5"/>
+  <text class="head" x="516" y="660" font-size="12.5">Recording data points</text>
+  <text class="body" x="516" y="681">Definitions of conducts and risks, training methods, benchmarks,</text>
+  <text class="body" x="516" y="698">credited actors and dates. Each has a quote and page number.</text>
+  <text class="count" x="516" y="738">3,327 definitions · 2,109 trainings · 3,311 benchmarks</text>
+  <path class="flow" d="M480,776 L480,806"/>
+  <rect class="box" x="40" y="808" width="880" height="212" rx="6"/>
+  <text class="step" x="64" y="836">STEP 7</text>
+  <text class="head" x="64" y="858">Verifying</text>
+  <rect class="box-out" x="64" y="878" width="256" height="118" rx="5"/>
+  <text class="head" x="84" y="904" font-size="12.5">Checking quotes against pages</text>
+  <text class="body" x="84" y="925">Each quote is matched to the</text>
+  <text class="body" x="84" y="942">page it cites.</text>
+  <text class="count" x="84" y="982">9,533 kept · 37 dropped</text>
+  <rect class="box-out" x="352" y="878" width="256" height="118" rx="5"/>
+  <text class="head" x="372" y="904" font-size="12.5">Checking who each actor is</text>
+  <text class="body" x="372" y="925">Each actor's type is checked</text>
+  <text class="body" x="372" y="942">against how the corpus describes it.</text>
+  <text class="count" x="372" y="982">1,204 actors · 139 corrected</text>
+  <rect class="box-out" x="640" y="878" width="256" height="118" rx="5"/>
+  <text class="head" x="660" y="904" font-size="12.5">Harmonising names</text>
+  <text class="body" x="660" y="925">Names for the same conduct or</text>
+  <text class="body" x="660" y="942">risk are merged.</text>
+  <text class="count" x="660" y="982">3,152 names → 1,233 concepts</text>
+  <path class="flow" d="M480,1020 L480,1050"/>
+  <rect class="box" x="40" y="1052" width="880" height="374" rx="6"/>
+  <text class="step" x="64" y="1080">STEP 8</text>
+  <text class="head" x="64" y="1102">Analysing</text>
+  <rect class="box-out" x="64" y="1122" width="256" height="130" rx="5"/>
+  <text class="head" x="84" y="1148" font-size="12.5">Document discourses</text>
+  <text class="body" x="84" y="1169">Noun phrases per document type,</text>
+  <text class="body" x="84" y="1186">scored by log-odds against the</text>
+  <text class="body" x="84" y="1203">rest of the corpus.</text>
+  <text class="count" x="84" y="1238">Figure 2</text>
+  <rect class="box-out" x="352" y="1122" width="256" height="130" rx="5"/>
+  <text class="head" x="372" y="1148" font-size="12.5">Document relations</text>
+  <text class="body" x="372" y="1169">An edge where one document links</text>
+  <text class="body" x="372" y="1186">to another or names it.</text>
+  <text class="count" x="372" y="1238">Figure 3a</text>
+  <rect class="box-out" x="640" y="1122" width="256" height="130" rx="5"/>
+  <text class="head" x="660" y="1148" font-size="12.5">How risks are defined</text>
+  <text class="head" x="660" y="1164" font-size="12.5">and by whom</text>
+  <text class="body" x="660" y="1185">Risk definitions per company, with</text>
+  <text class="body" x="660" y="1202">the actors cited as their sources.</text>
+  <text class="count" x="660" y="1238">Figure 6b</text>
+  <rect class="box-out" x="64" y="1272" width="256" height="130" rx="5"/>
+  <text class="head" x="84" y="1298" font-size="12.5">How conducts are defined</text>
+  <text class="head" x="84" y="1314" font-size="12.5">and by whom</text>
+  <text class="body" x="84" y="1335">Conduct definitions per company,</text>
+  <text class="body" x="84" y="1352">with the actors cited as their sources.</text>
+  <text class="count" x="84" y="1388">Figure 6a</text>
+  <rect class="box-out" x="352" y="1272" width="256" height="130" rx="5"/>
+  <text class="head" x="372" y="1298" font-size="12.5">Who participates in training</text>
+  <text class="head" x="372" y="1314" font-size="12.5">and benchmarking</text>
+  <text class="body" x="372" y="1335">Actors credited with training methods</text>
+  <text class="body" x="372" y="1352">and benchmarks, per conduct and risk.</text>
+  <text class="count" x="372" y="1388">Figures 7, 8 and 9</text>
+  <rect class="box-out" x="640" y="1272" width="256" height="130" rx="5"/>
+  <text class="head" x="660" y="1298" font-size="12.5">Comparing with external</text>
+  <text class="head" x="660" y="1314" font-size="12.5">alignment actors</text>
+  <text class="body" x="660" y="1335">512 organisations from a directory</text>
+  <text class="body" x="660" y="1352">of alignment actors, matched by name</text>
+  <text class="body" x="660" y="1369">to the actors found.</text>
+  <text class="count" x="660" y="1388">Figure 10</text>
 </svg>
