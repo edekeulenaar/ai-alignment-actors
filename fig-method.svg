@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1474" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1402" font-family="Test National, -apple-system, BlinkMacSystemFont, sans-serif">
   <defs>
     <style>
       .box { fill: #f4f1ea; stroke: #cfc7b8; stroke-width: 1; }
@@ -90,52 +90,43 @@
   <text class="body" x="660" y="901">risk are merged.</text>
   <text class="count" x="660" y="934">3,152 names → 1,233 concepts</text>
   <path class="flow" d="M480,976 L480,1006"/>
-  <rect class="box" x="40" y="1008" width="880" height="446" rx="6"/>
+  <rect class="box" x="40" y="1008" width="880" height="374" rx="6"/>
   <text class="step" x="64" y="1036">STEP 7</text>
   <text class="head" x="64" y="1058">Analysing</text>
-  <rect class="box-out" x="64" y="1078" width="256" height="104" rx="5"/>
-  <text class="head" x="84" y="1104" font-size="12.5">Discourse per document type</text>
-  <text class="body" x="84" y="1125">Noun phrases scored by log-odds</text>
-  <text class="body" x="84" y="1142">against the rest of the corpus.</text>
-  <text class="count" x="84" y="1168">Figure 2</text>
-  <rect class="box-out" x="352" y="1078" width="256" height="104" rx="5"/>
-  <text class="head" x="372" y="1104" font-size="12.5">Links between documents</text>
+  <rect class="box-out" x="64" y="1078" width="256" height="130" rx="5"/>
+  <text class="head" x="84" y="1104" font-size="12.5">Document discourses</text>
+  <text class="body" x="84" y="1125">Noun phrases per document type,</text>
+  <text class="body" x="84" y="1142">scored by log-odds against the</text>
+  <text class="body" x="84" y="1159">rest of the corpus.</text>
+  <text class="count" x="84" y="1194">Figure 2</text>
+  <rect class="box-out" x="352" y="1078" width="256" height="130" rx="5"/>
+  <text class="head" x="372" y="1104" font-size="12.5">Document relations</text>
   <text class="body" x="372" y="1125">An edge where one document links</text>
   <text class="body" x="372" y="1142">to another or names it.</text>
-  <text class="count" x="372" y="1168">Figure 3a</text>
-  <rect class="box-out" x="640" y="1078" width="256" height="104" rx="5"/>
-  <text class="head" x="660" y="1104" font-size="12.5">Actors per document type</text>
-  <text class="body" x="660" y="1125">Credited actors counted by</text>
-  <text class="body" x="660" y="1142">document type and actor type.</text>
-  <text class="count" x="660" y="1168">Figures 3b and 4</text>
-  <rect class="box-out" x="64" y="1202" width="256" height="104" rx="5"/>
-  <text class="head" x="84" y="1228" font-size="12.5">Conducts and risks</text>
-  <text class="body" x="84" y="1249">Each company's conducts and risks,</text>
-  <text class="body" x="84" y="1266">coloured by who defined them.</text>
-  <text class="count" x="84" y="1292">Figures 6a and 6b</text>
-  <rect class="box-out" x="352" y="1202" width="256" height="104" rx="5"/>
-  <text class="head" x="372" y="1228" font-size="12.5">Conceptual change</text>
-  <text class="body" x="372" y="1249">Each definition compared with the</text>
-  <text class="body" x="372" y="1266">previous year's, word by word.</text>
-  <text class="count" x="372" y="1292">Figures 6a and 6b</text>
-  <rect class="box-out" x="640" y="1202" width="256" height="104" rx="5"/>
-  <text class="head" x="660" y="1228" font-size="12.5">Training and benchmarks</text>
-  <text class="body" x="660" y="1249">Methods and benchmark types</text>
-  <text class="body" x="660" y="1266">counted per conduct and risk.</text>
-  <text class="count" x="660" y="1292">Figures 7 and 8</text>
-  <rect class="box-out" x="64" y="1326" width="256" height="104" rx="5"/>
-  <text class="head" x="84" y="1352" font-size="12.5">Actors across stages</text>
-  <text class="body" x="84" y="1373">Actor types counted in definitions,</text>
-  <text class="body" x="84" y="1390">training and benchmarks.</text>
-  <text class="count" x="84" y="1416">Figure 9</text>
-  <rect class="box-out" x="352" y="1326" width="256" height="104" rx="5"/>
-  <text class="head" x="372" y="1352" font-size="12.5">Who is left out</text>
-  <text class="body" x="372" y="1373">512 alignment organisations</text>
-  <text class="body" x="372" y="1390">matched by name to the actors found.</text>
-  <text class="count" x="372" y="1416">Figure 10</text>
-  <rect class="box-out" x="640" y="1326" width="256" height="104" rx="5"/>
-  <text class="head" x="660" y="1352" font-size="12.5">Statements about AI</text>
-  <text class="body" x="660" y="1373">Sentences that define AI or predict</text>
-  <text class="body" x="660" y="1390">its effects, labelled by Opus 5.5.</text>
-  <text class="count" x="660" y="1416">Word tree</text>
+  <text class="count" x="372" y="1194">Figure 3a</text>
+  <rect class="box-out" x="640" y="1078" width="256" height="130" rx="5"/>
+  <text class="head" x="660" y="1104" font-size="12.5">How risks are defined</text>
+  <text class="head" x="660" y="1120" font-size="12.5">and by whom</text>
+  <text class="body" x="660" y="1141">Risk definitions per company, with</text>
+  <text class="body" x="660" y="1158">the actors cited as their sources.</text>
+  <text class="count" x="660" y="1194">Figure 6b</text>
+  <rect class="box-out" x="64" y="1228" width="256" height="130" rx="5"/>
+  <text class="head" x="84" y="1254" font-size="12.5">How conducts are defined</text>
+  <text class="head" x="84" y="1270" font-size="12.5">and by whom</text>
+  <text class="body" x="84" y="1291">Conduct definitions per company,</text>
+  <text class="body" x="84" y="1308">with the actors cited as their sources.</text>
+  <text class="count" x="84" y="1344">Figure 6a</text>
+  <rect class="box-out" x="352" y="1228" width="256" height="130" rx="5"/>
+  <text class="head" x="372" y="1254" font-size="12.5">Who participates in training</text>
+  <text class="head" x="372" y="1270" font-size="12.5">and benchmarking</text>
+  <text class="body" x="372" y="1291">Actors credited with training methods</text>
+  <text class="body" x="372" y="1308">and benchmarks, per conduct and risk.</text>
+  <text class="count" x="372" y="1344">Figures 7, 8 and 9</text>
+  <rect class="box-out" x="640" y="1228" width="256" height="130" rx="5"/>
+  <text class="head" x="660" y="1254" font-size="12.5">Comparing with external</text>
+  <text class="head" x="660" y="1270" font-size="12.5">alignment actors</text>
+  <text class="body" x="660" y="1291">512 organisations from a directory</text>
+  <text class="body" x="660" y="1308">of alignment actors, matched by name</text>
+  <text class="body" x="660" y="1325">to the actors found.</text>
+  <text class="count" x="660" y="1344">Figure 10</text>
 </svg>
