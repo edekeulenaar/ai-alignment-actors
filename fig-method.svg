@@ -20,22 +20,22 @@
   <rect class="box" x="40" y="92" width="272" height="150" rx="6"/>
   <text class="step" x="62" y="120">STEP 1</text>
   <text class="head" x="62" y="142">Selecting seed URLs</text>
-  <text class="body" x="62" y="166">Company newsrooms, transparency hubs,</text>
+  <text class="body" x="62" y="166">Newsrooms, transparency hubs,</text>
   <text class="body" x="62" y="183">model-card and safety pages</text>
   <text class="count" x="62" y="220">28 seeds · 8 companies</text>
   <path class="flow" d="M313,167 L342,167"/>
   <rect class="box" x="344" y="92" width="272" height="150" rx="6"/>
   <text class="step" x="366" y="120">STEP 2</text>
   <text class="head" x="366" y="142">Crawling 1,318 links</text>
-  <text class="body" x="366" y="166">Rendering pages with Playwright;</text>
-  <text class="body" x="366" y="183">keeping PDFs as published</text>
+  <text class="body" x="366" y="166">Pages rendered with Playwright.</text>
+  <text class="body" x="366" y="183">PDFs kept as published.</text>
   <text class="count" x="366" y="220">515 documents</text>
   <path class="flow" d="M617,167 L646,167"/>
   <rect class="box" x="648" y="92" width="272" height="150" rx="6"/>
   <text class="step" x="670" y="120">STEP 3</text>
   <text class="head" x="670" y="142">Categorising by type</text>
-  <text class="body" x="670" y="166">Typing at selection, by hand, or</text>
-  <text class="body" x="670" y="183">by rules on title and URL</text>
+  <text class="body" x="670" y="166">Types assigned at selection, by</text>
+  <text class="body" x="670" y="183">hand or by rules on title and URL.</text>
   <text class="count" x="670" y="220">21 types</text>
   <path class="flow" d="M784,242 L784,274"/>
   <rect class="box" x="40" y="276" width="880" height="212" rx="6"/>
@@ -44,31 +44,31 @@
   <rect class="box-out" x="64" y="346" width="256" height="118" rx="5"/>
   <text class="head" x="84" y="374" font-size="12.5">Indexing 752 documents</text>
   <text class="body" x="84" y="396">Company documents, Zotero items</text>
-  <text class="body" x="84" y="413">and policies, page by page</text>
+  <text class="body" x="84" y="413">and policies, stored by page.</text>
   <text class="count" x="84" y="446">13,660 pages</text>
   <rect class="box-out" x="352" y="346" width="256" height="118" rx="5"/>
   <text class="head" x="372" y="374" font-size="12.5">Splitting into passages</text>
-  <text class="body" x="372" y="396">Up to 160 words each, never</text>
-  <text class="body" x="372" y="413">crossing a page</text>
+  <text class="body" x="372" y="396">Passages of up to 160 words.</text>
+  <text class="body" x="372" y="413">Each passage stays within one page.</text>
   <text class="count" x="372" y="446">35,265 passages</text>
   <rect class="box-out" x="640" y="346" width="256" height="118" rx="5"/>
   <text class="head" x="660" y="374" font-size="12.5">Searching the passages</text>
-  <text class="body" x="660" y="396">By keyword (BM25) and by meaning</text>
-  <text class="body" x="660" y="413">(embeddings); tested on 480 queries</text>
-  <text class="count" x="660" y="446">right page in top 5: 84.2%</text>
+  <text class="body" x="660" y="396">Keyword search (BM25) and semantic</text>
+  <text class="body" x="660" y="413">search (embeddings). Tested on 480 queries.</text>
+  <text class="count" x="660" y="446">84.2% found in the top 5 results</text>
   <path class="flow" d="M480,488 L480,518"/>
   <rect class="box" x="40" y="520" width="880" height="212" rx="6"/>
   <text class="step" x="64" y="548">STEP 5</text>
   <text class="head" x="64" y="570">Extracting data points</text>
   <rect class="box-out" x="64" y="590" width="400" height="118" rx="5"/>
   <text class="head" x="84" y="618" font-size="12.5">Reading each document from the index</text>
-  <text class="body" x="84" y="640">Claude Opus 5.5 reads page by page; long documents in</text>
-  <text class="body" x="84" y="657">sections, with their reference pages retrieved from the index</text>
+  <text class="body" x="84" y="640">Claude Opus 5.5 reads each document page by page. Long documents</text>
+  <text class="body" x="84" y="657">are read in sections, with their reference pages from the index.</text>
   <text class="count" x="84" y="690">863 readings</text>
   <rect class="box-out" x="496" y="590" width="400" height="118" rx="5"/>
   <text class="head" x="516" y="618" font-size="12.5">Recording data points</text>
-  <text class="body" x="516" y="640">Definitions of conducts and risks, training methods,</text>
-  <text class="body" x="516" y="657">benchmarks, credited actors and dates, each with its quote</text>
+  <text class="body" x="516" y="640">Definitions of conducts and risks, training methods, benchmarks,</text>
+  <text class="body" x="516" y="657">credited actors and dates. Each has a quote and page number.</text>
   <text class="count" x="516" y="690">3,327 definitions · 2,109 trainings · 3,311 benchmarks</text>
   <path class="flow" d="M480,732 L480,762"/>
   <rect class="box" x="40" y="764" width="880" height="212" rx="6"/>
@@ -76,18 +76,18 @@
   <text class="head" x="64" y="814">Verifying</text>
   <rect class="box-out" x="64" y="834" width="256" height="118" rx="5"/>
   <text class="head" x="84" y="862" font-size="12.5">Checking quotes against pages</text>
-  <text class="body" x="84" y="884">Matching every quote to the</text>
-  <text class="body" x="84" y="901">page it cites</text>
+  <text class="body" x="84" y="884">Each quote is matched to the</text>
+  <text class="body" x="84" y="901">page it cites.</text>
   <text class="count" x="84" y="934">9,533 kept · 37 dropped</text>
   <rect class="box-out" x="352" y="834" width="256" height="118" rx="5"/>
   <text class="head" x="372" y="862" font-size="12.5">Checking who each actor is</text>
-  <text class="body" x="372" y="884">Against passages naming it,</text>
-  <text class="body" x="372" y="901">retrieved from the index</text>
+  <text class="body" x="372" y="884">Each actor is compared with index</text>
+  <text class="body" x="372" y="901">passages that name it.</text>
   <text class="count" x="372" y="934">1,204 actors · 139 corrected</text>
   <rect class="box-out" x="640" y="834" width="256" height="118" rx="5"/>
   <text class="head" x="660" y="862" font-size="12.5">Harmonising names</text>
-  <text class="body" x="660" y="884">Merging names of the same</text>
-  <text class="body" x="660" y="901">conduct or risk</text>
+  <text class="body" x="660" y="884">Names for the same conduct or</text>
+  <text class="body" x="660" y="901">risk are merged.</text>
   <text class="count" x="660" y="934">3,152 names → 1,233 concepts</text>
   <path class="flow" d="M480,976 L480,1006"/>
   <rect class="box" x="40" y="1008" width="880" height="212" rx="6"/>
@@ -95,17 +95,17 @@
   <text class="head" x="64" y="1058">Analysing</text>
   <rect class="box-out" x="64" y="1078" width="256" height="118" rx="5"/>
   <text class="head" x="84" y="1106" font-size="12.5">Mapping actors by stage</text>
-  <text class="body" x="84" y="1128">By company, document type</text>
-  <text class="body" x="84" y="1145">and year</text>
+  <text class="body" x="84" y="1128">Counted by company, document</text>
+  <text class="body" x="84" y="1145">type and year.</text>
   <text class="count" x="84" y="1178">Figures 3b, 4, 6a–9</text>
   <rect class="box-out" x="352" y="1078" width="256" height="118" rx="5"/>
   <text class="head" x="372" y="1106" font-size="12.5">Comparing with the directory</text>
-  <text class="body" x="372" y="1128">512 value-alignment</text>
-  <text class="body" x="372" y="1145">organisations</text>
+  <text class="body" x="372" y="1128">512 value-alignment organisations</text>
+  <text class="body" x="372" y="1145">matched against the actors found.</text>
   <text class="count" x="372" y="1178">Figure 10</text>
   <rect class="box-out" x="640" y="1078" width="256" height="118" rx="5"/>
   <text class="head" x="660" y="1106" font-size="12.5">Comparing discourse and links</text>
-  <text class="body" x="660" y="1128">Keyness per document type;</text>
-  <text class="body" x="660" y="1145">citations between documents</text>
+  <text class="body" x="660" y="1128">Keyness per document type.</text>
+  <text class="body" x="660" y="1145">Citations between documents.</text>
   <text class="count" x="660" y="1178">Figures 2 and 3a</text>
 </svg>
