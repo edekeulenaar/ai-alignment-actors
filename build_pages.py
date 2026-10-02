@@ -33,7 +33,7 @@ DRAFT = DOCS / "manuscript.md"
 TAXONOMY = DOCS / "document-taxonomy.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20261002vn"
+VERSION = "20261002p2"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -234,6 +234,7 @@ def main() -> None:
            '<span class="paper-nav-current">The paper</span>'
            '<a href="more-figures.html">Further figures</a>'
            '<a href="interface.html">Interface and original findings</a>'
+           '<a href="presentation.html">Presentation</a>'
            '<a href="alignment-actors-for-comments.docx">Download for comments</a></nav>')
     main_html = f"""<main class="restructured">
 {nav}
@@ -254,7 +255,8 @@ def main() -> None:
     more_nav = ('<nav class="paper-nav" style="max-width:52rem;margin:0 auto 1.5rem;">'
                 '<a href="index.html">← The paper</a>'
                 '<span class="paper-nav-current">Further figures</span>'
-                '<a href="interface.html">Interface and original findings</a></nav>')
+                '<a href="interface.html">Interface and original findings</a>'
+                '<a href="presentation.html">Presentation</a></nav>')
     more = f"""<main class="restructured">
 {more_nav}
 <section class="prose paper">

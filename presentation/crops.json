@@ -1,0 +1,764 @@
+{
+ "12": {
+  "page": "more-figures.html",
+  "steps": [
+   [
+    "wordtreeRoot",
+    "AI will"
+   ],
+   [
+    "wordtreeYear",
+    "2024"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-wordtree",
+  "text": null,
+  "dx": 9,
+  "dy": 16,
+  "w": 935,
+  "h": 395,
+  "score": 0.761,
+  "manual": false
+ },
+ "22": {
+  "page": "index.html",
+  "steps": [
+   [
+    "keyness",
+    "Organizational principles, standards, codes"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-keyness",
+  "text": null,
+  "dx": -5,
+  "dy": -8,
+  "w": 1092,
+  "h": 966,
+  "score": 0.88,
+  "manual": false
+ },
+ "23": {
+  "page": "index.html",
+  "steps": [
+   [
+    "keyness",
+    "Frontier governance frameworks"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-keyness",
+  "text": null,
+  "dx": -11,
+  "dy": -8,
+  "w": 1102,
+  "h": 971,
+  "score": 0.88,
+  "manual": false
+ },
+ "24": {
+  "page": "index.html",
+  "steps": [
+   [
+    "keyness",
+    "Model documentation"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-keyness",
+  "text": null,
+  "dx": -5,
+  "dy": -4,
+  "w": 1090,
+  "h": 967,
+  "score": 0.849,
+  "manual": false
+ },
+ "25": {
+  "page": "index.html",
+  "steps": [
+   [
+    "networkCompany",
+    "Google"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-network",
+  "text": null,
+  "dx": 19,
+  "dy": 11,
+  "w": 922,
+  "h": 735,
+  "score": 0.503,
+  "manual": false
+ },
+ "26": {
+  "page": "index.html",
+  "steps": [
+   [
+    "networkCompany",
+    "Google"
+   ],
+   [
+    "networkCategory",
+    "Organizational principles, standards, codes"
+   ],
+   [
+    "networkHover",
+    "AI Principles"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-network",
+  "text": null,
+  "dx": 1,
+  "dy": -49,
+  "w": 898,
+  "h": 734,
+  "score": 0.813,
+  "manual": false
+ },
+ "27": {
+  "page": "index.html",
+  "steps": [
+   [
+    "networkCompany",
+    "Google"
+   ],
+   [
+    "networkCategory",
+    "Model documentation"
+   ],
+   [
+    "networkHover",
+    "Gemini 3.6 Flash Model card"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-network",
+  "text": null,
+  "dx": -7,
+  "dy": -65,
+  "w": 909,
+  "h": 714,
+  "score": 0.702,
+  "manual": false
+ },
+ "28": {
+  "page": "index.html",
+  "steps": [
+   [
+    "networkCompany",
+    "Google"
+   ],
+   [
+    "networkCategory",
+    "Partnerships and MOUs"
+   ],
+   [
+    "networkHover",
+    "partnership with the UK government"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-network",
+  "text": null,
+  "dx": -13,
+  "dy": -93,
+  "w": 951,
+  "h": 741,
+  "score": 0.759,
+  "manual": false
+ },
+ "29": {
+  "page": "index.html",
+  "steps": [
+   [
+    "networkCompany",
+    "Google"
+   ],
+   [
+    "networkCategory",
+    "Evaluations, benchmarks and tools"
+   ],
+   [
+    "networkHover",
+    "FACTS Grounding"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-network",
+  "text": null,
+  "dx": 11,
+  "dy": 9,
+  "w": 940,
+  "h": 728,
+  "score": 0.395,
+  "manual": false
+ },
+ "30": {
+  "page": "index.html",
+  "steps": [],
+  "width": 1512,
+  "anchor": "#fig-actor-types",
+  "text": null,
+  "dx": -15,
+  "dy": 0,
+  "w": 1045,
+  "h": 863,
+  "score": 0.436,
+  "manual": false
+ },
+ "31": {
+  "page": "index.html",
+  "steps": [
+   [
+    "matrixHover",
+    {
+     "row": "Red teaming or cybersecurity company",
+     "col": "Model documentation"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-actor-types table tr:first-child th:nth-child(2)",
+  "text": null,
+  "dx": -243,
+  "dy": -20,
+  "w": 908,
+  "h": 852,
+  "score": 0.571,
+  "manual": true
+ },
+ "32": {
+  "page": "index.html",
+  "steps": [
+   [
+    "matrixHover",
+    {
+     "row": "Government agency",
+     "col": "Partnerships and MOUs"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-actor-types",
+  "text": null,
+  "dx": 27,
+  "dy": 8,
+  "w": 899,
+  "h": 843,
+  "score": 0.785,
+  "manual": false
+ },
+ "33": {
+  "page": "index.html",
+  "steps": [
+   [
+    "matrixHover",
+    {
+     "row": "Alignment research organisation",
+     "col": "Model documentation"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-actor-types",
+  "text": null,
+  "dx": 35,
+  "dy": 32,
+  "w": 872,
+  "h": 821,
+  "score": 0.717,
+  "manual": false
+ },
+ "34": {
+  "page": "index.html",
+  "steps": [
+   [
+    "matrixHover",
+    {
+     "row": "Alignment research organisation",
+     "col": "Framework implementation reports"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#fig-actor-types table tr:first-child th:nth-child(2)",
+  "text": null,
+  "dx": -243,
+  "dy": -20,
+  "w": 908,
+  "h": 853,
+  "score": 0.751,
+  "manual": true
+ },
+ "37": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#grid-conducts",
+  "text": null,
+  "dx": -12,
+  "dy": -10,
+  "w": 1018,
+  "h": 826,
+  "score": 0.285,
+  "manual": true
+ },
+ "38": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "pin",
+    {
+     "block": "risks",
+     "text": "Scheming"
+    }
+   ],
+   [
+    "undim",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-risks",
+  "text": null,
+  "dx": -2,
+  "dy": 3,
+  "w": 998,
+  "h": 865,
+  "score": 0.663,
+  "manual": false
+ },
+ "39": {
+  "page": "index.html",
+  "steps": [
+   [
+    "showAllCats",
+    "conducts"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-conducts",
+  "text": null,
+  "dx": 2,
+  "dy": 258,
+  "w": 1264,
+  "h": 736,
+  "score": 0.929,
+  "manual": false
+ },
+ "40": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "conducts",
+     "year": "2020"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-conducts",
+  "text": null,
+  "dx": 4,
+  "dy": 166,
+  "w": 1258,
+  "h": 803,
+  "score": 0.723,
+  "manual": false
+ },
+ "41": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "conducts",
+     "year": "2022"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-conducts",
+  "text": null,
+  "dx": 2,
+  "dy": 162,
+  "w": 1268,
+  "h": 839,
+  "score": 0.718,
+  "manual": false
+ },
+ "42": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "conducts",
+     "year": "2022"
+    }
+   ],
+   [
+    "pin",
+    {
+     "block": "conducts",
+     "text": "Good process"
+    }
+   ],
+   [
+    "undim",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-conducts",
+  "text": null,
+  "dx": 0,
+  "dy": 166,
+  "w": 1269,
+  "h": 835,
+  "score": 0.495,
+  "manual": false
+ },
+ "43": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#grid-conducts .cat-row-label",
+  "text": "Political neutrality",
+  "dx": -6,
+  "dy": -1,
+  "w": 974,
+  "h": 844,
+  "score": 0.906,
+  "manual": false
+ },
+ "44": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ],
+   [
+    "pin",
+    {
+     "block": "conducts",
+     "text": "Acknowledging opposing perspectives"
+    }
+   ],
+   [
+    "undim",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#grid-conducts .cat-row-label",
+  "text": "Political neutrality",
+  "dx": -6,
+  "dy": -3,
+  "w": 972,
+  "h": 849,
+  "score": 0.585,
+  "manual": false
+ },
+ "45": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "conducts"
+   ],
+   [
+    "pin",
+    {
+     "block": "conducts",
+     "text": "Civic values"
+    }
+   ],
+   [
+    "undim",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#grid-conducts .cat-row-label",
+  "text": "Political neutrality",
+  "dx": -8,
+  "dy": -7,
+  "w": 1242,
+  "h": 851,
+  "score": 0.59,
+  "manual": false
+ },
+ "47": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "risks"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "risks",
+     "year": "2018"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-risks",
+  "text": null,
+  "dx": -2,
+  "dy": -11,
+  "w": 1272,
+  "h": 728,
+  "score": 0.769,
+  "manual": false
+ },
+ "48": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "risks"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "risks",
+     "year": "2021"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-risks",
+  "text": null,
+  "dx": 2,
+  "dy": 165,
+  "w": 1264,
+  "h": 843,
+  "score": 0.702,
+  "manual": false
+ },
+ "49": {
+  "page": "index.html",
+  "steps": [
+   [
+    "named",
+    true
+   ],
+   [
+    "showAllCats",
+    "risks"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "risks",
+     "year": "2021"
+    }
+   ],
+   [
+    "pin",
+    {
+     "block": "risks",
+     "text": "Existential catastrophe"
+    }
+   ],
+   [
+    "undim",
+    true
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-risks",
+  "text": null,
+  "dx": -2,
+  "dy": 169,
+  "w": 978,
+  "h": 706,
+  "score": 0.622,
+  "manual": false
+ },
+ "50": {
+  "page": "index.html",
+  "steps": [
+   [
+    "showAllCats",
+    "risks"
+   ],
+   [
+    "gridYear",
+    {
+     "block": "risks",
+     "year": "2025"
+    }
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-risks",
+  "text": null,
+  "dx": 4,
+  "dy": 167,
+  "w": 1273,
+  "h": 841,
+  "score": 0.908,
+  "manual": false
+ },
+ "51": {
+  "page": "index.html",
+  "steps": [
+   [
+    "showAllCats",
+    "risks"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#grid-risks .cat-row-label",
+  "text": "Impersonation and synthetic media",
+  "dx": -14,
+  "dy": -8,
+  "w": 1275,
+  "h": 868,
+  "score": 0.323,
+  "manual": true
+ },
+ "52": {
+  "page": "interface.html",
+  "steps": [],
+  "width": 1512,
+  "anchor": "#block-training .block-head h3",
+  "text": null,
+  "dx": -4,
+  "dy": -12,
+  "w": 1243,
+  "h": 870,
+  "score": 0.339,
+  "manual": true
+ },
+ "53": {
+  "page": "interface.html",
+  "steps": [],
+  "width": 1512,
+  "anchor": "#block-benchmark .block-head h3",
+  "text": null,
+  "dx": -4,
+  "dy": -14,
+  "w": 1247,
+  "h": 863,
+  "score": 0.449,
+  "manual": true
+ },
+ "54": {
+  "page": "index.html",
+  "steps": [],
+  "width": 1512,
+  "anchor": "#block-alluvial .block-head h3",
+  "text": null,
+  "dx": -4,
+  "dy": -14,
+  "w": 902,
+  "h": 870,
+  "score": 0.356,
+  "manual": true
+ },
+ "55": {
+  "page": "index.html",
+  "steps": [
+   [
+    "alluvialHover",
+    "No"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-alluvial .block-head h3",
+  "text": null,
+  "dx": -8,
+  "dy": -13,
+  "w": 1243,
+  "h": 856,
+  "score": 0.256,
+  "manual": true
+ },
+ "56": {
+  "page": "index.html",
+  "steps": [
+   [
+    "alluvialHover",
+    "Yes"
+   ]
+  ],
+  "width": 1512,
+  "anchor": "#block-alluvial .block-head h3",
+  "text": null,
+  "dx": -8,
+  "dy": -14,
+  "w": 1246,
+  "h": 854,
+  "score": 0.263,
+  "manual": true
+ }
+}

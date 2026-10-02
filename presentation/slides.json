@@ -1,0 +1,1184 @@
+{
+ "title": "The actors in AI alignment",
+ "author": "Emillie de Keulenaar",
+ "slides": [
+  {
+   "n": 1,
+   "img": "slide01.jpg"
+  },
+  {
+   "n": 2,
+   "img": "slide02.jpg"
+  },
+  {
+   "n": 3,
+   "img": "slide03.jpg"
+  },
+  {
+   "n": 4,
+   "img": "slide04.jpg"
+  },
+  {
+   "n": 5,
+   "img": "slide05.jpg"
+  },
+  {
+   "n": 6,
+   "img": "slide06.jpg"
+  },
+  {
+   "n": 7,
+   "img": "slide07.jpg"
+  },
+  {
+   "n": 8,
+   "img": "slide08.jpg"
+  },
+  {
+   "n": 9,
+   "img": "slide09.jpg"
+  },
+  {
+   "n": 10,
+   "img": "slide10.jpg"
+  },
+  {
+   "n": 11,
+   "img": "slide11.jpg"
+  },
+  {
+   "n": 12,
+   "img": "slide12.png",
+   "poster": "poster12.jpg",
+   "box": [
+    0.0,
+    12.447,
+    100.0,
+    75.106
+   ],
+   "live": {
+    "page": "more-figures.html",
+    "steps": [
+     [
+      "wordtreeRoot",
+      "AI will"
+     ],
+     [
+      "wordtreeYear",
+      "2024"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-wordtree",
+    "text": null,
+    "dx": 9,
+    "dy": 16,
+    "w": 935,
+    "h": 395
+   }
+  },
+  {
+   "n": 13,
+   "img": "slide13.jpg"
+  },
+  {
+   "n": 14,
+   "img": "slide14.jpg"
+  },
+  {
+   "n": 15,
+   "img": "slide15.jpg"
+  },
+  {
+   "n": 16,
+   "img": "slide16.jpg"
+  },
+  {
+   "n": 17,
+   "img": "slide17.jpg"
+  },
+  {
+   "n": 18,
+   "img": "slide18.jpg"
+  },
+  {
+   "n": 19,
+   "img": "slide19.jpg"
+  },
+  {
+   "n": 20,
+   "img": "slide20.jpg"
+  },
+  {
+   "n": 21,
+   "img": "slide21.jpg"
+  },
+  {
+   "n": 22,
+   "img": "slide22.png",
+   "poster": "poster22.jpg",
+   "box": [
+    3.625,
+    14.193,
+    50.604,
+    79.585
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "keyness",
+      "Organizational principles, standards, codes"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-keyness",
+    "text": null,
+    "dx": -5,
+    "dy": -8,
+    "w": 1092,
+    "h": 966
+   }
+  },
+  {
+   "n": 23,
+   "img": "slide23.png",
+   "poster": "poster23.jpg",
+   "box": [
+    2.728,
+    5.326,
+    57.038,
+    89.348
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "keyness",
+      "Frontier governance frameworks"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-keyness",
+    "text": null,
+    "dx": -11,
+    "dy": -8,
+    "w": 1102,
+    "h": 971
+   }
+  },
+  {
+   "n": 24,
+   "img": "slide24.png",
+   "poster": "poster24.jpg",
+   "box": [
+    2.739,
+    5.674,
+    56.211,
+    88.652
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "keyness",
+      "Model documentation"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-keyness",
+    "text": null,
+    "dx": -5,
+    "dy": -4,
+    "w": 1090,
+    "h": 967
+   }
+  },
+  {
+   "n": 25,
+   "img": "slide25.png",
+   "poster": "poster25.jpg",
+   "box": [
+    22.675,
+    14.368,
+    54.65,
+    77.449
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "networkCompany",
+      "Google"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-network",
+    "text": null,
+    "dx": 19,
+    "dy": 11,
+    "w": 922,
+    "h": 735
+   }
+  },
+  {
+   "n": 26,
+   "img": "slide26.png",
+   "poster": "poster26.jpg",
+   "box": [
+    22.782,
+    15.753,
+    54.436,
+    79.116
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "networkCompany",
+      "Google"
+     ],
+     [
+      "networkCategory",
+      "Organizational principles, standards, codes"
+     ],
+     [
+      "networkHover",
+      "AI Principles"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-network",
+    "text": null,
+    "dx": 1,
+    "dy": -49,
+    "w": 898,
+    "h": 734
+   }
+  },
+  {
+   "n": 27,
+   "img": "slide27.png",
+   "poster": "poster27.jpg",
+   "box": [
+    21.403,
+    13.077,
+    57.194,
+    79.877
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "networkCompany",
+      "Google"
+     ],
+     [
+      "networkCategory",
+      "Model documentation"
+     ],
+     [
+      "networkHover",
+      "Gemini 3.6 Flash Model card"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-network",
+    "text": null,
+    "dx": -7,
+    "dy": -65,
+    "w": 909,
+    "h": 714
+   }
+  },
+  {
+   "n": 28,
+   "img": "slide28.png",
+   "poster": "poster28.jpg",
+   "box": [
+    21.851,
+    16.222,
+    56.297,
+    77.96
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "networkCompany",
+      "Google"
+     ],
+     [
+      "networkCategory",
+      "Partnerships and MOUs"
+     ],
+     [
+      "networkHover",
+      "partnership with the UK government"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-network",
+    "text": null,
+    "dx": -13,
+    "dy": -93,
+    "w": 951,
+    "h": 741
+   }
+  },
+  {
+   "n": 29,
+   "img": "slide29.png",
+   "poster": "poster29.jpg",
+   "box": [
+    21.632,
+    15.156,
+    56.736,
+    78.114
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "networkCompany",
+      "Google"
+     ],
+     [
+      "networkCategory",
+      "Evaluations, benchmarks and tools"
+     ],
+     [
+      "networkHover",
+      "FACTS Grounding"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-network",
+    "text": null,
+    "dx": 11,
+    "dy": 9,
+    "w": 940,
+    "h": 728
+   }
+  },
+  {
+   "n": 30,
+   "img": "slide30.png",
+   "poster": "poster30.jpg",
+   "box": [
+    22.613,
+    14.114,
+    54.775,
+    80.42
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [],
+    "width": 1512,
+    "anchor": "#fig-actor-types",
+    "text": null,
+    "dx": -15,
+    "dy": 0,
+    "w": 1045,
+    "h": 863
+   }
+  },
+  {
+   "n": 31,
+   "img": "slide31.png",
+   "poster": "poster31.jpg",
+   "box": [
+    25.599,
+    13.501,
+    48.803,
+    81.412
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "matrixHover",
+      {
+       "row": "Red teaming or cybersecurity company",
+       "col": "Model documentation"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-actor-types table tr:first-child th:nth-child(2)",
+    "text": null,
+    "dx": -243,
+    "dy": -20,
+    "w": 908,
+    "h": 852
+   }
+  },
+  {
+   "n": 32,
+   "img": "slide32.png",
+   "poster": "poster32.jpg",
+   "box": [
+    25.531,
+    13.165,
+    48.939,
+    81.637
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "matrixHover",
+      {
+       "row": "Government agency",
+       "col": "Partnerships and MOUs"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-actor-types",
+    "text": null,
+    "dx": 27,
+    "dy": 8,
+    "w": 899,
+    "h": 843
+   }
+  },
+  {
+   "n": 33,
+   "img": "slide33.png",
+   "poster": "poster33.jpg",
+   "box": [
+    26.096,
+    14.326,
+    47.808,
+    80.032
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "matrixHover",
+      {
+       "row": "Alignment research organisation",
+       "col": "Model documentation"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-actor-types",
+    "text": null,
+    "dx": 35,
+    "dy": 32,
+    "w": 872,
+    "h": 821
+   }
+  },
+  {
+   "n": 34,
+   "img": "slide34.png",
+   "poster": "poster34.jpg",
+   "box": [
+    25.889,
+    14.094,
+    48.222,
+    80.536
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "matrixHover",
+      {
+       "row": "Alignment research organisation",
+       "col": "Framework implementation reports"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#fig-actor-types table tr:first-child th:nth-child(2)",
+    "text": null,
+    "dx": -243,
+    "dy": -20,
+    "w": 908,
+    "h": 853
+   }
+  },
+  {
+   "n": 35,
+   "img": "slide35.jpg"
+  },
+  {
+   "n": 36,
+   "img": "slide36.jpg"
+  },
+  {
+   "n": 37,
+   "img": "slide37.png",
+   "poster": "poster37.jpg",
+   "box": [
+    15.338,
+    0.0,
+    69.325,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#grid-conducts",
+    "text": null,
+    "dx": -12,
+    "dy": -10,
+    "w": 1018,
+    "h": 826
+   }
+  },
+  {
+   "n": 38,
+   "img": "slide38.png",
+   "poster": "poster38.jpg",
+   "box": [
+    17.55,
+    0.0,
+    64.9,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "pin",
+      {
+       "block": "risks",
+       "text": "Scheming"
+      }
+     ],
+     [
+      "undim",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-risks",
+    "text": null,
+    "dx": -2,
+    "dy": 3,
+    "w": 998,
+    "h": 865
+   }
+  },
+  {
+   "n": 39,
+   "img": "slide39.png",
+   "poster": "poster39.jpg",
+   "box": [
+    2.254,
+    0.0,
+    96.603,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "showAllCats",
+      "conducts"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-conducts",
+    "text": null,
+    "dx": 2,
+    "dy": 258,
+    "w": 1264,
+    "h": 736
+   }
+  },
+  {
+   "n": 40,
+   "img": "slide40.png",
+   "poster": "poster40.jpg",
+   "box": [
+    5.939,
+    0.0,
+    88.122,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "conducts",
+       "year": "2020"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-conducts",
+    "text": null,
+    "dx": 4,
+    "dy": 166,
+    "w": 1258,
+    "h": 803
+   }
+  },
+  {
+   "n": 41,
+   "img": "slide41.png",
+   "poster": "poster41.jpg",
+   "box": [
+    7.494,
+    0.0,
+    85.011,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "conducts",
+       "year": "2022"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-conducts",
+    "text": null,
+    "dx": 2,
+    "dy": 162,
+    "w": 1268,
+    "h": 839
+   }
+  },
+  {
+   "n": 42,
+   "img": "slide42.png",
+   "poster": "poster42.jpg",
+   "box": [
+    7.257,
+    0.0,
+    85.486,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "conducts",
+       "year": "2022"
+      }
+     ],
+     [
+      "pin",
+      {
+       "block": "conducts",
+       "text": "Good process"
+      }
+     ],
+     [
+      "undim",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-conducts",
+    "text": null,
+    "dx": 0,
+    "dy": 166,
+    "w": 1269,
+    "h": 835
+   }
+  },
+  {
+   "n": 43,
+   "img": "slide43.png",
+   "poster": "poster43.jpg",
+   "box": [
+    17.543,
+    10.183,
+    64.914,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#grid-conducts .cat-row-label",
+    "text": "Political neutrality",
+    "dx": -6,
+    "dy": -1,
+    "w": 974,
+    "h": 844
+   }
+  },
+  {
+   "n": 44,
+   "img": "slide44.png",
+   "poster": "poster44.jpg",
+   "box": [
+    17.8,
+    10.025,
+    64.4,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ],
+     [
+      "pin",
+      {
+       "block": "conducts",
+       "text": "Acknowledging opposing perspectives"
+      }
+     ],
+     [
+      "undim",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#grid-conducts .cat-row-label",
+    "text": "Political neutrality",
+    "dx": -6,
+    "dy": -3,
+    "w": 972,
+    "h": 849
+   }
+  },
+  {
+   "n": 45,
+   "img": "slide45.png",
+   "poster": "poster45.jpg",
+   "box": [
+    10.642,
+    8.528,
+    82.094,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "conducts"
+     ],
+     [
+      "pin",
+      {
+       "block": "conducts",
+       "text": "Civic values"
+      }
+     ],
+     [
+      "undim",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#grid-conducts .cat-row-label",
+    "text": "Political neutrality",
+    "dx": -8,
+    "dy": -7,
+    "w": 1242,
+    "h": 851
+   }
+  },
+  {
+   "n": 46,
+   "img": "slide46.jpg"
+  },
+  {
+   "n": 47,
+   "img": "slide47.png",
+   "poster": "poster47.jpg",
+   "box": [
+    0.858,
+    0.0,
+    98.283,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "risks"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "risks",
+       "year": "2018"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-risks",
+    "text": null,
+    "dx": -2,
+    "dy": -11,
+    "w": 1272,
+    "h": 728
+   }
+  },
+  {
+   "n": 48,
+   "img": "slide48.png",
+   "poster": "poster48.jpg",
+   "box": [
+    7.829,
+    0.0,
+    84.342,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "risks"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "risks",
+       "year": "2021"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-risks",
+    "text": null,
+    "dx": 2,
+    "dy": 165,
+    "w": 1264,
+    "h": 843
+   }
+  },
+  {
+   "n": 49,
+   "img": "slide49.png",
+   "poster": "poster49.jpg",
+   "box": [
+    11.039,
+    0.0,
+    77.922,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "named",
+      true
+     ],
+     [
+      "showAllCats",
+      "risks"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "risks",
+       "year": "2021"
+      }
+     ],
+     [
+      "pin",
+      {
+       "block": "risks",
+       "text": "Existential catastrophe"
+      }
+     ],
+     [
+      "undim",
+      true
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-risks",
+    "text": null,
+    "dx": -2,
+    "dy": 169,
+    "w": 978,
+    "h": 706
+   }
+  },
+  {
+   "n": 50,
+   "img": "slide50.png",
+   "poster": "poster50.jpg",
+   "box": [
+    7.428,
+    0.0,
+    85.144,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "showAllCats",
+      "risks"
+     ],
+     [
+      "gridYear",
+      {
+       "block": "risks",
+       "year": "2025"
+      }
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-risks",
+    "text": null,
+    "dx": 4,
+    "dy": 167,
+    "w": 1273,
+    "h": 841
+   }
+  },
+  {
+   "n": 51,
+   "img": "slide51.png",
+   "poster": "poster51.jpg",
+   "box": [
+    8.688,
+    0.0,
+    82.625,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "showAllCats",
+      "risks"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#grid-risks .cat-row-label",
+    "text": "Impersonation and synthetic media",
+    "dx": -14,
+    "dy": -8,
+    "w": 1275,
+    "h": 868
+   }
+  },
+  {
+   "n": 52,
+   "img": "slide52.png",
+   "poster": "poster52.jpg",
+   "box": [
+    9.817,
+    0.0,
+    80.367,
+    100.0
+   ],
+   "live": {
+    "page": "interface.html",
+    "steps": [],
+    "width": 1512,
+    "anchor": "#block-training .block-head h3",
+    "text": null,
+    "dx": -4,
+    "dy": -12,
+    "w": 1243,
+    "h": 870
+   }
+  },
+  {
+   "n": 53,
+   "img": "slide53.png",
+   "poster": "poster53.jpg",
+   "box": [
+    9.361,
+    0.0,
+    81.278,
+    100.0
+   ],
+   "live": {
+    "page": "interface.html",
+    "steps": [],
+    "width": 1512,
+    "anchor": "#block-benchmark .block-head h3",
+    "text": null,
+    "dx": -4,
+    "dy": -14,
+    "w": 1247,
+    "h": 863
+   }
+  },
+  {
+   "n": 54,
+   "img": "slide54.png",
+   "poster": "poster54.jpg",
+   "box": [
+    20.84,
+    0.0,
+    58.319,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [],
+    "width": 1512,
+    "anchor": "#block-alluvial .block-head h3",
+    "text": null,
+    "dx": -4,
+    "dy": -14,
+    "w": 902,
+    "h": 870
+   }
+  },
+  {
+   "n": 55,
+   "img": "slide55.png",
+   "poster": "poster55.jpg",
+   "box": [
+    9.16,
+    0.0,
+    81.681,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "alluvialHover",
+      "No"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-alluvial .block-head h3",
+    "text": null,
+    "dx": -8,
+    "dy": -13,
+    "w": 1243,
+    "h": 856
+   }
+  },
+  {
+   "n": 56,
+   "img": "slide56.png",
+   "poster": "poster56.jpg",
+   "box": [
+    8.965,
+    0.0,
+    82.069,
+    100.0
+   ],
+   "live": {
+    "page": "index.html",
+    "steps": [
+     [
+      "alluvialHover",
+      "Yes"
+     ]
+    ],
+    "width": 1512,
+    "anchor": "#block-alluvial .block-head h3",
+    "text": null,
+    "dx": -8,
+    "dy": -14,
+    "w": 1246,
+    "h": 854
+   }
+  },
+  {
+   "n": 57,
+   "img": "slide57.jpg"
+  },
+  {
+   "n": 58,
+   "img": "slide58.jpg"
+  },
+  {
+   "n": 59,
+   "img": "slide59.jpg"
+  },
+  {
+   "n": 60,
+   "img": "slide60.jpg",
+   "links": [
+    {
+     "rect": [
+      23.244,
+      46.296,
+      76.709,
+      61.852
+     ],
+     "uri": "https://edekeulenaar.github.io/ai-alignment-actors/"
+    }
+   ]
+  }
+ ]
+}

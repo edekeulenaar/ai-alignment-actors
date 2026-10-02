@@ -128,3 +128,7 @@ body.conceptual .sq.sq-concept-none { background: transparent !important; outlin
 
 .v2-wordtree .wt-later text { fill: #23211e; opacity: .13; }
 .v2-wordtree path.wt-later { opacity: .25; }
+
+/* A page shown inside a slide of the presentation: no scrollbar in the slide's frame. */
+html.embedded { scrollbar-width: none; }
+html.embedded::-webkit-scrollbar { display: none; }

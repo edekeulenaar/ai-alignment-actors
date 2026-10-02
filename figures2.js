@@ -207,12 +207,20 @@
       };
       applyHighlight();
 
-      sim.on("tick", function () {
+      function ticked() {
         link.attr("x1", function (d) { return d.source.x; }).attr("y1", function (d) { return d.source.y; })
             .attr("x2", function (d) { return d.target.x; }).attr("y2", function (d) { return d.target.y; });
         node.attr("cx", function (d) { return d.x; }).attr("cy", function (d) { return d.y; });
         label.attr("x", function (d) { return d.x + r(d) + 3; }).attr("y", function (d) { return d.y + 3; });
-      });
+      }
+      sim.on("tick", ticked);
+      // Inside a slide of the presentation the browser runs animations slowly, so the layout
+      // is computed at once and shown settled.
+      if (new URLSearchParams(location.search).has("embed")) {
+        sim.stop();
+        for (var t = 0; t < 400; t++) sim.tick();
+        ticked();
+      }
 
       var count = document.createElement("p");
       count.className = "fig2-note";

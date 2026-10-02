@@ -28,11 +28,17 @@
       btn.textContent = hidden ? "‹ Controls" : "Hide ›";
       btn.setAttribute("aria-expanded", String(!hidden));
       btn.title = hidden ? "Show the controls sidebar" : "Hide the controls sidebar";
-      try { localStorage.setItem("rightSidebarHidden", hidden ? "1" : "0"); } catch (e) { /* private mode */ }
+      if (!new URLSearchParams(location.search).has("embed")) {
+        try { localStorage.setItem("rightSidebarHidden", hidden ? "1" : "0"); } catch (e) { /* private mode */ }
+      }
       window.dispatchEvent(new Event("resize"));      // figures that measure their width redraw
     };
     let hidden = false;
-    try { hidden = localStorage.getItem("rightSidebarHidden") === "1"; } catch (e) { /* ignore */ }
+    // Pages embedded in the presentation always start with the sidebar shown, as on the slides.
+    const embedded = new URLSearchParams(location.search).has("embed");
+    if (!embedded) {
+      try { hidden = localStorage.getItem("rightSidebarHidden") === "1"; } catch (e) { /* ignore */ }
+    }
     btn.addEventListener("click", () => set(!document.body.classList.contains("right-collapsed")));
     document.body.appendChild(btn);
     set(hidden);
@@ -541,6 +547,7 @@
   }
 
   // ── Boot ───────────────────────────────────────────────────────
+  if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embedded");
   sidebarToggle();
   // Actor colours come from data.json, which app.js applies to CSS variables.
   getJSON("data.json").then(d => {

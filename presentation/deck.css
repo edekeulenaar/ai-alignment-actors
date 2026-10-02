@@ -1,0 +1,46 @@
+:root {
+  --bg: #24221f;
+  --bar: #1b1a18;
+  --ink: #f2efe8;
+  --muted: #a49d91;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink);
+  font-family: "Test National", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+@font-face { font-family: "Test National"; src: url("../fonts/TestNational-Regular.otf") format("opentype"); font-weight: 400; }
+
+.deck-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding: .6rem 1rem; background: var(--bar); font-size: 13px; }
+.deck-nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+.deck-nav a { color: var(--muted); text-decoration: none; }
+.deck-nav a:hover { color: var(--ink); text-decoration: underline; }
+.deck-current { color: var(--ink); }
+.deck-controls { display: flex; align-items: center; gap: .5rem; }
+.deck-controls button { background: transparent; color: var(--ink); border: 1px solid #4a4640; border-radius: 4px;
+  padding: .25rem .6rem; font: inherit; cursor: pointer; }
+.deck-controls button:hover { border-color: var(--ink); }
+#counter { min-width: 4.5rem; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.deck { display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+.stage-wrap { width: 100%; display: flex; justify-content: center; }
+/* The stage is 1280 × 720 and scaled to fit the window (deck.js sets --s). */
+.stage { position: relative; width: 1280px; height: 720px; transform-origin: top left; overflow: hidden;
+  background: #fff; box-shadow: 0 6px 30px rgba(0, 0, 0, .45); }
+.stage-wrap { height: calc(720px * var(--s, 1)); }
+.stage-sizer { width: calc(1280px * var(--s, 1)); height: calc(720px * var(--s, 1)); position: relative; }
+
+.slide { position: absolute; inset: 0; }
+.slide img.layer { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.slide .overlay { pointer-events: none; z-index: 3; }
+.slide .poster { z-index: 1; }
+.slide .live { position: absolute; overflow: hidden; z-index: 2; background: #faf7f0; }
+.slide .live iframe { position: absolute; left: 0; top: 0; border: 0; transform-origin: 0 0; background: #faf7f0; }
+.slide .link { position: absolute; z-index: 4; }
+.slide .loading { position: absolute; z-index: 5; right: 10px; bottom: 8px; font-size: 12px; color: #6f6a62;
+  background: rgba(255, 255, 255, .85); padding: 2px 8px; border-radius: 10px; }
+
+.deck-hint { color: var(--muted); font-size: 12px; margin: .8rem 0 0; text-align: center; }
+
+:fullscreen .deck-bar, :fullscreen .deck-hint { display: none; }
+:fullscreen .deck { padding: 0; height: 100vh; justify-content: center; }
+:fullscreen body, :fullscreen { background: #000; }
