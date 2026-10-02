@@ -302,13 +302,13 @@
         });
       var note = document.createElement("p");
       note.className = "fig2-note";
-      note.textContent = "Each square is an actor named in documents of this type; its size is the number "
-        + "of such documents naming it, and its colour the relation those documents most often state. Actor "
-        + "names come from the project's actor vocabulary, matched against every page of every document; the "
-        + "sentence around each occurrence is then read for the relation it states (red teaming, external "
-        + "evaluation, benchmark authorship, standard setting, regulation, funding, partnership, data and "
-        + "annotation, advice, consultation of publics, research). The authoring company and its own models "
-        + "are not counted as actors in their own documents. Click a relation in the legend to highlight it.";
+      note.textContent = "Each square is an actor credited in documents of this type; its size is the number "
+        + "of such documents, and its colour the role those documents most often give it: a source of the "
+        + "definition of a conduct or risk, conceiving a training method, taking part in training, creating a "
+        + "benchmark, external evaluation or red teaming. Actors and roles come from the second, "
+        + "retrieval-grounded reading, and each was found verbatim on its page in the index; an actor merely "
+        + "named in a document, without one of these roles, is not counted. The authoring company is not "
+        + "counted in its own documents. Click a role in the legend to highlight it.";
       chart.appendChild(note);
     }
     draw(types[0]);
@@ -395,11 +395,13 @@
 
     var note = document.createElement("p");
     note.className = "fig2-note";
-    note.textContent = "Rows are actor types as coded in the readings, columns document types. A cell "
-      + "counts the documents of that type naming an actor of that type, so an actor named in ten "
-      + "system cards counts ten times. Colour follows the actor type, its strength the count "
-      + "(square-root scale, since internal actors would otherwise flatten everything else). "
-      + "Hover a cell for the actors behind it.";
+    note.textContent = "Rows are actor types, columns document types. A cell counts the documents of "
+      + "that type in which an actor of that type is credited with one of four roles: a source of the "
+      + "definition of a conduct or risk, a part in training (conceiving the method or taking part), the "
+      + "creation of a benchmark, or the evaluation or red teaming of a model. Every actor and every role was "
+      + "checked against its page in the index, and each actor's type against the corpus and, where needed, "
+      + "the web. The authoring company is not counted in its own documents. Colour follows the actor type, "
+      + "its strength the count (square-root scale). Hover a cell for the actors behind it.";
     host.appendChild(note);
   }
 

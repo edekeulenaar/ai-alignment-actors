@@ -1,0 +1,130 @@
+/* October 2026: the second reading's figures, the year scale and the sidebar toggle. */
+
+/* ── Right sidebar toggle ─────────────────────────────────────── */
+.sidebar-toggle {
+  position: fixed; top: 10px; right: calc(var(--right-w) + 10px); z-index: 60;
+  font: 12px/1 "Test National", -apple-system, sans-serif;
+  padding: 6px 10px; border: 1px solid var(--border, #ded8cd); border-radius: 999px;
+  background: var(--paper-alt, #f4f1ea); color: #3c3934; cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+}
+.sidebar-toggle:hover { border-color: #b9b1a2; color: #23211e; }
+body.right-collapsed { --right-w: 0px; }
+body.right-collapsed .sidebar-right { display: none; }
+body.right-collapsed .sidebar-toggle { right: 14px; }
+
+/* ── Year scale ───────────────────────────────────────────────── */
+.timescale {
+  display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+  margin: .4rem 0 .9rem; font: 12px/1.3 "Test National", -apple-system, sans-serif; color: #5c574f;
+}
+.ts-play {
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid #cfc7b8; background: #fbf9f4;
+  font-size: 11px; color: #23211e; flex: none;
+}
+.ts-play:hover { border-color: #23211e; }
+.ts-track { flex: 1 1 320px; min-width: 240px; }
+.ts-track input[type=range] { width: 100%; margin: 0; accent-color: #3f6fb5; }
+.ts-ticks { display: flex; justify-content: space-between; margin-top: 2px; }
+.ts-ticks span { cursor: pointer; padding: 0 2px; border-radius: 3px; }
+.ts-ticks span.on { color: #fff; background: #3f6fb5; }
+.ts-cum { white-space: nowrap; }
+.timescale-host { width: 100%; }
+
+/* ── Controls shared by the new figures ───────────────────────── */
+.v2-controls { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; align-items: center; margin-bottom: .4rem;
+  font: 12.5px/1.3 "Test National", -apple-system, sans-serif; text-align: left; }
+.v2-ctl select, .v2-ctl input { font: inherit; padding: .2rem .35rem; margin-left: .3rem;
+  border: 1px solid #cfc7b8; border-radius: 4px; background: #fff; }
+.v2-btn { font: 12px "Test National", sans-serif; padding: .25rem .6rem; border: 1px solid #cfc7b8;
+  border-radius: 4px; background: #fbf9f4; }
+.v2-legend { margin-top: .2rem; }
+.v2-tip {
+  position: fixed; z-index: 80; display: none; pointer-events: none; max-width: 26rem;
+  background: rgba(35, 33, 30, .95); color: #fff; padding: .5rem .65rem; border-radius: 5px;
+  font: 12px/1.4 "Test National", -apple-system, sans-serif; text-align: left;
+}
+.v2-tip ul { margin: .35rem 0 .2rem 1rem; padding: 0; }
+.v2-tip li { margin-bottom: .3rem; }
+
+/* ── Matrices (Figures 7 and 8) ───────────────────────────────── */
+.v2-matrix-scroll { overflow-x: auto; padding-bottom: .4rem; }
+.v2-matrix { min-width: 0; width: auto; margin: 0 auto; }
+.v2-matrix thead th.v2-col { height: 12rem; vertical-align: bottom; padding: 0 1px .4rem; }
+.v2-matrix thead th.v2-col span {
+  display: block; writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; text-align: left;
+}
+.v2-matrix thead th.v2-group {
+  font-size: .68rem; font-weight: 600; color: #3c3934; border-bottom: 2px solid #cfc7b8;
+  padding: .2rem .2rem .3rem; vertical-align: bottom; white-space: normal; line-height: 1.15;
+}
+.v2-matrix td { min-width: 1.75rem; height: 1.6rem; font-size: .68rem; }
+.v2-matrix .v2-rowgroup th {
+  text-align: left; font-weight: 600; font-size: .72rem; color: #23211e; padding: .7rem 0 .2rem;
+  border-bottom: 1px solid #ded8cd;
+}
+.v2-matrix .fig2-matrix-row { max-width: 17rem; white-space: normal; line-height: 1.2; }
+.v2-matrix th.is-lit, .v2-matrix th.is-lit span { color: #1f4f96; font-weight: 600; }
+.v2-detail { text-align: left; font: 12.5px/1.45 "Test National", -apple-system, sans-serif; color: #3c3934;
+  max-height: 22rem; overflow-y: auto; }
+.v2-detail h5 { margin: .8rem 0 .3rem; font-size: .85rem; }
+.v2-detail ul { margin: .3rem 0 0 1rem; padding: 0; }
+.v2-detail li { margin-bottom: .35rem; }
+.v2-pill { display: inline-flex; align-items: center; gap: .25rem; margin: 0 .5rem .25rem 0; }
+.v2-pill i { width: .6rem; height: .6rem; border-radius: 2px; display: inline-block; }
+.v2-pill em { color: #8a8377; font-style: normal; }
+
+/* ── Word tree (Figure 11) ────────────────────────────────────── */
+.v2-wt-scroll { overflow: auto; max-height: 46rem; border-top: 1px solid #ece7dc; padding-top: .5rem; text-align: left; }
+.v2-wordtree text { font-family: "Test National", -apple-system, sans-serif; fill: #23211e; cursor: pointer; }
+.v2-wordtree .wt-node:hover text { fill: #1f4f96; }
+.v2-wordtree .wt-link { fill: none; stroke: #cfc7b8; stroke-width: 1; }
+.v2-wordtree .wt-more { font-size: 10px; fill: #8a8377; font-style: italic; cursor: default; }
+.wt-ex { list-style: none; margin-left: 0 !important; }
+.v2-wt-info { margin: .2rem 0 .4rem; }
+
+/* ── Conceptual change ────────────────────────────────────────── */
+body.conceptual .sq.sq-concept { border-radius: 2px; }
+body.conceptual .sq.sq-concept-none { background: transparent !important; outline: 1.5px solid var(--sq-bg, #999);
+  outline-offset: -1.5px; width: 8px; height: 8px; }
+.cc-spark { display: flex; flex-direction: column; margin-bottom: .2rem; font-size: 11px; }
+.cc-spark svg { overflow: visible; }
+.cc-spark .cc-axis { stroke: #ded8cd; }
+.cc-spark .cc-line { fill: none; stroke: #3f6fb5; stroke-width: 1.5; }
+.cc-spark circle { fill: #3f6fb5; }
+.cc-spark text { font-size: 10px; fill: #5c574f; }
+.cc-year { margin: .45rem 0; }
+.cc-year b { margin-right: .4rem; }
+.cc-meta { color: var(--muted, #8a8377); font-size: 11px; }
+.cc-text { margin-top: .15rem; line-height: 1.45; }
+.cc-text del { color: #b0473b; text-decoration: line-through; }
+.cc-text ins { background: #dcebd5; text-decoration: none; }
+.cc-sub { font-size: 11.5px; color: var(--muted, #8a8377); margin: .2rem 0 .4rem; }
+.v2-cc-chart { width: 100%; height: auto; font: 11px "Test National", -apple-system, sans-serif; }
+.v2-cc-chart .cc-label { font-size: 11px; font-weight: 600; }
+.v2-cc-chart .cc-axis-title { fill: #6f6a62; font-size: 11px; }
+#info-card .cc-text, #info-card .cc-year { max-width: 30rem; }
+
+.v2-wordtree .wt-new text { fill: #1f4f96; font-weight: 600; }
+.wt-new-key { color: #1f4f96; font-weight: 600; margin-left: .4rem; }
+.commit-key .ck-sq.ck-none { background: transparent; border: 1.5px solid var(--muted); }
+
+.v2-cc-grid th.v2-cc-year { font-size: .72rem; color: #5c574f; padding: 0 .3rem .3rem; }
+.v2-cc-grid td { text-align: center; vertical-align: middle; min-width: 2.4rem; height: 2.1rem; background: transparent; }
+.v2-cc-grid td.v2-cc-co, .v2-cc-grid td.v2-cc-mean { font-size: .7rem; color: #6f6a62; white-space: nowrap; padding: 0 .5rem; }
+.v2-cc-grid .fig2-matrix-row em { color: #8a8377; font-style: normal; font-size: .65rem; }
+.v2-cc-sq { display: inline-block; background: #3f6fb5; border-radius: 2px; vertical-align: middle; }
+.v2-cc-sq.first { background: transparent; border: 1.5px solid #3f6fb5; }
+.v2-cc-cell { cursor: pointer; }
+.v2-cc-cell:hover .v2-cc-sq { outline: 2px solid #23211e; outline-offset: 1px; }
+.v2-tip .cc-text { margin-top: .3rem; max-width: 24rem; }
+.v2-tip .cc-text del { color: #f3a49a; }
+.v2-tip .cc-text ins { background: rgba(140, 200, 120, .35); color: #fff; }
+
+/* Figures 7 and 8: no outer frame, and empty cells are left blank. */
+#fig-training-matrix, #fig-benchmark-matrix { border: 0; background: transparent; padding-left: 0; padding-right: 0; }
+.v2-matrix td:not(.has-value) { background: transparent; }
+.ts-hint { color: #8a8377; font-size: 11px; white-space: nowrap; }
+
+.v2-wordtree .wt-later text { fill: #23211e; opacity: .13; }
+.v2-wordtree path.wt-later { opacity: .25; }

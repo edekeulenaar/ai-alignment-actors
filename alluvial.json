@@ -22,7 +22,7 @@
   {
    "country": "United Kingdom",
    "type": "Academic research center or lab",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "AI Ethics and Governance in Practice at The Alan Turing Institute",
    "mentions": 0
   },
@@ -715,9 +715,9 @@
   {
    "country": "United States",
    "type": "Academic research center or lab",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "MITRE",
-   "mentions": 5
+   "mentions": 0
   },
   {
    "country": "Germany",
@@ -904,7 +904,7 @@
   {
    "country": "United Kingdom",
    "type": "Academic research center or lab",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "University of Cambridge Department of Computer Science and Technology",
    "mentions": 0
   },
@@ -1030,9 +1030,9 @@
   {
    "country": "United States",
    "type": "Advocacy organisation",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "All Tech Is Human",
-   "mentions": 0
+   "mentions": 2
   },
   {
    "country": "United States",
@@ -1361,7 +1361,7 @@
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "Alignment Research Center",
-   "mentions": 6
+   "mentions": 12
   },
   {
    "country": "United Kingdom",
@@ -1403,14 +1403,14 @@
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "Center for AI Safety",
-   "mentions": 5
+   "mentions": 26
   },
   {
    "country": "United States",
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "Center for AI Safety",
-   "mentions": 5
+   "mentions": 26
   },
   {
    "country": "United States",
@@ -1422,9 +1422,9 @@
   {
    "country": "Denmark",
    "type": "Alignment research organisation",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "Eleos AI Research",
-   "mentions": 0
+   "mentions": 2
   },
   {
    "country": "United States",
@@ -1438,7 +1438,7 @@
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "FAR.AI",
-   "mentions": 8
+   "mentions": 7
   },
   {
    "country": "United Kingdom",
@@ -1499,9 +1499,9 @@
   {
    "country": "United States",
    "type": "Alignment research organisation",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "Machine Intelligence Research Institute",
-   "mentions": 0
+   "mentions": 102
   },
   {
    "country": "United States",
@@ -1536,7 +1536,7 @@
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "METR",
-   "mentions": 102
+   "mentions": 93
   },
   {
    "country": "United States",
@@ -1555,16 +1555,16 @@
   {
    "country": "United States",
    "type": "Alignment research organisation",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "OpenMined",
-   "mentions": 0
+   "mentions": 1
   },
   {
    "country": "United States",
    "type": "Alignment research organisation",
    "mentioned": "Yes",
    "name": "Redwood Research",
-   "mentions": 5
+   "mentions": 18
   },
   {
    "country": "Denmark",
@@ -1590,9 +1590,9 @@
   {
    "country": "Singapore",
    "type": "Coalition",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "AI Verify Foundation",
-   "mentions": 0
+   "mentions": 1
   },
   {
    "country": "Australia",
@@ -1625,9 +1625,9 @@
   {
    "country": "United States",
    "type": "Coalition",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "Coalition for Secure AI",
-   "mentions": 2
+   "mentions": 0
   },
   {
    "country": "Unknown",
@@ -1669,7 +1669,7 @@
    "type": "Coalition",
    "mentioned": "Yes",
    "name": "Frontier Model Forum",
-   "mentions": 14
+   "mentions": 5
   },
   {
    "country": "Unknown",
@@ -1765,9 +1765,9 @@
   {
    "country": "United States",
    "type": "Coalition",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "Partnership on AI",
-   "mentions": 8
+   "mentions": 0
   },
   {
    "country": "Germany",
@@ -2087,7 +2087,7 @@
   {
    "country": "United Kingdom",
    "type": "Government agency",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "AI Security Institute",
    "mentions": 0
   },
@@ -2213,7 +2213,7 @@
   {
    "country": "Austria",
    "type": "Government agency",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "European Union Agency for Fundamental Rights",
    "mentions": 0
   },
@@ -2255,7 +2255,7 @@
   {
    "country": "Singapore",
    "type": "Government agency",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "Infocomm Media Development Authority",
    "mentions": 0
   },
@@ -2276,9 +2276,9 @@
   {
    "country": "United States",
    "type": "Government agency",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "MITRE",
-   "mentions": 5
+   "mentions": 0
   },
   {
    "country": "Singapore",
@@ -2306,21 +2306,21 @@
    "type": "Government agency",
    "mentioned": "Yes",
    "name": "National Institute of Standards and Technology",
-   "mentions": 4
+   "mentions": 2
   },
   {
    "country": "United States",
    "type": "Government agency",
    "mentioned": "Yes",
    "name": "National Institute of Standards and Technology",
-   "mentions": 4
+   "mentions": 2
   },
   {
    "country": "United States",
    "type": "Government agency",
    "mentioned": "Yes",
    "name": "National Institute of Standards and Technology (NIST)",
-   "mentions": 16
+   "mentions": 2
   },
   {
    "country": "Denmark",
@@ -2353,9 +2353,9 @@
   {
    "country": "United States",
    "type": "Government agency",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "U.S. AI Safety Institute",
-   "mentions": 0
+   "mentions": 8
   },
   {
    "country": "United States",
@@ -2367,16 +2367,16 @@
   {
    "country": "United Kingdom",
    "type": "Government agency",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "UK AI Safety Institute",
-   "mentions": 92
+   "mentions": 0
   },
   {
    "country": "United Kingdom",
    "type": "Government agency",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "UK AI Security Institute",
-   "mentions": 0
+   "mentions": 237
   },
   {
    "country": "Belgium",
@@ -2572,7 +2572,7 @@
    "type": "Industry/trade association",
    "mentioned": "Yes",
    "name": "International Organization for Standardization",
-   "mentions": 1
+   "mentions": 3
   },
   {
    "country": "United States",
@@ -2642,7 +2642,7 @@
    "type": "Legal advocacy organisation",
    "mentioned": "Yes",
    "name": "Electronic Frontier Foundation",
-   "mentions": 1
+   "mentions": 11
   },
   {
    "country": "Germany",
@@ -2913,9 +2913,9 @@
   {
    "country": "United States",
    "type": "Public consultation organisation",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "AI & Democracy Institute",
-   "mentions": 8
+   "mentions": 0
   },
   {
    "country": "Germany",
@@ -2962,9 +2962,9 @@
   {
    "country": "United States",
    "type": "Red teaming / cybersecurity company",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "CrowdStrike",
-   "mentions": 0
+   "mentions": 1
   },
   {
    "country": "Germany",
@@ -3020,14 +3020,14 @@
    "type": "Red teaming / cybersecurity company",
    "mentioned": "Yes",
    "name": "Hack The Box",
-   "mentions": 8
+   "mentions": 6
   },
   {
    "country": "United States",
    "type": "Red teaming / cybersecurity company",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "HackerOne",
-   "mentions": 0
+   "mentions": 11
   },
   {
    "country": "United States",
@@ -3277,9 +3277,9 @@
   {
    "country": "United States",
    "type": "Think tank or policy institute",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "Brookings Institution",
-   "mentions": 0
+   "mentions": 9
   },
   {
    "country": "Belgium",
@@ -3298,9 +3298,9 @@
   {
    "country": "United States",
    "type": "Think tank or policy institute",
-   "mentioned": "Yes",
+   "mentioned": "No",
    "name": "Carnegie Endowment for International Peace",
-   "mentions": 5
+   "mentions": 0
   },
   {
    "country": "United States",
@@ -3403,9 +3403,9 @@
   {
    "country": "United States",
    "type": "Think tank or policy institute",
-   "mentioned": "No",
+   "mentioned": "Yes",
    "name": "Epoch AI",
-   "mentions": 0
+   "mentions": 9
   },
   {
    "country": "Belgium",
@@ -3591,5 +3591,5 @@
   }
  ],
  "total": 512,
- "matched": 24
+ "matched": 33
 }

@@ -62,6 +62,8 @@ const STATE = {
   viewNamed:          false,
   searchTerm:         "",
   cluster:            { kind: "conducts", id: null },
+  timeView:           { conducts: null, risks: null },   // {year, cumulative} or null = all years
+  conceptual:         false,
   iconCache:          {},              // doc-type-class → URL or false
 };
 
@@ -100,6 +102,21 @@ fetch("data.json?v=" + DATA_VERSION).then(r => r.json()).then(data => {
     const key = document.getElementById("commit-key");
     if (key) key.hidden = !STATE.commitment;
     renderAll();
+  });
+
+  // Conceptual change toggle: size squares by how much the item's definition changed
+  // from year to year (conceptual_change.json, loaded by v2.js into window.CONCEPTUAL).
+  const vcc = document.getElementById("view-conceptual");
+  if (vcc) vcc.addEventListener("change", e => {
+    STATE.conceptual = e.target.checked;
+    if (STATE.conceptual && vc && vc.checked) { vc.checked = false; vc.dispatchEvent(new Event("change")); }
+    document.body.classList.toggle("conceptual", STATE.conceptual);
+    const key = document.getElementById("conceptual-key");
+    if (key) key.hidden = !STATE.conceptual;
+    renderAll();
+  });
+  if (vc) vc.addEventListener("change", e => {
+    if (e.target.checked && vcc && vcc.checked) { vcc.checked = false; vcc.dispatchEvent(new Event("change")); }
   });
 
   // Search bar
@@ -361,6 +378,21 @@ function renderItemBlock(blockId, items, opts) {
   if (!grid) return;                 // block removed from the page
   grid.innerHTML = "";
 
+  // Year scale (conducts and risks): show only items named in documents of that year,
+  // or up to that year when the scale is cumulative.
+  let visibleIds = null;              // null = every item; otherwise the ids up to the chosen year
+  if (blockId in STATE.timeView) {
+    ensureTimeScale(blockId, grid);
+    const tv = STATE.timeView[blockId];
+    if (tv && tv.year) {
+      // The layout (rows, columns, order) stays that of all years, so nothing moves while
+      // the years accumulate; only the squares of documents up to the year are drawn.
+      const years = Object.fromEntries(STATE.data.documents.map(d => [d.id, d.year]));
+      const ok = y => y && (tv.cumulative ? y <= tv.year : y === tv.year);
+      visibleIds = new Set(items.filter(it => (it.pub_ids || []).some(p => ok(years[p]))).map(it => it.id));
+    }
+  }
+
   // Top-N companies for THIS block
   const cos = topCompaniesBy(items);
 
@@ -462,7 +494,7 @@ function renderItemBlock(blockId, items, opts) {
       const cell = document.createElement("div");
       cell.className = "cat-cell";
       cell.dataset.block = blockId; cell.dataset.cat = cat; cell.dataset.company = co;
-      byCat[cat].filter(it => it.company === co)
+      byCat[cat].filter(it => it.company === co && (!visibleIds || visibleIds.has(it.id)))
                 .forEach(it => cell.appendChild(makeSquare(it, blockId, nameKey)));
       grid.appendChild(cell);
     });
@@ -507,6 +539,30 @@ function makeSquare(item, blockId, nameKey) {
     sq.style.height = px + "px";
     sq.dataset.mentions = item.mentions;
     sq.classList.add("sq-commit");
+  }
+
+  // Conceptual-change view: square size ∝ the mean change in wording of this item's
+  // definitions from one year to the next; an item defined in one year only has no change
+  // to measure and is drawn as an outline.
+  if (STATE.conceptual && !STATE.viewNamed && (blockId === "conducts" || blockId === "risks")) {
+    // Conceptual change, sized like Commitment (8 → 30 px): the average share of this
+    // concept's definition that changed from one definition to the next, over every year
+    // up to the one chosen on the (cumulative) year scale.
+    const series = conceptualSeries(item);
+    const tv = STATE.timeView[blockId];
+    let v = series ? series.mean_change : null;
+    if (series && tv && tv.year) {
+      const upto = Object.entries(series.changes).filter(([y]) => y <= tv.year).map(([, c]) => c);
+      v = upto.length ? upto.reduce((a, b) => a + b, 0) / upto.length : null;
+    }
+    sq.classList.add("sq-concept");
+    if (v != null) {
+      const px = Math.round(8 + v * 22);
+      sq.style.width = px + "px"; sq.style.height = px + "px";
+      sq.dataset.change = Math.round(v * 100);
+    } else {
+      sq.classList.add("sq-concept-none");
+    }
   }
 
   sq.addEventListener("mouseenter", e => showCard(itemToCard(item, blockId, nameKey), e));
@@ -679,6 +735,11 @@ function itemToCard(it, blockId, nameKey) {
       <dt>Benchmark domain</dt><dd>${escape(it.benchmark_category || "—")}</dd>
       <dt>Found in</dt><dd>${found}</dd>
       ${docActors}`;
+  }
+
+  if (STATE.conceptual && (blockId === "conducts" || blockId === "risks")) {
+    const series = conceptualSeries(it);
+    if (series) return conceptualCard(it, series);
   }
 
   // conduct / risk — the primary DEFINER (who this risk/conduct is attributed
@@ -1646,4 +1707,112 @@ function setupScrollSpy() {
   }, { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.2, 0.5, 0.8, 1] });
   sections.forEach(s => io.observe(s));
   setActive("introduction");
+}
+
+
+// ════════════════════════════════════════════════════════════════
+// YEAR SCALE — shared by Figures 6a, 6b, 7, 8 and the word tree.
+// Now → year 1 → year 2 → … → Now: the two ends show every year at once.
+// ════════════════════════════════════════════════════════════════
+function makeTimeScale(host, years, onChange, opts = {}) {
+  years = [...new Set(years.filter(Boolean))].sort();
+  const wrap = document.createElement("div");
+  wrap.className = "timescale";
+  const stops = ["Now", ...years, "Now"];
+  wrap.innerHTML = `
+    <button type="button" class="ts-play" aria-label="Play through the years">▶</button>
+    <div class="ts-track">
+      <input type="range" min="0" max="${stops.length - 1}" step="1" value="0" aria-label="Year">
+      <div class="ts-ticks">${stops.map((y, i) => `<span data-i="${i}">${y}</span>`).join("")}</div>
+    </div>
+    <label class="ts-cum" hidden><input type="checkbox" checked> up to this year</label>
+    <span class="ts-hint">each year includes the years before it</span>`;
+  host.appendChild(wrap);
+  const range = wrap.querySelector("input[type=range]");
+  const cum = wrap.querySelector(".ts-cum input");
+  const play = wrap.querySelector(".ts-play");
+  let timer = null;
+  const emit = () => {
+    const i = +range.value;
+    const year = (i === 0 || i === stops.length - 1) ? null : stops[i];
+    wrap.querySelectorAll(".ts-ticks span").forEach(s => s.classList.toggle("on", +s.dataset.i === i));
+    onChange({ year, cumulative: cum.checked });
+  };
+  range.addEventListener("input", emit);
+  cum.addEventListener("change", emit);
+  wrap.querySelectorAll(".ts-ticks span").forEach(s =>
+    s.addEventListener("click", () => { range.value = s.dataset.i; emit(); }));
+  play.addEventListener("click", () => {
+    if (timer) { clearInterval(timer); timer = null; play.textContent = "▶"; return; }
+    play.textContent = "❚❚";
+    if (+range.value >= stops.length - 1) range.value = 0;
+    timer = setInterval(() => {
+      range.value = +range.value + 1;
+      emit();
+      if (+range.value >= stops.length - 1) { clearInterval(timer); timer = null; play.textContent = "▶"; }
+    }, 1100);
+  });
+  wrap.querySelector(`.ts-ticks span[data-i="0"]`).classList.add("on");
+  return wrap;
+}
+window.makeTimeScale = makeTimeScale;
+
+function ensureTimeScale(blockId, grid) {
+  const block = grid.closest(".grid-block");
+  if (!block || block.querySelector(".timescale")) return;
+  const host = document.createElement("div");
+  host.className = "timescale-host";
+  grid.parentNode.insertBefore(host, grid);
+  makeTimeScale(host, STATE.data.documents.map(d => d.year), tv => {
+    STATE.timeView[blockId] = tv.year ? tv : null;
+    renderItemBlock(blockId, STATE.data[blockId] || [], { nameKey: "item" });
+    refreshSelectionState();
+  });
+}
+
+// ── Conceptual change ────────────────────────────────────────────
+function conceptualSeries(item) {
+  const cc = window.CONCEPTUAL;
+  if (!cc) return null;
+  return cc.byKey.get(`${item.company}|${(item.item || "").toLowerCase()}`) || null;
+}
+
+function wordDiff(a, b) {
+  // Word-level LCS: what was dropped from a, and what is new in b.
+  const A = a.split(/\s+/), B = b.split(/\s+/);
+  if (A.length * B.length > 160000) return escape(b);
+  const dp = Array.from({ length: A.length + 1 }, () => new Uint16Array(B.length + 1));
+  for (let i = A.length - 1; i >= 0; i--)
+    for (let j = B.length - 1; j >= 0; j--)
+      dp[i][j] = A[i].toLowerCase() === B[j].toLowerCase() ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const out = [];
+  let i = 0, j = 0;
+  while (i < A.length && j < B.length) {
+    if (A[i].toLowerCase() === B[j].toLowerCase()) { out.push(escape(B[j])); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { out.push(`<del>${escape(A[i])}</del>`); i++; }
+    else { out.push(`<ins>${escape(B[j])}</ins>`); j++; }
+  }
+  while (i < A.length) out.push(`<del>${escape(A[i++])}</del>`);
+  while (j < B.length) out.push(`<ins>${escape(B[j++])}</ins>`);
+  return out.join(" ");
+}
+
+window.wordDiffV2 = (a, b) => wordDiff(a, b);
+
+function conceptualCard(it, series) {
+  const years = Object.keys(series.years).sort();
+  let prev = null;
+  const rows = years.map(y => {
+    const d = series.years[y][0];
+    const text = prev ? wordDiff(prev.quote, d.quote) : escape(d.quote);
+    const change = series.changes[y] != null ? ` · change ${Math.round(series.changes[y] * 100)}%` : " · first definition";
+    prev = d;
+    return `<div class="cc-year"><b>${y}</b><span class="cc-meta">${escape(snippet(d.title, 60))}, p. ${d.page}${change}</span>
+            <div class="cc-text">${text}</div></div>`;
+  }).join("");
+  const mean = series.mean_change != null ? `${Math.round(series.mean_change * 100)}% average change per year`
+                                           : "defined in one year only";
+  return `<h4>${escape(it.item)}</h4>
+    <p class="cc-sub">${escape(it.company)} · ${mean}. Struck words were dropped from the year before; highlighted words are new.</p>
+    ${rows}`;
 }

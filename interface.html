@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The actors in AI alignment</title>
 <link rel="stylesheet" href="figures2.css?v=20260918e">
-<link rel="stylesheet" href="style.css?v=20260620T1300">
+<link rel="stylesheet" href="v2.css?v=20261002v6">
+<link rel="stylesheet" href="style.css?v=20261002sq">
 </head>
 <body>
 
@@ -79,6 +80,21 @@
       <div class="commit-key-row"><span class="ck-sq" style="width:9px;height:9px"></span> rarely (1)</div>
       <div class="commit-key-row"><span class="ck-sq" style="width:18px;height:18px"></span> often</div>
       <div class="commit-key-row"><span class="ck-sq" style="width:30px;height:30px"></span> most (peak)</div>
+    </div>
+    <label class="side-toggle">
+      <input type="checkbox" id="view-conceptual">
+      <span>Conceptual change (size by change in definitions)</span>
+    </label>
+    <div class="commit-key" id="conceptual-key" hidden>
+      <h5>Conceptual change</h5>
+      <p class="commit-key-sub">Square size = the share of a company's definition of that
+        conduct or risk that changed from its previous definition, on average over the years up
+        to the one chosen on a figure's year scale. Outline = no earlier definition to
+        compare with. Hover a square to read the definitions year by year.</p>
+      <div class="commit-key-row"><span class="ck-sq" style="width:8px;height:8px"></span> unchanged (0%)</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:19px;height:19px"></span> half rewritten (50%)</div>
+      <div class="commit-key-row"><span class="ck-sq" style="width:30px;height:30px"></span> entirely rewritten (100%)</div>
+      <div class="commit-key-row"><span class="ck-sq ck-none" style="width:8px;height:8px"></span> no earlier definition</div>
     </div>
   </div>
 
@@ -1144,10 +1160,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
-<script src="app.js?v=20260619T2000"></script>
+<script src="app.js?v=20261002v6"></script>
 <script src="stacks.js?v=20260620T1000"></script>
 <script src="alluvial.js?v=20260620T1300"></script>
 <script src="comments-config.js?v=20260617"></script>
 <script src="refs-comments.js?v=20260617"></script>
+<script src="v2.js?v=20261002v6"></script>
 </body>
 </html>

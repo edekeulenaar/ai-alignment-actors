@@ -149,7 +149,7 @@ main.restructured .prose > .grid-block,
 main.restructured p.figure-caption {
   /* Wider than the text column, centred on it: the column is already centred in the
      space between the two fixed sidebars, so this centres the figure on the page. */
-  --gap: calc(100vw - 510px);
+  --gap: calc(100vw - var(--sb-w, 230px) - var(--right-w, 280px));
   width: min(1080px, max(100%, calc(var(--gap) - 50px)));
   position: relative;
   left: 50%;

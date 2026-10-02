@@ -1118,8 +1118,8 @@ mark.cmt.flash { animation: cmt-flash 1.6s ease-out 1; }
   font-family: var(--sans); font-size: 12px; color: var(--ink-soft); }
 #data-card .dc-row span { color: var(--muted); }
 
-/* ── Commitment view: squares become circles ────────────────────────────── */
-body.commitment .sq.sq-commit { border-radius: 50%; }
+/* ── Commitment view: squares sized by mentions (they stay squares) ──────── */
+body.commitment .sq.sq-commit { border-radius: 2px; }
 
 /* ── Test National Book (Conceptual-clusters pane headings) ─────────────── */
 @font-face { font-family: "Test National Book"; src: url("fonts/TestNational-Book.otf") format("opentype");

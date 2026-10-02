@@ -54,30 +54,31 @@
   <!-- 4 -->
   <rect class="box" x="40" y="276" width="880" height="238" rx="6"/>
   <text class="step" x="64" y="304">STEP 4</text>
-  <text class="head" x="64" y="326">Deriving data points with retrieval-augmented reading</text>
+  <text class="head" x="64" y="326">Reading the documents from the index, and checking what was read</text>
 
   <rect class="box-out" x="64" y="348" width="256" height="142" rx="5"/>
-  <text class="head" x="84" y="376" font-size="12.5">Index</text>
-  <text class="body" x="84" y="398">Passages bounded by the page they</text>
-  <text class="body" x="84" y="415">sit on. BM25 (exact names) + dense</text>
-  <text class="body" x="84" y="432">embeddings (descriptive questions)</text>
-  <text class="count" x="84" y="468">752 documents · 35,265 passages</text>
+  <text class="head" x="84" y="376" font-size="12.5">Read from the index</text>
+  <text class="body" x="84" y="398">Claude Opus 5.5 reads every document</text>
+  <text class="body" x="84" y="415">whole, page by page; long ones in</text>
+  <text class="body" x="84" y="432">sections, each with its references</text>
+  <text class="body" x="84" y="449">retrieved from the index</text>
+  <text class="count" x="84" y="468">752 documents · 863 readings</text>
 
   <rect class="box-out" x="352" y="348" width="256" height="142" rx="5"/>
-  <text class="head" x="372" y="376" font-size="12.5">Retrieve, then read</text>
-  <text class="body" x="372" y="398">One query per data point, inside one</text>
-  <text class="body" x="372" y="415">document: conducts, risks, training,</text>
-  <text class="body" x="372" y="432">benchmarks, evaluators, actors,</text>
-  <text class="body" x="372" y="449">thresholds. The model sees only those</text>
-  <text class="body" x="372" y="466">passages, each labelled with its page.</text>
+  <text class="head" x="372" y="376" font-size="12.5">Check against the pages</text>
+  <text class="body" x="372" y="398">Every quote looked up on the page it</text>
+  <text class="body" x="372" y="415">cites; definitions, not mentions; an</text>
+  <text class="body" x="372" y="432">actor only where credited for a</text>
+  <text class="body" x="372" y="449">definition, training or benchmark</text>
+  <text class="count" x="372" y="468">9,533 elements kept · 37 dropped</text>
 
   <rect class="box-out" x="640" y="348" width="256" height="142" rx="5"/>
-  <text class="head" x="660" y="376" font-size="12.5">Exhaustive scan</text>
-  <text class="body" x="660" y="398">Every page scanned for every actor,</text>
-  <text class="body" x="660" y="415">benchmark and method name in the</text>
-  <text class="body" x="660" y="432">project vocabulary, to bound what</text>
-  <text class="body" x="660" y="449">ranking could have missed</text>
-  <text class="count" x="660" y="468">43,686 term-page mentions</text>
+  <text class="head" x="660" y="376" font-size="12.5">Check who each actor is</text>
+  <text class="body" x="660" y="398">Each actor checked once, against how</text>
+  <text class="body" x="660" y="415">its documents describe it and the</text>
+  <text class="body" x="660" y="432">sentences naming it across the corpus</text>
+  <text class="body" x="660" y="449">retrieved from the index</text>
+  <text class="count" x="660" y="468">1,204 actors · 139 corrected</text>
 
   <path class="flow" d="M321,419 L350,419"/>
   <path class="flow" d="M609,419 L638,419"/>
@@ -90,12 +91,12 @@
 
   <rect class="box-out" x="64" y="620" width="400" height="164" rx="5"/>
   <text class="head" x="84" y="648" font-size="12.5">Enrolment across the stack</text>
-  <text class="body" x="84" y="670">For every normalised actor, whether it appears in the</text>
-  <text class="body" x="84" y="687">definition of a conduct or risk, in data curation, in</text>
-  <text class="body" x="84" y="704">training, in benchmarking or as an evaluator — and how:</text>
-  <text class="body" x="84" y="721">citation, normative influence, authorship, red teaming,</text>
-  <text class="body" x="84" y="738">evaluation, partnership, grant.</text>
-  <text class="tool" x="84" y="762">→ Figures 6a, 6b, 7, 8 and the stack view</text>
+  <text class="body" x="84" y="670">For every checked actor, whether a document credits it</text>
+  <text class="body" x="84" y="687">as a source of the definition of a conduct or risk, with</text>
+  <text class="body" x="84" y="704">conceiving or taking part in training, with creating a</text>
+  <text class="body" x="84" y="721">benchmark, or with evaluating or red-teaming a model;</text>
+  <text class="body" x="84" y="738">and how definitions change from one year to the next.</text>
+  <text class="tool" x="84" y="762">→ Figures 6a, 6b, 7, 8, the stack view and conceptual change</text>
 
   <rect class="box-out" x="496" y="620" width="400" height="164" rx="5"/>
   <text class="head" x="516" y="648" font-size="12.5">Exclusion</text>
@@ -120,13 +121,13 @@
   <text class="body" x="372" y="875">another by title or links to it; links</text>
   <text class="body" x="372" y="892">a company repeats across its own</text>
   <text class="body" x="372" y="909">pages are discounted as navigation.</text>
-  <text class="tool" x="372" y="932">→ Figure 3</text>
+  <text class="tool" x="372" y="932">→ Figure 3a</text>
 
   <rect class="box-out" x="640" y="808" width="256" height="144" rx="5"/>
   <text class="head" x="660" y="836" font-size="12.5">Actors per document type</text>
-  <text class="body" x="660" y="858">The sentence around each actor's name</text>
-  <text class="body" x="660" y="875">read for the relation it states, then</text>
-  <text class="body" x="660" y="892">aggregated to document type. The</text>
-  <text class="body" x="660" y="909">authoring company is not an actor.</text>
-  <text class="tool" x="660" y="932">→ Figure 4</text>
+  <text class="body" x="660" y="858">The checked actors and their roles,</text>
+  <text class="body" x="660" y="875">counted by document type. The</text>
+  <text class="body" x="660" y="892">authoring company is not an actor</text>
+  <text class="body" x="660" y="909">in its own documents.</text>
+  <text class="tool" x="660" y="932">→ Figures 3b and 4</text>
 </svg>

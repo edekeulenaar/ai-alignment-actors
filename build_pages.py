@@ -33,7 +33,7 @@ DRAFT = DOCS / "manuscript.md"
 TAXONOMY = DOCS / "document-taxonomy.csv"
 OUT = DOCS / "index.html"        # the restructured text is the site's front page
 INTERFACE = DOCS / "interface.html"  # the original interface page, kept alongside
-VERSION = "20261001pad"
+VERSION = "20261002v6"
 
 CITE = re.compile(r"\[@([^\]]+)\]")
 CAPTION = re.compile(r"^\*\*(Figure|Table)\s*([0-9]+[ab]?(?:\s*and\s*[0-9]+[ab])?)\.?\*\*", re.I)
@@ -46,10 +46,12 @@ FIGURE_HTML = {
     "figure 3b": '<div id="fig-actor-types" class="fig2-host"></div>',
     "figure 4": '<div id="fig-actors" class="fig2-host"></div>',
     "figure 6a and 6b": "@@block-conducts@@@@block-risks@@",
-    "figure 7": "@@block-training@@",
-    "figure 8": "@@block-benchmark@@",
+    "figure 7": '<div id="fig-training-matrix" class="fig2-host"></div>',
+    "figure 8": '<div id="fig-benchmark-matrix" class="fig2-host"></div>',
     "figure 9": "@@block-stacks@@",
     "figure 10": "@@block-alluvial@@",
+    "figure 11": '<div id="fig-wordtree" class="fig2-host"></div>',
+    "figure 12": '<div id="fig-conceptual" class="fig2-host"></div>',
 }
 # The interface blocks kept after the article, in the order the original page has them.
 TRAILING_BLOCKS = ["block-sources", "block-top-actors", "block-clusters"]
@@ -195,7 +197,8 @@ def main() -> None:
     shell_top = page[head_end + len("</head>"):main_open]  # <body> + sidebars
     scripts = page[page.index("</main>") + len("</main>"):]
     # The shell does not load the September 2026 figures; this page needs them.
-    scripts = scripts.replace("</body>", f'<script src="figures2.js?v={VERSION}"></script>\n</body>')
+    scripts = scripts.replace("</body>", f'<script src="figures2.js?v={VERSION}"></script>\n'
+                                          f'<script src="v2.js?v={VERSION}"></script>\n</body>')
     # The comment layer and its configuration changed with the GitHub backend.
     # Every script this page loads is cache-busted together, so an edit to app.js or the
     # comment layer reaches readers who have the old copy.
@@ -205,6 +208,8 @@ def main() -> None:
     head = head.replace("<title>The actors in AI alignment</title>",
                         "<title>The actors in AI alignment</title>")
     head = re.sub(r'(figures2\.css\?v=)[0-9A-Za-z]+', r"\g<1>" + VERSION, head)
+    if "v2.css" not in head:
+        head = head.replace('<link rel="stylesheet" href="style.css', f'<link rel="stylesheet" href="v2.css?v={VERSION}">\n<link rel="stylesheet" href="style.css', 1)
 
     body_html, refs_html = to_html(DRAFT.read_text(encoding="utf-8"))
     body_html = insert_figures(body_html)
@@ -213,11 +218,10 @@ def main() -> None:
                ("fig-keyness", "2. Discourse per type"), ("fig-network", "3a. Document network"),
                ("fig-actor-types", "3b. Actor types"), ("fig-actors", "4. Actors per type"),
                ("fig-method-5", "5. Method"), ("block-conducts", "6a. Conducts"),
-               ("block-risks", "6b. Risks"), ("block-training", "7. Training"),
-               ("block-benchmark", "8. Benchmarking"), ("block-stacks", "9. Stack view"),
+               ("block-risks", "6b. Risks"), ("fig-training-matrix", "7. Training"),
+               ("fig-benchmark-matrix", "8. Benchmarking"), ("block-stacks", "9. Stack view"),
                ("block-alluvial", "10. Who reaches the documents")]
-    for block_id in ("block-conducts", "block-risks", "block-training", "block-benchmark",
-                     "block-stacks", "block-alluvial"):
+    for block_id in ("block-conducts", "block-risks", "block-stacks", "block-alluvial"):
         body_html = body_html.replace(f"@@{block_id}@@", slice_block(page, block_id))
     for anchor, name in re.findall(r"@@svg:([a-z0-9-]+):([a-z-]+\.svg)@@", body_html):
         drawing = (DOCS / name).read_text(encoding="utf-8")
@@ -255,9 +259,18 @@ def main() -> None:
 {more_nav}
 <section class="prose paper">
 <h1>Further figures</h1>
+<h2 id="wordtree">How the documents define AI, and what they expect it to do</h2>
+<p class="figure-caption"><strong>Word tree.</strong> <em>Statements that define AI (“AI is …”) or
+speculate about it (“AI will …”), by company and year. Type a phrase to root the tree on it.</em></p>
+<div id="fig-wordtree" class="fig2-host"></div>
+<h2 id="conceptual-change">Conceptual change</h2>
+<p class="figure-caption"><strong>Conceptual change.</strong> <em>How much companies reword their
+definitions of conducts and risks from one year to the next.</em></p>
+<div id="fig-conceptual" class="fig2-host"></div>
+<h2 id="interface-figures">From the original interface</h2>
 <p>Figures from the original interface that the paper does not use: the corpus itself, the
 actors most often named across all components, and the conceptual clusters among conducts
-and risks. They read the earlier extraction, not the retrieval-grounded one.</p>
+and risks.</p>
 </section>
 <section id="findings" class="prose">
 {trailing}
