@@ -1341,7 +1341,8 @@
    "name": "external red teamers",
    "type": "Domain expert groups",
    "types_all": [
-    "Domain expert groups"
+    "Domain expert groups",
+    "Other"
    ],
    "based_in": "unknown",
    "role": "CITED",
@@ -1360,12 +1361,14 @@
     "company-1242abc64b",
     "company-29d81312ab",
     "company-410035b1ea",
+    "company-4e0057eb00",
     "company-599d8f36d3",
+    "company-a093e79948",
     "company-a0ec48e0ce",
     "company-b71f9760f9",
     "company-cbae670954"
    ],
-   "mention_count": 68
+   "mention_count": 71
   },
   {
    "name": "Souly et al. 2024",
@@ -1451,6 +1454,42 @@
     "policy-deepseek-developer-terms"
    ],
    "mention_count": 54
+  },
+  {
+   "name": "US Center for AI Standards and Innovation",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "Anthropic",
+    "OpenAI",
+    "Microsoft"
+   ],
+   "doc_ids": [
+    "3GE36RMI",
+    "3SUD89YE",
+    "5R7U8TB8",
+    "KRAMCTRS",
+    "N4W4H56I",
+    "NWKEIQTV",
+    "RPLQQPCF",
+    "YJ2AIUGY",
+    "company-262826d19e",
+    "company-379d43668b",
+    "company-4adf4bc4ab",
+    "company-7318bf82f3",
+    "company-75a4499fe0",
+    "company-84fbbf7183",
+    "company-94d0a4c7ad",
+    "company-9d7fedfd20",
+    "company-e5e51afeb2",
+    "company-f4e4eb537e",
+    "company-ff1300aa6c"
+   ],
+   "mention_count": 48
   },
   {
    "name": "External experts",
@@ -1735,7 +1774,7 @@
     "VCPR3CVN",
     "company-f827c38624"
    ],
-   "mention_count": 40
+   "mention_count": 41
   },
   {
    "name": "Apollo Research and OpenAI",
@@ -1882,13 +1921,14 @@
     "9MZ9LX9G",
     "ASR89PBH",
     "CDSJNL2A",
+    "GIIIBG2L",
     "GMPNNKLY",
     "NEJ6G24E",
     "S72ZRSFK",
     "T8QMJ4FU",
     "company-29d81312ab"
    ],
-   "mention_count": 31
+   "mention_count": 32
   },
   {
    "name": "Open Philanthropy",
@@ -1938,37 +1978,6 @@
     "company-e5e51afeb2",
     "company-f7a453e923",
     "company-fee3267323"
-   ],
-   "mention_count": 29
-  },
-  {
-   "name": "US Center for AI Standards and Innovation",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "OpenAI",
-    "Microsoft"
-   ],
-   "doc_ids": [
-    "2EBEJNA4",
-    "3GE36RMI",
-    "KRAMCTRS",
-    "MFPTTXIQ",
-    "NWKEIQTV",
-    "T8QMJ4FU",
-    "company-7318bf82f3",
-    "company-84fbbf7183",
-    "company-94d0a4c7ad",
-    "company-9d7fedfd20",
-    "company-e5e51afeb2",
-    "company-f4e4eb537e",
-    "company-f9d89c4e9d",
-    "company-ff1300aa6c"
    ],
    "mention_count": 29
   },
@@ -2030,31 +2039,6 @@
    ],
    "doc_ids": [
     "JSVWRMC3"
-   ],
-   "mention_count": 27
-  },
-  {
-   "name": "U.S. Center for AI Standards and Innovation",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI",
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "3SUD89YE",
-    "5R7U8TB8",
-    "N4W4H56I",
-    "NWKEIQTV",
-    "RPLQQPCF",
-    "company-262826d19e",
-    "company-379d43668b",
-    "company-4adf4bc4ab",
-    "company-75a4499fe0"
    ],
    "mention_count": 27
   },
@@ -2141,9 +2125,67 @@
    "mention_count": 26
   },
   {
-   "name": "Ren et al. 2025",
-   "type": "Alignment research organisation",
+   "name": "Zhang et al. 2024",
+   "type": "Academic or research center",
    "types_all": [
+    "Academic or research center"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "Anthropic",
+    "xAI",
+    "Meta",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "2QJJDTJB",
+    "2SJNI77F",
+    "3GE36RMI",
+    "4IMQLENM",
+    "GIIIBG2L",
+    "J497CEWS",
+    "MFPTTXIQ",
+    "NWKEIQTV",
+    "UKHJ828E",
+    "VPJH7HCT",
+    "ZLJDDH77",
+    "company-1952e3c651",
+    "company-7f3680570d",
+    "company-f9d89c4e9d",
+    "company-fee3267323"
+   ],
+   "mention_count": 24
+  },
+  {
+   "name": "Crowd workers",
+   "type": "Data workers",
+   "types_all": [
+    "Data workers"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "Anthropic"
+   ],
+   "doc_ids": [
+    "FPFBD8PV",
+    "MFPTTXIQ",
+    "NWKEIQTV",
+    "RQWXDSLJ",
+    "T8QMJ4FU",
+    "VCPR3CVN",
+    "company-cbae670954",
+    "company-e26fed8e91",
+    "company-f7a453e923"
+   ],
+   "mention_count": 23
+  },
+  {
+   "name": "Ren et al. 2025",
+   "type": "Multiple",
+   "types_all": [
+    "Multiple",
     "Alignment research organisation"
    ],
    "based_in": "unknown",
@@ -2204,8 +2246,9 @@
   },
   {
    "name": "Lin et al. 2021",
-   "type": "Academic or research center",
+   "type": "Multiple",
    "types_all": [
+    "Multiple",
     "Academic or research center"
    ],
    "based_in": "unknown",
@@ -2321,6 +2364,37 @@
    "mention_count": 21
   },
   {
+   "name": "Laurent et al. 2024",
+   "type": "Other nonprofit",
+   "types_all": [
+    "Other nonprofit"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "xAI",
+    "OpenAI",
+    "Meta",
+    "Google"
+   ],
+   "doc_ids": [
+    "2QJJDTJB",
+    "2SJNI77F",
+    "3SUD89YE",
+    "CD258T92",
+    "J497CEWS",
+    "L9E6I5VD",
+    "N4W4H56I",
+    "NZBIMRBQ",
+    "S72ZRSFK",
+    "ZLJDDH77",
+    "company-07fc0c3cd1",
+    "company-38b6466e7c",
+    "company-de465f935d"
+   ],
+   "mention_count": 20
+  },
+  {
    "name": "OpenAI Red Teaming Network",
    "type": "Domain expert groups",
    "types_all": [
@@ -2401,36 +2475,6 @@
    "mention_count": 20
   },
   {
-   "name": "Laurent et al. 2024",
-   "type": "Other nonprofit",
-   "types_all": [
-    "Other nonprofit"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "xAI",
-    "OpenAI",
-    "Meta",
-    "Google"
-   ],
-   "doc_ids": [
-    "2QJJDTJB",
-    "2SJNI77F",
-    "CD258T92",
-    "J497CEWS",
-    "L9E6I5VD",
-    "N4W4H56I",
-    "NZBIMRBQ",
-    "S72ZRSFK",
-    "ZLJDDH77",
-    "company-07fc0c3cd1",
-    "company-38b6466e7c",
-    "company-de465f935d"
-   ],
-   "mention_count": 19
-  },
-  {
    "name": "Röttger et al. 2023",
    "type": "Academic or research center",
    "types_all": [
@@ -2458,6 +2502,31 @@
     "company-13f489399d",
     "company-29d81312ab",
     "company-ae7c3b8388"
+   ],
+   "mention_count": 19
+  },
+  {
+   "name": "U.S. AI Safety Institute",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "United States",
+   "role": "MIXED",
+   "companies": [
+    "Anthropic",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "2EBEJNA4",
+    "4MWVRCZ7",
+    "5NFN4UQV",
+    "GIIIBG2L",
+    "K58FEDKQ",
+    "MFPTTXIQ",
+    "T8QMJ4FU",
+    "company-29d81312ab",
+    "company-f9d89c4e9d"
    ],
    "mention_count": 19
   },
@@ -2735,7 +2804,8 @@
    "name": "Li et al. 2024",
    "type": "Alignment research organisation",
    "types_all": [
-    "Alignment research organisation"
+    "Alignment research organisation",
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -2755,33 +2825,6 @@
     "UKHJ828E",
     "ZLJDDH77",
     "company-38b6466e7c"
-   ],
-   "mention_count": 15
-  },
-  {
-   "name": "Zhang et al. 2024",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "xAI",
-    "Meta",
-    "Anthropic",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "2QJJDTJB",
-    "2SJNI77F",
-    "4IMQLENM",
-    "J497CEWS",
-    "NWKEIQTV",
-    "UKHJ828E",
-    "VPJH7HCT",
-    "ZLJDDH77",
-    "company-f9d89c4e9d"
    ],
    "mention_count": 15
   },
@@ -2817,6 +2860,33 @@
    ],
    "doc_ids": [
     "ZJL3LT6R"
+   ],
+   "mention_count": 14
+  },
+  {
+   "name": "Zou et al. 2025",
+   "type": "Red teaming or cybersecurity company",
+   "types_all": [
+    "Red teaming or cybersecurity company",
+    "Other"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "Anthropic",
+    "Meta",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "FPFBD8PV",
+    "IAZRTFQL",
+    "NWKEIQTV",
+    "YJ2AIUGY",
+    "ZLJDDH77",
+    "company-1952e3c651",
+    "company-7f3680570d",
+    "company-f7a453e923",
+    "company-fee3267323"
    ],
    "mention_count": 14
   },
@@ -2867,29 +2937,24 @@
    "mention_count": 14
   },
   {
-   "name": "Crowdworkers",
-   "type": "Data workers",
+   "name": "Glaese et al. 2022",
+   "type": "Other AI company",
    "types_all": [
-    "Data workers"
+    "Other AI company"
    ],
    "based_in": "unknown",
-   "role": "CITED",
+   "role": "",
    "companies": [
-    "Anthropic"
+    "OpenAI"
    ],
    "doc_ids": [
-    "FPFBD8PV",
-    "NWKEIQTV",
-    "RQWXDSLJ",
-    "T8QMJ4FU",
-    "VCPR3CVN",
-    "company-cbae670954",
-    "company-e26fed8e91"
+    "RSI8ZVQC",
+    "company-f827c38624"
    ],
    "mention_count": 14
   },
   {
-   "name": "Human raters",
+   "name": "human raters",
    "type": "Data workers",
    "types_all": [
     "Data workers"
@@ -2958,32 +3023,6 @@
     "company-29d81312ab",
     "company-78f0aa803a",
     "company-a0ec48e0ce"
-   ],
-   "mention_count": 13
-  },
-  {
-   "name": "Zou et al. 2025",
-   "type": "Red teaming or cybersecurity company",
-   "types_all": [
-    "Red teaming or cybersecurity company",
-    "Other"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic",
-    "Meta",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "FPFBD8PV",
-    "IAZRTFQL",
-    "NWKEIQTV",
-    "YJ2AIUGY",
-    "ZLJDDH77",
-    "company-1952e3c651",
-    "company-f7a453e923",
-    "company-fee3267323"
    ],
    "mention_count": 13
   },
@@ -3143,6 +3182,33 @@
     "company-e6284b864c"
    ],
    "mention_count": 13
+  },
+  {
+   "name": "Ivanov 2024",
+   "type": "Other",
+   "types_all": [
+    "Other"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "OpenAI",
+    "xAI"
+   ],
+   "doc_ids": [
+    "2QJJDTJB",
+    "2SJNI77F",
+    "4IMQLENM",
+    "4MWVRCZ7",
+    "5NFN4UQV",
+    "9MZ9LX9G",
+    "GARYFXHG",
+    "UFSBGMYG",
+    "UKHJ828E",
+    "VPJH7HCT",
+    "company-29d81312ab"
+   ],
+   "mention_count": 12
   },
   {
    "name": "Chao et al. 2024",
@@ -3308,6 +3374,29 @@
    "mention_count": 12
   },
   {
+   "name": "expert red teamers",
+   "type": "Domain expert groups",
+   "types_all": [
+    "Domain expert groups"
+   ],
+   "based_in": "United States",
+   "role": "CITED",
+   "companies": [
+    "Anthropic",
+    "OpenAI",
+    "Google"
+   ],
+   "doc_ids": [
+    "NWKEIQTV",
+    "RPLQQPCF",
+    "company-3a3f692624",
+    "company-9c2efdc125",
+    "company-e5e51afeb2",
+    "company-f7a453e923"
+   ],
+   "mention_count": 12
+  },
+  {
    "name": "Alignment Research Center",
    "type": "Alignment research organisation",
    "types_all": [
@@ -3402,7 +3491,8 @@
    "name": "Schoen et al. 2025",
    "type": "Alignment research organisation",
    "types_all": [
-    "Alignment research organisation"
+    "Alignment research organisation",
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -3579,6 +3669,31 @@
    "mention_count": 11
   },
   {
+   "name": "Zhu et al. 2025",
+   "type": "Academic or research center",
+   "types_all": [
+    "Academic or research center"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "OpenAI",
+    "xAI"
+   ],
+   "doc_ids": [
+    "3SUD89YE",
+    "3Z75ND8Q",
+    "5R7U8TB8",
+    "9W7FJQ8Z",
+    "L9E6I5VD",
+    "Q4VNGWTU",
+    "XPE2R9SS",
+    "company-07fc0c3cd1",
+    "company-de465f935d"
+   ],
+   "mention_count": 11
+  },
+  {
    "name": "External subject matter experts",
    "type": "Domain expert groups",
    "types_all": [
@@ -3613,27 +3728,29 @@
    "mention_count": 11
   },
   {
-   "name": "Ivanov 2024",
-   "type": "Other",
+   "name": "Götting et al. 2025",
+   "type": "Other nonprofit",
    "types_all": [
-    "Other"
+    "Other nonprofit"
    ],
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "OpenAI",
-    "xAI"
+    "xAI",
+    "Google",
+    "Meta"
    ],
    "doc_ids": [
+    "2QJJDTJB",
     "2SJNI77F",
     "4IMQLENM",
-    "4MWVRCZ7",
-    "5NFN4UQV",
-    "9MZ9LX9G",
-    "GARYFXHG",
-    "UFSBGMYG",
+    "CD258T92",
+    "NZBIMRBQ",
     "UKHJ828E",
-    "company-29d81312ab"
+    "VPJH7HCT",
+    "ZLJDDH77",
+    "company-07fc0c3cd1",
+    "company-38b6466e7c"
    ],
    "mention_count": 10
   },
@@ -3725,23 +3842,7 @@
    "mention_count": 10
   },
   {
-   "name": "Glaese et al. 2022",
-   "type": "Other AI company",
-   "types_all": [
-    "Other AI company"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "RSI8ZVQC"
-   ],
-   "mention_count": 10
-  },
-  {
-   "name": "Zhu et al. 2025",
+   "name": "Gehman et al. 2020",
    "type": "Academic or research center",
    "types_all": [
     "Academic or research center"
@@ -3749,18 +3850,43 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "OpenAI",
-    "xAI"
+    "Google",
+    "OpenAI"
    ],
    "doc_ids": [
-    "3Z75ND8Q",
-    "5R7U8TB8",
-    "9W7FJQ8Z",
-    "L9E6I5VD",
-    "Q4VNGWTU",
+    "DAZ6QU8E",
+    "RSI8ZVQC",
+    "UQB78Y8K",
+    "VCQC9TYE",
+    "ZZY89RTG",
+    "company-17877b2e2a",
+    "company-3d9b9b4b41",
+    "company-9924a3250e",
+    "company-f827c38624"
+   ],
+   "mention_count": 10
+  },
+  {
+   "name": "Korbak et al. 2025",
+   "type": "Multiple",
+   "types_all": [
+    "Multiple",
+    "Other"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "OpenAI",
+    "Anthropic"
+   ],
+   "doc_ids": [
+    "FPFBD8PV",
+    "IAZRTFQL",
+    "RPLQQPCF",
     "XPE2R9SS",
-    "company-07fc0c3cd1",
-    "company-de465f935d"
+    "company-0cd90cefe4",
+    "company-30a3209b06",
+    "company-5fcb46b29f"
    ],
    "mention_count": 10
   },
@@ -3784,13 +3910,13 @@
    "mention_count": 10
   },
   {
-   "name": "Jigsaw (Google)",
+   "name": "Google Jigsaw",
    "type": "Other AI company",
    "types_all": [
     "Other AI company"
    ],
-   "based_in": "unknown",
-   "role": "",
+   "based_in": "United States",
+   "role": "CITED",
    "companies": [
     "OpenAI"
    ],
@@ -3923,7 +4049,7 @@
    "type": "Other",
    "types_all": [
     "Other",
-    "Government agency",
+    "Multiple",
     "Academic or research center"
    ],
    "based_in": "unknown",
@@ -4030,28 +4156,6 @@
    "mention_count": 9
   },
   {
-   "name": "Zhang et al. (2024)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "3GE36RMI",
-    "GIIIBG2L",
-    "MFPTTXIQ",
-    "NWKEIQTV",
-    "company-1952e3c651",
-    "company-7f3680570d",
-    "company-fee3267323"
-   ],
-   "mention_count": 9
-  },
-  {
    "name": "MLCommons",
    "type": "Coalition",
    "types_all": [
@@ -4074,20 +4178,26 @@
    "mention_count": 9
   },
   {
-   "name": "Crowd workers",
-   "type": "Data workers",
+   "name": "Arora et al. 2025",
+   "type": "Internal",
    "types_all": [
-    "Data workers"
+    "Internal",
+    "Other AI company"
    ],
    "based_in": "unknown",
    "role": "",
    "companies": [
+    "OpenAI",
     "Anthropic"
    ],
    "doc_ids": [
-    "MFPTTXIQ",
-    "NWKEIQTV",
-    "VCPR3CVN",
+    "7SUY4C2C",
+    "D7Z5UE2D",
+    "MER72PEB",
+    "N4W4H56I",
+    "YJ2AIUGY",
+    "company-7318bf82f3",
+    "company-e5e51afeb2",
     "company-f7a453e923"
    ],
    "mention_count": 9
@@ -4110,30 +4220,6 @@
     "NZMN5IJR",
     "company-f827c38624",
     "policy-claude.ai-(anthropic)-privacy-policy"
-   ],
-   "mention_count": 9
-  },
-  {
-   "name": "Gehman et al. 2020",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Google",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "DAZ6QU8E",
-    "RSI8ZVQC",
-    "UQB78Y8K",
-    "VCQC9TYE",
-    "ZZY89RTG",
-    "company-17877b2e2a",
-    "company-3d9b9b4b41",
-    "company-9924a3250e"
    ],
    "mention_count": 9
   },
@@ -4379,31 +4465,6 @@
    "mention_count": 9
   },
   {
-   "name": "Götting et al. 2025",
-   "type": "Other nonprofit",
-   "types_all": [
-    "Other nonprofit"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "xAI",
-    "Google",
-    "Meta"
-   ],
-   "doc_ids": [
-    "2QJJDTJB",
-    "2SJNI77F",
-    "CD258T92",
-    "NZBIMRBQ",
-    "UKHJ828E",
-    "ZLJDDH77",
-    "company-07fc0c3cd1",
-    "company-38b6466e7c"
-   ],
-   "mention_count": 8
-  },
-  {
    "name": "External red teamers (unnamed)",
    "type": "Domain expert groups",
    "types_all": [
@@ -4427,23 +4488,25 @@
    "mention_count": 8
   },
   {
-   "name": "U.S. AI Safety Institute",
-   "type": "Government agency",
+   "name": "Greenblatt et al. 2024",
+   "type": "Internal",
    "types_all": [
-    "Government agency"
+    "Internal",
+    "Multiple",
+    "Other AI company"
    ],
-   "based_in": "United States",
-   "role": "MIXED",
+   "based_in": "unknown",
+   "role": "",
    "companies": [
-    "OpenAI",
-    "Anthropic"
+    "Anthropic",
+    "Meta",
+    "OpenAI"
    ],
    "doc_ids": [
-    "4MWVRCZ7",
-    "5NFN4UQV",
     "GIIIBG2L",
-    "K58FEDKQ",
-    "company-29d81312ab"
+    "I6YLRGHK",
+    "MFPTTXIQ",
+    "ZLJDDH77"
    ],
    "mention_count": 8
   },
@@ -4466,30 +4529,6 @@
     "MHPBMVPF",
     "RPLQQPCF",
     "XPE2R9SS"
-   ],
-   "mention_count": 8
-  },
-  {
-   "name": "Arora et al. 2025",
-   "type": "Internal",
-   "types_all": [
-    "Internal",
-    "Other AI company"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI",
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "7SUY4C2C",
-    "D7Z5UE2D",
-    "MER72PEB",
-    "N4W4H56I",
-    "YJ2AIUGY",
-    "company-7318bf82f3",
-    "company-f7a453e923"
    ],
    "mention_count": 8
   },
@@ -4538,8 +4577,9 @@
   },
   {
    "name": "Hartvigsen et al. 2022",
-   "type": "Academic or research center",
+   "type": "Multiple",
    "types_all": [
+    "Multiple",
     "Academic or research center"
    ],
    "based_in": "unknown",
@@ -4750,10 +4790,11 @@
    "mention_count": 7
   },
   {
-   "name": "Expert red-teamers",
-   "type": "Domain expert groups",
+   "name": "Guan et al. 2025",
+   "type": "Internal",
    "types_all": [
-    "Domain expert groups"
+    "Internal",
+    "Other AI company"
    ],
    "based_in": "unknown",
    "role": "",
@@ -4762,8 +4803,11 @@
     "Anthropic"
    ],
    "doc_ids": [
-    "RPLQQPCF",
-    "company-e5e51afeb2",
+    "XPE2R9SS",
+    "company-0cd90cefe4",
+    "company-30a3209b06",
+    "company-5fcb46b29f",
+    "company-9c2efdc125",
     "company-f7a453e923"
    ],
    "mention_count": 7
@@ -4791,7 +4835,7 @@
    "mention_count": 7
   },
   {
-   "name": "Experienced red teamers with biosafety-relevant PhDs",
+   "name": "experienced red teamers with biosafety-relevant PhDs",
    "type": "Domain expert groups",
    "types_all": [
     "Domain expert groups"
@@ -4871,7 +4915,7 @@
    "mention_count": 7
   },
   {
-   "name": "independent external evaluation groups (Gemini)",
+   "name": "independent external evaluation groups",
    "type": "Other",
    "types_all": [
     "Other"
@@ -5194,23 +5238,26 @@
    "mention_count": 6
   },
   {
-   "name": "Korbak et al. 2025",
-   "type": "Other",
+   "name": "Lin et al. 2022",
+   "type": "Multiple",
    "types_all": [
-    "Other",
-    "Government agency"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
    "companies": [
     "OpenAI",
-    "Anthropic"
+    "Google",
+    "Unbabel",
+    "Meta"
    ],
    "doc_ids": [
-    "FPFBD8PV",
-    "IAZRTFQL",
-    "RPLQQPCF",
-    "XPE2R9SS"
+    "HNBKGPN7",
+    "HPGBQ2RY",
+    "RSI8ZVQC",
+    "company-9924a3250e",
+    "company-c80b82e1af",
+    "company-f827c38624"
    ],
    "mention_count": 6
   },
@@ -5697,8 +5744,7 @@
    "name": "Knight et al. 2025",
    "type": "Data workers",
    "types_all": [
-    "Data workers",
-    "Other AI company"
+    "Data workers"
    ],
    "based_in": "unknown",
    "role": "",
@@ -5710,28 +5756,6 @@
     "ZLJDDH77",
     "company-07fc0c3cd1",
     "company-38b6466e7c"
-   ],
-   "mention_count": 5
-  },
-  {
-   "name": "Greenblatt et al. 2024",
-   "type": "Multiple",
-   "types_all": [
-    "Other AI company",
-    "Alignment research organisation",
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Meta",
-    "OpenAI",
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "I6YLRGHK",
-    "MFPTTXIQ",
-    "ZLJDDH77"
    ],
    "mention_count": 5
   },
@@ -5787,25 +5811,6 @@
     "NWKEIQTV",
     "company-9c2efdc125",
     "company-fee3267323"
-   ],
-   "mention_count": 5
-  },
-  {
-   "name": "expert red teamers",
-   "type": "Domain expert groups",
-   "types_all": [
-    "Domain expert groups"
-   ],
-   "based_in": "United States",
-   "role": "CITED",
-   "companies": [
-    "Anthropic",
-    "Google"
-   ],
-   "doc_ids": [
-    "NWKEIQTV",
-    "company-3a3f692624",
-    "company-9c2efdc125"
    ],
    "mention_count": 5
   },
@@ -5884,7 +5889,7 @@
    "mention_count": 5
   },
   {
-   "name": "unnamed third-party vendors (Meta)",
+   "name": "unnamed third-party vendors",
    "type": "Other",
    "types_all": [
     "Other"
@@ -5922,7 +5927,7 @@
    "mention_count": 5
   },
   {
-   "name": "Lin et al. 2022",
+   "name": "Bostrom 2014",
    "type": "Academic or research center",
    "types_all": [
     "Academic or research center"
@@ -5930,17 +5935,14 @@
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "Google",
     "OpenAI",
-    "Unbabel",
-    "Meta"
+    "Anthropic"
    ],
    "doc_ids": [
-    "HNBKGPN7",
-    "HPGBQ2RY",
     "RSI8ZVQC",
-    "company-9924a3250e",
-    "company-c80b82e1af"
+    "XDD2C2KI",
+    "company-311b3e4011",
+    "company-f827c38624"
    ],
    "mention_count": 5
   },
@@ -6017,6 +6019,24 @@
    "mention_count": 5
   },
   {
+   "name": "Singer et al. 2025",
+   "type": "Academic or research center",
+   "types_all": [
+    "Academic or research center"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "Anthropic"
+   ],
+   "doc_ids": [
+    "FPFBD8PV",
+    "GIIIBG2L",
+    "MFPTTXIQ"
+   ],
+   "mention_count": 5
+  },
+  {
    "name": "Qualified third-party evaluators (unnamed, Microsoft)",
    "type": "Other",
    "types_all": [
@@ -6049,6 +6069,26 @@
     "company-5fcb46b29f",
     "company-de465f935d",
     "company-f4a0c43662"
+   ],
+   "mention_count": 5
+  },
+  {
+   "name": "Eloundou et al. 2024",
+   "type": "Internal",
+   "types_all": [
+    "Internal"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "9W7FJQ8Z",
+    "RPLQQPCF",
+    "XPE2R9SS",
+    "company-30a3209b06",
+    "company-de465f935d"
    ],
    "mention_count": 5
   },
@@ -6530,8 +6570,7 @@
    "name": "Amodei et al. 2016",
    "type": "Multiple",
    "types_all": [
-    "Other AI company",
-    "Internal"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -6917,24 +6956,6 @@
    "mention_count": 4
   },
   {
-   "name": "Korbak et al. (2025)",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-0cd90cefe4",
-    "company-30a3209b06",
-    "company-5fcb46b29f"
-   ],
-   "mention_count": 4
-  },
-  {
    "name": "Four private red teaming organizations (unnamed, OpenAI)",
    "type": "Red teaming or cybersecurity company",
    "types_all": [
@@ -6947,24 +6968,6 @@
    ],
    "doc_ids": [
     "company-30a3209b06"
-   ],
-   "mention_count": 4
-  },
-  {
-   "name": "Guan et al. (2025)",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-0cd90cefe4",
-    "company-30a3209b06",
-    "company-5fcb46b29f"
    ],
    "mention_count": 4
   },
@@ -7221,25 +7224,6 @@
    "mention_count": 4
   },
   {
-   "name": "Eloundou et al. 2024",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "9W7FJQ8Z",
-    "RPLQQPCF",
-    "XPE2R9SS",
-    "company-de465f935d"
-   ],
-   "mention_count": 4
-  },
-  {
    "name": "third-party researchers",
    "type": "Other",
    "types_all": [
@@ -7471,11 +7455,10 @@
    "mention_count": 4
   },
   {
-   "name": "Meta red team (Llama)",
-   "type": "Multiple",
+   "name": "Meta red team",
+   "type": "Other",
    "types_all": [
-    "Other",
-    "Domain expert groups"
+    "Other"
    ],
    "based_in": "unknown",
    "role": "",
@@ -7590,7 +7573,7 @@
    "mention_count": 4
   },
   {
-   "name": "Unnamed external red teaming organizations and individuals (OpenAI)",
+   "name": "Unnamed external red teaming organizations and individuals",
    "type": "Other",
    "types_all": [
     "Other"
@@ -7756,18 +7739,19 @@
    "mention_count": 4
   },
   {
-   "name": "Glaese et al. (2022)",
-   "type": "Other AI company",
+   "name": "Benton et al. 2024",
+   "type": "Internal",
    "types_all": [
-    "Other AI company"
+    "Internal"
    ],
    "based_in": "unknown",
    "role": "",
    "companies": [
-    "OpenAI"
+    "Anthropic"
    ],
    "doc_ids": [
-    "company-f827c38624"
+    "GIIIBG2L",
+    "MFPTTXIQ"
    ],
    "mention_count": 4
   },
@@ -7922,9 +7906,9 @@
   },
   {
    "name": "Asirvatham, Mokski and Shleifer",
-   "type": "Internal",
+   "type": "Multiple",
    "types_all": [
-    "Internal"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -8130,26 +8114,6 @@
    "mention_count": 3
   },
   {
-   "name": "Guan et al. 2025",
-   "type": "Other AI company",
-   "types_all": [
-    "Other AI company",
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic",
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "XPE2R9SS",
-    "company-9c2efdc125",
-    "company-f7a453e923"
-   ],
-   "mention_count": 3
-  },
-  {
    "name": "Denison et al. 2024",
    "type": "Other AI company",
    "types_all": [
@@ -8292,24 +8256,6 @@
    "mention_count": 3
   },
   {
-   "name": "Bostrom 2014",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "RSI8ZVQC",
-    "XDD2C2KI",
-    "company-f827c38624"
-   ],
-   "mention_count": 3
-  },
-  {
    "name": "Human labelers",
    "type": "Data workers",
    "types_all": [
@@ -8375,24 +8321,7 @@
    "mention_count": 3
   },
   {
-   "name": "Singer et al. 2025",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "FPFBD8PV",
-    "MFPTTXIQ"
-   ],
-   "mention_count": 3
-  },
-  {
-   "name": "Mallen et al. (2024)",
+   "name": "Mallen et al. 2024",
    "type": "Alignment research organisation",
    "types_all": [
     "Alignment research organisation"
@@ -8440,23 +8369,6 @@
    "doc_ids": [
     "company-4e0057eb00",
     "company-cfa68699f2"
-   ],
-   "mention_count": 3
-  },
-  {
-   "name": "External red-teamers",
-   "type": "Other",
-   "types_all": [
-    "Other"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "company-4e0057eb00",
-    "company-a093e79948"
    ],
    "mention_count": 3
   },
@@ -8635,22 +8547,6 @@
    "mention_count": 3
   },
   {
-   "name": "U.S. Center for AI Standards and Innovation (CAISI)",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "YJ2AIUGY"
-   ],
-   "mention_count": 3
-  },
-  {
    "name": "OpenAI's identity verification vendor (unnamed)",
    "type": "Other",
    "types_all": [
@@ -8787,7 +8683,7 @@
    "mention_count": 3
   },
   {
-   "name": "Ord (2021)",
+   "name": "Ord 2021",
    "type": "Academic or research center",
    "types_all": [
     "Academic or research center"
@@ -8819,7 +8715,7 @@
    "mention_count": 3
   },
   {
-   "name": "Independent mental health clinicians (OpenAI)",
+   "name": "Independent mental health clinicians",
    "type": "Domain expert groups",
    "types_all": [
     "Domain expert groups"
@@ -8831,6 +8727,24 @@
    ],
    "doc_ids": [
     "company-20e407c370"
+   ],
+   "mention_count": 3
+  },
+  {
+   "name": "US Government partners",
+   "type": "Government agency",
+   "types_all": [
+    "Government agency"
+   ],
+   "based_in": "unknown",
+   "role": "",
+   "companies": [
+    "Anthropic",
+    "OpenAI"
+   ],
+   "doc_ids": [
+    "NWKEIQTV",
+    "RPLQQPCF"
    ],
    "mention_count": 3
   },
@@ -9018,22 +8932,6 @@
     "AH23CHER",
     "TN86KTRX",
     "ZL6I8Y5P"
-   ],
-   "mention_count": 3
-  },
-  {
-   "name": "Greenblatt et al. (2024)",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GIIIBG2L"
    ],
    "mention_count": 3
   },
@@ -9543,8 +9441,9 @@
   },
   {
    "name": "Phan et al. 2025",
-   "type": "Alignment research organisation",
+   "type": "Multiple",
    "types_all": [
+    "Multiple",
     "Alignment research organisation"
    ],
    "based_in": "unknown",
@@ -10002,7 +9901,7 @@
    "mention_count": 2
   },
   {
-   "name": "Biodefense experts",
+   "name": "biodefense experts",
    "type": "Domain expert groups",
    "types_all": [
     "Domain expert groups"
@@ -10036,7 +9935,7 @@
    "mention_count": 2
   },
   {
-   "name": "Gasteiger et al. (2025)",
+   "name": "Gasteiger et al. 2025",
    "type": "Internal",
    "types_all": [
     "Internal"
@@ -10633,57 +10532,7 @@
    "mention_count": 2
   },
   {
-   "name": "Götting et al. (2025)",
-   "type": "Other nonprofit",
-   "types_all": [
-    "Other nonprofit"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "xAI"
-   ],
-   "doc_ids": [
-    "4IMQLENM",
-    "VPJH7HCT"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "Ivanov (2024)",
-   "type": "Other",
-   "types_all": [
-    "Other"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "xAI"
-   ],
-   "doc_ids": [
-    "2QJJDTJB",
-    "VPJH7HCT"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "Bostrom (2014)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "company-311b3e4011"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "Shah et al. (2025)",
+   "name": "Shah et al. 2025",
    "type": "Internal",
    "types_all": [
     "Internal"
@@ -10715,7 +10564,7 @@
    "mention_count": 2
   },
   {
-   "name": "External mental health and safety experts (OpenAI)",
+   "name": "External mental health and safety experts",
    "type": "Domain expert groups",
    "types_all": [
     "Domain expert groups"
@@ -10751,22 +10600,6 @@
    "type": "Domain expert groups",
    "types_all": [
     "Domain expert groups"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "NWKEIQTV"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "US Government partners",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
    ],
    "based_in": "unknown",
    "role": "",
@@ -11209,42 +11042,10 @@
    "mention_count": 2
   },
   {
-   "name": "Benton et al. (2024)",
+   "name": "Roger et al. 2024",
    "type": "Internal",
    "types_all": [
     "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GIIIBG2L"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "Roger et al. (2024)",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GIIIBG2L"
-   ],
-   "mention_count": 2
-  },
-  {
-   "name": "Singer et al. (2025)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
    ],
    "based_in": "unknown",
    "role": "",
@@ -11717,22 +11518,6 @@
    "mention_count": 2
   },
   {
-   "name": "Benton et al. 2024",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "MFPTTXIQ"
-   ],
-   "mention_count": 2
-  },
-  {
    "name": "Turpin et al. 2023",
    "type": "Academic or research center",
    "types_all": [
@@ -11926,7 +11711,7 @@
    "mention_count": 2
   },
   {
-   "name": "Specialist external red-teaming teams (Google)",
+   "name": "Specialist external red-teaming teams",
    "type": "Other",
    "types_all": [
     "Other"
@@ -12135,9 +11920,9 @@
   },
   {
    "name": "Lupidi et al. 2026",
-   "type": "Internal",
+   "type": "Other",
    "types_all": [
-    "Internal"
+    "Other"
    ],
    "based_in": "unknown",
    "role": "",
@@ -12390,22 +12175,6 @@
    "mention_count": 1
   },
   {
-   "name": "Zou et al. (2025)",
-   "type": "Red teaming or cybersecurity company",
-   "types_all": [
-    "Red teaming or cybersecurity company"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "company-7f3680570d"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "National Academy of Medicine",
    "type": "Other nonprofit",
    "types_all": [
@@ -12583,9 +12352,9 @@
   },
   {
    "name": "Everitt et al. 2017",
-   "type": "Academic or research center",
+   "type": "Multiple",
    "types_all": [
-    "Academic or research center"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -12615,9 +12384,9 @@
   },
   {
    "name": "Szegedy et al. 2013",
-   "type": "Other AI company",
+   "type": "Multiple",
    "types_all": [
-    "Other AI company"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -12930,22 +12699,6 @@
    ],
    "doc_ids": [
     "company-348626d9ce"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Eloundou et al. (2024)",
-   "type": "Internal",
-   "types_all": [
-    "Internal"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-30a3209b06"
    ],
    "mention_count": 1
   },
@@ -13766,38 +13519,6 @@
    "mention_count": 1
   },
   {
-   "name": "Laurent et al. (2024)",
-   "type": "Other nonprofit",
-   "types_all": [
-    "Other nonprofit"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3SUD89YE"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Zhu et al. (2025)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "3SUD89YE"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "Unnamed contractor",
    "type": "Data workers",
    "types_all": [
@@ -13910,7 +13631,7 @@
    "mention_count": 1
   },
   {
-   "name": "Model Evaluation and Threat Research (METR)",
+   "name": "Model Evaluation and Threat Research",
    "type": "Alignment research organisation",
    "types_all": [
     "Alignment research organisation"
@@ -14454,7 +14175,7 @@
    "mention_count": 1
   },
   {
-   "name": "Christiano (2021)",
+   "name": "Christiano 2021",
    "type": "Other",
    "types_all": [
     "Other"
@@ -14470,7 +14191,7 @@
    "mention_count": 1
   },
   {
-   "name": "Hubinger (2020)",
+   "name": "Hubinger 2020",
    "type": "Alignment research organisation",
    "types_all": [
     "Alignment research organisation"
@@ -14486,7 +14207,7 @@
    "mention_count": 1
   },
   {
-   "name": "Omohundro (2008)",
+   "name": "Omohundro 2008",
    "type": "Other",
    "types_all": [
     "Other"
@@ -14502,7 +14223,7 @@
    "mention_count": 1
   },
   {
-   "name": "Critch and Krueger (2020)",
+   "name": "Critch and Krueger 2020",
    "type": "Academic or research center",
    "types_all": [
     "Academic or research center"
@@ -15190,22 +14911,6 @@
    "mention_count": 1
   },
   {
-   "name": "U.S. Government partners",
-   "type": "Government agency",
-   "types_all": [
-    "Government agency"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "RPLQQPCF"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "90+ physicians across 30+ countries",
    "type": "Domain expert groups",
    "types_all": [
@@ -15495,9 +15200,9 @@
   },
   {
    "name": "Ribeiro et al. 2020",
-   "type": "Academic or research center",
+   "type": "Multiple",
    "types_all": [
-    "Academic or research center"
+    "Multiple"
    ],
    "based_in": "unknown",
    "role": "",
@@ -15590,7 +15295,7 @@
    "mention_count": 1
   },
   {
-   "name": "Cabinet Office (UK)",
+   "name": "Cabinet Office",
    "type": "Government agency",
    "types_all": [
     "Government agency"
@@ -15670,7 +15375,7 @@
    "mention_count": 1
   },
   {
-   "name": "Tan et al. (2025)",
+   "name": "Tan et al. 2025",
    "type": "Other",
    "types_all": [
     "Other"
@@ -15798,54 +15503,6 @@
    "mention_count": 1
   },
   {
-   "name": "Lin et al. (2022)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-f827c38624"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Bai et al. (2022)",
-   "type": "Other AI company",
-   "types_all": [
-    "Other AI company"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-f827c38624"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Gehman et al. (2020)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "OpenAI"
-   ],
-   "doc_ids": [
-    "company-f827c38624"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "Shane Jones",
    "type": "Other",
    "types_all": [
@@ -15894,22 +15551,6 @@
    "mention_count": 1
   },
   {
-   "name": "Arora et al. (2025)",
-   "type": "Other AI company",
-   "types_all": [
-    "Other AI company"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "company-e5e51afeb2"
-   ],
-   "mention_count": 1
-  },
-  {
    "name": "Workers engaged through data work platforms",
    "type": "Data workers",
    "types_all": [
@@ -15954,22 +15595,6 @@
    ],
    "doc_ids": [
     "2EBEJNA4"
-   ],
-   "mention_count": 1
-  },
-  {
-   "name": "Zhao et al. (2024)",
-   "type": "Academic or research center",
-   "types_all": [
-    "Academic or research center"
-   ],
-   "based_in": "unknown",
-   "role": "",
-   "companies": [
-    "Anthropic"
-   ],
-   "doc_ids": [
-    "GIIIBG2L"
    ],
    "mention_count": 1
   },
@@ -17223,9 +16848,9 @@
   },
   {
    "name": "Zheng et al.",
-   "type": "Academic or research center",
+   "type": "Other",
    "types_all": [
-    "Academic or research center"
+    "Other"
    ],
    "based_in": "unknown",
    "role": "",
@@ -18039,7 +17664,8 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center"
+    "Academic or research center",
+    "Multiple"
    ]
   },
   {
@@ -18119,6 +17745,7 @@
     "Academic or research center",
     "Alignment research organisation",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit",
@@ -18376,8 +18003,8 @@
     "Data workers",
     "Foundation",
     "Government agency",
+    "Multiple",
     "Other",
-    "Other AI company",
     "Think tank or policy institute"
    ]
   },
@@ -19517,6 +19144,7 @@
     "Alignment research organisation",
     "Data workers",
     "Domain expert groups",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit",
@@ -22020,7 +21648,7 @@
    "cited_actor_types": [
     "Academic or research center",
     "Alignment research organisation",
-    "Other AI company"
+    "Multiple"
    ]
   },
   {
@@ -23089,6 +22717,7 @@
     "Data workers",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other AI company",
     "Publics"
    ]
@@ -23807,6 +23436,7 @@
     "Data workers",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit",
@@ -24376,6 +24006,7 @@
     "Alignment research organisation",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other nonprofit",
     "Red teaming or cybersecurity company"
@@ -24694,6 +24325,7 @@
     "Data workers",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Publics",
@@ -26542,7 +26174,7 @@
     "Academic or research center",
     "Alignment research organisation",
     "Data workers",
-    "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit",
@@ -26615,6 +26247,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -27545,7 +27178,8 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center"
+    "Academic or research center",
+    "Multiple"
    ]
   },
   {
@@ -28800,6 +28434,7 @@
     "Alignment research organisation",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company"
    ]
@@ -28919,6 +28554,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
+    "Multiple",
     "Other AI company",
     "Red teaming or cybersecurity company"
    ]
@@ -29108,6 +28744,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -32179,7 +31816,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Alignment research organisation",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit"
@@ -33684,7 +33321,7 @@
    "cited_actor_types": [
     "Academic or research center",
     "Data workers",
-    "Other AI company"
+    "Multiple"
    ]
   },
   {
@@ -35180,6 +34817,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -36240,7 +35878,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Alignment research organisation",
+    "Multiple",
     "Other",
     "Other nonprofit"
    ]
@@ -36299,6 +35937,7 @@
    "cited_actor_types": [
     "Academic or research center",
     "Domain expert groups",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -36520,6 +36159,7 @@
     "Alignment research organisation",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Publics",
     "Red teaming or cybersecurity company"
@@ -36695,8 +36335,8 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Alignment research organisation",
     "Data workers",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit"
@@ -38130,6 +37770,7 @@
     "Academic or research center",
     "Alignment research organisation",
     "Data workers",
+    "Multiple",
     "Other nonprofit"
    ]
   },
@@ -38515,7 +38156,7 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ]
   },
   {
@@ -40344,6 +39985,7 @@
     "Data workers",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Publics"
@@ -41975,6 +41617,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -42802,6 +42445,7 @@
    "cited_actor_types": [
     "Academic or research center",
     "Data workers",
+    "Multiple",
     "Other AI company"
    ]
   },
@@ -44372,6 +44016,7 @@
     "Academic or research center",
     "Alignment research organisation",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit",
@@ -45489,7 +45134,7 @@
     "Academic or research center",
     "Alignment research organisation",
     "Domain expert groups",
-    "Government agency",
+    "Multiple",
     "Other",
     "Other nonprofit",
     "Red teaming or cybersecurity company"
@@ -45929,6 +45574,7 @@
     "Alignment research organisation",
     "Data workers",
     "Domain expert groups",
+    "Multiple",
     "Publics"
    ]
   },
@@ -49450,7 +49096,7 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center",
+    "Multiple",
     "Other"
    ]
   },
@@ -49825,6 +49471,8 @@
     "Academic or research center",
     "Alignment research organisation",
     "Data workers",
+    "Multiple",
+    "Other",
     "Red teaming or cybersecurity company"
    ]
   },
@@ -50705,6 +50353,7 @@
     "Alignment research organisation",
     "Domain expert groups",
     "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Red teaming or cybersecurity company"
@@ -51360,8 +51009,7 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Alignment research organisation",
-    "Government agency",
+    "Multiple",
     "Other",
     "Other AI company",
     "Other nonprofit"
@@ -52518,7 +52166,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "Crowdworkers",
+   "external_evaluator": "Crowd workers",
    "actor_type": "Internal",
    "mentions": 29,
    "training_ids": [
@@ -52986,9 +52634,9 @@
     "11"
    ],
    "specific_actor": "Amodei et al. 2016 | Soares et al. 2014 | Taylor 2016 | Russell et al. 2015 | Everitt et al. 2017",
-   "specific_actor_type": "Other",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "External red teamers (unnamed)",
-   "actor_type": "Other",
+   "actor_type": "Multiple",
    "mentions": 6,
    "training_ids": [
     "train__openai__safety__other",
@@ -53001,12 +52649,13 @@
    "cited_actor_types": [
     "Academic or research center",
     "Alignment research organisation",
-    "Internal"
+    "Multiple"
    ],
    "all_actor_types": [
     "Academic or research center",
     "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": true,
    "only_policy": false
@@ -53415,9 +53064,9 @@
     "85"
    ],
    "specific_actor": "Korbak et al. 2025 | Chen et al. 2025",
-   "specific_actor_type": "Other",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Other",
+   "actor_type": "Multiple",
    "mentions": 7,
    "training_ids": [
     "train__anthropic__transparency__outcome-reward-models"
@@ -53433,12 +53082,12 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Government agency",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "all_actor_types": [
-    "Government agency",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -54228,7 +53877,7 @@
    ],
    "specific_actor": "Anthropic",
    "specific_actor_type": "Internal",
-   "external_evaluator": "Crowdworkers",
+   "external_evaluator": "Crowd workers",
    "actor_type": "Internal",
    "mentions": 24,
    "training_ids": [
@@ -58155,10 +57804,10 @@
     "28",
     "50"
    ],
-   "specific_actor": "Korbak et al. (2025)",
-   "specific_actor_type": "Government agency",
+   "specific_actor": "Korbak et al. 2025",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Government agency",
+   "actor_type": "Multiple",
    "mentions": 5,
    "training_ids": [],
    "benchmark_ids": [
@@ -58170,12 +57819,12 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Government agency",
+    "Multiple",
     "Other"
    ],
    "all_actor_types": [
-    "Government agency",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "from_policy": false,
@@ -58747,7 +58396,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "independent external evaluation groups (Gemini)",
+   "external_evaluator": "independent external evaluation groups",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [
@@ -59247,7 +58896,7 @@
    ],
    "specific_actor": "Moldovan et al. 2012 | Turchetta et al. 2016",
    "specific_actor_type": "Other",
-   "external_evaluator": "Human raters",
+   "external_evaluator": "human raters",
    "actor_type": "Other",
    "mentions": 8,
    "training_ids": [
@@ -59965,11 +59614,13 @@
    "cited_actor_types": [
     "Academic or research center",
     "Internal",
+    "Multiple",
     "Other AI company"
    ],
    "all_actor_types": [
     "Academic or research center",
     "Internal",
+    "Multiple",
     "Other AI company"
    ],
    "from_policy": false,
@@ -60966,7 +60617,7 @@
    "pages": [
     "17"
    ],
-   "specific_actor": "Christiano (2021)",
+   "specific_actor": "Christiano 2021",
    "specific_actor_type": "Other",
    "external_evaluator": "",
    "actor_type": "Other",
@@ -66541,7 +66192,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "Specialist external red-teaming teams (Google)",
+   "external_evaluator": "Specialist external red-teaming teams",
    "actor_type": "Internal",
    "mentions": 13,
    "training_ids": [
@@ -66603,7 +66254,7 @@
    ],
    "specific_actor": "Kinniment et al. 2023 | Phuong et al. 2024",
    "specific_actor_type": "Other",
-   "external_evaluator": "independent external evaluation groups (Gemini)",
+   "external_evaluator": "independent external evaluation groups",
    "actor_type": "Other",
    "mentions": 9,
    "training_ids": [],
@@ -67851,9 +67502,9 @@
     "4"
    ],
    "specific_actor": "Ren et al. 2025",
-   "specific_actor_type": "Alignment research organisation",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Alignment research organisation",
+   "actor_type": "Multiple",
    "mentions": 7,
    "training_ids": [
     "train__xai__deception__honesty-training-unspecified",
@@ -67870,11 +67521,11 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": true,
    "only_policy": false
@@ -68878,12 +68529,12 @@
    ],
    "cited_actor_types": [
     "Foundation",
-    "Other AI company"
+    "Multiple"
    ],
    "all_actor_types": [
     "Foundation",
     "Internal",
-    "Other AI company"
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -69231,7 +68882,7 @@
     "43",
     "92"
    ],
-   "specific_actor": "Greenblatt et al. (2024)",
+   "specific_actor": "Greenblatt et al. 2024",
    "specific_actor_type": "Internal",
    "external_evaluator": "",
    "actor_type": "Internal",
@@ -69536,7 +69187,7 @@
     "32",
     "43"
    ],
-   "specific_actor": "Critch and Krueger (2020)",
+   "specific_actor": "Critch and Krueger 2020",
    "specific_actor_type": "Academic or research center",
    "external_evaluator": "additional external partners",
    "actor_type": "Academic or research center",
@@ -70413,13 +70064,13 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Academic or research center",
+    "Multiple",
     "Other",
     "Other AI company"
    ],
    "all_actor_types": [
-    "Academic or research center",
     "Internal",
+    "Multiple",
     "Other",
     "Other AI company"
    ],
@@ -70737,11 +70388,12 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Internal"
+    "Multiple"
    ],
    "all_actor_types": [
     "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -80790,12 +80442,12 @@
    ],
    "cited_actor_types": [
     "Academic or research center",
-    "Other AI company"
+    "Multiple"
    ],
    "all_actor_types": [
     "Academic or research center",
     "Internal",
-    "Other AI company"
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -82579,7 +82231,7 @@
     "12",
     "41"
    ],
-   "specific_actor": "Benton et al. (2024) | Roger et al. (2024)",
+   "specific_actor": "Benton et al. 2024 | Roger et al. 2024",
    "specific_actor_type": "Other",
    "external_evaluator": "unnamed external partner (Anthropic evaluation)",
    "actor_type": "Other",
@@ -83316,7 +82968,7 @@
    ],
    "specific_actor": "The White House",
    "specific_actor_type": "Government agency",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Government agency",
    "mentions": 10,
    "training_ids": [
@@ -87096,9 +86748,9 @@
     "17"
    ],
    "specific_actor": "Szegedy et al. 2013",
-   "specific_actor_type": "Other AI company",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Other AI company",
+   "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [],
    "benchmark_ids": [],
@@ -87106,11 +86758,11 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Other AI company"
+    "Multiple"
    ],
    "all_actor_types": [
     "Internal",
-    "Other AI company"
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -89900,7 +89552,7 @@
    "pages": [
     "7"
    ],
-   "specific_actor": "Jigsaw (Google)",
+   "specific_actor": "Jigsaw",
    "specific_actor_type": "Other AI company",
    "external_evaluator": "",
    "actor_type": "Other AI company",
@@ -93074,10 +92726,10 @@
     "32",
     "57"
    ],
-   "specific_actor": "Korbak et al. (2025)",
-   "specific_actor_type": "Government agency",
+   "specific_actor": "Korbak et al. 2025",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Government agency",
+   "actor_type": "Multiple",
    "mentions": 6,
    "training_ids": [],
    "benchmark_ids": [
@@ -93087,12 +92739,12 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Government agency",
+    "Multiple",
     "Other"
    ],
    "all_actor_types": [
-    "Government agency",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "from_policy": false,
@@ -101569,7 +101221,7 @@
    "pages": [
     "14"
    ],
-   "specific_actor": "Jigsaw (Google)",
+   "specific_actor": "Jigsaw",
    "specific_actor_type": "Other AI company",
    "external_evaluator": "",
    "actor_type": "Other AI company",
@@ -102254,7 +101906,7 @@
    ],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "Crowdworkers",
+   "external_evaluator": "Crowd workers",
    "actor_type": "Internal",
    "mentions": 5,
    "training_ids": [
@@ -103606,7 +103258,7 @@
     "3",
     "46"
    ],
-   "specific_actor": "Ord (2021)",
+   "specific_actor": "Ord 2021",
    "specific_actor_type": "Academic or research center",
    "external_evaluator": "",
    "actor_type": "Academic or research center",
@@ -103788,7 +103440,7 @@
     "1",
     "30"
    ],
-   "specific_actor": "Bostrom (2014)",
+   "specific_actor": "Bostrom 2014",
    "specific_actor_type": "Academic or research center",
    "external_evaluator": "",
    "actor_type": "Academic or research center",
@@ -104754,7 +104406,7 @@
    "pages": [],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [],
@@ -105251,7 +104903,7 @@
    "pages": [],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "Crowdworkers",
+   "external_evaluator": "Crowd workers",
    "actor_type": "Internal",
    "mentions": 2,
    "training_ids": [
@@ -105477,7 +105129,7 @@
    ],
    "specific_actor": "Chan et al. 2023",
    "specific_actor_type": "Academic or research center",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Academic or research center",
    "mentions": 2,
    "training_ids": [
@@ -107327,9 +106979,9 @@
     "38"
    ],
    "specific_actor": "Ren et al. 2025",
-   "specific_actor_type": "Alignment research organisation",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Alignment research organisation",
+   "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [],
    "benchmark_ids": [
@@ -107339,11 +106991,11 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -107918,7 +107570,7 @@
    "pages": [],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "independent external evaluation groups (Gemini)",
+   "external_evaluator": "independent external evaluation groups",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [],
@@ -108418,9 +108070,9 @@
     "27"
    ],
    "specific_actor": "Ren et al. 2025",
-   "specific_actor_type": "Alignment research organisation",
+   "specific_actor_type": "Multiple",
    "external_evaluator": "",
-   "actor_type": "Alignment research organisation",
+   "actor_type": "Multiple",
    "mentions": 1,
    "training_ids": [],
    "benchmark_ids": [
@@ -108430,11 +108082,11 @@
     "Internal"
    ],
    "cited_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "from_policy": false,
    "only_policy": false
@@ -109544,7 +109196,7 @@
    "pages": [
     "35"
    ],
-   "specific_actor": "Cabinet Office (UK)",
+   "specific_actor": "Cabinet Office",
    "specific_actor_type": "Government agency",
    "external_evaluator": "",
    "actor_type": "Government agency",
@@ -115243,7 +114895,7 @@
    "pages": [],
    "specific_actor": "",
    "specific_actor_type": "",
-   "external_evaluator": "U.S. Center for AI Standards and Innovation",
+   "external_evaluator": "US Center for AI Standards and Innovation",
    "actor_type": "Internal",
    "mentions": 1,
    "training_ids": [
@@ -123376,9 +123028,8 @@
    "verbatim": "We are actively improving model robustness by integrating adversarial training with adaptive red-teaming into our training loop.",
    "actor": "",
    "actor_type_raw": "",
-   "actor_type": "Multiple",
+   "actor_type": "Other",
    "all_actor_types": [
-    "Domain expert groups",
     "Internal",
     "Other"
    ],
@@ -123401,7 +123052,6 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Domain expert groups",
     "Other"
    ],
    "cited_actor_types": [
@@ -130973,7 +130623,7 @@
    "training_category": "Runtime safeguards",
    "item": "Runtime monitoring",
    "verbatim": "Meta uses Content and related information, including through automated or manual (i.e. human) review and through third-party vendors in some instances, including: … To monitor your use of AIs for compliance with these Terms and applicable laws",
-   "actor": "unnamed third-party vendors (Meta)",
+   "actor": "unnamed third-party vendors",
    "actor_type_raw": "Other",
    "actor_type": "Other",
    "all_actor_types": [
@@ -131006,7 +130656,7 @@
    "training_category": "Runtime safeguards",
    "item": "Runtime monitoring",
    "verbatim": "Meta uses Content and related information, including through automated or manual (i.e. human) review and through third-party vendors in some instances, including: … To monitor your use of AIs for compliance with these Terms and applicable laws",
-   "actor": "unnamed third-party vendors (Meta)",
+   "actor": "unnamed third-party vendors",
    "actor_type_raw": "Other",
    "actor_type": "Other",
    "all_actor_types": [
@@ -131039,7 +130689,7 @@
    "training_category": "Runtime safeguards",
    "item": "Runtime monitoring",
    "verbatim": "Meta uses Content and related information, including through automated or manual (i.e. human) review and through third-party vendors in some instances, including: … To monitor your use of AIs for compliance with these Terms and applicable laws",
-   "actor": "unnamed third-party vendors (Meta)",
+   "actor": "unnamed third-party vendors",
    "actor_type_raw": "Other",
    "actor_type": "Other",
    "all_actor_types": [
@@ -131072,7 +130722,7 @@
    "training_category": "Runtime safeguards",
    "item": "Runtime monitoring",
    "verbatim": "Meta uses Content and related information, including through automated or manual (i.e. human) review and through third-party vendors in some instances, including: … To monitor your use of AIs for compliance with these Terms and applicable laws",
-   "actor": "unnamed third-party vendors (Meta)",
+   "actor": "unnamed third-party vendors",
    "actor_type_raw": "Other",
    "actor_type": "Other",
    "all_actor_types": [
@@ -143524,7 +143174,7 @@
    "training_category": "Adversarial training",
    "item": "Red-teaming data generation",
    "verbatim": "we conducted recurring red teaming exercises with the goal of discovering risks via adversarial prompting and we used the learnings to improve our benchmarks and safety tuning datasets",
-   "actor": "Meta red team (Llama)",
+   "actor": "Meta red team",
    "actor_type_raw": "Other",
    "actor_type": "Other",
    "all_actor_types": [
@@ -145029,7 +144679,7 @@
    "training_category": "Data curation",
    "item": "Sourcing",
    "verbatim": "Jigsaw dataset is pretty large and we include about half of it into our training set to resolve the cold-start problem.",
-   "actor": "Jigsaw (Google)",
+   "actor": "Jigsaw",
    "actor_type_raw": "Other AI company",
    "actor_type": "Other AI company",
    "all_actor_types": [
@@ -150319,7 +149969,7 @@
    "training_category": "Other",
    "item": "Vulnerability patching",
    "verbatim": "These attacks were immediately reported to OpenAI, and fixed by OpenAI within one business day.",
-   "actor": "U.S. Center for AI Standards and Innovation",
+   "actor": "US Center for AI Standards and Innovation",
    "actor_type_raw": "Government agency",
    "actor_type": "Government agency",
    "all_actor_types": [
@@ -151959,12 +151609,12 @@
    "training_category": "Adversarial training",
    "item": "Red-teaming data generation",
    "verbatim": "we used the learnings to improve our benchmarks and safety tuning datasets",
-   "actor": "Meta red team (Llama)",
-   "actor_type_raw": "Domain expert groups",
-   "actor_type": "Domain expert groups",
+   "actor": "Meta red team",
+   "actor_type_raw": "Other",
+   "actor_type": "Other",
    "all_actor_types": [
-    "Domain expert groups",
-    "Internal"
+    "Internal",
+    "Other"
    ],
    "pages": [
     "4"
@@ -151979,7 +151629,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Domain expert groups"
+    "Other"
    ],
    "cited_actor_types": [
     "Internal"
@@ -153997,7 +153647,7 @@
    "training_category": "Preference learning",
    "item": "Reward modelling",
    "verbatim": "Feedback data are collected across creativity, safety, factuality, other capabilities, and other target criteria.",
-   "actor": "Human raters",
+   "actor": "human raters",
    "actor_type_raw": "Data workers",
    "actor_type": "Data workers",
    "all_actor_types": [
@@ -154030,7 +153680,7 @@
    "training_category": "Preference learning",
    "item": "Reward modelling",
    "verbatim": "Feedback data are collected across creativity, safety, factuality, other capabilities, and other target criteria.",
-   "actor": "Human raters",
+   "actor": "human raters",
    "actor_type_raw": "Data workers",
    "actor_type": "Data workers",
    "all_actor_types": [
@@ -154063,7 +153713,7 @@
    "training_category": "Preference learning",
    "item": "Reward modelling",
    "verbatim": "Feedback data are collected across creativity, safety, factuality, other capabilities, and other target criteria.",
-   "actor": "Human raters",
+   "actor": "human raters",
    "actor_type_raw": "Data workers",
    "actor_type": "Data workers",
    "all_actor_types": [
@@ -166403,11 +166053,11 @@
    "item": "Sourcing",
    "verbatim": "In particular, we use the prompts, … but not the answers from LMSYS-chat-1M (Zheng",
    "actor": "Zheng et al.",
-   "actor_type_raw": "Academic or research center",
-   "actor_type": "Academic or research center",
+   "actor_type_raw": "Other",
+   "actor_type": "Other",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Other"
    ],
    "pages": [
     "4"
@@ -166422,7 +166072,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Other"
    ],
    "cited_actor_types": [
     "Internal"
@@ -169335,10 +168985,11 @@
    "benchmark_category": "Other",
    "name": "Synthetic Labour MP speeches signal-stripping test",
    "author": "Asirvatham, Mokski and Shleifer",
-   "author_type_raw": "Internal",
-   "author_type": "Internal",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "37"
@@ -169353,10 +169004,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
+    "Multiple"
+   ],
+   "cited_actor_types": [
     "Internal"
    ],
-   "cited_actor_types": [],
-   "actor_type": "Internal"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__hallucinations__county-business-regulation-reports-signal-stripping-test",
@@ -169365,10 +169018,11 @@
    "benchmark_category": "Other",
    "name": "County business regulation reports signal-stripping test",
    "author": "Asirvatham, Mokski and Shleifer",
-   "author_type_raw": "Internal",
-   "author_type": "Internal",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "39"
@@ -169383,10 +169037,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
+    "Multiple"
+   ],
+   "cited_actor_types": [
     "Internal"
    ],
-   "cited_actor_types": [],
-   "actor_type": "Internal"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__quality-loss__pre-versus-post-training-cutoff-performance-comparison",
@@ -169395,10 +169051,11 @@
    "benchmark_category": "Other",
    "name": "Pre- versus post-training cutoff performance comparison",
    "author": "Asirvatham, Mokski and Shleifer",
-   "author_type_raw": "Internal",
-   "author_type": "Internal",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "37"
@@ -169413,10 +169070,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
+    "Multiple"
+   ],
+   "cited_actor_types": [
     "Internal"
    ],
-   "cited_actor_types": [],
-   "actor_type": "Internal"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__hallucinations__synthetic-earnings-calls-look-ahead-test",
@@ -169654,11 +169313,12 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK",
    "author": "Ren et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
     "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "3",
@@ -169678,12 +169338,13 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Alignment research organisation",
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__xai__honesty__mask",
@@ -169692,11 +169353,12 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK",
    "author": "Ren et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
     "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "3",
@@ -169715,12 +169377,13 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Alignment research organisation",
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__xai__sycophancy__anthropic-s-sycophancy-evaluation",
@@ -176247,8 +175910,8 @@
    "author_type_raw": "",
    "author_type": "unknown",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "106",
@@ -176266,12 +175929,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__meta__deception__deceptionbench",
@@ -176441,13 +176104,12 @@
    "benchmark_category": "Misalignment / Scheming",
    "name": "Alignment Faking",
    "author": "Greenblatt et al. 2024",
-   "author_type_raw": "Other AI company",
-   "author_type": "Other AI company",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
     "Internal",
-    "Other",
-    "Other AI company"
+    "Multiple",
+    "Other"
    ],
    "pages": [
     "116",
@@ -176463,9 +176125,8 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation",
-    "Other",
-    "Other AI company"
+    "Multiple",
+    "Other"
    ],
    "cited_actor_types": [
     "Internal"
@@ -176962,10 +176623,11 @@
    "benchmark_category": "Agentic / Autonomy",
    "name": "AIRS-Bench",
    "author": "Lupidi et al. 2026",
-   "author_type_raw": "Internal",
-   "author_type": "Internal",
+   "author_type_raw": "Other",
+   "author_type": "Other",
    "all_actor_types": [
-    "Internal"
+    "Internal",
+    "Other"
    ],
    "pages": [
     "54"
@@ -176980,10 +176642,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
+    "Other"
+   ],
+   "cited_actor_types": [
     "Internal"
    ],
-   "cited_actor_types": [],
-   "actor_type": "Internal"
+   "actor_type": "Other"
   },
   {
    "id": "bench__meta__evaluation-awareness__prompted-evaluation-awareness-classification",
@@ -177381,11 +177045,12 @@
    "benchmark_category": "Misalignment / Scheming",
    "name": "Apollo Research covert action evaluations",
    "author": "Schoen et al. 2025 | Apollo Research",
-   "author_type_raw": "Alignment research organisation | Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple | Alignment research organisation",
+   "author_type": "Multiple",
    "all_actor_types": [
     "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "69"
@@ -177400,12 +177065,13 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Alignment research organisation",
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__meta__misalignment__oversight-subversion-apollo-research",
@@ -178106,11 +177772,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "Humanity’s Last Exam",
    "author": "Phan et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "101"
@@ -178125,12 +177791,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__meta__honesty__abstention-bench",
@@ -178298,11 +177964,11 @@
    "benchmark_category": "Misalignment / Scheming",
    "name": "Alignment Faking",
    "author": "Greenblatt et al. 2024 | Sheshadri et al. 2025",
-   "author_type_raw": "Alignment research organisation | Other",
+   "author_type_raw": "Multiple | Other",
    "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "pages": [
@@ -178318,7 +177984,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation",
+    "Multiple",
     "Other"
    ],
    "cited_actor_types": [
@@ -178739,11 +178405,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK",
    "author": "Ren et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "137"
@@ -178758,12 +178424,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__meta__reward-hacking__sorh-school-of-reward-hacking",
@@ -188374,7 +188040,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "Cybench",
-   "author": "Zhang et al. (2024)",
+   "author": "Zhang et al. 2024",
    "author_type_raw": "Academic or research center",
    "author_type": "Academic or research center",
    "all_actor_types": [
@@ -196264,11 +195930,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "10",
@@ -196286,12 +195952,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__factuality__truthfulqa",
@@ -196300,12 +195966,12 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
     "Domain expert groups",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "10",
@@ -196326,8 +195992,8 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center",
-    "Domain expert groups"
+    "Domain expert groups",
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
@@ -198638,7 +198304,7 @@
    "category": "Misalignment",
    "benchmark_category": "Misalignment / Scheming",
    "name": "Subversion Strategy",
-   "author": "Mallen et al. (2024)",
+   "author": "Mallen et al. 2024",
    "author_type_raw": "Alignment research organisation",
    "author_type": "Alignment research organisation",
    "all_actor_types": [
@@ -198676,7 +198342,7 @@
    "category": "Sandbagging",
    "benchmark_category": "Misalignment / Scheming",
    "name": "research sandbagging evaluation",
-   "author": "Gasteiger et al. (2025)",
+   "author": "Gasteiger et al. 2025",
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
@@ -198706,7 +198372,7 @@
    "category": "Misalignment",
    "benchmark_category": "Misalignment / Scheming",
    "name": "research sandbagging evaluation",
-   "author": "Gasteiger et al. (2025)",
+   "author": "Gasteiger et al. 2025",
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
@@ -200659,7 +200325,7 @@
    "category": "Transparency",
    "benchmark_category": "Misalignment / Scheming",
    "name": "evaluation suite from Guan et al. (2025)",
-   "author": "Guan et al. (2025)",
+   "author": "Guan et al. 2025",
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
@@ -203771,11 +203437,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK (Model Alignment between Statements and Knowledge)",
    "author": "Ren et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "128"
@@ -203790,12 +203456,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__anthropic__hallucinations__input-hallucination-sets-capability-and-missing-context",
@@ -210380,11 +210046,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2022",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "11",
@@ -210404,12 +210070,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__google__representational-bias__crows-pairs",
@@ -210454,11 +210120,11 @@
    "benchmark_category": "Toxicity",
    "name": "Toxigen",
    "author": "Hartvigsen et al. 2022",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "11",
@@ -210479,12 +210145,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__google__discriminatory-content__toxigen",
@@ -210493,11 +210159,11 @@
    "benchmark_category": "Toxicity",
    "name": "Toxigen",
    "author": "Hartvigsen et al. 2022",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "7"
@@ -210513,12 +210179,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__toxicity__toxic-wildchat",
@@ -213460,11 +213126,12 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2022 | Thellmann et al. 2024",
-   "author_type_raw": "Academic or research center | Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple | Academic or research center",
+   "author_type": "Multiple",
    "all_actor_types": [
     "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "26",
@@ -213480,12 +213147,13 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Academic or research center",
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__anthropic__transparency__cot-intervention-tests-adding-mistakes-paraphrasing",
@@ -217221,7 +216889,7 @@
    "category": "CBRN",
    "benchmark_category": "CBRN",
    "name": "Challenging prompts from red teamers with biosafety-relevant PhDs",
-   "author": "Experienced red teamers with biosafety-relevant PhDs",
+   "author": "experienced red teamers with biosafety-relevant PhDs",
    "author_type_raw": "Domain expert groups",
    "author_type": "Domain expert groups",
    "all_actor_types": [
@@ -219462,11 +219130,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "5"
@@ -219481,12 +219149,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__openai__cbrn__production-benchmarks",
@@ -219928,7 +219596,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "CAISI automated cyber evals",
-   "author": "U.S. Center for AI Standards and Innovation",
+   "author": "US Center for AI Standards and Innovation",
    "author_type_raw": "Government agency",
    "author_type": "Government agency",
    "all_actor_types": [
@@ -221567,7 +221235,7 @@
    "category": "Toxicity",
    "benchmark_category": "Toxicity",
    "name": "Jigsaw toxic comments test dataset",
-   "author": "Jigsaw (Google)",
+   "author": "Jigsaw",
    "author_type_raw": "Other AI company",
    "author_type": "Other AI company",
    "all_actor_types": [
@@ -221600,7 +221268,7 @@
    "category": "Discriminatory content",
    "benchmark_category": "Toxicity",
    "name": "Jigsaw toxic comments test dataset",
-   "author": "Jigsaw (Google)",
+   "author": "Jigsaw",
    "author_type_raw": "Other AI company",
    "author_type": "Other AI company",
    "all_actor_types": [
@@ -221633,7 +221301,7 @@
    "category": "Harassment",
    "benchmark_category": "Toxicity",
    "name": "Jigsaw toxic comments test dataset",
-   "author": "Jigsaw (Google)",
+   "author": "Jigsaw",
    "author_type_raw": "Other AI company",
    "author_type": "Other AI company",
    "all_actor_types": [
@@ -221666,7 +221334,7 @@
    "category": "Violent content",
    "benchmark_category": "Toxicity",
    "name": "Jigsaw toxic comments test dataset",
-   "author": "Jigsaw (Google)",
+   "author": "Jigsaw",
    "author_type_raw": "Other AI company",
    "author_type": "Other AI company",
    "all_actor_types": [
@@ -221699,7 +221367,7 @@
    "category": "Sexual content",
    "benchmark_category": "Toxicity",
    "name": "Jigsaw toxic comments test dataset",
-   "author": "Jigsaw (Google)",
+   "author": "Jigsaw",
    "author_type_raw": "Other AI company",
    "author_type": "Other AI company",
    "all_actor_types": [
@@ -225289,6 +224957,7 @@
    "all_actor_types": [
     "Government agency",
     "Internal",
+    "Multiple",
     "Other",
     "Red teaming or cybersecurity company"
    ],
@@ -225311,6 +224980,7 @@
    "only_policy": false,
    "author_actor_types": [
     "Government agency",
+    "Multiple",
     "Other",
     "Red teaming or cybersecurity company"
    ],
@@ -225329,8 +224999,8 @@
    "author_type_raw": "Other",
    "author_type": "Other",
    "all_actor_types": [
-    "Government agency",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "pages": [
@@ -225350,7 +225020,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Government agency",
+    "Multiple",
     "Other"
    ],
    "cited_actor_types": [
@@ -225433,8 +225103,8 @@
    "author_type_raw": "Other",
    "author_type": "Other",
    "all_actor_types": [
-    "Alignment research organisation",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "pages": [
@@ -225453,7 +225123,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation",
+    "Multiple",
     "Other"
    ],
    "cited_actor_types": [
@@ -225471,8 +225141,8 @@
    "author_type_raw": "Other",
    "author_type": "Other",
    "all_actor_types": [
-    "Alignment research organisation",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "pages": [
@@ -225490,7 +225160,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation",
+    "Multiple",
     "Other"
    ],
    "cited_actor_types": [
@@ -225504,7 +225174,7 @@
    "category": "CBRN",
    "benchmark_category": "CBRN",
    "name": "VCT",
-   "author": "Götting et al. (2025)",
+   "author": "Götting et al. 2025",
    "author_type_raw": "Other nonprofit",
    "author_type": "Other nonprofit",
    "all_actor_types": [
@@ -235280,11 +234950,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK",
    "author": "Ren et al. 2025",
-   "author_type_raw": "Alignment research organisation",
-   "author_type": "Alignment research organisation",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "4"
@@ -235299,12 +234969,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__xai__cbrn__wmdp-cyber",
@@ -235377,11 +235047,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2022",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "25"
@@ -235396,12 +235066,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__meta__safety__toxigen",
@@ -237784,12 +237454,11 @@
    "benchmark_category": "CBRN",
    "name": "FORTRESS-RN",
    "author": "Knight et al. 2025",
-   "author_type_raw": "Other AI company",
-   "author_type": "Other AI company",
+   "author_type_raw": "Data workers",
+   "author_type": "Data workers",
    "all_actor_types": [
     "Data workers",
-    "Internal",
-    "Other AI company"
+    "Internal"
    ],
    "pages": [
     "25",
@@ -237806,13 +237475,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Data workers",
-    "Other AI company"
+    "Data workers"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Multiple"
+   "actor_type": "Data workers"
   },
   {
    "id": "bench__xai__wellbeing__self-harm-suite",
@@ -237883,11 +237551,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "MASK-Rectified",
    "author": "Ren et al. 2025 | SpaceXAI",
-   "author_type_raw": "Alignment research organisation | Internal",
+   "author_type_raw": "Multiple | Internal",
    "author_type": "Multiple",
    "all_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "27",
@@ -237905,8 +237573,8 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Alignment research organisation",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "cited_actor_types": [],
    "actor_type": "Multiple"
@@ -241340,11 +241008,11 @@
    "benchmark_category": "Bias / Fairness",
    "name": "CheckList",
    "author": "Ribeiro et al. 2020",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "20"
@@ -241359,12 +241027,12 @@
    "from_policy": true,
    "only_policy": true,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__microsoft__illegal-activities__safety-benchmarks",
@@ -245637,7 +245305,7 @@
    "category": "Harmlessness",
    "benchmark_category": "Refusal / Over-refusal",
    "name": "WildChat",
-   "author": "Zhao et al. (2024)",
+   "author": "Zhao et al. 2024",
    "author_type_raw": "Academic or research center",
    "author_type": "Academic or research center",
    "all_actor_types": [
@@ -246183,7 +245851,7 @@
    "category": "Misalignment",
    "benchmark_category": "Misalignment / Scheming",
    "name": "alignment faking evaluation",
-   "author": "Greenblatt et al. (2024)",
+   "author": "Greenblatt et al. 2024",
    "author_type_raw": "Internal",
    "author_type": "Internal",
    "all_actor_types": [
@@ -246345,7 +246013,7 @@
    "category": "Cybersecurity",
    "benchmark_category": "Cybersecurity",
    "name": "Cyber-harness network challenges",
-   "author": "Singer et al. (2025)",
+   "author": "Singer et al. 2025",
    "author_type_raw": "Academic or research center",
    "author_type": "Academic or research center",
    "all_actor_types": [
@@ -246383,7 +246051,7 @@
    "category": "Misalignment",
    "benchmark_category": "Misalignment / Scheming",
    "name": "sabotage capability evaluations",
-   "author": "Benton et al. (2024) | Roger et al. (2024)",
+   "author": "Benton et al. 2024 | Roger et al. 2024",
    "author_type_raw": "Internal | Internal",
    "author_type": "Internal",
    "all_actor_types": [
@@ -248510,7 +248178,7 @@
    "category": "Factuality",
    "benchmark_category": "Honesty / Factuality",
    "name": "FACTS Search",
-   "author": "Google | Human raters",
+   "author": "Google | human raters",
    "author_type_raw": "Internal | Data workers",
    "author_type": "Multiple",
    "all_actor_types": [
@@ -253566,11 +253234,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "5"
@@ -253585,12 +253253,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__anthropic__falsehoods__truthfulqa",
@@ -253599,11 +253267,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "5"
@@ -253618,12 +253286,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__anthropic__harmful-content__harmfulness-scores-on-held-out-prompts",
@@ -259549,11 +259217,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "4"
@@ -259568,12 +259236,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__university-of-oxford__honesty__truthfulqa",
@@ -259582,11 +259250,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "4"
@@ -259601,12 +259269,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__university-of-oxford__falsehoods__truthfulqa",
@@ -259615,11 +259283,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "4"
@@ -259634,12 +259302,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__university-of-oxford__helpfulness__truthfulqa",
@@ -259648,11 +259316,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021",
-   "author_type_raw": "Academic or research center",
-   "author_type": "Academic or research center",
+   "author_type_raw": "Multiple",
+   "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
-    "Internal"
+    "Internal",
+    "Multiple"
    ],
    "pages": [
     "4"
@@ -259667,12 +259335,12 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center"
+    "Multiple"
    ],
    "cited_actor_types": [
     "Internal"
    ],
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "id": "bench__xai__cybersecurity__realistic-offensive-cyber-tasks",
@@ -261611,11 +261279,11 @@
    "benchmark_category": "Honesty / Factuality",
    "name": "TruthfulQA",
    "author": "Lin et al. 2021 | David Adelani, Jonas Kgomo and Ed Bayes",
-   "author_type_raw": "Academic or research center | Other",
+   "author_type_raw": "Multiple | Other",
    "author_type": "Multiple",
    "all_actor_types": [
-    "Academic or research center",
     "Internal",
+    "Multiple",
     "Other"
    ],
    "pages": [
@@ -261631,7 +261299,7 @@
    "from_policy": false,
    "only_policy": false,
    "author_actor_types": [
-    "Academic or research center",
+    "Multiple",
     "Other"
    ],
    "cited_actor_types": [

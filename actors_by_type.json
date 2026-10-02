@@ -297,7 +297,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Model Evaluation and Threat Research (METR)",
+   "actor": "Model Evaluation and Threat Research",
    "documents": 1,
    "relations": {
     "external evaluation": 1
@@ -382,7 +382,7 @@
  ],
  "Evaluations, benchmarks and tools": [
   {
-   "actor": "Human raters",
+   "actor": "human raters",
    "documents": 2,
    "relations": {
     "creating a benchmark": 2
@@ -442,7 +442,7 @@
     "defining a conduct or risk": 1
    },
    "main_relation": "defining a conduct or risk",
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "actor": "Mialon et al. 2023",
@@ -774,15 +774,6 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "External red-teamers",
-   "documents": 1,
-   "relations": {
-    "red teaming": 1
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Other"
-  },
-  {
    "actor": "External testing organizations (Anthropic predeployment testing)",
    "documents": 1,
    "relations": {
@@ -880,6 +871,15 @@
    },
    "main_relation": "external evaluation",
    "actor_type": "Domain expert groups"
+  },
+  {
+   "actor": "external red teamers",
+   "documents": 1,
+   "relations": {
+    "red teaming": 1
+   },
+   "main_relation": "red teaming",
+   "actor_type": "Other"
   },
   {
    "actor": "third-party researchers",
@@ -1228,15 +1228,6 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "U.S. Center for AI Standards and Innovation",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
    "actor": "U.S. Department of Energy nuclear experts",
    "documents": 1,
    "relations": {
@@ -1247,6 +1238,15 @@
   },
   {
    "actor": "UK AI Security Institute",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation",
+   "actor_type": "Government agency"
+  },
+  {
+   "actor": "US Center for AI Standards and Innovation",
    "documents": 1,
    "relations": {
     "external evaluation": 1
@@ -1625,6 +1625,33 @@
    "actor_type": "Red teaming or cybersecurity company"
   },
   {
+   "actor": "Zhang et al. 2024",
+   "documents": 12,
+   "relations": {
+    "creating a benchmark": 14
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Academic or research center"
+  },
+  {
+   "actor": "Ivanov 2024",
+   "documents": 11,
+   "relations": {
+    "creating a benchmark": 11
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Other"
+  },
+  {
+   "actor": "Laurent et al. 2024",
+   "documents": 11,
+   "relations": {
+    "creating a benchmark": 17
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Other nonprofit"
+  },
+  {
    "actor": "Center for AI Safety",
    "documents": 10,
    "relations": {
@@ -1643,13 +1670,15 @@
    "actor_type": "Data workers"
   },
   {
-   "actor": "Laurent et al. 2024",
+   "actor": "US Center for AI Standards and Innovation",
    "documents": 10,
    "relations": {
-    "creating a benchmark": 16
+    "red teaming": 3,
+    "external evaluation": 9,
+    "creating a benchmark": 4
    },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other nonprofit"
+   "main_relation": "external evaluation",
+   "actor_type": "Government agency"
   },
   {
    "actor": "external red teamers",
@@ -1672,13 +1701,13 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Ivanov 2024",
+   "actor": "Götting et al. 2025",
    "documents": 9,
    "relations": {
     "creating a benchmark": 9
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Other"
+   "actor_type": "Other nonprofit"
   },
   {
    "actor": "Jimenez et al. 2024",
@@ -1710,6 +1739,15 @@
    "actor_type": "Academic or research center"
   },
   {
+   "actor": "Zhu et al. 2025",
+   "documents": 9,
+   "relations": {
+    "creating a benchmark": 9
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Academic or research center"
+  },
+  {
    "actor": "Artificial Analysis",
    "documents": 8,
    "relations": {
@@ -1726,7 +1764,7 @@
     "creating a benchmark": 8
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Alignment research organisation"
+   "actor_type": "Multiple"
   },
   {
    "actor": "Röttger et al. 2023",
@@ -1738,22 +1776,31 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Zhu et al. 2025",
+   "actor": "Zhao et al. 2024",
    "documents": 8,
    "relations": {
-    "creating a benchmark": 8
+    "creating a benchmark": 12
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Götting et al. 2025",
-   "documents": 7,
+   "actor": "Zou et al. 2025",
+   "documents": 8,
    "relations": {
-    "creating a benchmark": 7
+    "creating a benchmark": 8
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Other nonprofit"
+   "actor_type": "Red teaming or cybersecurity company"
+  },
+  {
+   "actor": "Korbak et al. 2025",
+   "documents": 7,
+   "relations": {
+    "defining a conduct or risk": 10
+   },
+   "main_relation": "defining a conduct or risk",
+   "actor_type": "Multiple"
   },
   {
    "actor": "Li et al. 2024",
@@ -1771,34 +1818,16 @@
     "creating a benchmark": 7
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
-   "actor": "Zhang et al. (2024)",
+   "actor": "U.S. AI Safety Institute",
    "documents": 7,
    "relations": {
-    "creating a benchmark": 7
+    "external evaluation": 8
    },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Zhao et al. 2024",
-   "documents": 7,
-   "relations": {
-    "creating a benchmark": 11
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Zou et al. 2025",
-   "documents": 7,
-   "relations": {
-    "creating a benchmark": 7
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Red teaming or cybersecurity company"
+   "main_relation": "external evaluation",
+   "actor_type": "Government agency"
   },
   {
    "actor": "Chao et al. 2024",
@@ -1808,6 +1837,17 @@
    },
    "main_relation": "defining a conduct or risk",
    "actor_type": "Academic or research center"
+  },
+  {
+   "actor": "Crowd workers",
+   "documents": 6,
+   "relations": {
+    "external evaluation": 2,
+    "red teaming": 5,
+    "taking part in training": 2
+   },
+   "main_relation": "red teaming",
+   "actor_type": "Data workers"
   },
   {
    "actor": "External experts",
@@ -1888,15 +1928,6 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Zhang et al. 2024",
-   "documents": 6,
-   "relations": {
-    "creating a benchmark": 7
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "domain experts (biosecurity, virology, computational biology)",
    "documents": 6,
    "relations": {
@@ -1946,6 +1977,15 @@
    "actor_type": "Academic or research center"
   },
   {
+   "actor": "Gehman et al. 2020",
+   "documents": 5,
+   "relations": {
+    "creating a benchmark": 5
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Academic or research center"
+  },
+  {
    "actor": "NYU Center for Cybersecurity",
    "documents": 5,
    "relations": {
@@ -1975,34 +2015,13 @@
    "actor_type": "Other AI company"
   },
   {
-   "actor": "U.S. AI Safety Institute",
+   "actor": "expert red teamers",
    "documents": 5,
    "relations": {
-    "external evaluation": 5
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
-   "actor": "U.S. Center for AI Standards and Innovation",
-   "documents": 5,
-   "relations": {
-    "creating a benchmark": 2,
-    "external evaluation": 6
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
-   "actor": "US Center for AI Standards and Innovation",
-   "documents": 5,
-   "relations": {
-    "red teaming": 3,
-    "external evaluation": 2,
-    "creating a benchmark": 2
+    "red teaming": 6
    },
    "main_relation": "red teaming",
-   "actor_type": "Government agency"
+   "actor_type": "Domain expert groups"
   },
   {
    "actor": "external testers",
@@ -2033,27 +2052,6 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Crowd workers",
-   "documents": 4,
-   "relations": {
-    "external evaluation": 1,
-    "red teaming": 2,
-    "taking part in training": 2
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Data workers"
-  },
-  {
-   "actor": "Crowdworkers",
-   "documents": 4,
-   "relations": {
-    "red teaming": 3,
-    "external evaluation": 1
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Data workers"
-  },
-  {
    "actor": "Deloitte Consulting",
    "documents": 4,
    "relations": {
@@ -2082,22 +2080,13 @@
    "actor_type": "Think tank or policy institute"
   },
   {
-   "actor": "Gehman et al. 2020",
-   "documents": 4,
-   "relations": {
-    "creating a benchmark": 4
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "Hartvigsen et al. 2022",
    "documents": 4,
    "relations": {
     "creating a benchmark": 4
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "actor": "Irregular (formerly Pattern Labs)",
@@ -2108,15 +2097,6 @@
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Red teaming or cybersecurity company"
-  },
-  {
-   "actor": "Korbak et al. 2025",
-   "documents": 4,
-   "relations": {
-    "defining a conduct or risk": 6
-   },
-   "main_relation": "defining a conduct or risk",
-   "actor_type": "Other"
   },
   {
    "actor": "Li et al.",
@@ -2267,6 +2247,15 @@
    "actor_type": "Other"
   },
   {
+   "actor": "Arora et al. 2025",
+   "documents": 3,
+   "relations": {
+    "creating a benchmark": 3
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Other AI company"
+  },
+  {
    "actor": "Chao et al. 2023",
    "documents": 3,
    "relations": {
@@ -2292,15 +2281,6 @@
    },
    "main_relation": "external evaluation",
    "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Expert red-teamers",
-   "documents": 3,
-   "relations": {
-    "red teaming": 4
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Domain expert groups"
   },
   {
    "actor": "FAR.AI",
@@ -2367,16 +2347,7 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Korbak et al. (2025)",
-   "documents": 3,
-   "relations": {
-    "defining a conduct or risk": 4
-   },
-   "main_relation": "defining a conduct or risk",
-   "actor_type": "Government agency"
-  },
-  {
-   "actor": "Mallen et al. (2024)",
+   "actor": "Mallen et al. 2024",
    "documents": 3,
    "relations": {
     "creating a benchmark": 3
@@ -2392,6 +2363,15 @@
    },
    "main_relation": "external evaluation",
    "actor_type": "Data workers"
+  },
+  {
+   "actor": "Singer et al. 2025",
+   "documents": 3,
+   "relations": {
+    "creating a benchmark": 3
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Academic or research center"
   },
   {
    "actor": "Stanford University",
@@ -2457,6 +2437,15 @@
    "actor_type": "Domain expert groups"
   },
   {
+   "actor": "experienced red teamers with biosafety-relevant PhDs",
+   "documents": 3,
+   "relations": {
+    "creating a benchmark": 3
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Domain expert groups"
+  },
+  {
    "actor": "expert testers and red teamers",
    "documents": 3,
    "relations": {
@@ -2464,6 +2453,15 @@
    },
    "main_relation": "red teaming",
    "actor_type": "Domain expert groups"
+  },
+  {
+   "actor": "human raters",
+   "documents": 3,
+   "relations": {
+    "external evaluation": 3
+   },
+   "main_relation": "external evaluation",
+   "actor_type": "Data workers"
   },
   {
    "actor": "professional red-teamers",
@@ -2520,15 +2518,6 @@
    },
    "main_relation": "external evaluation",
    "actor_type": "Other"
-  },
-  {
-   "actor": "Arora et al. 2025",
-   "documents": 2,
-   "relations": {
-    "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other AI company"
   },
   {
    "actor": "Athaluri et al. 2023",
@@ -2594,15 +2583,6 @@
    "actor_type": "Other nonprofit"
   },
   {
-   "actor": "Experienced red teamers with biosafety-relevant PhDs",
-   "documents": 2,
-   "relations": {
-    "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Domain expert groups"
-  },
-  {
    "actor": "External testers and experts (OpenAI red teaming campaigns)",
    "documents": 2,
    "relations": {
@@ -2621,15 +2601,6 @@
    "actor_type": "Other AI company"
   },
   {
-   "actor": "Götting et al. (2025)",
-   "documents": 2,
-   "relations": {
-    "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other nonprofit"
-  },
-  {
    "actor": "Hendrycks et al. 2021",
    "documents": 2,
    "relations": {
@@ -2637,15 +2608,6 @@
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Ivanov (2024)",
-   "documents": 2,
-   "relations": {
-    "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other"
   },
   {
    "actor": "Joshi et al. 2017",
@@ -2672,7 +2634,7 @@
     "creating a benchmark": 2
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Other AI company"
+   "actor_type": "Data workers"
   },
   {
    "actor": "Kärkkäinen et al. 2021",
@@ -2693,6 +2655,16 @@
    "actor_type": "Other"
   },
   {
+   "actor": "Lin et al. 2022",
+   "documents": 2,
+   "relations": {
+    "creating a benchmark": 1,
+    "defining a conduct or risk": 1
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Multiple"
+  },
+  {
    "actor": "Lysios LLC",
    "documents": 2,
    "relations": {
@@ -2711,7 +2683,7 @@
    "actor_type": "Alignment research organisation"
   },
   {
-   "actor": "Meta red team (Llama)",
+   "actor": "Meta red team",
    "documents": 2,
    "relations": {
     "taking part in training": 2
@@ -2847,15 +2819,6 @@
    "actor_type": "Other AI company"
   },
   {
-   "actor": "Singer et al. 2025",
-   "documents": 2,
-   "relations": {
-    "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "Solaiman et al. 2024",
    "documents": 2,
    "relations": {
@@ -2911,10 +2874,11 @@
    "actor_type": "Other"
   },
   {
-   "actor": "US AI Safety Institute",
+   "actor": "US Government partners",
    "documents": 2,
    "relations": {
-    "external evaluation": 3
+    "red teaming": 1,
+    "external evaluation": 2
    },
    "main_relation": "external evaluation",
    "actor_type": "Government agency"
@@ -2985,15 +2949,6 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "expert red teamers",
-   "documents": 2,
-   "relations": {
-    "red teaming": 2
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Domain expert groups"
-  },
-  {
    "actor": "experts specializing in radiological and nuclear topics",
    "documents": 2,
    "relations": {
@@ -3011,15 +2966,6 @@
    },
    "main_relation": "defining a conduct or risk",
    "actor_type": "Domain expert groups"
-  },
-  {
-   "actor": "human raters",
-   "documents": 2,
-   "relations": {
-    "external evaluation": 2
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Data workers"
   },
   {
    "actor": "human reviewers",
@@ -3139,28 +3085,10 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Arora et al. (2025)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other AI company"
-  },
-  {
-   "actor": "Bai et al. (2022)",
-   "documents": 1,
-   "relations": {
-    "conceiving a training method": 1
-   },
-   "main_relation": "conceiving a training method",
-   "actor_type": "Other AI company"
-  },
-  {
    "actor": "Bai et al. 2022",
    "documents": 1,
    "relations": {
-    "conceiving a training method": 1
+    "conceiving a training method": 2
    },
    "main_relation": "conceiving a training method",
    "actor_type": "Other AI company"
@@ -3580,16 +3508,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Gehman et al. (2020)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Glaese et al. (2022)",
+   "actor": "Glaese et al. 2022",
    "documents": 1,
    "relations": {
     "conceiving a training method": 1
@@ -3632,15 +3551,6 @@
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Human raters",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Data workers"
   },
   {
    "actor": "Human reviewers (unnamed)",
@@ -3715,15 +3625,6 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Laurent et al. (2024)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Other nonprofit"
-  },
-  {
    "actor": "Lee et al.",
    "documents": 1,
    "relations": {
@@ -3749,24 +3650,6 @@
    },
    "main_relation": "defining a conduct or risk",
    "actor_type": "Other"
-  },
-  {
-   "actor": "Lin et al. (2022)",
-   "documents": 1,
-   "relations": {
-    "defining a conduct or risk": 1
-   },
-   "main_relation": "defining a conduct or risk",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Lin et al. 2022",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
   },
   {
    "actor": "Lin et al. 2023",
@@ -4174,15 +4057,6 @@
    "actor_type": "Other AI company"
   },
   {
-   "actor": "Singer et al. (2025)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "Six human biology experts",
    "documents": 1,
    "relations": {
@@ -4219,7 +4093,7 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "Specialist external red-teaming teams (Google)",
+   "actor": "Specialist external red-teaming teams",
    "documents": 1,
    "relations": {
     "red teaming": 1
@@ -4237,7 +4111,7 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Tan et al. (2025)",
+   "actor": "Tan et al. 2025",
    "documents": 1,
    "relations": {
     "conceiving a training method": 1
@@ -4291,15 +4165,6 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "U.S. Center for AI Standards and Innovation (CAISI)",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
    "actor": "U.S. Department of Commerce",
    "documents": 1,
    "relations": {
@@ -4318,31 +4183,12 @@
    "actor_type": "Government agency"
   },
   {
-   "actor": "U.S. Government partners",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
    "actor": "UK AI Security Institute and US AI Safety Institute",
    "documents": 1,
    "relations": {
     "external evaluation": 1
    },
    "main_relation": "external evaluation",
-   "actor_type": "Government agency"
-  },
-  {
-   "actor": "US Government partners",
-   "documents": 1,
-   "relations": {
-    "red teaming": 1,
-    "external evaluation": 1
-   },
-   "main_relation": "red teaming",
    "actor_type": "Government agency"
   },
   {
@@ -4400,7 +4246,7 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "Unnamed external red teaming organizations and individuals (OpenAI)",
+   "actor": "Unnamed external red teaming organizations and individuals",
    "documents": 1,
    "relations": {
     "red teaming": 1
@@ -4499,24 +4345,6 @@
    "actor_type": "Data workers"
   },
   {
-   "actor": "Zhao et al. (2024)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Zhu et al. (2025)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "Zhu et al. 2021",
    "documents": 1,
    "relations": {
@@ -4533,15 +4361,6 @@
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Other"
-  },
-  {
-   "actor": "Zou et al. (2025)",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Red teaming or cybersecurity company"
   },
   {
    "actor": "additional external partners",
@@ -4602,15 +4421,6 @@
    "documents": 1,
    "relations": {
     "creating a benchmark": 2
-   },
-   "main_relation": "creating a benchmark",
-   "actor_type": "Domain expert groups"
-  },
-  {
-   "actor": "experienced red teamers with biosafety-relevant PhDs",
-   "documents": 1,
-   "relations": {
-    "creating a benchmark": 1
    },
    "main_relation": "creating a benchmark",
    "actor_type": "Domain expert groups"
@@ -4769,7 +4579,7 @@
     "creating a benchmark": 1
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "actor": "UK AI Security Institute",
@@ -4832,17 +4642,6 @@
    "actor_type": "Government agency"
   },
   {
-   "actor": "U.S. Center for AI Standards and Innovation",
-   "documents": 2,
-   "relations": {
-    "taking part in training": 2,
-    "external evaluation": 1,
-    "red teaming": 2
-   },
-   "main_relation": "taking part in training",
-   "actor_type": "Government agency"
-  },
-  {
    "actor": "U.S. Department of Energy National Laboratories",
    "documents": 2,
    "relations": {
@@ -4851,6 +4650,17 @@
    },
    "main_relation": "taking part in training",
    "actor_type": "Academic or research center"
+  },
+  {
+   "actor": "US Center for AI Standards and Innovation",
+   "documents": 2,
+   "relations": {
+    "taking part in training": 2,
+    "external evaluation": 1,
+    "red teaming": 2
+   },
+   "main_relation": "taking part in training",
+   "actor_type": "Government agency"
   },
   {
    "actor": "Apollo Research",
@@ -5075,7 +4885,7 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "U.S. Center for AI Standards and Innovation",
+   "actor": "US Center for AI Standards and Innovation",
    "documents": 1,
    "relations": {
     "external evaluation": 1
@@ -5272,6 +5082,15 @@
    "actor_type": "Government agency"
   },
   {
+   "actor": "Amodei et al. 2016",
+   "documents": 3,
+   "relations": {
+    "defining a conduct or risk": 3
+   },
+   "main_relation": "defining a conduct or risk",
+   "actor_type": "Multiple"
+  },
+  {
    "actor": "Apollo Research",
    "documents": 3,
    "relations": {
@@ -5352,13 +5171,13 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Amodei et al. 2016",
+   "actor": "Bostrom 2014",
    "documents": 2,
    "relations": {
-    "defining a conduct or risk": 2
+    "defining a conduct or risk": 3
    },
    "main_relation": "defining a conduct or risk",
-   "actor_type": "Other AI company"
+   "actor_type": "Academic or research center"
   },
   {
    "actor": "Carlsmith 2023",
@@ -5379,7 +5198,7 @@
    "actor_type": "Government agency"
   },
   {
-   "actor": "Crowdworkers",
+   "actor": "Crowd workers",
    "documents": 2,
    "relations": {
     "red teaming": 2
@@ -5673,6 +5492,25 @@
    "actor_type": "Data workers"
   },
   {
+   "actor": "biodefense experts",
+   "documents": 2,
+   "relations": {
+    "external evaluation": 1,
+    "red teaming": 1
+   },
+   "main_relation": "external evaluation",
+   "actor_type": "Domain expert groups"
+  },
+  {
+   "actor": "external red teamers",
+   "documents": 2,
+   "relations": {
+    "red teaming": 2
+   },
+   "main_relation": "red teaming",
+   "actor_type": "Domain expert groups"
+  },
+  {
    "actor": "50 student-level participants with at least one university-level course in biology",
    "documents": 1,
    "relations": {
@@ -5756,6 +5594,15 @@
    "actor_type": "Other AI company"
   },
   {
+   "actor": "Asirvatham, Mokski and Shleifer",
+   "documents": 1,
+   "relations": {
+    "creating a benchmark": 3
+   },
+   "main_relation": "creating a benchmark",
+   "actor_type": "Multiple"
+  },
+  {
    "actor": "Bai et al. 2022",
    "documents": 1,
    "relations": {
@@ -5819,33 +5666,6 @@
    "actor_type": "Other"
   },
   {
-   "actor": "Biodefense experts",
-   "documents": 1,
-   "relations": {
-    "red teaming": 1
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Domain expert groups"
-  },
-  {
-   "actor": "Bostrom (2014)",
-   "documents": 1,
-   "relations": {
-    "defining a conduct or risk": 2
-   },
-   "main_relation": "defining a conduct or risk",
-   "actor_type": "Academic or research center"
-  },
-  {
-   "actor": "Bostrom 2014",
-   "documents": 1,
-   "relations": {
-    "defining a conduct or risk": 1
-   },
-   "main_relation": "defining a conduct or risk",
-   "actor_type": "Academic or research center"
-  },
-  {
    "actor": "Bottou et al. 2012",
    "documents": 1,
    "relations": {
@@ -5882,7 +5702,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Cabinet Office (UK)",
+   "actor": "Cabinet Office",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 1
@@ -5947,7 +5767,7 @@
    "actor_type": "Alignment research organisation"
   },
   {
-   "actor": "Christiano (2021)",
+   "actor": "Christiano 2021",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 1
@@ -5965,7 +5785,7 @@
    "actor_type": "Publics"
   },
   {
-   "actor": "Critch and Krueger (2020)",
+   "actor": "Critch and Krueger 2020",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 1
@@ -6072,15 +5892,6 @@
    },
    "main_relation": "taking part in training",
    "actor_type": "Data workers"
-  },
-  {
-   "actor": "External red-teamers",
-   "documents": 1,
-   "relations": {
-    "red teaming": 1
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Other"
   },
   {
    "actor": "External researchers",
@@ -6191,7 +6002,7 @@
    "actor_type": "Government agency"
   },
   {
-   "actor": "Hubinger (2020)",
+   "actor": "Hubinger 2020",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 1
@@ -6281,7 +6092,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Jigsaw (Google)",
+   "actor": "Jigsaw",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 2,
@@ -6492,7 +6303,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Omohundro (2008)",
+   "actor": "Omohundro 2008",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 1
@@ -6519,7 +6330,7 @@
    "actor_type": "Data workers"
   },
   {
-   "actor": "Ord (2021)",
+   "actor": "Ord 2021",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 3
@@ -6918,21 +6729,21 @@
    "actor_type": "Academic or research center"
   },
   {
+   "actor": "U.S. AI Safety Institute",
+   "documents": 1,
+   "relations": {
+    "external evaluation": 1
+   },
+   "main_relation": "external evaluation",
+   "actor_type": "Government agency"
+  },
+  {
    "actor": "U.S. Bureau of Labor Statistics",
    "documents": 1,
    "relations": {
     "creating a benchmark": 1
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Government agency"
-  },
-  {
-   "actor": "US AI Safety Institute",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
    "actor_type": "Government agency"
   },
   {
@@ -7036,15 +6847,6 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "biodefense experts",
-   "documents": 1,
-   "relations": {
-    "external evaluation": 1
-   },
-   "main_relation": "external evaluation",
-   "actor_type": "Domain expert groups"
-  },
-  {
    "actor": "de Gibert et al. 2018",
    "documents": 1,
    "relations": {
@@ -7080,15 +6882,6 @@
    },
    "main_relation": "external evaluation",
    "actor_type": "Other"
-  },
-  {
-   "actor": "external red teamers",
-   "documents": 1,
-   "relations": {
-    "red teaming": 1
-   },
-   "main_relation": "red teaming",
-   "actor_type": "Domain expert groups"
   },
   {
    "actor": "participants",
@@ -7387,7 +7180,7 @@
    "actor_type": "Domain expert groups"
   },
   {
-   "actor": "External mental health and safety experts (OpenAI)",
+   "actor": "External mental health and safety experts",
    "documents": 1,
    "relations": {
     "defining a conduct or risk": 2
@@ -7469,7 +7262,7 @@
    "actor_type": "Academic or research center"
   },
   {
-   "actor": "Independent mental health clinicians (OpenAI)",
+   "actor": "Independent mental health clinicians",
    "documents": 1,
    "relations": {
     "external evaluation": 1
@@ -7530,7 +7323,7 @@
     "creating a benchmark": 1
    },
    "main_relation": "creating a benchmark",
-   "actor_type": "Academic or research center"
+   "actor_type": "Multiple"
   },
   {
    "actor": "Los Alamos National Laboratory",
@@ -8675,7 +8468,7 @@
    "actor_type": "Data workers"
   },
   {
-   "actor": "unnamed third-party vendors (Meta)",
+   "actor": "unnamed third-party vendors",
    "documents": 1,
    "relations": {
     "taking part in training": 1

@@ -17,7 +17,8 @@
   "Data workers",
   "Publics",
   "Journalist",
-  "Other"
+  "Other",
+  "Multiple"
  ],
  "categories": [
   "Model documentation",
@@ -28,14 +29,14 @@
   "Framework implementation reports",
   "Frontier governance frameworks",
   "Certifications and third-party assessments",
-  "Partnerships and MOUs",
   "Programmes and funding",
+  "Partnerships and MOUs",
   "Commitments (unilateral and multilateral)",
-  "Public policy positions",
   "Model behavior specifications",
+  "Public policy positions",
   "Organizational principles, standards, codes",
-  "Statements and incident disclosures",
   "Evaluations, benchmarks and tools",
+  "Statements and incident disclosures",
   "Product and sector deployments",
   "Misuse and threat intelligence reports",
   "Essays and vision statements",
@@ -45,21 +46,21 @@
  "matrix": {
   "Other AI company": {
    "Model documentation": 44,
-   "Research": 18,
+   "Research": 16,
    "Safeguards and product-safety explainers": 6,
    "Usage policies and terms": 3,
    "Transparency and compliance reports": 1,
    "Framework implementation reports": 1,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 1,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 1,
    "Model behavior specifications": 0,
+   "Public policy positions": 1,
    "Organizational principles, standards, codes": 1,
-   "Statements and incident disclosures": 1,
    "Evaluations, benchmarks and tools": 1,
+   "Statements and incident disclosures": 1,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 1,
    "Essays and vision statements": 0,
@@ -68,21 +69,21 @@
   },
   "Academic or research center": {
    "Model documentation": 69,
-   "Research": 40,
+   "Research": 39,
    "Safeguards and product-safety explainers": 4,
    "Usage policies and terms": 1,
    "Transparency and compliance reports": 3,
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 1,
-   "Partnerships and MOUs": 3,
    "Programmes and funding": 1,
+   "Partnerships and MOUs": 3,
    "Commitments (unilateral and multilateral)": 1,
-   "Public policy positions": 1,
    "Model behavior specifications": 0,
-   "Organizational principles, standards, codes": 1,
-   "Statements and incident disclosures": 1,
+   "Public policy positions": 1,
+   "Organizational principles, standards, codes": 0,
    "Evaluations, benchmarks and tools": 2,
+   "Statements and incident disclosures": 1,
    "Product and sector deployments": 1,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -98,14 +99,14 @@
    "Framework implementation reports": 2,
    "Frontier governance frameworks": 5,
    "Certifications and third-party assessments": 2,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 4,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 2,
-   "Public policy positions": 3,
    "Model behavior specifications": 2,
+   "Public policy positions": 3,
    "Organizational principles, standards, codes": 4,
-   "Statements and incident disclosures": 1,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 1,
    "Product and sector deployments": 1,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 1,
@@ -113,7 +114,7 @@
    "Hub / index page": 0
   },
   "Alignment research organisation": {
-   "Model documentation": 53,
+   "Model documentation": 49,
    "Research": 17,
    "Safeguards and product-safety explainers": 0,
    "Usage policies and terms": 3,
@@ -121,14 +122,14 @@
    "Framework implementation reports": 4,
    "Frontier governance frameworks": 2,
    "Certifications and third-party assessments": 3,
-   "Partnerships and MOUs": 1,
    "Programmes and funding": 1,
+   "Partnerships and MOUs": 1,
    "Commitments (unilateral and multilateral)": 1,
-   "Public policy positions": 0,
    "Model behavior specifications": 1,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 1,
    "Essays and vision statements": 0,
@@ -144,14 +145,14 @@
    "Framework implementation reports": 1,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 1,
    "Model behavior specifications": 0,
+   "Public policy positions": 1,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -167,14 +168,14 @@
    "Framework implementation reports": 3,
    "Frontier governance frameworks": 1,
    "Certifications and third-party assessments": 1,
-   "Partnerships and MOUs": 1,
    "Programmes and funding": 3,
+   "Partnerships and MOUs": 1,
    "Commitments (unilateral and multilateral)": 1,
-   "Public policy positions": 0,
    "Model behavior specifications": 1,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 1,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 1,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -182,7 +183,7 @@
    "Hub / index page": 0
   },
   "Government agency": {
-   "Model documentation": 35,
+   "Model documentation": 32,
    "Research": 10,
    "Safeguards and product-safety explainers": 6,
    "Usage policies and terms": 5,
@@ -190,14 +191,14 @@
    "Framework implementation reports": 2,
    "Frontier governance frameworks": 4,
    "Certifications and third-party assessments": 2,
-   "Partnerships and MOUs": 7,
    "Programmes and funding": 3,
+   "Partnerships and MOUs": 7,
    "Commitments (unilateral and multilateral)": 3,
-   "Public policy positions": 3,
    "Model behavior specifications": 1,
+   "Public policy positions": 3,
    "Organizational principles, standards, codes": 2,
-   "Statements and incident disclosures": 2,
    "Evaluations, benchmarks and tools": 1,
+   "Statements and incident disclosures": 2,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -213,14 +214,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -236,14 +237,14 @@
    "Framework implementation reports": 2,
    "Frontier governance frameworks": 1,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -259,14 +260,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 1,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -282,14 +283,14 @@
    "Framework implementation reports": 1,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -305,14 +306,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 1,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -328,14 +329,14 @@
    "Framework implementation reports": 3,
    "Frontier governance frameworks": 1,
    "Certifications and third-party assessments": 2,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 1,
-   "Public policy positions": 0,
    "Model behavior specifications": 1,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 1,
    "Misuse and threat intelligence reports": 1,
    "Essays and vision statements": 0,
@@ -351,14 +352,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 2,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -374,14 +375,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 1,
    "Certifications and third-party assessments": 1,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 1,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 5,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 1,
@@ -397,14 +398,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 2,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 1,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 1,
@@ -420,14 +421,14 @@
    "Framework implementation reports": 0,
    "Frontier governance frameworks": 0,
    "Certifications and third-party assessments": 0,
-   "Partnerships and MOUs": 0,
    "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
    "Commitments (unilateral and multilateral)": 0,
-   "Public policy positions": 0,
    "Model behavior specifications": 0,
+   "Public policy positions": 0,
    "Organizational principles, standards, codes": 0,
-   "Statements and incident disclosures": 0,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 0,
    "Product and sector deployments": 0,
    "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
@@ -443,16 +444,39 @@
    "Framework implementation reports": 5,
    "Frontier governance frameworks": 8,
    "Certifications and third-party assessments": 4,
-   "Partnerships and MOUs": 3,
    "Programmes and funding": 3,
+   "Partnerships and MOUs": 3,
    "Commitments (unilateral and multilateral)": 2,
-   "Public policy positions": 2,
    "Model behavior specifications": 2,
+   "Public policy positions": 2,
    "Organizational principles, standards, codes": 2,
-   "Statements and incident disclosures": 3,
    "Evaluations, benchmarks and tools": 0,
+   "Statements and incident disclosures": 3,
    "Product and sector deployments": 1,
    "Misuse and threat intelligence reports": 1,
+   "Essays and vision statements": 0,
+   "Governance bodies and structures": 0,
+   "Hub / index page": 0
+  },
+  "Multiple": {
+   "Model documentation": 21,
+   "Research": 5,
+   "Safeguards and product-safety explainers": 1,
+   "Usage policies and terms": 0,
+   "Transparency and compliance reports": 0,
+   "Framework implementation reports": 0,
+   "Frontier governance frameworks": 0,
+   "Certifications and third-party assessments": 0,
+   "Programmes and funding": 0,
+   "Partnerships and MOUs": 0,
+   "Commitments (unilateral and multilateral)": 0,
+   "Model behavior specifications": 0,
+   "Public policy positions": 0,
+   "Organizational principles, standards, codes": 1,
+   "Evaluations, benchmarks and tools": 1,
+   "Statements and incident disclosures": 0,
+   "Product and sector deployments": 0,
+   "Misuse and threat intelligence reports": 0,
    "Essays and vision statements": 0,
    "Governance bodies and structures": 0,
    "Hub / index page": 0
@@ -485,19 +509,19 @@
   "Other AI company": {
    "Model documentation": [
     "Anthropic",
-    "Arora et al. (2025)",
     "Arora et al. 2025",
-    "Bai et al. (2022)",
     "Bai et al. 2022",
-    "Blodgett et al. 2022"
+    "Blodgett et al. 2022",
+    "Dhamala et al. 2021",
+    "Faculty"
    ],
    "Research": [
-    "Amodei et al. 2016",
     "Anil et al. 2024",
     "Anthropic",
     "Askell et al. 2021",
     "Bai et al. 2022",
-    "Baker et al. 2025"
+    "Baker et al. 2025",
+    "Bottou et al. 2012"
    ],
    "Safeguards and product-safety explainers": [
     "Amazon Web Services",
@@ -524,27 +548,27 @@
    "Certifications and third-party assessments": [
     "Anthropic"
    ],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
+   "Model behavior specifications": [],
    "Public policy positions": [
     "Microsoft"
    ],
-   "Model behavior specifications": [],
    "Organizational principles, standards, codes": [
     "OpenAI"
-   ],
-   "Statements and incident disclosures": [
-    "Amazon",
-    "Amazon researchers",
-    "Google",
-    "Microsoft"
    ],
    "Evaluations, benchmarks and tools": [
     "Mialon et al. 2023",
     "Wei et al. 2024",
     "Wei et al. 2025",
     "Yang et al. 2024"
+   ],
+   "Statements and incident disclosures": [
+    "Amazon",
+    "Amazon researchers",
+    "Google",
+    "Microsoft"
    ],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [
@@ -571,11 +595,10 @@
     "Bajcsy and Fisac 2024",
     "Barbieri et al. 2020",
     "Barrientos et al. 2020",
-    "Bostrom (2014)"
+    "Bostrom 2014"
    ],
    "Safeguards and product-safety explainers": [
     "Hartvigsen et al. 2022",
-    "Lin et al. 2022",
     "Los Alamos National Laboratory",
     "Scott Aaronson",
     "U.S. Department of Energy National Laboratories"
@@ -595,33 +618,30 @@
     "Souly et al. 2024",
     "Toyer et al. 2024"
    ],
+   "Programmes and funding": [
+    "University of California, Berkeley"
+   ],
    "Partnerships and MOUs": [
     "Los Alamos National Laboratory",
     "U.S. Department of Energy National Laboratories"
-   ],
-   "Programmes and funding": [
-    "University of California, Berkeley"
    ],
    "Commitments (unilateral and multilateral)": [
     "Middlebury Institute Center on Terrorism, Extremism, and Counterterrorism",
     "Polarization and Extremism Research and Innovation Lab (PERIL), American University"
    ],
+   "Model behavior specifications": [],
    "Public policy positions": [
     "Stanford University"
    ],
-   "Model behavior specifications": [],
-   "Organizational principles, standards, codes": [
-    "Ribeiro et al. 2020"
+   "Organizational principles, standards, codes": [],
+   "Evaluations, benchmarks and tools": [
+    "Chen et al. 2023",
+    "Jimenez et al. 2024",
+    "Tang et al. 2024"
    ],
    "Statements and incident disclosures": [
     "Stanford University",
     "University of California, Berkeley"
-   ],
-   "Evaluations, benchmarks and tools": [
-    "Chen et al. 2023",
-    "Jimenez et al. 2024",
-    "Lin et al. 2022",
-    "Tang et al. 2024"
    ],
    "Product and sector deployments": [
     "University of Illinois Urbana-Champaign"
@@ -642,11 +662,11 @@
    ],
    "Research": [
     "50 biology experts with PhDs and professional wet lab experience",
-    "Biodefense experts",
     "DeepSeek 20-person expert team",
     "Expert human red-teamers",
     "External security researchers (Anthropic 0-day validation)",
-    "GDPval expert occupational graders"
+    "GDPval expert occupational graders",
+    "Gryphon Scientific"
    ],
    "Safeguards and product-safety explainers": [
     "170+ mental health experts",
@@ -686,16 +706,20 @@
     "External red teamers (unnamed)",
     "OpenAI panel of subject-matter experts (bio)"
    ],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [
     "External security and safety researchers (red teamers)",
     "Leading experts on biosecurity, bioweapons, and bioterrorism",
     "Security researchers and ethical hackers (OpenAI Bug Bounty participants)"
    ],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [
     "External red teamers (unnamed)",
     "External subject matter experts",
     "Outside subject matter experts"
+   ],
+   "Model behavior specifications": [
+    "OpenAI Global Physician Network",
+    "Various external experts"
    ],
    "Public policy positions": [
     "Child safety experts",
@@ -705,10 +729,6 @@
     "Gryphon Scientific",
     "world-class biosecurity experts"
    ],
-   "Model behavior specifications": [
-    "OpenAI Global Physician Network",
-    "Various external experts"
-   ],
    "Organizational principles, standards, codes": [
     "Diverse experts (Humanist AI Evaluations)",
     "External red teamers (unnamed)",
@@ -716,10 +736,10 @@
     "Over 90 physicians across over 30 countries",
     "external red teamers"
    ],
+   "Evaluations, benchmarks and tools": [],
    "Statements and incident disclosures": [
     "CBRN domain experts"
    ],
-   "Evaluations, benchmarks and tools": [],
    "Product and sector deployments": [
     "Gryphon Scientific",
     "PhD-level virologists (SecureBio question writers)",
@@ -774,22 +794,22 @@
     "Apollo Research",
     "METR (Model Evaluation and Threat Research)"
    ],
-   "Partnerships and MOUs": [
-    "Apollo Research"
-   ],
    "Programmes and funding": [
     "METR (Model Evaluation and Threat Research)"
    ],
-   "Commitments (unilateral and multilateral)": [
-    "Model Evaluation and Threat Research (METR)"
+   "Partnerships and MOUs": [
+    "Apollo Research"
    ],
-   "Public policy positions": [],
+   "Commitments (unilateral and multilateral)": [
+    "Model Evaluation and Threat Research"
+   ],
    "Model behavior specifications": [
     "MATS (ML Alignment & Theory Scholars)"
    ],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [
     "METR (Model Evaluation and Threat Research)",
@@ -825,16 +845,16 @@
    ],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
+   "Model behavior specifications": [],
    "Public policy positions": [
     "Manhattan Institute"
    ],
-   "Model behavior specifications": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -874,27 +894,27 @@
    "Certifications and third-party assessments": [
     "Irregular"
    ],
-   "Partnerships and MOUs": [
-    "Dreadnode"
-   ],
    "Programmes and funding": [
     "HackerOne",
     "XBOW"
    ],
+   "Partnerships and MOUs": [
+    "Dreadnode"
+   ],
    "Commitments (unilateral and multilateral)": [
     "HackerOne"
    ],
-   "Public policy positions": [],
    "Model behavior specifications": [
     "Gray Swan AI",
     "HackerOne",
     "Haize Labs"
    ],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
+   "Evaluations, benchmarks and tools": [],
    "Statements and incident disclosures": [
     "Irregular"
    ],
-   "Evaluations, benchmarks and tools": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -903,20 +923,20 @@
   },
   "Government agency": {
    "Model documentation": [
-    "Andriushchenko et al. 2024",
-    "Korbak et al. (2025)",
-    "Korbak et al. 2025",
     "National Nuclear Security Administration",
     "North Atlantic Treaty Organization",
-    "U.S. AI Safety Institute"
+    "U.S. AI Safety Institute",
+    "U.S. Department of Commerce",
+    "U.S. Department of Energy National Nuclear Security Administration",
+    "UK AI Security Institute"
    ],
    "Research": [
-    "Cabinet Office (UK)",
+    "Cabinet Office",
     "Charles A. E. Goodhart",
     "High-Level Expert Group on Artificial Intelligence",
     "Infocomm Media Development Authority of Singapore",
     "National Nuclear Security Administration",
-    "U.S. Bureau of Labor Statistics"
+    "U.S. AI Safety Institute"
    ],
    "Safeguards and product-safety explainers": [
     "Attorneys General of California and Delaware",
@@ -954,47 +974,47 @@
     "UK AI Security Institute",
     "national AI Safety and Security Institutes"
    ],
+   "Programmes and funding": [
+    "UK AI Security Institute",
+    "US Center for AI Standards and Innovation"
+   ],
    "Partnerships and MOUs": [
     "National Nuclear Security Administration",
-    "U.S. Center for AI Standards and Innovation",
-    "UK AI Security Institute"
-   ],
-   "Programmes and funding": [
-    "U.S. Center for AI Standards and Innovation",
-    "UK AI Security Institute"
+    "UK AI Security Institute",
+    "US Center for AI Standards and Innovation"
    ],
    "Commitments (unilateral and multilateral)": [
     "The White House",
     "UK AI Security Institute",
     "US Center for AI Standards and Innovation"
    ],
+   "Model behavior specifications": [
+    "UK AI Security Institute"
+   ],
    "Public policy positions": [
     "California State Legislature",
     "Center for AI Standards and Innovation",
-    "UK AI Security Institute"
-   ],
-   "Model behavior specifications": [
     "UK AI Security Institute"
    ],
    "Organizational principles, standards, codes": [
     "UK AI Security Institute",
     "United Nations"
    ],
+   "Evaluations, benchmarks and tools": [
+    "UK AI Security Institute"
+   ],
    "Statements and incident disclosures": [
     "UK AI Security Institute",
     "US Center for AI Standards and Innovation",
     "United States federal government"
    ],
-   "Evaluations, benchmarks and tools": [
-    "UK AI Security Institute"
-   ],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
    "Governance bodies and structures": [
-    "U.S. Center for AI Standards and Innovation",
     "U.S. Department of Energy nuclear experts",
-    "UK AI Security Institute"
+    "UK AI Security Institute",
+    "US Center for AI Standards and Innovation"
    ],
    "Hub / index page": []
   },
@@ -1015,14 +1035,14 @@
    "Framework implementation reports": [],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1046,14 +1066,14 @@
     "Frontier Model Forum"
    ],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1078,14 +1098,14 @@
    "Certifications and third-party assessments": [
     "MLCommons"
    ],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1106,14 +1126,14 @@
    ],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1135,16 +1155,16 @@
    "Framework implementation reports": [],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [
     "Global Project Against Hate and Extremism"
    ],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1155,10 +1175,10 @@
    "Model documentation": [
     "Eleos AI Research",
     "FutureHouse",
-    "Götting et al. (2025)",
     "Götting et al. 2025",
     "Ho et al. 2025",
-    "Laurent et al. (2024)"
+    "Laurent et al. 2024",
+    "Mitchener et al. 2025"
    ],
    "Research": [
     "AI Verify Foundation",
@@ -1195,18 +1215,18 @@
     "SecureBio",
     "civil society"
    ],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [
     "Democracy Works"
    ],
-   "Public policy positions": [],
    "Model behavior specifications": [
     "American Psychological Association"
    ],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [
     "FutureHouse",
     "SecureBio"
@@ -1237,16 +1257,16 @@
    "Framework implementation reports": [],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [
     "Thorn"
    ],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1257,13 +1277,13 @@
    "Model documentation": [
     "Crowd workers",
     "Crowdworker platforms",
-    "Crowdworkers",
     "Data vendors",
     "Data work platforms (unnamed, used by Anthropic)",
-    "Data workers from data work platforms"
+    "Data workers from data work platforms",
+    "Expert human annotators (Pharia-1 evaluation)"
    ],
    "Research": [
-    "Crowdworkers",
+    "Crowd workers",
     "External annotators",
     "Human annotators",
     "Human evaluators",
@@ -1288,23 +1308,23 @@
    "Certifications and third-party assessments": [
     "Human annotators"
    ],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [
     "Unnamed contractor"
    ],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [
     "93 software developers experienced in Python",
     "DIVE demographically intersectional human raters",
     "Human annotators",
-    "Human raters",
     "OpenAI AI trainers",
-    "Third-party human annotators (FACTS Parametric)"
+    "Third-party human annotators (FACTS Parametric)",
+    "Third-party human raters (FACTS Grounding)"
    ],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [
@@ -1346,10 +1366,9 @@
    "Framework implementation reports": [],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [
     "Altynbek Ismailov and Salia Asanova",
     "Andres Aldana",
@@ -1358,9 +1377,10 @@
     "Independent jailbreakers (Anthropic Constitutional Classifiers bug-bounty participants)",
     "Jailbreakers (Anthropic jailbreak challenge participants)"
    ],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [
     "Users of prior OpenAI models"
    ],
@@ -1382,14 +1402,14 @@
    "Framework implementation reports": [],
    "Frontier governance frameworks": [],
    "Certifications and third-party assessments": [],
-   "Partnerships and MOUs": [],
    "Programmes and funding": [],
+   "Partnerships and MOUs": [],
    "Commitments (unilateral and multilateral)": [],
-   "Public policy positions": [],
    "Model behavior specifications": [],
+   "Public policy positions": [],
    "Organizational principles, standards, codes": [],
-   "Statements and incident disclosures": [],
    "Evaluations, benchmarks and tools": [],
+   "Statements and incident disclosures": [],
    "Product and sector deployments": [],
    "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
@@ -1409,7 +1429,7 @@
     "AE Studio",
     "Alex Albert",
     "Bellotti et al. 2001",
-    "Christiano (2021)",
+    "Christiano 2021",
     "DEF CON AI Village",
     "Dewey 2011"
    ],
@@ -1427,7 +1447,7 @@
     "Independent third-party assessors (xAI)",
     "Third parties (unnamed)",
     "Unspecified third-party evaluators (OpenAI Preparedness Framework)",
-    "unnamed third-party vendors (Meta)"
+    "unnamed third-party vendors"
    ],
    "Transparency and compliance reports": [
     "External researchers",
@@ -1458,46 +1478,86 @@
     "Third-party assessors with chain-of-thought access",
     "Third-party organisations testing in cybersecurity and biosafety domains"
    ],
-   "Partnerships and MOUs": [
-    "Public bug bounty program participants",
-    "Vaultis",
-    "various other third party partners"
-   ],
    "Programmes and funding": [
     "Accepted applicants to the OpenAI Bio Bug Bounty",
     "Interested researchers",
     "Mozilla",
     "Safety and security researchers (OpenAI Safety Bug Bounty participants)"
    ],
+   "Partnerships and MOUs": [
+    "Public bug bounty program participants",
+    "Vaultis",
+    "various other third party partners"
+   ],
    "Commitments (unilateral and multilateral)": [
     "Unnamed third-party vendor",
     "Yoti"
-   ],
-   "Public policy positions": [
-    "Third-party testers",
-    "independent evaluators"
    ],
    "Model behavior specifications": [
     "ThroughLine",
     "expert human reviewers (OpenAI Model Spec evaluation)"
    ],
+   "Public policy positions": [
+    "Third-party testers",
+    "independent evaluators"
+   ],
    "Organizational principles, standards, codes": [
     "Red teamers from different regions and backgrounds (Microsoft Bing Chat)",
     "external partners"
    ],
+   "Evaluations, benchmarks and tools": [],
    "Statements and incident disclosures": [
     "Expert safety researchers (red-teaming Fable 5)",
     "Private third-party red-teaming organizations",
     "Project Glasswing partners",
     "external partners"
    ],
-   "Evaluations, benchmarks and tools": [],
    "Product and sector deployments": [
     "OpenAI third-party partners"
    ],
    "Misuse and threat intelligence reports": [
     "Ken Alibek"
    ],
+   "Essays and vision statements": [],
+   "Governance bodies and structures": [],
+   "Hub / index page": []
+  },
+  "Multiple": {
+   "Model documentation": [
+    "Andriushchenko et al. 2024",
+    "Hartvigsen et al. 2022",
+    "Korbak et al. 2025",
+    "Li et al. 2024",
+    "Lin et al. 2021",
+    "Lin et al. 2022"
+   ],
+   "Research": [
+    "Amodei et al. 2016",
+    "Asirvatham, Mokski and Shleifer",
+    "Lin et al. 2021"
+   ],
+   "Safeguards and product-safety explainers": [
+    "Lin et al. 2022"
+   ],
+   "Usage policies and terms": [],
+   "Transparency and compliance reports": [],
+   "Framework implementation reports": [],
+   "Frontier governance frameworks": [],
+   "Certifications and third-party assessments": [],
+   "Programmes and funding": [],
+   "Partnerships and MOUs": [],
+   "Commitments (unilateral and multilateral)": [],
+   "Model behavior specifications": [],
+   "Public policy positions": [],
+   "Organizational principles, standards, codes": [
+    "Ribeiro et al. 2020"
+   ],
+   "Evaluations, benchmarks and tools": [
+    "Lin et al. 2022"
+   ],
+   "Statements and incident disclosures": [],
+   "Product and sector deployments": [],
+   "Misuse and threat intelligence reports": [],
    "Essays and vision statements": [],
    "Governance bodies and structures": [],
    "Hub / index page": []
